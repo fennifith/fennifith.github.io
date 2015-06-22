@@ -1,0 +1,28 @@
+body {margin:0px;
+    padding:0px;
+    height:100%
+    width:100%;}
+a.top {color:#000000;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:5px;
+    margin: 0;}
+div.top {background-color:#0097a7;
+    padding:2px;}
+header {padding:0px;
+    margin:0px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;}
+h1 {color:#000000;
+    background-color:#00bcd4;
+    padding:10px;
+    margin:0px;
+    width:100%;
+    font-family: Arial, Helvetica, sans-serif;}
+text {}
+
+ul.left {float:left;
+    padding:5px;
+    background-color:#eeeeee;
+    height:100%;
+    width:100px;
+    clear:both;}
