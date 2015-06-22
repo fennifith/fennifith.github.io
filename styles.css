@@ -7,7 +7,8 @@ a.top {color:#000000;
     padding:5px;
     margin: 0;
     position:absolute;
-    z-index : 2;}
+    z-index : 2;
+    float:top}
 div.top {background-color:#0097a7;
     padding:2px;
     position:absolute;
