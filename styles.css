@@ -5,14 +5,9 @@ body {margin:0px;
 a.top {color:#000000;
     font-family: Arial, Helvetica, sans-serif;
     padding:5px;
-    margin: 0;
-    position:absolute;
-    z-index : 2;
-    float:top}
+    margin: 0;}
 div.top {background-color:#0097a7;
-    padding:2px;
-    position:absolute;
-    z-index : 3;}
+    padding:2px;}
 header {padding:0px;
     margin:0px;
     width:100%;
@@ -31,7 +26,6 @@ ul.left {float:left;
     height:100%;
     width:100px;
     clear:both;
-    position:absolute;
-    z-index : 1;}
+    position:absolute;}
     
     
