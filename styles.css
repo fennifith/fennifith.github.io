@@ -25,4 +25,5 @@ ul.left {float:left;
     background-color:#eeeeee;
     height:100%;
     width:100px;
-    clear:both;}
+    clear:both;
+    position:absolute;}
