@@ -22,8 +22,8 @@ body {margin:0px;
      font-family: Arial, Helvetica, sans-serif;}
  text {}
  
- ul.left {padding:84px;
+ ul.left {padding-top:84px;
      background-color:#eeeeee;
      height:100%;
      width:100px;
-    margin-bottom:0px;}
+    margin:0px;}
