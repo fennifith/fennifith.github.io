@@ -3,6 +3,9 @@ body {margin:0px;
      height:100%
      width:100%;
      overflow-x:hidden;}
+img {max-width:100%;
+     height:auto;
+}
  a.top {color:#ffffff;
      font-family: Arial, Helvetica, sans-serif;
      padding:5px;
