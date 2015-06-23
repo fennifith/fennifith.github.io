@@ -1,6 +1,5 @@
 body {margin:0px;
      padding:0px;
-     padding-top:84px;
      height:100%;
      width:100%;
      overflow-x:hidden;}
@@ -39,6 +38,10 @@ div.top {background-color:#0097a7;
 li.left {
      padding:5px;
      margin:0px;}
+     
+.content {
+     padding-top:84px;
+}
 
 .white {color:#ffffff;}
 .blued {background-color:#0097a7;}
