@@ -15,7 +15,10 @@ h1.top {color:#ffffff;
     margin:0px;}
 div.top {background-color:#0097a7;
      padding:10px;
-     margin:0px;}
+     margin:0px;
+     top:0;
+     left:0;
+}
  header {padding:0px;
      margin:0px;
      width:100%;
