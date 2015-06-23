@@ -27,3 +27,8 @@ body {margin:0px;
      height:100%;
      width:100px;
     margin:0px;}
+    
+li.left {
+     padding:5px;
+     margin:0px;
+}
