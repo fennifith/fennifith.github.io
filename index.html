@@ -33,13 +33,13 @@
 </header>
 
 <div class="content">
-  <h>This website bypasses most website blocking techniques by putting a basic browser inside of the system browser.</h>
+  <h>This website is a collection of interesting flash games.</h>
   
   <div class="col-lg-6">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Url...">
+      <input id="txtUrl" style="width:82%;" placeholder="Put the website here" name="url" type="text" class="form-control" placeholder="Url...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">Go!</button>
+        <button class="btn btn-default" style="width:8%;" type="button" value="Go" onclick="setBrowserFrameSource(); return false;">Go!</button>
       </span>
     </div>
   </div>
@@ -50,6 +50,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function setBrowserFrameSource(){
+        var browserFrame = document.getElementById("browser");
+        browserFrame.src= document.getElementById("txtUrl").value;
+    }
+</script>
 </body>
 </html>
 
