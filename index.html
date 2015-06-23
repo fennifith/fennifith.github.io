@@ -1,40 +1,320 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Index</title>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
-  <link href="path/to/iron-icons/iron-icons.html" rel="import">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
 
-</head>
-<body>
-<header Style="position:fixed" id="side">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Fallback for manifest.json add to homescreen (Chrome Android) -->
+  <meta name="mobile-web-app-capable" content="yes">
 
-<h1>Index</h1>
-<div class="top">
-    <a class="top" href="https://TheAndroidMaster.github.io/index.html">Index<span></span></a>
-    <a class="top" href="https://TheAndroidMaster.github.io/things.html">Things<span></span></a>
-    <a class="top" href="https://TheAndroidMaster.github.io/about.html">About<span></span></a>
-    <a class="top" href="https://TheAndroidMaster.github.io/contact.html">Contact<span></span></a>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#e51c23">
+  <meta name="theme-color" content="#e51c23">
+  <meta name="msapplication-TileColor" content="#e51c23">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Polymer Mail</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Note: webcomponent.js is only needed in non-Chrome 36 browsers. Included here for portability. -->
+  <script src="https://apis.google.com/js/client.js?onload=https___apis_google_com_js_client_js_onload___callback___api_loaded"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="bower_components/webcomponentsjs/webcomponents.min.js"></script><style type="text/css"></style>
+  <link rel="import" href="vulcanized.html">
+  <link rel="stylesheet" href="app.css" shim-shadowdom="">
+
+  <link rel="icon" sizes="192x192" href="images/gmail.png">
+<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
+[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
+[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
+[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
+[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
+[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
+</style><meta name="google-signin-clientid" content="229000986068-hld1d9ovioamaaur218vg3jg5dgvf2a2.apps.googleusercontent.com"><meta name="google-signin-scope" content="profile email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/gmail.modify"><meta name="google-signin-cookiepolicy" content="single_host_origin"><meta name="google-signin-callback" content="handleAuthResult"></head>
+<body fullbleed="">
+
+<core-style id="navheaderstyle" hidden="">
+  #navheader::after {
+    /* causes console warning for incorrect mimetype */
+    background-image: url({{coverImg}});
+  }
+</core-style>
+
+<template id="t" is="auto-binding" bind="">
+
+<core-style ref="navheaderstyle"></core-style>
+<core-style ref="labelcolors"></core-style>
+
+<div id="loginscreen" layout="" vertical="" center-center="" fit="" class="{{ {show: !isAuthenticated} | tokenList }}">
+  <google-signin width="wide" height="tall" clientid="229000986068-hld1d9ovioamaaur218vg3jg5dgvf2a2.apps.googleusercontent.com" scopes="profile email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/gmail.modify" on-google-signin-success="{{onSigninSuccess}}" on-google-signin-failure="{{onSigninFailure}}"></google-signin>
 </div>
-</header>
+
+<material-search id="search" narrow="{{narrow}}" previoussearches="{{previousSearches}}"></material-search>
+
+<core-drawer-panel id="drawerPanel" narrow="{{narrow}}">
+
+  <core-header-panel mode="scroll" drawer="">
+    <core-toolbar id="navheader" class="tall">
+      <!-- <core-image src="{{user.cover}}" sizing="cover" preload fade
+                  style="width:400px; height:400px; background-color:#c41411;">
+      </core-image> -->
+      <img class="middle profile" src="{{user.profile}}" hidden?="{{!user.profile}}">
+      <div class="bottom" layout="" vertical="">
+        <span>{{user.name}}</span>
+        <span>{{user.email}}</span>
+      </div>
+    </core-toolbar>
+    <core-menu selected="0" excludedlocalnames="div" on-core-select="{{menuSelect}}">
+      <paper-item><core-icon icon="inbox"></core-icon>Inbox</paper-item>
+      <paper-item><core-icon icon="social:people"></core-icon>Social</paper-item>
+      <div class="separator">All labels</div>
+      <paper-item><core-icon icon="star"></core-icon>Starred</paper-item>
+      <paper-item><core-icon icon="send"></core-icon>Sent</paper-item>
+      <paper-item><core-icon icon="mail"></core-icon>All Mail</paper-item>
+      <paper-item><core-icon icon="report"></core-icon>Spam</paper-item>
+      <paper-item><core-icon icon="delete"></core-icon>Trash</paper-item>
+      <template repeat="{{l in labels}}">
+        <paper-item class="{{l.color}}"><core-icon icon="label"></core-icon>{{l.name}}</paper-item>
+      </template>
+    </core-menu>
+  </core-header-panel>
+
+  <core-scroll-header-panel id="scrollheader" main="" condenses="{{!narrow}}" keepcondensedheader="" fixed?="{{narrow}}" on-trackstart="{{onRefreshStart}}" on-tracky="{{onMainAreaTrack}}" on-trackend="{{onRefreshUp}}">
+    <core-toolbar id="mainheader" class="{{ {tall: !narrow, 'core-narrow': narrow, 'selected-threads': selectedThreads.length} | tokenList }}">
+        <paper-icon-button icon="arrow-back" class="selected-item" on-tap="{{deselectAll}}"></paper-icon-button>
+
+        <paper-icon-button id="navicon" icon="menu" core-drawer-toggle=""></paper-icon-button>
+        <div flex=""></div>
+        <span class="bottom indent title">
+          {{selectedThreads.length ? selectedThreads.length : 'Inbox'}}
+        </span>
+        <paper-icon-button icon="search" class="fade-on-drawer-open" on-tap="{{toggleSearch}}"></paper-icon-button>
+
+        <paper-icon-button icon="archive" class="selected-item" on-tap="{{archiveAll}}"></paper-icon-button>
+        <paper-icon-button icon="delete" class="selected-item"></paper-icon-button>
+        <paper-icon-button icon="mail" class="selected-item"></paper-icon-button>
+
+        <paper-menu-button class="selected-item" layout="" horizontal="">
+          <paper-icon-button icon="more-vert"></paper-icon-button>
+          <paper-dropdown class="dropdown" halign="right">
+            <paper-item>Move to</paper-item>
+            <paper-item>Change labels</paper-item>
+            <paper-item>Add star</paper-item>
+            <paper-item>Mark not important</paper-item>
+            <paper-item>Mute</paper-item>
+            <paper-item>Report spam</paper-item>
+            <paper-item>Report phishing</paper-item>
+          </paper-dropdown>
+        </paper-menu-button>
+
+        <div id="refresh" class="bottom fit" layout="" horizontal="" center-center="" on-transitionend="{{onRefreshTransitionEnd}}">
+          <div class="paper-shadow-bottom-z-1">
+            <paper-spinner id="refreshspinner"></paper-spinner>
+          </div>
+        </div>
+
+    </core-toolbar>
+    <div content="" on-thread-archive="{{onThreadArchive}}">
+
+      <template if="{{!threads.length &amp;&amp; isAuthenticated}}">
+        <div layout="" vertical="" center-center="" style="height:100%">
+          <paper-spinner active=""></paper-spinner>
+        </div>
+      </template>
+
+      <!--<core-list data="{{data}}" height="80">-->
+      <!-- TODO: don't pass all messages, users, labels into mail-thread -->
+      <core-selector id="threadlist" multi="" selectedattribute="selected" selected="{{selectedThreads}}">
+        <template repeat="{{t, i in threads}}">
+            <mail-thread messages="{{t.messages}}" labels="{{labelMap}}" users="{{users}}" narrow="{{narrow}}" on-transitionend="{{onTransitionEnd}}" touch-action="{{touchAction}}"></mail-thread>
+        </template>
+      </core-selector>
+      <!--</core-list>-->
+
+     </div>
+  </core-scroll-header-panel>
+
+</core-drawer-panel>
+
+<paper-toast id="toast" duration="10000" swipedisabled="" text="{{toastMessage}}" opened="{{toastOpened}}" on-core-overlay-open="{{onToastOpenClose}}">
+  <div on-tap="{{undoAll}}">Undo</div>
+</paper-toast>
+
+<paper-fab id="fab" icon="create" on-tap="{{newMail}}"></paper-fab>
+
+<!-- Cache data requests. -->
+<!--<core-localstorage name="polymer-mail-user" value="{{user}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-labels" value="{{labels}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-threads" value="{{threads}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-users" value="{{users}}"></core-localstorage>-->
+
+</template>
+
+<core-style ref="navheaderstyle" hidden=""><style>
+  #navheader::after {
+    /* causes console warning for incorrect mimetype */
+    background-image: url();
+  }
+</style></core-style>
+<core-style ref="labelcolors" hidden=""><style>
+label.pink {
+  background-color: #e91e63 !important;
+}
+label.orange {
+  background-color: #ff5722 !important;
+}
+label.green {
+  background-color: #259b24 !important;
+}
+label.blue {
+  background-color: #5677fc !important;
+}
+label.yellow {
+  background-color: #ffd600 !important;
+}
+label.teal {
+  background-color: #009688 !important;
+}
+label.purple {
+  background-color: #673ab7 !important;
+}
+
+.pink /deep/ core-icon {
+  color: #e91e63;
+}
+.orange /deep/ core-icon {
+  color: #ff5722;
+}
+.green /deep/ core-icon {
+  color: #259b24;
+}
+.blue /deep/ core-icon {
+  color: #5677fc;
+}
+.yellow /deep/ core-icon {
+  color: #ffd600;
+}
+.teal /deep/ core-icon {
+  color: #009688;
+}
+.purple /deep/ core-icon {
+  color: #673ab7;
+}
+</style></core-style>
+
+<div id="loginscreen" layout="" vertical="" center-center="" fit="" class="">
+  <google-signin width="wide" height="tall" clientid="229000986068-hld1d9ovioamaaur218vg3jg5dgvf2a2.apps.googleusercontent.com" scopes="profile email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/gmail.modify" on-google-signin-success="{{ onSigninSuccess }}" on-google-signin-failure="{{ onSigninFailure }}" role="button" tabindex="0"></google-signin>
+</div>
+
+<material-search id="search" previoussearches="{{previousSearches}}" fit=""></material-search>
+
+<core-drawer-panel id="drawerPanel" touch-action="">
+
+  <core-header-panel mode="scroll" drawer="">
+    <core-toolbar id="navheader" class="tall">
+      <!-- <core-image src="{{user.cover}}" sizing="cover" preload fade
+                  style="width:400px; height:400px; background-color:#c41411;">
+      </core-image> -->
+      <img class="middle profile" src="" hidden="">
+      <div class="bottom" layout="" vertical="">
+        <span></span>
+        <span></span>
+      </div>
+    </core-toolbar>
+    <core-menu selected="0" excludedlocalnames="div" on-core-select="{{ menuSelect }}">
+      <paper-item tabindex="0" class="core-selected" active=""><core-icon icon="inbox" aria-label="inbox" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M19 3H4.99c-1.1 0-1.98.9-1.98 2L3 19c0 1.1.89 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.34 3-3 3s-3-1.34-3-3H4.99V5H19v10zm-3-5h-2V7h-4v3H8l4 4 4-4z"></path></g></svg></core-icon>Inbox</paper-item>
+      <paper-item tabindex="0"><core-icon icon="social:people" aria-label="people" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"></path></g></svg></core-icon>Social</paper-item>
+      <div class="separator">All labels</div>
+      <paper-item tabindex="0"><core-icon icon="star" aria-label="star" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></g></svg></core-icon>Starred</paper-item>
+      <paper-item tabindex="0"><core-icon icon="send" aria-label="send" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></g></svg></core-icon>Sent</paper-item>
+      <paper-item tabindex="0"><core-icon icon="mail" aria-label="mail" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></g></svg></core-icon>All Mail</paper-item>
+      <paper-item tabindex="0"><core-icon icon="report" aria-label="report" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"></path></g></svg></core-icon>Spam</paper-item>
+      <paper-item tabindex="0"><core-icon icon="delete" aria-label="delete" role="img"><svg viewBox="0 0 24 24" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" fit="" style="pointer-events: none; display: block;"><g><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"></path></g></svg></core-icon>Trash</paper-item>
+      <template repeat="{{l in labels}}"></template>
+    </core-menu>
+  </core-header-panel>
+
+  <core-scroll-header-panel id="scrollheader" main="" condenses="{{!narrow}}" keepcondensedheader="" on-trackstart="{{ onRefreshStart }}" on-tracky="{{ onMainAreaTrack }}" on-trackend="{{ onRefreshUp }}" touch-action="pan-x">
+    <core-toolbar id="mainheader" class="tall">
+        <paper-icon-button icon="arrow-back" class="selected-item" on-tap="{{ deselectAll }}" role="button" tabindex="0" aria-label="arrow-back"></paper-icon-button>
+
+        <paper-icon-button id="navicon" icon="menu" core-drawer-toggle="" role="button" tabindex="0" aria-label="menu"></paper-icon-button>
+        <div flex=""></div>
+        <span class="bottom indent title" style="transform: scale(0.75) translateZ(0px);">
+          Inbox
+        </span>
+        <paper-icon-button icon="search" class="fade-on-drawer-open" on-tap="{{ toggleSearch }}" role="button" tabindex="0" aria-label="search"></paper-icon-button>
+
+        <paper-icon-button icon="archive" class="selected-item" on-tap="{{ archiveAll }}" role="button" tabindex="0" aria-label="archive"></paper-icon-button>
+        <paper-icon-button icon="delete" class="selected-item" role="button" tabindex="0" aria-label="delete"></paper-icon-button>
+        <paper-icon-button icon="mail" class="selected-item" role="button" tabindex="0" aria-label="mail"></paper-icon-button>
+
+        <paper-menu-button class="selected-item" layout="" horizontal="" relative="" tabindex="0">
+          <paper-icon-button icon="more-vert" role="button" tabindex="0" aria-label="more-vert"></paper-icon-button>
+          <paper-dropdown class="dropdown core-transition" halign="right" tabindex="-1" style="outline: none; display: none;">
+            <paper-item tabindex="0">Move to</paper-item>
+            <paper-item tabindex="0">Change labels</paper-item>
+            <paper-item tabindex="0">Add star</paper-item>
+            <paper-item tabindex="0">Mark not important</paper-item>
+            <paper-item tabindex="0">Mute</paper-item>
+            <paper-item tabindex="0">Report spam</paper-item>
+            <paper-item tabindex="0">Report phishing</paper-item>
+          </paper-dropdown>
+        </paper-menu-button>
+
+        <div id="refresh" class="bottom fit" layout="" horizontal="" center-center="" on-transitionend="{{ onRefreshTransitionEnd }}">
+          <div class="paper-shadow-bottom-z-1">
+            <paper-spinner id="refreshspinner" role="progressbar" aria-label="loading" aria-hidden="true"></paper-spinner>
+          </div>
+        </div>
+
+    </core-toolbar>
+    <div content="" on-thread-archive="{{ onThreadArchive }}">
+
+      <template if="{{!threads.length &amp;&amp; isAuthenticated}}"></template>
+        <div layout="" vertical="" center-center="" style="height:100%">
+          <paper-spinner active="" role="progressbar" aria-label="loading"></paper-spinner>
+        </div>
+      
+
+      <!--<core-list data="{{data}}" height="80">-->
+      <!-- TODO: don't pass all messages, users, labels into mail-thread -->
+      <core-selector id="threadlist" multi="" selectedattribute="selected" selected="{{selectedThreads}}">
+        <template repeat="{{t, i in threads}}"></template>
+      </core-selector>
+      <!--</core-list>-->
+
+     </div>
+  </core-scroll-header-panel>
+
+</core-drawer-panel>
+
+<paper-toast id="toast" duration="10000" swipedisabled="" text="{{toastMessage}}" opened="{{toastOpened}}" on-core-overlay-open="{{ onToastOpenClose }}" role="status" touch-action="none" tabindex="-1" class="core-transition core-transition-bottom" style="position: fixed; outline: none; display: none;">
+  <div on-tap="{{ undoAll }}">Undo</div>
+</paper-toast>
+
+<paper-fab id="fab" icon="create" on-tap="{{ newMail }}" role="button" tabindex="0" aria-label="create"></paper-fab>
+
+<!-- Cache data requests. -->
+<!--<core-localstorage name="polymer-mail-user" value="{{user}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-labels" value="{{labels}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-threads" value="{{threads}}"></core-localstorage>-->
+<!--<core-localstorage name="polymer-mail-users" value="{{users}}"></core-localstorage>-->
 
 
 
-<ul class="left" style="text-align:left" height="100%">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li>Things</li>
-  <li>What</li>
-  <li>Stuff</li>
-</ul>
-
-<paper-fab icon="cloud" style="color: blue;"></paper-fab>
-
-</body>
-</html>
-
+<script src="app.js"></script>
 <script>
-
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-56540783-1', 'auto');
+  ga('send', 'pageview');
 </script>
+
+
+</body></html>
