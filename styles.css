@@ -7,7 +7,9 @@ body {margin:0px;
      padding:5px;
      margin: 0;}
  div.top {background-color:#0097a7;
-     padding:2px;}
+     padding:2px;
+     margin:0px;
+ }
  header {padding:0px;
      margin:0px;
      width:100%;
