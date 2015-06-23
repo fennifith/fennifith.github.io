@@ -39,6 +39,10 @@ li.left {
      padding:5px;
      margin:0px;}
      
+iframe{width:100%;
+     height:calc(100% - 180px);
+}
+     
 .content {
      padding:10px;
      padding-top:150px;
