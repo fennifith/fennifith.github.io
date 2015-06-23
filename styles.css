@@ -11,6 +11,7 @@ img {max-width:100%;
      padding:5px;
      margin:0px;}
 h1.top {color:#ffffff;
+    box-shadow:5px, 5px, 0px, #888888;
     padding:25px;
     margin:0px;}
 div.top {background-color:#0097a7;
