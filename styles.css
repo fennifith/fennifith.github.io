@@ -20,13 +20,10 @@ h1 {color:#000000;
     font-family: Arial, Helvetica, sans-serif;}
 text {}
 
-ul.left {float:left;
-    padding:5px;
+ul.left {padding:5px;
     background-color:#eeeeee;
     height:100%;
     width:100px;
-    margin-top:79px;
-    clear:both;
-    position:absolute;}
+    margin-top:79px;}
     
     
