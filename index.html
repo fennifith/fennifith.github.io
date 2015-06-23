@@ -21,13 +21,13 @@
 </form>
   <div class="btn-group" role="group" aria-label="...">
     <button type="button" class="btn btn-primary" href="theandroidmaster.github.io/index.html">Index</button>
-    <button type="button" class="btn btn-default">Action</button>
-    <button type="button" class="btn btn-default">Adventure</button>
-    <button type="button" class="btn btn-default">Arcade</button>
-    <button type="button" class="btn btn-default">Puzzle</button>
-    <button type="button" class="btn btn-default">Strategy</button>
-    <button type="button" class="btn btn-default">Sports</button>
-    <button type="button" class="btn btn-default">Other</button>
+    <button id="action" type="button" class="btn btn-default" onclick="action();">Action</button>
+    <button id="adventure" type="button" class="btn btn-default" onclick="adventure();">Adventure</button>
+    <button id="arcade" type="button" class="btn btn-default" onclick="arcade();">Arcade</button>
+    <button id="puzzle" type="button" class="btn btn-default" onclick="puzzle();">Puzzle</button>
+    <button id="strategy" type="button" class="btn btn-default" onclick="strategy();">Strategy</button>
+    <button id="sports" type="button" class="btn btn-default" onclick="sports();">Sports</button>
+    <button id="other" type="button" class="btn btn-default" onclick="other();">Other</button>
   </div>
 </div>
 </header>
@@ -54,6 +54,10 @@
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
         browserFrame.src= "http://" + document.getElementById("txtUrl").value + "&output=embed";
+    }
+    function action(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "action"
     }
 </script>
 </body>
