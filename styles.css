@@ -16,8 +16,6 @@ h1.top {color:#ffffff;
 div.top {background-color:#0097a7;
      padding:10px;
      margin:0px;
-     top:0;
-     left:0;
 }
  header {padding:0px;
      margin:0px;
@@ -42,8 +40,4 @@ li.left {
      margin:0px;}
 
 .white {color:#ffffff;}
-.page {max-width:1000px;
-     margin-left:auto;
-     margin-right:auto;
-}
 .blued {background-color:#0097a7;}
