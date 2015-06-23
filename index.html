@@ -15,26 +15,12 @@
 
   <link rel="manifest" href="manifest.json">
 
-  <!-- Note: webcomponent.js is only needed in non-Chrome 36 browsers. Included here for portability. -->
+d
   <script src="https://apis.google.com/js/client.js?onload=https___apis_google_com_js_client_js_onload___callback___api_loaded"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="bower_components/webcomponentsjs/webcomponents.min.js"></script><style type="text/css"></style>
   <link rel="import" href="vulcanized.html">
   <link rel="stylesheet" href="app.css" shim-shadowdom="">
 
-  <link rel="icon" sizes="192x192" href="images/gmail.png">
-<style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
-html /deep/ [touch-action="none"]{ -ms-touch-action: none; touch-action: none;}
-[touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
-html /deep/ [touch-action="auto"]{ -ms-touch-action: auto; touch-action: auto;}
-[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
-html /deep/ [touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x;}
-[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
-html /deep/ [touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y;}
-[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
-html /deep/ [touch-action="pan-x pan-y"],html /deep/ [touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y;}
-[touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
-html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch-action: manipulation;}
-</style><meta name="google-signin-clientid" content="229000986068-hld1d9ovioamaaur218vg3jg5dgvf2a2.apps.googleusercontent.com"><meta name="google-signin-scope" content="profile email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/gmail.modify"><meta name="google-signin-cookiepolicy" content="single_host_origin"><meta name="google-signin-callback" content="handleAuthResult"></head>
-<body fullbleed="">
+  
 
 <core-style id="navheaderstyle" hidden="">
   #navheader::after {
@@ -48,9 +34,7 @@ html /deep/ [touch-action="manipulation"]{ -ms-touch-action: manipulation; touch
 <core-style ref="navheaderstyle"></core-style>
 <core-style ref="labelcolors"></core-style>
 
-<div id="loginscreen" layout="" vertical="" center-center="" fit="" class="{{ {show: !isAuthenticated} | tokenList }}">
-  <google-signin width="wide" height="tall" clientid="229000986068-hld1d9ovioamaaur218vg3jg5dgvf2a2.apps.googleusercontent.com" scopes="profile email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/gmail.modify" on-google-signin-success="{{onSigninSuccess}}" on-google-signin-failure="{{onSigninFailure}}"></google-signin>
-</div>
+
 
 <material-search id="search" narrow="{{narrow}}" previoussearches="{{previousSearches}}"></material-search>
 
