@@ -38,4 +38,8 @@ li.left {
      padding:5px;
      margin:0px;}
 
-li.white {color:#ffffff;}
+.white {color:#ffffff;}
+.page {max-width:1000px;
+     margin-left:auto;
+     margin-right:auto;
+}
