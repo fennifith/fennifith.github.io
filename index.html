@@ -31,7 +31,6 @@
   </div>
 </div>
 </header>
-
 <div class="content">
   <h>This website allows you to break through most website blocking techniques by using an iframe.</h>
   
@@ -46,7 +45,12 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    document.getElementById("action").addEventListener("click", action());
+    //document.getElementById("action").addEventListener("click", action());
+    
+    $('#action').on('click',function(){
+      action();
+    });
+    
     document.getElementById("adventure").onclick=adventure();
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
