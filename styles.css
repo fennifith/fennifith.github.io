@@ -13,10 +13,13 @@ img {max-width:100%;
 h1.top {color:#ffffff;
     box-shadow:5px, 5px, 0px, #888888;
     padding:25px;
-    margin:0px;}
+    margin:0px;
+    z-index: 199;
+}
 div.top {background-color:#0097a7;
      padding:10px;
      margin:0px;
+     z-index: 200;
 }
  header {padding:0px;
      margin:0px;
@@ -57,5 +60,5 @@ iframe{width:100%;
 .nopadding {padding:0;}
 .normalpadding {padding:5;}
 .normalmargin{margin:5;}
-.behind{z-index: -1;}
+.behind{z-index: 0;}
 .black{background-color:#000000;}
