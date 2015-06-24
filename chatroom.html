@@ -14,23 +14,8 @@
       <ul class="todo-list" ng-repeat="todo in todos track by $index">
       </ul>
   </div>
-  <form id="form" target="no-target">
-    <input id="input" type="text" placeholder="comment"></input>
-    <button id="submit" type="submit"></button>
-  </form>
-  <iframe src="#" id="no-target" name="no-target"></iframe>
   <iframe src="https://docs.google.com/spreadsheets/d/1Cpbpktd6QzCfmlgwwCjlze7mE2kf2nTk7dU0G4g0CZM/pubhtml?gid=1268268148&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
   <script src="/scriptschat.js"></script>  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script>
-    $('#input').one('submit',function(){
-    var emailAddress = encodeURIComponent($('#email').val());
-    var baseURL = 'https://docs.google.com/forms/d/10uHadow63eH07gnIyou_awxHFO2HrHIftHIpKJP9ESY/formResponse?entry.entry.159294982=';
-    var submitRef = '&submit=submit';
-    var submitURL = (baseURL + emailAddress + submitRef);
-    $(this)[0].action=submitURL;
-  });
-},1000); 
-  </script>
 </body>
 </html>
