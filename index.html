@@ -45,13 +45,35 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    //document.getElementById("action").addEventListener("click", action());
     
     $('#action').on('click',function(){
       action();
     });
     
-    document.getElementById("adventure").onclick=adventure();
+    $('#adventure').on('click', function(){
+      adventure();
+    });
+    
+    $('#arcade').on('click', function(){
+      arcade();
+    });
+    
+    $('#puzzle').on('click', function(){
+      puzzle();
+    });
+    
+    $('#strategy').on('click', function(){
+      strategy();
+    });
+    
+    $('#sports').on('click', function(){
+      sports();
+    });
+    
+    $('#other').on('click', function(){
+      other();
+    });
+    
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
         browserFrame.src= "http://" + document.getElementById("txtUrl").value;
