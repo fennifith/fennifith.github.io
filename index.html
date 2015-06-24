@@ -21,13 +21,13 @@
 </form>
   <div class="btn-group" role="group" aria-label="...">
     <button type="button" class="btn btn-primary" href="theandroidmaster.github.io/index.html">Index</button>
-    <button id="action" type="button" class="btn btn-default" onclick="action();">Action</button>
-    <button id="adventure" type="button" class="btn btn-default" onclick="adventure();">Adventure</button>
-    <button id="arcade" type="button" class="btn btn-default" onclick="arcade();">Arcade</button>
-    <button id="puzzle" type="button" class="btn btn-default" onclick="puzzle();">Puzzle</button>
-    <button id="strategy" type="button" class="btn btn-default" onclick="strategy();">Strategy</button>
-    <button id="sports" type="button" class="btn btn-default" onclick="sports();">Sports</button>
-    <button id="other" type="button" class="btn btn-default" onclick="other();">Other</button>
+    <button id="action" type="button" class="btn btn-default">Action</button>
+    <button id="adventure" type="button" class="btn btn-default">Adventure</button>
+    <button id="arcade" type="button" class="btn btn-default">Arcade</button>
+    <button id="puzzle" type="button" class="btn btn-default">Puzzle</button>
+    <button id="strategy" type="button" class="btn btn-default">Strategy</button>
+    <button id="sports" type="button" class="btn btn-default">Sports</button>
+    <button id="other" type="button" class="btn btn-default">Other</button>
   </div>
 </div>
 </header>
@@ -46,6 +46,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    document.getElementById("action").onclick=action()
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
         browserFrame.src= "http://" + document.getElementById("txtUrl").value;
