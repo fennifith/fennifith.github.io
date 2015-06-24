@@ -75,6 +75,10 @@
       other();
     });
     
+    $('#chat').on('click', function(){
+      chatroom();
+    });
+    
     function setBrowserFrameSource(){
         var browserFrame = document.getElementById("browser");
         browserFrame.src= "http://" + document.getElementById("txtUrl").value;
@@ -88,6 +92,7 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function adventure(){
       document.getElementById("browser").src= "adventure";
@@ -98,6 +103,7 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function arcade(){
       document.getElementById("browser").src= "arcade";
@@ -108,6 +114,7 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function puzzle(){
       var browserFrame = document.getElementById("browser");
@@ -119,6 +126,7 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function strategy(){
       var browserFrame = document.getElementById("browser");
@@ -130,6 +138,7 @@
       document.getElementById("strategy").style.color = "blue";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function sports(){
       var browserFrame = document.getElementById("browser");
@@ -141,6 +150,7 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "blue";
       document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
     }
     function other(){
       var browserFrame = document.getElementById("browser");
@@ -152,6 +162,19 @@
       document.getElementById("strategy").style.color = "";
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "blue";
+      document.getElementById("chat").style.color = "";
+    }
+    function chatroom(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "chatroom"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "blue";
     }
 </script>
 </body>
