@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Index</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<header Style="position:fixed" id="side">
+<div class="top">
+  <div class="btn-group" role="group" aria-label="...">
+    
+    <button id="action" type="button" class="btn btn-default">Sinjid</button>
+    <button id="adventure" type="button" class="btn btn-default">Raze 3</button>
+    <button id="arcade" type="button" class="btn btn-default">Purrmageddon</button>
+    <button id="puzzle" type="button" class="btn btn-default">Happy Wheels</button>
+    <button id="strategy" type="button" class="btn btn-default">Cubefield</button>
+    <button id="sports" type="button" class="btn btn-default">Earth taken 2</button>
+    <button id="other" type="button" class="btn btn-default">Run 2</button>
+  </div>
+</div>
+</header>
+<div class="content">
+  <h>This website allows you to break through most website blocking techniques by using an iframe.</h>
+  
+  
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
+</div>
+</div>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    
+    $('#action').on('click',function(){
+      action();
+    });
+    
+    $('#adventure').on('click', function(){
+      adventure();
+    });
+    
+    $('#arcade').on('click', function(){
+      arcade();
+    });
+    
+    $('#puzzle').on('click', function(){
+      puzzle();
+    });
+    
+    $('#strategy').on('click', function(){
+      strategy();
+    });
+    
+    $('#sports').on('click', function(){
+      sports();
+    });
+    
+    $('#other').on('click', function(){
+      other();
+    });
+    function action(){
+      document.getElementById("browser").src= "action";
+      document.getElementById("action").style.color = "blue";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function adventure(){
+      document.getElementById("browser").src= "adventure";
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "blue";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function arcade(){
+      document.getElementById("browser").src= "arcade";
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "blue";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function puzzle(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "puzzle"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "blue";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function strategy(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "strategy"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "blue";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function sports(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "sports"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "blue";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "";
+    }
+    function other(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "other"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "blue";
+      document.getElementById("chat").style.color = "";
+    }
+    function chatroom(){
+      var browserFrame = document.getElementById("browser");
+      browserFrame.src= "chatroom"
+      document.getElementById("action").style.color = "";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
+      document.getElementById("chat").style.color = "blue";
+    }
+</script>
+</body>
+</html>
