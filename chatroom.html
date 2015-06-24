@@ -6,16 +6,25 @@
 </head>
 <body ng-app="Todo">
   <div class="page-container" ng-controller="TodoCtrl">
-    <input type="text" ng-model="message" />
-    <span> {{ message }} </span>
-  </div>  
-  <div class="page-container" ng-controller="TodoCtrl">
     <h2>Todo</h2>
+
       <ul class="todo-list" ng-repeat="todo in todos track by $index">
+        <li>
+          <span>{{ todo }}</span>
+          <button class="bt bt-achieve" ng-click="done(todo)">Done</button>
+        </li>
       </ul>
-  </div>
-  <iframe src="https://docs.google.com/spreadsheets/d/1Cpbpktd6QzCfmlgwwCjlze7mE2kf2nTk7dU0G4g0CZM/pubhtml?gid=1268268148&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-  <script src="/scriptschat.js"></script>  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      
+  </div>  
+  
+  <ul class="add-todo">
+    <li>
+      <input type="text" class="txt" placeholder="New Todo"
+             ng-model="newTodo" ng-keyup="add($event)" />
+    </li>
+  </ul>
+  
+</body>
+  <script src="/scriptschat.js"></script>
 </body>
 </html>
