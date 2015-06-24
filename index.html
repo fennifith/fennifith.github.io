@@ -79,7 +79,14 @@
         browserFrame.src= "http://" + document.getElementById("txtUrl").value;
     }
     function action(){
-      alert("Hiiiii!!!!!!!!!!!!");
+      document.getElementById("browser").src= "action";
+      document.getElementById("action").style.color = "blue";
+      document.getElementById("adventure").style.color = "";
+      document.getElementById("arcade").style.color = "";
+      document.getElementById("puzzle").style.color = "";
+      document.getElementById("strategy").style.color = "";
+      document.getElementById("sports").style.color = "";
+      document.getElementById("other").style.color = "";
     }
     function adventure(){
       document.getElementById("browser").src= "adventure";
