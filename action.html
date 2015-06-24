@@ -16,11 +16,11 @@
     
     <button id="action" type="button" class="btn btn-default">Jetpack Master</button>
     <button id="adventure" type="button" class="btn btn-default">Nut Rush 2</button>
-    <button id="arcade" type="button" class="btn btn-default">Red Head</button>
-    <button id="puzzle" type="button" class="btn btn-default">Happy Wheels</button>
-    <button id="strategy" type="button" class="btn btn-default">Cubefield</button>
-    <button id="sports" type="button" class="btn btn-default">Earth taken 2</button>
-    <button id="other" type="button" class="btn btn-default">Run 2</button>
+    <button id="arcade" type="button" class="btn btn-default">Kiba & Kumba: Shadow Run</button>
+    <button id="puzzle" type="button" class="btn btn-default">Red Head</button>
+    <button id="strategy" type="button" class="btn btn-default">Ufo Run</button>
+    <button id="sports" type="button" class="btn btn-default">Fishy Rush</button>
+    <button id="other" type="button" class="btn btn-default">Kiba & Kumba: High Jump</button>
   </div>
 </div>
 </header>
@@ -97,8 +97,8 @@
       document.getElementById("chat").style.color = "";
     }
     function puzzle(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src= "puzzle"
+      var browserFrame = document.getElementById("puzzle");
+      browserFrame.src= "http://play.famobi.com/kk-shadow-run"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -110,7 +110,7 @@
     }
     function strategy(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "strategy"
+      browserFrame.src= "http://play.famobi.com/ufo-run"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -122,7 +122,7 @@
     }
     function sports(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "sports"
+      browserFrame.src= "http://play.famobi.com/fishy-rush"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -134,7 +134,7 @@
     }
     function other(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "other"
+      browserFrame.src= "http://play.famobi.com/highjump"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -143,18 +143,6 @@
       document.getElementById("sports").style.color = "";
       document.getElementById("other").style.color = "blue";
       document.getElementById("chat").style.color = "";
-    }
-    function chatroom(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src= "chatroom"
-      document.getElementById("action").style.color = "";
-      document.getElementById("adventure").style.color = "";
-      document.getElementById("arcade").style.color = "";
-      document.getElementById("puzzle").style.color = "";
-      document.getElementById("strategy").style.color = "";
-      document.getElementById("sports").style.color = "";
-      document.getElementById("other").style.color = "";
-      document.getElementById("chat").style.color = "blue";
     }
 </script>
 </body>
