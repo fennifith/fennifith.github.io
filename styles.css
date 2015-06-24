@@ -52,7 +52,8 @@ iframe{width:100%;
      padding:10px;
      padding-top:150px;
      padding-bottom:0px;
-     margin-bottom:0px
+     margin-bottom:0px;
+     background-color:#dfdfdf;
 }
 
 .white {color:#ffffff;}
@@ -62,4 +63,4 @@ iframe{width:100%;
 .normalpadding {padding:5;}
 .normalmargin{margin:5;}
 .behind{z-index: 0;}
-.black{background-color:#ffffff;}
+.black{background-color:#dfdfdf;}
