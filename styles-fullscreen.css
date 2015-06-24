@@ -10,22 +10,12 @@ img {max-width:100%;
      font-family: Arial, Helvetica, sans-serif;
      padding:5px;
      margin:0px;}
-h1.top {color:#ffffff;
-    box-shadow:5px, 5px, 0px, #888888;
-    padding:25px;
-    margin:0px;
-    z-index: 199;
-}
 div.top {background-color:#0097a7;
      padding:10px;
      margin:0px;
      z-index: 200;
      max-height:54px;
 }
- header {padding:0px;
-     margin:0px;
-     width:100%;
-     font-family: Arial, Helvetica, sans-serif;}
  h1 {color:#000000;
      background-color:#00bcd4;
      padding:10px;
