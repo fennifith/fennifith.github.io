@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body ng-app="Todo">
+  <div class="page-container" ng-controller="TodoCtrl">
+    <input type="text" ng-model="message" />
+    <span> {{ message }} </span>
+  </div>  
+  <div class="page-container" ng-controller="TodoCtrl">
+    <h2>Todo</h2>
+
+      <ul class="todo-list" ng-repeat="todo in todos track by $index">
+
+      </ul>
+      
+  </div>  
+</body>
+</html>
