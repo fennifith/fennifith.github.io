@@ -72,3 +72,5 @@ iframe{width:100%;
 .small{max-width:150px;}
 .nooutline{outline: none;} 
 .front{z-index:999;}
+.back{z-index:1;}
+.whiteb{background-color:#ffffff;}
