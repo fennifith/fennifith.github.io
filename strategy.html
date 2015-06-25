@@ -4,51 +4,30 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="/touch-icon-iphone.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.png">
-  <meta name="apple-mobile-web-app-status-bar-style" content="blue">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-startup-image" href="/startupapple.png">
-  <title>Games</title>
+  <title>Index</title>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
 <header Style="position:fixed" id="side">
-<h1 class="top">Games</h1>
-<div class="top" "navbar navbar-default">
-<form class="navbar-form navbar-right blued nomargin nopadding navbar-collapse collapse" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" id="txtUrl" name="url" placeholder="Put url here">
-    </div>
-  <button type="submit" value="Go" onclick="setBrowserFrameSource(); return false;" class="btn btn-default">Submit</button>
-</form>
-<div class="navbar-collapse collapse">
-  <button id="index" type="button" class="btn btn-primary" href="theandroidmaster.github.io/index.html">Index</button>
-  <div class="btn-group" role="group" aria-label="...">
+<div class="top">
+  <div class="btn-group darkgray" role="group" aria-label="...">
     
-    <button id="action" type="button" class="btn btn-default">Action</button>
-    <button id="adventure" type="button" class="btn btn-default">Adventure</button>
-    <button id="arcade" type="button" class="btn btn-default">Arcade</button>
-    <button id="puzzle" type="button" class="btn btn-default">Puzzle</button>
-    <button id="strategy" type="button" class="btn btn-default">Strategy</button>
-    <button id="sports" type="button" class="btn btn-default">Sports</button>
-    <button id="other" type="button" class="btn btn-default">Other</button>
-  </div>
-  <button id="chat" type="button" class="btn btn-default">Chatroom</button>
+    <button id="action" type="button" class="btn btn-default">Jetpack Master</button>
+    <button id="adventure" type="button" class="btn btn-default">Nut Rush 2</button>
+    <button id="arcade" type="button" class="btn btn-default">Kiba & Kumba: Shadow Run</button>
+    <button id="puzzle" type="button" class="btn btn-default">Red Head</button>
+    <button id="strategy" type="button" class="btn btn-default">Ufo Run</button>
+    <button id="sports" type="button" class="btn btn-default">Fishy Rush</button>
+    <button id="other" type="button" class="btn btn-default">Kiba & Kumba: High Jump</button>
   </div>
 </div>
 </header>
 <div class="content">
-  <h>This website allows you to break through most website blocking techniques by using an iframe.</h>
-  
-  
-<div class="embed-responsive embed-responsive-16by9 fixed">
-  <iframe id="browser" class="embed-responsive-item black fixed" scrolling="no" name="browser"></iframe>
-</div>
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
+  </div>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -56,19 +35,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
-    $('#index').on('click',function(){
-      var browserFrame = document.getElementById("browser");
-        browserFrame.src= "index-index";
-        document.getElementById("action").style.color = "";
-        document.getElementById("adventure").style.color = "";
-        document.getElementById("arcade").style.color = "";
-        document.getElementById("puzzle").style.color = "";
-        document.getElementById("strategy").style.color = "";
-        document.getElementById("sports").style.color = "";
-        document.getElementById("other").style.color = "";
-        document.getElementById("chat").style.color = "";
-    });
     
     $('#action').on('click',function(){
       action();
@@ -97,17 +63,8 @@
     $('#other').on('click', function(){
       other();
     });
-    
-    $('#chat').on('click', function(){
-      chatroom();
-    });
-    
-    function setBrowserFrameSource(){
-        var browserFrame = document.getElementById("browser");
-        browserFrame.src= "http://" + document.getElementById("txtUrl").value;
-    }
     function action(){
-      document.getElementById("browser").src= "action";
+      document.getElementById("browser").src= "http://play.famobi.com/jetpack-master";
       document.getElementById("action").style.color = "blue";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -118,7 +75,7 @@
       document.getElementById("chat").style.color = "";
     }
     function adventure(){
-      document.getElementById("browser").src= "adventure";
+      document.getElementById("browser").src= "http://play.famobi.com/nut-rush2";
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "blue";
       document.getElementById("arcade").style.color = "";
@@ -129,7 +86,7 @@
       document.getElementById("chat").style.color = "";
     }
     function arcade(){
-      document.getElementById("browser").src= "arcade";
+      document.getElementById("browser").src= "http://play.famobi.com/red-head";
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "blue";
@@ -140,8 +97,8 @@
       document.getElementById("chat").style.color = "";
     }
     function puzzle(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src= "puzzle"
+      var browserFrame = document.getElementById("puzzle");
+      browserFrame.src= "http://play.famobi.com/kk-shadow-run"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -153,7 +110,7 @@
     }
     function strategy(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "strategy"
+      browserFrame.src= "http://play.famobi.com/ufo-run"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -165,7 +122,7 @@
     }
     function sports(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "sports"
+      browserFrame.src= "http://play.famobi.com/fishy-rush"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -177,7 +134,7 @@
     }
     function other(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "other"
+      browserFrame.src= "http://play.famobi.com/highjump"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
@@ -187,19 +144,6 @@
       document.getElementById("other").style.color = "blue";
       document.getElementById("chat").style.color = "";
     }
-    function chatroom(){
-      var browserFrame = document.getElementById("browser");
-      browserFrame.src= "chatroom"
-      document.getElementById("action").style.color = "";
-      document.getElementById("adventure").style.color = "";
-      document.getElementById("arcade").style.color = "";
-      document.getElementById("puzzle").style.color = "";
-      document.getElementById("strategy").style.color = "";
-      document.getElementById("sports").style.color = "";
-      document.getElementById("other").style.color = "";
-      document.getElementById("chat").style.color = "blue";
-    }
 </script>
 </body>
 </html>
-
