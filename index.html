@@ -19,7 +19,7 @@
     </div>
   <button type="submit" value="Go" onclick="setBrowserFrameSource(); return false;" class="btn btn-default">Submit</button>
 </form>
-  <button type="button" class="btn btn-primary" href="theandroidmaster.github.io/index.html">Index</button>
+  <button id-"index" type="button" class="btn btn-primary" href="theandroidmaster.github.io/index.html">Index</button>
   <div class="btn-group" role="group" aria-label="...">
     
     <button id="action" type="button" class="btn btn-default">Action</button>
@@ -47,6 +47,19 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    
+    $('#index').on('click',function(){
+      var browserFrame = document.getElementById("browser");
+        browserFrame.src= "index-index";
+        document.getElementById("action").style.color = "";
+        document.getElementById("adventure").style.color = "";
+        document.getElementById("arcade").style.color = "";
+        document.getElementById("puzzle").style.color = "";
+        document.getElementById("strategy").style.color = "";
+        document.getElementById("sports").style.color = "";
+        document.getElementById("other").style.color = "";
+        document.getElementById("chat").style.color = "";
+    });
     
     $('#action').on('click',function(){
       action();
