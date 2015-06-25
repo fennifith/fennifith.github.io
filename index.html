@@ -4,13 +4,39 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="/touch-icon-iphone.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/touch-icon-ipad-retina.png">
-  <meta name="apple-mobile-web-app-status-bar-style" content="blue">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-startup-image" href="/startupapple.png">
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
+
+        <!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<!-- ENABLE WEB APP MODE -->
+		<meta name="apple-mobile-web-app-title" content="Short Name">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="translucent black" />
+
+		<!-- iPhone -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/touch-icon-iphone">
+        <link rel="apple-touch-startup-image" href="/startupapple" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)">
+
+        <!-- iPhone (Retina) -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/touch-icon-iphone-retina">
+        <link rel="apple-touch-startup-image" href="/startupapple" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" >
+
+        <!-- iPhone 5 -->
+        <link rel="apple-touch-startup-image" href="/startupapple" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
+
+        <!-- iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/touch-icon-ipad">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/startupapple">
+        <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/startupapple">
+
+        <!-- iPad (Retina) -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/touch-icon-ipad-retina">
+        <link rel="apple-touch-startup-image" href="/startupapple" media="device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+        <link rel="apple-touch-startup-image" href="/startupapple" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+
   <title>Games</title>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
