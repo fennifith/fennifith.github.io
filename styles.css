@@ -47,6 +47,9 @@ li.left {
 iframe{width:100%;
      height:calc(100% - 180px);
      overflow:hidden;
+     margin-left:50px;
+     margin-right:50px;
+     margin-bottom:0px;
 }
      
 .content {
@@ -67,4 +70,3 @@ iframe{width:100%;
 .normalmargin{margin:5;}
 .behind{z-index: 0;}
 .black{background-color:#dfdfdf;}
-.fixed{max-height:80%;}
