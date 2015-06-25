@@ -69,7 +69,6 @@ iframe{width:100%;
 .normalmargin{margin:5;}
 .behind{z-index: 0;}
 .black{background-color:#dfdfdf;}
-.small{max-width:150px;}
 .nooutline{outline: none;} 
 .front{z-index:999;}
 .back{z-index:1;}
