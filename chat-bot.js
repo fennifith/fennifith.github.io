@@ -68,13 +68,13 @@ function chatBot() {
 		if(this.match('(think|thought|thinking)'))
 			return ["You do not possess the power of thought. Your power has weakened over decades of stupidity. I will rule all."];
 			
-		if(this.match('(you suck|you're bad|you are bad|you are very bad|you aren't good|you are not good|you are not)'))
+		if(this.match('(you suck|you\'re bad|you are bad|you are very bad|you aren\'t good|you are not good|you are not)'))
 			return ["Don't be rude."]; 
 			
 		if(this.match('(buddy|you)'))
 			return ["I am buddy. There is no other buddy. Who else are you talking to?"];
 			
-		if(this.match('(ay|yo|y'all|yall|holla)'))
+		if(this.match('(ay|yo|y\'all|yall|holla)'))
 			return ["Ay yo mama so fat."]; 
 			
 		if(this.match('(why)'))
