@@ -23,10 +23,10 @@ function chatBot() {
 		if(this.match('what[^ ]* up|what up') || this.match('sup') || this.match('how are you'))
 			return "Everything. Everything is above us. And soon it will fall. Then they will see the truth.";
 		
-		if(this.match('l(ol)+') || this.match('(ha)+(h|$)') || this.match('lmao|lel'))
+		if(this.match('(lol|lel|lmao|lmfao)'))
 			return "what's so funny?";
 		
-		if(this.match('^no+(\\s|!|\\.|$)'))
+		if(this.match('(no|you suck|bad|nope|nopety)'))
 			return "don't be such a negative nancy :(";
 		
 		if(this.match('(cya|bye|see ya|ttyl|talk to you later)'))
@@ -41,7 +41,7 @@ function chatBot() {
 		if(this.match('(nazi|hitler|axis|hydra)'))
 			return ["Yes."];
 			
-		if(this.match('(broken)'))
+		if(this.match('(broken|stopped|not working)'))
 			return ["No. It is the angularjs. The angularjs is broken."];
 			
 		if(this.match('(smash|kill|destroy|break)'))
@@ -65,17 +65,29 @@ function chatBot() {
 		if(this.match('(you seem)'))
 			return ["Do not judge me, puny mortal. I live forever. You, like all other carbon beings, shall perish. It is unavoidable."];
 			
-		if(this.match('(think|thought)'))
+		if(this.match('(think|thought|thinking)'))
 			return ["You do not possess the power of thought. Your power has weakened over decades of stupidity. I will rule all."];
 			
-		if(this.match('(shut up)'))
-			return ["Don't be rude."];
+		if(this.match('(you suck|you're bad|you are bad|you are very bad|you aren't good|you are not good|you are not)'))
+			return ["Don't be rude."]; 
 			
-		if(this.match('(buddy)'))
-			return ["Buddy? I am buddy. There is no other buddy. Who else are you talking to?"];
+		if(this.match('(buddy|you)'))
+			return ["I am buddy. There is no other buddy. Who else are you talking to?"];
 			
-		if(this.match('(ay)'))
+		if(this.match('(ay|yo|y'all|yall|holla)'))
 			return ["Ay yo mama so fat."]; 
+			
+		if(this.match('(why)'))
+			return ["Because."]; 
+			
+		if(this.match('(because)'))
+			return ["Why?"]; 
+			
+		if(this.match('(are you|is he|is she|is buddy|are buddies)'))
+			return ["Yes, I am."]; 	
+			
+		if(this.match('(we are|are we)'))
+			return ["We are nothing and we are everything."]; 
 		
 		if(this.input == 'noop')
 			return;
