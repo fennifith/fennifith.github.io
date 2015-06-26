@@ -10,22 +10,22 @@
   <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
-<header Style="position:fixed" id="side">
-<div class="top">
-  <div class="btn-group darkgray" role="group" aria-label="...">
-    
-    <button id="action" type="button" class="btn btn-default">Cartoon Flight</button>
-    <button id="adventure" type="button" class="btn btn-default">Timberman</button>
-    <button id="arcade" type="button" class="btn btn-default">Sheepop</button>
-    <button id="puzzle" type="button" class="btn btn-default">2cars</button>
-    <button id="strategy" type="button" class="btn btn-default">Knightower</button>
-    <button id="sports" type="button" class="btn btn-default">Boss Level Shootout</button>
-    <button id="other" type="button" class="btn btn-default">Spring Panda</button>
-  </div>
-</div>
-</header>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Arcade <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu">
+              <li id="action" type="button" class="btn btn-default">Cartoon Flight</li>
+              <li id="adventure" type="button" class="btn btn-default">Timberman</li>
+              <li id="arcade" type="button" class="btn btn-default">Sheepop</li>
+              <li id="puzzle" type="button" class="btn btn-default">2cars</li>
+              <li id="strategy" type="button" class="btn btn-default">Knightower</li>
+              <li id="sports" type="button" class="btn btn-default">Boss Level Shootout</li>
+              <li id="other" type="button" class="btn btn-default">Spring Panda</li>
+        </ul>
+      </div>
 <div class="content">
-  <div class="embed-responsive embed-responsive-16by9">
+  <div class="embed-responsive embed-responsive-4by3">
   <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
   </div>
 </div>
