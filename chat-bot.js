@@ -61,6 +61,12 @@ function chatBot() {
 			
 		if(this.match('(conversation)'))
 			return ["CONVERSATION!? THIS IS NOT A CONVERSATION! IT NEVER WAS! THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"];
+			
+		if(this.match('(you seem)'))
+			return ["Do not judge me, puny mortal. I live forever. You, like all other carbon beings, shall perish. It is unavoidable."];
+			
+		if(this.match('(think|thought)'))
+			return ["You do not possess the power of thought. Your power has weakened over decades of stupidity. I will rule all."];
 		
 		if(this.input == 'noop')
 			return;
