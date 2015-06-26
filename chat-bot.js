@@ -73,11 +73,14 @@ function chatBot() {
 			
 		if(this.match('(buddy)'))
 			return ["Buddy? I am buddy. There is no other buddy. Who else are you talking to?"];
+			
+		if(this.match('(ay)'))
+			return ["Ay yo mama so fat."]; 
 		
 		if(this.input == 'noop')
 			return;
 		
-		return "Hi '" + input + "', i'm buddy.";
+		return "Hi " + input + ", i'm buddy.";
 	}
 	
 	/**
