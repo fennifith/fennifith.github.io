@@ -52,6 +52,9 @@ function chatBot() {
 			
 		if(this.match('(going to|will)'))
 			return ["Yes, you will."];
+			
+		if(this.match('(what)'))
+			return ["Of course."];
 		
 		if(this.input == 'noop')
 			return;
