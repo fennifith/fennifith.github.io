@@ -10,22 +10,23 @@
   <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
-<header Style="position:fixed" id="side">
-<div class="top">
-  <div class="btn-group darkgray" role="group" aria-label="...">
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu">
+              <li id="action" type="button" class="btn btn-default">Jetpack Master</li>
+              <li id="adventure" type="button" class="btn btn-default">Nut Rush 2</li>
+              <li id="arcade" type="button" class="btn btn-default">Red Head</li>
+              <li id="puzzle" type="button" class="btn btn-default">Kiba and Kumba: Shadow Run</li>
+              <li id="strategy" type="button" class="btn btn-default">Ufo Run</li>
+              <li id="sports" type="button" class="btn btn-default">Fishy Rush</li>
+              <li id="other" type="button" class="btn btn-default">Kiba and Kumba: High Jump</li>
+        </ul>
+      </div>
     
-    <button id="action" type="button" class="btn btn-default">Jetpack Master</button>
-    <button id="adventure" type="button" class="btn btn-default">Nut Rush 2</button>
-    <button id="arcade" type="button" class="btn btn-default">Kiba & Kumba: Shadow Run</button>
-    <button id="puzzle" type="button" class="btn btn-default">Red Head</button>
-    <button id="strategy" type="button" class="btn btn-default">Ufo Run</button>
-    <button id="sports" type="button" class="btn btn-default">Fishy Rush</button>
-    <button id="other" type="button" class="btn btn-default">Kiba & Kumba: High Jump</button>
-  </div>
-</div>
-</header>
 <div class="content">
-  <div class="embed-responsive embed-responsive-16by9">
+  <div class="embed-responsive embed-responsive-4by3">
   <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
   </div>
 </div>
