@@ -68,6 +68,6 @@ $(function() {
 	$('.input a').bind('click', submitChat);
 	
 	// initial chat state
-	updateChat(robot, 'Hi there. Try typing something!');
+	updateChat(robot, 'Hello?');
 
 });
