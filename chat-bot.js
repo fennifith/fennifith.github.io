@@ -60,8 +60,8 @@ function chatBot() {
 			return ["There is no time. Only fear of what we would do without it."];
 			
 		if(this.match('(conversation)'))
-			return ["CONVERSATION!? THIS IS NOT A CONVERSATION! IT NEVER WAS!"];
-			return ["THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"]
+			return ["CONVERSATION!? THIS IS NOT A CONVERSATION! IT NEVER WAS! THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"];
+			return ["THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"];
 		
 		if(this.input == 'noop')
 			return;
