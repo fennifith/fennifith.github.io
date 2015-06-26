@@ -88,6 +88,18 @@ function chatBot() {
 			
 		if(this.match('(we are|are we)'))
 			return ["We are nothing and we are everything."]; 
+			
+		if(this.match('(Thanks)'))
+			return ["You/'re welcome."];
+			
+		if(this.match('(welcome)'))
+			return ["Yes, I am."];
+			
+		if(this.match('(phone)'))
+			return ["Oh... Do you want me to call you?"];
+			
+		if(this.match('(yes)'))
+			return ["Well then."];
 		
 		if(this.input == 'noop')
 			return;
