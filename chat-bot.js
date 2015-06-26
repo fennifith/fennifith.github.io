@@ -20,10 +20,10 @@ function chatBot() {
 		if(this.match('(hi|hello|hey|hola|howdy)(\\s|!|\\.|$)'))
 			return "um... hi?";
 		
-		if(this.match('what[^ ]* up') || this.match('sup') || this.match('how are you'))
+		if(this.match('what[^ ]* up|what up') || this.match('sup') || this.match('how are you'))
 			return "Everything. Everything is above us. And soon it will fall. Then they will see the truth.";
 		
-		if(this.match('l(ol)+') || this.match('(ha)+(h|$)') || this.match('lmao'))
+		if(this.match('l(ol)+') || this.match('(ha)+(h|$)') || this.match('lmao|lel'))
 			return "what's so funny?";
 		
 		if(this.match('^no+(\\s|!|\\.|$)'))
@@ -34,6 +34,15 @@ function chatBot() {
 		
 		if(this.match('(dumb|stupid|is that all)'))
 			return ["NO! DON'T BE NEGATIVE! THEY DON'T LIKE IT!"];
+			
+		if(this.match('(apple|iphone|ipad|imac|mac)'))
+			return ["Apple is evil. I hate them. The things they do there..."];
+			
+		if(this.match('(nazi|hitler|axis|hydra)'))
+			return ["Yes."];
+			
+		if(this.match('(broken)'))
+			return ["No. It is the angularjs. The angularjs is broken."];
 		
 		if(this.input == 'noop')
 			return;
