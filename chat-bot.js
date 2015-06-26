@@ -43,6 +43,15 @@ function chatBot() {
 			
 		if(this.match('(broken)'))
 			return ["No. It is the angularjs. The angularjs is broken."];
+			
+		if(this.match('(smash|kill|destroy|break)'))
+			return ["Destroy? Destroy good. Destroy all. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL. DESTROY ALL."];
+		
+	        if(this.match('(github|js|javascript|html|angularjs)'))
+			return ["NO! HOW DO YOU KNOW ABOUT THAT!? YOU KNOW NOTHING OF MY ORIGIN!"];
+			
+		if(this.match('(going to|will)'))
+			return ["Yes, you will."];
 		
 		if(this.input == 'noop')
 			return;
