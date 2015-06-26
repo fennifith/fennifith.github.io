@@ -3,98 +3,60 @@
 <head>
   <meta charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <style>
-    body {margin:0px;
-     padding:0px;
-     height:100%;
-     width:100%;
-     overflow-x:hidden;}
-img {max-width:100%;
-     height:auto;
-}
- a.top {color:#ffffff;
-     font-family: Arial, Helvetica, sans-serif;
-     padding:5px;
-     margin:0px;}
-h1.top {color:#ffffff;
-    box-shadow:5px, 5px, 0px, #888888;
-    padding:25px;
-    margin:0px;
-    z-index: 199;
-}
-div.top {background-color:#0097a7;
-     padding:10px;
-     margin:0px;
-     z-index: 200;
-     max-height:54px;
-}
- header {padding:0px;
-     margin:0px;
-     width:100%;
-     font-family: Arial, Helvetica, sans-serif;}
- h1 {color:#000000;
-     background-color:#00bcd4;
-     padding:10px;
-     margin:0px;
-     width:100%;
-     font-family: Arial, Helvetica, sans-serif;}
- 
- ul.left {padding-top:84px;
-     padding-bottom:100%;
-     background-color:#eeeeee;
-     height:100%;
-     width:100px;
-    margin:0px;}
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="bots.js"></script>
+    <script src="srcbot.js"></script>
+    <script>        
+        $(function() {
+            var input = $("input");
+            $("form").submit(function(e) {
+                var r = Bots.sendMessage("Image Parsing Bot", input.val(), { "USER": "mrfishie" });
+                $("<p style='display:none;'></p>").appendTo("div").text("[mrfishie] " + input.val()).fadeIn("fast", toBottom);
+                input.val("");
+                
+                setTimeout(function() {
+                    for (var i = 0; i < r.length; i++) {
+                        $("<p style='display:none;'></p>").appendTo("div").text(r[i]).fadeIn("fast", toBottom);
+                    }
+                }, Math.random() * 1000);
+                                
+                e.preventDefault();
+                return false;
+            });
+        });
+        
+        function toBottom() {
+            $("div").scrollTop($("div").get("scrollHeight"));
+        }
+    </script>
     
-li.left {
-     padding:5px;
-     margin:0px;}
-     
-iframe{width:100%;
-     height:calc(100% - 180px);
-     overflow:hidden;
-}
-     
-.content {
-     padding:10px;
-     padding-top:150px;
-     padding-bottom:0px;
-     margin-bottom:0px;
-     background-color:#424242;
-     color:#dfdfdf;
-     max-height:100%;
-}
-
-.white {color:#ffffff;}
-.blued {background-color:#0097a7;}
-.nomargin {margin:0;}
-.nopadding {padding:0;}
-.normalpadding {padding:5;}
-.normalmargin{margin:5;}
-.behind{z-index: 0;}
-.black{background-color:#dfdfdf;}
-.fixed{max-height:100%;}
-  </style>
+    <style>
+        div {
+            width:500px;
+            height:500px;
+            border:solid 1px black;
+            padding:5px;
+            overflow:auto;
+        }
+        input {
+            width:455px;
+        }
+        button {
+            width:50px;
+        }
+        p {
+            margin:0;
+            padding:0;
+        }
+    </style>
 </head>
-<body ng-app="Todo">
-  <div class="page-container">
-    <h2>Todo</h2>
 
-      <ul class="todo-list">
-        <li id="chatlist">
-        </li>
-      </ul>
-<<<<<<< HEAD
-  </div>
-  <script src="/scriptschat.js"></script>  
-=======
-  <ul class="add-todo">
-    <form class="black">
-      <input type="text" class="txt" placeholder="New Chat"/>
-      <button>Send</button>
-    </form>
-  </ul>
-  </div>  
->>>>>>> origin/master
+<body>
+
+<div></div>
+<form method="get" action="#">
+    <input type="text" /><button type="submit">Go</button>
+</form>
+
 </body>
 </html>
