@@ -10,22 +10,22 @@
   <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
-<header Style="position:fixed" id="side">
-<div class="top">
-  <div class="btn-group darkgray" role="group" aria-label="...">
-    
-    <button id="action" type="button" class="btn btn-default">Domino Shades</button>
-    <button id="adventure" type="button" class="btn btn-default">Hextris</button>
-    <button id="arcade" type="button" class="btn btn-default">Jelly Collapse</button>
-    <button id="puzzle" type="button" class="btn btn-default">Block Buster</button>
-    <button id="strategy" type="button" class="btn btn-default">Pop Pop Rush</button>
-    <button id="sports" type="button" class="btn btn-default">Smarty Bubbles</button>
-    <button id="other" type="button" class="btn btn-default">Don't Cross the Line</button>
-  </div>
-</div>
-</header>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu">
+              <li id="action" type="button" class="btn btn-default">Domino Shades</li>
+              <li id="adventure" type="button" class="btn btn-default">Hextris</li>
+              <li id="arcade" type="button" class="btn btn-default">Jelly Collapse</li>
+              <li id="puzzle" type="button" class="btn btn-default">Block Buster</li>
+              <li id="strategy" type="button" class="btn btn-default">Pop Pop Rush</li>
+              <li id="sports" type="button" class="btn btn-default">Smarty Bubbles</li>
+              <li id="other" type="button" class="btn btn-default">Don't Cross the Line</li>
+        </ul>
+      </div>
 <div class="content">
-  <div class="embed-responsive embed-responsive-16by9">
+  <div class="embed-responsive embed-responsive-4by3">
   <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
   </div>
 </div>
