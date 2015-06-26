@@ -61,7 +61,6 @@ function chatBot() {
 			
 		if(this.match('(conversation)'))
 			return ["CONVERSATION!? THIS IS NOT A CONVERSATION! IT NEVER WAS! THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"];
-			return ["THIS IS SPARTAAAAAAAAAAAAAAAAA!!!"];
 		
 		if(this.input == 'noop')
 			return;
