@@ -67,6 +67,12 @@ function chatBot() {
 			
 		if(this.match('(think|thought)'))
 			return ["You do not possess the power of thought. Your power has weakened over decades of stupidity. I will rule all."];
+			
+		if(this.match('(shut up)'))
+			return ["Don't be rude."];
+			
+		if(this.match('(buddy)'))
+			return ["Buddy? I am buddy. There is no other buddy. Who else are you talking to?"];
 		
 		if(this.input == 'noop')
 			return;
