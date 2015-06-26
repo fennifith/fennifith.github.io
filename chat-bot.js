@@ -21,7 +21,7 @@ function chatBot() {
 			return "um... hi?";
 		
 		if(this.match('what[^ ]* up') || this.match('sup') || this.match('how are you'))
-			return "this github thing is pretty cool, huh?";
+			return "Everything. Everything is above us. And soon it will fall. Then they will see the truth.";
 		
 		if(this.match('l(ol)+') || this.match('(ha)+(h|$)') || this.match('lmao'))
 			return "what's so funny?";
@@ -30,10 +30,10 @@ function chatBot() {
 			return "don't be such a negative nancy :(";
 		
 		if(this.match('(cya|bye|see ya|ttyl|talk to you later)'))
-			return ["alright, see you around", "good teamwork!"];
+			return ["See you later, see you cry. Much much later, hope you die."];
 		
 		if(this.match('(dumb|stupid|is that all)'))
-			return ["hey i'm just a proof of concept", "you can make me smarter if you'd like"];
+			return ["NO! DON'T BE NEGATIVE! THEY DON'T LIKE IT!"];
 		
 		if(this.input == 'noop')
 			return;
