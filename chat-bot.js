@@ -47,7 +47,7 @@ function chatBot() {
 		if(this.input == 'noop')
 			return;
 		
-		return input + " what?";
+		return "Hi" + input + ", i'm buddy.";
 	}
 	
 	/**
