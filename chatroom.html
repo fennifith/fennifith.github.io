@@ -2,61 +2,24 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-    <script src="bot.js"></script>
-    <script src="sourcebot.js"></script>
-    <script>        
-        $(function() {
-            var input = $("input");
-            $("form").submit(function(e) {
-                var r = Bots.sendMessage("Image Parsing Bot", input.val(), { "USER": "mrfishie" });
-                $("<p style='display:none;'></p>").appendTo("div").text("[mrfishie] " + input.val()).fadeIn("fast", toBottom);
-                input.val("");
-                
-                setTimeout(function() {
-                    for (var i = 0; i < r.length; i++) {
-                        $("<p style='display:none;'></p>").appendTo("div").text(r[i]).fadeIn("fast", toBottom);
-                    }
-                }, Math.random() * 1000);
-                                
-                e.preventDefault();
-                return false;
-            });
-        });
-        
-        function toBottom() {
-            $("div").scrollTop($("div").get("scrollHeight"));
-        }
-    </script>
-    
-    <style>
-        div {
-            width:500px;
-            height:500px;
-            border:solid 1px black;
-            padding:5px;
-            overflow:auto;
-        }
-        input {
-            width:455px;
-        }
-        button {
-            width:50px;
-        }
-        p {
-            margin:0;
-            padding:0;
-        }
-    </style>
+  <title>Chatroom</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
 <body>
 
-<div></div>
-<form method="get" action="#">
-    <input type="text" /><button type="submit">Go</button>
-</form>
+<div class="container">
+			<h1 class="title">chat-bot</h1>
+			<div class="chat"></div>
+			<div class="busy"></div>
+			<div class="input">
+				<input type="text" placeholder="Chat" />
+				<a>Send</a>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/chat-bot.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 </html>
