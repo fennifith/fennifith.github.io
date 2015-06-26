@@ -12,7 +12,7 @@ body {
 
 .container {
 	width: auto;
-	margin: 50px auto 20px;
+	margin: 20px auto 20px;
 }
 
 .title {
@@ -29,7 +29,7 @@ body {
 	overflow-y: scroll;
 	background-color: white;
 	border-radius: 10px 0 0 0;
-	max-height:537px;
+	max-height:300px;
 }
 
 .chat div {
