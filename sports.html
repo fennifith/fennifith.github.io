@@ -10,22 +10,22 @@
   <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
-<header Style="position:fixed" id="side">
-<div class="top">
-  <div class="btn-group darkgray" role="group" aria-label="...">
-    
-    <button id="action" type="button" class="btn btn-default">Mini Putt Gem Garden</button>
-    <button id="adventure" type="button" class="btn btn-default">Basketball</button>
-    <button id="arcade" type="button" class="btn btn-default">Speed Billards</button>
-    <button id="puzzle" type="button" class="btn btn-default">Foot Chinko</button>
-    <button id="strategy" type="button" class="btn btn-default">Speed Club Nitro</button>
-    <button id="sports" type="button" class="btn btn-default">Burnin' Rubber</button>
-    <button id="other" type="button" class="btn btn-default">Home Run Champion</button>
-  </div>
-</div>
-</header>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu">
+              <li id="action" type="button" class="btn btn-default">Mini Putt Gem Garden</li>
+              <li id="adventure" type="button" class="btn btn-default">Basketball</li>
+              <li id="arcade" type="button" class="btn btn-default">Speed Billards</li>
+              <li id="puzzle" type="button" class="btn btn-default">Foot Chinko</li>
+              <li id="strategy" type="button" class="btn btn-default">HexGL</li>
+              <li id="sports" type="button" class="btn btn-default">Burnin' Rubber</li>
+              <li id="other" type="button" class="btn btn-default">Home Run Champion</li>
+        </ul>
+      </div>
 <div class="content">
-  <div class="embed-responsive embed-responsive-16by9">
+  <div class="embed-responsive embed-responsive-4by3">
   <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
   </div>
 </div>
@@ -110,7 +110,7 @@
     }
     function strategy(){
       var browserFrame = document.getElementById("browser");
-      browserFrame.src= "http://play.famobi.com/sprint-club-nitro"
+      browserFrame.src= "http://hexgl.bkcore.com/play/"
       document.getElementById("action").style.color = "";
       document.getElementById("adventure").style.color = "";
       document.getElementById("arcade").style.color = "";
