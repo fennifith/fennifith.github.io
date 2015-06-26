@@ -10,20 +10,20 @@
   <link rel="stylesheet" type="text/css" href="/styles-fullscreen.css">
 </head>
 <body>
-<header Style="position:fixed" id="side">
-<div class="top">
-  <div class="btn-group darkgray" role="group" aria-label="...">
-    
-    <button id="action" type="button" class="btn btn-default">Wanderlust</button>
-    <button id="adventure" type="button" class="btn btn-default">The Green Mission</button>
-    <button id="arcade" type="button" class="btn btn-default">Kiba and Kumba: Jungle Chaos</button>
-    <button id="puzzle" type="button" class="btn btn-default">Princess Goldblade and the Dangerous Water</button>
-    <button id="strategy" type="button" class="btn btn-default">Sweets Monster</button>
-    <button id="sports" type="button" class="btn btn-default">Nut Rush 3 - Snow Scramble</button>
-    <button id="other" type="button" class="btn btn-default">Snail Bob 3</button>
-  </div>
-</div>
-</header>
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu">
+              <li id="action" type="button" class="btn btn-default">Wanderlust</li>
+              <li id="adventure" type="button" class="btn btn-default">The Green Mission</li>
+              <li id="arcade" type="button" class="btn btn-default">Kiba and Kumba: Jungle Chaos</li>
+              <li id="puzzle" type="button" class="btn btn-default">Princess Goldblade and the Dangerous Water</li>
+              <li id="strategy" type="button" class="btn btn-default">Sweets Monster</li>
+              <li id="sports" type="button" class="btn btn-default">Nut Rush 3 - Snow Scramble</li>
+              <li id="other" type="button" class="btn btn-default">Snail Bob 3</li>
+        </ul>
+      </div>
 <div class="content">
   <div class="embed-responsive embed-responsive-16by9">
   <iframe id="browser" class="embed-responsive-item black" name="browser"></iframe>
