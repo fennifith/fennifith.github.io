@@ -65,6 +65,13 @@ iframe{overflow:hidden;
      max-width:720px;
 }
 
+.btlink {
+     padding-left:10px;
+     padding-right:10px;
+     color:#dfdfdf;
+}
+}
+
 .white {color:#ffffff;}
 .blued {background-color:#0097a7;}
 .nomargin {margin:0;}
