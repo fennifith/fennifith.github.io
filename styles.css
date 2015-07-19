@@ -13,7 +13,7 @@ img {max-width:100%;
      padding:5px;
      margin:0px;}
 h1.top {color:#000000;
-    background-color:#ffffff;
+    background-color:#F44336;
     padding-left:25px;
     padding-right:25px;
     padding-top:10px;
@@ -21,7 +21,7 @@ h1.top {color:#000000;
     margin:0px;
     z-index: 199;
 }
-div.top {background-color:#ffffff;
+div.top {background-color:#F44336;
      padding:10px;
      margin:0px;
      z-index: 200;
