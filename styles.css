@@ -3,7 +3,7 @@ body {margin:0px;
      height:100%;
      width:100%;
      overflow-x:hidden;
-     background-color:#D32F2F;
+     background-color:#424242;
 }
 img {max-width:100%;
      height:auto;
@@ -72,7 +72,8 @@ iframe{overflow:hidden;
 .btlink {
      padding-left:0px;
      padding-right:20px;
-     color:#424242;
+     color:#009688;
+     font-weight: bold;
 }
 }
 
