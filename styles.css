@@ -69,6 +69,17 @@ iframe{overflow:hidden;
      max-width:720px;
 }
 
+.normal{
+     padding:10px;
+     margin-bottom:0px;
+     margin-left: auto;
+     margin-right: auto;
+     background-color:#ffffff;
+     color:#424242;
+     max-height:100%;
+     max-width:720px;
+}
+
 .btlink {
      padding-left:0px;
      padding-right:20px;
