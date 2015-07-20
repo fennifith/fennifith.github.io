@@ -71,6 +71,9 @@ iframe{overflow:hidden;
      color:#dfdfdf;
 }
 }
+.img{
+     max-width:50px;
+}
 
 .white {color:#ffffff;}
 .blued {background-color:#0097a7;}
