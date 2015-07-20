@@ -5,7 +5,7 @@ body {margin:0px;
      overflow-x:hidden;
      background-color:#424242;
 }
-img {max-width:100%;
+img {max-width:50%;
      height:auto;
 }
  a.top {color:#000000;
@@ -70,9 +70,6 @@ iframe{overflow:hidden;
      padding-right:20px;
      color:#dfdfdf;
 }
-}
-.img{
-     max-width:50px;
 }
 
 .white {color:#ffffff;}
