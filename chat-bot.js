@@ -30,7 +30,7 @@ function chatBot() {
 			return "don't be such a negative nancy :(";
 		
 		if(this.match('(cya|bye|see ya|ttyl|talk to you later)'))
-			return ["See you later, see you cry. Much much later, hope you die."];
+			return ["No. I will find you later. Much later."];
 		
 		if(this.match('(dumb|stupid|is that all)'))
 			return ["NO! DON'T BE NEGATIVE! THEY DON'T LIKE IT!"];
