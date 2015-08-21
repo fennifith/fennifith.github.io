@@ -68,7 +68,6 @@ body {
 .input input {
 	vertical-align: top;
 	float: left;
-	border: 1px solid #ccc;
 	padding: 5px;
 	width: auto;
 	margin: 0;
@@ -79,8 +78,7 @@ body {
 	vertical-align: top;
 	float: right;
 	font-weight: bold;
-	border: 1px solid #ccc;
-	background-color: #efefef;
+	background-color: #ffffff;
 	padding: 7px 35px;
 	color: black;
 	text-decoration: none;
@@ -88,6 +86,6 @@ body {
 }
 
 .input a:hover {
-	background-color: #ddd;
+	background-color: #fff;
 	cursor: pointer;
 }
