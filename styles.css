@@ -5,6 +5,9 @@ body {margin:0px;
      overflow-x:hidden;
      background-color:#ffffff;
 }
+hl {
+     color:#e0e0e0;
+}
 img {max-width:100%;
      height:auto;
 }
