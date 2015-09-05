@@ -105,6 +105,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script>
+    	function iOS() {
+
+  var iDevices = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ];
+
+  while (iDevices.length) {
+    if (navigator.platform === iDevices.pop()){ return true; }
+  }
+
+  return false;
+}
+
+if(iOS()){
+	alert("You are using an iDevice. The android master does not approve of iDevices. Please come back when you have an Android.")
+}
+    </script>
 </body>
 </html>
 
