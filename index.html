@@ -141,22 +141,7 @@ function getMetaContentByName(name,content){
 
 document.getElementById("headerthingy").style.backgroundColor = getMetaContentByName("theme-color");
 
-Color contrastColor(Color color)
-{
-    int d = 0;
 
-    // Counting the perceptive luminance - human eye favors green color... 
-    double a = 1 - ( 0.299 * color.R + 0.587 * color.G + 0.114 * color.B)/255;
-
-    if (a < 0.5)
-       d = 0; // bright colors - black font
-    else
-       d = 255; // dark colors - white font
-
-    return  Color.FromArgb(d, d, d);
-}
-
-document.getElementById("headerthingy").style.color = contrastColor(getMetaContentByName("theme-color"))
     </script>
 </body>
 </html>
