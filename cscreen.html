@@ -80,5 +80,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script>
+    	function getMetaContentByName(name,content){
+   var content = (content==null)?'content':content;
+   return document.querySelector("meta[name='"+name+"']").getAttribute(content);
+}
+document.getElementById("headerthingy").style.backgroundColor = getMetaContentByName("theme-color");
+    </script>
 </body>
 </html>
