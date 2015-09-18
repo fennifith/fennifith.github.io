@@ -46,6 +46,7 @@
             <li><a id="puzzle" class="btn-default light dark" href="llauncher">List Launcher</a></li>
             <li><a id="strategy" class="btn-default light dark" href="lringtone">Location Ringtone</a></li>
             <li><a id="sports" class="btn-default light dark" href="cscreen">Charge Screen</a></li>
+            <li><a id="sports" class="btn-default light dark" href="scamera">Simple Camera</a></li>
             <li><a id="other" class="btn-default light dark" href="wallpapers">Wallpapers</a></li>
           
         
