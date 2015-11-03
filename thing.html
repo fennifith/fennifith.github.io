@@ -12,7 +12,7 @@
       #content { solid #000; width:80%; height:100%;
         margin-left:20%;
       }
-      .iframe {
+      #iframe {
         border:0px;
         width:100%;
         height:100%;
@@ -23,8 +23,11 @@
     <div class="container">
      <div id="sidebar"></div>
      <div id="content">
-       <iframe class="iframe" src="index.html"></iframe>
+       <iframe id="iframe" src="index.html"></iframe>
      </div>
     </div>
   </body>
+  <script>
+    document.getElementById("sidebar").style.backgroundColor = $('#iframe').contents().find('meta[name=theme-color]').attr("content");
+  </script>
 </html>
