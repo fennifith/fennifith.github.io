@@ -17,11 +17,22 @@
         width:100%;
         height:100%;
       }
+      #list {
+        margin:10px;
+      }
     </style>
   </head>
   <body class="total">
     <div class="container">
-     <div id="sidebar"></div>
+     <div id="sidebar">
+       <ul id="list">
+         <li><p>Thing 1</p></li>
+         <li><p>Thing 2</p></li>
+         <li><p>Thing 3</p></li>
+         <li><p>Thing 4</p></li>
+         <li><p>Thing 5</p></li>
+       </ul>
+     </div>
      <div id="content">
        <iframe id="iframe" src="index.html"></iframe>
      </div>
@@ -29,13 +40,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-      document.getElementById("sidebar").style.backgroundColor = ('#iframe').find("meta[name='theme-color']").attr("content");
-      focus();
-      var listener = addEventListener('blur', function() {
-       if(document.activeElement === document.getElementById('iframe')) {
-          document.getElementById("sidebar").style.backgroundColor = ('#iframe').find("meta[name='theme-color']").attr("content");
-       }
-     });
     </script>
   </body>
 </html>
