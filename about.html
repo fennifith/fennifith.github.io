@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#263238">
+
+        <!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<!-- ENABLE WEB APP MODE -->
+		<meta name="apple-mobile-web-app-title" content="James Fenn">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="red" />
+
+		<!-- iPhone -->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/touch-icon-iphone">
+        
+        <link rel="shortcut icon" href="/jf2.ico">
+        <link rel="icon" sizes="256x256" href="/jf2.ico">
+        
+        <!-- iPhone (Retina) -->
+        <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-iphone-retina">
+
+        <!-- iPad -->
+        <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad">
+
+        <!-- iPad (Retina) -->
+        <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad-retina">
+
+  <title>James Fenn</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+<div class="content">
+  <br>
+  <img src="https://lh3.googleusercontent.com/XECYKmoF0uFM9QBnwVg7IP_uB_B9hAo9VdwveaFjBXE=w1024-h500-no"></img>
+  <hr>
+  <h2>About Me</h2>
+  <br>
+  <h>I am a 15 year old android app developer from the UK. I like making apps, and am constantly looking for new ideas for better apps. All of my apps are free and have no ads, all that I ask is that you provide some feedback about whether or not you like them.</h>
+  <hr>
+  <h2>Android Apps</h2>
+  <br>
+  <h>Apps that are on the play store are:</h>
+  <br>
+  <ul>
+        <li><a href="/pexpander">Paragraphical Expander</a></li>
+        <li><a href="/icalculator">Card Calculator</a></li>
+        <li><a href="/flauncher">Felix Launcher</a></li>
+        <li><a href="/llauncher">List Launcher</a></li>
+        <li><a href="/cscreen">Charge Screen</a></li>
+        <li><a href="/scamera">Simple Camera</a></li>
+  </ul>
+  <br>
+  <h>Apps that I am stil working on are:</h>
+  <br>
+  <ul>
+  	<li><a href="/lringtone">Location Ringtone</a></li>
+  </ul>
+  <br>
+  <a class="btlink" href="mailto:18jafenn90@gmail.com">  Contact Me  </a>
+  <a class="btlink" href="https://play.google.com/store/apps/dev?id=5937321955284727208">My Google Play  </a>
+  <a class="btlink" href="https://plus.google.com/+JamesFennJAFFA2157/posts">My Google Plus  </a>
+  <a class="btlink" href="https://github.com/TheAndroidMaster/TheAndroidMaster.github.io">See the Code</a>
+  <br>
+  <br>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <script>
+    	function iOS() {
+  var iDevices = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod',
+    'Mac68K',
+    'MacPPC',
+    'MacIntel'
+  ];
+  while (iDevices.length) {
+    if (navigator.platform === iDevices.pop()){ return true; }
+  }
+  return false;
+}
+if(iOS()){
+	alert("You are using an iDevice. The android master does not approve of iDevices. Please come back when you have an Android :)")
+}
+function getMetaContentByName(name,content){
+   var content = (content==null)?'content':content;
+   return document.querySelector("meta[name='"+name+"']").getAttribute(content);
+}
+document.getElementById("headerthingy").style.backgroundColor = getMetaContentByName("theme-color");
+    </script>
+</body>
+</html>
