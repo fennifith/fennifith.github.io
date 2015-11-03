@@ -63,46 +63,7 @@
   <ul>
   	<li><a href="/lringtone">Location Ringtone</a></li>
   </ul>
-  <br>
-  <a class="btlink" href="mailto:18jafenn90@gmail.com">  Contact Me  </a>
-  <a class="btlink" href="https://play.google.com/store/apps/dev?id=5937321955284727208">My Google Play  </a>
-  <a class="btlink" href="https://plus.google.com/+JamesFennJAFFA2157/posts">My Google Plus  </a>
-  <a class="btlink" href="https://github.com/TheAndroidMaster/TheAndroidMaster.github.io">See the Code</a>
-  <br>
-  <br>
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    
-    <script>
-    	function iOS() {
-  var iDevices = [
-    'iPad Simulator',
-    'iPhone Simulator',
-    'iPod Simulator',
-    'iPad',
-    'iPhone',
-    'iPod',
-    'Mac68K',
-    'MacPPC',
-    'MacIntel'
-  ];
-  while (iDevices.length) {
-    if (navigator.platform === iDevices.pop()){ return true; }
-  }
-  return false;
-}
-if(iOS()){
-	alert("You are using an iDevice. The android master does not approve of iDevices. Please come back when you have an Android :)")
-}
-function getMetaContentByName(name,content){
-   var content = (content==null)?'content':content;
-   return document.querySelector("meta[name='"+name+"']").getAttribute(content);
-}
-document.getElementById("headerthingy").style.backgroundColor = getMetaContentByName("theme-color");
-    </script>
 </body>
 </html>
