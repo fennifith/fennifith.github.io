@@ -31,9 +31,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script>
     document.getElementById("sidebar").style.backgroundColor = ('#iframe').contents().find("meta[name='theme-color']").attr("content");
+    focus();
     var listener = addEventListener('blur', function() {
-    if(document.activeElement === document.getElementById('iframe')) {
-        document.getElementById("sidebar").style.backgroundColor = ('#iframe').contents().find("meta[name='theme-color']").attr("content");
-    }
+      if(document.activeElement === document.getElementById('iframe')) {
+         document.getElementById("sidebar").style.backgroundColor = ('#iframe').contents().find("meta[name='theme-color']").attr("content");
+      }
+    });
   </script>
 </html>
