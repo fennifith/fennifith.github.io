@@ -1,6 +1,19 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- // some code..
+ document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
 }
+
+var expand = 0;
+
+document.getElementById("sidebar").addEventListener("click", function(){
+ if(expand == 0) {
+  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 1) + 'px';
+  expand = 1;
+ }
+ else {
+  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
+  expand = 0;
+ }
+});
 
 document.getElementById("about").style.textDecoration = "underline";
     
