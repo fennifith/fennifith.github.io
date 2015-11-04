@@ -9,16 +9,16 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 document.getElementById("sidebar").addEventListener("click", function(){
  if(expand == 0) {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 1) + 'px';
-  document.getElementById('header').style.display="none";
- document.getElementById('list').style.display="none";
- document.getElementById('links').style.display="none";
+  document.getElementById('header').style.display="";
+ document.getElementById('list').style.display="";
+ document.getElementById('links').style.display="";
   expand = 1;
  }
  else {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
-  document.getElementById('header').style.display="";
- document.getElementById('list').style.display="";
- document.getElementById('links').style.display="";
+  document.getElementById('header').style.display="none";
+ document.getElementById('list').style.display="none";
+ document.getElementById('links').style.display="none";
   expand = 0;
  }
 });
