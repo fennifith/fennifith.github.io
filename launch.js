@@ -1,5 +1,6 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
+ document.getElementById("content").style.margin-left = Math.round(document.documentElement.clientWidth * .1) + 'px';
  document.getElementById('header').style.display="none";
  document.getElementById('list').style.display="none";
  document.getElementById('links').style.display="none";
@@ -8,7 +9,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 document.getElementById("sidebar").addEventListener("click", function(){
  if(expand == 0) {
-  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 1) + 'px';
+  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 0.9) + 'px';
   document.getElementById('header').style.display="";
  document.getElementById('list').style.display="";
  document.getElementById('links').style.display="";
