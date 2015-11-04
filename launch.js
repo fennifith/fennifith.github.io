@@ -1,8 +1,7 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
-}
-
-var expand = 0;
+ 
+ var expand = 0;
 
 document.getElementById("sidebar").addEventListener("click", function(){
  if(expand == 0) {
@@ -16,6 +15,7 @@ document.getElementById("sidebar").addEventListener("click", function(){
   expand = 0;
  }
 });
+}
 
 document.getElementById("about").style.textDecoration = "underline";
     
