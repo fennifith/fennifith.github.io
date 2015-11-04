@@ -1,20 +1,18 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- var hide = "none";
- var show = "initial";
  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
- document.getElementById("sidebar").innerHTML.style.display = hide;
+ document.getElementById('sidebar').style.display="none"
  
  var expand = 0;
 
 document.getElementById("sidebar").addEventListener("click", function(){
  if(expand == 0) {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 1) + 'px';
-  document.getElementById("sidebar").innerHTML.style.display = hide;
+  document.getElementById('sidebar').style.display="none"
   expand = 1;
  }
  else {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
-  document.getElementById("sidebar").innerHTML.style.display = show;
+  document.getElementById('sidebar').style.display=""
   expand = 0;
  }
 });
