@@ -1,5 +1,6 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
+ document.getElementById("sidebar").innerHTML.style.visibility = "hidden";
  
  var expand = 0;
 
