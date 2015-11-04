@@ -1,20 +1,20 @@
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- var hide = "hidden";
- var show = "visible";
+ var hide = "none";
+ var show = "initial";
  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
- document.getElementById("sidebar").innerHTML.style.visibility = hide;
+ document.getElementById("sidebar").innerHTML.style.display = hide;
  
  var expand = 0;
 
 document.getElementById("sidebar").addEventListener("click", function(){
  if(expand == 0) {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 1) + 'px';
-  document.getElementById("sidebar").innerHTML.style.visibility = hide;
+  document.getElementById("sidebar").innerHTML.style.display = hide;
   expand = 1;
  }
  else {
   document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
-  document.getElementById("sidebar").innerHTML.style.visibility = show;
+  document.getElementById("sidebar").innerHTML.style.display = show;
   expand = 0;
  }
 });
