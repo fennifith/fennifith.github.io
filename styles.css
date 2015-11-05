@@ -18,6 +18,15 @@ a {
      color:#3F51B5;
 }
 
+a.right {
+     font-family: Arial, Helvetica, sans-serif;
+     color:#3F51B5;
+     font-weight: bold;
+     padding:5px;
+     text-decoration: none;
+     right:0;
+}
+
 .img{
      width:80px;
      height:80px;
