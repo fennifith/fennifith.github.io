@@ -11,6 +11,11 @@ hl {
 img {max-width:100%;
      height:auto;
 }
+a {
+     font-family: Arial, Helvetica, sans-serif;
+     color:#3F51B5;
+}
+
 .img{
      width:80px;
      height:80px;
