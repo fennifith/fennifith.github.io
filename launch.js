@@ -69,7 +69,7 @@ document.getElementById("about").addEventListener("click", function(){
         document.getElementById("community").style.textDecoration = "";
       });
       document.getElementById("community").addEventListener("click", function(){
-        var source = "/index.html"
+        var source = "/community.html"
         document.getElementById('iframe').src = source;
         
         document.getElementById("about").style.textDecoration = "";
