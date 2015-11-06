@@ -1,31 +1,3 @@
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
- document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
- document.getElementById("content").style.marginLeft = Math.round(document.documentElement.clientWidth * .1) + 'px';
- document.getElementById("content").style.width = Math.round(document.documentElement.clientWidth * .9) + 'px';
- document.getElementById('header').style.display="none";
- document.getElementById('list').style.display="none";
- document.getElementById('links').style.display="none";
- 
- var expand = 0;
-
-document.getElementById("sidebar").addEventListener("click", function(){
- if(expand == 0) {
-  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * 0.9) + 'px';
-  document.getElementById('header').style.display="";
- document.getElementById('list').style.display="";
- document.getElementById('links').style.display="";
-  expand = 1;
- }
- else {
-  document.getElementById("sidebar").style.width = Math.round(document.documentElement.clientWidth * .1) + 'px';
-  document.getElementById('header').style.display="none";
- document.getElementById('list').style.display="none";
- document.getElementById('links').style.display="none";
-  expand = 0;
- }
-});
-}
-
 document.getElementById("about").style.textDecoration = "underline";
     
 document.getElementById("about").addEventListener("click", function(){
