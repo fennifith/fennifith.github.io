@@ -26,6 +26,11 @@
         background:#212121;
         box-shadow: 5px 0px 50px #616161;
         overflow:hidden;
+        -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+        transition: width 1s;
+      }
+      #sidebar:hover {
+        width:80%;
       }
       #content { solid #212121; width:80%; height:100%;
         margin-left:20%;
@@ -46,7 +51,8 @@
         #sidebar {
           width:10%;
         }
-        #content { solid #212121; width:80%; height:100%;
+        #content {
+          width:90%;
           margin-left:10%;
         }
       }
@@ -86,7 +92,7 @@
   </head>
   <body class="total">
     <div class="container">
-     <div id="sidebar">
+     <div id="sidebar" class="neutral">
        <img id="header" src="/jfthingy.png"></img>
        <ul id="list">
          <li><p id="about">About Me</p></li>
