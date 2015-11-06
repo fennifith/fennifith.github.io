@@ -47,7 +47,6 @@
       @media (max-width:800px) {
         #sidebar {
           width:10%;
-          padding:100%;
         }
         #content {
           width:90%;
@@ -55,8 +54,8 @@
         }
         #sidebar:hover {
           width:80%;
-          padding:0%;
         }
+        #sidebar:hover > #side { visibility:hidden; }
       }
     </style>
     
@@ -94,7 +93,7 @@
   </head>
   <body class="total">
     <div class="container">
-     <div id="sidebar">
+     <div id="sidebar"> <div id="side">
        <img id="header" src="/jfthingy.png"></img>
        <ul id="list">
          <li><p id="about">About Me</p></li>
@@ -112,7 +111,7 @@
           <br>
           <br>
         </div>
-     </div>
+     </div> </div>
      <div id="content">
         <iframe id="iframe" src="about.html"></iframe>
      </div>
