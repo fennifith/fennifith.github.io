@@ -25,6 +25,7 @@
         width:20%;
         background:#212121;
         box-shadow: 5px 0px 50px #616161;
+        overflow:hidden;
       }
       #content { solid #212121; width:80%; height:100%;
         margin-left:20%;
@@ -40,6 +41,14 @@
       }
       #header {
         width:100%;
+      }
+      @media (max-width:800px) {
+        #sidebar {
+          width:10%;
+        }
+        #content { solid #212121; width:80%; height:100%;
+          margin-left:10%;
+        }
       }
     </style>
     
