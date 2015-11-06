@@ -55,6 +55,12 @@
         #sidebar:hover {
           width:80%;
         }
+        #side {
+          visibility:hidden;
+        }
+        #side:hover {
+          visibility:visible;
+        }
       }
     </style>
     
@@ -92,7 +98,7 @@
   </head>
   <body class="total">
     <div class="container">
-     <div id="sidebar" class="neutral">
+     <div id="sidebar"> <div id="side">
        <img id="header" src="/jfthingy.png"></img>
        <ul id="list">
          <li><p id="about">About Me</p></li>
@@ -110,7 +116,7 @@
           <br>
           <br>
         </div>
-     </div>
+     </div> </div>
      <div id="content">
         <iframe id="iframe" src="about.html"></iframe>
      </div>
