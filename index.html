@@ -55,6 +55,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       color:#303F9F;
       text-decoration: none;
     }
+    .white {color:#fff;}
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -90,8 +91,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
            <span class="flex"></span>
           <!-- Toolbar icons -->
-          <a href="https://play.google.com/store/apps/dev?id=5937321955284727208"><paper-icon-button icon="shop"></paper-icon-button></a>
-          <a href="https://plus.google.com/+JamesFennJAFFA2157/about"><paper-icon-button icon="perm-contact-calendar"></paper-icon-button></a>
+          <a class="white" href="https://play.google.com/store/apps/dev?id=5937321955284727208"><paper-icon-button icon="shop"></paper-icon-button></a>
+          <a class="white" href="https://plus.google.com/+JamesFennJAFFA2157/about"><paper-icon-button icon="perm-contact-calendar"></paper-icon-button></a>
           <!-- Application name -->
           <div class="middle middle-container center horizontal layout">
             <div class="app-name">James Fenn</div>
@@ -108,13 +109,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             <section data-route="home">
               <paper-material elevation="1">
-                <h1>About Me</h1>
                 <img src="/jfthingy.png"></img>
-                <p class="paper-font-body">I am a 15 year old android app developer from the UK. I like making apps, and am constantly looking for new ideas to improve my apps. All of my apps are free and have no ads, all that I ask is that you provide some feedback about whether or not you like them.</p>
+                <h1>About Me</h1>
+                <p class="paper-font-body">I am a 15 year old android app developer from the UK. I like making apps, and am constantly looking for new ideas to improve my apps.</p>
               </paper-material>
               <paper-material elevation="1">
                 <h1>Apps</h1>
-                <p class="paper-font-body">If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.</p>
+                <p class="paper-font-body">
+                  If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.
+                  <br>
+                  All of my apps are free and have no ads, all that I ask is that you provide some feedback about whether or not you like them.
+                </p>
               </paper-material>
 
               <paper-material elevation="1">
