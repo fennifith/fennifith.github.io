@@ -61,9 +61,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
-          <a data-route="users" href="/users" on-click="onDataRouteClick">
-            <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
+          <a data-route="community" href="/community" on-click="onDataRouteClick">
+            <iron-icon icon="group-add"></iron-icon>
+            <span>The Community</span>
           </a>
           <a data-route="contact" href="/contact" on-click="onDataRouteClick">
             <iron-icon icon="mail"></iron-icon>
@@ -125,32 +125,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="users">
+            <section data-route="community">
               <paper-material elevation="1">
-                <h2 class="page-title">Users</h2>
-                <p>This is the users section</p>
-
-                <a href="/users/Rob">Rob</a>
-
+                <h2 class="page-title">The Community</h2>
+                <p>There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
+                <ul>
+                  <li><a href="https://plus.google.com/+AlexandrePiveteau/posts">Alexandre Piveteau - makes some really good apps and libraries and is always there to help when I get stuck... which happens a lot</a></li>
+                  <li><a href="http://justinkruit.com/">Justin Kruit - makes apps (they suck :D) and websites</a></li>
+                  <li><a href="https://plus.google.com/101325935187431392674/posts">Anas Khan - awesome designer - makes icons and stuff</a></li>
+                  <li><a href="http://zheano.blogspot.com/">Zan Cerne - makes wallpapers, occasional icons, and generally takes up all your free time ;)</a></li>
+                  <li><a href="https://plus.google.com/+BriceSeibert23/posts">Brice Seibert - makes awesome flat-styled wallpapers</a></li>
+                  <li><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/posts">Vukašin Anđelković - makes mega premium material super icons... including one for me O_O</a></li>
+                </ul>
               </paper-material>
-
-            </section>
-
-
-            <section data-route="user-info">
-
-              <paper-material elevation="1">
-
-                <h2 class="page-title">
-
-                User:<span>{{params.name}}</span>
-
-                </h2>
-
-                <div>This is <span>{{params.name}}</span>'s section</div>
-
-              </paper-material>
-
             </section>
 
             <section data-route="contact">
