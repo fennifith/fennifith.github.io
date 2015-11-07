@@ -46,10 +46,11 @@ iframe{overflow:hidden;}
      margin-bottom:0px;
      margin-left: auto;
      margin-right: auto;
-     background-color:#E0E0E0;
+     background-color:#fff;
      color:#424242;
      max-height:100%;
      max-width:720px;
+     box-shadow: 5px 5px 50px #616161;
 }
 
 .normal{
