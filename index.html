@@ -51,6 +51,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       max-width:100%;
       max-height:100%;
     }
+    a {
+      color:#303F9F;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -69,7 +73,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
-          <a data-route="community" href="/community" on-click="onDataRouteClick">
+          <a data-route="users" href="/users" on-click="onDataRouteClick">
             <iron-icon icon="group-work"></iron-icon>
             <span>Community</span>
           </a>
@@ -133,7 +137,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="community">
+            <section data-route="users">
               <paper-material elevation="1">
                 <h1>The Community</h1>
                 <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
