@@ -3,7 +3,7 @@ body {margin:0px;
      height:100%;
      width:100%;
      overflow-x:hidden;
-     background-color:#ffffff;
+     background-color:#E0E0E0;
 }
 h2 {
      color:#303F9F;
@@ -46,7 +46,7 @@ iframe{overflow:hidden;}
      margin-bottom:0px;
      margin-left: auto;
      margin-right: auto;
-     background-color:#ffffff;
+     background-color:#E0E0E0;
      color:#424242;
      max-height:100%;
      max-width:720px;
@@ -57,7 +57,7 @@ iframe{overflow:hidden;}
      margin-bottom:0px;
      margin-left: auto;
      margin-right: auto;
-     background-color:#ffffff;
+     background-color:#E0E0E0;
      color:#424242;
      max-height:100%;
      max-width:720px;
@@ -71,7 +71,7 @@ iframe{overflow:hidden;}
 }
 }
 
-.white {color:#ffffff;}
+.white {color:#E0E0E0;}
 .blued {background-color:#0097a7;}
 .nomargin {margin:0;}
 .nopadding {padding:0;}
@@ -82,6 +82,6 @@ iframe{overflow:hidden;}
 .nooutline{outline: none;} 
 .front{z-index:999;}
 .back{z-index:1;}
-.whiteb{background-color:#ffffff;}
+.whiteb{background-color:#E0E0E0;}
 .light{background-color:#dfdfdf;}
 .dark{color:#424242;}
