@@ -72,11 +72,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       background-color:#e0e0e0;
     }
     div.license {
-      position:absolute;
-      background-color:#4DD0E1;
-      bottom:0px;
-      left:0px;
-      right:0px;
+      background-color: #4DD0E1;
+      position: fixed;
+      bottom: 0;
+      left: 0px;
+      right: 0px;
+      z-index: -1;
     }
   </style>
 </head>
@@ -145,8 +146,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </p>
               </paper-material>
               
-              <div class="license">
-                <h1>License</h1>
+              <div class="license"></div>
+              
+              <h1>License</h1>
                 <p>Everything in this repo is BSD style license unless otherwise specified.</p>
                 <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
                 <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
@@ -171,7 +173,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-button>
 
               <paper-toast id="toast1" text="Hi"></paper-toast>
-              </div>
             </section>
 
             <section data-route="community">
