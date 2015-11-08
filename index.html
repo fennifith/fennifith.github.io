@@ -71,14 +71,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     paper-item:hover{
       background-color:#e0e0e0;
     }
-    div.license {
-      background-color: #4DD0E1;
-      position: fixed;
-      bottom: 0;
-      left: 0px;
-      right: 0px;
-      z-index: -1;
-    }
+    paper-button {color:#fff;}
+    div.button {background-color:#3f51b5;}
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -146,8 +140,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </p>
               </paper-material>
               
-              <div class="license"></div>
-              
               <h1>License</h1>
                 <p>Everything in this repo is BSD style license unless otherwise specified.</p>
                 <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
@@ -167,7 +159,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
 
               <paper-button onclick="document.querySelector('#toast1').show()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
-                <div style="position:relative">
+                <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
               </paper-button>
