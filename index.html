@@ -226,18 +226,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="contact">
               <paper-material elevation="1">
                 <h1>Contact Me</h1>
-
-                <p class="paper-font-body">Contact me via:</p>
-                <ul>
-                  <li><a href="mailto:18jafenn90@gmail.com">Email<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></a></li>
-                  <li><a href="https://plus.google.com/+JamesFennJAFFA2157/posts">Google+<paper-tooltip>+James Fenn</paper-tooltip></a></li>
-                </ul>
                 
-                <p>See me on:</a>
-                <ul>
-                  <li><a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Google Play<paper-tooltip>My Apps</paper-tooltip></a></li>
-                  <li><a href="https://github.com/TheAndroidMaster">Github<paper-tooltip>TheAndroidMaster</paper-tooltip></a></li>
-                </ul>
+                <paper-tabs selected="{{selected}}">
+                  <paper-tab>Email</paper-tab>
+                  <paper-tab>Messaging</paper-tab>
+                  <paper-tab>Websites</paper-tab>
+                </paper-tabs>
+
+                <iron-pages selected="{{selected}}">
+                  <div>
+                    <ul>
+                      <li><a href="mailto:18jafenn90@gmail.com">Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></a></li>
+                      <li><a href="mailto:na18jafenn90@hotmail.com">Hotmail<paper-tooltip>na18jafenn90@hotmail.com</paper-tooltip></a></li>
+                      <li><a href="mailto:na18jafenn90@outlook.com">Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><a href="https://plus.google.com/+JamesFennJAFFA2157/posts">Google+<paper-tooltip>+James Fenn</paper-tooltip></a></li>
+                      <li><a href="https://github.com/TheAndroidMaster">Github<paper-tooltip>TheAndroidMaster</paper-tooltip></a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li><a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Google Play<paper-tooltip>My Apps</paper-tooltip></a></li>
+                    </ul>
+                  </div>
+                </iron-pages>
               </paper-material>
             </section>
           </iron-pages>
