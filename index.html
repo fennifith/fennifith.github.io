@@ -297,11 +297,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             <section data-route="about">
               <paper-material elevation="1">
-                <google-chart
-                  type='pie'
-                  options='{"title": "Time Spent in 2015"}'
-                  cols='[{"label":"Category", "type":"string"}, {"label":"Time", "type":"number"}]'
-                  rows='[["xml + java", 20],["html + css + js", 7],["google+", 73]]'>
+                <h1>Productivity:</h1>
+                <paper-slider min="0" max="100" value="{{value}}"></paper-slider>
+                <h1>Creativity:</h1>
+                <paper-slider min="0" max="100" value="{{value}} - 100"></paper-slider>
                 </google-chart>
               </paper-material>
             </section>
