@@ -91,6 +91,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
+          <a data-route="apks" href="/apks" on-click="onDataRouteClick">
+            <iron-icon icon="android"></iron-icon>
+            <span>Apks</span>
+          </a>
           <a data-route="community" href="/community" on-click="onDataRouteClick">
             <iron-icon icon="group-work"></iron-icon>
             <span>Community</span>
@@ -98,6 +102,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <a data-route="contact" href="/contact" on-click="onDataRouteClick">
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
+          </a>
+          <a data-route="about" href="/about" on-click="onDataRouteClick">
+            <iron-icon icon="info"></iron-icon>
+            <span>About</span>
           </a>
         </paper-menu>
       </paper-scroll-header-panel>
@@ -166,10 +174,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
               <paper-toast id="toast1" text="Hi"></paper-toast>
             </section>
+            
+            <section data-route="apks">
+              
+            </section>
 
             <section data-route="community">
               <paper-material elevation="1">
                 <h1>The Community</h1>
+                <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
                 
                 <div class="list short" role="listbox">
                   <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='https://plus.google.com/+AlexandrePiveteau/about';">
@@ -272,6 +285,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   </div>
                 </iron-pages>
               </paper-material>
+            </section>
+            
+            <section data-route="about">
+              
             </section>
           </iron-pages>
         </div>
