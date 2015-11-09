@@ -45,77 +45,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- will be replaced with elements/elements.vulcanized.html -->
   <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   <!-- endreplace-->
-  <!-- For shared styles, shared-styles.html import in elements.html -->
-  <style is="custom-style" include="shared-styles"></style>
   <style>
-    img {
-      width:100%;
-      max-height:100%;
-    }
-    a {
-      color:#303F9F;
-      text-decoration: none;
-    }
-    iframe {
-      width:100%;
-      border:0px;
-      height:1000px;
-      overflow:hidden;
-    }
-    .white {color:#fff;}
-    .purple {background-color:#3f51b5;}
-    paper-tabs {background-color:#00BCD4;}
-    paper-tab {color:#fff;}
-    paper-toast {z-index:1;}
-    paper-item {
-      transition: background-color .25s;
-      -moz-transition: background-color .25s;
-      -webkit-transition: background-color .25s;
-    }
-    paper-item:hover{
-      background-color:#e0e0e0;
-    }
-    paper-button {
-      background-color:#3f51b5;
-      color:#fff;
-      margin:10px;
-    }
-    paper-slider {
-      width:100%;
-    }
-    paper-fab {
-      position:fixed;
-      right:0px;
-      bottom:0px;
-      margin:20px;
-    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
   <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
-      <paper-scroll-header-panel main condenses keep-condensed-header>
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-           <span class="flex"></span><!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div class="app-name">Apps</div>
-          </div>
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">Free android apps by James Fenn</div>
-          </div>
-        </paper-toolbar>
-
-
-        <!-- Main Content -->
-        <div class="content">
-          
-        </div>
-      </paper-scroll-header-panel>
-  </template>
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
+  <paper-toolbar>
+    <div class="title">Apps</div>
+  </paper-toolbar>
+  
+  <script src="http://theandroidmaster.github.io/scripts/app.js"></script>
 </body>
 </html>
