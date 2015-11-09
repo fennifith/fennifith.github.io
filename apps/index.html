@@ -57,6 +57,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         width:100%;
       }
     }
+    img {
+      max-height:100%;
+      max-width:100%;
+    }
+    div.horizontal {
+      overflow-y: scroll;
+      padding:10px;
+    }
+    div.purple {
+      background-color:#3F51B5;
+    }
+    div.cyan {
+      background-color:#00BCD4;
+    }
+    div.gray {
+      background-color:#607D8B;
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -66,13 +83,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </paper-toolbar>
   
   <div id="content-main">
-    <paper-card heading="Fornax">
-      <div class="card-content">A wallpaper app.</div>
-      <div class="card-actions">
-        <paper-button>View</paper-button>
-        <paper-button>Download</paper-button>
-      </div>
-    </paper-card>
+    
+    <div class="horizontal">
+      <img src="http://theandroidmaster.github.io/images/headers/cardheaderpurple.png"></img>
+      <paper-card heading="Fornax">
+        <div class="card-content">A wallpaper app.</div>
+        <div class="card-actions">
+          <paper-button>View</paper-button>
+          <paper-button>Download</paper-button>
+        </div>
+      </paper-card>
+    
+      <paper-card heading="Paragraphical Expander">
+        <div class="card-content">It expands paragraphs. By doing... things.</div>
+        <div class="card-actions">
+          <paper-button>View</paper-button>
+          <paper-button>Download</paper-button>
+        </div>
+      </paper-card>
+    </div>
     
     <paper-card heading="Charge Screen">
       <div class="card-content">A screen that pops up when your phone is charging giving you a quick glance at your battery life.</div>
@@ -100,14 +129,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <paper-card heading="Simple Camera">
       <div class="card-content">A material design camera that is ridiculously fast.</div>
-      <div class="card-actions">
-        <paper-button>View</paper-button>
-        <paper-button>Download</paper-button>
-      </div>
-    </paper-card>
-    
-    <paper-card heading="Paragraphical Expander">
-      <div class="card-content">It expands paragraphs. By doing... things.</div>
       <div class="card-actions">
         <paper-button>View</paper-button>
         <paper-button>Download</paper-button>
