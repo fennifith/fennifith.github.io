@@ -95,225 +95,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
     <paper-drawer-panel id="paperDrawerPanel">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Menu</span>
-        </paper-toolbar>
-        <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="/" on-click="onDataRouteClick">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
-          <a data-route="apks" href="/apks" on-click="onDataRouteClick">
-            <iron-icon icon="android"></iron-icon>
-            <span>Apks</span>
-          </a>
-          <a data-route="community" href="/community" on-click="onDataRouteClick">
-            <iron-icon icon="group-work"></iron-icon>
-            <span>Community</span>
-          </a>
-          <a data-route="contact" href="/contact" on-click="onDataRouteClick">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-          <a data-route="about" href="/about" on-click="onDataRouteClick">
-            <iron-icon icon="info"></iron-icon>
-            <span>About</span>
-          </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
       <!-- Main Area -->
       <paper-scroll-header-panel main condenses keep-condensed-header>
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar" class="tall">
           <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-           <span class="flex"></span>
-          <!-- Toolbar icons -->
-          <a class="white" href="https://play.google.com/store/apps/dev?id=5937321955284727208"><paper-icon-button icon="shop"></paper-icon-button></a>
-          <a class="white" href="https://plus.google.com/+JamesFennJAFFA2157/about"><paper-icon-button icon="perm-contact-calendar"></paper-icon-button></a>
-          <!-- Application name -->
+           <span class="flex"></span><!-- Application name -->
           <div class="middle middle-container center horizontal layout">
-            <div class="app-name">James Fenn</div>
+            <div class="app-name">Apps</div>
           </div>
           <!-- Application sub title -->
           <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">Android app developer and designer</div>
+            <div class="bottom-title paper-font-subhead">Free android apps by James Fenn</div>
           </div>
         </paper-toolbar>
 
 
         <!-- Main Content -->
         <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home">
-              <paper-material elevation="1">
-                <img src="/images/headers/jfthingy.png"></img>
-                <h1>About Me</h1>
-                <p class="paper-font-body">I am a 15 year old android app developer from the UK. I like making apps, and am constantly looking for new ideas to improve my apps.</p>
-              </paper-material>
-              <paper-material elevation="1">
-                <img src="/images/headers/3appsheader.png"></img>
-                <h1>Apps</h1>
-                <p class="paper-font-body">
-                If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.
-                <br>
-                All of my apps are free and have no ads, all that I ask is that you provide some feedback about whether or not you like them.
-                </p>
-              </paper-material>
-              
-              <h1>License</h1>
-                <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                <ul>
-                <li>Redistributions of source code must retain the above copyright
-                notice, this list of conditions and the following disclaimer.</li>
-                <li>Redistributions in binary form must reproduce the above
-                copyright notice, this list of conditions and the following disclaimer
-                in the documentation and/or other materials provided with the
-                distribution.</li>
-                <li>Neither the name of Google Inc. nor the names of its
-                contributors may be used to endorse or promote products derived from
-                this software without specific prior written permission.</li>
-                </ul>
-                <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-              
-
-              <paper-button onclick="document.querySelector('#toast1').show()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
-                <div class="button" style="position:relative">
-                  <paper-ripple></paper-ripple>
-                </div>
-              </paper-button>
-
-              <paper-toast id="toast1" text="Hi"></paper-toast>
-            </section>
-            
-            <section data-route="apks">
-              <paper-material elevation="1">
-                <h1>Apks</h1>
-                <p class="paper-font-body">All of my apks will be uploaded here first, so you should be able to download them as soon as they are generated. Sometimes a few betas might even appear...</p>
-                <iframe src="https://drive.google.com/embeddedfolderview?id=0B5Z3jCEdoXV2Z1JCUmZzWVBiWGc#list"></iframe>
-              </paper-material>
-              <paper-fab icon="add" onclick="location.href='https://drive.google.com/open?id=0B5Z3jCEdoXV2Z1JCUmZzWVBiWGc';"></paper-fab>
-            </section>
-
-            <section data-route="community">
-              <paper-material elevation="1">
-                <h1>The Community</h1>
-                <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
-                
-                <div class="list short" role="listbox">
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='https://plus.google.com/+AlexandrePiveteau/about';">
-                    <paper-item-body two-line>
-                      <div>Alexandre Piveteau</div>
-                      <div secondary><a href="https://plus.google.com/+AlexandrePiveteau/about">plus.google.com/+AlexandrePiveteau</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='http://justinkruit.com/';">
-                    <paper-item-body two-line>
-                      <div>Justin Kruit</div>
-                      <div secondary><a href="http://justinkruit.com/">justinkruit.com</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/101325935187431392674/about';">
-                    <paper-item-body two-line>
-                      <div>Anas Khan</div>
-                      <div secondary><a href="https://plus.google.com/101325935187431392674/about">plus.google.com/101325935187431392674</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://zheano.blogspot.com/';">
-                    <paper-item-body two-line>
-                      <div>Zan Cerne</div>
-                      <div secondary><a href="http://zheano.blogspot.com/">zheano.blogspot.com</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+BriceSeibert23/about';">
-                    <paper-item-body two-line>
-                      <div>Brice Seibert</div>
-                      <div secondary><a href="https://plus.google.com/+BriceSeibert23/about">plus.google.com/+BriceSeibert23</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/about';">
-                    <paper-item-body two-line>
-                      <div>Vukašin Anđelković</div>
-                      <div secondary><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/about">plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                </div>
-
-                <!--<p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
-                <ul>
-                  <li><a href="https://plus.google.com/+AlexandrePiveteau/posts">Alexandre Piveteau - makes some really good apps and libraries and is always there to help when I get stuck... which happens a lot</a></li>
-                  <li><a href="http://justinkruit.com/">Justin Kruit - makes apps (they suck :D) and websites</a></li>
-                  <li><a href="https://plus.google.com/101325935187431392674/posts">Anas Khan - awesome designer - makes icons and stuff</a></li>
-                  <li><a href="http://zheano.blogspot.com/">Zan Cerne - makes wallpapers, occasional icons, and generally takes up all your free time ;)</a></li>
-                  <li><a href="https://plus.google.com/+BriceSeibert23/posts">Brice Seibert - makes awesome flat-styled wallpapers</a></li>
-                  <li><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/posts">Vukašin Anđelković - makes mega premium material super icons... including one for me O_O</a></li>
-                </ul>-->
-              </paper-material>
-              
-              <paper-material elevation="1">
-                <h1>Teamwork!</h1>
-                <p>While I try to make all of my apps myself, I usually end up relying on others when I get stuck, so thanks to all the people on google+, stackoverflow, and github that have helped me.</p>
-              </paper-material>
-            </section>
-
-            <section data-route="contact">
-              <paper-material elevation="1">
-              
-                <h1>Contact Me</h1>
-                
-                <paper-tabs selected="{{selected}}">
-                  <paper-tab>Email</paper-tab>
-                  <paper-tab>Messaging</paper-tab>
-                  <paper-tab>Websites</paper-tab>
-                </paper-tabs>
-
-                <iron-pages selected="{{selected}}">
-                  <div>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='mailto:18jafenn90@gmail.com';">
-                      <div>Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@hotmail.com';">
-                      <div>Hotmail<paper-tooltip>na18jafenn90@hotmail.com</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@outlook.com';">
-                      <div>Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></div>
-                    </paper-item>
-                  </div>
-                  <div>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+JamesFennJAFFA2157/posts';">
-                      <div>Google+<paper-tooltip>+James Fenn</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
-                      <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
-                      <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
-                    </paper-item>
-                  </div>
-                  <div>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';">
-                      <div>Google Play<paper-tooltip>My Apps</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
-                      <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
-                    </paper-item>
-                    
-                  </div>
-                </iron-pages>
-              </paper-material>
-            </section>
-            
-            <section data-route="about">
-              <paper-material elevation="1">
-                
-              </paper-material>
-            </section>
-          </iron-pages>
+          
         </div>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
