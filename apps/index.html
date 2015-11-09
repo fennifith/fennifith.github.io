@@ -48,6 +48,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style>
     paper-card {
       margin:5px;
+      transition: width .25s;
+      -moz-transition: width .25s;
+      -webkit-transition: width .25s;
+    }
+    @media (max-width: 600px) {
+      paper-card {
+        width:100%;
+      }
     }
   </style>
 </head>
