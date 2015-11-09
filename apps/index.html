@@ -47,16 +47,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- endreplace-->
   <style>
     paper-card {
+      width:30%;
+      float:right;
       margin:5px;
       transition: width .25s;
       -moz-transition: width .25s;
       -webkit-transition: width .25s;
     }
     div.horizontal {
-      overflow-x: scroll;
       padding:10px;
       height:20%;
-      white-space: nowrap;
     }
     div.horizontal::-webkit-scrollbar { 
       display: none; 
@@ -70,6 +70,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     div.gray {
       background-color:#607D8B;
     }
+    img.float {
+      width:30%;
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -81,7 +84,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <div id="content-main">
     
     <div class="horizontal purple">
-      <img src="http://theandroidmaster.github.io/images/headers/cardheaderpurple.png"></img>
+      <img class="float" src="http://theandroidmaster.github.io/images/headers/cardheaderpurple.png"></img>
       <paper-card heading="Fornax" image="http://theandroidmaster.github.io/images/screenshots/fornax.png">
         <div class="card-content">A wallpaper app.</div>
         <div class="card-actions">
