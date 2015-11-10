@@ -64,7 +64,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     .white {color:#fff;}
     .purple {background-color:#3f51b5;}
-    paper-tabs {background-color:#00BCD4;}
+    paper-tabs {
+      background-color:#3F51B5;
+      color:#fff;
+    }
     paper-tab {color:#fff;}
     paper-toast {z-index:1;}
     paper-item {
@@ -267,11 +270,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
 
             <section data-route="contact">
-              <paper-material elevation="1">
-              
-                <h1>Contact Me</h1>
-                
-                <paper-tabs selected="{{selected}}">
+              <paper-tabs selected="{{selected}}">
                   <paper-tab>Email</paper-tab>
                   <paper-tab>Messaging</paper-tab>
                   <paper-tab>Websites</paper-tab>
@@ -279,6 +278,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
                 <iron-pages selected="{{selected}}">
                   <div>
+                    <paper-material elevation="1">
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='mailto:18jafenn90@gmail.com';">
                       <div>Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></div>
                     </paper-item>
@@ -288,8 +288,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@outlook.com';">
                       <div>Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></div>
                     </paper-item>
+                    </paper-material>
                   </div>
                   <div>
+                    <paper-material elevation="1">
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+JamesFennJAFFA2157/posts';">
                       <div>Google+<paper-tooltip>+James Fenn</paper-tooltip></div>
                     </paper-item>
@@ -299,18 +301,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
                       <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
                     </paper-item>
+                    </paper-material>
                   </div>
                   <div>
+                    <paper-material elevation="1">
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';">
                       <div>Google Play<paper-tooltip>My Apps</paper-tooltip></div>
                     </paper-item>
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
                       <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
                     </paper-item>
+                    </paper-material>
                     
                   </div>
                 </iron-pages>
-              </paper-material>
             </section>
             
             <section data-route="about">
