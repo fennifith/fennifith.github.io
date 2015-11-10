@@ -46,13 +46,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   <!-- endreplace-->
   <style>
-    paper-material {
-      width:30%;
-      height:100%;
-      transition: width .25s;
-      -moz-transition: width .25s;
-      -webkit-transition: width .25s;
-    }
     div.horizontal {
       padding:10px;
       height:20%;
@@ -60,21 +53,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     div.horizontal::-webkit-scrollbar { 
       display: none; 
     }
-    div.purple {
-      background-color:#3F51B5;
+    div.center {
+      width:20%;
     }
-    div.cyan {
-      background-color:#00BCD4;
+    div.left {
+      margin-left:20%;
+      width:20%;
     }
-    div.gray {
-      background-color:#607D8B;
+    div.right {
+      margin-right:20%;
+      width:20%;
     }
-    div.center {}
-    div.left {}
-    div.right {}
-    img.float {
-      width:30%;
-    }
+    
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -95,30 +85,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="right">
         <h1>Thing 3</h1>
       </div>
-    </div>
-    
-    <div class="horizontal purple">
-      <img class="float" src="http://theandroidmaster.github.io/images/headers/cardheaderpurple.png"></img>
-      <paper-material elevation="1">
-      </paper-material>
-      <paper-material elevation="1">
-      </paper-material>
-    </div>
-    
-    <div class="horizontal cyan">
-      <img class="float" src="http://theandroidmaster.github.io/images/headers/cardheadercyan.png"></img>
-      <paper-material elevation="1">
-      </paper-material>
-      <paper-material elevation="1">
-      </paper-material>
-    </div>
-    
-    <div class="horizontal gray">
-      <img class="float" src="http://theandroidmaster.github.io/images/headers/cardheadergray.png"></img>
-      <paper-material elevation="1">
-      </paper-material>
-      <paper-material elevation="1">
-      </paper-material>
     </div>
     
   
