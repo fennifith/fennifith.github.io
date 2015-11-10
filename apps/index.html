@@ -104,7 +104,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body>
-  <span id="browser-sync-binding"></span>
   <paper-toolbar>
     <div class="title">Apps</div>
   </paper-toolbar>
@@ -121,7 +120,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Built for Speed
         </h1>
         <p class="ctr">These apps make use of lightweight resources to greatly improve loading speed and performance.</p>
-        <a data-route="speed" href="/apps/speed" on-click="onDataRouteClick"><paper-button>View Collection</paper-button></a>
+        <a on-click="document.querySelector("#pages").selected = 1;"><paper-button>View Collection</paper-button></a>
       </div>
       <div class="ctr">
         <h1 class="ctr">
@@ -132,7 +131,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Full Customization
         </h1>
         <p class="ctr">These apps support theming of multiple components of the app.</p>
-        <a data-route="custom" href="/apps/custom" on-click="onDataRouteClick"><paper-button>View Collection</paper-button></a>
+        <a on-click="document.querySelector("#pages").selected = 2;"><paper-button>View Collection</paper-button></a>
       </div>
       <div class="ctr">
         <h1 class="ctr">
@@ -143,31 +142,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Built for Android
         </h1>
         <p class="ctr">These apps have quality design and are meant to look good running on the latest devices.</p>
-        <a data-route="design" href="/apps/design" on-click="onDataRouteClick"><paper-button>View Collection</paper-button></a>
+        <a on-click="document.querySelector("#pages").selected = 3;"><paper-button>View Collection</paper-button></a>
       </div>
     </div>
     
-    <iron-pages attr-for-selected="data-route" selected="{{route}}">
-      <section data-route="all">
+    <iron-pages id="pages" selected="0">
+      <div>
         <paper-material elevation="1">
-          
+          all
         </paper-material>
-      </section>
-      <section data-route="speed">
+      </div>
+      <div>
         <paper-material elevation="1">
-          
+          1
         </paper-material>
-      </section>
-      <section data-route="custom">
+      </div>
+      <div>
         <paper-material elevation="1">
-          
+          2
         </paper-material>
-      </section>
-      <section data-route="design">
+      </div>
+      <div>
         <paper-material elevation="1">
-          
+          3
         </paper-material>
-      </section>
+      </div>
     </iron-pages>
   
   </div>
