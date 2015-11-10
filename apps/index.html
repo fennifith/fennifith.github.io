@@ -49,20 +49,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     div.horizontal {
       padding:10px;
       height:20%;
+      width:100%;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-content: center;
+      align-content: center;
     }
     div.horizontal::-webkit-scrollbar { 
       display: none; 
     }
     div.center {
       width:20%;
-    }
-    div.left {
-      margin-left:20%;
-      width:20%;
-    }
-    div.right {
-      margin-right:20%;
-      width:20%;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-align-content: center;
+      align-content: center;
     }
     
   </style>
@@ -76,14 +81,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <div id="content-main">
     
     <div class="horizontal">
-      <div class="left">
-        <h1>Thing 1</h1>
+      <div class="center">
+        <iron-icon icon="trending-up"></iron-icon>
+        <h1>Performance</h1>
       </div>
       <div class="center">
-        <h1>Thing 2</h1>
+        <iron-icon icon="reply-all"></iron-icon>
+        <h1>Questions</h1>
       </div>
-      <div class="right">
-        <h1>Thing 3</h1>
+      <div class="center">
+        <iron-icon icon="verified-user"></iron-icon>
+        <h1>Secure</h1>
       </div>
     </div>
     
