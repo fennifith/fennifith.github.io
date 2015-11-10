@@ -42,6 +42,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     page('/about', scrollToTop, function() {
       app.route = 'about';
     });
+    
+    page('/apps/', scrollToTop, function() {
+      app.route = 'all';
+    });
+    
+    page('/apps/speed', scrollToTop, function() {
+      app.route = 'speed';
+    });
+    
+    page('/apps/custom', scrollToTop, function() {
+      app.route = 'custom';
+    });
+    
+    page('/apps/design', scrollToTop, function() {
+      app.route = 'design';
+    });
 
     // add #! before urls
     page({
