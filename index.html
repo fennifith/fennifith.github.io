@@ -92,6 +92,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       bottom:0px;
       margin:20px;
     }
+    iron-pages {
+      padding: 0px;
+    }
+    section {
+      padding: 48px 62px;
+    }
+    section.nopadding {
+      padding:0px;
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -269,7 +278,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="contact">
+            <section data-route="contact" class="nopadding">
               <paper-tabs selected="{{selected}}">
                   <paper-tab>Email</paper-tab>
                   <paper-tab>Messaging</paper-tab>
