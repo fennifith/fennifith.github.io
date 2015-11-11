@@ -101,6 +101,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin:auto;
       width:100%;
     }
+    paper-item {
+      transition: background-color .25s;
+      -moz-transition: background-color .25s;
+      -webkit-transition: background-color .25s;
+    }
+    paper-item:hover{
+      background-color:#e0e0e0;
+    }
   </style>
 </head>
 <body>
@@ -139,7 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon style="width:100%; height:100%; color:#2196F3;" icon="invert-colors"></iron-icon>
           </div>
           <br>
-          Built for Android
+          Made for Android
         </h1>
         <p class="ctr">These apps have quality design and are meant to look good running on the latest devices.</p>
         <paper-button onclick="document.querySelector('#pages').selected = 3;">View Collection</paper-button>
@@ -149,7 +157,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <iron-pages id="pages" selected="0">
       <div>
         <paper-material elevation="1">
-          all
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';">
+            <paper-item-body two-line>
+              <div>Fornax</div>
+              <div secondary>A collection of flat wallpapers.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.paragraphicalexpander';">
+            <paper-item-body two-line>
+              <div>Paragraphical Expander</div>
+              <div secondary>An essay-typing app that doubles, triples, or quadruples the spaces while replacing words with longer phrases to increase the size.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.calculator';">
+            <paper-item-body two-line>
+              <div>Card Calculator</div>
+              <div secondary>A basic calculator that shows a detailed equation history in a list of cards.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplecamera';">
+            <paper-item-body two-line>
+              <div>Simple Camera</div>
+              <div secondary>A small camera app in material design.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.chargescreen';">
+            <paper-item-body two-line>
+              <div>Charge Screen</div>
+              <div secondary>A screen that shows the battery life whenever your phone is plugged in to charge.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.felixlauncher';">
+            <paper-item-body two-line>
+              <div>Felix Launcher</div>
+              <div secondary>A dark-themed launcher, built to save battery life on older devices.</div>
+            </paper-item-body>
+          </paper-item>
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.listlauncher';">
+            <paper-item-body two-line>
+              <div>List Launcher</div>
+              <div secondary>A launcher based on a list of cards.</div>
+            </paper-item-body>
+          </paper-item>
         </paper-material>
       </div>
       <div>
