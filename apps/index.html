@@ -47,6 +47,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- endreplace-->
   <style>
     body {margin:0px;}
+    paper-button {
+      background-color:#3f51b5;
+      color:#fff;
+      margin:10px;
+    }
     div.horizon {
       padding:0px;
       height:20%;
@@ -230,6 +235,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </paper-item-body>
           </paper-item>
         </paper-material>
+        <paper-button onclick="document.querySelector('#pages').selected = 0;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
+          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
+        </paper-button>
       </div>
       <div>
         <paper-material elevation="1">
@@ -255,6 +263,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </paper-item-body>
           </paper-item>
         </paper-material>
+        <paper-button onclick="document.querySelector('#pages').selected = 0;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
+          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
+        </paper-button>
       </div>
       <div>
         <paper-material elevation="1">
@@ -273,9 +284,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </paper-item-body>
           </paper-item>
         </paper-material>
+        <paper-button onclick="document.querySelector('#pages').selected = 0;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
+          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
+        </paper-button>
       </div>
     </iron-pages>
-  
   </div>
 </body>
 </html>
