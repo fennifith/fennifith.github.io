@@ -138,7 +138,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Built for Speed
         </h1>
         <p class="ctr">These apps make use of lightweight resources to greatly improve loading speed and performance.</p>
-        <paper-button onclick="document.querySelector('#pages').selected = 1; window.scrollTo(0,document.body.scrollHeight);">View Collection</paper-button>
+        <paper-button id="speed" onclick="document.querySelector('#pages').selected = 1; window.scrollTo(0,document.body.scrollHeight);  document.getElementById('speed').disabled = true; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;">View Collection</paper-button>
       </div>
       <div class="ctr">
         <h1 class="ctr">
@@ -149,7 +149,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Full Customization
         </h1>
         <p class="ctr">This collection of apps supports theming of multiple components.</p>
-        <paper-button onclick="document.querySelector('#pages').selected = 2; window.scrollTo(0,document.body.scrollHeight);">View Collection</paper-button>
+        <paper-button id="theme" onclick="document.querySelector('#pages').selected = 2; window.scrollTo(0,document.body.scrollHeight);  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = true; document.getElementById('design').disabled = false;">View Collection</paper-button>
       </div>
       <div class="ctr">
         <h1 class="ctr">
@@ -160,7 +160,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           Made for Android
         </h1>
         <p class="ctr">These apps have quality design and are meant to look good running on the latest devices.</p>
-        <paper-button onclick="document.querySelector('#pages').selected = 3; window.scrollTo(0,document.body.scrollHeight);">View Collection</paper-button>
+        <paper-button id="design" onclick="document.querySelector('#pages').selected = 3; window.scrollTo(0,document.body.scrollHeight); document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = true;">View Collection</paper-button>
       </div>
     </div>
     
@@ -284,7 +284,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </paper-item-body>
           </paper-item>
         </paper-material>
-        <paper-button onclick="document.querySelector('#pages').selected = 0;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
+        <paper-button onclick="document.querySelector('#pages').selected = 0;  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
           <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
         </paper-button>
       </div>
