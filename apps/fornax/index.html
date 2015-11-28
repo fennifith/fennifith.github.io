@@ -1,0 +1,132 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="App developer and designer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="James Fenn" />
+  <title>Apps</title>
+  <!-- Place favicon.ico in the `app/` directory -->
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#2E3AA1">
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="http://theandroidmaster.github.io/manifest.json">
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="JF">
+  <link rel="icon" sizes="256x256" href="http://theandroidmaster.github.io/jf2.ico">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="James Fenn">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-iphone-retina">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad-retina">
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="http://theandroidmaster.github.io/styles/main.css">
+  <!-- endbuild-->
+  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
+  <script src="http://theandroidmaster.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <!-- endbuild -->
+  <!-- will be replaced with elements/elements.vulcanized.html -->
+  <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
+  <!-- endreplace-->
+  <style>
+    body {margin:0px;}
+    paper-button {
+      background-color:#3f51b5;
+      color:#fff;
+      margin:10px;
+    }
+    div.horizon {
+      padding:0px;
+      height:20%;
+      width:100%;
+      margin: 5% 0px;
+    }
+    div.horizon::-webkit-scrollbar { 
+      display: none; 
+    }
+    div.ctr {
+      margin:auto;
+      padding:5px;
+    }
+    h1.ctr {
+      width:100%;
+      text-align: center;
+    }
+    p.ctr {
+      width:100%;
+      text-align: center;
+    }
+    .circ { 
+      width: 100px;
+      height: 100px;
+      background-color: #424242; 
+      border-radius: 50%;
+      padding:20px;
+      margin:auto;
+    }
+    @media (min-width: 601px) {
+      div.horizon {
+        display: -webkit-flex;
+        display: flex;
+      }
+      div.ctr {
+        width:20%;
+      }
+      div.apps {
+      width:80%;
+    }
+    }
+    div.apps {
+      margin:auto;
+      width:100%;
+    }
+    paper-item {
+      transition: background-color .25s;
+      -moz-transition: background-color .25s;
+      -webkit-transition: background-color .25s;
+    }
+    paper-item:hover{
+      background-color:#e0e0e0;
+    }
+    img {
+      height:20%;
+      width:auto;
+      margin:10px;
+    }
+    paper-fab {
+      position:fixed;
+      right:0px;
+      bottom:0px;
+      margin:20px;
+    }
+  </style>
+</head>
+<body>
+  <paper-toolbar>
+    <paper-icon-button icon="arrow-back" onclick="location.href = 'http://theandroidmaster.github.io/apps';"></paper-icon-button>
+    <div class="title">Fornax Wallpapers</div>
+  </paper-toolbar>
+  
+  <div id="content-main">
+    
+  </div>
+  <paper-fab icon="file-download" onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';"></paper-fab>
+</body>
+</html>
