@@ -370,9 +370,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   </div>
                   <div>
                     <paper-material elevation="1">
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+JamesFennJAFFA2157/posts';">
+                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#gprofile').toggle();">
                       <div>Google+<paper-tooltip>+James Fenn</paper-tooltip></div>
                     </paper-item>
+                    
+                    <iron-collapse id="gprofile">
+                      <script src="https://apis.google.com/js/platform.js" async defer></script>
+                      <div style="margin:20px" class="g-person" data-href="https://plus.google.com/114612442558529845038" data-layout="portrait" data-showcoverphoto="true"></div>
+                    </iron-collapse>
+                    
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
                       <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
                     </paper-item>
@@ -393,9 +399,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     
                   </div>
                 </iron-pages>
-                
-              <script src="https://apis.google.com/js/platform.js" async defer></script>
-               <div style="margin:20px" class="g-person" data-href="https://plus.google.com/114612442558529845038" data-layout="portrait" data-showcoverphoto="true"></div>
             </section>
             
             <section data-route="about">
