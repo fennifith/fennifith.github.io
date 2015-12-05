@@ -134,8 +134,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body unresolved class="fullbleed layout vertical">
   <paper-material elevation="1">
-    <paper-input label="Username"></paper-input>
-    <paper-input label="Password"></paper-input>
-    <paper-button raised>Go</paper-button>
+    <paper-input id="user" label="Username"></paper-input>
+    <paper-input id="pass" label="Password"></paper-input>
+    <paper-button raised id="connect">Go</paper-button>
   </paper-material>
+  <script>
+    var request = new XMLHttpRequest();
+    document.getElementById("connect").addEventListener("click", request.open("method", "http://justinkruit.nl/stuff/jamesfenn", true, document.getElementById("user").value, document.getElementById("pass").value));
+</script>
 </body>
