@@ -138,8 +138,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-input id="pass" label="Password"></paper-input>
     <paper-button raised id="connect">Go</paper-button>
   </paper-material>
+  
+  <paper-material>
+    <p id="text"></p>
+  </paper-material>
   <script>
-    var request = new XMLHttpRequest();
-    document.getElementById("connect").addEventListener("click", request.open("method", "http://justinkruit.nl/stuff/jamesfenn", true, document.getElementById("user").value, document.getElementById("pass").value));
+    function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("text").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "demo_get.asp", true);
+  xhttp.send();
+}
 </script>
 </body>
