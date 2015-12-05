@@ -138,14 +138,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <br>
     <br>
     <paper-input id="pass" label="Message"></paper-input>
-    <paper-button raised id="connect">Send</paper-button>
+    <paper-button raised id="connect" on-click="sendDoc()">Send</paper-button>
   </paper-material>
   
   <paper-material>
     <p id="text"></p>
   </paper-material>
   <script>
-    function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
@@ -154,6 +153,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   xhttp.open("GET", "http://theandroidmaster.github.io/apps/server/log.txt", true);
   xhttp.send(null);
-}
+  function sendDoc() {
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("text").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "http://theandroidmaster.github.io/apps/server/log.txt", true);
+  xhttp.send(null);
+  }
 </script>
 </body>
