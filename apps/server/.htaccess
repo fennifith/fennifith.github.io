@@ -1,3 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteRule  ^response(.*?)\.php http://theandroidmaster.github.io/apps/server/#!/apps/server/ [R]
