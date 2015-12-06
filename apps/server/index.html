@@ -135,7 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved class="fullbleed layout vertical">
   <paper-material elevation="1">
     <paper-input id="user" label="Username"></paper-input>
-    <paper-input id="pass" label="Message"></paper-input>
+    <paper-input id="msg" label="Message"></paper-input>
     <paper-button raised id="connect" on-click="sendDoc()">Send</paper-button>
   </paper-material>
   
@@ -151,15 +151,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   };
   xhttp.open("GET", "http://theandroidmaster.github.io/apps/server/log.txt", true);
   xhttp.send(null);
+  
   function sendDoc() {
     var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("text").innerHTML = xhttp.responseText;
-    }
-  };
-  xhttp.open("GET", "http://theandroidmaster.github.io/apps/server/log.txt", true);
-  xhttp.send(null);
+    xhttp.onreadystatechange = function() {
+      if (xhttp.readyState == 4 && xhttp.status == 200) {
+        document.getElementById("text").innerHTML = xhttp.responseText;
+      }
+    };
+    xhttp.open("POST", "http://theandroidmaster.github.io/apps/server/loghandler.php", true);
+    xhttp.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value);
   }
 </script>
 </body>
