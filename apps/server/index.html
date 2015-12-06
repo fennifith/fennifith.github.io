@@ -133,13 +133,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
-  <paper-material elevation="1">
+  <p id="text" style="margin:15%"></p>
+  
+  <paper-material elevation="1" style="position:fixed; left:0; right:0; bottom:0;">
     <paper-input id="msg" label="Message"></paper-input>
     <paper-button raised id="connect" on-click="sendDoc()">Send</paper-button>
-  </paper-material>
-  
-  <paper-material>
-    <p id="text"></p>
   </paper-material>
   
   <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
