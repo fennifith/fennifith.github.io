@@ -179,6 +179,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   xhr.send("fname=&fcontent=");
   
   function onMsg() {
+      var xhr = createCORSRequest('POST', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+    if (!xhr) {
+      throw new Error('CORS not supported');
+    }
+  
+    xhr.onload = function() {
+      document.getElementById("text").innerHTML = xhr.responseText;
+    }
+    
     xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value);
   }
 </script>
