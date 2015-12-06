@@ -4,9 +4,11 @@
 
 <?php
  header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
+ 
+ echo "Loading..."
 
-$name = $_POST["fname"];
-$content = $_POST["fcontent"];
+$name = htmlspecialchars($_POST["fname"]);
+$content = htmlspecialchars($_POST["fcontent"]);
 
 $filename = "log.txt";
 
