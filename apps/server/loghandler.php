@@ -3,6 +3,8 @@
 <body>
 
 <?php
+ header("Access-Control-Allow-Origin: http://theandroidmaster.github.io/apps/server/#!/apps/server/");
+
 $name = $_POST["fname"];
 $content = $_POST["fcontent"];
 
