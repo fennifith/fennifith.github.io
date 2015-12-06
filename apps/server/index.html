@@ -159,11 +159,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     xhttp.onreadystatechange = function() {
       if (xhttp.readyState == 4 && xhttp.status == 200) {
         document.getElementById("text").innerHTML = xhttp.responseText;
+        getDoc();
       }
     };
     xhttp.open("POST", "http://theandroidmaster.github.io/apps/server/loghandler.php", true);
     xhttp.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value);
-    getDoc();
   }
   
   getDoc();
