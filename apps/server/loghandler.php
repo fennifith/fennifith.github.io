@@ -10,7 +10,8 @@ $filename = "log.txt";
 
 $myfile = fopen($filename, "w") or die("error retrieving message");
 $contents = fread($myfile, filesize($filename));
-$txt = $name . ": " . $content . $contents;
+$txt = $name . ": " . $content . "
+" . $contents;
 fwrite($myfile, $txt);
 fclose($myfile);
 
