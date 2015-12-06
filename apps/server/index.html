@@ -134,7 +134,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body unresolved class="fullbleed layout vertical">
   <paper-material elevation="1">
-    <paper-input id="user" label="Username"></paper-input>
     <paper-input id="msg" label="Message"></paper-input>
     <paper-button raised id="connect" on-click="sendDoc()">Send</paper-button>
   </paper-material>
@@ -142,7 +141,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <paper-material>
     <p id="text"></p>
   </paper-material>
+  
+  <paper-dialog id="dialog" entry-animation="scale-up-animation" exit-animation="fade-out-animation" modal="true">
+    <paper-input id="user" label="Username"></paper-input>
+    <paper-button raised id="connect" on-click=" document.getElementById("dialog").close()">Log In</paper-button>
+  </paper-dialog>
+  
   <script>
+  document.getElementById("dialog").open();
+  
   function getDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
