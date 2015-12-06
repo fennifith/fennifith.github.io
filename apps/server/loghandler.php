@@ -3,7 +3,7 @@
 <body>
 
 <?php
- header("Access-Control-Allow-Origin: http://theandroidmaster.github.io/apps/server/#!/apps/server/");
+ header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $name = $_POST["fname"];
 $content = $_POST["fcontent"];
