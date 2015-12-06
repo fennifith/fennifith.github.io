@@ -156,8 +156,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         document.getElementById("text").innerHTML = xhttp.responseText;
       }
     };
-    xhttp.open("GET", "http://justinkruit.nl/stuff/jamesfenn/chat/log.txt", true);
-    xhttp.send(null);
+    xhttp.open("POST", "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php", true);
+    xhttp.send("fname=&fcontent=");
   }
   
   function sendDoc() {
