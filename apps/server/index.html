@@ -131,7 +131,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <paper-material elevation="1" style="position:fixed; left:0; right:0; bottom:0; height:20%">
     <paper-input id="msg" label="Message"></paper-input>
-    <paper-button raised id="connect" on-click="sendDoc()">Send</paper-button>
+    <paper-button raised id="connect" on-click="onMsg()">Send</paper-button>
   </paper-material>
   
   <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
@@ -143,27 +143,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
   document.getElementById("dialog").open();
   
-  function getDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        document.getElementById("text").innerHTML = xhttp.responseText;
-      }
-    };
-    xhttp.open("POST", "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php", true);
-    xhttp.send("fname=&fcontent=");
+  function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+
+      // Check if the XMLHttpRequest object has a "withCredentials" property.
+      // "withCredentials" only exists on XMLHTTPRequest2 objects.
+      xhr.open(method, url, true);
+
+    } else if (typeof XDomainRequest != "undefined") {
+
+      // Otherwise, check if XDomainRequest.
+      // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+
+    } else {
+
+      // Otherwise, CORS is not supported by the browser.
+      xhr = null;
+
+    }
+    return xhr;
+  }
+
+  var xhr = createCORSRequest('POST', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+  if (!xhr) {
+    throw new Error('CORS not supported');
   }
   
-  function sendDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (xhttp.readyState == 4 && xhttp.status == 200) {
-        document.getElementById("text").innerHTML = xhttp.responseText;
-        getDoc();
-      }
-    };
-    xhttp.open("POST", "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php", true);
-    xhttp.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value);
+  xhr.onload = function() {
+    document.getElementById("text").innerHTML = xhr.responseText;
+  }
+  
+  xhr.send("fname=&fcontent=");
+  
+  function onMsg() {
+    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value");
   }
   
   getDoc();
