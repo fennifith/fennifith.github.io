@@ -6,7 +6,7 @@
 header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $filename = $_GET["fchat"];
-if (!$filename) {
+if ($filename == "") {
  $filename = "log.txt;"
 }
 
