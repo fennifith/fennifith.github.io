@@ -127,18 +127,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
-  <input id="room" label="Chatroom"></input>
+  <paper-input id="room" label="Chatroom"></paper-input>
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
   <div style="position:fixed; left:0; right:0; bottom:0; height:15%; background-color:#fff;">
-    <input id="msg" label="Message" style="position:fixed; left:5%; width:70%;"></input>
-    <paper-button raised id="connect" on-click="onMsg()" style="position:fixed; right:5%;">Send</paper-button>
+    <paper-input id="msg" label="Message" style="position:fixed; left:5%; width:70%;"></paper-input>
+    <paper-button raised id="connect" onclick="onMsg()" style="position:fixed; right:5%;">Send</paper-button>
   </div>
   
   <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
-    <input id="user" label="Username"></input>
+    <paperinput id="user" label="Username"></paper-input>
     <div class="buttons" style="position:absolute; bottom:0; right:0;">
-      <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0" on-click="onAction('joined the chat');">Log In</paper-button>
+      <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0" onclick="onAction('joined the chat');">Log In</paper-button>
     </div>
   </paper-dialog>
   <script>
