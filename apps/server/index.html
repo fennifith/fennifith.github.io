@@ -137,7 +137,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
     <paper-input id="user" label="Username"></paper-input>
     <div class="buttons" style="position:absolute; bottom:0; right:0;">
-      <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0">Log In</paper-button>
+      <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0" on-click="onAction('joined the chat');">Log In</paper-button>
     </div>
   </paper-dialog>
   <script>
@@ -166,20 +166,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return xhr;
   }
-
-  var xhr = createCORSRequest('POST', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
-  if (!xhr) {
-    throw new Error('CORS not supported');
-  }
   
-  xhr.onload = function() {
-    document.getElementById("text").innerHTML = xhr.responseText;
-  }
+  function onAction(action) {
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+    if (!xhr) {
+      throw new Error('CORS not supported');
+    }
   
-  xhr.send("fname=&fcontent=");
+    xhr.onload = function() {
+      document.getElementById("text").innerHTML = xhr.responseText;
+    }
+  
+    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + action); 
+  }
   
   function onMsg() {
-      var xhr = createCORSRequest('POST', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
     if (!xhr) {
       throw new Error('CORS not supported');
     }
