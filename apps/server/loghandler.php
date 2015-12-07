@@ -6,13 +6,13 @@
 header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $filename = $_GET["fchat"];
-if ($filename == "") {
+if (empty($filename)) {
  $filename = "log.txt;"
 }
 
 $myoldfile = fopen($filename, "r");
 
-if (!$myoldfile) {
+if (empty($myoldfile)) {
  fclose($myoldfile);
  $myfile = fopen($filename, w);
  fclose($myfile);
