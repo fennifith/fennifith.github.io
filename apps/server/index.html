@@ -158,7 +158,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -167,11 +167,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
   
-    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value); 
+    xhr.send(); 
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -180,13 +180,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
     
-    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
+    xhr.send();
     document.getElementById("msg").value = "";
   }
 </script>
 
 <script>
-  /*function createCORSRequest(method, url) {
+  function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
       xhr.open(method, url, true);
@@ -200,7 +200,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   function yourFunction(){
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php");
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -209,9 +209,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
   
-    xhr.send("fchat=" + document.getElementById("room").value); 
+    xhr.send(); 
     setTimeout(yourFunction, 2000);
   }
-  yourFunction();*/
+  yourFunction();
 </script>
 </body>
