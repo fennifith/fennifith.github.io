@@ -7,10 +7,10 @@
  
  echo "Loading...";
 
-$name = htmlspecialchars($_POST["fname"]);
-$content = htmlspecialchars($_POST["fcontent"]);
-echo '<br/>$name:<br/>' . $_POST["fname"] . '<br/>';
-echo '<br/>$content:<br/>' . $_POST["fcontent"] . '<br/>';
+$name = htmlspecialchars($_GET["fname"]);
+$content = htmlspecialchars($_GET["fcontent"]);
+echo '<br/>$name:<br/>' . $_GET["fname"] . '<br/>';
+echo '<br/>$content:<br/>' . $_GET["fcontent"] . '<br/>';
 $filename = "log.txt";
 
 $myfile = fopen($filename, "w"); /* or die("error retrieving message");*/
