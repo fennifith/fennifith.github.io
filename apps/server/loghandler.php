@@ -7,8 +7,8 @@
  
  echo "Loading...";
 
-$name = htmlspecialchars($_GET["fname"]);
-$content = htmlspecialchars($_GET["fcontent"]);
+$name = $_GET["fname"];
+$content = $_GET["fcontent"];
 echo '<br/>$name:<br/>' . $_GET["fname"] . '<br/>';
 echo '<br/>$content:<br/>' . $_GET["fcontent"] . '<br/>';
 $filename = "log.txt";
