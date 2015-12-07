@@ -13,8 +13,10 @@ if (!$filename) {
 $myoldfile = fopen($filename, "r");
 
 if (!$myoldfile) {
+ fclose($myoldfile);
  $myfile = fopen($filename, w);
  fclose($myfile);
+ $myoldfile = fopen($filename, "r");
 }
 
 $contents = fread($myoldfile, filesize($filename));
