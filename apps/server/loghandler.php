@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $filename = $_GET["fchat"];
 if (empty($filename)) {
- $filename = "log.txt;"
+ $filename = "log.txt";
 }
 
 $myoldfile = fopen($filename, "r");
@@ -27,7 +27,7 @@ fwrite($myfile, $txt);
 fclose($myfile);
 
 if ($_GET["fname"] == "delete") {
- unlink($filename)
+ unlink($filename);
 }
 
 echo $txt;
