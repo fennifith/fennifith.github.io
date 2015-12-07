@@ -5,21 +5,26 @@
 <?php
  header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
  
- echo "Loading..."
+ echo "Loading...";
 
 $name = htmlspecialchars($_POST["fname"]);
 $content = htmlspecialchars($_POST["fcontent"]);
 
 $filename = "log.txt";
 
-$myfile = fopen($filename, "w") or die("error retrieving message");
-$contents = fread($myfile, filesize($filename));
-$txt = $name . ": " . $content . "
-" . $contents;
-fwrite($myfile, $txt);
-fclose($myfile);
+$myfile = fopen($filename, "w"); /* or die("error retrieving message");*/
 
-echo $txt;
+if ($myfile) {
+  $contents = "junk"; /*fread($myfile, filesize($filename));*/
+  $txt = $name . ": " . $content . "\n" . $contents;
+  fwrite($myfile, $txt);
+  fclose($myfile);
+
+  echo $txt;
+} else {
+  echo 'could not open file <br/>';
+}
+
 ?>
 
 </body>
