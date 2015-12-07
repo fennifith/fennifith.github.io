@@ -143,6 +143,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </paper-dialog>
   <script>
   document.getElementById("dialog").open();
+  if (!document.getElementById("dialog").opened) {
+    document.getElementById("user").value = prompt("Please enter your name", "");
+  }
+  
+  document.getElementById("room").value = "log";
   
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
