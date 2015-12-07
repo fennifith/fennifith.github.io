@@ -7,10 +7,11 @@
 
 $filename = "log.txt";
 
-$myfile = fopen($filename, "w"); /* or die("error retrieving message");*/
+$myfile = fopen($filename, "w");
+$myoldfile = fopen($filename, "r");
 
 if ($myfile) {
-  $contents = fread($myfile, filesize($filename));
+  $contents = fread($myoldfile, filesize($filename));
   $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br\>" . $contents;
   fwrite($myfile, $txt);
   fclose($myfile);
