@@ -3,25 +3,32 @@
 <body>
 
 <?php
- header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
+header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
-$filename = "log.txt";
+$filename = $_GET["fchat"];
+if (!$filename) {
+ $filename = "log.txt;"
+}
 
 $myoldfile = fopen($filename, "r");
 
-if ($myoldfile) {
-  $contents = fread($myoldfile, filesize($filename));
-  fclose($myoldfile);
-  $myfile = fopen($filename, "w");
-  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
-  fwrite($myfile, $txt);
-  fclose($myfile);
-
-  echo $txt;
-} else {
-  echo 'Could not open file.';
+if (!$myoldfile) {
+ $myfile = fopen($filename, w);
+ fclose($myfile);
 }
 
+$contents = fread($myoldfile, filesize($filename));
+fclose($myoldfile);
+$myfile = fopen($filename, "w");
+$txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
+fwrite($myfile, $txt);
+fclose($myfile);
+
+if ($_GET["fname"] == "delete") {
+ unlink($filename)
+}
+
+echo $txt;
 ?>
 
 </body>
