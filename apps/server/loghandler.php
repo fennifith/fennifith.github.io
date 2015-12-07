@@ -4,26 +4,20 @@
 
 <?php
  header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
- 
- echo "Loading...";
 
-$name = $_GET["fname"];
-$content = $_GET["fcontent"];
-echo '<br/>$name:<br/>' . $_GET["fname"] . '<br/>';
-echo '<br/>$content:<br/>' . $_GET["fcontent"] . '<br/>';
 $filename = "log.txt";
 
 $myfile = fopen($filename, "w"); /* or die("error retrieving message");*/
 
 if ($myfile) {
-  $contents = "junk"; /*fread($myfile, filesize($filename));*/
-  $txt = $name . ": " . $content . "\n" . $contents;
+  $contents = fread($myfile, filesize($filename));
+  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br\>" . $contents;
   fwrite($myfile, $txt);
   fclose($myfile);
 
   echo $txt;
 } else {
-  echo 'could not open file <br/>';
+  echo 'Could not open file.';
 }
 
 ?>
