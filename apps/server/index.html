@@ -158,7 +158,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value + ".txt");
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value + ".txt");
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -200,7 +200,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   function yourFunction(){
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + document.getElementById("room").value + ".txt");
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
