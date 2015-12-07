@@ -7,8 +7,10 @@ header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $filename = $_GET["fchat"];
 if (empty($filename)) {
- $filename = "log.txt";
+ $filename = "log";
 }
+
+$filename = $filename . ".txt";
 
 $myoldfile = fopen($filename, "r");
 
