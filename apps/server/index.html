@@ -12,7 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html lang="">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="A thing">
+  <meta name="description" content="lots of chatrooms...">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Chatroom" />
   <title>Chatroom</title>
@@ -127,12 +127,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
+  <paper-input id="room" label="Chatroom"></paper-input>
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
-  <paper-material elevation="1" style="position:fixed; left:0; right:0; bottom:0; height:15%">
+  <div style="position:fixed; left:0; right:0; bottom:0; height:15% background-color:#fff;>
     <paper-input id="msg" label="Message" style="position:fixed; left:5%; width:70%;"></paper-input>
     <paper-button raised id="connect" on-click="onMsg()" style="position:fixed; right:5%;">Send</paper-button>
-  </paper-material>
+  </div>
   
   <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
     <paper-input id="user" label="Username"></paper-input>
@@ -177,7 +178,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
   
-    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + action); 
+    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value); 
   }
   
   function onMsg() {
@@ -190,7 +191,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
     
-    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value);
+    xhr.send("fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
     document.getElementById("msg").value = "";
   }
 </script>
@@ -230,9 +231,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = xhr.responseText;
     }
   
-    xhr.send(); 
+    xhr.send("fchat=" + document.getElementById("room").value); 
     setTimeout(yourFunction, 2000);
-}
-yourFunction();
+  }
+  yourFunction();
 </script>
 </body>
