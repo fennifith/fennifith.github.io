@@ -13,7 +13,7 @@ if ($myoldfile) {
   $contents = fread($myoldfile, filesize($filename));
   fclose($myoldfile);
   $myfile = fopen($filename, "w");
-  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br\>" . $contents;
+  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
   fwrite($myfile, $txt);
   fclose($myfile);
 
