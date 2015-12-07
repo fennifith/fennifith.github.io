@@ -9,8 +9,8 @@
 
 $name = htmlspecialchars($_POST["fname"]);
 $content = htmlspecialchars($_POST["fcontent"]);
-echo '<br/>$name:<br/>' . $name . '<br/>';
-echo '<br/>$content:<br/>' . $content . '<br/>';
+echo '<br/>$name:<br/>' . $_POST["fname"] . '<br/>';
+echo '<br/>$content:<br/>' . $_POST["fcontent"] . '<br/>';
 $filename = "log.txt";
 
 $myfile = fopen($filename, "w"); /* or die("error retrieving message");*/
