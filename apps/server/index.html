@@ -130,12 +130,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <paper-input id="room" label="Chatroom"></paper-input>
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
-  <div style="position:fixed; left:0; right:0; bottom:0; height:15%; background-color:#fff;">
-    <paper-input id="msg" label="Message" style="position:fixed; left:5%; width:70%;"></paper-input>
-    <paper-button raised id="connect" onclick="onMsg()" style="position:fixed; right:5%;">Send</paper-button>
+  <div style="position:fixed; left:0; right:0; bottom:0;">
+    <paper-input id="msg" label="Message" style="position:fixed; left:5%; bottom:5%; width:70%;"></paper-input>
+    <paper-button raised id="connect" onclick="onMsg()" style="position:fixed; right:5%; bottom:5%;">Send</paper-button>
   </div>
   
-  <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%;">
+  <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%; min-height:200px; min-width:300px;">
     <paper-input id="user" label="Username"></paper-input>
     <div class="buttons" style="position:absolute; bottom:0; right:0;">
       <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0" onclick="onAction('joined the chat');">Log In</paper-button>
@@ -148,6 +148,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   document.getElementById("room").value = "log";
+  
+  document.getElementById('user').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      document.getElementById("dialog").close();
+      onAction('joined the chat');
+      return false;
+    }
+  }
+  
+  document.getElementById('msg').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+      onMsg();
+      return false;
+    }
+  }
+  
+  
+  
   
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
