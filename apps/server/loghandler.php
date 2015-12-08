@@ -22,13 +22,13 @@ if (empty($myoldfile)) {
 }
 
 $contents = fread($myoldfile, filesize($filename));
-fclose($myoldfile);
 $myfile = fopen($filename, "w");
 if (!empty($_GET["fcontent"])) {
  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
  if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
  fwrite($myfile, $txt);
 }
+fclose($myoldfile);
 fclose($myfile);
 
 if ($_GET["fname"] == "delete") {
