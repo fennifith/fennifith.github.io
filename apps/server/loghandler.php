@@ -10,29 +10,14 @@ if (empty($filename)) {
  $filename = "log";
 }
 
-$filename = $filename . ".txt";
-
-$myoldfile = fopen($filename, "r");
-
-if (empty($myoldfile)) {
- fclose($myoldfile);
- $myfile = fopen($filename, w);
- fclose($myfile);
- $myoldfile = fopen($filename, "r");
-}
+$GLOBALS[$filename];
 
 $contents = fread($myoldfile, filesize($filename));
 $myfile = fopen($filename, "w");
 if (!empty($_GET["fcontent"])) {
- $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
+ $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $GLOBALS[$filename];
  if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
- fwrite($myfile, $txt);
-}
-fclose($myoldfile);
-fclose($myfile);
-
-if ($_GET["fname"] == "delete") {
- unlink($filename);
+ $GLOBALS[$filename] = $txt;
 }
 
 echo $txt;
