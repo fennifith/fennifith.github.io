@@ -25,7 +25,7 @@ $contents = fread($myoldfile, filesize($filename));
 fclose($myoldfile);
 $myfile = fopen($filename, "w");
 $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
-//if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
+if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
 if (!empty($_GET["fcontent"])) {
  fwrite($myfile, $txt);
 }
