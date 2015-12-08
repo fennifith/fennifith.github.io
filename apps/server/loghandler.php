@@ -43,6 +43,7 @@ if ($_GET["fname"] == "delete") {
  unlink($filename);
 }
 
+echo $_SERVER['DOCUMENT_ROOT'];
 echo $txt;
 ?>
 
