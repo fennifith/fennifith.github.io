@@ -36,7 +36,11 @@ while(!$myfile) {
  $myfile = fopen($filename, "w");
 }
 
-$txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
+if (empty($_GET["fcontent"])) {
+ $txt = $contents;
+} else {
+ $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
+}
 if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
