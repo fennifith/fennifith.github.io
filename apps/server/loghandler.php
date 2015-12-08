@@ -24,6 +24,10 @@ if (empty($myoldfile)) {
  $myoldfile = fopen($filename, "r");
 }
 
+while (!$myoldfile) {
+ $myoldfile = fopen($filename, "r");
+}
+
 $contents = fread($myoldfile, filesize($filename));
 fclose($myoldfile);
 
