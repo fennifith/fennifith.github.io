@@ -39,7 +39,7 @@ if (!empty($_GET["fcontent"])) {
 }
 fclose($myfile);
 
-if ($_GET["fname"] == "delete") {
+if ($_GET["fname"] === "delete") {
  unlink($filename);
 }
 
