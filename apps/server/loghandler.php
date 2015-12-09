@@ -40,7 +40,7 @@ if (empty($_GET["fcontent"])) {
 } else {
  $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
 }
-if (strlen($txt) > 1000) $txt = substr($txt, 0, 1000) . "<br>...";
+if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
 
