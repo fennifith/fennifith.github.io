@@ -38,8 +38,14 @@ while(!$myfile) {
 if (empty($_GET["fcontent"])) {
  $txt = $contents;
 } else {
- $txt = $_GET["fname"] . ": " . $_GET["fcontent"] . "<br>" . $contents;
+ date_default_timezone_set('America/New_York');
+ if ($_GET["fcontent"] == "joined the chat" || $_GET["fcontent"] == "left the chat") {
+  $txt =  date('Y-m-d H:i:s') . ": " . $_GET["fname"] . " " . $_GET["fcontent"] . "<br>" . $contents;
+ } else {
+  $txt = $_GET["fname"] . " " . date('Y-m-d H:i:s') . ": " . $_GET["fcontent"] . "<br>" . $contents;
+ }
 }
+
 if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
