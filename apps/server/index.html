@@ -87,6 +87,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   document.getElementById("room").value = "log";
   
+  onAction('joined the chat');
+  
   document.getElementById('msg').onkeypress = function(e){
     if (!e) e = window.event;
     var keyCode = e.keyCode || e.which;
