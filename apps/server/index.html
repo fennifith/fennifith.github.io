@@ -82,29 +82,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <paper-input id="msg" label="Message" style="position:fixed; left:5%; bottom:5%; width:70%; background-color:#fafafa;"></paper-input>
   <paper-button raised id="connect" onclick="onMsg()" style="position:fixed; right:5%; bottom:5%;">Send</paper-button>
   
-  <paper-dialog id="dialog" modal="" role="dialog" tabindex="-1" aria-modal="true" class="x-scope paper-dialog-0" style="outline: none; z-index: 103; position: fixed; box-sizing: border-box; top: 33.3%; left: 33.3%; right: 33.3%; bottom: 33.3%; min-height:200px; min-width:300px;">
-    <paper-input id="user" label="Username"></paper-input>
-    <div class="buttons" style="position:absolute; bottom:0; right:0;">
-      <paper-button dialog-confirm="" autofocus="" role="button" tabindex="0" animated="" aria-disabled="false" class="x-scope paper-button-0" onclick="onAction('joined the chat');">Log In</paper-button>
-    </div>
-  </paper-dialog>
   <script>
-  document.getElementById("dialog").open();
-  if (!document.getElementById("dialog").opened) {
-    document.getElementById("user").value = prompt("Please enter your name", "");
-  }
+  var user = prompt("Please enter your name", "");
   
   document.getElementById("room").value = "log";
-  
-  document.getElementById('user').onkeypress = function(e){
-    if (!e) e = window.event;
-    var keyCode = e.keyCode || e.which;
-    if (keyCode == '13'){
-      document.getElementById("dialog").close();
-      onAction('joined the chat');
-      return false;
-    }
-  }
   
   document.getElementById('msg').onkeypress = function(e){
     if (!e) e = window.event;
@@ -133,7 +114,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         onAction('left the chat');
     }
     
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -146,7 +127,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + document.getElementById("user").value + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
