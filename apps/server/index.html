@@ -34,6 +34,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   <style is="custom-style" include="shared-styles"></style>
   <style>
+      .paper-input-container-0 .input-content.paper-input-container input {
+          color: white;
+      }
+      
+      .paper-input-container-0 .input-content.paper-input-container label {
+          color: #eeeeee;
+      }
+      
+      .paper-input-container-0 .unfocused-line.paper-input-container {
+        background: #f5f5f5;
+      }
+      
+      .paper-input-container-0 .focused-line.paper-input-container {
+    background: #ff9800;
+      }
+      
+      .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label {
+          color: #ff9800;
+      }
+      
     img {
       width:100%;
       max-height:100%;
@@ -68,7 +88,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       background-color:#e0e0e0;
     }
     paper-button {
-      background-color:#3f51b5;
+      background-color:#ff9800;
       color:#fff;
       margin:10px;
     }
@@ -83,7 +103,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
     
-<div class="msgbackground" style="background-color: #fafafa; position: fixed; width: 100%; bottom: 5%; padding-left: 2.5%;">
+<div class="msgbackground" style="background-color: #2196f3; position: fixed; width: 100%; padding: 2.5%; bottom: 0%;">
   <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
   <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
 </div>
