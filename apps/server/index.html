@@ -159,7 +159,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var str_array = xhr.responseText.split('<br>');
       var refresh = "";
       for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(':');
+        var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
         refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
@@ -180,7 +180,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var str_array = xhr.responseText.split("<br>");
       var refresh = "";
       for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(':');
+        var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
         refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
@@ -217,7 +217,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var str_array = xhr.responseText.split('<br>');
       var refresh = "";
       for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(':');
+        var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
         refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
