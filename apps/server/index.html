@@ -144,6 +144,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     return xhr;
   }
   
+  
+  
+  
+  function update(response) {
+    var str_array = response.split('<br>');
+      var refresh = "";
+      for(var i = 0; i < str_array.length; i++) {
+        var output = str_array[i].split(': ');
+        var user = output[0];
+        var comment = output[1];
+        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
+      }
+      document.getElementById("text").innerHTML = refresh;
+  }
+  
+  
+  
+  
+  
+  
   function onAction(action) {
     window.onbeforeunload = function (e) {
         onAction('left the chat');
@@ -155,15 +175,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   
     xhr.onload = function() {
-      var str_array = xhr.responseText.split('<br>');
-      var refresh = "";
-      for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(': ');
-        var user = output[0];
-        var comment = output[1];
-        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary>" + user + "</div></paper-item-body></paper-item>";
-      }
-      document.getElementById("text").innerHTML = refresh;
+      update(xhr.responseText);
     }
   
     xhr.send(); 
@@ -176,23 +188,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   
     xhr.onload = function() {
-      var str_array = xhr.responseText.split("<br>");
-      var refresh = "";
-      for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(': ');
-        var user = output[0];
-        var comment = output[1];
-        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary>" + user + "</div></paper-item-body></paper-item>";
-      }
-      document.getElementById("text").innerHTML = refresh;
+      update(xhr.responseText);
     }
     
     xhr.send();
     document.getElementById("msg").value = "";
   }
-</script>
-
-<script>
+  
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
@@ -206,27 +208,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     return xhr;
   }
 
-  function yourFunction(){
+  function timed(){
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
     
     xhr.onload = function() {
-      var str_array = xhr.responseText.split('<br>');
-      var refresh = "";
-      for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(': ');
-        var user = output[0];
-        var comment = output[1];
-        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary>" + user + "</div></paper-item-body></paper-item>";
-      }
-      document.getElementById("text").innerHTML = refresh;
+      update(xhr.responseText);
     }
   
     xhr.send(); 
-    setTimeout(yourFunction, 500);
+    setTimeout(timed, 500);
   }
-  yourFunction();
+  timed();
 </script>
 </body>
