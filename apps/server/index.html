@@ -153,7 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var comment = output[1];
         if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
       }
-      document.getElementById("text").innerHTML = refresh;
+      if (refresh !== document.getElementById("text").innerHTML) document.getElementById("text").innerHTML = refresh;
   }
   
   function onAction(action) {
