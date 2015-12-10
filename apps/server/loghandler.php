@@ -39,7 +39,7 @@ $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = $_GET["fcontent"];
 
 $b = $fcontent.split("*");
-if (sizeof($b) < 1 && sizeof($b) % 2 !== 0) {
+if (sizeof($b) > 1 && sizeof($b) % 2 !== 0) {
  $fcontent = "";
  
  for ($x = 0; $x < sizeof($b); $x++) {
