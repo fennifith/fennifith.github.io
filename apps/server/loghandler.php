@@ -46,7 +46,7 @@ if (sizeof($b) > 1 && sizeof($b) % 2 !== 0) {
   
   if ($x % 2 == 0) {
    if (sizeof($b) == 1) {
-    $fcontent = "<b>" . htmlspecialchars(str_replace('*', '', $b[$x]) . "</b>"
+    $fcontent = "<b>" . htmlspecialchars(str_replace('*', '', $b[$x]) . "</b>";
    } else {
     $fcontent += htmlspecialchars(str_replace('*', '', $b[$x]));
     if ($x !== (sizeof($b) - 1)) $fcontent += '<b>';
