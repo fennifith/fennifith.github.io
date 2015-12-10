@@ -140,6 +140,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   }
   
+ document.getElementById('msg').onkeypress = function(e){
+    if (document.getElementById("msg").value === "<style") {
+            document.getElementById('msg').value = "Oh no you don't!";
+        }
+}
+ 
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
