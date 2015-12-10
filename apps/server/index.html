@@ -96,14 +96,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       line-height: 175%;
       color:#757575;
     }
+      .msgbackground {
+          background-color: #2196f3; 
+          position: fixed; 
+          width: 100%; 
+          padding: 1%; 
+          bottom: 0%;
+      }
+      
+      .topbarbackground{
+          background-color: #2196f3;  
+          padding: 1%
+      }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
-  <paper-input id="room" label="Chatroom"></paper-input>
-  <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
+
+    <div class="topbarbackground" >
+        <paper-input id="room" label="Chatroom"></paper-input>
+    </div>
+    
+    <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
     
-<div class="msgbackground" style="background-color: #2196f3; position: fixed; width: 100%; padding: 2.5%; bottom: 0%;">
+<div class="msgbackground" style="">
   <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
   <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
 </div>
