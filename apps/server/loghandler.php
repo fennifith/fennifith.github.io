@@ -45,9 +45,12 @@ if (sizeof($b) > 1 && sizeof($b) % 2 !== 0) {
  for ($x = 0; $x < sizeof($b); $x++) {
   
   if ($x % 2 == 0) {
-   $fcontent += htmlspecialchars(str_replace('*', '', $b[$x]));
-   if ($x !== (sizeof($b) - 1)) $fcontent += '<b>';
-   
+   if (sizeof($b) == 1) {
+    $fcontent = "<b>" . htmlspecialchars(str_replace('*', '', $b[$x]) . "</b>"
+   } else {
+    $fcontent += htmlspecialchars(str_replace('*', '', $b[$x]));
+    if ($x !== (sizeof($b) - 1)) $fcontent += '<b>';
+   }
   } else {
    $fcontent += htmlspecialchars(str_replace('*', '</b>', $b[$x]));
    $fcontent += '</b>';
