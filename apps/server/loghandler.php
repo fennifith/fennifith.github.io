@@ -15,9 +15,9 @@ $myoldfile = fopen($filename, "r");
 
 if (empty($myoldfile)) {
  fclose($myoldfile);
- $myfile = fopen($filename, w);
+ $myfile = fopen($filename, a);
  while(!$myfile) {
-  $myfile = fopen($filename, w);
+  $myfile = fopen($filename, a);
  }
  fclose($myfile);
  $myoldfile = fopen($filename, "r");
