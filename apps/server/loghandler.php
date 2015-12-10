@@ -36,27 +36,7 @@ while(!$myfile) {
 }
 
 $fname = htmlspecialchars($_GET["fname"]);
-$fcontent = $_GET["fcontent"];
-
-$b = $fcontent.split("*");
-if (sizeof($b) > 1 && sizeof($b) % 2 !== 0) {
- $fcontent = "";
- 
- for ($x = 0; $x < sizeof($b); $x++) {
-  
-  if ($x % 2 == 0) {
-   if (sizeof($b) == 1) {
-    $fcontent = "<b>" . htmlspecialchars(str_replace('*', '', $b[$x]) . "</b>";
-   } else {
-    $fcontent += htmlspecialchars(str_replace('*', '', $b[$x]));
-    if ($x !== (sizeof($b) - 1)) $fcontent += '<b>';
-   }
-  } else {
-   $fcontent += htmlspecialchars(str_replace('*', '</b>', $b[$x]));
-   $fcontent += '</b>';
-  }
- }
-}
+$fcontent = htmlspecialchars($_GET["fcontent"]);
 
 
 if (empty($fcontent)) {
