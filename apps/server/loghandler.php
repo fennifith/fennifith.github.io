@@ -42,17 +42,13 @@ if (empty($_GET["fcontent"])) {
  if ($_GET["fcontent"] == "joined the chat" || $_GET["fcontent"] == "left the chat") {
   $txt =  date('Y-m-d H:i:s') . ": " . $_GET["fname"] . " " . $_GET["fcontent"] . "<br>" . $contents;
  } else {
-  $txt = $_GET["fname"] . " " . date('Y-m-d H:i:s') . ": " . $_GET["fcontent"] . "<br>" . $contents;
+  $txt = $_GET["fname"] . " - " . date('Y-m-d H:i:s') . ": " . $_GET["fcontent"] . "<br>" . $contents;
  }
 }
 
 if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
-
-if ($_GET["fname"] == "delete") {
- unlink($filename);
-}
 
 echo $txt;
 ?>
