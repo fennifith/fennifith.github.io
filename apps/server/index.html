@@ -161,7 +161,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
-        refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
+        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
       }
       document.getElementById("text").innerHTML = refresh;
     }
@@ -182,7 +182,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
-        refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
+        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
       }
       document.getElementById("text").innerHTML = refresh;
     }
@@ -219,7 +219,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var output = str_array[i].split(': ');
         var user = output[0];
         var comment = output[1];
-        refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
+        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div><p>" + comment + "</p></div><div secondary><p>" + user + "</p></div></paper-item-body></paper-item>";
       }
       document.getElementById("text").innerHTML = refresh;
     }
