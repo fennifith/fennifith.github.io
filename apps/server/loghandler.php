@@ -50,7 +50,7 @@ if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
 
-echo $txt;
+echo htmlspecialchars($txt);
 ?>
 </body>
 </html>
