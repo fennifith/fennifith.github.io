@@ -82,9 +82,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <paper-input id="room" label="Chatroom"></paper-input>
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
-  <paper-input id="msg" label="Message" style="position:fixed; left:5%; bottom:5%; width:70%; background-color:#fafafa;"></paper-input>
-  <paper-button raised id="connect" onclick="onMsg()" style="position:fixed; right:5%; bottom:5%;">Send</paper-button>
-  
+    
+<div class="msgbackground" style="background-color: #fafafa; position: fixed; width: 100%; bottom: 5%; padding-left: 2.5%;">
+  <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
+  <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
+</div>
+        
   <script>
   var user = prompt("Please enter your name", "");
   
