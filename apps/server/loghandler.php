@@ -53,11 +53,8 @@ if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
 
-$filename = "$files[0]";
-foreach($files as $filename) {
- if (filesize($filename) < 1) {
-  unlink($filename)
- }
+if (filesize($filename) < 1) {
+ unlink($filename)
 }
 
 echo $txt;
