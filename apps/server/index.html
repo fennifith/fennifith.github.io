@@ -163,7 +163,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   
     xhr.onload = function() {
-      var [user, comment] = xhr.responseText.split(":");
+      var output = xhr.responseText.split(":");
+      var user = output[0];
+      var comment = output[1];
       document.getElementById("text").innerHTML = "<paper-item><paper-item-body two-line><div>" + user + "</div><div secondary>" + comment + "</div></paper-item-body></paper-item>";
     }
   
@@ -177,7 +179,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   
     xhr.onload = function() {
-      var [user, comment] = xhr.responseText.split(":");
+      var output = xhr.responseText.split(":");
+      var user = output[0];
+      var comment = output[1];
       document.getElementById("text").innerHTML = "<paper-item><paper-item-body two-line><div>" + user + "</div><div secondary>" + comment + "</div></paper-item-body></paper-item>";
     }
     
@@ -207,7 +211,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     
     xhr.onload = function() {
-      var [user, comment] = xhr.responseText.split(":");
+      var output = xhr.responseText.split(":");
+      var user = output[0];
+      var comment = output[1];
       document.getElementById("text").innerHTML = "<paper-item><paper-item-body two-line><div>" + user + "</div><div secondary>" + comment + "</div></paper-item-body></paper-item>";
     }
   
