@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','') + "&fchat=" + document.getElementById("room").value);
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
