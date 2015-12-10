@@ -38,7 +38,7 @@ while(!$myfile) {
 $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = $_GET["fcontent"];
 
-$b = $fcontent.split("*")
+$b = $fcontent.split("*");
 if (sizeof($b) < 1 && sizeof($b) % 2 !== 0) {
  $fcontent = "";
  
