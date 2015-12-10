@@ -54,11 +54,6 @@ fwrite($myfile, $txt);
 fclose($myfile);
 
 echo $txt;
-
-sleep(5);
-if (filesize($filename) < 1) {
- unlink($filename);
-}
 ?>
 </body>
 </html>
