@@ -139,12 +139,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       return false;
     }
   }
-  
- document.getElementById('msg').onkeypress = function(e){
-    if (document.getElementById("msg").value === "<style") {
-            document.getElementById('msg').value = 'No no no';
-        }
-}
  
   function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
