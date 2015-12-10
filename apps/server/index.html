@@ -143,10 +143,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return xhr;
   }
-  
-  
-  
-  
+
   function update(response) {
     var str_array = response.split('<br>');
       var refresh = "";
@@ -158,11 +155,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       document.getElementById("text").innerHTML = refresh;
   }
-  
-  
-  
-  
-  
   
   function onAction(action) {
     window.onbeforeunload = function (e) {
@@ -193,19 +185,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     xhr.send();
     document.getElementById("msg").value = "";
-  }
-  
-  function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
-    return xhr;
   }
 
   function timed(){
