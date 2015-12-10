@@ -34,25 +34,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   <style is="custom-style" include="shared-styles"></style>
   <style>
-      .paper-input-container-0 .input-content.paper-input-container input {
-          color: white;
-      }
+    .paper-input-container-0 .input-content.paper-input-container input {
+      color: white;
+    }
       
-      .paper-input-container-0 .input-content.paper-input-container label {
-          color: #eeeeee;
-      }
+    .paper-input-container-0 .input-content.paper-input-container label {
+      color: #eeeeee;
+    }
       
-      .paper-input-container-0 .unfocused-line.paper-input-container {
-        background: #f5f5f5;
-      }
+    .paper-input-container-0 .unfocused-line.paper-input-container {
+      background: #f5f5f5;
+    }
       
-      .paper-input-container-0 .focused-line.paper-input-container {
-    background: #ff9800;
-      }
+    .paper-input-container-0 .focused-line.paper-input-container {
+      background: #e57373;
+    }
       
-      .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label {
-          color: #ff9800;
-      }
+    .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label {
+      color: #e57373;
+    }
       
     img {
       max-height:100%;
@@ -79,26 +79,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     paper-tab {color:#fff;}
     paper-toast {z-index:1;}
     paper-button {
-      background-color:#ff9800;
-      color:#fff;
+      background-color:#fafafa;
+      color:#212121;
       margin:10px;
     }
     p {
       line-height: 175%;
       color:#757575;
     }
-      .msgbackground {
-          background-color: #2196f3; 
-          position: fixed; 
-          width: 100%; 
-          padding: 1%; 
-          bottom: 0%;
-      }
+    .msgbackground {
+      background-color: #212121; 
+      position: fixed; 
+      width: 100%; 
+      padding: 1%; 
+      bottom: 0%;
+    }
       
-      .topbarbackground{
-          background-color: #2196f3;  
-          padding: 1%
-      }
+    .topbarbackground{
+      background-color: #212121;  
+      padding: 1%
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
@@ -110,7 +110,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
     
-<div class="msgbackground" style="">
+<div class="msgbackground">
   <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
   <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
 </div>
