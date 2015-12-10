@@ -54,7 +54,7 @@ fwrite($myfile, $txt);
 fclose($myfile);
 
 if (filesize($filename) < 1) {
- unlink($filename)
+ unlink($filename);
 }
 
 echo $txt;
