@@ -13,7 +13,7 @@ if (empty($filename)) {
 $filename = $filename . ".txt";
 $myoldfile = fopen($filename, "r");
 
-if (empty($myoldfile)) {
+if (!$myoldfile) {
  fclose($myoldfile);
  $myfile = fopen($filename, a);
  while(!$myfile) {
@@ -45,6 +45,7 @@ if (empty($fcontent)) {
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
   $txt =  date('Y-m-d H:i:s') . ": " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
+  
   //put markdown here
   if (strpos($fcontent, "/bold ") !== false) {
    $fcontent = "<b>" . str_replace("/bold ", "", $fcontent) . "</b>";
