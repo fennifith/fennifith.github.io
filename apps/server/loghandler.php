@@ -99,7 +99,7 @@ if (empty($fcontent)) {
    $fcontent = str_replace("/link ", "", $fcontent);
    $str = $fcontent;
    $str = trim(preg_replace('/\s+/', ' ', $str));
-   preg_match("/\<title\>(.*)\<\/title\>/i", $str, $title);
+   preg_match("~<title>(.*?)</title>~", $str, $title);
    $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
   }
   
