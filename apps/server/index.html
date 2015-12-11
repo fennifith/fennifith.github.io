@@ -47,11 +47,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
       
     .paper-input-container-0 .focused-line.paper-input-container {
-      background: #e57373;
+      background: #00bcd4;
     }
       
     .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label {
-      color: #e57373;
+      color: #00bcd4;
     }
       
     img {
@@ -103,17 +103,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body unresolved class="fullbleed layout vertical">
 
-    <div class="topbarbackground" >
-        <paper-input id="room" label="Chatroom"></paper-input>
-    </div>
+  <div class="topbarbackground" >
+    <paper-input id="room" label="Chatroom"></paper-input>
+  </div>
     
-    <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
+  <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
   
     
-<div class="msgbackground">
-  <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
-  <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
-</div>
+  <div class="msgbackground">
+    <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
+    <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
+  </div>
         
   <script>
   var user = prompt("Please enter your name", "");
@@ -153,7 +153,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var output = str_array[i].split(': ');
       var user = output[0];
       var comment = output[1];
-      if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
+      if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#0097a7;\">" + user + "</div></paper-item-body></paper-item>";
     }
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML = refresh;
@@ -206,5 +206,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     setTimeout(timed, 500);
   }
   timed();
-</script>
+  </script>
 </body>
