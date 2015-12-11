@@ -143,17 +143,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return xhr;
   }
+  
+  var prev = "";
+  var next = "";
 
   function update(response) {
     var str_array = response.split('<br>');
-      var refresh = "";
-      for(var i = 0; i < str_array.length; i++) {
-        var output = str_array[i].split(': ');
-        var user = output[0];
-        var comment = output[1];
-        if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
-      }
-      if (refresh.replace(/^\s+|\s+$/, '') !== document.getElementById("text").innerHTML.replace(/^\s+|\s+$/, '')) document.getElementById("text").innerHTML = refresh;
+    var refresh = "";
+    for(var i = 0; i < str_array.length; i++) {
+      var output = str_array[i].split(': ');
+      var user = output[0];
+      var comment = output[1];
+      if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
+        
+      var next = output[0];
+    }
+    if (prev !== next) document.getElementById("text").innerHTML = refresh;
+    var prev = next;
   }
   
   function onAction(action) {
