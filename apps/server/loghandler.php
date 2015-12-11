@@ -38,12 +38,6 @@ while(!$myfile) {
 $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = $_GET["fcontent"];
 
-if (strpos($str, '/bold ') >= 0) {
- $fcontent = "<b>" . htmlspecialchars(str_replace("/bold ", "", $fcontent)) . "</b>";
-} else {
- $fcontent = htmlspecialchars($fcontent);
-}
-
 if (empty($fcontent)) {
  $txt = $contents;
 } else {
@@ -51,6 +45,12 @@ if (empty($fcontent)) {
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
   $txt =  date('Y-m-d H:i:s') . ": " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
+  //put markdown here
+  if (strpos($str, '/bold ') >= 0) {
+   $fcontent = "<b>" . htmlspecialchars(str_replace("/bold ", "", $fcontent)) . "</b>";
+  } else {
+   $fcontent = htmlspecialchars($fcontent);
+  }
   $txt = $fname . " - " . date('Y-m-d H:i:s') . ": " . $fcontent . "<br>" . $contents;
  }
 }
