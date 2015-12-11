@@ -51,14 +51,28 @@ if (empty($fcontent)) {
   }
   
   //colors
-  if (strpos($fcontent, "/red") !== false) {
+  if (strpos($fcontent, "/red ") !== false) {
    $fcontent = "<p style=\"color:red;\">" . str_replace("/red ", "", $fcontent) . "</p>";
   }
-  if (strpos($fcontent, "/orange") !== false) {
+  if (strpos($fcontent, "/orange ") !== false) {
    $fcontent = "<p style=\"color:orange;\">" . str_replace("/orange ", "", $fcontent) . "</p>";
   }
-  if (strpos($fcontent, "/yellow") !== false) {
+  if (strpos($fcontent, "/yellow ") !== false) {
    $fcontent = "<p style=\"color:yellow;\">" . str_replace("/yellow ", "", $fcontent) . "</p>";
+  }
+  if (strpos($fcontent, "/green ") !== false) {
+   $fcontent = "<p style=\"color:green;\">" . str_replace("/green ", "", $fcontent) . "</p>";
+  }
+  if (strpos($fcontent, "/blue ") !== false) {
+   $fcontent = "<p style=\"color:blue;\">" . str_replace("/blue ", "", $fcontent) . "</p>";
+  }
+  if (strpos($fcontent, "/purple ") !== false) {
+   $fcontent = "<p style=\"color:purple;\">" . str_replace("/purple ", "", $fcontent) . "</p>";
+  }
+  
+  //images
+  if (strpos($fcontent, "/img ") !== false) {
+   $fcontent = "<img src=\"" . str_replace("/img ", "", $fcontent) . "\"></img>";
   }
   
   $txt = $fname . " - " . date('Y-m-d H:i:s') . ": " . $fcontent . "<br>" . $contents;
