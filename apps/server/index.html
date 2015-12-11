@@ -143,9 +143,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return xhr;
   }
-  
-  var prev = "";
-  var next = "";
+
+  var old = "";
 
   function update(response) {
     var str_array = response.split('<br>');
@@ -155,11 +154,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var user = output[0];
       var comment = output[1];
       if (typeof comment !== 'undefined') refresh += "<paper-item><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#D50000;\">" + user + "</div></paper-item-body></paper-item>";
-        
-      var next = output[0];
     }
-    if (prev !== next) document.getElementById("text").innerHTML = refresh;
-    var prev = next;
+    if (old.length !== refresh.length) {
+      document.getElementById("text").innerHTML = refresh;
+      old = refresh;
+    }
   }
   
   function onAction(action) {
