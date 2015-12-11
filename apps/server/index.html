@@ -159,6 +159,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML = refresh;
       old = refresh;
+      document.title = "New Message";
+      function reset() {
+        document.title = "Chatroom";
+      }
+      setTimeout(reset, 3000);
     }
   }
   
