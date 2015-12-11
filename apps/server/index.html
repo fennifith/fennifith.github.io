@@ -114,7 +114,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <paper-button raised id="connect" onclick="onMsg()" style="float: left;">Send</paper-button>
   </div>
   
-  <paper-toast id="newmsg" text="New message..." onclick="window.scrollTo(0, 0);"></paper-toast>
+  <paper-toast id="newmsg" text="New message..." onclick="window.scrollTo(0, 0)"></paper-toast>
         
   <script>
   var user = prompt("Please enter your name", "");
@@ -160,7 +160,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById("text").innerHTML = refresh;
       old = refresh;
       document.title = "New Message";
-      document.querySelector('#newmsg').open()
+      document.querySelector('#newmsg').open();
       function reset() {
         document.title = "Chatroom";
       }
