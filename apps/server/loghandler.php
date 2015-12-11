@@ -46,8 +46,19 @@ if (empty($fcontent)) {
   $txt =  date('Y-m-d H:i:s') . ": " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
   //put markdown here
-  if (strpos($fcontent, "//bold ") !== false) {
-   $fcontent = "<b>" . str_replace("//bold ", "", $fcontent) . "</b>";
+  if (strpos($fcontent, "/bold ") !== false) {
+   $fcontent = "<b>" . str_replace("/bold ", "", $fcontent) . "</b>";
+  }
+  
+  //colors
+  if (strpos($fcontent, "/red") !== false) {
+   $fcontent = "<p style=\"color:red;\">" . str_replace("/red ", "", $fcontent) . "</p>";
+  }
+  if (strpos($fcontent, "/orange") !== false) {
+   $fcontent = "<p style=\"color:orange;\">" . str_replace("/orange ", "", $fcontent) . "</p>";
+  }
+  if (strpos($fcontent, "/yellow") !== false) {
+   $fcontent = "<p style=\"color:yellow;\">" . str_replace("/yellow ", "", $fcontent) . "</p>";
   }
   
   $txt = $fname . " - " . date('Y-m-d H:i:s') . ": " . $fcontent . "<br>" . $contents;
