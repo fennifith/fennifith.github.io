@@ -36,8 +36,13 @@ while(!$myfile) {
 }
 
 $fname = htmlspecialchars($_GET["fname"]);
-$fcontent = htmlspecialchars($_GET["fcontent"]);
+$fcontent = $_GET["fcontent"];
 
+if (strpos($str, '/bold ') !== FALSE) {
+ $fcontent = "<b>" . htmlspecialchars(str_replace("/bold ", "", $fcontent)) . "</b>";
+} else {
+ $fcontent = htmlspecialchars($fcontent);
+}
 
 if (empty($fcontent)) {
  $txt = $contents;
