@@ -46,11 +46,10 @@ if (empty($fcontent)) {
   $txt =  date('Y-m-d H:i:s') . ": " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
   //put markdown here
-  if (strpos($str, "\/bold ") !== false) {
-   $fcontent = "<b>" . str_replace("\/bold ", "", $fcontent) . "</b>";
-  } else {
-   $fcontent = htmlspecialchars($fcontent);
+  if (strpos($str, "//bold ") !== false) {
+   $fcontent = "<b>" . str_replace("//bold ", "", $fcontent) . "</b>";
   }
+  
   $txt = $fname . " - " . date('Y-m-d H:i:s') . ": " . $fcontent . "<br>" . $contents;
  }
 }
