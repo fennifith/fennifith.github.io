@@ -139,6 +139,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   onAction('joined the chat');
   var loaded = true;
+  var firstload = false;
   window.onfocus = function() {
     onAction('joined the chat');
     loaded = true;
@@ -146,6 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   window.onblur = function() {
     onAction('left the chat');
     loaded = false;
+    firstload = true;
   }
   window.onbeforeunload = function (e) {
     onAction('left the chat');
@@ -194,12 +196,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       function reset() {
         document.title = "Chatroom";
-        if (!loaded) {
+        if (!loaded && !firstload) {
           setTimeout(notify, 1000);
         }
       }
       reset();
-      if (!loaded) new Audio('http://theandroidmaster.github.io/apps/server/notify.mp3').play();
+      if (!loaded && !firstload) new Audio('http://theandroidmaster.github.io/apps/server/notify.mp3').play();
+      firstload = false;
     }
   }
   
