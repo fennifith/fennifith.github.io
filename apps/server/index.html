@@ -132,14 +132,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         
   <script>
   var user = prompt("Please enter your username", "");
-  
   function username() {
     user = prompt("Please enter your username", "");
   }
-  
   document.getElementById("room").value = "log";
   
   onAction('joined the chat');
+  var loaded = true;
+  window.onfocus = function() {
+    onAction('joined the chat');
+    loaded = true;
+  }
+  window.onblur = function() {
+    onAction('left the chat');
+    loaded = false;
+  }
+  window.onbeforeunload = function (e) {
+    onAction('left the chat');
+    loaded = false;
+  }
   
   document.getElementById('msg').onkeypress = function(e){
     if (!e) e = window.event;
@@ -177,21 +188,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML = refresh;
       old = refresh;
-      document.title = "New Message";
+      function notify() {
+        document.title = "New Message";
+        setTimeout(reset, 1000);
+      }
       function reset() {
         document.title = "Chatroom";
+        if (!loaded) {
+          setTimeout(notify, 1000);
+        }
       }
-      setTimeout(reset, 1000);
+      reset();
       var audio = new Audio('http://theandroidmaster.github.io/apps/server/notify.mp3');
       audio.play();
     }
   }
   
   function onAction(action) {
-    window.onbeforeunload = function (e) {
-        onAction('left the chat');
-    }
-    
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
     if (!xhr) {
       throw new Error('CORS not supported');
