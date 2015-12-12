@@ -199,8 +199,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
       reset();
-      var audio = new Audio('http://theandroidmaster.github.io/apps/server/notify.mp3');
-      audio.play();
+      if (!loaded) new Audio('http://theandroidmaster.github.io/apps/server/notify.mp3').play();
     }
   }
   
