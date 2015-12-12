@@ -102,7 +102,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved class="fullbleed layout vertical">
 
   <div class="topbarbackground" >
-    <paper-input id="room" label="Chatroom"></paper-input>
+    <paper-input id="room" label="Chatroom" style="width:80%"></paper-input>
+    <paper-menu-button>
+      <paper-icon-button icon="menu" class="dropdown-trigger"></paper-icon-button>
+      <paper-menu class="dropdown-content">
+        <paper-item onclick="username()">Change Username</paper-item>
+      </paper-menu>
+    </paper-menu-button>
   </div>
     
   <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;"></p>
@@ -114,7 +120,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </div>
         
   <script>
-  var user = prompt("Please enter your name", "");
+  var user = prompt("Please enter your username", "");
+  
+  function username() {
+    var user = prompt("Please enter your username", "");
+  }
   
   document.getElementById("room").value = "log";
   
