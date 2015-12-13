@@ -135,7 +135,7 @@ if (empty($fcontent)) {
     break;
   }
   
-  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents . " &-:-& " . $color;
+  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . " &-:-& " . $color . "<br>" . $contents;
  }
 }
 
