@@ -166,11 +166,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   var room;
   if (!getUrlVars()["room"]) {
-    document.getElementById("room").value = "log";
     room = "log";
+    document.getElementById("room").value = room;
+    window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
   } else {
-    document.getElementById("room").value = getUrlVars()["room"];
     room = getUrlVars()["room"];
+    document.getElementById("room").value = room;
+    window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
   }
   
   onAction('joined the chat');
