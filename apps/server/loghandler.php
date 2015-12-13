@@ -11,18 +11,16 @@ if (empty($filename)) {
 }
 
 $filename = $filename . ".txt";
-$myoldfile = fopen($filename, "r");
 
-if (!$myoldfile) {
- fclose($myoldfile);
- $myfile = fopen($filename, a);
+if (!file_exists($filename)) {
+ $myfile = fopen($filename, w);
  while(!$myfile) {
-  $myfile = fopen($filename, a);
+  $myfile = fopen($filename, w);
  }
  fclose($myfile);
- $myoldfile = fopen($filename, "r");
 }
 
+$myoldfile = fopen($filename, "r");
 while (!$myoldfile) {
  $myoldfile = fopen($filename, "r");
 }
@@ -43,7 +41,7 @@ if (empty($fcontent)) {
 } else {
  date_default_timezone_set('America/New_York');
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
-  $txt =  date('Y-m-d H:i:s') . ": " . $fname . " " . $fcontent . "<br>" . $contents;
+  $txt = date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
   
   //put markdown here
@@ -103,7 +101,7 @@ if (empty($fcontent)) {
    $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
   }
   
-  $txt = $fname . " - " . date('Y-m-d H:i:s') . ": " . $fcontent . "<br>" . $contents;
+  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents;
  }
 }
 
