@@ -154,7 +154,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function username() {
     user = prompt("Please enter your username", "");
   }
-  document.getElementById("room").value = "log";
+  
+  
+
+  function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }
+  
+  var room;
+  if (!getUrlVars()["room"]) {
+    document.getElementById("room").value = "log";
+    room = "log";
+  } else {
+    document.getElementById("room").value = getUrlVars()["room"];
+    room = getUrlVars()["room"];
+  }
   
   onAction('joined the chat');
   var loaded = true;
@@ -228,7 +246,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + document.getElementById("room").value);
+    if (room !== document.getElementById("room").value) {
+      onAction("left the chat");
+      room = document.getElementById("room").value;
+      onAction("joined the chat");
+    }
+    
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -241,7 +265,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + document.getElementById("room").value + "&request=" + userid);
+    if (room !== document.getElementById("room").value) {
+      onAction("left the chat");
+      room = document.getElementById("room").value;
+      onAction("joined the chat");
+    }
+    
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
@@ -255,7 +285,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   function timed(){
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + document.getElementById("room").value);
+    if (room !== document.getElementById("room").value) {
+      onAction("left the chat");
+      room = document.getElementById("room").value;
+      onAction("joined the chat");
+    }
+    
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
