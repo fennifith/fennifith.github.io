@@ -87,7 +87,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       background-color: #212121; 
       position: fixed; 
       width: 100%; 
-      padding: 4px; 
+      padding: 16px; 
       height:64px;
       bottom: 0%;
       box-shadow: 0px -1px 10px #9e9e9e;
@@ -95,8 +95,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
     .topbarbackground{
       background-color: #212121;  
-      padding: 4px;
-      height:64px;
+      padding: 16px;
+      height: 64px;
       box-shadow: 0px 1px 10px #9e9e9e;
     }
     .profile {
@@ -114,8 +114,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved class="fullbleed layout vertical">
 
   <div class="topbarbackground" >
-    <paper-input id="room" label="Chatroom" style="float: left; width:80%;"></paper-input>
-    <paper-menu-button style="position:absolute; top:16px; right:16px;" horizontal-align="right">
+    <paper-input id="room" label="Chatroom" style="float: left; width: 80%;"></paper-input>
+    <paper-menu-button style="float: right;" horizontal-align="right">
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
         <paper-item onclick="username()">Change Username</paper-item>
@@ -129,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
   <div class="msgbackground">
     <paper-input id="msg" label="Message" style="float: left; width: 80%;"></paper-input>
-    <paper-button raised id="connect" onclick="onMsg()" style="float: right; margin-right:16px;">Send</paper-button>
+    <paper-button raised id="connect" onclick="onMsg()" style="float: right;">Send</paper-button>
   </div>
         
   <script>
