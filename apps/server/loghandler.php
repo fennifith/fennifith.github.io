@@ -38,7 +38,7 @@ if (empty($fcontent)) {
 } else {
  date_default_timezone_set('America/New_York');
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
-  $txt = date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>" . $contents;
+  $txt = "Server - " . date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>" . $contents;
  } else {
   
   //put markdown here
