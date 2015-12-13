@@ -246,7 +246,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
     if (!xhr) {
       throw new Error('CORS not supported');
@@ -264,6 +263,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       onAction("left the chat");
       room = document.getElementById("room").value;
       onAction("joined the chat");
+      window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
     }
     
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + room + "&request=" + userid);
@@ -284,6 +284,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       onAction("left the chat");
       room = document.getElementById("room").value;
       onAction("joined the chat");
+      window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
     }
     
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fchat=" + room);
