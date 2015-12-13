@@ -268,7 +268,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </iron-collapse>
 
-              <paper-button onclick="document.querySelector('#toast1').show()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
+              <paper-button onclick="sayHi()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
@@ -441,5 +441,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
+  <script>
+  function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      xhr = null;
+    }
+    return xhr;
+  }
+  function sayHi() {
+    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/counter/counter.php");
+    if (!xhr) {
+      throw new Error('CORS not supported');
+    }
+    xhr.onload = function() {
+      document.getElementById('#toast1').text = xhr.responseText + "people have said hi!";
+      document.querySelector('#toast1').show();
+    }
+    xhr.send(); 
+  }
+  </script>
 </body>
 </html>
