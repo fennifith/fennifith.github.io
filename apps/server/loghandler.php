@@ -98,7 +98,7 @@ if (empty($fcontent)) {
    $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
   }
   $color = "#212121";
-  $ip = $_SERVER['REMOTE_ADDR'];
+  $ip = $_GET["request"];
   switch($ip[1]) {
    case 0 :
     $color = "#f44336";
