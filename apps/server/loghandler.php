@@ -101,25 +101,37 @@ if (empty($fcontent)) {
    $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
   }
   $color = "#212121";
-  switch($_SERVER['REMOTE_ADDR']) {
+  switch(($_SERVER['REMOTE_ADDR'])[0]) {
    case 0 :
+    $color = "#f44336";
     break;
    case 1 :
+    $color = "#2196f3";
     break;
    case 2 :
+    $color = "#009688";
     break;
    case 3 :
+    $color = "#43a047";
     break;
    case 4 :
+    $color = "";
     break;
    case 5 :
+    $color = "";
     break;
    case 6 :
+    $color = "";
     break;
    case 7 :
+    $color = "";
     break;
    case 8 :
-    break'l
+    $color = "";
+    break;
+   case 9 :
+    $color = "";
+    break;
   }
   
   $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents . " &-:-& " ;
