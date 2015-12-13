@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-<?php
+<!DOCTYPE html><html><body><?php
 header("Access-Control-Allow-Origin: http://theandroidmaster.github.io");
 
 $filename = $_GET["fchat"];
@@ -144,6 +141,4 @@ fwrite($myfile, $txt);
 fclose($myfile);
 
 echo $txt;
-?>
-</body>
-</html>
+?></body></html>
