@@ -182,7 +182,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var str_array = response.split('<br>');
     var refresh = "";
     for(var i = 0; i < str_array.length; i++) {
-      var output = str_array[i].split(': ');
+      var output = str_array[i].split(' &-:-& ');
       var user = output[0];
       var comment = output[1];
       if (typeof comment !== 'undefined') refresh += "<paper-item><p class=\"profile\">" + user.replace("<!DOCTYPE html>", "").replace("<html>", "").replace("<body>", "").charAt(0) + "</p><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:#00acc1;\">" + user + "</div></paper-item-body></paper-item>";
