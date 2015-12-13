@@ -99,7 +99,7 @@ if (empty($fcontent)) {
   }
   $color = "#212121";
   $ip = $_GET["request"];
-  switch($ip[1]) {
+  switch($ip) {
    case 0 :
     $color = "#f44336";
     break;
