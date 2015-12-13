@@ -186,7 +186,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       var user = output[0];
       var comment = output[1];
       var color = output[2];
-      if (color == null) color = "#00acc1";
+      if (!color) color = "#00acc1";
       if (typeof comment !== 'undefined') refresh += "<paper-item><p class=\"profile\" style=\"background-color:" + color + ";\">" + user.replace("<!DOCTYPE html>", "").replace("<html>", "").replace("<body>", "").charAt(0) + "</p><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:" + color + ";\">" + user + "</div></paper-item-body></paper-item>";
     }
     if (old.length !== refresh.length) {
