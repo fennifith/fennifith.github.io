@@ -149,6 +149,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </div>
         
   <script>
+  var userid = Math.floor(Math.random()*10);
   var user = prompt("Please enter your username", "");
   function username() {
     user = prompt("Please enter your username", "");
@@ -240,7 +241,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onMsg() {
-      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + document.getElementById("room").value);
+      var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + document.getElementById("msg").value.replace('<style','').replace('<script','').replace(/^(<)/, "") + "&fchat=" + document.getElementById("room").value + "&request=" + userid);
     if (!xhr) {
       throw new Error('CORS not supported');
     }
