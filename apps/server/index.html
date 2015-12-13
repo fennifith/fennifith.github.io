@@ -246,11 +246,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function onAction(action) {
-    if (room !== document.getElementById("room").value) {
-      onAction("left the chat");
-      room = document.getElementById("room").value;
-      onAction("joined the chat");
-    }
     
     var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/loghandler.php?fname=" + user + "&fcontent=" + action + "&fchat=" + room);
     if (!xhr) {
