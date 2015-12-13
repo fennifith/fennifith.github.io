@@ -100,8 +100,29 @@ if (empty($fcontent)) {
    preg_match("~<title>(.*?)</title>~", $str, $title);
    $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
   }
+  $color = "#212121";
+  switch($_SERVER['REMOTE_ADDR']) {
+   case 0 :
+    break;
+   case 1 :
+    break;
+   case 2 :
+    break;
+   case 3 :
+    break;
+   case 4 :
+    break;
+   case 5 :
+    break;
+   case 6 :
+    break;
+   case 7 :
+    break;
+   case 8 :
+    break'l
+  }
   
-  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents;
+  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents . " &-:-& " ;
  }
 }
 
