@@ -460,7 +460,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       throw new Error('CORS not supported');
     }
     xhr.onload = function() {
-      document.getElementById('#toast1').text = xhr.responseText + "people have said hi!";
+      var count = xhr.responseText;
+      document.getElementById('#toast1').text = count + "people have said hi!";
       document.querySelector('#toast1').show();
     }
     xhr.send(); 
