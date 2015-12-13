@@ -115,26 +115,26 @@ if (empty($fcontent)) {
     $color = "#43a047";
     break;
    case 4 :
-    $color = "";
+    $color = "#ff5722";
     break;
    case 5 :
-    $color = "";
+    $color = "#607d8b";
     break;
    case 6 :
-    $color = "";
+    $color = "#3f51b5";
     break;
    case 7 :
-    $color = "";
+    $color = "#689f38";
     break;
    case 8 :
-    $color = "";
+    $color = "#ef6c00";
     break;
    case 9 :
-    $color = "";
+    $color = "#263238";
     break;
   }
   
-  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents . " &-:-& " ;
+  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . "<br>" . $contents . " &-:-& " . $color;
  }
 }
 
