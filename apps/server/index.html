@@ -161,8 +161,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var parts = window.location.href;
     if (parts.indexOf("?room=") > -1) {
       var hash = parts.length;
-      if (str.indexOf("#") > -1) {
-        hash = str.indexOf("#");
+      if (parts.indexOf("#") > -1) {
+        hash = parts.indexOf("#");
       }
       
       return parts.slice(str.indexOf("=") + 1, hash);
