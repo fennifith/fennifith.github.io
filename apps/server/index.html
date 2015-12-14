@@ -157,20 +157,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
 
   function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-      vars[key] = value;
-    });
-    return vars;
+    var parts = window.location.href;
+    if (parts.indexOf("?room=") > -1) {
+      var hash = parts.length;
+      if (str.indexOf("#") > -1) {
+        hash = str.indexOf("#");
+      }
+      
+      return parts.slice(str.indexOf("=") + 1, hash);
+    } else {
+      return false;
+    }
   }
   
   var room;
-  if (!getUrlVars()["room"]) {
+  if (!getUrlVar()) {
     room = "log";
     document.getElementById("room").value = room;
     window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
   } else {
-    room = getUrlVars()["room"];
+    room = getUrlVar();
     document.getElementById("room").value = room;
     window.history.pushState({}, null, "http://theandroidmaster.github.io/apps/server/?room=" + room);
   }
