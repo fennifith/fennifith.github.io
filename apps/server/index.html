@@ -164,7 +164,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         hash = parts.indexOf("#");
       }
       
-      return parts.slice(str.indexOf("=") + 1, hash);
+      return parts.slice(parts.indexOf("=") + 1, hash);
     } else {
       return false;
     }
