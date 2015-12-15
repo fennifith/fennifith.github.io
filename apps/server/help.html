@@ -100,16 +100,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
+  
+  <paper-tabs selected="{{selected}}">
+    <paper-tab>Basics</paper-tab>
+    <paper-tab>Commands</paper-tab>
+    <paper-tab>About</paper-tab>
+  </paper-tabs>
 
-  <div class="topbarbackground">
-    <h2 style="color:#fafafa;">Help</h2>
-  </div>
-    
-  <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;">
-    Current commands: <br>
-    /[color] [text]: changes text color <br>
-    /bold [text]: bolds the text <br>
-    /img [url]: creates an image <br>
-    /link [url]: creates a hyperlink <br>
-  </p>
+  <iron-pages selected="{{selected}}">
+    <div>
+      <paper-material elevation="1">
+        <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;">
+          How to use: <br> 
+          1. type things <br>
+          2. press send <br>
+        </p>
+      </paper-material>
+    </div>
+    <div>
+      <paper-material elevation="1">
+        <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;">
+          Current commands: <br>
+          /[color] [text]: changes text color <br>
+          /bold [text]: bolds the text <br>
+          /img [url]: creates an image <br>
+        </p>
+      </paper-material>
+    </div>
+    <div>
+      <paper-material elevation="1">
+        <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;">
+          This chatroom hasn't been completed yet and still has many errors. If you have any experience in html, javascript, or php, you can create a pull request <a href="https://github.com/TheAndroidMaster/TheAndroidMaster.github.io/pulls">here</a> to help the project ;) <br>
+          
+        </p>
+      </paper-material>
+    </div>
+  </iron-pages>
 </body>
