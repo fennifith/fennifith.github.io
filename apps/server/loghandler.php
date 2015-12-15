@@ -92,11 +92,9 @@ if (empty($fcontent)) {
   //links
   if (strpos($fcontent, "/link " ) !== false) {
    $fcontent = str_replace("/link ", "", $fcontent);
-   $str = $fcontent;
-   $str = trim(preg_replace('/\s+/', ' ', $str));
-   preg_match("~<title>(.*?)</title>~", $str, $title);
-   $fcontent = "<a href=\"" . $fcontent ."\">" . $title[1] . "</a>";
+   $fcontent = "<a href=\"" . $fcontent ."\">" . $fcontent . "</a>";
   }
+  
   $color = "#212121";
   $ip = $_GET["request"];
   switch($ip) {
