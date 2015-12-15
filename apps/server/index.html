@@ -129,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved class="fullbleed layout vertical">
 
   <div class="topbarbackground" >
-    <paper-input id="room" label="Chatroom" style="float: left; width: 80%;"></paper-input>
+    <paper-input id="room" error-message="Invalid input!" maxlength="10" label="Chatroom" style="float: left; width: 80%;"></paper-input>
     <paper-menu-button style="float: right;" horizontal-align="right">
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
@@ -149,11 +149,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         
   <script>
   var userid = Math.floor(Math.random()*10);
-  var user = prompt("Please enter your username", "");
   function username() {
     user = prompt("Please enter your username", "");
+    if (user.length > 20) {
+      user = user.slice(0, 20) + "...";
+    }
   }
-  
+  username();
   
 
   function getUrlVar() {
