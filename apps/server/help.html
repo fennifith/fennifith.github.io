@@ -102,13 +102,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body unresolved class="fullbleed layout vertical">
   
-  <paper-tabs selected="{{selected}}">
+  <paper-tabs id="tabs" onclick="document.getElementById('#pages').selected = document.getElementById('#tabs').selected" selected="{{selected}}">
     <paper-tab>Basics</paper-tab>
     <paper-tab>Commands</paper-tab>
     <paper-tab>About</paper-tab>
   </paper-tabs>
 
-  <iron-pages selected="{{selected}}">
+  <iron-pages id="pages" selected="{{selected}}">
     <div>
       <paper-material elevation="1">
         <p id="text" style="margin-left:5% margin-top:5%; margin-right:5%; margin-bottom:25%;">
