@@ -129,7 +129,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin-right:16px;
     }
     .text {
-      padding-top: 96px;
+      padding-top: 144px;
       padding-bottom: 96px;
       margin: 64px;
       background: #fff;
@@ -149,12 +149,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
         <paper-item onclick="username()">Change Username</paper-item>
-        <paper-item onclick="window.location='http://theandroidmaster.github.io/apps/server/help.html'">Help</paper-item>
+        <paper-item onclick="window.open('http://theandroidmaster.github.io/apps/server/help.html')">Help</paper-item>
       </paper-menu>
     </paper-menu-button>
+    <paper-tabs id="tabs">
+      <paper-tab onclick="document.getElementById('pages').select('0')">Chatroom</paper-tab>
+      <paper-tab onclick="document.getElementById('pages').select('1')">Users</paper-tab>
+    </paper-tabs>
   </div>
-    
-  <p id="text" class="text"></p>
+  
+  <iron-pages id="pages">
+    <div>
+      <p id="text" class="text"></p>
+    </div>
+    <div>
+      <p id="users" class="text">
+        <iframe src="http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php"></iframe>
+      </p>
+    </div>
+  </iron-pages>
   
     
   <div class="msgbackground">
