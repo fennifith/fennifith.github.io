@@ -25,20 +25,19 @@ while (!$myoldfile) {
 $contents = fread($myoldfile, filesize($filename));
 fclose($myoldfile);
 
-$myfile = fopen($filename, "w");
-while(!$myfile) {
- $myfile = fopen($filename, "w");
-}
-
 $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = htmlspecialchars($_GET["fcontent"]);
 
 if (empty($fcontent)) {
  $txt = $contents;
 } else {
- date_default_timezone_set('America/New_York');
+ $myfile = fopen($filename, "w");
+ while(!$myfile) {
+  $myfile = fopen($filename, "w");
+ }
+ 
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
-  $txt = utf8_chr(0x000026A0) . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>";
+  $txt = "! " . date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>";
  } else {
   
   //put markdown here
@@ -132,11 +131,10 @@ if (empty($fcontent)) {
   
   $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . " &-:-& " . $color . "<br>";
  }
+ if (strlen($txt) > 1000) $txt = substr($txt, 0, 10000) . "<br>...";
+ fwrite($myfile, $txt);
+ fclose($myfile);
 }
-
-if (strlen($txt) > 1000) $txt = substr($txt, 0, 10000) . "<br>...";
-fwrite($myfile, $txt);
-fclose($myfile);
 
 echo $txt;
 ?></body></html>
