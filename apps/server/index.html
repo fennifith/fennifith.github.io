@@ -237,7 +237,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       if (typeof comment !== 'undefined') refresh += "<paper-item><p class=\"profile\" style=\"background-color:" + color + ";\">" + user.replace("<!DOCTYPE html><html><body>", "").charAt(0) + "</p><paper-item-body two-line><div>" + comment.replace("<br>", "") + "</div><div secondary style=\"color:" + color + ";\">" + user + "</div></paper-item-body></paper-item>";
     }
     if (old.length !== refresh.length) {
-      document.getElementById("text").innerHTML = refresh;
+      document.getElementById("text").innerHTML += refresh;
       old = refresh;
       function notify() {
         document.title = "New Message";
@@ -307,7 +307,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   
     xhr.send(); 
-    setTimeout(timed, 500);
+    setTimeout(timed, 200);
   }
   timed();
   </script>
