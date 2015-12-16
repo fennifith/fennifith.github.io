@@ -38,7 +38,7 @@ if (empty($fcontent)) {
 } else {
  date_default_timezone_set('America/New_York');
  if ($fcontent == "joined the chat" || $fcontent == "left the chat") {
-  $txt = utf8_chr(0x000026A0) . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>" . $contents;
+  $txt = utf8_chr(0x000026A0) . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fname . " " . $fcontent . "<br>";
  } else {
   
   //put markdown here
@@ -130,11 +130,11 @@ if (empty($fcontent)) {
     break;
   }
   
-  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . " &-:-& " . $color . "<br>" . $contents;
+  $txt = $fname . " - " . date('Y-m-d H:i:s') . " &-:-& " . $fcontent . " &-:-& " . $color . "<br>";
  }
 }
 
-if (strlen($txt) > 10000) $txt = substr($txt, 0, 10000) . "<br>...";
+if (strlen($txt) > 1000) $txt = substr($txt, 0, 10000) . "<br>...";
 fwrite($myfile, $txt);
 fclose($myfile);
 
