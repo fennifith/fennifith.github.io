@@ -133,13 +133,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       padding-bottom: 96px;
       margin: 64px;
     }
+    .rightbuttoner {
+      float:right;
+      margin-right:32px;
+    }
   </style>
 </head>
 <body unresolved class="fullbleed layout vertical">
 
   <div class="topbarbackground" >
     <paper-input id="room" error-message="Invalid input!" maxlength="10" char-counter="" auto-validate="" label="Chatroom" style="float: left; width: 80%;"></paper-input>
-    <paper-menu-button style="float: right;" horizontal-align="right">
+    <paper-menu-button class="rightbuttoner" horizontal-align="right">
       <paper-icon-button icon="more-vert" style="color:#fafafa;" class="dropdown-trigger"></paper-icon-button>
       <paper-menu class="dropdown-content">
         <paper-item onclick="username()">Change Username</paper-item>
@@ -153,7 +157,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
   <div class="msgbackground">
     <paper-input id="msg" error-message="Invalid input!" maxlength="100" min-length="2" char-counter="" auto-validate="" label="Message" style="float: left; width: 80%;"></paper-input>
-    <paper-button raised id="connect" onclick="onMsg()" style="float: right; margin-right:32px;">Send</paper-button>
+    <paper-button raised id="connect" onclick="onMsg()" class="rightbuttoner">Send</paper-button>
   </div>
         
   <script>
