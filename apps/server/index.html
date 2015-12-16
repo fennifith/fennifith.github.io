@@ -163,8 +163,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <p id="text" class="text"></p>
     </div>
     <div>
-      <p id="users" class="text">
-        <iframe src="http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php"></iframe>
+      <p class="text">
+        <iframe id="users" src="http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php"></iframe>
       </p>
     </div>
   </iron-pages>
@@ -182,6 +182,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (user.length > 50) {
       user = user.slice(0, 45) + "...";
     }
+    document.getElementById('users').src = "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?name=" + user;
   }
   username();
   
@@ -224,6 +225,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     firstload = true;
   }
   window.onbeforeunload = function (e) {
+    document.getElementById('users').src = "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?delete=yes&?name=" + user;
     onAction('left the chat');
     loaded = false;
   }
