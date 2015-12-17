@@ -21,7 +21,7 @@ $users = fread($myfile, filesize($filename));
 fclose($myfile);
 
 $users = str_replace(htmlspecialchars("<html><body>", "", $users));
-$users = str_replace(htmlspecialchars("</html></body>", "", $users));
+$users = str_replace(htmlspecialchars("</body></html>", "", $users));
 
 if ($delete == "yes") {
   if (strpos($users, $name) !== false) {
