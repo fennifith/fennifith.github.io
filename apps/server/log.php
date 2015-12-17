@@ -22,7 +22,7 @@ fclose($myfile);
 
 if ($delete == "yes") {
   if (strpos($users, $name) !== false) {
-    $users = str_replace($users, $name . "<br>", "");
+    $users = str_replace( $name . "<br>", "", $users);
     
     $myfile = fopen($filename, w);
     while(!$myfile) {
