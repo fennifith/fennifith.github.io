@@ -179,22 +179,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <script>
   var userid = Math.floor(Math.random()*10);
   function username() {
+    user = prompt("Please enter your username", "");
+    if (user.length > 50) {
+      user = user.slice(0, 45) + "...";
+    }
+    
     var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
     xhe.onload = function() {
       document.getElementById('users').innerHTML = xhe.responseText;
+      if (document.getElementById('users').innerHTML.indexOf(user + "<br>") > -1) {
+        username();
+      }
     }
     xhe.send();
-    user = prompt("Please enter your username", "");
-    if (user.length > 50) {
-      user = user.slice(0, 45) + "...";
-    }
-    
-    if (document.getElementById('users').innerHTML.indexOf(user + "<br>") > -1) {
-      username();
-    }
   }
   username();
   
