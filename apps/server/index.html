@@ -69,11 +69,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     .paper-input-container-0 .input-content.label-is-highlighted.paper-input-container label {
       color: #00bcd4;
     }
-    :host {
-      --paper-tab-ink: #fafafa;
+    html /deep/ #ink {
+      color: #fafafa;
     }
-    paper-tabs {
-      --paper-tabs-selection-bar-color: #00bcd4;
+    
+    html /deep/ #selectionBar.paper-tabs {
+      background-color:#00bcd4;
     }
       
     img {
