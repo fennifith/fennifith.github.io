@@ -181,7 +181,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       user = user.slice(0, 45) + "...";
     }
     
-    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?name=" + user);
+    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -235,7 +235,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     firstload = true;
   }
   window.onbeforeunload = function (e) {
-    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?delete=yes&?name=" + user);
+    var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?delete=yes&?user=" + user);
     if (!xhe) {
       throw new Error('CORS not supported');
     }
@@ -290,7 +290,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (old.length !== refresh.length) {
       document.getElementById("text").innerHTML += refresh;
       
-      var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?name=" + user);
+      var xhe = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/chat/users/log.php?user=" + user);
       if (!xhe) {
         throw new Error('CORS not supported');
       }
