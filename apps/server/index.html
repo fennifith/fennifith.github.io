@@ -246,6 +246,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       document.getElementById('users').innerHTML = xhe.responseText;
       if (xhe.responseText.indexOf(user + "<br>") > -1) {
         username();
+      } else {
+        xhe.onload = function() {
+          document.getElementById('users').innerHTML = xhe.responseText;
+        }
       }
     }
     xhe.send(); 
