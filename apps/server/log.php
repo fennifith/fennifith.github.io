@@ -32,7 +32,6 @@ if ($delete == "yes") {
     fclose($myfile);
   }
 } else {
-  echo $users;
   if (strpos($users, $name) == false) {
     $users = $name . "<br>" . $users;
     $myfile = fopen($filename, w);
@@ -42,5 +41,6 @@ if ($delete == "yes") {
     fwrite($myfile, $users);
     fclose($myfile);
   }
+  echo $users;
 }
 ?></body></html>
