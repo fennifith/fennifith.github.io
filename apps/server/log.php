@@ -44,7 +44,6 @@ if ($delete == "yes") {
     }
     fwrite($myfile, $users);
     fclose($myfile);
-    echo $users;
   }
 }
 ?></body></html>
