@@ -35,15 +35,17 @@ if ($delete == "yes") {
     fclose($myfile);
   }
 } else {
-  echo $users;
-  if (strpos($users, $name) == false) {
-    $users = $name . "<br>" . $users;
-    $myfile = fopen($filename, w);
-    while(!$myfile) {
-      $myfile = fopen($filename, w);
-    }
-    fwrite($myfile, $users);
-    fclose($myfile);
+ if (strpos($users, $name) == false) {
+  $users = $name . "<br>" . $users;
+  $myfile = fopen($filename, w);
+  while(!$myfile) {
+   $myfile = fopen($filename, w);
   }
+  fwrite($myfile, $users);
+  fclose($myfile);
+  echo str_replace($name . "<br>", "", $users);
+ } else {
+  echo $users;
+ }
 }
 ?></body></html>
