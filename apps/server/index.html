@@ -139,12 +139,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin-right:16px;
     }
     .text {
+      margin: 32px;
+      min-height:100%;
+    }
+    paper-material {
       padding-top: 144px;
       padding-bottom: 96px;
-      margin: 64px;
-      background: #fff;
-      box-shadow: 0px 1px 4px #9e9e9e;
-      min-height:100%;
     }
     .rightbuttoner {
       float:right;
@@ -171,10 +171,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <iron-pages id="pages" selected="0">
     <div>
-      <p id="text" class="text"></p>
+      <paper-material>
+        <p id="text" class="text"></p>
+      </paper-material>
     </div>
     <div>
-      <p id="users" class="text"></p>
+      <paper-material>
+        <p id="users" class="text"></p>
+      </paper-material>
     </div>
   </iron-pages>
   
