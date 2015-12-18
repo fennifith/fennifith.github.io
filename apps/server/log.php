@@ -10,34 +10,28 @@ if (!file_exists($filename)) {
  while(!$myfile) {
   $myfile = fopen($filename, w);
  }
- fclose($myfile);
-}
-$myfile = fopen($filename, "r");
-while (!$myfile) {
- $myfile = fopen($filename, "r");
 }
 
-$users = fread($myfile, filesize($filename));
-fclose($myfile);
+$users = readfile($filename);
 
 if ($delete == "yes") {
  $users = str_replace($name . "<br>", "", $users);
   
- $myfile = fopen($filename, w);
- while(!$myfile) {
-  $myfile = fopen($filename, w);
- }
  fwrite($myfile, $users);
  fclose($myfile);
 } else {
  if (strpos($users, $name) == false) {
   $userse = $name . "<br>";
+  
+  fclose($myfile);
+  
   $myfile = fopen($filename, a);
   while(!$myfile) {
    $myfile = fopen($filename, a);
   }
   fwrite($myfile, $userse);
   fclose($myfile);
+  
   echo str_replace($name . "<br>", "", $users);
  } else {
   echo $users;
