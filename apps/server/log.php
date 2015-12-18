@@ -20,9 +20,6 @@ while (!$myfile) {
 $users = fread($myfile, filesize($filename));
 fclose($myfile);
 
-$users = str_replace(htmlspecialchars("<html><body>", "", $users));
-$users = str_replace(htmlspecialchars("</body></html>", "", $users));
-
 if ($delete == "yes") {
  $users = str_replace($name . "<br>", "", $users);
   
