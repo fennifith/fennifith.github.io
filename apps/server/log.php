@@ -25,7 +25,7 @@ $users = str_replace(htmlspecialchars("</body></html>", "", $users));
 
 if ($delete == "yes") {
   if (strpos($users, $name) !== false) {
-    $users = str_replace( $name . "<br>", "", $users);
+    $users = str_replace($name . "<br>", "", $users);
     
     $myfile = fopen($filename, w);
     while(!$myfile) {
