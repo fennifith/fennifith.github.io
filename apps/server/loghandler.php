@@ -17,13 +17,7 @@ if (!file_exists($filename)) {
  fclose($myfile);
 }
 
-$myoldfile = fopen($filename, "r");
-while (!$myoldfile) {
- $myoldfile = fopen($filename, "r");
-}
-
-$contents = fread($myoldfile, filesize($filename));
-fclose($myoldfile);
+$contents = readfile($filename);
 
 $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = htmlspecialchars($_GET["fcontent"]);
@@ -137,4 +131,15 @@ if (empty($fcontent)) {
 }
 
 echo $txt;
+$lastedit = filemtime($filename);
+
+if ($_GET["repeat"] == "true") {
+ while(true) {
+  sleep(0.2);
+  if ($lastedit !== filemtime($filename)) {
+   echo readfile($filename);
+   $lastedit = filemtime($filetime);
+  }
+ }
+}
 ?></body></html>
