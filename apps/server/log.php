@@ -36,12 +36,12 @@ if ($delete == "yes") {
   }
 } else {
  if (strpos($users, $name) == false) {
-  $users = $name . "<br>" . $users;
-  $myfile = fopen($filename, w);
+  $userse = $name . "<br>";
+  $myfile = fopen($filename, a);
   while(!$myfile) {
-   $myfile = fopen($filename, w);
+   $myfile = fopen($filename, a);
   }
-  fwrite($myfile, $users);
+  fwrite($myfile, $userse);
   fclose($myfile);
   echo str_replace($name . "<br>", "", $users);
  } else {
