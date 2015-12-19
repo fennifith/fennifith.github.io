@@ -17,7 +17,7 @@ if (!file_exists($filename)) {
  fclose($myfile);
 }
 
-$contents = readfile($filename);
+$contents = file_get_contents($filename);
 
 $fname = htmlspecialchars($_GET["fname"]);
 $fcontent = htmlspecialchars($_GET["fcontent"]);
@@ -137,7 +137,7 @@ if ($_GET["repeat"] == "true") {
  while(true) {
   sleep(0.2);
   if ($lastedit !== filemtime($filename)) {
-   echo readfile($filename);
+   echo file_get_contents($filename);
    $lastedit = filemtime($filetime);
   }
  }
