@@ -12,7 +12,7 @@ if (!file_exists($filename)) {
  }
 }
 
-$users = readfile($filename);
+$users = file_get_contents($filename);
 
 if ($delete == "yes") {
  $users = str_replace($name . "<br>", "", $users);
