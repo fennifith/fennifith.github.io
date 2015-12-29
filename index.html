@@ -154,6 +154,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
+          <a data-route="apps" href="/apps" on-click="onDataRouteClick">
+            <iron-icon icon="shop-two"></iron-icon>
+            <span>Apps</span>
+          </a>
           <a data-route="apks" href="/apks" on-click="onDataRouteClick">
             <iron-icon icon="android"></iron-icon>
             <span>Apks</span>
@@ -284,6 +288,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://theandroidmaster.github.io"></div>
 
               <paper-toast id="toast1" text="Hi"></paper-toast>
+            </section>
+            
+            <section data-route="apps">
+              <paper-material elevation="4">
+                <iframe src="http://theandroidmaster.github.io/apps/#!/apps/"></iframe>
+              </paper-material>
             </section>
             
             <section data-route="apks">
