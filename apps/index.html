@@ -46,7 +46,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   <!-- endreplace-->
   <style>
-    body {margin:0px;}
+    body {
+      margin:0px;
+      background-color:#fff;
+    }
     paper-button {
       background-color:#3f51b5;
       color:#fff;
@@ -163,7 +166,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <iron-pages id="pages" selected="0">
       <div>
-        <paper-material elevation="1">
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.rocket';">
+            <img src="http://theandroidmaster.github.io/images/icons/rocket.png"></img>
+            <paper-item-body two-line>
+              <div>Rocket</div>
+              <div secondary>Don't touch the top. Or the bottom. Or the other rockets...</div>
+            </paper-item-body>
+          </paper-item>
           <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';">
             <img src="http://theandroidmaster.github.io/images/icons/fornax.png"></img>
             <paper-item-body two-line>
@@ -220,10 +229,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div secondary>A launcher based on a list of cards.</div>
             </paper-item-body>
           </paper-item>
-        </paper-material>
       </div>
       <div>
-        <paper-material elevation="1">
           <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplebrowser';">
             <img src="http://theandroidmaster.github.io/images/icons/browser.png"></img>
             <paper-item-body two-line>
@@ -245,13 +252,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div secondary>A dark-themed launcher, built to save battery life on older devices.</div>
             </paper-item-body>
           </paper-item>
-        </paper-material>
         <paper-button onclick="document.querySelector('#pages').selected = 0;  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
           <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
         </paper-button>
       </div>
       <div>
-        <paper-material elevation="1">
           <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.calculator';">
             <img src="http://theandroidmaster.github.io/images/icons/calc.png"></img>
             <paper-item-body two-line>
@@ -273,13 +278,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div secondary>A launcher based on a list of cards.</div>
             </paper-item-body>
           </paper-item>
-        </paper-material>
         <paper-button onclick="document.querySelector('#pages').selected = 0;  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
           <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
         </paper-button>
       </div>
       <div>
-        <paper-material elevation="1">
+          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.rocket';">
+            <img src="http://theandroidmaster.github.io/images/icons/rocket.png"></img>
+            <paper-item-body two-line>
+              <div>Rocket</div>
+              <div secondary>Don't touch the top. Or the bottom. Or the other rockets...</div>
+            </paper-item-body>
+          </paper-item>
           <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';">
             <img src="http://theandroidmaster.github.io/images/icons/fornax.png"></img>
             <paper-item-body two-line>
@@ -294,7 +304,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div secondary>An essay-typing app that doubles, triples, or quadruples the spaces while replacing words with longer phrases to increase the size.</div>
             </paper-item-body>
           </paper-item>
-        </paper-material>
         <paper-button onclick="document.querySelector('#pages').selected = 0; document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
           <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
         </paper-button>
