@@ -304,6 +304,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-toast id="toast1" text="Hi"></paper-toast>
             </section>
             
+            <section data-route="articles">
+              
+              <script>
+                var rawFile = new XMLHttpRequest();
+                rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
+                rawFile.onreadystatechange = function () {
+                  if(rawFile.readyState === 4) {
+                    if(rawFile.status === 200 || rawFile.status == 0) {
+                      var allText = rawFile.responseText;
+                      alert(allText);
+                    }
+                  }
+                }
+                rawFile.send(null);
+              </script>
+            </section>
+            
             <section data-route="apps">
                 <div>
     
