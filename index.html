@@ -305,6 +305,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             <section data-route="articles">
               
+              <div id="articlecontent">
+                
+              </div>
+              
               <script>
                 var rawFile = new XMLHttpRequest();
                 rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
@@ -312,7 +316,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   if(rawFile.readyState === 4) {
                     if(rawFile.status === 200 || rawFile.status == 0) {
                       var allText = rawFile.responseText;
-                      alert(allText);
+                      for (string s : allText.split('|')) {
+                        document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>Content goes here...</div></iron-collapse> </paper-item>";
+                      }
                     }
                   }
                 }
