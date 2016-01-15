@@ -317,7 +317,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     if(rawFile.status === 200 || rawFile.status == 0) {
                       var allText = rawFile.responseText;
                       for (string s : allText.split('|')) {
-                        document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>Content goes here...</div></iron-collapse> </paper-item>";
+                        document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
                       }
                     }
                   }
@@ -334,6 +334,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <h1 class="ctr">
           <div class="circ">
             <iron-icon style="width: 100%; height: 100%;  color:#4CAF50;" icon="trending-up"></iron-icon>
+
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+                
+              </div>
+              
+              <script>
+                var rawFile = new XMLHttpRequest();
+                rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
+                rawFile.onreadystatechange = function () {
+                  if(rawFile.readyState === 4) {
+                    if(rawFile.status === 200 || rawFile.status == 0) {
+                      var allText = rawFile.responseText;
+                      for (string s : allText.split('|')) {
+                        document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
+                      }
+                    }
+                  }
+                }
+                rawFile.send(null);
+              </script>
+            </section>
+            
+            <section data-route="apps">
+                <div>
+    
+    <div class="horizon">
+      <div class="ctr">
+        <h1 class="ctr">
+          <div class="circ">
+            <iron-icon style="width: 100%; height: 100%;  color:#4CAF50;" icon="trending-up"></iron-icon>
+          </div>
+@TheAndroidMaster
+Commit changes
           </div>
           <br>
           Built for Speed
