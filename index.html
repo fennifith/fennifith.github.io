@@ -308,6 +308,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div id="articlecontent">
                 
               </div>
+              
+              <script type="text/javascript">
+                var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
+    rawFile.onreadystatechange = function () {
+      if(rawFile.readyState === 4) {
+        if(rawFile.status === 200 || rawFile.status == 0) {
+          var allText = rawFile.responseText;
+          var allTextSplit = allText.split('|');
+          for (var i = 0; i < allTextSplit.length; i++) {
+            var s = allTextSplit[i];
+            document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
+          }
+        }
+      }
+    }
+    rawFile.send(null);
+              </script>
             </section>
             
             <section data-route="apps">
@@ -681,24 +699,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     xhr.send(); 
   }
-  
-  window.onload = (function(){
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
-    rawFile.onreadystatechange = function () {
-      if(rawFile.readyState === 4) {
-        if(rawFile.status === 200 || rawFile.status == 0) {
-          var allText = rawFile.responseText;
-          var allTextSplit = allText.split('|');
-          for (var i = 0; i < allTextSplit.length; i++) {
-            var s = allTextSplit[i];
-            document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
-          }
-        }
-      }
-    }
-    rawFile.send(null);
-  });
   </script>
 </body>
 </html>
