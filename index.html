@@ -318,7 +318,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     if(rawFile.status === 200 || rawFile.status == 0) {
                       var allText = rawFile.responseText;
                       for (string s : allText.split('|')) {
-                        document.getElementById('articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
+                        document.getElementById('#articlecontent').innerHTML += "<paper-item on-click=\"document.queryselector(\'#" + s.split('^')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body> <iron-collapse id=\"" + s.split('^')[0] + "\"><div>" + s.split('^')[1] + "</div></iron-collapse> </paper-item>";
                       }
                     }
                   }
