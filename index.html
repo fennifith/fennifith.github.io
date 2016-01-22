@@ -146,7 +146,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   </style>
 </head>
-<body unresolved class="fullbleed layout vertical">
+<body unresolved class="fullbleed layout vertical" style="background: #000000;">
   <span id="browser-sync-binding"></span>
   <template is="dom-bind" id="app">
     <paper-drawer-panel id="paperDrawerPanel">
@@ -205,7 +205,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
         <!-- Main Content -->
-        <div class="content" style="background: #fafafa;background: -webkit-linear-gradient(#eeeeee, #fafafa);background: -o-linear-gradient(#eeeeee, #fafafa);background: -moz-linear-gradient(#eeeeee, #fafafa);background: linear-gradient(#eeeeee, #fafafa);">
+        <div class="content" style="background: #000000;">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
             
             
@@ -300,9 +300,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             <section data-route="articles">
               
-              <div id="articlecontent">
-                
-              </div>
+              <paper-material elevation="1">
+                <div id="articlecontent"></div>
+              </paper-material>
               
               <script type="text/javascript">
                 var rawFile = new XMLHttpRequest();
@@ -324,6 +324,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="apps">
+              <paper-material elevation="1">
                 <div>
     
     <div class="horizon">
@@ -508,6 +509,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </div>
     </iron-pages>
   </div>
+              </paper-material>
                 <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
             </section>
             
