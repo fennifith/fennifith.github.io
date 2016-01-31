@@ -566,22 +566,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     </paper-item-body>
                   </paper-item>
                 </div>
-
-                <!--<p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
-                <ul>
-                  <li><a href="https://plus.google.com/+AlexandrePiveteau/posts">Alexandre Piveteau - makes some really good apps and libraries and is always there to help when I get stuck... which happens a lot</a></li>
-                  <li><a href="http://justinkruit.com/">Justin Kruit - makes apps (they suck :D) and websites</a></li>
-                  <li><a href="https://plus.google.com/101325935187431392674/posts">Anas Khan - awesome designer - makes icons and stuff</a></li>
-                  <li><a href="http://zheano.blogspot.com/">Zan Cerne - makes wallpapers, occasional icons, and generally takes up all your free time ;)</a></li>
-                  <li><a href="https://plus.google.com/+BriceSeibert23/posts">Brice Seibert - makes awesome flat-styled wallpapers</a></li>
-                  <li><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/posts">Vukašin Anđelković - makes mega premium material super icons... including one for me O_O</a></li>
-                </ul>-->
               </paper-material>
               
               <paper-material elevation="1">
                 <h1>Teamwork!</h1>
                 <p>While I try to make all of my apps myself, I usually end up relying on others when I get stuck, so thanks to all the people on google+, stackoverflow, and github that have helped me.</p>
               </paper-material>
+            </section>
+            
+            <section data-route="related">
+              <div id="relatedcontent"></div>
+              <script>
+    var rawContent = new XMLHttpRequest();
+    rawContent.open("GET", "https://github.com/TheAndroidMaster.atom", false);
+    rawContent.onreadystatechange = function () {
+      if(rawContent.readyState === 4) {
+        if(rawContent.status === 200 || rawContent.status == 0) {
+          document.getElementById('relatedcontent').innerHTML = rawContent.responseText;
+        }
+      }
+    }
+    rawContent.send(null);
+              </script>
             </section>
 
             <section data-route="contact" class="nopadding">
