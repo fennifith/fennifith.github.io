@@ -578,7 +578,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <div id="relatedcontent"></div>
               <script>
   var rawContent = new XMLHttpRequest();
-  rawContent.open("GET", "https://github.com/TheAndroidMaster.atom", false);
+  rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
   rawContent.onreadystatechange = function () {
     if(rawContent.readyState === 4) {
       if(rawContent.status === 200 || rawContent.status == 0) {
