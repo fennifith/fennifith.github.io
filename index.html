@@ -575,7 +575,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="events">
-              <div id="relatedcontent"></div>
+              <paper-material elevation="1">
+                <div id="relatedcontent"></div>
+              </paper-material>
+
               <script>
   var rawContent = new XMLHttpRequest();
   rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
