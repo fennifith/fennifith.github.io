@@ -590,8 +590,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if(rawContent.readyState === 4) {
       if(rawContent.status === 200 || rawContent.status == 0) {
         var obj = JSON.parse(rawContent.responseText);
-        for (var i = 0; i < 10; i++) {
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].payload.commits[0].url + "\'\"><paper-item-body two-line><div>" + obj[i].payload.commits[0].message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item>";
+        for (var i = 0; i < 20; i++) {
+          var url = "";
+          var message = "";
+          if (obj[i].type == "PushEvent") {
+            url = obj[i].payload.commits[0].url;
+            message = obj[i].payload.commits[0].message;
+          } else if (obj[i].type == "WatchEvent") {
+            url = obj[i].repo.url;
+            message = obj[i].type;
+          } else if (obj[i].type == "MemberEvent") {
+            url = obj[i].repo.url;
+            message = obj[i].payload.action + " " + obj[i].payload.member.login;
+          }
+          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item>";
         }
       }
     }
