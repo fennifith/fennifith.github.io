@@ -306,8 +306,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="articles">
               
               <paper-material elevation="1">
-                <div id="articlecontent"></div>
+                <iron-pages selected="0" id="articlecontent">
+                  
+                </iron-pages>
               </paper-material>
+              
+              <paper-button onclick="document.querySelector('articlecontent').selectNext()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
+                <div class="button" style="position:relative">
+                  <paper-ripple></paper-ripple>
+                </div>
+              </paper-button>
               
               <script type="text/javascript">
                 var rawFile = new XMLHttpRequest();
@@ -319,7 +327,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var allTextSplit = allText.split('|');
           for (var i = 0; i < allTextSplit.length; i++) {
             var s = allTextSplit[i];
-            document.getElementById('articlecontent').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + s.split('^')[0].split(' ')[0] + "\').toggle();\"><paper-item-body two-line><div>" + s.split('^')[0] + "</div><div secondary>Click to view...</div></paper-item-body></paper-item><iron-collapse id=\"" + s.split('^')[0].split(' ')[0] + "\"><div style=\"margin:16px;\"><h1>" + s.split('^')[0] + "</h1>" + s.split('^')[1] + "</div></iron-collapse>";
+            document.querySelector('articlecontent').innerHTML += "<div style=\"margin:16px;\"><h1>" + s.split('^')[0] + "</h1>" + s.split('^')[1] + "</div>";
           }
         }
       }
