@@ -34,10 +34,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad-retina">
   <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
   
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="stylesheet" href="http://theandroidmaster.github.io/styles/main.css">
+  <script src="http://theandroidmaster.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   
-  <link rel="import" href="elements/elements.html">
+  <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
   
   <style is="custom-style" include="shared-styles"></style>
   <style>
@@ -340,17 +340,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     rawFile.send(null);
     
-    app.addEventListener('dom-change', function() {
-
-      var pages = document.querySelector("#articlecontent");
-      var next = document.querySelector("#next");
-      var previous = document.querySelector("#previous");
-      next.addEventListener("click", function() {
-          pages.selectNext();
-      });
-      previous.addEventListener("click", function() {
-          pages.selectPrevious();
-      });
+    var pages = document.querySelector("#articlecontent");
+    var next = document.querySelector("#next");
+    var previous = document.querySelector("#previous");
+    next.addEventListener("click", function() {
+        pages.selectNext();
+    });
+    previous.addEventListener("click", function() {
+        pages.selectPrevious();
     });
               </script>
             </section>
