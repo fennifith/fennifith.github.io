@@ -590,14 +590,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if(rawContent.readyState === 4) {
       if(rawContent.status === 200 || rawContent.status == 0) {
         var obj = JSON.parse(rawContent.responseText);
-        for (var i = 0; i < 20; i++) {
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
           var url = "";
           var message = "";
           if (obj[i].type == "PushEvent") {
             url = obj[i].payload.commits[0].url;
             message = obj[i].payload.commits[0].message;
           } else if (obj[i].type == "WatchEvent") {
-            url = obj[i].repo.url;
+            url = "Starred " + obj[i].repo.url;
             message = obj[i].type;
           } else if (obj[i].type == "MemberEvent") {
             url = obj[i].repo.url;
