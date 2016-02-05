@@ -598,8 +598,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             url = obj[i].payload.commits[0].url;
             message = obj[i].payload.commits[0].message;
           } else if (obj[i].type == "WatchEvent") {
-            url = "Starred " + obj[i].repo.url;
-            message = obj[i].type;
+            url = obj[i].repo.url;
+            message = "Starred " + obj[i].type;
           } else if (obj[i].type == "MemberEvent") {
             url = obj[i].repo.url;
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
