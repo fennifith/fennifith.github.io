@@ -599,7 +599,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             message = obj[i].payload.commits[0].message;
           } else if (obj[i].type == "WatchEvent") {
             url = obj[i].repo.url;
-            message = "Starred " + obj[i].type;
+            message = "Starred " + obj[i].repo.name;
           } else if (obj[i].type == "MemberEvent") {
             url = obj[i].repo.url;
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
