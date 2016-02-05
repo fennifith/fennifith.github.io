@@ -594,6 +594,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj[i] == null) break;
           var url = "";
           var message = "";
+          var subtitle = obj[i].repo.name;
           if (obj[i].type == "PushEvent") {
             url = obj[i].payload.commits[0].url;
             message = obj[i].payload.commits[0].message;
@@ -604,7 +605,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             url = obj[i].repo.url;
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
           }
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item>";
+          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
       }
     }
