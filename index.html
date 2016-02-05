@@ -311,7 +311,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </iron-pages>
               </paper-material>
               
-              <paper-button onclick="document.querySelector('#articlecontent').selectNext();" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
+              <paper-button id="previous" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Previous
+                <div class="button" style="position:relative">
+                  <paper-ripple></paper-ripple>
+                </div>
+              </paper-button>
+              
+              <paper-button id="next" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
@@ -333,6 +339,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     }
     rawFile.send(null);
+    
+    app.addEventListener('dom-change', function() {
+
+      var pages = document.querySelector("#pages");
+      var next = document.querySelector("#next");
+      var previous = document.querySelector("#previous");
+      next.addEventListener("click", function() {
+          pages.selectNext();
+      });
+      previous.addEventListener("click", function() {
+          pages.selectPrevious();
+      });
+    });
               </script>
             </section>
             
