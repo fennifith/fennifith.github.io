@@ -556,13 +556,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <h1>The Community</h1>
                 <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
                 
-                <div class="list short" role="listbox">
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='https://plus.google.com/+AlexandrePiveteau/about';">
-                    <paper-item-body two-line>
-                      <div>Alexandre Piveteau</div>
-                      <div secondary><a href="https://plus.google.com/+AlexandrePiveteau/about">plus.google.com/+AlexandrePiveteau</a></div>
-                    </paper-item-body>
-                  </paper-item>
+                <div class="list short" role="listbox" id="userlist">
                   <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='http://justinkruit.com/';">
                     <paper-item-body two-line>
                       <div>Justin Kruit</div>
@@ -587,14 +581,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       <div secondary><a href="https://plus.google.com/+BriceSeibert23/about">plus.google.com/+BriceSeibert23</a></div>
                     </paper-item-body>
                   </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/about';">
-                    <paper-item-body two-line>
-                      <div>Vukašin Anđelković</div>
-                      <div secondary><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak/about">plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak</a></div>
-                    </paper-item-body>
-                  </paper-item>
                 </div>
               </paper-material>
+              
+              <script>
+  var userContent = new XMLHttpRequest();
+  userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/followers", false);
+  userContent.onreadystatechange = function () {
+    if(userContent.readyState === 4) {
+      if(userContent.status === 200 || userContent.status == 0) {
+        var obj = JSON.parse(userContent.responseText);
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
+          var name = obj[i].login;
+          var url = "https://github.com/" + name;
+          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary><a href=\'" + url + "\'>" + url + "</a></div></paper-item-body></paper-item>";
+        }
+      }
+    }
+  }
+  userContent.send(null);
+              </script>
               
               <paper-material elevation="1">
                 <h1>Teamwork!</h1>
