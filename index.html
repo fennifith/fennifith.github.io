@@ -245,6 +245,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <paper-button onclick="location.href = 'http://theandroidmaster.github.io/#!/apps'">Apps</paper-button>
       </div>
     </div>
+    
+    <h1>Repos:</h1>
+    
+    <div id="repolist"></div>
+    
+    <script>
+  var repoContent = new XMLHttpRequest();
+  repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
+  repoContent.onreadystatechange = function () {
+    if(repoContent.readyState === 4) {
+      if(repoContent.status === 200 || repoContent.status == 0) {
+        var obj = JSON.parse(repoContent.responseText);
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
+          var name = obj[i].full_name;
+          var desc = obj[i].description;
+          var url = "https://github.com/" + name;
+          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary> + desc + "</div></paper-item-body></paper-item>";
+        }
+      }
+    }
+  }
+  repoContent.send(null);
+              </script>
               </paper-material>
               <paper-material elevation="1">
                 <img src="/images/headers/3appsheader.png"></img>
