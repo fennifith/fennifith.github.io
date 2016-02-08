@@ -260,7 +260,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         for (var i = 0; true; i++) {
           if (obj[i] == null) break;
           var name = obj[i].full_name;
-          var desc = obj[i].description;
+          var desc = "Last updated: " + obj[i].updated_at;
           var url = "https://github.com/" + name;
           document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary> + desc + "</div></paper-item-body></paper-item>";
         }
