@@ -262,7 +262,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var name = obj[i].full_name;
           var desc = "Last updated: " + obj[i].updated_at;
           var url = "https://github.com/" + name;
-          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary> + desc + "</div></paper-item-body></paper-item>";
+          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
         }
       }
     }
