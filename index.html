@@ -100,6 +100,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       div.ctr {
         width:20%;
       }
+      #slideshow {
+      	visibility:collapse !important;
+      }
+      #topheader {
+      	margin-top:0 !important;
+      }
     }
     section.nopadding {
       padding:0px;
@@ -209,11 +215,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             <section data-route="home">
               
-              <div style="width: 100%;height: 60%;overflow: hidden;position: absolute;left: 0;top: 20%;">
+              <div style="width: 100%;height: 60%;overflow: hidden;position: absolute;left: 0;top: 20%;" id="slideshow">
 		            <iframe src="https://docs.google.com/presentation/d/14FvNmj7tBvGPbOTDvCXLBKoknhA_KRPF_OctxzqzM84/embed?start=true&loop=true&delayms=5000" frameborder="0" style="width: 100%; height: calc(28px + 100%)"></iframe>
               </div>
               
-              <paper-material elevation="4" style="margin-top:calc(450px + 5%);">
+              <paper-material elevation="4" style="margin-top:calc(450px + 5%);" id="topheader">
                 
                 <div class="horizon">
       <div class="ctr">
