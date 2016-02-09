@@ -639,18 +639,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var obj = JSON.parse(rawContent.responseText);
         for (var i = 0; true; i++) {
           if (obj[i] == null) break;
-          var url = "";
           var message = "";
           var subtitle = obj[i].repo.name;
           if (obj[i].type == "PushEvent") {
-            url = obj[i].payload.commits[0].url;
             message = obj[i].payload.commits[0].message;
           } else if (obj[i].type == "WatchEvent") {
-            url = obj[i].repo.url;
             message = "Starred " + obj[i].repo.name;
           } else if (obj[i].type == "MemberEvent") {
-            url = obj[i].repo.url;
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
+          } else if (obj[i].type == "IssueCommentEvent") {
+            message = "Issue " + obj[i].payload.action;
           }
           document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
