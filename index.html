@@ -648,7 +648,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           } else if (obj[i].type == "MemberEvent") {
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
           } else if (obj[i].type == "IssueCommentEvent") {
-            message = "Issue " + obj[i].payload.action;
+            message = "&#9888; " + obj[i].payload.issue.title;
           }
           document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
