@@ -611,7 +611,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj[i] == null) break;
           var name = obj[i].login;
           var url = "https://github.com/" + name;
-          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary><a href=\'" + url + "\'>" + url + "</a></div></paper-item-body></paper-item>";
+          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><img class=\"icon\" src=\"" + obj[i].avatar_url + "\"></img><paper-item-body two-line><div>" + name + "</div><div secondary><a href=\'" + url + "\'>" + url + "</a></div></paper-item-body></paper-item>";
         }
       }
     }
