@@ -140,7 +140,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin:auto;
       box-shadow: 0px 3px 5px #e0e0e0;
     }
-    img.icon {
+    .icon {
       height:50px;
       width:auto;
       margin-right:10px;
@@ -641,16 +641,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj[i] == null) break;
           var message = "";
           var subtitle = obj[i].repo.name;
+          var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>"
           if (obj[i].type == "PushEvent") {
             message = obj[i].payload.commits[0].message;
+            icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>"
           } else if (obj[i].type == "WatchEvent") {
             message = "Starred " + obj[i].repo.name;
+            icon = "<iron-icon class=\"icon\" icon="\star\"></iron-icon>"
           } else if (obj[i].type == "MemberEvent") {
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
+            icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>"
           } else if (obj[i].type == "IssueCommentEvent") {
             message = "&#9888; " + obj[i].payload.issue.title;
+            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>"
           }
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\"><paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
       }
     }
