@@ -629,13 +629,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <div id="relatedcontent"></div>
               </paper-material>
-
+              
               <script>
   var rawContent = new XMLHttpRequest();
   rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
   rawContent.onreadystatechange = function () {
-    if(rawContent.readyState === 4) {
-      if(rawContent.status === 200 || rawContent.status == 0) {
+    if (rawContent.readyState === 4) {
+      if (rawContent.status === 200 || rawContent.status == 0) {
         var obj = JSON.parse(rawContent.responseText);
         for (var i = 0; true; i++) {
           if (obj[i] == null) break;
@@ -647,7 +647,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
           } else if (obj[i].type == "WatchEvent") {
             message = "Starred " + obj[i].repo.name;
-            icon = "<iron-icon class=\"icon\" icon="\star\"></iron-icon>";
+            icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
           } else if (obj[i].type == "MemberEvent") {
             message = obj[i].payload.action + " " + obj[i].payload.member.login;
             icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
@@ -655,13 +655,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             message = obj[i].payload.issue.title;
             icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
           }
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
       }
-    }
-  }
-  rawContent.send(null);
-              </script>
+</script>
             </section>
 
             <section data-route="contact" class="nopadding">
