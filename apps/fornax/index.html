@@ -1,145 +1,154 @@
 <!doctype html>
 <!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
 
-<html lang="">
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="App developer and designer">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="James Fenn" />
-  <title>Fornax Wallpapers</title>
-  <!-- Place favicon.ico in the `app/` directory -->
-  <!-- Chrome for Android theme color -->
-  <meta name="theme-color" content="#2E3AA1">
-  <!-- Web Application Manifest -->
-  <link rel="manifest" href="http://theandroidmaster.github.io/manifest.json">
-  <!-- Tile color for Win8 -->
-  <meta name="msapplication-TileColor" content="#3372DF">
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="JF">
-  <link rel="icon" sizes="256x256" href="http://theandroidmaster.github.io/jf2.ico">
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="James Fenn">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-iphone-retina">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="http://theandroidmaster.github.io/touch-icon-ipad-retina">
-  <!-- Tile icon for Win8 (144x144) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="http://theandroidmaster.github.io/styles/main.css">
-  <!-- endbuild-->
-  <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
-  <script src="http://theandroidmaster.github.io/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-  <!-- endbuild -->
-  <!-- will be replaced with elements/elements.vulcanized.html -->
-  <link rel="import" href="http://theandroidmaster.github.io/elements/elements.html">
-  <!-- endreplace-->
-  <style>
-    body {margin:0px;}
-    paper-button {
-      background-color:#3f51b5;
-      color:#fff;
-      margin:10px;
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="flat wallpapers">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fornax</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="http://theandroidmaster.github.io/touch-icon-iphone.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Fornax">
+    <link rel="apple-touch-icon-precomposed" href="http://theandroidmaster.github.io/touch-icon-iphone.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="http://theandroidmaster.github.io/touch-icon-iphone.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="http://theandroidmaster.github.io/touch-icon-iphone.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.teal-red.min.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
     }
-    div.horizon {
-      padding:0px;
-      height:20%;
-      width:100%;
-      margin: 5% 0px;
+    .demo-ribbon {
+        width: 100%;
+        height: 40vh;
+        background-color: #3F51B5;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
     }
-    div.horizon::-webkit-scrollbar { 
-      display: none; 
+
+    .demo-main {
+        margin-top: -35vh;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
     }
-    div.ctr {
-      margin:auto;
-      padding:5px;
+
+    .demo-header .mdl-layout__header-row {
+        padding-left: 40px;
     }
-    h1.ctr {
-      width:100%;
-      text-align: center;
+
+    .demo-container {
+        max-width: 1600px;
+        width: calc(100% - 16px);
+        margin: 0 auto;
     }
-    p.ctr {
-      width:100%;
-      text-align: center;
+
+    .demo-content {
+        border-radius: 2px;
+        padding: 80px 56px;
+        margin-bottom: 80px;
     }
-    .circ { 
-      width: 100px;
-      height: 100px;
-      background-color: #424242; 
-      border-radius: 50%;
-      padding:20px;
-      margin:auto;
+
+    .demo-layout.is-small-screen .demo-content {
+        padding: 40px 28px;
     }
-    @media (min-width: 601px) {
-      div.horizon {
-        display: -webkit-flex;
-        display: flex;
-      }
-      div.ctr {
-        width:20%;
-      }
-      div.apps {
-      width:80%;
+
+    .demo-content h3 {
+        margin-top: 48px;
     }
+
+    .demo-footer {
+        padding-left: 40px;
     }
-    div.apps {
-      margin:auto;
-      width:100%;
+
+    .demo-footer .mdl-mini-footer--link-list a {
+        font-size: 13px;
     }
-    paper-item {
-      transition: background-color .25s;
-      -moz-transition: background-color .25s;
-      -webkit-transition: background-color .25s;
-    }
-    paper-item:hover{
-      background-color:#e0e0e0;
-    }
-    img {
-      height:auto;
-      width:90%;
-      margin:auto;
-    }
-    paper-fab {
-      position:fixed;
-      right:0px;
-      bottom:0px;
-      margin:20px;
-    }
-  </style>
-</head>
-<body>
-  <paper-toolbar>
-    <paper-icon-button icon="arrow-back" onclick="location.href = 'http://theandroidmaster.github.io/apps';"></paper-icon-button>
-    <div class="title">Fornax Wallpapers</div>
-  </paper-toolbar>
-  
-  <div id="content-main">
-    <img src="http://theandroidmaster.github.io/images/headers/fornax.png" style="width: 75%; position: fixed; left: 50%; margin-left: -37.5%;"></img>
-    <paper-material style="margin-top:75%;">
-      <h2>Description</h2>
-      <p>Fornax is a collection of flat wallpapers made by designers across the world.<br><br><br><br><br></p>
-      <h2>Contributors</h2>
-      <ul>
-        <li><a href="https://plus.google.com/+BriceSeibert23">Brice Seibert</a></li>
-        <li><a href="https://plus.google.com/101325935187431392674">Anas Khan</a></li>
-        <li><a href="http://zheano.blogspot.com/">Zan Cerne</a></li>
-        <li><a href="https://plus.google.com/+GregIvesgrives">Greg Ives</a></li>
-        <li><a href="https://plus.google.com/+RadekxmenB">Radek Bledowski</a></li>
-        <li><a href="https://plus.google.com/+ColinSimone">Colin Simone</a></li>
-      </ul>
-    </paper-material>
-  </div>
-  <paper-fab icon="file-download" onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';"></paper-fab>
-</body>
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Fornax</span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="demo-crumbs mdl-color-text--grey-500">
+              James Fenn &gt; Fornax
+            </div>
+            <br>
+            <img style="width:100%;" src="http://theandroidmaster.github.io/images/headers/fornax.png"></img>
+            <h3>Free wallpapers, made by everyone, for everyone.</h3>
+              <p>
+                Fornax is a collection of flat wallpapers made by designers across the world.
+              </p>
+              <p>
+                All of the wallpapers are created with the intention of making android look good, to create a sense of depth throughout the device. The app features a simple layout, search, and wallpaper preview, with the addition of an offline mode so the wallpapers can be viewed without using data.
+              </p>
+            <h3>Links</h3>
+              <p>
+                News about future updates, bug reports, and more is posted <a href="https://goo.gl/mlCB4L">here</a>
+                This app is open source, along with all my other apps, so anyone can use the <a href="https://goo.gl/LNMJKd">source code</a> for their own benefit.
+              </p>
+          </div>
+        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="http://theandroidmaster.github.io/">Home Page</a></li>
+              <li><a href="http://theandroidmaster.github.io/#!/about">About</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <a href="https://play.google.com/store/apps/details?id=com.james.wallpapers" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Download</a>
+    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  </body>
 </html>
