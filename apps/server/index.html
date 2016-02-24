@@ -188,6 +188,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </div>
         
   <script>
+  if (typeof(Storage) !== "undefined") {
+    document.getElementById("text").innerHTML = localStorage.getItem("chatlog");
+    if (document.getElementById("text").innerHTML.length > 0) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+  }
+  
   var userid = Math.floor(Math.random()*10);
   function username() {
     user = prompt("Please enter your username", "");
@@ -267,6 +274,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     onAction('left the chat');
     loaded = false;
+    
+    localStorage.setItem("chatlog", document.getElementById("text").innerHTML);
   }
   
   document.getElementById('msg').onkeypress = function(e){
