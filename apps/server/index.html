@@ -188,12 +188,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </div>
         
   <script>
-  if (typeof(Storage) !== "undefined") {
-    document.getElementById("text").innerHTML = localStorage.getItem("chatlog");
-    if (document.getElementById("text").innerHTML.length > 0) {
-      window.scrollTo(0, document.body.scrollHeight);
-    }
-  }
   
   var userid = Math.floor(Math.random()*10);
   function username() {
@@ -214,7 +208,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     xhe.send();
   }
-  username();
+  
+  if (typeof(Storage) !== "undefined") {
+    document.getElementById("text").innerHTML = localStorage.getItem("chatlog");
+    if (document.getElementById("text").innerHTML.length > 0) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+    user = localStorage.getItem("user");
+    userid = localStorage.getItem("userid");
+  } else {
+    userid = Math.floor(Math.random()*10);
+    username();
+  }
   
 
   function getUrlVar() {
