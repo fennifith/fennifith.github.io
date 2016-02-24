@@ -216,6 +216,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     user = localStorage.getItem("user");
     userid = localStorage.getItem("userid");
+    
+    if (user.length == 0) {
+      username();
+    }
+    if (userid.length == 0) {
+      userid = Math.floor(Math.random()*10);
+    }
   } else {
     userid = Math.floor(Math.random()*10);
     username();
