@@ -663,7 +663,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           } else if (obj[i].type == "CreateEvent") {
             message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
             icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
-          } else if (obj[i].type == "CreateEvent") {
+          } else if (obj[i].type == "ForkEvent") {
             message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
             icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
           }
