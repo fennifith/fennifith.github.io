@@ -336,16 +336,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <iron-pages selected="0" id="articlecontent">
                   <div style="margin:16px;">Hi! Press 'Next' to continue :)</div>
+                  <div style="margin:16px;">Something</div>
                 </iron-pages>
               </paper-material>
               
-              <paper-button id="previous" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Previous
+              <paper-button onclick="document.querySelector("#articlecontent").selectPrevious();" id="previous" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Previous
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
               </paper-button>
               
-              <paper-button id="next" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
+              <paper-button onclick="document.querySelector("#articlecontent").selectNext();" id="next" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
@@ -367,16 +368,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     }
     rawFile.send(null);
-    
-    var pages = document.querySelector("#articlecontent");
-    var next = document.querySelector("#next");
-    var previous = document.querySelector("#previous");
-    next.addEventListener("click", function() {
-        pages.selectNext();
-    });
-    previous.addEventListener("click", function() {
-        pages.selectPrevious();
-    });
               </script>
             </section>
             
@@ -595,12 +586,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <paper-item-body two-line>
                       <div>Zan Cerne</div>
                       <div secondary><a href="http://zheano.blogspot.com/">zheano.blogspot.com</a></div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/+BriceSeibert23/about';">
-                    <paper-item-body two-line>
-                      <div>Brice Seibert</div>
-                      <div secondary><a href="https://plus.google.com/+BriceSeibert23/about">plus.google.com/+BriceSeibert23</a></div>
                     </paper-item-body>
                   </paper-item>
                 </div>
