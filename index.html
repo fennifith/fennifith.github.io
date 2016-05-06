@@ -651,6 +651,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           } else if (obj[i].type == "ForkEvent") {
             message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
             icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+          } else if (obj[i].type == "IssuesEvent") {
+            message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
+            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+          } else if (obj[i].type == "DeleteEvent") {
+            message = "Deleted " + obj[i].repo.name;
+            icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
+          } else if (obj[i].type == "PullRequestEvent") {
+            message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
+            icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
           }
           document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
         }
@@ -701,18 +710,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       <a href="https://twitter.com/IDontLikePHP" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @IDontLikePHP</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </iron-collapse>
                     
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#gitprofile').toggle();">
-                      <div>Github<paper-tooltip>@TheAndroidMaster</paper-tooltip></div>
-                    </paper-item>
-                    
-                    <iron-collapse id="gitprofile">
-                      <div class="github-card" data-user="TheAndroidMaster"></div>
-                      <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-                    </iron-collapse>
-                    
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
-                      <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
-                    </paper-item>
                     </paper-material>
                   </div>
                   <div>
@@ -722,6 +719,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     </paper-item>
                     <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
                       <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
+                    </paper-item>
+                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
+                      <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
                     </paper-item>
                     </paper-material>
                     
