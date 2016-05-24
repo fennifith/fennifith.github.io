@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <style>
+      .total {margin:0;}
+      .container { position:relative;}
+      .links { 
+        margin:5%;
+        bottom:0; left:0;
+        position:absolute;
+      }
+      ul {
+        margin:0px;
+        list-style-type: none;
+        width: 100%;
+        padding: 0px;
+      }
+      li {
+        padding-left:10%;
+      }
+      li.link {
+        display: inline;
+        width:100%;
+        padding-left:0%;
+      }
+      ul.link {
+        list-style-type: none;
+        padding:0px;
+        width:100%;
+      }
+      a {
+        font-family: Arial, Helvetica, sans-serif;
+        color:#303F9F;
+        font-weight: bold;
+        padding:5px;
+        text-decoration: none;
+      }
+      p {
+        color:#212121;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #sidebar {
+        position:absolute;
+        top:0; bottom:0; left:0;
+        width:20%;
+        background:#fff;
+        box-shadow: 5px 0px 50px #00000040;
+        overflow:hidden;
+        -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.3s;
+      }
+      #content { solid #212121; width:80%; height:100%;
+        margin-left:20%;
+      }
+      #iframe {
+        border:0px;
+        width:100%;
+        height:100%;
+      }
+      #list {
+        margin:10px;
+        color:#dfdfdf;
+      }
+      #header {
+        width:100%;
+      }
+      @media (max-width:800px) {
+        #sidebar {width:10%;}
+        #content {
+          width:90%;
+          margin-left:10%;
+        }
+        #sidebar:hover {width:80%;}
+        #side {visibility:hidden;}
+        #sidebar:hover > #side { visibility:visible; }
+      }
+    </style>
+    
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#263238">
+
+  <!-- mobile meta (hooray!) -->
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <!-- ENABLE WEB APP MODE -->
+  <meta name="apple-mobile-web-app-title" content="James Fenn">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="red" />
+
+  <!-- iPhone -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/touch-icon-iphone">
+        
+  <link rel="shortcut icon" href="/jf2.ico">
+  <link rel="icon" sizes="256x256" href="/jf2.ico">
+        
+  <!-- iPhone (Retina) -->
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-iphone-retina">
+
+  <!-- iPad -->
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad">
+
+  <!-- iPad (Retina) -->
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad-retina">
+
+  <title>James Fenn</title>
+  </head>
+  <body class="total">
+    <div class="container">
+     <div id="sidebar"> <div id="side">
+       <ul id="list">
+         <li><p id="about">About Me</p></li>
+         <li><p id="projects">Current Projects</p></li>
+         <li><p id="apps">Apps</p></li>
+         <li><p id="walls">Wallpapers</p></li>
+         <li><p id="community">The Community</p></li>
+       </ul>
+     </div> </div>
+     <div id="content">
+        <iframe id="iframe" src="about.html"></iframe>
+     </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="/launch.js"></script>
+  </body>
+</html>
