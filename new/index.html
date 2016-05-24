@@ -2,15 +2,14 @@
 <html>
   <head>
     <style>
-      .total {margin:0;}
-      .container { position:relative;}
       .links { 
-        margin:5%;
-        bottom:0; left:0;
-        position:absolute;
+        margin: 5%;
+        bottom: 0; 
+        left: 0;
+        position: absolute;
       }
       ul {
-        margin:0px;
+        margin: 0px;
         list-style-type: none;
         width: 100%;
         padding: 0px;
@@ -19,37 +18,42 @@
         padding-left:10%;
       }
       li.link {
-        width:100%;
+        width: 100%;
         padding-top: 20px;
         padding-bottom: 20px;
       }
       ul.link {
         list-style-type: none;
-        padding:0px;
-        width:100%;
+        padding: 0px;
+        width: 100%;
       }
       a {
         font-family: Arial, Helvetica, sans-serif;
-        color:#303F9F;
+        color: #303F9F;
         font-weight: bold;
-        padding:5px;
+        padding: 5px;
         text-decoration: none;
       }
       p {
-        color:#212121;
+        color: #212121;
         font-family: Arial, Helvetica, sans-serif;
       }
       #sidebar {
-        position:absolute;
-        top:0; bottom:0; left:0;
-        width:20%;
-        background:#fff;
+        position: absolute;
+        top: 0; 
+        bottom: 0; 
+        left: 0;
+        width: 20%;
+        background: #fff;
         box-shadow: 5px 0px 50px #00000040;
-        overflow:hidden;
-        -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+        overflow: hidden;
+        -webkit-transition: width 0.3s;
         transition: width 0.3s;
       }
-      #content { solid #212121; width:80%; height:100%;
+      #content { 
+        solid #212121; 
+        width:80%; 
+        height:100%;
         margin-left:20%;
       }
       #iframe {
@@ -82,11 +86,10 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#263238">
 
-  <!-- mobile meta (hooray!) -->
   <meta name="HandheldFriendly" content="true">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-  <!-- ENABLE WEB APP MODE -->
+
   <meta name="apple-mobile-web-app-title" content="James Fenn">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="red" />
@@ -108,20 +111,20 @@
 
   <title>James Fenn</title>
   </head>
-  <body class="total">
-    <div class="container">
-     <div id="sidebar"> <div id="side">
-       <ul id="list">
-         <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/home.html\');"><a>Home</a></li>
-         <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/projects.html\');"><a>Current Projects</a></li>
-         <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/apps.html\');"><a>Releases</a></li>
-         <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/community.html\');"><a>Community</a></li>
-         <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/about.html\');"><a>About</a></li>
-       </ul>
-     </div> </div>
-     <div id="content">
-        <iframe id="iframe" src="home.html"></iframe>
-     </div>
+  <body>
+    <div id="sidebar">
+      <div id="side">
+        <ul id="list">
+          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/home.html\');"><a>Home</a></li>
+          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/projects.html\');"><a>Current Projects</a></li>
+          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/apps.html\');"><a>Releases</a></li>
+          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/community.html\');"><a>Community</a></li>
+          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/about.html\');"><a>About</a></li>
+        </ul>
+      </div> 
+    </div>
+    <div id="content">
+      <iframe id="iframe" src="home.html"></iframe>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
