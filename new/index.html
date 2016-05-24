@@ -18,9 +18,9 @@
         padding-left:10%;
       }
       li.link {
-        display: inline;
         width:100%;
-        padding-left:0%;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
       ul.link {
         list-style-type: none;
@@ -111,19 +111,25 @@
     <div class="container">
      <div id="sidebar"> <div id="side">
        <ul id="list">
-         <li><a onclick="document.getElementById(\'iframe\').src = \'http://theandroidmaster.github.io/new/home.html\'" id="about">Home</a></li>
-         <li><a onclick="document.getElementById(\'iframe\').src = \'http://theandroidmaster.github.io/new/projects.html\'" id="projects">Current Projects</a></li>
-         <li><a onclick="document.getElementById(\'iframe\').src = \'http://theandroidmaster.github.io/new/apps.html\'" id="apps">Releases</a></li>
-         <li><a onclick="document.getElementById(\'iframe\').src = \'http://theandroidmaster.github.io/new/community.html\'" id="community">Community</a></li>
-         <li><a onclick="document.getElementById(\'iframe\').src = \'http://theandroidmaster.github.io/new/about.html\'" id="about">About</a></li>
+         <li class="link"><a onclick="content(\'http://theandroidmaster.github.io/new/home.html\');" id="about">Home</a></li>
+         <li class="link"><a onclick="content(\'http://theandroidmaster.github.io/new/projects.html\');" id="projects">Current Projects</a></li>
+         <li class="link"><a onclick="content(\'http://theandroidmaster.github.io/new/apps.html\');" id="apps">Releases</a></li>
+         <li class="link"><a onclick="content(\'http://theandroidmaster.github.io/new/community.html\');" id="community">Community</a></li>
+         <li class="link"><a onclick="content(\'http://theandroidmaster.github.io/new/about.html\');" id="about">About</a></li>
        </ul>
      </div> </div>
      <div id="content">
         <iframe id="iframe" src="home.html"></iframe>
      </div>
     </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/launch.js"></script>
+    
+    <script>
+      function content(url) {
+        document.getElementById('iframe').src = url;
+      }
+    </script>
   </body>
 </html>
