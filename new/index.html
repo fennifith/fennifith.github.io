@@ -2,30 +2,18 @@
 <html>
   <head>
     <style>
-      .links { 
-        margin: 5%;
-        bottom: 0; 
-        left: 0;
-        position: absolute;
+      .link { 
+        color: #0091EA;
+        font-weight: bold;
+        display: inline;
+        padding: 20px;
+        transition: all .25s;
+        -moz-transition: all .25s;
+        -webkit-transition: all .25s;
       }
-      ul {
-        margin: 0px;
-        list-style-type: none;
-        width: 100%;
-        padding: 0px;
-      }
-      li {
-        padding-left:10%;
-      }
-      li.link {
-        width: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      ul.link {
-        list-style-type: none;
-        padding: 0px;
-        width: 100%;
+      .link:hover {
+        padding:40px;
+        background-color: rgba(255, 255, 255, 0.125);
       }
       a {
         font-family: Arial, Helvetica, sans-serif;
@@ -39,62 +27,61 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       #sidebar {
-        position: absolute;
+        position: fixed;
         top: 0; 
-        bottom: 0; 
         left: 0;
-        width: 20%;
-        background: #fff;
-        box-shadow: 5px 0px 50px #00000040;
-        overflow: hidden;
-        -webkit-transition: width 0.3s;
-        transition: width 0.3s;
+        right: 0;
+        background: #80D8FF;
+        box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.125);
+        padding: 20px;
       }
       #content {
-        width:80%;
-        margin-left:20%;
-        position:absolute;
-        overflow:scroll;
-      }
-      #iframe {
-        border:0px;
-        width:100%;
-        height:100%;
+        padding: 10px;
+        position: absolute;
+        overflow-x: scroll;
+        margin-top: 56px;
       }
       #list {
-        margin:10px;
+        margin: 10px;
         color:#dfdfdf;
       }
-      #header {
-        width:100%;
-      }
       hr {
-        margin-left:10px;
-        margin-right:10px;
-        margin-top:40px;
-        margin-bottom:40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         border-top: 1px solid #eee;
       }
       .clickable {
+        padding: 10px;
         transition: all .25s;
         -moz-transition: all .25s;
         -webkit-transition: all .25s;
       }
       .clickable:hover {
-        padding: 10px;
         margin-left: 10px;
         margin-right: 10px;
-        box-shadow: 0px 2px 10px #e0e0e0;
+        border-radius: 5px;
+        background-color: #E1F5FE;
       }
-      @media (max-width:800px) {
-        #sidebar {width:10%;}
-        #content {
-          width:90%;
-          margin-left:10%;
+      
+      @media(max-width: 600px) {
+        #sidebar {
+          height: 56px;
+          transition: all .25s;
+          -moz-transition: all .25s;
+          -webkit-transition: all .25s;
         }
-        #sidebar:hover {width:80%;}
-        #side {visibility:hidden;}
-        #sidebar:hover > #side { visibility:visible; }
+        #sidebar:hover {
+          height: auto;
+        }
+        .link {
+          visibility: hidden;
+          display: block;
+        }
+        #sidebar:hover > .link {
+          visibility: visible;
+        }
       }
     </style>
     
@@ -132,84 +119,137 @@
   <title>James Fenn</title>
   </head>
   <body>
-    <div id="sidebar">
-      <div id="side">
-        <ul id="list">
-          <li class="link" onclick="setContent(\'home\');"><a>Home</a></li>
-          <li class="link" onclick="setContent(\'projects\');"><a>Current Projects</a></li>
-          <li class="link" onclick="setContent(\'apps\');"><a>Releases</a></li>
-          <li class="link" onclick="setContent(\'community\');"><a>Community</a></li>
-          <li class="link" onclick="setContent(\'about\');"><a>About</a></li>
-        </ul>
-      </div> 
-    </div>
     <div id="content">
       <div id="home">
-        <div>
-      <br>
-      <h1>JAMES FENN</h1>
-      <hr>
-      <h2>About Me</h2>
-      <p>
+        <h1>JAMES FENN</h1>
+        <hr>
+        <h2>About Me</h2>
+        <p>
           Android developer. Fluently speaks Java, JavaScript, HTML, C++, and occasionally (very occasionally) PHP. I also enjoy web design and creating basic graphics in my free time.
           <br>
           I have a play store account <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>, and a few projects awaiting publication can be found on the <a href="http://theandroidmaster.github.io/new/releases.html">releases</a> page.
-      </p>
-      <hr>
-      <h2>Projects</h2>
-      <div id="projects">
-      </div>
-    </div>
-    <script>
-      var repoContent = new XMLHttpRequest();
-      repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
-      repoContent.onreadystatechange = function () {
-        if(repoContent.readyState === 4) {
-          if(repoContent.status === 200 || repoContent.status == 0) {
-            var obj = JSON.parse(repoContent.responseText);
-            for (var i = 0; true; i++) {
-              if (obj[i] == null) break;
-              if (obj[i].fork) continue;
-              var name = obj[i].name + " - " + obj[i].description;
-              var desc = "This project was created at " + obj[i].updated_at + ". It currently has " + obj[i].open_issues_count + " issues and " + obj[i].stargazers_count + " stars. There are " + obj[i].forks_count + " forks to the repository, and it's primary language is " + obj[i].language + ".";
-              var url = "https://github.com/" + obj[i].full_name;
-              document.getElementById('projects').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'" 
-                + url 
-                + "\'\"><h3>" 
-                + name 
-                + "</h3><p>" 
-                + desc 
-                + "</p><br>"
-                + obj[i].stargazers_count
-                + " <span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> "
-                + obj[i].size
-                + " <span class=\"glyphicon glyphicon-file\" aria-hidden=\"true\"></span> ";
+        </p>
+        <hr>
+        <h2>Projects</h2>
+        <div id="repos"></div>
+        <script>
+          var repoContent = new XMLHttpRequest();
+          repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
+          repoContent.onreadystatechange = function () {
+            if(repoContent.readyState === 4) {
+              if(repoContent.status === 200 || repoContent.status == 0) {
+                var obj = JSON.parse(repoContent.responseText);
+                for (var i = 0; true; i++) {
+                  if (obj[i] == null) break;
+                  if (obj[i].fork) continue;
+                  var name = obj[i].name + " - " + obj[i].description;
+                  var desc = "This project was created at " + obj[i].updated_at + ". It currently has " + obj[i].open_issues_count + " issues and " + obj[i].stargazers_count + " stars. There are " + obj[i].forks_count + " forks to the repository, and it's primary language is " + obj[i].language + ".";
+                  var url = "https://github.com/" + obj[i].full_name;
+                  document.getElementById('repos').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'" 
+                    + url 
+                    + "\'\"><h3>" 
+                    + name 
+                    + "</h3><p>" 
+                    + desc 
+                    + "</p><br>"
+                    + obj[i].stargazers_count
+                    + " <span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> "
+                    + obj[i].size
+                    + " <span class=\"glyphicon glyphicon-file\" aria-hidden=\"true\"></span> "
+                    + "</div>";
+                }
+              }
             }
           }
-        }
-      }
-      repoContent.send(null);
-    </script>
-        
+          repoContent.send(null);
+        </script>
       </div>
-      <div id="projects"></div>
-      <div id="apps"></div>
-      <div id="community"></div>
-      <div id="about"></div>
+      
+      <div id="activity">
+        <script>
+          var activity = new XMLHttpRequest();
+          activity.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
+          activity.onreadystatechange = function () {
+            if (activity.readyState === 4) {
+              if (activity.status === 200 || activity.status == 0) {
+                var obj = JSON.parse(activity.responseText);
+                for (var i = 0; true; i++) {
+                  if (obj[i] == null) break;
+                  var title = "";
+                  var message = obj[i].repo.name;
+                  var url = obj[i].repo.name;
+                  if (obj[i].type == "PushEvent") {
+                    title = "Pushed commit to " + obj[i].repo.name.split('/')[1];
+                    message = obj[i].payload.commits[0].message;
+                  } else if (obj[i].type == "WatchEvent") {
+                    title = "Starred " + obj[i].repo.name;
+                  } else if (obj[i].type == "MemberEvent") {
+                    title = obj[i].payload.action + " " + obj[i].payload.member.login;
+                  } else if (obj[i].type == "IssueCommentEvent") {
+                    title = obj[i].payload.issue.title;
+                  } else if (obj[i].type == "CreateEvent") {
+                    title = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
+                  } else if (obj[i].type == "ForkEvent") {
+                    title = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
+                  } else if (obj[i].type == "IssuesEvent") {
+                    title = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
+                  } else if (obj[i].type == "DeleteEvent") {
+                    title = "Deleted " + obj[i].repo.name;
+                  } else if (obj[i].type == "PullRequestEvent") {
+                    title = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
+                  } else if (obj[i].type == 'CommitCommentEvent') {
+                    title = "Commented on commit " + obj[i].payload.comment.commit_id;
+                    message = obj[i].payload.comment.body;
+                  }
+                  document.getElementById('activity').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'https://github.com/" + url + "\'\">" + "<h4>" + title + "</h4><p>" + message + "</p></div>";
+                }
+              }
+            }
+          };
+          activity.send(null);
+        </script>
+      </div>
+      
+      <div id="apps">
+          
+      </div>
+      
+      <div id="community">
+          
+      </div>
+      
+      <div id="about">
+          
+      </div>
+    </div>
+    
+    <div id="sidebar">
+      <div class="link" onclick="setContent(1);">Home</div>
+      <div class="link" onclick="setContent(2);">Activity</div>
+      <div class="link" onclick="setContent(3);">Releases</div>
+      <div class="link" onclick="setContent(4);">Community</div>
+      <div class="link" onclick="setContent(5);">About</a></div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
-    <script>
-      function setContent(id) {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("projects").style.display = "none";
-        document.getElementById("apps").style.display = "none";
-        document.getElementById("community").style.display = "none";
-        document.getElementById("about").style.display = "none";
+    <script>        
+      function setContent(content) {
+        if (content == 1) document.getElementById("home").style.display = "block";
+        else document.getElementById("home").style.display = "none";
         
-        document.getElementById(id).style.display = "visible";
+        if (content == 2) document.getElementById("activity").style.display = "block";
+        else document.getElementById("activity").style.display = "none";
+        
+        if (content == 3) document.getElementById("apps").style.display = "block";
+        else document.getElementById("apps").style.display = "none";
+        
+        if (content == 4) document.getElementById("community").style.display = "block";
+        else document.getElementById("community").style.display = "none";
+        
+        if (content == 5) document.getElementById("about").style.display = "block";
+        else document.getElementById("about").style.display = "none";
       }
     </script>
   </body>
