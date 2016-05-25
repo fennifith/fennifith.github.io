@@ -116,24 +116,81 @@
     <div id="sidebar">
       <div id="side">
         <ul id="list">
-          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/home.html\');"><a>Home</a></li>
-          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/projects.html\');"><a>Current Projects</a></li>
-          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/apps.html\');"><a>Releases</a></li>
-          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/community.html\');"><a>Community</a></li>
-          <li class="link" onclick="content(\'http://theandroidmaster.github.io/new/about.html\');"><a>About</a></li>
+          <li class="link" onclick="setContent(\'home\');"><a>Home</a></li>
+          <li class="link" onclick="setContent(\'projects\');"><a>Current Projects</a></li>
+          <li class="link" onclick="setContent(\'apps\');"><a>Releases</a></li>
+          <li class="link" onclick="setContent(\'community\');"><a>Community</a></li>
+          <li class="link" onclick="setContent(\'about\');"><a>About</a></li>
         </ul>
       </div> 
     </div>
-    <div id="content">
-      <iframe id="iframe" src="home.html"></iframe>
+    <div>
+      <div id="home">
+        <div class="content">
+      <br>
+      <h1>JAMES FENN</h1>
+      <hr>
+      <h2>About Me</h2>
+      <p>
+          Android developer. Fluently speaks Java, JavaScript, HTML, C++, and occasionally (very occasionally) PHP. I also enjoy web design and creating basic graphics in my free time.
+          <br>
+          I have a play store account <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>, and a few projects awaiting publication can be found on the <a href="http://theandroidmaster.github.io/new/releases.html">releases</a> page.
+      </p>
+      <hr>
+      <h2>Projects</h2>
+      <div id="projects">
+      </div>
+    </div>
+    <script>
+      var repoContent = new XMLHttpRequest();
+      repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
+      repoContent.onreadystatechange = function () {
+        if(repoContent.readyState === 4) {
+          if(repoContent.status === 200 || repoContent.status == 0) {
+            var obj = JSON.parse(repoContent.responseText);
+            for (var i = 0; true; i++) {
+              if (obj[i] == null) break;
+              if (obj[i].fork) continue;
+              var name = obj[i].name + " - " + obj[i].description;
+              var desc = "This project was created at " + obj[i].updated_at + ". It currently has " + obj[i].open_issues_count + " issues and " + obj[i].stargazers_count + " stars. There are " + obj[i].forks_count + " forks to the repository, and it's primary language is " + obj[i].language + ".";
+              var url = "https://github.com/" + obj[i].full_name;
+              document.getElementById('projects').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'" 
+                + url 
+                + "\'\"><h3>" 
+                + name 
+                + "</h3><p>" 
+                + desc 
+                + "</p><br>"
+                + obj[i].stargazers_count
+                + " <span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> "
+                + obj[i].size
+                + " <span class=\"glyphicon glyphicon-file\" aria-hidden=\"true\"></span> ";
+            }
+          }
+        }
+      }
+      repoContent.send(null);
+    </script>
+        
+      </div>
+      <div id="projects"></div>
+      <div id="apps"></div>
+      <div id="community"></div>
+      <div id="about"></div>
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     <script>
-      function content(url) {
-        document.getElementById('iframe').src = url;
+      function setContent(id) {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("projects").style.display = "none";
+        document.getElementById("apps").style.display = "none";
+        document.getElementById("community").style.display = "none";
+        document.getElementById("about").style.display = "none";
+        
+        document.getElementById(id).style.display = "visible";
       }
     </script>
   </body>
