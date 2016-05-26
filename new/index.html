@@ -151,7 +151,7 @@
                     + name 
                     + "</h3></div><div class=\'panel-body\'>" 
                     + desc 
-                    + "<br>"
+                    + "<br><br>"
                     + obj[i].stargazers_count
                     + " <span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> "
                     + obj[i].size
@@ -178,6 +178,7 @@
                   var title = "";
                   var message = obj[i].repo.name;
                   var url = obj[i].repo.name;
+                  var style = "default";
                   if (obj[i].type == "PushEvent") {
                     title = "Pushed commit to " + obj[i].repo.name.split('/')[1];
                     message = obj[i].payload.commits[0].message;
@@ -189,19 +190,22 @@
                     title = obj[i].payload.issue.title;
                   } else if (obj[i].type == "CreateEvent") {
                     title = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
+                    style = "success";
                   } else if (obj[i].type == "ForkEvent") {
                     title = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
                   } else if (obj[i].type == "IssuesEvent") {
                     title = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
+                    style = "warning";
                   } else if (obj[i].type == "DeleteEvent") {
                     title = "Deleted " + obj[i].repo.name;
+                    style = "danger";
                   } else if (obj[i].type == "PullRequestEvent") {
                     title = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
                   } else if (obj[i].type == 'CommitCommentEvent') {
                     title = "Commented on commit " + obj[i].payload.comment.commit_id;
                     message = obj[i].payload.comment.body;
                   }
-                  document.getElementById('activity').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'https://github.com/" + url + "\'\">" + "<h4>" + title + "</h4><p>" + message + "</p></div>";
+                  document.getElementById('activity').innerHTML += "<div class=\'panel panel-" + style + "\' onclick=\"window.location.href = \'https://github.com/" + url + "\'\">" + "<div class=\'panel-heading\'><h3 class=\'panel-title\'>" + title + "</h3></div><div class=\'panel-body\'>" + message + "</div></div>";
                 }
               }
             }
