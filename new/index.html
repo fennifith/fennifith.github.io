@@ -145,18 +145,18 @@
                   var name = obj[i].name + " - " + obj[i].description;
                   var desc = "This project was created at " + obj[i].updated_at + ". It currently has " + obj[i].open_issues_count + " issues and " + obj[i].stargazers_count + " stars. There are " + obj[i].forks_count + " forks to the repository, and it's primary language is " + obj[i].language + ".";
                   var url = "https://github.com/" + obj[i].full_name;
-                  document.getElementById('repos').innerHTML += "<div class=\'clickable\' onclick=\"window.location.href = \'" 
+                  document.getElementById('repos').innerHTML += "<div class=\'panel panel-default\' onclick=\"window.location.href = \'" 
                     + url 
-                    + "\'\"><h3>" 
+                    + "\'\"><div class=\'panel-heading\'><h3 class=\'panel-title\'>" 
                     + name 
-                    + "</h3><p>" 
+                    + "</h3></div><div class=\'panel-body\'>" 
                     + desc 
-                    + "</p><br>"
+                    + "<br>"
                     + obj[i].stargazers_count
                     + " <span class=\"glyphicon glyphicon-star\" aria-hidden=\"true\"></span> "
                     + obj[i].size
                     + " <span class=\"glyphicon glyphicon-file\" aria-hidden=\"true\"></span> "
-                    + "</div>";
+                    + "</div></div>";
                 }
               }
             }
