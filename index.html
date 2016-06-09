@@ -317,11 +317,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </iron-collapse>
 
-              <paper-button onclick="sayHi()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
+              <paper-button onclick="document.querySelector('#hitoast').open()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
               </paper-button>
+              
+              <paper-toast id="hitoast" class="fit-bottom" text="Hi!" duration="1"></paper-toast>
               
               <br>
               <br>
