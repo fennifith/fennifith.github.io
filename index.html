@@ -457,8 +457,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
+  
   <script type="text/javascript">
-  function createCORSRequest(method, url) {
+    function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
       xhr.open(method, url, true);
@@ -469,8 +470,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       xhr = null;
     }
     return xhr;
-  }
+    }
+  </script>
   
+  <script type="text/javascript">  
   document.onload = function () {
       var repoContent = new XMLHttpRequest();
   repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
