@@ -490,7 +490,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       if (obj[i].assets[a] == null) break;
                       assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
                     }
-                    document.getElementById(id).innerHTML += "<h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<hr>";
+                    document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "</div>";
                   }
                 }
               }
