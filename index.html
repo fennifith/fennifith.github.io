@@ -262,27 +262,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <h1>Current Projects:</h1>
     
     <div id="repolist"></div>
-    
-    <script>
-  var repoContent = new XMLHttpRequest();
-  repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
-  repoContent.onreadystatechange = function () {
-    if(repoContent.readyState === 4) {
-      if(repoContent.status === 200 || repoContent.status == 0) {
-        var obj = JSON.parse(repoContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          if (obj[i].fork) continue;
-          var name = obj[i].name;
-          var desc = obj[i].description;
-          var url = "https://github.com/" + name;
-          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
-        }
-      }
-    }
-  }
-  repoContent.send(null);
-              </script>
               </paper-material>
               <paper-material elevation="1">
                 <img src="/images/headers/3appsheader.png"></img>
@@ -317,13 +296,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </iron-collapse>
 
-              <paper-button onclick="document.querySelector('#hitoast').open()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
+              <paper-button onclick="document.querySelector('#toast').show()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
                 <div class="button" style="position:relative">
                   <paper-ripple></paper-ripple>
                 </div>
               </paper-button>
-              
-              <paper-toast id="hitoast" class="fit-bottom" text="Hi!" duration="1"></paper-toast>
               
               <br>
               <br>
@@ -331,236 +308,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <script src="https://apis.google.com/js/platform.js" async defer></script>
               <div class="g-plusone" data-annotation="inline" data-width="300" data-href="http://theandroidmaster.github.io"></div>
 
-              <paper-toast id="toast1" text="Hi"></paper-toast>
-            </section>
-            
-            <section data-route="articles">
-              
-              <paper-material elevation="1">
-                <iron-pages selected="0" id="articlecontent">
-                  <div style="margin:16px;">Hi! Press 'Next' to continue :)</div>
-                  <div style="margin:16px;">Something</div>
-                </iron-pages>
-              </paper-material>
-              
-              <paper-button onclick="document.querySelector("#articlecontent").selectPrevious();" id="previous" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Previous
-                <div class="button" style="position:relative">
-                  <paper-ripple></paper-ripple>
-                </div>
-              </paper-button>
-              
-              <paper-button onclick="document.querySelector("#articlecontent").selectNext();" id="next" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Next
-                <div class="button" style="position:relative">
-                  <paper-ripple></paper-ripple>
-                </div>
-              </paper-button>
-              
-              <script type="text/javascript">
-                var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", "http://theandroidmaster.github.io/apps/articles.txt", false);
-    rawFile.onreadystatechange = function () {
-      if(rawFile.readyState === 4) {
-        if(rawFile.status === 200 || rawFile.status == 0) {
-          var allText = rawFile.responseText;
-          var allTextSplit = allText.split('|');
-          for (var i = 0; i < allTextSplit.length; i++) {
-            var s = allTextSplit[i];
-            document.getElementById('articlecontent').innerHTML += "<div style=\"margin:16px;\"><h1>" + s.split('^')[0] + "</h1>" + s.split('^')[1] + "</div>";
-          }
-        }
-      }
-    }
-    rawFile.send(null);
-              </script>
+              <paper-toast id="toast" text="Hi"></paper-toast>
             </section>
             
             <section data-route="apps">
-              <paper-material elevation="1">
-                <div>
-    
-    <div class="horizon">
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width: 100%; height: 100%;  color:#FAFAFA;" icon="trending-up"></iron-icon>
-          </div>
-          <br>
-          Built for Speed
-        </h1>
-        <p class="ctr">These apps make use of lightweight resources to greatly improve loading speed and performance.</p>
-        <paper-button id="speed" onclick="document.querySelector('#pages').selected = 1; window.scrollTo(0,document.body.scrollHeight);  document.getElementById('speed').disabled = true; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;">View Collection</paper-button>
-      </div>
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="settings"></iron-icon>
-          </div>
-          <br>
-          Full Customization
-        </h1>
-        <p class="ctr">This collection of apps supports theming of multiple components.</p>
-        <paper-button id="theme" onclick="document.querySelector('#pages').selected = 2; window.scrollTo(0,document.body.scrollHeight);  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = true; document.getElementById('design').disabled = false;">View Collection</paper-button>
-      </div>
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="invert-colors"></iron-icon>
-          </div>
-          <br>
-          Made for Android
-        </h1>
-        <p class="ctr">These apps have quality design and are meant to look good running on the latest devices.</p>
-        <paper-button id="design" onclick="document.querySelector('#pages').selected = 3; window.scrollTo(0,document.body.scrollHeight); document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = true;">View Collection</paper-button>
-      </div>
-    </div>
-    
-    <iron-pages id="pages" selected="0">
-      <div>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.rocket';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/rocket.png"></img>
-            <paper-item-body two-line>
-              <div>Rocket</div>
-              <div secondary>Don't touch the top. Or the bottom. Or the other rockets...</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/fornax.png"></img>
-            <paper-item-body two-line>
-              <div>Fornax</div>
-              <div secondary>A collection of flat wallpapers.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.paragraphicalexpander';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/p_ex.png"></img>
-            <paper-item-body two-line>
-              <div>Paragraphical Expander</div>
-              <div secondary>An essay-typing app that doubles, triples, or quadruples the spaces while replacing words with longer phrases to increase the size.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.calculator';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/calc.png"></img>
-            <paper-item-body two-line>
-              <div>Card Calculator</div>
-              <div secondary>A basic calculator that shows a detailed equation history in a list of cards.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplebrowser';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/browser.png"></img>
-            <paper-item-body two-line>
-              <div>Simple Browser</div>
-              <div secondary>A material design browser app, focusing on the implementation of tabs on smaller screens.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplecamera';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/camera.png"></img>
-            <paper-item-body two-line>
-              <div>Simple Camera</div>
-              <div secondary>A small camera app in material design.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.chargescreen';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/charge_screen.png"></img>
-            <paper-item-body two-line>
-              <div>Charge Screen</div>
-              <div secondary>A screen that shows the battery life whenever your phone is plugged in to charge.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.felixlauncher';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/felix.png"></img>
-            <paper-item-body two-line>
-              <div>Felix Launcher</div>
-              <div secondary>A dark-themed launcher, built to save battery life on older devices.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.listlauncher';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/list_launcher.png"></img>
-            <paper-item-body two-line>
-              <div>List Launcher</div>
-              <div secondary>A launcher based on a list of cards.</div>
-            </paper-item-body>
-          </paper-item>
-      </div>
-      <div>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplebrowser';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/browser.png"></img>
-            <paper-item-body two-line>
-              <div>Simple Browser</div>
-              <div secondary>A material design browser app, focusing on the implementation of tabs on smaller screens.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.simplecamera';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/camera.png"></img>
-            <paper-item-body two-line>
-              <div>Simple Camera</div>
-              <div secondary>A small camera app in material design.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.felixlauncher';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/felix.png"></img>
-            <paper-item-body two-line>
-              <div>Felix Launcher</div>
-              <div secondary>A dark-themed launcher, built to save battery life on older devices.</div>
-            </paper-item-body>
-          </paper-item>
-        <paper-button onclick="document.querySelector('#pages').selected = 0;  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
-          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
-        </paper-button>
-      </div>
-      <div>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.calculator';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/calc.png"></img>
-            <paper-item-body two-line>
-              <div>Card Calculator</div>
-              <div secondary>A basic calculator that shows a detailed equation history in a list of cards.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.chargescreen';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/charge_screen.png"></img>
-            <paper-item-body two-line>
-              <div>Charge Screen</div>
-              <div secondary>A screen that shows the battery life whenever your phone is plugged in to charge.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.listlauncher';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/list_launcher.png"></img>
-            <paper-item-body two-line>
-              <div>List Launcher</div>
-              <div secondary>A launcher based on a list of cards.</div>
-            </paper-item-body>
-          </paper-item>
-        <paper-button onclick="document.querySelector('#pages').selected = 0;  document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
-          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
-        </paper-button>
-      </div>
-      <div>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.rocket';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/rocket.png"></img>
-            <paper-item-body two-line>
-              <div>Rocket</div>
-              <div secondary>Don't touch the top. Or the bottom. Or the other rockets...</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.wallpapers';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/fornax.png"></img>
-            <paper-item-body two-line>
-              <div>Fornax</div>
-              <div secondary>A collection of flat wallpapers.</div>
-            </paper-item-body>
-          </paper-item>
-          <paper-item onclick="location.href='https://play.google.com/store/apps/details?id=com.james.paragraphicalexpander';">
-            <img class="icon" src="http://theandroidmaster.github.io/images/icons/p_ex.png"></img>
-            <paper-item-body two-line>
-              <div>Paragraphical Expander</div>
-              <div secondary>An essay-typing app that doubles, triples, or quadruples the spaces while replacing words with longer phrases to increase the size.</div>
-            </paper-item-body>
-          </paper-item>
-        <paper-button onclick="document.querySelector('#pages').selected = 0; document.getElementById('speed').disabled = false; document.getElementById('theme').disabled = false; document.getElementById('design').disabled = false;" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">View All
-          <div class="button" style="position:relative"><paper-ripple></paper-ripple></div>
-        </paper-button>
-      </div>
-    </iron-pages>
-  </div>
-              </paper-material>
+                <div id="applist"></div>
+                
                 <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
             </section>
             
@@ -594,25 +347,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
               </paper-material>
               
-              <script>
-  var userContent = new XMLHttpRequest();
-  userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
-  userContent.onreadystatechange = function () {
-    if(userContent.readyState === 4) {
-      if(userContent.status === 200 || userContent.status == 0) {
-        var obj = JSON.parse(userContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          var name = obj[i].login;
-          var url = "https://github.com/" + name;
-          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary><a href=\'" + url + "\'>" + url + "</a></div></paper-item-body></paper-item>";
-        }
-      }
-    }
-  }
-  userContent.send(null);
-              </script>
-              
               <paper-material elevation="1">
                 <h1>Teamwork!</h1>
                 <p>While I try to make all of my apps myself, I usually end up relying on others when I get stuck, so thanks to all the people on google+, stackoverflow, and github that have helped me.</p>
@@ -624,53 +358,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <div id="relatedcontent"></div>
               </paper-material>
               
-              <script>
-  var rawContent = new XMLHttpRequest();
-  rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
-  rawContent.onreadystatechange = function () {
-    if (rawContent.readyState === 4) {
-      if (rawContent.status === 200 || rawContent.status == 0) {
-        var obj = JSON.parse(rawContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          var message = "";
-          var subtitle = obj[i].repo.name;
-          var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
-          if (obj[i].type == "PushEvent") {
-            message = obj[i].payload.commits[0].message;
-            icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
-          } else if (obj[i].type == "WatchEvent") {
-            message = "Starred " + obj[i].repo.name;
-            icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
-          } else if (obj[i].type == "MemberEvent") {
-            message = obj[i].payload.action + " " + obj[i].payload.member.login;
-            icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
-          } else if (obj[i].type == "IssueCommentEvent") {
-            message = obj[i].payload.issue.title;
-            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
-          } else if (obj[i].type == "CreateEvent") {
-            message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
-            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
-          } else if (obj[i].type == "ForkEvent") {
-            message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
-            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
-          } else if (obj[i].type == "IssuesEvent") {
-            message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
-            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
-          } else if (obj[i].type == "DeleteEvent") {
-            message = "Deleted " + obj[i].repo.name;
-            icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
-          } else if (obj[i].type == "PullRequestEvent") {
-            message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
-            icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
-          }
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
-        }
-      }
-    }
-  };
-  rawContent.send(null);
-</script>
             </section>
 
             <section data-route="contact" class="nopadding">
@@ -783,18 +470,100 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     return xhr;
   }
-  function sayHi() {
-    var xhr = createCORSRequest('GET', "http://justinkruit.nl/stuff/jamesfenn/counter/counter.php");
-    if (!xhr) {
-      throw new Error('CORS not supported');
+  
+  var repoContent = new XMLHttpRequest();
+  repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
+  repoContent.onreadystatechange = function () {
+    if(repoContent.readyState === 4) {
+      if(repoContent.status === 200 || repoContent.status == 0) {
+        var obj = JSON.parse(repoContent.responseText);
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
+          if (obj[i].fork || obj[i].homepage == null) continue;
+          var name = obj[i].name;
+          var desc = obj[i].description;
+          var url = obj[i].html_url;
+          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].full_name + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
+          
+          document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><br><p>" + desc + "</p><hr><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + url + "\"><paper-button>Github</paper-button></a><a href=\"" + url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
+        }
+      }
     }
-    xhr.onload = function() {
-      var count = xhr.responseText;
-      document.getElementById('#toast1').text = count + "people have said hi!";
-      document.querySelector('#toast1').show();
-    }
-    xhr.send(); 
   }
+  repoContent.send(null);
+  
+  var userContent = new XMLHttpRequest();
+  userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
+  userContent.onreadystatechange = function () {
+    if(userContent.readyState === 4) {
+      if(userContent.status === 200 || userContent.status == 0) {
+        var obj = JSON.parse(userContent.responseText);
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
+          var personContent = new XMLHttpRequest();
+          personContent.open("GET", obj[i].url, false);
+          personContent.onreadystatechange = function () {
+            if(personContent.readyState === 4) {
+              if(personContent.status === 200 || personContent.status == 0) {
+                var obj = JSON.parse(personContent.responseText);
+                var bio = obj.bio;
+                if (bio == null) bio = "This is a person.";
+                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj.html_url + "\'\"><paper-item-body two-line><div>" + obj.name + "</div><div secondary>" + obj.bio + "</div></paper-item-body></paper-item>";
+              }
+            }
+          }
+          personContent.send(null);
+        }
+      }
+    }
+  }
+  userContent.send(null);
+  
+  var rawContent = new XMLHttpRequest();
+  rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
+  rawContent.onreadystatechange = function () {
+    if (rawContent.readyState === 4) {
+      if (rawContent.status === 200 || rawContent.status == 0) {
+        var obj = JSON.parse(rawContent.responseText);
+        for (var i = 0; true; i++) {
+          if (obj[i] == null) break;
+          var message = "";
+          var subtitle = obj[i].repo.name;
+          var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
+          if (obj[i].type == "PushEvent") {
+            message = obj[i].payload.commits[0].message;
+            icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
+          } else if (obj[i].type == "WatchEvent") {
+            message = "Starred " + obj[i].repo.name;
+            icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
+          } else if (obj[i].type == "MemberEvent") {
+            message = obj[i].payload.action + " " + obj[i].payload.member.login;
+            icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
+          } else if (obj[i].type == "IssueCommentEvent") {
+            message = obj[i].payload.issue.title;
+            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+          } else if (obj[i].type == "CreateEvent") {
+            message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
+            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+          } else if (obj[i].type == "ForkEvent") {
+            message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
+            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+          } else if (obj[i].type == "IssuesEvent") {
+            message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
+            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+          } else if (obj[i].type == "DeleteEvent") {
+            message = "Deleted " + obj[i].repo.name;
+            icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
+          } else if (obj[i].type == "PullRequestEvent") {
+            message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
+            icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
+          }
+          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+        }
+      }
+    }
+  };
+  rawContent.send(null);
   </script>
 </body>
 </html>
