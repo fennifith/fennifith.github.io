@@ -474,8 +474,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </script>
   
   <script type="text/javascript">  
-  document.onload = function () {
-      var repoContent = new XMLHttpRequest();
+  var repoContent = new XMLHttpRequest();
   repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
   repoContent.onreadystatechange = function () {
     if(repoContent.readyState === 4) {
@@ -568,7 +567,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
   rawContent.send(null);
-  };
   </script>
 </body>
 </html>
