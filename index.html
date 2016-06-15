@@ -321,7 +321,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="apks">
-              <div id="releaselist"></div>
+              <paper-material elevation="1">
+                <div id="releaselist"></div>
+              </paper-material>
             </section>
 
             <section data-route="community">
@@ -474,7 +476,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + name + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + name + "\"></iron-collapse></paper-item>";
           
             var releaseContent = new XMLHttpRequest();
-            releaseContent.open("GET", obj[i].releases_url, false);
+            releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
             releaseContent.onreadystatechange = function () {
               if(releaseContent.readyState === 4) {
                 if(releaseContent.status === 200 || releaseContent.status == 0) {
