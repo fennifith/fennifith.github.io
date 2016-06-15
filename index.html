@@ -476,6 +476,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + name + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + name + "\"></iron-collapse></paper-item>";
           
             var releaseContent = new XMLHttpRequest();
+            releaseContent.id = id;
             releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
             releaseContent.onreadystatechange = function () {
               if(releaseContent.readyState === 4) {
@@ -490,7 +491,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       if (obj[i].assets[a] == null) break;
                       assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
                     }
-                    document.getElementById(id).innerHTML += "<h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<hr>";
+                    document.getElementById(releaseContent.id).innerHTML += "<h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<hr>";
                   }
                 }
               }
