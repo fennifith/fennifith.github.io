@@ -48,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       -moz-transition: background-color .25s;
       -webkit-transition: background-color .25s;
     }
-    img {
+    iron-image {
       width:100%;
       max-height:100%;
     }
@@ -94,6 +94,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
     iron-pages {
       padding: 0px;
+    }
+    hr {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border-top: 1px solid #eee;
     }
     @media (min-width: 801px) {
       section {
@@ -218,53 +225,49 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <!-- Main Content -->
         <div class="content" style="background: #000000;">
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            
-            
             <section data-route="home">
               <paper-material elevation="4">
-                
                 <div class="horizon">
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width: 100%; height: 100%;  color:#FAFAFA;" icon="face"></iron-icon>
-          </div>
-          <br>
-          Hi
-        </h1>
-        <p class="ctr">My name is James Fenn, I am an android app developer from the UK.</p>
-        <a style="color:#FAFAFA;" data-route="about" href="/about" on-click="onDataRouteClick"><paper-button>About</paper-button></a>
-      </div>
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="send"></iron-icon>
-          </div>
-          <br>
-          Contact Me
-        </h1>
-        <p class="ctr">You can contact me through email, hangouts, or google plus.</p>
-        <a style="color:#FAFAFA;" data-route="contact" href="/contact" on-click="onDataRouteClick"><paper-button>View</paper-button></a>
-      </div>
-      <div class="ctr">
-        <h1 class="ctr">
-          <div class="circ">
-            <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="android"></iron-icon>
-          </div>
-          <br>
-          My Apps
-        </h1>
-        <p class="ctr">All of my apps are listed here, sorted into collections.</p>
-        <paper-button onclick="location.href = 'http://theandroidmaster.github.io/#!/apps'">Apps</paper-button>
-      </div>
-    </div>
+                  <div class="ctr">
+                    <h1 class="ctr">
+                      <div class="circ">
+                        <iron-icon style="width: 100%; height: 100%;  color:#FAFAFA;" icon="face"></iron-icon>
+                      </div>
+                      <br>
+                      Hi
+                    </h1>
+                    <p class="ctr">My name is James Fenn, I am an android app developer from the UK.</p>
+                    <a style="color:#FAFAFA;" data-route="about" href="/about" on-click="onDataRouteClick"><paper-button>About</paper-button></a>
+                  </div>
+                  <div class="ctr">
+                    <h1 class="ctr">
+                      <div class="circ">
+                        <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="send"></iron-icon>
+                      </div>
+                      <br>
+                      Contact Me
+                    </h1>
+                    <p class="ctr">You can contact me through email, hangouts, or google plus.</p>
+                    <a style="color:#FAFAFA;" data-route="contact" href="/contact" on-click="onDataRouteClick"><paper-button>View</paper-button></a>
+                  </div>
+                  <div class="ctr">
+                    <h1 class="ctr">
+                      <div class="circ">
+                        <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="android"></iron-icon>
+                      </div>
+                      <br>
+                      My Apps
+                    </h1>
+                    <p class="ctr">All of my apps are listed here, sorted into collections.</p>
+                    <paper-button onclick="location.href = 'http://theandroidmaster.github.io/#!/apps'">Apps</paper-button>
+                  </div>
+                </div>
     
-    <h1>Current Projects:</h1>
-    
-    <div id="repolist"></div>
+                <h1>Current Projects:</h1>
+                <div id="repolist"></div>
               </paper-material>
               <paper-material elevation="1">
-                <img src="/images/headers/3appsheader.png"></img>
+                <iron-image fade src="/images/headers/3appsheader.png"></iron-image>
                 <h1>Apps</h1>
                 <p class="paper-font-body">
                 If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.
@@ -318,12 +321,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="apks">
-              <paper-material elevation="1">
-                <h1>Apks</h1>
-                <p class="paper-font-body">All of my apks will be uploaded here first, so you should be able to download them as soon as they are generated. Sometimes a few betas might even appear...</p>
-                <iframe src="https://drive.google.com/embeddedfolderview?id=0B5Z3jCEdoXV2Z1JCUmZzWVBiWGc#list"></iframe>
-              </paper-material>
-              <paper-fab icon="add" onclick="location.href='https://drive.google.com/open?id=0B5Z3jCEdoXV2Z1JCUmZzWVBiWGc';"></paper-fab>
+              <div id="releaselist"></div>
             </section>
 
             <section data-route="community">
@@ -357,7 +355,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <div id="relatedcontent"></div>
               </paper-material>
-              
             </section>
 
             <section data-route="contact" class="nopadding">
@@ -469,7 +466,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var desc = obj[i].description;
           document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
           
-          if (obj[i].homepage != null && obj[i].homepage.length > 0) document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
+          if (obj[i].homepage != null && obj[i].homepage.length > 0) {
+            document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
+            
+            
+            var id = "release-" + i;
+            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + name + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + name + "\"></iron-collapse></paper-item>";
+          
+            var releaseContent = new XMLHttpRequest();
+            releaseContent.open("GET", obj[i].releases_url, false);
+            releaseContent.onreadystatechange = function () {
+              if(releaseContent.readyState === 4) {
+                if(releaseContent.status === 200 || releaseContent.status == 0) {
+                  var obj = JSON.parse(releaseContent.responseText);
+                  for (var i = 0; true; i++) {
+                    if (obj[i] == null) break;
+                    var badge = "";
+                    if (obj[i].prerelease) badge = "<paper-badge label=\"Pre-release\"></paper-badge>";
+                    var assets = "";
+                    for (var a = 0; true; a++) {
+                      if (obj[i].assets[a] == null) break;
+                      assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
+                    }
+                    document.getElementById(id).innerHTML += "<h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<hr>";
+                  }
+                }
+              }
+            }
+            releaseContent.send(null);
+          }
         }
       }
     }
@@ -490,9 +515,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if(personContent.readyState === 4) {
               if(personContent.status === 200 || personContent.status == 0) {
                 var obj = JSON.parse(personContent.responseText);
-                var bio = obj.bio;
-                if (bio == null) bio = "This is a person.";
-                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj.html_url + "\'\"><paper-item-body two-line><div>" + obj.name + "</div><div secondary>" + obj.bio + "</div></paper-item-body></paper-item>";
+                var name = obj.login;
+                if (obj.name != null && obj.name.length > 0) name = obj.name;
+                var bio = "This is a person.";
+                if (obj.bio != null && obj.length > 0) bio = obj.bio;
+                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj.html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
               }
             }
           }
