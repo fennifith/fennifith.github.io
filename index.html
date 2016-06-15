@@ -48,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       -moz-transition: background-color .25s;
       -webkit-transition: background-color .25s;
     }
-    iron-image {
+    img {
       width:100%;
       max-height:100%;
     }
@@ -267,7 +267,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <div id="repolist"></div>
               </paper-material>
               <paper-material elevation="1">
-                <iron-image fade src="/images/headers/3appsheader.png"></iron-image>
+                <img src="/images/headers/3appsheader.png"></img>
                 <h1>Apps</h1>
                 <p class="paper-font-body">
                 If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.
@@ -484,13 +484,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   for (var i = 0; true; i++) {
                     if (obj[i] == null) break;
                     var badge = "";
-                    if (obj[i].prerelease) badge = "<paper-badge label=\"Pre-release\"></paper-badge>";
+                    if (obj[i].prerelease) badge = "<p style=\"color:red;\">PRE-RELEASE</p>";
                     var assets = "";
                     for (var a = 0; true; a++) {
                       if (obj[i].assets[a] == null) break;
                       assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
                     }
-                    document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "</div>";
+                    document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
                   }
                 }
               }
