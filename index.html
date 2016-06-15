@@ -454,26 +454,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
       </paper-scroll-header-panel>
     </paper-drawer-panel>
-  </template>
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  
-  <script type="text/javascript">
-    function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
-    return xhr;
-    }
-  </script>
-  
-  <script type="text/javascript">  
+    
+    <script type="text/javascript">  
   var repoContent = new XMLHttpRequest();
   repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
   repoContent.onreadystatechange = function () {
@@ -567,6 +549,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   };
   rawContent.send(null);
+  </script>
+  </template>
+  <!-- build:js scripts/app.js -->
+  <script src="scripts/app.js"></script>
+  
+  <script type="text/javascript">
+    function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      xhr = null;
+    }
+    return xhr;
+    }
   </script>
 </body>
 </html>
