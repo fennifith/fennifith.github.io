@@ -473,7 +473,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     document.getElementById(id).innerHTML = "";
     
     var releaseContent = new XMLHttpRequest();
-    releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
+    releaseContent.open("GET", url, false);
     releaseContent.onreadystatechange = function () {
       if(releaseContent.readyState === 4) {
         if(releaseContent.status === 200 || releaseContent.status == 0) {
