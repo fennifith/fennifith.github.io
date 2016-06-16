@@ -473,7 +473,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             
             var id = "release-" + i;
-            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\"></iron-collapse></paper-item>";
+            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";
           
             var releaseContent = new XMLHttpRequest();
             releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
