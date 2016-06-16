@@ -335,13 +335,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/101325935187431392674/about';">
                     <paper-item-body two-line>
                       <div>Anas Khan</div>
-                      <div secondary><a href="https://plus.google.com/101325935187431392674/about">plus.google.com/101325935187431392674</a></div>
+                      <div secondary>Designer. Likes oreos. And sleep.</div>
                     </paper-item-body>
                   </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://zheano.blogspot.com/';">
+                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://zheanoblog.eu/';">
                     <paper-item-body two-line>
                       <div>Zan Cerne</div>
-                      <div secondary><a href="http://zheano.blogspot.com/">zheano.blogspot.com</a></div>
+                      <div secondary>A designer and blogger from Slovenia.</div>
                     </paper-item-body>
                   </paper-item>
                 </div>
@@ -517,11 +517,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if(personContent.readyState === 4) {
               if(personContent.status === 200 || personContent.status == 0) {
                 var obj = JSON.parse(personContent.responseText);
+                
+                var url = obj.html_url;
+                if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
+                
                 var name = obj.login;
                 if (obj.name != null && obj.name.length > 0) name = obj.name;
+                
                 var bio = "This is a person.";
-                if (obj.bio != null && obj.length > 0) bio = obj.bio;
-                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj.html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
+                if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
+                
+                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
               }
             }
           }
