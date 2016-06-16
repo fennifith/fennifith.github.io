@@ -331,20 +331,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <h1>The Community</h1>
                 <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
                 
-                <div class="list short" role="listbox" id="userlist">
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/101325935187431392674/about';">
-                    <paper-item-body two-line>
-                      <div>Anas Khan</div>
-                      <div secondary>Designer. Likes oreos. And sleep.</div>
-                    </paper-item-body>
-                  </paper-item>
-                  <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://zheanoblog.eu/';">
-                    <paper-item-body two-line>
-                      <div>Zan Cerne</div>
-                      <div secondary>A designer and blogger from Slovenia.</div>
-                    </paper-item-body>
-                  </paper-item>
-                </div>
+                <div class="list short" role="listbox" id="userlist"></div>
               </paper-material>
               
               <paper-material elevation="1">
@@ -498,9 +485,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     requestContent.send(null);
   }
   
-  function getReleases(url, id) {
-    if (document.getElementById(id).innerHTML.length > 0) return;
-    
+  function getReleases(url, id) {    
     var releaseContent = new XMLHttpRequest();
     releaseContent.open("GET", url, false);
     releaseContent.onreadystatechange = function () {
