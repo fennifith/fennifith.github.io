@@ -456,6 +456,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     <script type="text/javascript">  
   var repoContent = new XMLHttpRequest();
+  repoContent.withCredentials = true;
   repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
   repoContent.onreadystatechange = function () {
     if(repoContent.readyState === 4) {
@@ -476,6 +477,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";
           
             var releaseContent = new XMLHttpRequest();
+            releaseContent.withCredentials = true;
             releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
             releaseContent.onreadystatechange = function () {
               if(releaseContent.readyState === 4) {
@@ -504,6 +506,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   repoContent.send(null);
   
   var userContent = new XMLHttpRequest();
+  userContent.withCredentials = true;
   userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
   userContent.onreadystatechange = function () {
     if(userContent.readyState === 4) {
@@ -512,6 +515,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         for (var i = 0; true; i++) {
           if (obj[i] == null) break;
           var personContent = new XMLHttpRequest();
+          personContent.withCredentials = true;
           personContent.open("GET", obj[i].url, false);
           personContent.onreadystatechange = function () {
             if(personContent.readyState === 4) {
@@ -539,6 +543,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   userContent.send(null);
   
   var rawContent = new XMLHttpRequest();
+  rawContent.withCredentials = true;
   rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
   rawContent.onreadystatechange = function () {
     if (rawContent.readyState === 4) {
