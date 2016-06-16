@@ -455,6 +455,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </paper-drawer-panel>
     
     <script type="text/javascript">  
+    
+  function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      xhr.open(method, url, true);
+    } else if (typeof XDomainRequest != "undefined") {
+      xhr = new XDomainRequest();
+      xhr.open(method, url);
+    } else {
+      xhr = null;
+    }
+    return xhr;
+  }
+  
+  function getReleases(url, id) {
+    document.getElementById(id).innerHTML = "";
+    
+    var releaseContent = new XMLHttpRequest();
+    releaseContent.withCredentials = true;
+    releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
+    releaseContent.onreadystatechange = function () {
+      if(releaseContent.readyState === 4) {
+        if(releaseContent.status === 200 || releaseContent.status == 0) {
+          var obj = JSON.parse(releaseContent.responseText);
+          for (var i = 0; true; i++) {
+            if (obj[i] == null) break;
+            var badge = "";
+            if (obj[i].prerelease) badge = "<p style=\"color:red;\">PRE-RELEASE</p>";
+            var assets = "";
+            for (var a = 0; true; a++) {
+              if (obj[i].assets[a] == null) break;
+              assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
+            }
+            document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
+          }
+        }
+      }
+    }
+    releaseContent.send(null);
+  }
+  
+  function getPerson(url) {
+    var personContent = new XMLHttpRequest();
+    personContent.withCredentials = true;
+    personContent.open("GET", obj[i].url, false);
+    personContent.onreadystatechange = function () {
+      if(personContent.readyState === 4) {
+        if(personContent.status === 200 || personContent.status == 0) {
+          var obj = JSON.parse(personContent.responseText);
+          
+          var url = obj.html_url;
+          if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
+          
+          var name = obj.login;
+          if (obj.name != null && obj.name.length > 0) name = obj.name;
+          
+          var bio = "This is a person.";
+          if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
+          
+          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
+        }
+      }
+    }
+    personContent.send(null);
+  }
+    
   var repoContent = new XMLHttpRequest();
   repoContent.withCredentials = true;
   repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
@@ -474,30 +540,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             
             var id = "release-" + i;
-            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle()\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";
-          
-            var releaseContent = new XMLHttpRequest();
-            releaseContent.withCredentials = true;
-            releaseContent.open("GET", obj[i].releases_url.split("{")[0], false);
-            releaseContent.onreadystatechange = function () {
-              if(releaseContent.readyState === 4) {
-                if(releaseContent.status === 200 || releaseContent.status == 0) {
-                  var obj = JSON.parse(releaseContent.responseText);
-                  for (var i = 0; true; i++) {
-                    if (obj[i] == null) break;
-                    var badge = "";
-                    if (obj[i].prerelease) badge = "<p style=\"color:red;\">PRE-RELEASE</p>";
-                    var assets = "";
-                    for (var a = 0; true; a++) {
-                      if (obj[i].assets[a] == null) break;
-                      assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
-                    }
-                    document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
-                  }
-                }
-              }
-            }
-            releaseContent.send(null);
+            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
           }
         }
       }
@@ -514,28 +557,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         var obj = JSON.parse(userContent.responseText);
         for (var i = 0; true; i++) {
           if (obj[i] == null) break;
-          var personContent = new XMLHttpRequest();
-          personContent.withCredentials = true;
-          personContent.open("GET", obj[i].url, false);
-          personContent.onreadystatechange = function () {
-            if(personContent.readyState === 4) {
-              if(personContent.status === 200 || personContent.status == 0) {
-                var obj = JSON.parse(personContent.responseText);
-                
-                var url = obj.html_url;
-                if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
-                
-                var name = obj.login;
-                if (obj.name != null && obj.name.length > 0) name = obj.name;
-                
-                var bio = "This is a person.";
-                if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
-                
-                document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
-              }
-            }
-          }
-          personContent.send(null);
+          setTimeout(getPerson(obj[i].url), i * 1000);
         }
       }
     }
@@ -592,20 +614,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>
-  
-  <script type="text/javascript">
-    function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
-    return xhr;
-    }
-  </script>
 </body>
 </html>
