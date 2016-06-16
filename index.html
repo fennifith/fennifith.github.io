@@ -490,7 +490,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj.rate.remaining == 0) {
             document.querySelector('#ratelimit').show();
           }
-        } else onError(requestContent.status);
+        } else {
+          onError(rawContent.status);
+        }
       }
     }
     requestContent.send(null);
@@ -518,7 +520,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
             document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
-        } else onError(releaseContent.status);
+        } else {
+          onError(rawContent.status);
+        }
       }
     }
     releaseContent.send(null);
@@ -544,7 +548,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
           
           document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
-        } else onError(personContent.status);
+        } else {
+          onError(rawContent.status);
+        }
       }
     }
     personContent.send(null);
@@ -575,7 +581,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               var id = "release-" + i;
               document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
             }
-          } else onError(repoContent.status);
+          }
+        } else {
+          onError(rawContent.status);
         }
       }
     }
@@ -597,7 +605,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if (obj[i] == null) break;
             setTimeout(getPerson(obj[i].url), i * 1000);
           }
-        } else onError(userContent.status);
+        } else {
+          onError(rawContent.status);
+        }
       }
     }
     userContent.send(null);
@@ -649,7 +659,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
             document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
           }
-        } else onError(rawContent.status);
+        } else {
+          onError(rawContent.status);
+        }
       }
     };
     rawContent.send(null);
