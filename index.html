@@ -667,9 +667,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     rawContent.send(null);
   }
   
+  
+  
   Polymer({
+      is: 'dom-bind',
       onPageChange: function() {
-        is: 'dom-bind',
         getPage(document.querySelector('#drawermenu').selected);
       }
     });
