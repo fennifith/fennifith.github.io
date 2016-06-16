@@ -486,8 +486,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       if(requestContent.readyState === 4) {
         if(requestContent.status === 200 || requestContent.status == 0) {
           var obj = JSON.parse(requestContent.responseText);
-          console.log(obj.rate.remaining + " out of " + obj.rate.limit + " requests left");
-          if (obj.rate.remaining == 0) {
+          console.log(obj.resources.core.remaining + " out of " + obj.resources.core.limit + " requests left");
+          if (obj.resources.core.remaining == 0) {
             document.querySelector('#ratelimit').show();
           }
         } else {
@@ -668,7 +668,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   Polymer({
-      is: 'x-custom',
       onPageChange: function() {
         getPage(document.querySelector('#drawermenu').selected);
       }
