@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="paper-font-title">Menu</span>
         </paper-toolbar>
         <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]" iron-select="getPage(document.getElementById('drawermenu').selected);">
           <a data-route="home" href="/" on-click="onDataRouteClick">
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
@@ -454,6 +454,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </paper-scroll-header-panel>
     </paper-drawer-panel>
     
+    <paper-toast id="ratelimit" text="The rate limit of the Github API has been temporarily exceeded. Some content on this site will not display correctly."></paper-toast>
+    <paper-toast id="requesterror" text="An error occured while fetching resources from the Github API. Affected content may not display correctly."></paper-toast>
+    
     <script type="text/javascript">  
     
   function createCORSRequest(method, url) {
@@ -469,13 +472,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     return xhr;
   }
   
+  function onError(status) {
+    if (!document.querySelector('#ratelimit').opened) {
+      document.querySelector('#requesterror').show();
+    }
+    console.log("Request failed, error " + status);
+  }
+  
+  function getRequestLimit() {
+    var requestContent = new XMLHttpRequest();
+    requestContent.open("GET", "https://api.github.com/rate_limit", false);
+    requestContent.onreadystatechange = function () {
+      if(requestContent.readyState === 4) {
+        if(requestContent.status === 200 || requestContent.status == 0) {
+          var obj = JSON.parse(requestContent.responseText);
+          console.log(obj.rate.remaining + " out of " + obj.rate.limit + " requests left");
+          if (obj.rate.remaining == 0) {
+            document.querySelector('#ratelimit').show();
+          }
+        } else onError(requestContent.status);
+      }
+    }
+    requestContent.send(null);
+  }
+  
   function getReleases(url, id) {
-    document.getElementById(id).innerHTML = "";
+    if (document.getElementById(id).innerHTML.length > 0) return;
     
     var releaseContent = new XMLHttpRequest();
     releaseContent.open("GET", url, false);
     releaseContent.onreadystatechange = function () {
       if(releaseContent.readyState === 4) {
+        getRequestLimit();
+      
         if(releaseContent.status === 200 || releaseContent.status == 0) {
           var obj = JSON.parse(releaseContent.responseText);
           for (var i = 0; true; i++) {
@@ -489,7 +518,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
             document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
-        }
+        } else onError(releaseContent.status);
       }
     }
     releaseContent.send(null);
@@ -500,6 +529,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     personContent.open("GET", url, false);
     personContent.onreadystatechange = function () {
       if(personContent.readyState === 4) {
+        getRequestLimit();
+      
         if(personContent.status === 200 || personContent.status == 0) {
           var obj = JSON.parse(personContent.responseText);
           
@@ -513,98 +544,134 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
           
           document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
-        }
+        } else onError(personContent.status);
       }
     }
     personContent.send(null);
   }
+  
+  function getRepos() {
+    if (document.getElementById('repolist').innerHTML.length > 0) return;
     
-  var repoContent = new XMLHttpRequest();
-  repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
-  repoContent.onreadystatechange = function () {
-    if(repoContent.readyState === 4) {
-      if(repoContent.status === 200 || repoContent.status == 0) {
-        var obj = JSON.parse(repoContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          if (obj[i].fork) continue;
-          var name = obj[i].name;
-          var desc = obj[i].description;
-          document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
+    var repoContent = new XMLHttpRequest();
+    repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
+    repoContent.onreadystatechange = function () {
+      if(repoContent.readyState === 4) {
+        getRequestLimit();
+      
+        if(repoContent.status === 200 || repoContent.status == 0) {
+          var obj = JSON.parse(repoContent.responseText);
+          for (var i = 0; true; i++) {
+            if (obj[i] == null) break;
+            if (obj[i].fork) continue;
+            var name = obj[i].name;
+            var desc = obj[i].description;
+            document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
           
-          if (obj[i].homepage != null && obj[i].homepage.length > 0) {
-            document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
+            if (obj[i].homepage != null && obj[i].homepage.length > 0) {
+              document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
             
             
-            var id = "release-" + i;
-            document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
-          }
+              var id = "release-" + i;
+              document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
+            }
+          } else onError(repoContent.status);
         }
       }
+    }
+    repoContent.send(null);
+  }
+  
+  function getUsers() {
+    if (document.getElementById('userlist').innerHTML.length > 0) return;
+    
+    var userContent = new XMLHttpRequest();
+    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
+    userContent.onreadystatechange = function () {
+      if(userContent.readyState === 4) {
+        getRequestLimit();
+      
+        if(userContent.status === 200 || userContent.status == 0) {
+          var obj = JSON.parse(userContent.responseText);
+          for (var i = 0; true; i++) {
+            if (obj[i] == null) break;
+            setTimeout(getPerson(obj[i].url), i * 1000);
+          }
+        } else onError(userContent.status);
+      }
+    }
+    userContent.send(null);
+  }
+  
+  function getEvents() {
+    if (document.getElementById('relatedcontent').innerHTML.length > 0) return;
+    
+    var rawContent = new XMLHttpRequest();
+    rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
+    rawContent.onreadystatechange = function () {
+      if (rawContent.readyState === 4) {
+        getRequestLimit();
+      
+        if (rawContent.status === 200 || rawContent.status == 0) {        
+          var obj = JSON.parse(rawContent.responseText);
+          for (var i = 0; true; i++) {
+            if (obj[i] == null) break;
+            var message = "";
+            var subtitle = obj[i].repo.name;
+            var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
+            if (obj[i].type == "PushEvent") {
+              message = obj[i].payload.commits[0].message;
+              icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
+            } else if (obj[i].type == "WatchEvent") {
+              message = "Starred " + obj[i].repo.name;
+              icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
+            } else if (obj[i].type == "MemberEvent") {
+              message = obj[i].payload.action + " " + obj[i].payload.member.login;
+              icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
+            } else if (obj[i].type == "IssueCommentEvent") {
+              message = obj[i].payload.issue.title;
+              icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+            } else if (obj[i].type == "CreateEvent") {
+              message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
+              icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+            } else if (obj[i].type == "ForkEvent") {
+              message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
+              icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+            } else if (obj[i].type == "IssuesEvent") {
+              message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
+              icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+            } else if (obj[i].type == "DeleteEvent") {
+              message = "Deleted " + obj[i].repo.name;
+              icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
+            } else if (obj[i].type == "PullRequestEvent") {
+              message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
+              icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
+            }
+            document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+          }
+        } else onError(rawContent.status);
+      }
+    };
+    rawContent.send(null);
+  }
+  
+  function getPage(page) {
+    switch(page) {
+      case 1:
+      case 2:
+      case 3:
+        getRepos();
+        break;
+      case 4:
+        getUsers();
+        break;
+      case 5:
+        getEvents();
+        break;
     }
   }
-  repoContent.send(null);
   
-  var userContent = new XMLHttpRequest();
-  userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
-  userContent.onreadystatechange = function () {
-    if(userContent.readyState === 4) {
-      if(userContent.status === 200 || userContent.status == 0) {
-        var obj = JSON.parse(userContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          setTimeout(getPerson(obj[i].url), i * 1000);
-        }
-      }
-    }
-  }
-  userContent.send(null);
-  
-  var rawContent = new XMLHttpRequest();
-  rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
-  rawContent.onreadystatechange = function () {
-    if (rawContent.readyState === 4) {
-      if (rawContent.status === 200 || rawContent.status == 0) {
-        var obj = JSON.parse(rawContent.responseText);
-        for (var i = 0; true; i++) {
-          if (obj[i] == null) break;
-          var message = "";
-          var subtitle = obj[i].repo.name;
-          var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
-          if (obj[i].type == "PushEvent") {
-            message = obj[i].payload.commits[0].message;
-            icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
-          } else if (obj[i].type == "WatchEvent") {
-            message = "Starred " + obj[i].repo.name;
-            icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
-          } else if (obj[i].type == "MemberEvent") {
-            message = obj[i].payload.action + " " + obj[i].payload.member.login;
-            icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
-          } else if (obj[i].type == "IssueCommentEvent") {
-            message = obj[i].payload.issue.title;
-            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
-          } else if (obj[i].type == "CreateEvent") {
-            message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
-            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
-          } else if (obj[i].type == "ForkEvent") {
-            message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
-            icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
-          } else if (obj[i].type == "IssuesEvent") {
-            message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
-            icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
-          } else if (obj[i].type == "DeleteEvent") {
-            message = "Deleted " + obj[i].repo.name;
-            icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
-          } else if (obj[i].type == "PullRequestEvent") {
-            message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
-            icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
-          }
-          document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
-        }
-      }
-    }
-  };
-  rawContent.send(null);
+  setTimeout(getPage(document.getElementById('drawermenu').selected), 1000);
   </script>
   </template>
   <!-- build:js scripts/app.js -->
