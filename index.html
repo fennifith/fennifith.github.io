@@ -468,7 +468,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   function getRequestLimit() {
     var requestContent = new XMLHttpRequest();
-    requestContent.open("GET", "https://api.github.com/rate_limit", false);
     requestContent.onreadystatechange = function () {
       if(requestContent.readyState === 4) {
         if(requestContent.status === 200 || requestContent.status == 0) {
@@ -482,12 +481,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     }
+    requestContent.open("GET", "https://api.github.com/rate_limit", true);
     requestContent.send(null);
   }
   
-  function getReleases(url, id) {    
+  function getReleases(url, id) {
+    if (document.getElementById(id).set) return;
+        
     var releaseContent = new XMLHttpRequest();
-    releaseContent.open("GET", url, false);
     releaseContent.onreadystatechange = function () {
       if(releaseContent.readyState === 4) {
         getRequestLimit();
@@ -504,18 +505,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
             document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
+            document.getElementById(id).set = true;
           }
         } else {
           onError(rawContent.status);
         }
       }
     }
+    releaseContent.open("GET", url, true);
     releaseContent.send(null);
   }
   
   function getPerson(url) {
     var personContent = new XMLHttpRequest();
-    personContent.open("GET", url, false);
     personContent.onreadystatechange = function () {
       if(personContent.readyState === 4) {
         getRequestLimit();
@@ -538,14 +540,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     }
+    personContent.open("GET", url, true);
     personContent.send(null);
   }
   
   function getRepos() {
-    if (document.getElementById('repolist').innerHTML.length > 0) return;
+    if (document.getElementById('repolist').set) return;
     
     var repoContent = new XMLHttpRequest();
-    repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", false);
     repoContent.onreadystatechange = function () {
       if(repoContent.readyState === 4) {
         getRequestLimit();
@@ -558,6 +560,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             var name = obj[i].name;
             var desc = obj[i].description;
             document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
+            document.getElementById('repolist').set = true;
           
             if (obj[i].homepage != null && obj[i].homepage.length > 0) {
               document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
@@ -572,6 +575,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
     }
+    repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", true);
     repoContent.send(null);
   }
   
@@ -579,7 +583,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     if (document.getElementById('userlist').innerHTML.length > 0) return;
     
     var userContent = new XMLHttpRequest();
-    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", false);
     userContent.onreadystatechange = function () {
       if(userContent.readyState === 4) {
         getRequestLimit();
@@ -590,19 +593,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if (obj[i] == null) break;
             setTimeout(getPerson(obj[i].url), i * 1000);
           }
+          document.getElementById('userlist').set = true;
         } else {
           onError(rawContent.status);
         }
       }
     }
+    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", true);
     userContent.send(null);
   }
   
   function getEvents() {
-    if (document.getElementById('relatedcontent').innerHTML.length > 0) return;
+    if (document.getElementById('relatedcontent').set) return;
     
     var rawContent = new XMLHttpRequest();
-    rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", false);
     rawContent.onreadystatechange = function () {
       if (rawContent.readyState === 4) {
         getRequestLimit();
@@ -644,11 +648,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             }
             document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
           }
+          document.getElementById('relatedcontent').set = true;
         } else {
           onError(rawContent.status);
         }
       }
     };
+    rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", true);
     rawContent.send(null);
   }
   
