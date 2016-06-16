@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="paper-font-title">Menu</span>
         </paper-toolbar>
         <!-- Drawer Content -->
-        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]" iron-select="onPageChange">
+        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]">
           <a data-route="home" href="/" on-click="onDataRouteClick">
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
@@ -667,33 +667,51 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     rawContent.send(null);
   }
   
-  
-  
-  Polymer({
-      is: 'dom-bind',
-      onPageChange: function() {
-        getPage(document.querySelector('#drawermenu').selected);
-      }
-    });
-  
-  function getPage(page) {
-    console.log("Getting page content: " + page);
-    switch(page) {
-      case 1:
-      case 2:
-      case 3:
-        getRepos();
-        break;
-      case 4:
-        getUsers();
-        break;
-      case 5:
-        getEvents();
-        break;
+  window.addEventListener('WebComponentsReady', function() {
+    // We use Page.js for routing. This is a Micro
+    // client-side router inspired by the Express router
+    // More info: https://visionmedia.github.io/page.js/
+    // Middleware
+    function scrollToTop(ctx, next) {
+      app.scrollPageToTop();
+      next();
     }
-  }
-  
-  setTimeout(getPage(document.querySelector('#drawermenu').selected), 1000);
+    // Routes
+    page('/', scrollToTop, function() {
+      app.route = 'home';
+      getRepos();
+    });
+    
+    page('/apps', scrollToTop, function() {
+      app.route = 'apps';
+      getRepos();
+    });
+    
+    page('/apks', scrollToTop, function() {
+      app.route = 'apks';
+      getRepos();
+    });
+    page('/community', scrollToTop, function() {
+      app.route = 'community';
+      getUsers();
+    });
+    
+    page('/events', scrollToTop, function() {
+      app.route = 'events';
+      getEvents();
+    });
+    page('/contact', scrollToTop, function() {
+      app.route = 'contact';
+    });
+    
+    page('/about', scrollToTop, function() {
+      app.route = 'about';
+    });
+    // add #! before urls
+    page({
+      hashbang: true
+    });
+  });
   </script>
   </template>
   <!-- build:js scripts/app.js -->
