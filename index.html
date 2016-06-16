@@ -171,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="paper-font-title">Menu</span>
         </paper-toolbar>
         <!-- Drawer Content -->
-        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]" iron-select="getPage(document.querySelector('#drawermenu').selected);">
+        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]" iron-select="onPageChange">
           <a data-route="home" href="/" on-click="onDataRouteClick">
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
@@ -667,7 +667,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     rawContent.send(null);
   }
   
+  Polymer({
+      is: 'x-custom',
+      onPageChange: function() {
+        getPage(document.querySelector('#drawermenu').selected);
+      }
+    });
+  
   function getPage(page) {
+    console.log("Getting page content: " + page);
     switch(page) {
       case 1:
       case 2:
