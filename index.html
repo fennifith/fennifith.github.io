@@ -497,7 +497,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   function getPerson(url) {
     var personContent = new XMLHttpRequest();
-    personContent.open("GET", obj[i].url, false);
+    personContent.open("GET", url, false);
     personContent.onreadystatechange = function () {
       if(personContent.readyState === 4) {
         if(personContent.status === 200 || personContent.status == 0) {
