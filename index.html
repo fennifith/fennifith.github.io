@@ -493,7 +493,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   function getCache(url) {
     var cache = localStorage.getItem(url);
-    if (new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
+    if (cache != null && new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
         setCache(url, cache);
         return cache.substr(cache.indexOf(':') + 1);
     }
