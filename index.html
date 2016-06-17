@@ -141,17 +141,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     .circ { 
       width: 100px;
       height: 100px;
-      background-color: #bdbdbd; 
       border-radius: 50%;
       padding:20px;
       margin:auto;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      transition: box-shadow .25s;
-      -moz-transition: box-shadow .25s;
-      -webkit-transition: box-shadow .25s;
-    }
-    .circ:hover {
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.24);
     }
     .icon {
       height:50px;
@@ -176,13 +168,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
-          <a data-route="apps" href="/apps" on-click="onDataRouteClick">
+          <a data-route="apps" href="/projects" on-click="onDataRouteClick">
+            <iron-icon icon="book"></iron-icon>
+            <span>Projects</span>
+          </a>
+          <a data-route="apks" href="/apps" on-click="onDataRouteClick">
             <iron-icon icon="shop-two"></iron-icon>
             <span>Apps</span>
-          </a>
-          <a data-route="apks" href="/apks" on-click="onDataRouteClick">
-            <iron-icon icon="android"></iron-icon>
-            <span>Apks</span>
           </a>
           <a data-route="community" href="/community" on-click="onDataRouteClick">
             <iron-icon icon="group-work"></iron-icon>
@@ -231,49 +223,52 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   <div class="ctr">
                     <h1 class="ctr">
                       <div class="circ">
-                        <iron-icon style="width: 100%; height: 100%;  color:#FAFAFA;" icon="face"></iron-icon>
+                        <iron-icon style="width: 100%; height: 100%;" icon="face"></iron-icon>
                       </div>
                       <br>
                       Hi
                     </h1>
-                    <p class="ctr">My name is James Fenn, I am an android app developer from the UK.</p>
-                    <a style="color:#FAFAFA;" data-route="about" href="/about" on-click="onDataRouteClick"><paper-button>About</paper-button></a>
+                    <p class="ctr">My name is James Fenn, I am an android app developer and a co-founder of <a href="http://doubledotlabs.github.io/">Double Dot Labs</a>.</p>
                   </div>
                   <div class="ctr">
                     <h1 class="ctr">
                       <div class="circ">
-                        <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="send"></iron-icon>
+                        <iron-icon style="width:100%; height:100%;" icon="send"></iron-icon>
                       </div>
                       <br>
                       Contact Me
                     </h1>
-                    <p class="ctr">You can contact me through email, hangouts, or google plus.</p>
-                    <a style="color:#FAFAFA;" data-route="contact" href="/contact" on-click="onDataRouteClick"><paper-button>View</paper-button></a>
+                    <p class="ctr">I can be contacted through my email, hangouts, or google plus, which can be found <a data-route="contact" href="/contact" on-click="onDataRouteClick">here</a>.</p>
                   </div>
                   <div class="ctr">
                     <h1 class="ctr">
                       <div class="circ">
-                        <iron-icon style="width:100%; height:100%; color:#FAFAFA;" icon="android"></iron-icon>
+                        <iron-icon style="width:100%; height:100%;" icon="android"></iron-icon>
                       </div>
                       <br>
                       My Apps
                     </h1>
-                    <p class="ctr">All of my apps are listed here, sorted into collections.</p>
-                    <paper-button onclick="location.href = 'http://theandroidmaster.github.io/#!/apps'">Apps</paper-button>
+                    <p class="ctr">Most of my apps are open source, meaning that their source code can be modified and republished by anyone.</p>
                   </div>
                 </div>
-    
-                <h1>Current Projects:</h1>
-                <div id="repolist"><paper-spinner active></paper-spinner></div>
               </paper-material>
+              
               <paper-material elevation="1">
                 <img src="/images/headers/3appsheader.png"></img>
                 <h1>Apps</h1>
                 <p class="paper-font-body">
-                If you haven't already, you can download my apps from the play store <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">here</a>.
-                <br>
-                All of my apps are free and have no ads, all I ask is that you provide some feedback about whether or not you like them.
+                  If you haven't already, you can download most of my apps from <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">my play store account</a>.
+                  <br>
+                  Please don't hesistate to provide any feedback about any of my projects.
                 </p>
+              </paper-material>
+              
+              <paper-material elevation="1">
+                <h1>Organizations</h1>
+                <p class="paper-font-body">
+                  Here are a few of the organizations I have been a part of.
+                </p>
+                <div id="organizationlist"><paper-spinner active></paper-spinner></div>
               </paper-material>
               
               <paper-button onclick="document.querySelector('#collapse').toggle();" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">License
@@ -293,9 +288,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <li>Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
                   </ul>
                   <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-                  <br>
-                  <br>
-                  <p>Images within this repo may not be used without the owner's permission.</p>
                 </div>
               </iron-collapse>
 
@@ -314,13 +306,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-toast id="toast" text="Hi"></paper-toast>
             </section>
             
-            <section data-route="apps">
-                <div id="applist"><paper-spinner active></paper-spinner></div>
+            <section data-route="projects">
+              <h2 class="white">Apps</h2>              
+              <div id="applist"><paper-spinner active></paper-spinner></div>
+              <h2 class="white">Other Projects</h2> 
+              <div id="repolist"><paper-spinner active></paper-spinner></div>
                 
-                <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
+              <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
             </section>
             
-            <section data-route="apks">
+            <section data-route="apps">
               <paper-material elevation="1">
                 <div id="releaselist"><paper-spinner active></paper-spinner></div>
               </paper-material>
@@ -485,7 +480,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     requestContent.send(null);
   }
   
-  function getReleases(url, id) {        
+  function setCache(url, cache) {
+    localStorage.setItem(url, new Date().getTime() + ":" + cache);
+  }
+  
+  function getCache(url) {
+    var cache = localStorage.getItem(url);
+    if (new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
+        setCache(url, cache);
+        return cache.substr(cache.indexOf(':') + 1);
+    }
+  }
+  
+  function getReleases(url, id) {
+    var cache = getCache(url);
+    if (cache != null) {
+        document.getElementById(id).innerHTML = HTML;
+        return;
+    }
+              
     var releaseContent = new XMLHttpRequest();
     releaseContent.onreadystatechange = function () {
       if(releaseContent.readyState === 4) {
@@ -508,6 +521,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
           
           document.getElementById(id).innerHTML = HTML;
+          setCache(url, HTML);
         } else {
           onError(rawContent.status);
         }
@@ -518,6 +532,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getPerson(url) {
+    var cache = getCache(url);
+    if (cache != null) {
+        document.getElementById('userlist').innerHTML += cache;
+        return;
+    }
+      
     var personContent = new XMLHttpRequest();
     personContent.onreadystatechange = function () {
       if(personContent.readyState === 4) {
@@ -535,7 +555,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var bio = "This is a person.";
           if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
           
-          document.getElementById('userlist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
+          var HTML = "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
+          document.getElementById('userlist').innerHTML += HTML;
+          setCache(url, HTML);          
         } else {
           onError(rawContent.status);
         }
@@ -546,7 +568,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getRepos() {
-    if (document.getElementById('repolist').set != null) return;
+    if (document.getElementById('applist').set != null) return;
+    
+    var url = "https://api.github.com/users/TheAndroidMaster/repos";
+    var appCache = getCache(url + "-applist");
+    var repoCache = getCache(url + "-repolist");
+    var releaseCache = getCache(url + "-releaselist");
+    if (appCache != null && repoCache != null && releaseCache != null) {
+      document.getElementById('applist').innerHTML = appCache;
+      document.getElementById('repolist').innerHTML = repoCache;
+      document.getElementById('releaselist').innerHTML = releaseCache;
+      
+      document.getElementById('applist').set = true;
+      return;
+    }
     
     var repoContent = new XMLHttpRequest();
     repoContent.onreadystatechange = function () {
@@ -561,31 +596,37 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
-            if (obj[i].fork) continue;
             var name = obj[i].name;
             var desc = obj[i].description;
-            repoHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
                       
-            if (obj[i].homepage != null && obj[i].homepage.length > 0) {
+            if (obj[i].fork) {
+              
+            } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0) {
               appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
             
             
               var id = "release-" + i;
               releaseHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
+            } else {
+              repoHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
             }
           }
           
-          document.getElementById('repolist').innerHTML = repoHTML;
           document.getElementById('applist').innerHTML = appHTML;
+          document.getElementById('repolist').innerHTML = repoHTML;
           document.getElementById('releaselist').innerHTML = releaseHTML;
           
-          document.getElementById('repolist').set = true;
+          setCache(url + "-applist", appHTML);
+          setCache(url + "-repolist", repoHTML);
+          setCache(url + "-releaselist". releaseHTML);
+          
+          document.getElementById('applist').set = true;
         } else {
           onError(rawContent.status);
         }
       }
     }
-    repoContent.open("GET", "https://api.github.com/users/TheAndroidMaster/repos", true);
+    repoContent.open("GET", url, true);
     repoContent.send(null);
   }
   
@@ -615,6 +656,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   function getEvents() {
     if (document.getElementById('relatedcontent').set != null) return;
+    
+    var url = "https://api.github.com/users/TheAndroidMaster/events";
+    var cache = getCache(url);
+    if (cache != null) {
+      document.getElementById('relatedcontent').innerHTML = cache;
+      document.getElementById('relatedcontent').set = true;
+      return;
+    }
     
     var rawContent = new XMLHttpRequest();
     rawContent.onreadystatechange = function () {
@@ -667,12 +716,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
           document.getElementById('relatedcontent').innerHTML = HTML;
           document.getElementById('relatedcontent').set = true;
+          
+          setCache(url, HTML);
         } else {
           onError(rawContent.status);
         }
       }
     };
-    rawContent.open("GET", "https://api.github.com/users/TheAndroidMaster/events", true);
+    rawContent.open("GET", url, true);
     rawContent.send(null);
   }
   
@@ -688,16 +739,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // Routes
     page('/', scrollToTop, function() {
       app.route = 'home';
+    });
+    
+    page('/projects', scrollToTop, function() {
+      app.route = 'projects';
       getRepos();
     });
     
     page('/apps', scrollToTop, function() {
       app.route = 'apps';
-      getRepos();
-    });
-    
-    page('/apks', scrollToTop, function() {
-      app.route = 'apks';
       getRepos();
     });
     page('/community', scrollToTop, function() {
