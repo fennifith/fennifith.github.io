@@ -485,9 +485,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     requestContent.send(null);
   }
   
-  function getReleases(url, id) {
-    if (document.getElementById(id).set != null) return;
-        
+  function getReleases(url, id) {        
     var releaseContent = new XMLHttpRequest();
     releaseContent.onreadystatechange = function () {
       if(releaseContent.readyState === 4) {
@@ -495,6 +493,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
         if(releaseContent.status === 200 || releaseContent.status == 0) {
           var obj = JSON.parse(releaseContent.responseText);
+          var HTML = "";
+          
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             var badge = "";
@@ -504,9 +504,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            document.getElementById(id).innerHTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
-            document.getElementById(id).set = true;
+            html += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
+          
+          document.getElementById(id).innerHTML = HTML;
         } else {
           onError(rawContent.status);
         }
@@ -554,22 +555,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
         if(repoContent.status === 200 || repoContent.status == 0) {
           var obj = JSON.parse(repoContent.responseText);
+          var repoHTML = "";
+          var appHTML = "";
+          var releaseHTML = "";
+          
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             if (obj[i].fork) continue;
             var name = obj[i].name;
             var desc = obj[i].description;
-            document.getElementById('repolist').innerHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
-            document.getElementById('repolist').set = true;
-          
+            repoHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
+                      
             if (obj[i].homepage != null && obj[i].homepage.length > 0) {
-              document.getElementById('applist').innerHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
+              appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
             
             
               var id = "release-" + i;
-              document.getElementById('releaselist').innerHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
+              releaseHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
             }
           }
+          
+          document.getElementById('repolist').innerHTML = repoHTML;
+          document.getElementById('applist').innerHTML = appHTML;
+          document.getElementById('releaselist').innerHTML = releaseHTML;
+          
+          document.getElementById('repolist').set = true;
         } else {
           onError(rawContent.status);
         }
@@ -591,7 +601,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var obj = JSON.parse(userContent.responseText);
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
-            setTimeout(getPerson(obj[i].url), i * 1000);
+            getPerson(obj[i].url);
           }
           document.getElementById('userlist').set = true;
         } else {
@@ -613,6 +623,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
         if (rawContent.status === 200 || rawContent.status == 0) {        
           var obj = JSON.parse(rawContent.responseText);
+          var HTML = "";
+          
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             var message = "";
@@ -646,8 +658,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
               icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
             }
-            document.getElementById('relatedcontent').innerHTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+            HTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
           }
+          
+          document.getElementById('relatedcontent').innerHTML = HTML;
           document.getElementById('relatedcontent').set = true;
         } else {
           onError(rawContent.status);
