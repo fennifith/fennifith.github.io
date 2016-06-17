@@ -264,7 +264,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </div>
     
                 <h1>Current Projects:</h1>
-                <div id="repolist"></div>
+                <div id="repolist"><paper-spinner active></paper-spinner></div>
               </paper-material>
               <paper-material elevation="1">
                 <img src="/images/headers/3appsheader.png"></img>
@@ -315,14 +315,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="apps">
-                <div id="applist"></div>
+                <div id="applist"><paper-spinner active></paper-spinner></div>
                 
                 <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
             </section>
             
             <section data-route="apks">
               <paper-material elevation="1">
-                <div id="releaselist"></div>
+                <div id="releaselist"><paper-spinner active></paper-spinner></div>
               </paper-material>
             </section>
 
@@ -342,7 +342,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             
             <section data-route="events">
               <paper-material elevation="1">
-                <div id="relatedcontent"></div>
+                <div id="relatedcontent"><paper-spinner active></paper-spinner></div>
               </paper-material>
             </section>
 
@@ -504,7 +504,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
+            html += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
           
           document.getElementById(id).innerHTML = HTML;
