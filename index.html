@@ -596,7 +596,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
-            HTML += "<paper-item onclick=\"window.location.href = \'" + "https://github.com/" + obj[i].login + "\'\"><img class=\"icon\" src=\"" + obj[i].avatar_url + "\"></img><paper-item-body two-line><div>" + obj[i].login + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item>";
+            HTML += "<paper-item onclick=\"window.location.href = \'" + "https://github.com/" + obj[i].login + "\'\"><img class=\"icon\" style=\"border-radius: 50%;\" src=\"" + obj[i].avatar_url + "\"></img><paper-item-body two-line><div>" + obj[i].login + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item>";
           }
           
           document.getElementById('organizationlist').innerHTML = HTML;
