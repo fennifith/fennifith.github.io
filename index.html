@@ -134,7 +134,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       display: none; 
     }
     div.ctr {
-      margin:auto;
+      margin-left: auto;
+      margin-right: auto;
       padding:5px;
     }
     h1.ctr {
@@ -175,11 +176,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="home"></iron-icon>
             <span>Home</span>
           </a>
-          <a data-route="apps" href="/projects" on-click="onDataRouteClick">
+          <a data-route="projects" href="/projects" on-click="onDataRouteClick">
             <iron-icon icon="book"></iron-icon>
             <span>Projects</span>
           </a>
-          <a data-route="apks" href="/apps" on-click="onDataRouteClick">
+          <a data-route="apps" href="/apps" on-click="onDataRouteClick">
             <iron-icon icon="shop-two"></iron-icon>
             <span>Apps</span>
           </a>
@@ -273,7 +274,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <paper-material elevation="1">
                 <h1>Organizations</h1>
                 <p class="paper-font-body">
-                  Here are a few of the organizations I have been a part of.
+                  Here are a few of the organizations I am a part of.
                 </p>
                 <div id="organizationlist"><paper-spinner active></paper-spinner></div>
               </paper-material>
@@ -334,11 +335,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p class="paper-font-body">There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.</p>
                 
                 <div class="list short" role="listbox" id="userlist"></div>
-              </paper-material>
-              
-              <paper-material elevation="1">
-                <h1>Teamwork!</h1>
-                <p>While I try to make all of my apps myself, I usually end up relying on others when I get stuck, so thanks to all the people on google+, stackoverflow, and github that have helped me.</p>
               </paper-material>
             </section>
             
