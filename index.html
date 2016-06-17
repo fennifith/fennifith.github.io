@@ -574,6 +574,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     personContent.send(null);
   }
   
+  function getOrganizations() {
+    if (document.getElementById('organizationlist').set != null) return;
+    
+    var url = "https://api.github.com/users/TheAndroidMaster/orgs";
+    var cache = getCache(url);
+    if (cache != null) {
+      document.getElementById('organizationlist').innerHTML = cache;
+      document.getElementById('organizationlist').set = true;
+      return;
+    }
+    
+    var userContent = new XMLHttpRequest();
+    userContent.onreadystatechange = function () {
+      if(userContent.readyState === 4) {
+        getRequestLimit();
+      
+        if(userContent.status === 200 || userContent.status == 0) {
+          var obj = JSON.parse(userContent.responseText);
+          var HTML = "";
+          
+          for (var i = 0; true; i++) {
+            if (obj[i] == null) break;
+            HTML += "<paper-item onclick=\"window.location.href = \'" + "https://github.com/" + obj[i].login + "\'\"><img class=\"icon\" src=\"" + obj[i].avatar_url + "\"></img><paper-item-body two-line><div>" + obj[i].login + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item>";
+          }
+          
+          document.getElementById('organizationlist').innerHTML = HTML;
+          document.getElementById('organizationlist').set = true;
+          
+          setCache(url, HTML);
+        } else {
+          onError(rawContent.status);
+        }
+      }
+    }
+    userContent.open("GET", url, true);
+    userContent.send(null);
+  }
+  
   function getRepos() {
     if (document.getElementById('applist').set != null) return;
     
@@ -746,6 +784,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // Routes
     page('/', scrollToTop, function() {
       app.route = 'home';
+      getOrganizations();
     });
     
     page('/projects', scrollToTop, function() {
