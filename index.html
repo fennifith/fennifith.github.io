@@ -504,7 +504,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            html += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
+            HTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
           
           document.getElementById(id).innerHTML = HTML;
