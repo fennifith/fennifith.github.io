@@ -486,7 +486,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getReleases(url, id) {
-    if (document.getElementById(id).set) return;
+    if (document.getElementById(id).set != null) return;
         
     var releaseContent = new XMLHttpRequest();
     releaseContent.onreadystatechange = function () {
@@ -545,7 +545,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getRepos() {
-    if (document.getElementById('repolist').set) return;
+    if (document.getElementById('repolist').set != null) return;
     
     var repoContent = new XMLHttpRequest();
     repoContent.onreadystatechange = function () {
@@ -580,7 +580,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getUsers() {
-    if (document.getElementById('userlist').innerHTML.length > 0) return;
+    if (document.getElementById('userlist').set != null) return;
     
     var userContent = new XMLHttpRequest();
     userContent.onreadystatechange = function () {
@@ -604,7 +604,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
   
   function getEvents() {
-    if (document.getElementById('relatedcontent').set) return;
+    if (document.getElementById('relatedcontent').set != null) return;
     
     var rawContent = new XMLHttpRequest();
     rawContent.onreadystatechange = function () {
