@@ -317,8 +317,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="projects">
               <h2 class="white">Apps</h2>              
               <div id="applist"><paper-spinner active></paper-spinner></div>
+              
               <h2 class="white">Other Projects</h2> 
-              <div id="repolist"><paper-spinner active></paper-spinner></div>
+              <paper-material elevation="1">
+                <div id="repolist"><paper-spinner active></paper-spinner></div>
+              </paper-material>
                 
               <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
             </section>
@@ -498,7 +501,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function getReleases(url, id) {
     var cache = getCache(url);
     if (cache != null) {
-        document.getElementById(id).innerHTML = HTML;
+        document.getElementById(id).innerHTML = cache;
         return;
     }
               
