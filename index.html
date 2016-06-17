@@ -628,8 +628,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             var message = "";
-            var subtitle = obj[i].repo.name;
             var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
+            var url = "https://github.com/" + obj[i].repo.name;
             if (obj[i].type == "PushEvent") {
               message = obj[i].payload.commits[0].message;
               icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
@@ -643,7 +643,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               message = obj[i].payload.issue.title;
               icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
             } else if (obj[i].type == "CreateEvent") {
-              message = obj[i].payload.pusher_type + " " + obj[i].payload.ref_type + " created";
+              message = obj[i].payload.ref_type + " " + obj[i].payload.ref + " created";
               icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
             } else if (obj[i].type == "ForkEvent") {
               message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
@@ -657,8 +657,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             } else if (obj[i].type == "PullRequestEvent") {
               message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
               icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
+            } else if (obj[i].type == "ReleaseEvent") {
+              message = obj[i].payload.release.tag_name + " " + obj[i].payload.action;
+              icon = "<iron-icon class=\"icon\" icon=\"cloud-upload\"></iron-icon>";
+              url = obj[i].payload.release.html_url;
             }
-            HTML += "<paper-item onclick=\"window.location.href = \'https://github.com/" + subtitle + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + subtitle + "</div></paper-item-body></paper-item>";
+            HTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item>";
           }
           
           document.getElementById('relatedcontent').innerHTML = HTML;
