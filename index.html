@@ -608,7 +608,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var url = "https://api.github.com/users/TheAndroidMaster/repos";
     var appCache = getCache(url + "-applist");
     var repoCache = getCache(url + "-repolist");
-    if (appCache != null && repoCache != null && releaseCache != null) {
+    if (appCache != null && repoCache != null) {
       document.getElementById('applist').innerHTML = appCache;
       document.getElementById('repolist').innerHTML = repoCache;
       
