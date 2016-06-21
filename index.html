@@ -503,7 +503,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
         if(releaseContent.status === 200 || releaseContent.status == 0) {
           var obj = JSON.parse(releaseContent.responseText);
-          var HTML = "";
+          var HTML = "<hr>";
           
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
@@ -625,7 +625,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var obj = JSON.parse(repoContent.responseText);
           var repoHTML = "";
           var appHTML = "";
-          var releaseHTML = "";
           
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
@@ -634,7 +633,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       
             if (obj[i].fork) {
               
-            } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0) {
+            } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/store/apps/details?id=") == 0) {
               var id = "release-" + i;
               appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material>";      
             } else {
