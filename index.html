@@ -180,10 +180,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="book"></iron-icon>
             <span>Projects</span>
           </a>
-          <a data-route="apps" href="/apps" on-click="onDataRouteClick">
-            <iron-icon icon="shop-two"></iron-icon>
-            <span>Apps</span>
-          </a>
           <a data-route="community" href="/community" on-click="onDataRouteClick">
             <iron-icon icon="group-work"></iron-icon>
             <span>Community</span>
@@ -324,12 +320,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
                 
               <paper-fab icon="add" onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';"></paper-fab>
-            </section>
-            
-            <section data-route="apps">
-              <paper-material elevation="1">
-                <div id="releaselist"><paper-spinner active></paper-spinner></div>
-              </paper-material>
             </section>
 
             <section data-route="community">
@@ -618,11 +608,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var url = "https://api.github.com/users/TheAndroidMaster/repos";
     var appCache = getCache(url + "-applist");
     var repoCache = getCache(url + "-repolist");
-    var releaseCache = getCache(url + "-releaselist");
     if (appCache != null && repoCache != null && releaseCache != null) {
       document.getElementById('applist').innerHTML = appCache;
       document.getElementById('repolist').innerHTML = repoCache;
-      document.getElementById('releaselist').innerHTML = releaseCache;
       
       document.getElementById('applist').set = true;
       return;
@@ -647,11 +635,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if (obj[i].fork) {
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0) {
-              appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></paper-material>";
-            
-            
               var id = "release-" + i;
-              releaseHTML += "<paper-item onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-item-body two-line><div>" + name + "</div></paper-item-body><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item>";            
+              appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material>";      
             } else {
               repoHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
             }
@@ -659,11 +644,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           
           document.getElementById('applist').innerHTML = appHTML;
           document.getElementById('repolist').innerHTML = repoHTML;
-          document.getElementById('releaselist').innerHTML = releaseHTML;
           
           setCache(url + "-applist", appHTML);
           setCache(url + "-repolist", repoHTML);
-          setCache(url + "-releaselist". releaseHTML);
           
           document.getElementById('applist').set = true;
         } else {
@@ -792,10 +775,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       getRepos();
     });
     
-    page('/apps', scrollToTop, function() {
-      app.route = 'apps';
-      getRepos();
-    });
     page('/community', scrollToTop, function() {
       app.route = 'community';
       getUsers();
