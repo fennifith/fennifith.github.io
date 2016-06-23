@@ -19,25 +19,25 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A material design Spotify client.">
+    <meta name="description" content="A material design Spotify client">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pasta for Spotify</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="156x156" href="http://theandroidmaster.github.io/apps/pasta/favicon.png">
+    <link rel="icon" sizes="156x156" href="/favicon.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="green">
     <meta name="apple-mobile-web-app-title" content="Pasta for Spotify">
-    <link rel="apple-touch-icon-precomposed" href="http://theandroidmaster.github.io/apps/pasta/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="http://theandroidmaster.github.io/apps/pasta/favicon.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-TileImage" content="/favicon.png">
+    <meta name="msapplication-TileColor" content="#4CAF50">
 
-    <link rel="shortcut icon" href="http://theandroidmaster.github.io/apps/pasta/favicon.png">
+    <link rel="shortcut icon" href="/favicon.png">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
     <!--
@@ -46,21 +46,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.green-deep_orange.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.green-light_green.min.css">
     <style>
-    .mdl-color--primary {
-    background-color: #C8E6C9 !important;
-}
-
-.mdl-color--primary-dark {
-    background-color: #00E676 !important;
-}
-
-.mdl-color--accent {
-    background-color: #fff !important;
-}
-        
-        
     #view-source {
       position: fixed;
       display: block;
@@ -70,386 +57,142 @@
       margin-bottom: 40px;
       z-index: 900;
     }
-    html, body {
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.mdl-demo .mdl-layout__header-row {
-  padding-left: 40px;
-}
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3 {
-  font-size: inherit;
-}
-.mdl-demo .mdl-layout__tab-bar-button {
-  display: none;
-}
-.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
-  display: none;
-}
-.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
-.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
-  overflow: visible;
-}
-.mdl-demo .mdl-layout__tab-bar-container {
-  height: 64px;
-}
-.mdl-demo .mdl-layout__tab-bar {
-  padding: 0;
-  padding-left: 16px;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-}
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab {
-  height: 64px;
-  line-height: 64px;
-}
-.mdl-demo .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
-  background-color: white;
-  height: 4px;
-}
-.mdl-demo main > .mdl-layout__tab-panel {
-  padding: 8px;
-  padding-top: 48px;
-}
-.mdl-demo .mdl-card {
-  height: auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.mdl-demo .mdl-card > * {
-  height: auto;
-}
-.mdl-demo .mdl-card .mdl-card__supporting-text {
-  margin: 40px;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  padding: 0;
-  color: inherit;
-  width: calc(100% - 80px);
-}
-.mdl-demo.mdl-demo .mdl-card__supporting-text h4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.mdl-demo .mdl-card__actions {
-  margin: 0;
-  padding: 4px 40px;
-  color: inherit;
-}
-.mdl-demo .mdl-card__actions a {
-  color: #00BCD4;
-  margin: 0;
-}
-.mdl-demo .mdl-card__actions a:hover,
-.mdl-demo .mdl-card__actions a:active {
-  color: inherit;
-  background-color: transparent;
-}
-.mdl-demo .mdl-card__supporting-text + .mdl-card__actions {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
-.mdl-demo #add {
-  position: absolute;
-  right: 40px;
-  top: 36px;
-  z-index: 999;
-}
+    .demo-ribbon {
+        width: 100%;
+        height: 40vh;
+        background-color: #4CAF50;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
 
-.mdl-demo .mdl-layout__content section:not(:last-of-type) {
-  position: relative;
-  margin-bottom: 48px;
-}
-.mdl-demo section.section--center {
-  max-width: 860px;
-}
-.mdl-demo #features section.section--center {
-  max-width: 620px;
-}
-.mdl-demo section > header{
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.mdl-demo section > .section__play-btn {
-  min-height: 200px;
-}
-.mdl-demo section > header > .material-icons {
-  font-size: 3rem;
-}
-.mdl-demo section > button {
-  position: absolute;
-  z-index: 99;
-  top: 8px;
-  right: 8px;
-}
-.mdl-demo section .section__circle {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-flex-grow: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
-}
-.mdl-demo section .section__text {
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0;
-  padding-top: 8px;
-}
-.mdl-demo section .section__text h5 {
-  font-size: inherit;
-  margin: 0;
-  margin-bottom: 0.5em;
-}
-.mdl-demo section .section__text a {
-  text-decoration: none;
-}
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-  margin: 8px 0;
-}
-.mdl-demo section.section--footer .section__circle--big {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  margin: 8px 32px;
-}
-.mdl-demo .is-small-screen section.section--footer .section__circle--big {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 8px 16px;
-}
-.mdl-demo section.section--footer {
-  padding: 64px 0;
-  margin: 0 -8px -8px -8px;
-}
-.mdl-demo section.section--center .section__text:not(:last-child) {
-  border-bottom: 1px solid rgba(0,0,0,.13);
-}
-.mdl-demo .mdl-card .mdl-card__supporting-text > h3:first-child {
-  margin-bottom: 24px;
-}
-.mdl-demo .mdl-layout__tab-panel:not(#overview) {
-  background-color: white;
-}
-.mdl-demo #features section {
-  margin-bottom: 72px;
-}
-.mdl-demo #features h4, #features h5 {
-  margin-bottom: 16px;
-}
-.mdl-demo .toc {
-  border-left: 4px solid #C1EEF4;
-  margin: 24px;
-  padding: 0;
-  padding-left: 8px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.mdl-demo .toc h4 {
-  font-size: 0.9rem;
-  margin-top: 0;
-}
-.mdl-demo .toc a {
-  color: #4DD0E1;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 28px;
-  display: block;
-}
-.mdl-demo .mdl-menu__container {
-  z-index: 99;
-}
+    .demo-main {
+        margin-top: -35vh;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .demo-header .mdl-layout__header-row {
+        padding-left: 40px;
+    }
+
+    .demo-container {
+        max-width: 1600px;
+        width: calc(100% - 16px);
+        margin: 0 auto;
+    }
+
+    .demo-content {
+        border-radius: 2px;
+        padding: 80px 56px;
+        margin-bottom: 80px;
+    }
+
+    .demo-layout.is-small-screen .demo-content {
+        padding: 40px 28px;
+    }
+
+    .demo-content h3 {
+        margin-top: 48px;
+    }
+
+    .demo-footer {
+        padding-left: 40px;
+    }
+
+    .demo-footer .mdl-mini-footer--link-list a {
+        font-size: 13px;
+    }
     </style>
   </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Pasta for Spotify</h3>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-          <a href="#collabs" class="mdl-layout__tab">Collaborators</a>
-          <a href="#more" class="mdl-layout__tab">More</a>
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-          </button>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Pasta for Spotify</span>
+          <div class="mdl-layout-spacer"></div>
         </div>
       </header>
-      <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-              <img style="width:100%; height:100%;" src="http://theandroidmaster.github.io/apps/pasta/icon.png"></img>
-            </header>
-            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-              <div class="mdl-card__supporting-text">
-                <h4>Pasta for Spotify</h4>
-                A material design Spotify client for Android.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="https://play.google.com/store/apps/details?id=pasta.streamer" class="mdl-button">Download</a>
-              </div>
+      <div class="demo-ribbon"></div>
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="demo-crumbs mdl-color-text--grey-500">
+              Pasta for Spotify
             </div>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Features</h4>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Material Design</h5>
-                  Pasta for Spotify is designed based on Google's <a href="http://www.google.com/design/spec/">Material Design Spec</a> to provide a better user experience.
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Customization</h5>
-                  Many options have been provided in the settings menu to customize the app to your liking, including color theming, dynamic backgrounds, and the ability to turn off thumbnails to save data usage.
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Performance</h5>
-                  The app uses <a href="http://jakewharton.github.io/butterknife/">Butterknife</a> to bind views along with a system of fragment navigation to minimize loading time and increase overall performance.
-                </div>
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#more" class="mdl-button">More features...</a>
-              </div>
-            </div>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text">
-                <h4>Collaborators</h4>
-                These people did things.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#collabs" class="mdl-button">Say hi</a>
-              </div>
-            </div>
-          </section>
-          <section class="section--footer mdl-color--white mdl-grid">
-            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"></div>
-        </div>
-        <div class="mdl-layout__tab-panel" id="collabs">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Collaborators</h4>
-              So, basically... stuff happened.
-              <ul class="toc">
-                <h4>Contents</h4>
-                <a href="#dev">Development</a>
-                <a href="#des">Design</a>
-              </ul>
-
-              <h5 id="dev">Development</h5>
-              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
+            <br>
+            <h3>A <a href="https://material.google.com/">material design</a> Spotify client for Android.</h3>
+              <p>
+                Pasta for Spotify is a material design Spotify client for android that attempts to create a better user experience using the <a href="https://developer.spotify.com/web-api/">Spotify Web API</a>. It was created to show an improvement in design over the official Spotify app, and to allow for older and slower devices to have quicker access to Spotify's services without losing (much) functionality. Some examples of this are as follows:
+              </p>
+              <h4>Design</h4>
               <ul>
-                <li><a href="http://theandroidmaster.github.io/">James Fenn</a> - A Java and web developer, started the project and wrote most of the spaghetti code ;)</li>
-                <li><a href="https://plus.google.com/+JanLkElse">Jan-Lk Else</a> - A German student, developer, and blogger. Helped with performance issues and managed the Spotify api.</li>
-                <li><a href="http://pddstudio.com/">Patrick J</a> - Another German developer, helped primarily with organization and file layout.</li>
-                <li><a href="https://plus.google.com/+AlexandrePiveteau">Alexandre Piveteau</a> - Gave helpful suggestions for occasional issues (and wasted a quarter of a year in our group chat).</li>
+                <li>Touch areas are increased for small devices to be able to open things like menus and playlists more easily than the layout in the official app.</li>
+                <li>A lot of navigation relies on swipe navigation within the app to speed up general user experience.</li>
+                <li>The shuffle and repeat buttons have been removed from the now playing screen and moved into an "order tracks" dialog that is accessible from the menu of playlists and albums, and shows up in the settings menu. This provides greater consistency: in the official app you can order tracks by name, date, etc when viewing a list, but this becomes obsolete once shuffle is enabled. Moving all order-related options to the same place makes more sense from the perspective of both a new user and a user coming from the official app.</li>
+                <li>The backgrounds of different elements on the screen change color according to the album arts, allowing the user to quickly identify items based on color as well as text and image, and blend the image with the rest of the app so that it doesn't seem out of place.</li>
+                <li>Most parts of the app can be customized from the settings menu to allow the user to change their experience, including the main color scheme of the app and whether to display items as cards, tiles, or lists.</li>
+                <li>All parts of the official app that serve as a bookmark for an item are united into one "Favorites" section of the app. This means that artists that are being followed, playlists that have been created (or followed), and albums and tracks that have been "added" show up here, making the result of the "favorite" action obvious to most users instead of having to google <a href="https://www.google.com/search?newwindow=1&safe=strict&q=what+does+it+mean+to+add+a+track+in+spotify%3F&oq=what+does+it+mean+to+add+a+track+in+spotify">"what does it mean to add a track in spotify?"</a> (like I did).</li>
               </ul>
-              <h5 id="des">Design</h5>
+              <h4>Performance</h4>
+              <p>
+                Though I am not sure what the official Spotify client uses to switch layouts, many of the current users have reported a large increase in loading speed of Pasta for Spotify versus the official app. This could be because of a few things:
+              </p>
               <ul>
-                <li><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak">Vukašin Anđelković</a> - The maker of CandyCons, designed Pasta\'s amazing icon and gave design feedback.</li>
-                <li><a href="https://plus.google.com/+KevinAguilarC">Kevin Aguilar</a> - Founder of 221 Pixels, helped with UI design and color choice.</li>
+                <li>The app uses Aidan Follestad's <a href="https://github.com/afollestad/async">Async</a> library to load content separately from the UI thread, which allows the user to navigate the app while content is loading, for example: navigating back to the previous task while content is loading will cancel the download.</li>
+                <li><a href="http://jakewharton.github.io/butterknife/">Butterknife</a>, by Jake Wharton, is used to bind views instead of the standard view binding method. Truthfully I have no idea what this means but it saves time so just go with it. ;)</li>
+                <li><a href="https://github.com/bumptech/glide">Glide</a> is used to load image urls provided by the spotify api. This saves a lot of loading time by asynchronously loading an image while scrolling as well as compressing it to speed up the download as much as possible.</li>
               </ul>
-            </div>
-          </section>
+            <h3>Features</h3>
+            <p>Pasta for Spotify has almost all the features of the official app, though playlists cannot be downloaded because that could potentially create a way for users to export songs from the app, and I'm sure Spotify would not like that.</p>
+            <ul>
+              <li>Shows newly released albums and featured playlists</li>
+              <li>A favorites section for playlists, albums, songs, and artists</li>
+              <li>Search through all of Spotify's database</li>
+              <li>View different categories of music</li>
+              <li>Dynamic backgrounds that adapt to the album art</li>
+              <li>A light/dark theme in the settings menu</li>
+              <li>Options to change the global color scheme of the app</li>
+              <li>Change the ordering of songs in playlists and albums</li>
+            </ul>
+            <h3>Limitations</h3>
+            <ul>
+              <li><a href="https://github.com/TheAndroidMaster/Pasta-for-Spotify/issues/1">The app will occasionally refuse to play a song until a restart</a>. The "Unknown error, please restart" toast message is specific to this issue.</li>
+              <li>It is not possible to download a track to play it offline. See <a href="https://github.com/spotify/android-sdk/issues/2">this issue</a> for progress updates.</li>
+              <li>The 'restart' button usually causes an authentication error resulting in the app force closing.</li>
+              <li>The 'Sign Out' option in the settings menu will cause a crash if the official Spotify app is installed.</li>
+              <li>There are many features that are not accessible from a free account, such as playing songs and favoriting tracks.</li>
+            </ul>
+            <h3>Links</h3>
+            <ul>
+              <li><a href="https://play.google.com/apps/testing/pasta.streamer">Play Store Beta</a></li>
+              <li><a href="https://plus.google.com/communities/101536497390778012419">Google Plus Community</a></li>
+              <li><a href="https://github.com/TheAndroidMaster/Pasta-for-Spotify">GitHub Repository</a></li>
+            </ul>
+            <h4>Contributors</h4>
+            <ul>
+              <li><a href="http://theandroidmaster.github.io/">James Fenn</a></li>
+              <li><a href="https://plus.google.com/+JanLkElse">Jan-Lk Else</a></li>
+              <li><a href="http://pddstudio.com/">Patrick J</a></li>
+              <li><a href="https://plus.google.com/+AlexandrePiveteau">Alexandre Piveteau</a></li>
+              <li><a href="https://plus.google.com/+Vuka%C5%A1inAn%C4%91elkovi%C4%87zavukodlak">Vukašin Anđelković</a></li>
+              <li><a href="https://plus.google.com/+KevinAguilarC">Kevin Aguilar</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="mdl-layout__tab-panel" id="more">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Features</h4>
-              Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-              <ul class="toc">
-                <h4>Contents</h4>
-                <a href="#lorem1">Lorem ipsum</a>
-                <a href="#lorem2">Lorem ipsum</a>
-                <a href="#lorem3">Lorem ipsum</a>
-                <a href="#lorem4">Lorem ipsum</a>
-                <a href="#lorem5">Lorem ipsum</a>
-              </ul>
-
-              <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-              <ul>
-                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-                <li>Lorem labore proident officia excepteur do.</li>
-              </ul>
-
-              <p>
-                Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et tempor et non.
-              </p>
-              <p>
-                Do dolor eiusmod eu mollit dolore nostrud deserunt cillum irure esse sint irure fugiat exercitation. Magna sit voluptate id in tempor elit veniam enim cupidatat ea labore elit. Aliqua pariatur eu nulla labore magna dolore mollit occaecat sint commodo culpa. Eu non minim duis pariatur Lorem quis exercitation. Sunt qui ex incididunt sit anim incididunt sit elit ad officia id.
-              </p>
-              <p id="lorem2">
-                Tempor voluptate ex consequat fugiat aliqua. Do sit et reprehenderit culpa deserunt culpa. Excepteur quis minim mollit irure nulla excepteur enim quis in laborum. Aliqua elit voluptate ad deserunt nulla reprehenderit adipisicing sint. Est in eiusmod exercitation esse commodo. Ea reprehenderit exercitation veniam adipisicing minim nostrud. Veniam dolore ex ea occaecat non enim minim id ut aliqua adipisicing ad. Occaecat excepteur aliqua tempor cupidatat aute dolore deserunt ipsum qui incididunt aliqua occaecat sit quis. Culpa sint aliqua aliqua reprehenderit veniam irure fugiat ea ad.
-              </p>
-              <p>
-                Eu minim fugiat laborum irure veniam Lorem aliqua enim. Aliqua veniam incididunt consequat irure consequat tempor do nisi deserunt. Elit dolore ad quis consectetur sint laborum anim magna do nostrud amet. Ea nulla sit consequat quis qui irure dolor. Sint deserunt excepteur consectetur magna irure. Dolor tempor exercitation dolore pariatur incididunt ut laboris fugiat ipsum sunt veniam aute sunt labore. Non dolore sit nostrud eu ad excepteur cillum eu ex Lorem duis.
-              </p>
-              <p>
-                Id occaecat velit non ipsum occaecat aliqua quis ut. Eiusmod est magna non esse est ex incididunt aute ullamco. Cillum excepteur sint ipsum qui quis velit incididunt amet. Qui deserunt anim enim laborum cillum reprehenderit duis mollit amet ad officia enim. Minim sint et quis aliqua aliqua do minim officia dolor deserunt ipsum laboris. Nulla nisi voluptate consectetur est voluptate et amet. Occaecat ut quis adipisicing ad enim. Magna est magna sit duis proident veniam reprehenderit fugiat reprehenderit enim velit ex. Ullamco laboris culpa irure aliquip ad Lorem consequat veniam ad ipsum eu. Ipsum culpa dolore sunt officia laborum quis.
-              </p>
-
-              <h5 id="lorem3">Lorem ipsum dolor sit amet</h5>
-
-              <p id="lorem4">
-                Eiusmod nulla aliquip ipsum reprehenderit nostrud non excepteur mollit amet esse est est dolor. Dolore quis pariatur sit consectetur veniam esse ullamco duis Lorem qui enim ut veniam. Officia deserunt minim duis laborum dolor in velit pariatur commodo ullamco eu. Aute adipisicing ad duis labore laboris do mollit dolor cillum sunt aliqua ullamco. Esse tempor quis cillum consequat reprehenderit. Adipisicing proident anim eu sint elit aliqua anim dolore cupidatat fugiat aliquip qui.
-              </p>
-              <p id="lorem5">
-                Nisi eiusmod esse cupidatat excepteur exercitation ipsum reprehenderit nostrud deserunt aliqua ullamco. Anim est irure commodo eiusmod pariatur officia. Est dolor ipsum excepteur magna aliqua ad veniam irure qui occaecat eiusmod aute fugiat commodo. Quis mollit incididunt amet sit minim velit eu fugiat voluptate excepteur. Sit minim id pariatur ex cupidatat cupidatat nostrud nostrud ipsum.
-              </p>
-              <p>
-                Enim ea officia excepteur ad veniam id reprehenderit eiusmod esse mollit consequat. Esse non aute ullamco Lorem aliqua qui dolore irure eiusmod aute aliqua proident labore aliqua. Ipsum voluptate voluptate exercitation laborum deserunt nulla elit aliquip et minim ex veniam. Duis cupidatat aute sunt officia mollit dolor ad elit ad aute labore nostrud duis pariatur. In est sint voluptate consectetur velit ea non labore. Ut duis ea aliqua consequat nulla laboris fugiat aute id culpa proident. Minim eiusmod laboris enim Lorem nisi excepteur mollit voluptate enim labore reprehenderit officia mollit.
-              </p>
-              <p>
-                Cupidatat labore nisi ut sunt voluptate quis sunt qui ad Lorem esse nisi. Ex esse velit ullamco incididunt occaecat dolore veniam tempor minim adipisicing amet. Consequat in exercitation est elit anim consequat cillum sint labore cillum. Aliquip mollit laboris ad labore anim.
-              </p>
-            </div>
-          </section>
-        </div>
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="https://theandroidmaster.github.io/">Home Page</a></li>
+              <li><a href="https://theandroidmaster.github.io/#!/about">About</a></li>
+            </ul>
+          </div>
+        </footer>
       </main>
     </div>
-    <script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
+    <a href="https://play.google.com/apps/testing/pasta.streamer" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Download the Beta</a>
+    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
   </body>
 </html>
