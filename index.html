@@ -637,7 +637,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               var id = "release-" + i;
               appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material>";      
             } else {
-              repoHTML += "<paper-item onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item>";
+              repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
           }
           
@@ -704,41 +704,50 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             var message = "";
-            var icon = "<iron-icon class=\"icon\" icon=\"error-outline\"></iron-icon>";
+            var icon = "error-outline";
             var url = "https://github.com/" + obj[i].repo.name;
             if (obj[i].type == "PushEvent") {
               message = obj[i].payload.commits[0].message;
-              icon = "<iron-icon class=\"icon\" icon=\"swap-vert\"></iron-icon>";
+              icon = "swap-vert";
             } else if (obj[i].type == "WatchEvent") {
               message = "Starred " + obj[i].repo.name;
-              icon = "<iron-icon class=\"icon\" icon=\"star\"></iron-icon>";
+              icon = "star";
             } else if (obj[i].type == "MemberEvent") {
               message = obj[i].payload.action + " " + obj[i].payload.member.login;
-              icon = "<iron-icon class=\"icon\" icon=\"assignment-ind\"></iron-icon>";
+              icon = "assignment-ind";
             } else if (obj[i].type == "IssueCommentEvent") {
-              message = obj[i].payload.issue.title;
-              icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+              message = "issue #" + obj[i].payload.issue.number + " created: " + obj[i].payload.issue.title;
+              url = obj[i].payload.issue.html_url;
+              icon = "announcement";
+            } else if (obj[i].type == "CommitCommentEvent") {
+              message = "commented on commit " + obj[i].payload.commit_id + " in " + obj[i].repo.name;
+              icon = "announcement";
+              url = obj[i].payload.comment.html_url;
             } else if (obj[i].type == "CreateEvent") {
               message = obj[i].payload.ref_type + " " + obj[i].payload.ref + " created";
-              icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+              icon = "add-box";
             } else if (obj[i].type == "ForkEvent") {
               message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
-              icon = "<iron-icon class=\"icon\" icon=\"add-box\"></iron-icon>";
+              icon = "add-box";
             } else if (obj[i].type == "IssuesEvent") {
               message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
-              icon = "<iron-icon class=\"icon\" icon=\"announcement\"></iron-icon>";
+              icon = "announcement";
             } else if (obj[i].type == "DeleteEvent") {
               message = "Deleted " + obj[i].repo.name;
-              icon = "<iron-icon class=\"icon\" icon=\"delete\"></iron-icon>";
+              icon = "delete";
             } else if (obj[i].type == "PullRequestEvent") {
               message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
-              icon = "<iron-icon class=\"icon\" icon=\"compare-arrows\"></iron-icon>";
+              icon = "compare-arrows";
             } else if (obj[i].type == "ReleaseEvent") {
               message = obj[i].payload.release.tag_name + " " + obj[i].payload.action;
-              icon = "<iron-icon class=\"icon\" icon=\"cloud-upload\"></iron-icon>";
+              icon = "cloud-upload";
               url = obj[i].payload.release.html_url;
+            } else if (obj[i].type = "GollumEvent") {
+              message = obj[i].payload.pages[0].title + " page " + obj[i].payload.pages[0].action + " in " + obj[i].repo.name;
+              icon = "book";
+              url = "https://github.com" + obj[i].payload.pages[0].html_url;
             }
-            HTML += "<paper-item onclick=\"window.location.href = \'" + url + "\'\">" + icon + "<paper-item-body two-line><div>" + message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item>";
+            HTML += "<a href=\"" + url + "\"><paper-item><iron-icon class=\"icon\" icon=\"" + icon + "\"></iron-icon><paper-item-body two-line><div>" + message + "</div><div secondary>" + obj[i].repo.name + "</div></paper-item-body></paper-item></a>";
           }
           
           document.getElementById('relatedcontent').innerHTML = HTML;
