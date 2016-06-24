@@ -411,10 +411,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p>Browsing Google+: 35%</p>
                 <p>Coding: 25%</p>
                 <br>
-                <h4>Time Spent Creaating Random Bugs on My Website:</h4>
-                <p>&lt;a href=&quot;old/index.html&quot;&gt;75%&lt;/a&gt;</p>
-                <p>Coding: 25%</p>
-                <br>
+                <div id="secret">
+                  <h4>Time Spent Creaating Random Bugs on My Website:</h4>
+                  <p>&lt;a href=&quot;old/index.html&quot;&gt;75%&lt;/a&gt;</p>
+                  <p>Coding: 25%</p>
+                  <br>
+                </div>
                 <h4>Ingredients of Material Design:</h4>
                 <p>Butter: 90%</p>
                 <p>Skill: 0%</p>
@@ -442,10 +444,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     var hellos = [
       'Goodbye.',
       'I don\'t like introductions.',
-      'Give me food and I might talk.',
+      'give(\"' + atob("bWU=") + '\", \"' + atob("Zm9vZA==") + '\"); and I might talk.',
       'I\'m not friendly if I don\'t have tacos.',
       'Don\'t you have anything better to do?',
-      'At least I\'m not wasting my life talking to a human...',
+      'At least I\'m not wasting my life talking to a website...',
       'Ooh look a penny.',
       'OHMYGODLOOKATTHAT (runs away while you\'re distracted)',
       'I can\'t think of anything to put here.',
@@ -456,7 +458,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       'I used to be a banker but I lost interest.',
       'I relish the fact that you\'ve mustard the strength to ketchup to me.',
       'I once heard a joke about amnesia, but I forgot how it goes.',
-      'Go consume some camel feces.'
+      'Go consume some camel feces.',
+      'I used to have a fear of hurdles, but I got over it.',
+      'Don\'t trust people that do acupuncture, they\'re back stabbers.',
+      'I used to be addicted to soap, but I\'m clean now.',
+      'When a clock is hungry it goes back four seconds.',
+      'The magician got so mad he pulled his hare out.',
+      'I took a picture of a field of wheat, it was grainy.',
+      'My tailor is happy to make a pair of pants for me, or at least sew it seams.',
+      'I was struggling to figure out how lightning works then it struck me.',
+      'My grade in Marine Biology is below sea-level.',
+      'I don\'t think I need a spine. It\'s holding me back.'
     ];
       
     document.querySelector('#toast').text = hellos[Math.floor(Math.random() * hellos.length)];
@@ -474,6 +486,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       xhr = null;
     }
     return xhr;
+  }
+  
+  function give(first, second) {
+      if (btoa(first) == "bWU=" && btoa(second) == "Zm9vZA==") {
+          console.log('There\'s something special in the about section ;)');
+      }
   }
   
   function onError(status) {
