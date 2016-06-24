@@ -411,7 +411,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p>Browsing Google+: 35%</p>
                 <p>Coding: 25%</p>
                 <br>
-                <div id="secret">
+                <div id="secret" style="display: none;">
                   <h4>Time Spent Creaating Random Bugs on My Website:</h4>
                   <p>&lt;a href=&quot;old/index.html&quot;&gt;75%&lt;/a&gt;</p>
                   <p>Coding: 25%</p>
@@ -490,7 +490,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   function give(first, second) {
       if (btoa(first) == "bWU=" && btoa(second) == "Zm9vZA==") {
-          console.log('There\'s something special in the about section ;)');
+          document.getElementById("secret").style.display = 'block';
+          return 'There\'s something special in the about section ;)';
+      } else {
+          return 'The cabbage doesn\'t like you.';
       }
   }
   
