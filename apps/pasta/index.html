@@ -111,12 +111,21 @@
         font-size: 13px;
     }
     
+    img {
+        width: 20%;
+        height: auto;
+    }
+    
     a {
-        color: #00C853;
+        color: #1B5E20;
     }
     
     a:hover {
         color: #00E676;
+    }
+    
+    .inline {
+        display: inline;
     }
     
     .layout {
@@ -128,7 +137,9 @@
     
     .layout-header {
         color: #F5F5F5;
-        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://theandroidmaster.github.io/images/headers/rocks.jpg');;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://theandroidmaster.github.io/images/headers/rocks.jpg');
+        background-repeat: no-repeat;
     }
     
     .layout-header a {
@@ -140,11 +151,9 @@
     }
     
     .layout-primary {
-        background-color: #E8F5E9;
     }
     
     .layout-secondary {
-        background-color: #DEEBDF;
     }
     
     .mdl-layout__header {
@@ -172,7 +181,50 @@
         margin: 20px;
     }
     
+    .inline {
+        display: inline-block;
+    }
+    
+    .block {
+        display: block;
+    }
+    
+    .demo-card-event.mdl-card {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background: #4CAF50;
+        color: white;
+        text-align: left;
+    }
+    
+    .demo-card-event > .mdl-card__actions {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .demo-card-event > .mdl-card__title {
+        align-items: flex-start;
+    }
+    
+    .demo-card-event > .mdl-card__actions {
+        display: flex;
+        box-sizing:border-box;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .demo-card-event > .mdl-card__title,
+    .demo-card-event > .mdl-card__actions,
+    .demo-card-event > .mdl-card__actions > .mdl-button {
+        color: #fff;
+    }
+    
     @media(max-width: 1024px) {
+        
+        .inline {
+            display: block;
+        }
         
         .layout {
             padding: 20px;
@@ -180,6 +232,13 @@
         
         .mobile {
             visibility: inherit;
+        }
+        
+        .demo-card-event.mdl-card {
+            width: 80%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     </style>
@@ -222,8 +281,23 @@
             <a href="https://play.google.com/apps/testing/pasta.streamer" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download the Beta</span></a>
           </div>
           <br>
-          <br>
-          <br>
+          <div>
+            <div class="demo-card-event mdl-card mdl-shadow--2dp inline">
+              <div class="mdl-card__title mdl-card--expand block">
+                <h4 id="release-title">Latest Release:&nbsp;</h4>
+                <p id="release-content"></p>
+              </div>
+              <div id="release-action" class="mdl-card__actions mdl-card--border"></div>
+            </div>
+            <div class="demo-card-event mdl-card mdl-shadow--2dp inline">
+              <div class="mdl-card__title mdl-card--expand block">
+                <h4>Last Commit:</h4>
+                <br>
+                <p id="commit-content"></p>
+              </div>
+              <div id="commit-action" class="mdl-card__actions mdl-card--border"></div>
+            </div>              
+          </div>
         </div>
         <div class="layout layout-secondary" id="design">
           <h4>Design</h4>
@@ -282,9 +356,46 @@
             <li><a href="https://plus.google.com/+KevinAguilarC">Kevin Aguilar</a></li>
           </ul>
         </div>
+      </div>
     </div>
   </main>
 </div>
     <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    
+    <script>
+    var releaseContent = new XMLHttpRequest();
+    releaseContent.onreadystatechange = function () {
+      if(releaseContent.readyState === 4) {      
+        if(releaseContent.status === 200 || releaseContent.status == 0) {
+          var obj = JSON.parse(releaseContent.responseText);
+          
+          document.getElementById("release-title").innerHTML += obj[0].name;
+          document.getElementById("release-content").innerHTML = obj[0].body;
+          document.getElementById("release-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
+        } else {
+          console.log("error getting latest release: " + releaseContent.status);
+        }
+      }
+    }
+    releaseContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Pasta-for-Spotify/releases", true);
+    releaseContent.send(null);
+    
+    var commitContent = new XMLHttpRequest();
+    commitContent.onreadystatechange = function () {
+      if(commitContent.readyState === 4) {      
+        if(commitContent.status === 200 || commitContent.status == 0) {
+          var obj = JSON.parse(commitContent.responseText);
+          
+          document.getElementById("commit-content").innerHTML = obj[0].commit.message;
+          document.getElementById("commit-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
+        } else {
+          console.log("error getting last commit: " + commitContent.status);
+        }
+      }
+    }
+    commitContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Pasta-for-Spotify/commits", true);
+    commitContent.send(null);        
+    </script>
+    
   </body>
 </html>
