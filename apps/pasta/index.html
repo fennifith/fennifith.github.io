@@ -113,7 +113,13 @@
     }
     
     img {
-        width: 20%;
+        width: calc(150px + 5%);
+        height: auto;
+    }
+    
+    .content {
+        display: block;
+        width: calc(95% - 300px);
         height: auto;
     }
     
@@ -134,6 +140,7 @@
         padding-right: 10%;
         padding-top: 50px;
         padding-bottom: 50px;
+        overflow: hidden;
     }
     
     .layout-header {
@@ -157,9 +164,15 @@
     }
     
     .layout-primary {
+        background-color: #FAFAFA;
     }
     
-    .layout-secondary {
+    .layout-primary img {
+        float: right;
+    }
+    
+    .layout-secondary > .content {
+        float: right;
     }
     
     .mdl-layout__header {
@@ -254,9 +267,20 @@
     }
     
     @media(max-width: 800px) {
+        
         .desktop {
             display: none;
         }
+        
+        img {
+            display: none;
+        }
+        
+        .content {
+            float: none !important;
+            width: 100%;
+        }
+        
     }
     </style>
   </head>
@@ -317,7 +341,9 @@
             </div>              
           </div>
         </div>
-        <div class="layout layout-secondary" id="design">
+        <div class="layout layout-secondary inline" id="design">
+          <img src="https://theandroidmaster.github.io/images/screenshots/help.png">
+          <div class="content">
           <h4>Design</h4>
           <ul>
             <li>Touch areas are increased for small devices to be able to open things like menus and playlists more easily than the layout in the official app.</li>
@@ -327,8 +353,11 @@
             <li>Most parts of the app can be customized from the settings menu to allow the user to change their experience, including the main color scheme of the app and whether to display items as cards, tiles, or lists.</li>
             <li>All parts of the official app that serve as a bookmark for an item are united into one "Favorites" section of the app. This means that artists that are being followed, playlists that have been created (or followed), and albums and tracks that have been "added" show up here, making the result of the "favorite" action obvious to most users instead of having to google <a href="https://www.google.com/search?newwindow=1&safe=strict&q=what+does+it+mean+to+add+a+track+in+spotify%3F&oq=what+does+it+mean+to+add+a+track+in+spotify">"what does it mean to add a track in spotify?"</a> (like I did).</li>
           </ul>
+          </div>
         </div>
         <div class="layout layout-primary">
+          <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-card.png">
+          <div class="content">
           <h4>Performance</h4>
           <p>
             Though I am not sure what the official Spotify client uses to switch layouts, many of the current users have reported a large increase in loading speed of Pasta for Spotify versus the official app. This could be because of a few things:
@@ -338,8 +367,11 @@
             <li><a href="http://jakewharton.github.io/butterknife/">Butterknife</a>, by Jake Wharton, is used to bind views instead of the standard view binding method. Truthfully I have no idea what this means but it saves time so just go with it. ;)</li>
             <li><a href="https://github.com/bumptech/glide">Glide</a> is used to load image urls provided by the spotify api. This saves a lot of loading time by asynchronously loading an image while scrolling as well as compressing it to speed up the download as much as possible.</li>
           </ul>
+          </div>
         </div>
         <div class="layout layout-secondary" id="features">
+          <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-now-playing.png">
+          <div class="content">
           <h4>Features</h4>
           <p>Pasta for Spotify has almost all the features of the official app, though playlists cannot be downloaded because that could potentially create a way for users to export songs from the app, and I'm sure Spotify would not like that.</p>
           <ul>
@@ -352,6 +384,7 @@
             <li>Options to change the global color scheme of the app</li>
             <li>Change the ordering of songs in playlists and albums</li>
           </ul>
+          </div>
         </div>
         <div class="layout layout-primary">
           <h4>Limitations</h4>
