@@ -41,6 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style is="custom-style" include="shared-styles"></style>
   <style>    
     paper-ripple {
+      color: #9FA8DA;
       transition: background-color .25s;
       -moz-transition: background-color .25s;
       -webkit-transition: background-color .25s;
@@ -53,11 +54,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     paper-button:hover{
       background-color: #212121;
     }
+    
     paper-button{
       transition: background-color .25s;
       -moz-transition: background-color .25s;
       -webkit-transition: background-color .25s;
     }
+    
+    paper-material {
+      color: black;
+    }
+    
     img {
       width:100%;
       max-height:100%;
@@ -692,7 +699,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
-              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-material elevation=\"1\"><paper-ripple></paper-ripple><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material></a>";      
+              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-material elevation=\"1\"><paper-ripple></paper-ripple><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-material></a>";      
             } else {
               repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
