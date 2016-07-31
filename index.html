@@ -578,7 +578,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<a href=\"" + obj[i].html_url + "\"><paper-ripple></paper-ripple><div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div></a>";
+            HTML += "<div onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div>";
           }
           
           document.getElementById(id).innerHTML = HTML;
@@ -699,7 +699,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
-              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-material elevation=\"1\"><paper-ripple></paper-ripple><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-material></a>";      
+              appHTML += "<paper-material elevation=\"1\" onclick=\"window.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-material>";      
             } else {
               repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
