@@ -601,7 +601,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
         if(releaseContent.status === 200 || releaseContent.status == 0) {
           var obj = JSON.parse(releaseContent.responseText);
-          var HTML = "<hr>";
+          var HTML = "";
           
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
@@ -733,7 +733,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
-              appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + name + "\"><div class=\"card-content\">" + desc + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a></div><iron-collapse id=\"" + id + "\" class=\"flex\" style=\"width: 100%; padding: 16px;\"></iron-collapse></paper-card>";      
+              appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + name + "\"><div class=\"card-content\">" + desc + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a></div><iron-collapse id=\"" + id + "\" class=\"flex\" style=\"width: 100%; padding: 16px;\"><paper-spinner></paper-spinner></iron-collapse></paper-card>";      
             } else {
               repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
