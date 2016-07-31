@@ -612,7 +612,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<div style=\"position: relative; padding: 16px;\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p><div class=\"card-actions\">" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div></div>";
+            HTML += "<paper-toolbar style=\"position: relative; margin: 16px; background-color: rgba(0, 0, 0, 0);\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><div class=\"title\">" + obj[i].name + badge + "</div><div class=\"middle title\">" + obj[i].body + "</div>assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></paper-toolbar>";
           }
           
           document.getElementById(id).innerHTML = HTML;
@@ -733,7 +733,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
-              appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + name + "\"><div class=\"card-content\">" + desc + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a></div><iron-collapse id=\"" + id + "\" class=\"flex\" style=\"width: 100%; padding: 16px;\"><paper-spinner></paper-spinner></iron-collapse></paper-card>";      
+              appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + name + "\"><div class=\"card-content\">" + desc + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a></div><iron-collapse id=\"" + id + "\" style=\"width: 100%; padding: 16px;\"><paper-spinner active></paper-spinner></iron-collapse></paper-card>";      
             } else {
               repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
