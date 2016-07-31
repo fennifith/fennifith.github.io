@@ -612,7 +612,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<paper-toolbar style=\"position: relative; margin: 16px; background-color: rgba(0, 0, 0, 0);\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><div class=\"title\">" + obj[i].name + badge + "</div><div class=\"middle title\">" + obj[i].body + "</div>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></paper-toolbar>";
+            HTML += "<paper-toolbar class=\"tall\" style=\"position: relative; margin: 16px; color: black; background-color: rgba(0, 0, 0, 0);\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><div class=\"title\">" + obj[i].name + badge + "</div><div class=\"middle title\">" + obj[i].body + "</div>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></paper-toolbar>";
           }
           
           document.getElementById(id).innerHTML = HTML;
