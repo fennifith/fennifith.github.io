@@ -40,6 +40,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <style is="custom-style" include="shared-styles"></style>
   <style>    
+    paper-ripple {
+      transition: background-color .25s;
+      -moz-transition: background-color .25s;
+      -webkit-transition: background-color .25s;
+    }
+  
+    paper-ripple:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  
     paper-button:hover{
       background-color: #212121;
     }
@@ -561,7 +571,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>View on GitHub</paper-button></a></div>";
+            HTML += "<a href=\"" + obj[i].html_url + "\"><paper-ripple></paper-ripple><div><h2>" + obj[i].name + "</h2>" + badge + "<p>" + obj[i].body + "</p>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></div></a>";
           }
           
           document.getElementById(id).innerHTML = HTML;
@@ -682,7 +692,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               
             } else if (!obj[i].fork && obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
-              appHTML += "<paper-material elevation=\"1\"><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material>";      
+              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-material elevation=\"1\"><paper-ripple></paper-ripple><h2>" + name + "</h2><p>" + desc + "</p><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a onclick=\"document.querySelector(\'#" + id + "\').toggle(); getReleases(\'" + obj[i].releases_url.split("{")[0] + "\', \'" + id + "\');\"><paper-button>Releases</paper-button></a><iron-collapse id=\"" + id + "\" style=\"width:100%;\"></iron-collapse></paper-item></paper-material></a>";      
             } else {
               repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + name + "</div><div secondary>" + desc + "</div></paper-item-body></paper-item></a>";
             }
