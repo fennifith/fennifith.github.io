@@ -45,6 +45,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       display: flex;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
+      
+      transition: all .25s;
+      -moz-transition: all .25s;
+      -webkit-transition: all .25s;
     }
   
     paper-ripple {
@@ -606,13 +610,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           for (var i = 0; true; i++) {
             if (obj[i] == null) break;
             var badge = "";
-            if (obj[i].prerelease) badge = "<p style=\"color:red;\">PRE-RELEASE</p>";
+            if (obj[i].prerelease) badge = " (unreleased)";
             var assets = "";
             for (var a = 0; true; a++) {
               if (obj[i].assets[a] == null) break;
               assets += "<a href=\"" + obj[i].assets[a].browser_download_url + "\"><paper-button>" + obj[i].assets[a].name + "</paper-button></a>"; 
             }
-            HTML += "<paper-toolbar class=\"tall\" style=\"position: relative; margin: 16px; color: black; background-color: rgba(0, 0, 0, 0);\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><div class=\"title\">" + obj[i].name + badge + "</div><div class=\"middle title\">" + obj[i].body + "</div>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a><a href=\"" + obj[i].tarball_url + "\"><paper-button>Source code (tar.gz)</paper-button></a></paper-toolbar>";
+            HTML += "<paper-toolbar class=\"tall\" style=\"position: relative; margin: 16px; color: black; background-color: rgba(0, 0, 0, 0);\" onclick=\"document.location.href = \'" + obj[i].html_url + "\'\"><paper-ripple></paper-ripple><div class=\"title\">" + obj[i].name + badge + "</div><div class=\"middle title\">" + obj[i].body + "</div>" + assets + "<a href=\"" + obj[i].zipball_url + "\"><paper-button>Source code (zip)</paper-button></a></paper-toolbar>";
           }
           
           document.getElementById(id).innerHTML = HTML;
