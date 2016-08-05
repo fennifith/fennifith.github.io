@@ -1,0 +1,441 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A no-root status bar replacement for Android">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Status</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="156x156" href="favicon.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blue">
+    <meta name="apple-mobile-web-app-title" content="Status">
+    <link rel="apple-touch-icon-precomposed" href="favicon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="favicon.png">
+    <meta name="msapplication-TileColor" content="#2196F3">
+
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.grey-green.min.css">
+    <style>
+    * {
+      transition: all .1s;
+      -moz-transition: all .1s;
+      -webkit-transition: all .1s;
+    }
+        
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    .demo-ribbon {
+        width: 100%;
+        height: 40vh;
+        background-color: #2196F3;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .demo-main {
+        margin-top: -35vh;
+        -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .demo-header .mdl-layout__header-row {
+        padding-left: 40px;
+    }
+
+    .demo-container {
+        max-width: 1600px;
+        width: calc(100% - 16px);
+        margin: 0 auto;
+    }
+
+    .demo-content {
+        border-radius: 2px;
+        padding: 80px 56px;
+        margin-bottom: 80px;
+    }
+
+    .demo-layout.is-small-screen .demo-content {
+        padding: 40px 28px;
+    }
+
+    .demo-content h3 {
+        margin-top: 48px;
+    }
+
+    .demo-footer {
+        padding-left: 40px;
+    }
+
+    .demo-footer .mdl-mini-footer--link-list a {
+        font-size: 13px;
+    }
+    
+    img {
+        width: calc(150px + 5%);
+        height: auto;
+    }
+    
+    .content {
+        display: block;
+        width: calc(95% - 300px);
+        height: auto;
+    }
+    
+    a {
+        color: #0D47A1;
+    }
+    
+    a:hover {
+        color: #2979FF;
+    }
+    
+    .inline {
+        display: inline;
+    }
+    
+    .layout {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+    
+    .layout-header {
+        color: #F5F5F5;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://theandroidmaster.github.io/images/headers/highway.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    .layout-header a {
+        color: #FFFFFF;
+    }
+    
+    .layout-header a:hover {
+        color: #2979FF;
+    }
+    
+    .layout-header h2 {
+        font-family: 'Roboto Slab', serif;
+    }
+    
+    .layout-primary {
+        background-color: #FAFAFA;
+    }
+    
+    .layout-primary img {
+        float: right;
+    }
+    
+    .layout-secondary > .content {
+        float: right;
+    }
+    
+    .mdl-layout__header {
+        background-color: white;
+    }
+    
+    .mdl-navigation__link--icon span {
+        margin-left: 8px;
+    }
+    
+    .download {
+        color: #2962FF !important;
+    }
+    
+    .mdl-navigation__link:hover {
+        color: #2979FF !important;
+    }
+    
+    .mobile {
+        visibility: hidden;
+        color: #FFFFFF !important;
+    }
+    
+    .mobile a {
+        margin: 20px;
+    }
+    
+    .inline {
+        display: inline-block;
+    }
+    
+    .block {
+        display: block;
+    }
+    
+    .demo-card-event.mdl-card {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background: #2196F3;
+        color: white;
+        text-align: left;
+    }
+    
+    .demo-card-event > .mdl-card__actions {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .demo-card-event > .mdl-card__title {
+        align-items: flex-start;
+    }
+    
+    .demo-card-event > .mdl-card__actions {
+        display: flex;
+        box-sizing:border-box;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .demo-card-event > .mdl-card__title,
+    .demo-card-event > .mdl-card__actions,
+    .demo-card-event > .mdl-card__actions > .mdl-button {
+        color: #fff;
+    }
+    
+    @media(max-width: 1024px) {
+        
+        .inline {
+            display: block;
+        }
+        
+        .layout {
+            padding: 20px;
+        }
+        
+        .mobile {
+            visibility: inherit;
+        }
+        
+        .demo-card-event.mdl-card {
+            width: 80%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .demo-card-event > .mdl-card__actions {
+            position: relative;
+        }
+        
+    }
+    
+    @media(max-width: 800px) {
+        
+        .desktop {
+            display: none;
+        }
+        
+        img {
+            display: none;
+        }
+        
+        .content {
+            float: none !important;
+            width: 100%;
+        }
+        
+    }
+    </style>
+  </head>
+  <body>
+      
+<div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Status</span>
+      <div class="mdl-layout-spacer"></div>
+      <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon"><i class="material-icons">link</i><span>GitHub</span></a>
+      <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download</span></a>
+    </div>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#design">Design</a>
+        <a class="mdl-navigation__link" href="#features">Features</a>
+        <a class="mdl-navigation__link" href="#contributors">Contributors</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <div class="layout layout-header">
+          <br>            
+          <h2>A <a href="https://material.google.com/">material design</a> Spotify client for Android.</h2>
+          <p>
+            Status is a material design status bar replacement for android that can function properly without needing root permission.
+            <br>
+            It was created for the main purpose of reducing the amount of space taken up by status icons on my phone, which I am unable to gain root access on.
+          </p>
+          <div class="mobile">
+            <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon"><i class="material-icons">link</i><span>GitHub</span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download/span></a>
+          </div>
+          <br>
+          <div class="desktop">
+            <div class="demo-card-event mdl-card mdl-shadow--2dp inline">
+              <div class="mdl-card__title mdl-card--expand block">
+                <h4 id="release-title">Latest Release:&nbsp;</h4>
+                <p id="release-content"></p>
+              </div>
+              <div id="release-action" class="mdl-card__actions mdl-card--border"></div>
+            </div>
+            <div class="demo-card-event mdl-card mdl-shadow--2dp inline">
+              <div class="mdl-card__title mdl-card--expand block">
+                <h4>Last Commit:</h4>
+                <p id="commit-content"></p>
+              </div>
+              <div id="commit-action" class="mdl-card__actions mdl-card--border"></div>
+            </div>              
+          </div>
+        </div>
+        <div class="layout layout-secondary inline" id="design">
+          <img src="https://theandroidmaster.github.io/images/screenshots/help.png">
+          <div class="content">
+            <h4>Design</h4>
+            <ul>
+              <li>All icons take up the smallest amount of space possible while still providing a clear message.</li>
+              <li>The status bar background will fade between color changes.</li>
+              <li>When fullscreen mode is toggled, the status bar animates off the screen.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="layout layout-primary">
+          <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-card.png">
+          <div class="content">
+          <h4>Performance</h4>
+          <p>
+            Though I am not sure what the official Spotify client uses to switch layouts, many of the current users have reported a large increase in loading speed of Pasta for Spotify versus the official app. This could be because of a few things:
+          </p>
+          <ul>
+            <li>The app uses Aidan Follestad's <a href="https://github.com/afollestad/async">Async</a> library to load content separately from the UI thread, which allows the user to navigate the app while content is loading, for example: navigating back to the previous task while content is loading will cancel the download.</li>
+            <li><a href="http://jakewharton.github.io/butterknife/">Butterknife</a>, by Jake Wharton, is used to bind views instead of the standard view binding method. Truthfully I have no idea what this means but it saves time so just go with it. ;)</li>
+            <li><a href="https://github.com/bumptech/glide">Glide</a> is used to load image urls provided by the spotify api. This saves a lot of loading time by asynchronously loading an image while scrolling as well as compressing it to speed up the download as much as possible.</li>
+          </ul>
+          </div>
+        </div>
+        <div class="layout layout-secondary" id="features">
+          <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-now-playing.png">
+          <div class="content">
+          <h4>Features</h4>
+          <p>Pasta for Spotify has almost all the features of the official app, though playlists cannot be downloaded because that could potentially create a way for users to export songs from the app, and I'm sure Spotify would not like that.</p>
+          <ul>
+            <li>Shows newly released albums and featured playlists</li>
+            <li>A favorites section for playlists, albums, songs, and artists</li>
+            <li>Search through all of Spotify's database</li>
+            <li>View different categories of music</li>
+            <li>Dynamic backgrounds that adapt to the album art</li>
+            <li>A light/dark theme in the settings menu</li>
+            <li>Options to change the global color scheme of the app</li>
+            <li>Change the ordering of songs in playlists and albums</li>
+          </ul>
+          </div>
+        </div>
+        <div class="layout layout-primary">
+          <h4>Limitations</h4>
+          <ul>
+            <li><a href="https://github.com/TheAndroidMaster/Pasta-for-Spotify/issues/1">The app will occasionally refuse to play a song until a restart</a>. The "Unknown error, please restart" toast message is specific to this issue.</li>
+            <li>It is not possible to download a track to play it offline. See <a href="https://github.com/spotify/android-sdk/issues/2">this issue</a> for progress updates.</li>
+            <li>The 'restart' button usually causes an authentication error resulting in the app force closing.</li>
+            <li>The 'Sign Out' option in the settings menu will cause a crash if the official Spotify app is installed.</li>
+            <li>There are many features that are not accessible from a free account, such as playing songs and favoriting tracks.</li>
+          </ul>
+        </div>
+        <div class="layout layout-secondary" id="contributors">
+          <h4>Contributors</h4>
+          <ul>
+            <li><a href="http://theandroidmaster.github.io/">James Fenn</a></li>
+            <li><a href="https://plus.google.com/101325935187431392674/">Anas Khan</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+    <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    
+    <script>
+    var releaseContent = new XMLHttpRequest();
+    releaseContent.onreadystatechange = function () {
+      if(releaseContent.readyState === 4) {      
+        if(releaseContent.status === 200 || releaseContent.status == 0) {
+          var obj = JSON.parse(releaseContent.responseText);
+          
+          document.getElementById("release-title").innerHTML += obj[0].name;
+          document.getElementById("release-content").innerHTML = obj[0].body;
+          document.getElementById("release-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
+        } else {
+          console.log("error getting latest release: " + releaseContent.status);
+        }
+      }
+    }
+    releaseContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/releases", true);
+    releaseContent.send(null);
+    
+    var commitContent = new XMLHttpRequest();
+    commitContent.onreadystatechange = function () {
+      if(commitContent.readyState === 4) {      
+        if(commitContent.status === 200 || commitContent.status == 0) {
+          var obj = JSON.parse(commitContent.responseText);
+          
+          document.getElementById("commit-content").innerHTML = obj[0].commit.message;
+          document.getElementById("commit-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
+        } else {
+          console.log("error getting last commit: " + commitContent.status);
+        }
+      }
+    }
+    commitContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Pasta-for-Spotify/commits", true);
+    commitContent.send(null);        
+    </script>
+    
+  </body>
+</html>
