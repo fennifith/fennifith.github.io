@@ -317,7 +317,7 @@
           </p>
           <div class="mobile">
             <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon"><i class="material-icons">link</i><span>GitHub</span></a>
-            <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download/span></a>
+            <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download</span></a>
           </div>
           <br>
           <div class="desktop">
@@ -348,48 +348,26 @@
             </ul>
           </div>
         </div>
-        <div class="layout layout-primary">
-          <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-card.png">
-          <div class="content">
-          <h4>Performance</h4>
-          <p>
-            Though I am not sure what the official Spotify client uses to switch layouts, many of the current users have reported a large increase in loading speed of Pasta for Spotify versus the official app. This could be because of a few things:
-          </p>
-          <ul>
-            <li>The app uses Aidan Follestad's <a href="https://github.com/afollestad/async">Async</a> library to load content separately from the UI thread, which allows the user to navigate the app while content is loading, for example: navigating back to the previous task while content is loading will cancel the download.</li>
-            <li><a href="http://jakewharton.github.io/butterknife/">Butterknife</a>, by Jake Wharton, is used to bind views instead of the standard view binding method. Truthfully I have no idea what this means but it saves time so just go with it. ;)</li>
-            <li><a href="https://github.com/bumptech/glide">Glide</a> is used to load image urls provided by the spotify api. This saves a lot of loading time by asynchronously loading an image while scrolling as well as compressing it to speed up the download as much as possible.</li>
-          </ul>
-          </div>
-        </div>
-        <div class="layout layout-secondary" id="features">
+        <div class="layout layout-primary" id="features">
           <img src="https://theandroidmaster.github.io/images/screenshots/pasta-promo-now-playing.png">
           <div class="content">
           <h4>Features</h4>
-          <p>Pasta for Spotify has almost all the features of the official app, though playlists cannot be downloaded because that could potentially create a way for users to export songs from the app, and I'm sure Spotify would not like that.</p>
           <ul>
-            <li>Shows newly released albums and featured playlists</li>
-            <li>A favorites section for playlists, albums, songs, and artists</li>
-            <li>Search through all of Spotify's database</li>
-            <li>View different categories of music</li>
-            <li>Dynamic backgrounds that adapt to the album art</li>
-            <li>A light/dark theme in the settings menu</li>
-            <li>Options to change the global color scheme of the app</li>
-            <li>Change the ordering of songs in playlists and albums</li>
+            <li>Change the color of the status bar in specific apps</li>
+            <li>Changes the icon color based on the color of the status bar</li>
+            <li>Choose whether to display the AM/PM indicator in the clock</li>
+            <li>An option to show the battery percentage alongside the icon</li>
           </ul>
           </div>
         </div>
-        <div class="layout layout-primary">
+        <div class="layout layout-secondary">
           <h4>Limitations</h4>
           <ul>
-            <li><a href="https://github.com/TheAndroidMaster/Pasta-for-Spotify/issues/1">The app will occasionally refuse to play a song until a restart</a>. The "Unknown error, please restart" toast message is specific to this issue.</li>
-            <li>It is not possible to download a track to play it offline. See <a href="https://github.com/spotify/android-sdk/issues/2">this issue</a> for progress updates.</li>
-            <li>The 'restart' button usually causes an authentication error resulting in the app force closing.</li>
-            <li>The 'Sign Out' option in the settings menu will cause a crash if the official Spotify app is installed.</li>
-            <li>There are many features that are not accessible from a free account, such as playing songs and favoriting tracks.</li>
+            <li>Unfortunately, there is no way to make this status bar fully transparent, since it is only an overlay - the system status bar will be visible underneath it</li>
+            <li>It is difficult to anticipate all movements of the system status bar, for example the app currently cannot detect a swipe down from the top of the screen in fullscreen mode. There are also bound to be some device-specific gestures that cannot be accounted for <a href="http://www.xda-developers.com/the-sorry-state-of-android-fragmentation/">*cough cough Samsung</a></li>
           </ul>
         </div>
-        <div class="layout layout-secondary" id="contributors">
+        <div class="layout layout-primary" id="contributors">
           <h4>Contributors</h4>
           <ul>
             <li><a href="http://theandroidmaster.github.io/">James Fenn</a></li>
@@ -433,7 +411,7 @@
         }
       }
     }
-    commitContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Pasta-for-Spotify/commits", true);
+    commitContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/commits", true);
     commitContent.send(null);        
     </script>
     
