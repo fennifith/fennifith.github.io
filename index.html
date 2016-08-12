@@ -393,63 +393,48 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
             </section>
 
-            <section data-route="contact" class="nopadding">
-              <paper-tabs selected="{{selected}}">
-                  <paper-tab>Email</paper-tab>
-                  <paper-tab>Messaging</paper-tab>
-                  <paper-tab>Websites</paper-tab>
-                </paper-tabs>
-
-                <iron-pages selected="{{selected}}">
-                  <div>
-                    <paper-material elevation="1">
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='mailto:18jafenn90@gmail.com';">
-                      <div>Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@hotmail.com';">
-                      <div>Hotmail<paper-tooltip>na18jafenn90@hotmail.com</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@outlook.com';">
-                      <div>Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></div>
-                    </paper-item>
-                    </paper-material>
-                  </div>
-                  <div>
-                    <paper-material elevation="1">
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#gprofile').toggle();">
-                      <div>Google+<paper-tooltip>+James Fenn</paper-tooltip></div>
-                    </paper-item>
+            <section data-route="contact">
+              <paper-material elevation="1">
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='mailto:18jafenn90@gmail.com';">
+                  <div>Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></div>
+                </paper-item>
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@hotmail.com';">
+                  <div>Hotmail<paper-tooltip>na18jafenn90@hotmail.com</paper-tooltip></div>
+                </paper-item>
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@outlook.com';">
+                  <div>Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></div>
+                </paper-item>
+              </paper-material>
+              <paper-material elevation="1">
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#gprofile').toggle();">
+                  <div>Google+<paper-tooltip>+James Fenn</paper-tooltip></div>
+                </paper-item>
                     
-                    <iron-collapse id="gprofile">
-                      <script src="https://apis.google.com/js/platform.js" async defer></script>
-                      <div style="margin:20px" class="g-person" data-href="https://plus.google.com/114612442558529845038" data-layout="portrait" data-showcoverphoto="true"></div>
-                    </iron-collapse>
+                <iron-collapse id="gprofile">
+                  <script src="https://apis.google.com/js/platform.js" async defer></script>
+                  <div style="margin:20px" class="g-person" data-href="https://plus.google.com/114612442558529845038" data-layout="portrait" data-showcoverphoto="true"></div>
+                </iron-collapse>
                     
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#tprofile').toggle();">
-                      <div>Twitter<paper-tooltip>@IDontLikePHP</paper-tooltip></div>
-                    </paper-item>
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="document.querySelector('#tprofile').toggle();">
+                  <div>Twitter<paper-tooltip>@IDontLikePHP</paper-tooltip></div>
+                </paper-item>
                     
-                    <iron-collapse id="tprofile">
-                      <a href="https://twitter.com/IDontLikePHP" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @IDontLikePHP</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                    </iron-collapse>
+                <iron-collapse id="tprofile">
+                  <a href="https://twitter.com/IDontLikePHP" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @IDontLikePHP</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </iron-collapse>
                     
-                    </paper-material>
-                  </div>
-                  <div>
-                    <paper-material elevation="1">
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';">
-                      <div>Google Play<paper-tooltip>My Apps</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
-                      <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
-                    </paper-item>
-                    <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
-                      <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
-                    </paper-item>
-                    </paper-material>
-                    
-                  </div>
-                </iron-pages>
+              </paper-material>
+              <paper-material elevation="1">
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';">
+                  <div>Google Play<paper-tooltip>My Apps</paper-tooltip></div>
+                </paper-item>
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
+                  <div>Github<paper-tooltip>TheAndroidMaster</paper-tooltip></div>
+                </paper-item>
+                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
+                  <div>Stackoverflow<paper-tooltip>James Fenn</paper-tooltip></div>
+                </paper-item>
+              </paper-material>
             </section>
             
             <section data-route="about">
