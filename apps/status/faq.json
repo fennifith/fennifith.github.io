@@ -1,0 +1,14 @@
+[
+  {
+    "name": "How can I prevent lag?",
+    "content": "Lag can be prevented mostly by minimizing the amount of times the status bar has to update. This can be done by disabling animations, resourced-based colors, and removing any icons that aren't completely necessary for the status bar to function."
+  },
+  {
+    "name": "Why isn't the top part of my wallpaper aligned on the home screen?",
+    "content": "If the 'transparency on home screen' option is enabled, the app will get a static image of the wallpaper and set it as the status bar's background whenever you are on your home screen. This can create a few issues with scrolling wallpapers, as it isn't possible to detect the current page of the home screen. If you are using a custom launcher, it's usually pretty easy to prevent the wallpaper from scrolling in the launcher's settings menu, but otherwise the only option you really have is to disable the transparency setting."
+  },
+  {
+    "name": "Why is the status bar showing the wrong wallpaper background for my home screen?",
+    "content": "The 'transparency on home screen' option does not currently have support for live wallpapers - it will simply get the most recent image wallpaper instead."
+  }
+]
