@@ -4,6 +4,10 @@
     "content": "Lag can be prevented mostly by minimizing the amount of times the status bar has to update. This can be done by disabling animations, resourced-based colors, and removing any icons that aren't completely necessary for the status bar to function."
   },
   {
+    "name": "The status bar isn't showing notification icons.",
+    "content": "First, check that you have the 'show notifications' option in the 'settings' tab enabled. Then open the setup screen (three dots -> setup). If you are running android 4.4 or higher, click on 'compatibility mode' and turn on the switch at the bottom. If compatibility mode is already enabled, turning it off sometimes fixes the issue as well. Another useful thing to note is that sometimes clearing the app data can help fix issues similar to this one."
+  },
+  {
     "name": "Why isn't the top part of my wallpaper aligned on the home screen?",
     "content": "If the 'transparency on home screen' option is enabled, the app will get a static image of the wallpaper and set it as the status bar's background whenever you are on your home screen. This can create a few issues with scrolling wallpapers, as it isn't possible to detect the current page of the home screen. If you are using a custom launcher, it's usually pretty easy to prevent the wallpaper from scrolling in the launcher's settings menu, but otherwise the only option you really have is to disable the transparency setting."
   },
