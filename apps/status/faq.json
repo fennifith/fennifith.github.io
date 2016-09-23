@@ -9,7 +9,11 @@
   },
   {
     "name": "The status bar isn't showing notification icons.",
-    "content": "First, check that you have the 'show notifications' option in the 'settings' tab enabled. Then open the setup screen (three dots -> setup). If you are running android 4.4 or higher, click on 'compatibility mode' and turn on the switch at the bottom. If compatibility mode is already enabled, turning it off sometimes fixes the issue as well. Another useful thing to note is that sometimes clearing the app data can help fix issues similar to this one."
+    "content": "First, check that you have the 'show notifications' option in the 'settings' tab enabled. Then open the setup screen (three dots -> setup). If you are running android 4.3 or higher, click on 'compatibility mode' and turn on the switch at the bottom. If compatibility mode is already enabled, turning it off sometimes fixes the issue as well. Another useful thing to note is that sometimes clearing the app data can help fix issues similar to this one."
+  },
+  {
+    "name": "The status bar doesn't remove notifications until the notification panel is opened.",
+    "content": "If you are running android 4.3 or higher, open the setup screen (three dots -> setup), click on 'compatibility mode', and make sure it is not enabled. If you're below android 4.3, this issue is due to a limitation of android and this is (unfortunately) the best I can do to support your device at the moment."
   },
   {
     "name": "Why isn't the top part of my wallpaper aligned on the home screen?",
