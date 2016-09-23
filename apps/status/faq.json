@@ -25,6 +25,6 @@
   },
   {
     "name": "How do you change the time format?",
-    "content": "The clock format can be changed through the 'time format' option for the clock icon. The clock will replace certian characters inputted into the dialog with associated variables, for example to show the time in a 24 hour format you would input \"HH:MM\", or to show the AM/PM indicator \"h:mm a\"."
+    "content": "The clock format can be changed through the 'time format' option for the clock icon. The clock will replace certian characters inputted into the dialog with the associated variables, for example to show the time in a 24 hour format you would input \"HH:MM\", or to show the AM/PM indicator \"h:mm a\"."
   }
 ]
