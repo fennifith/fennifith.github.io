@@ -44,7 +44,7 @@
     <link rel="canonical" href="http://www.example.com/">
     -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.grey-green.min.css">
@@ -61,6 +61,10 @@
     
     a:hover {
       color: #2979FF;
+    }
+    
+    .mdl-font {
+      font-family: 'Inconsolata', 'Helvetica', 'Arial', sans-serif !important;
     }
     
     .mdl-layout__header a {
@@ -82,19 +86,19 @@
 <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--waterfall">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Status</span>
+      <span class="mdl-layout-title mdl-font">Status</span>
       <div class="mdl-layout-spacer"></div>
-      <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon"><i class="material-icons">link</i><span>GitHub</span></a>
-      <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download"><i class="material-icons"></i><span>Download</span></a>
+      <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon mdl-font"><i class="material-icons">link</i><span>GitHub</span></a>
+      <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download mdl-font"><i class="material-icons"></i><span>Download</span></a>
     </div>
     <!-- Bottom row, not visible on scroll -->
     <div class="mdl-layout__header-row">
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="#design">Design</a>
-        <a class="mdl-navigation__link" href="#features">Features</a>
-        <a class="mdl-navigation__link" href="#contributors">Contributors</a>
+        <a class="mdl-navigation__link mdl-font" href="#design">Design</a>
+        <a class="mdl-navigation__link mdl-font" href="#features">Features</a>
+        <a class="mdl-navigation__link mdl-font" href="#contributors">Contributors</a>
       </nav>
     </div>
   </header>
