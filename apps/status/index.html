@@ -157,12 +157,18 @@
       
       <div class="content mdl-font">
         <p>
-          Something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something
+          Status is a status bar replacement that draws an overlay on top of the system-generated status bar. This means that the actual status bar is only hidden under the replacement; touch gestures are not overridden, and the standard notification panel is still shown. This can also be done without root access, making it possible to modify the status bar (kind of) in ways that would normally not be possible. It needs a lot of permissions in order to obtain the information needed to display in the status bar, since everything needs to be done separately from the system one, however the app is open source and doesn't use analytics services, so you can be sure the app will not use them for anything other than showing a status bar. Just in case anyone wants a description of what all the permissions are used for, they have been listed below.
         </p>
         <ul>
-          <li>Something</li>
-          <li>Something</li>
-          <li>Something</li>
+          <li>Accessibility Service: used to attempt to get the status bar color of the current app if the 'status bar coloring' preference is enabled.</li>
+          <li>Notification Access: used to get the icons of the current notifications.</li>
+          <li>System Alert Window, System Overlay Window: used to draw the status bar above all other apps.</li>
+          <li>Battery Stats: used to find if the battery is charging and what percent it is at.</li>
+          <li>Network State, Phone State: gets the type and connection of the phone network, and if airplane mode is enabled.</li>
+          <li>Wifi State: finds if wifi is enabled and how good the connection is.</li>
+          <li>Bluetooth: find if bluetooth is enabled & connected or not.</li>
+          <li>Location Services: finds if GPS is enabled and calculates the accuracy of the last known location (gps enabled vs fixed).</li>
+          <li>Alarm: finds if an alarm is set.</li>
         </ul>
       </div>
     </div>
