@@ -91,6 +91,27 @@
     
     .mdl-layout__content {
       background-color: black;
+      color: white !important;
+    }
+    
+    img {
+      width: calc(150px + 5%);
+      height: auto;
+      float: right;
+    }
+    
+    .content {
+      display: block;
+      width: calc(95% - 300px);
+      height: auto;
+    }
+    
+    @media(max-width: 800px) {
+        
+        img {
+            display: none;
+        }
+        
     }
     </style>
   </head>
@@ -116,6 +137,21 @@
     </div>
   </header>
   <main class="mdl-layout__content">
+    
+    <div>
+      <img src="https://theandroidmaster.github.io/images/screenshots/Status-Home.png">
+      
+      <div class="content mdl-font">
+        <p>
+          Something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something
+        </p>
+        <ul>
+          <li>Something</li>
+          <li>Something</li>
+          <li>Something</li>
+        </ul>
+      </div>
+    </div>
    
   </main>
 </div>
