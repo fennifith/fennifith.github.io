@@ -181,41 +181,5 @@
   </main>
 </div>
     <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
-    
-    <script>
-    var releaseContent = new XMLHttpRequest();
-    releaseContent.onreadystatechange = function () {
-      if(releaseContent.readyState === 4) {      
-        if(releaseContent.status === 200 || releaseContent.status == 0) {
-          var obj = JSON.parse(releaseContent.responseText);
-          
-          document.getElementById("release-title").innerHTML += obj[0].name;
-          document.getElementById("release-content").innerHTML = obj[0].body;
-          document.getElementById("release-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
-        } else {
-          console.log("error getting latest release: " + releaseContent.status);
-        }
-      }
-    }
-    releaseContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/releases", true);
-    releaseContent.send(null);
-    
-    var commitContent = new XMLHttpRequest();
-    commitContent.onreadystatechange = function () {
-      if(commitContent.readyState === 4) {      
-        if(commitContent.status === 200 || commitContent.status == 0) {
-          var obj = JSON.parse(commitContent.responseText);
-          
-          document.getElementById("commit-content").innerHTML = obj[0].commit.message;
-          document.getElementById("commit-action").innerHTML = "<a href=\"" + obj[0].html_url + "\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\">View</a>";
-        } else {
-          console.log("error getting last commit: " + commitContent.status);
-        }
-      }
-    }
-    commitContent.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/commits", true);
-    commitContent.send(null);        
-    </script>
-    
   </body>
 </html>
