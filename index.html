@@ -129,6 +129,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       display: block;
     }
     
+    .flex > paper-card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
     paper-button {
       background-color:#448aff;
       color: white;
@@ -156,6 +161,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin-top: 40px;
       margin-bottom: 40px;
       border-top: 1px solid #eee;
+    }
+    
+    .section-header {
+      text-align: center;
     }
     
     @media (min-width: 801px) {
@@ -315,7 +324,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </paper-material>
               
               <paper-material elevation="1">
-                <img src="/images/headers/3appsheader.png"></img>
+                <img src="/images/headers/3appsheader.png">
                 <h1>Apps</h1>
                 <p class="paper-font-body">
                   If you haven't already, you can download most of my apps from <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">my play store account</a>.
@@ -368,10 +377,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </section>
             
             <section data-route="projects">
-              <h2>Published Apps</h2>              
+              <h2 class="section-header">Published Apps</h2>              
               <div id="applist" class="flex"><paper-spinner active></paper-spinner></div>
               
-              <h2>Other Projects</h2> 
+              <h2 class="section-header">Other Projects</h2> 
               <paper-material elevation="1">
                 <div id="repolist"><paper-spinner active></paper-spinner></div>
               </paper-material>
