@@ -26,5 +26,9 @@
   {
     "name": "How do you change the time format?",
     "content": "The clock format can be changed through the 'time format' option for the clock icon. The clock will replace certian characters inputted into the dialog with the associated variables, for example to show the time in a 24 hour format you would input \"HH:MM\", or to show the AM/PM indicator \"h:mm a\"."
+  },
+  {
+    "name": "Why isn't the notification panel themed?",
+    "content": "The notification panel would take a lot of time to complete, and I feel it would be a better use of time to improve the speed and stability of the app before I add any more significant features."
   }
 ]
