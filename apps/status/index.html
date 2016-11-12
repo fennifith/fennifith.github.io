@@ -149,6 +149,8 @@
         <p>
           Status is a status bar replacement that draws an overlay on top of the system-generated status bar. This means that the actual status bar is only hidden under the replacement; touch gestures are not overridden, and the standard notification panel is still shown. This can also be done without root access, making it possible to modify the status bar (kind of) in ways that would normally not be possible. It needs a lot of permissions in order to obtain the information needed to display in the status bar, since everything needs to be done separately from the system one, however the app is open source and doesn't use analytics services, so you can be sure the app will not use them for anything other than showing a status bar. Just in case anyone wants a description of what all the permissions are used for, they have been listed below.
         </p>
+        
+        <h2>Permissions</h2>
         <ul>
           <li>Accessibility Service: used to attempt to get the status bar color of the current app if the 'status bar coloring' preference is enabled.</li>
           <li>Notification Access: used to get the icons of the current notifications.</li>
@@ -156,20 +158,62 @@
           <li>Battery Stats: used to find if the battery is charging and what percent it is at.</li>
           <li>Network State, Phone State: gets the type and connection of the phone network, and if airplane mode is enabled.</li>
           <li>Wifi State: finds if wifi is enabled and how good the connection is.</li>
-          <li>Bluetooth: find if bluetooth is enabled & connected or not.</li>
+          <li>Bluetooth: find if bluetooth is enabled &amp; connected or not.</li>
           <li>Location Services: finds if GPS is enabled and calculates the accuracy of the last known location (gps enabled vs fixed).</li>
           <li>Alarm: finds if an alarm is set.</li>
         </ul>
+        
+        <h2>FAQ</h2>
+        <div id="faq"></div>
+        
+        <h2>Current Issues</h2>
+        <div id="issues"></div>
+        
       </div>
-    </div>
     
-    <div class="mobile">
-      <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon mdl-font"><i class="material-icons">link</i><span>GitHub</span></a>
-      <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download mdl-font"><i class="material-icons"></i><span>Download</span></a>
+      <div class="mobile">
+        <a href="https://github.com/TheAndroidMaster/Status" class="mdl-navigation__link mdl-navigation__link--icon mdl-font"><i class="material-icons">link</i><span>GitHub</span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.james.status" class="mdl-navigation__link mdl-navigation__link--icon download mdl-font"><i class="material-icons"></i><span>Download</span></a>
+      </div>
     </div>
    
   </main>
 </div>
     <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    <script>
+      document.onload = function() {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+          if(request.readyState === 4 && (request.status === 200 || request.status == 0)) {
+            var obj = JSON.parse(request.responseText);
+            var HTML = "";
+            
+            for (var i = 0; obj[i]; i++) {
+              HTML += "<h4>" + obj[i].name + "</h4><p>" + obj[i].content + "</p>";
+            }
+            
+            document.getElementById("faq").innerHTML = HTML;
+          }
+        }
+        request.open("GET", "https://theandroidmaster.github.io/apps/status/faq.json", true);
+        request.send(null);
+        
+        var issuesRequest = new XMLHttpRequest();
+        issuesRequest.onreadystatechange = function () {
+          if(issuesRequest.readyState === 4 && (issuesRequest.status === 200 || issuesRequest.status == 0)) {
+            var obj = JSON.parse(issuesRequest.responseText);
+            var HTML = "";
+            
+            for (var i = 0; obj[i]; i++) {
+              HTML += "<h4><a href=\"" + obj[i].html_url + "\">" + obj[i].title + "</a></h4><p>" + obj[i].body + "</p>";
+            }
+            
+            document.getElementById("issues").innerHTML = HTML;
+          }
+        }
+        issuesRequest.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/issues", true);
+        issuesRequest.send(null);
+      }
+    </script>
   </body>
 </html>
