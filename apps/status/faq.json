@@ -30,5 +30,9 @@
   {
     "name": "Why isn't the notification panel themed?",
     "content": "The notification panel would take a lot of time to complete, and I feel it would be a better use of time to improve the speed and stability of the app before adding any more significant features."
+  },
+  {
+    "name": "Status isn't affected by my screen dimming app.",
+    "content": "In order to be shown over the status bar, Status needs to be drawn 'on top of' everything else as well. This includes system overlays from other apps, including screen dimmers or chat bubbles."
   }
 ]
