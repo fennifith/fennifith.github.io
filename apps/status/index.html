@@ -202,7 +202,7 @@
             var HTML = "";
             
             for (var i = 0; obj[i]; i++) {
-              HTML += "<h4 class=\"mdl-font\">" + obj[i].name + "</h4><p>" + obj[i].content + "</p>";
+              HTML += "<h4 class=\"mdl-font\">" + obj[i].name + "</h4><p>" + obj[i].content + "</p><br>";
             }
             
             document.getElementById("faq").innerHTML = HTML;
@@ -218,7 +218,7 @@
             var HTML = "";
             
             for (var i = 0; obj[i]; i++) {
-              HTML += "<h4 class=\"mdl-font\"><a href=\"" + obj[i].html_url + "\">" + obj[i].title + "</a></h4><p>" + obj[i].body + "</p>";
+              HTML += "<h4 class=\"mdl-font\"><a href=\"" + obj[i].html_url + "\">" + obj[i].title + "</a></h4><p>" + obj[i].body + "</p><br>";
             }
             
             document.getElementById("issues").innerHTML = HTML;
