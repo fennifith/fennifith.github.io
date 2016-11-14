@@ -777,18 +777,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               message = obj[i].payload.action + " " + obj[i].payload.member.login;
               icon = "assignment-ind";
             } else if (obj[i].type == "IssueCommentEvent") {
-              message = "issue #" + obj[i].payload.issue.number + " created: " + obj[i].payload.issue.title;
+              message = "Commented on issue #" + obj[i].payload.issue.number + ": " + obj[i].payload.issue.title;
               url = obj[i].payload.issue.html_url;
               icon = "announcement";
             } else if (obj[i].type == "CommitCommentEvent") {
-              message = "commented on commit " + obj[i].payload.comment.commit_id + " in " + obj[i].repo.name;
+              message = "Commented on commit " + obj[i].payload.comment.commit_id + " in " + obj[i].repo.name;
               icon = "announcement";
               url = obj[i].payload.comment.html_url;
             } else if (obj[i].type == "CreateEvent") {
               message = obj[i].payload.ref_type + " " + obj[i].payload.ref + " created";
               icon = "add-box";
             } else if (obj[i].type == "ForkEvent") {
-              message = "forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
+              message = "Forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
               icon = "add-box";
             } else if (obj[i].type == "IssuesEvent") {
               message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
