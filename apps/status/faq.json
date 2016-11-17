@@ -1,5 +1,9 @@
 [
   {
+    "name": "Why can't the status bar be transparent?",
+    "content": "This app works by making an overlay on top of the existing status bar, similar to how chat bubbles or a screen dimming app would work. This means that if it is made transparent, the system icons would be visible underneath it."
+  },
+  {
     "name": "How can I prevent lag?",
     "content": "Lag can be prevented mostly by minimizing the amount of times the status bar has to update. This can be done by disabling animations, resourced-based colors, and removing any icons that aren't completely necessary for the status bar to function."
   },
