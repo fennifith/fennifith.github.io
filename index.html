@@ -696,7 +696,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               var id = "release-" + i;
               appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + obj[i].name + "\"><div class=\"card-content\">" + obj[i].description + "<br>Last updated " + new Date(obj[i].pushed_at).toString().substr(0, 15) + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></div></paper-card>";      
             } else {
-              repoHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
+              var homepage = obj[i].html_url;
+              if (obj[i].homepage != null && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0)
+                homepage = obj[i].homepage;
+              
+              repoHTML += "<a href=\"" + homepage + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             }
           }
           
