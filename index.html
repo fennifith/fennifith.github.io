@@ -41,15 +41,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
   <style is="custom-style" include="shared-styles"></style>
   <style>
+    * {
+      transition: all .25s;
+      -moz-transition: all .25s;
+      -webkit-transition: all .25s;
+    }
+    
     .flex {
       display: -webkit-flex;
       display: flex;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
-      
-      transition: all .25s;
-      -moz-transition: all .25s;
-      -webkit-transition: all .25s;
+    }
+    
+    a:hover {
+      transform: scale(1.1);
     }
   
     paper-ripple {
@@ -166,6 +172,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     .section-header {
       text-align: center;
       margin-top: 40px;
+    }
+    
+    .selectable:hover {
+      opacity: 0.5;
+      transform: scale(1.1);
     }
     
     @media (min-width: 801px) {
@@ -291,7 +302,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <section data-route="home">
               <paper-material elevation="1">
                 <div class="horizon">
-                  <div class="ctr">
+                  <div class="ctr selectable" onclick="location.href = 'https://doubledotlabs.github.io/';">
                     <h1 class="ctr">
                       <div class="circ">
                         <iron-icon style="width: 100%; height: 100%;" icon="face"></iron-icon>
@@ -301,7 +312,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     </h1>
                     <p class="ctr">My name is James Fenn, I am an android app developer and a co-founder of <a href="https://doubledotlabs.github.io/">Double Dot Labs</a>.</p>
                   </div>
-                  <div class="ctr">
+                  <div class="ctr selectable" onclick="location.href = 'https://theandroidmaster.github.io/#!/contact';">
                     <h1 class="ctr">
                       <div class="circ">
                         <iron-icon style="width:100%; height:100%;" icon="send"></iron-icon>
@@ -311,7 +322,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     </h1>
                     <p class="ctr">I can be contacted through my email, hangouts, or google plus, which can be found <a data-route="contact" href="/contact" on-click="onDataRouteClick">here</a>.</p>
                   </div>
-                  <div class="ctr">
+                  <div class="ctr selectable" onclick="location.href = 'https://play.google.com/store/apps/dev?id=5937321955284727208';">
                     <h1 class="ctr">
                       <div class="circ">
                         <iron-icon style="width:100%; height:100%;" icon="android"></iron-icon>
