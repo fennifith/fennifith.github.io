@@ -392,6 +392,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               <h2 class="section-header">Published Apps</h2>              
               <div id="applist" class="flex"><paper-spinner active></paper-spinner></div>
               
+              <h2 class="section-header">Libraries</h2>
+              <paper-material elevation="1">
+                <div id="liblist"><paper-spinner active></paper-spinner></div>
+              </paper-material>
+              
               <h2 class="section-header">Other Projects</h2> 
               <paper-material elevation="1">
                 <div id="repolist"><paper-spinner active></paper-spinner></div>
@@ -677,10 +682,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     
     var url = "https://api.github.com/users/TheAndroidMaster/repos";
     var appCache = getCache(url + "-applist");
+    var libCache = getCache(url + "-liblist");
     var repoCache = getCache(url + "-repolist");
     var forkCache = getCache(url + "-forklist");
-    if (appCache != null && repoCache != null && forkCache != null) {
+    if (appCache != null && libCache != null && repoCache != null && forkCache != null) {
       document.getElementById('applist').innerHTML = appCache;
+      document.getElementById('liblist').innerHTML = libCache;
       document.getElementById('repolist').innerHTML = repoCache;
       document.getElementById('forklist').innerHTML = forkCache;
       
@@ -696,6 +703,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         if(repoContent.status === 200 || repoContent.status == 0) {
           var obj = JSON.parse(repoContent.responseText);
           var repoHTML = "";
+          var libHTML = "";
           var appHTML = "";
           var forkHTML = "";
           
@@ -707,6 +715,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
               var id = "release-" + i;
               appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=700&h=300&txt=" + obj[i].name + "\"><div class=\"card-content\">" + obj[i].description + "<br>Last updated " + new Date(obj[i].pushed_at).toString().substr(0, 15) + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></div></paper-card>";      
+            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
+              libHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else {
               var homepage = obj[i].html_url;
               if (obj[i].homepage != null && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0)
@@ -717,10 +727,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
           
           document.getElementById('applist').innerHTML = appHTML;
+          document.getElementById('liblist').innerHTML = libHTML;
           document.getElementById('repolist').innerHTML = repoHTML;
           document.getElementById('forklist').innerHTML = forkHTML;
           
           setCache(url + "-applist", appHTML);
+          setCache(url + "-liblist", libHTML);
           setCache(url + "-repolist", repoHTML);
           setCache(url + "-forklist", forkHTML);
           
