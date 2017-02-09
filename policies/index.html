@@ -47,6 +47,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.grey-blue.min.css">
     <style>
+    * {
+      transition: all .25s;
+      -moz-transition: all .25s;
+      -webkit-transition: all .25s;
+    }
+
     #view-source {
       position: fixed;
       display: block;
@@ -56,6 +62,7 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+
     .demo-ribbon {
         width: 100%;
         height: 40vh;
@@ -94,7 +101,7 @@
     .demo-content h3 {
         margin-top: 48px;
     }
-      
+
     .demo-footer {
       padding-left: 40px;
       position: absolute;
@@ -110,13 +117,17 @@
     .demo-footer .mdl-mini-footer--link-list a {
         font-size: 13px;
     }
+
+    .mdl-tabs__panel {
+      padding-top: 32px;
+    }
     </style>
   </head>
   <body>
     <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
       <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Coding Styles</span>
+          <span class="mdl-layout-title">Privacy Policies</span>
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
@@ -125,7 +136,30 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <p>Something something.</p>
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div class="mdl-tabs__tab-bar" id="tabs">
+                <a href="#status" class="mdl-tabs__tab">Status</a>
+                <a href="#chargescreen" class="mdl-tabs__tab">Charge Screen</a>
+                <a href="#simplecamera" class="mdl-tabs__tab">Simple Camera</a>
+                <a href="#rocket" class="mdl-tabs__tab">Rocket</a>
+              </div>
+
+              <div class="mdl-tabs__panel" id="status">
+                <p>By using Status, you agree to allow James Fenn to collect sensitive device data to display information such as notifications and wireless connection details. Sensitive information required by Status will not be stored or shared with any external parties.</p>
+              </div>
+
+              <div class="mdl-tabs__panel" id="chargescreen">
+                <p>By using Charge Screen, you agree to allow James Fenn to collect sensitive information about your device. This information may be stored within the app, however it is not shared with any external parties.</p>
+              </div>
+
+              <div class="mdl-tabs__panel" id="simplecamera">
+                <p>By using Simple Camera, you agree to allow James Fenn to collect potentially sensitive information through your device's camera. Charge Screen does not share this information with any external parties, however it is stored on the device and could be accessed by other applications with access to your device's storage.</p>
+              </div>
+
+              <div class="mdl-tabs__panel" id="rocket">
+                <p>By using Rocket, you agree to allow James Fenn to collect sensitive information from your device, such as your email, username, or profile picture. Rocket does not share this information with any external parties other than itself and Google Play Games Services.</p>
+              </div>
+            </div>
           </div>
         </div>
         <footer class="demo-footer mdl-mini-footer">
@@ -139,5 +173,26 @@
       </main>
     </div>
     <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    <script>
+    var search = window.location.search.substring(1);
+    switch (search) {
+      case "status":
+        document.getElementById("status").className += " is-active";
+        document.getElementById("tabs").childNodes[1].className += " is-active";
+        break;
+      case "chargescreen":
+        document.getElementById("chargescreen").className += " is-active";
+        document.getElementById("tabs").childNodes[3].className += " is-active";
+        break;
+      case "simplecamera":
+        document.getElementById("simplecamera").className += " is-active";
+        document.getElementById("tabs").childNodes[5].className += " is-active";
+        break;
+      case "rocket":
+        document.getElementById("rocket").className += " is-active";
+        document.getElementById("tabs").childNodes[7].className += " is-active";
+        break;
+    }
+    </script>
   </body>
 </html>
