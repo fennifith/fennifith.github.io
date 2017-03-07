@@ -680,7 +680,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   function getRepos() {
     if (document.getElementById('applist').set != null) return;
     
-    var url = "https://api.github.com/users/TheAndroidMaster/repos";
+    var url = "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000";
     var appCache = getCache(url + "-applist");
     var libCache = getCache(url + "-liblist");
     var repoCache = getCache(url + "-repolist");
