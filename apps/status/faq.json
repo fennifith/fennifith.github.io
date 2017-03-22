@@ -28,6 +28,10 @@
     "content": "The 'transparency on home screen' option does not currently have support for live wallpapers - it will simply get the most recent image wallpaper instead."
   },
   {
+    "name": "My phone is dual sim, but it doesn't show the second signal strength icon.",
+    "content": "Status does not currently support dual sim as it works differently on almost every device and is difficult to implement. This is being worked on, however, and the app will be updated as soon as it is stable."
+  },
+  {
     "name": "How do you change the time format?",
     "content": "The clock format can be changed through the 'time format' option for the clock icon. The clock will replace certian characters inputted into the dialog with the associated variables, for example to show the time in a 24 hour format you would input \"HH:MM\", or to show the AM/PM indicator \"h:mm a\"."
   },
