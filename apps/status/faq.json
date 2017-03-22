@@ -32,6 +32,10 @@
     "content": "Status does not currently support dual sim as it works differently on almost every device and is difficult to implement. This is being worked on, however, and the app will be updated as soon as it is stable."
   },
   {
+    "name": "Why isn't the status bar visible on the lockscreen?",
+    "content": "On some devices, it is not possible to show the status bar over the system lock screen because of a potential security issue. A possible solution could be downloading a third party lock screen from the play store or just disabling the system lock screen."
+  },
+  {
     "name": "How do you change the time format?",
     "content": "The clock format can be changed through the 'time format' option for the clock icon. The clock will replace certian characters inputted into the dialog with the associated variables, for example to show the time in a 24 hour format you would input \"HH:MM\", or to show the AM/PM indicator \"h:mm a\"."
   },
