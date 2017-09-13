@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<meta name="description" content="App developer and designer">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<meta name="generator" content="James Fenn" />
+		<title>Repository</title>
+
+		<meta name="theme-color" content="#E3F2FD">
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<link rel="icon" sizes="256x256" href="../../jf2.ico">
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  		<meta name="apple-mobile-web-app-title" content="James Fenn">
+  		<link rel="apple-touch-icon-precomposed" sizes="1997x993" href="../../touch-icon-iphone-retina">
+  		<link rel="apple-touch-icon-precomposed" sizes="1997x993" href="../../touch-icon-ipad">
+  		<link rel="apple-touch-icon-precomposed" sizes="1997x993" href="../../touch-icon-ipad-retina">
+  		<meta name="msapplication-TileImage" content="../../images/touch/ms-touch-icon-144x144-precomposed.png">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+		<script type="text/javascript" src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+		<style>
+            * {
+				font-family: 'Roboto Slab', serif;
+			}
+
+			body {
+                background-color: white;
+				padding: 0;
+				margin: 0;
+			}
+
+			.header {
+				padding: 16px calc(8px + 20%);
+				margin: 0;
+				background-color: #E3F2FD;
+				color: black;
+			}
+
+			.header > * {
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+
+			.links {
+				padding: 8px calc(8px + 20%);
+				background-color: black;
+			}
+
+			a {
+				color: black !important;
+				font-weight: bold;
+                display: inline-block;
+			}
+
+			.links > a {
+				text-decoration: none;
+				color: white !important;
+			}
+
+			#content {
+				padding: 8px calc(8px + 20%);
+			}
+
+            .release {
+                border: 5px solid black;
+                padding: 16px 12px;
+                margin-bottom: 16px;
+            }
+
+            a > h2 {
+                margin: 0;
+            }
+
+            .warning {
+                background-color: #D32F2F;
+                color: white;
+                font-weight: bold;
+                margin: 0 8px;
+                font-size: 0.8em;
+                padding: 4px 8px;
+                border-radius: 2px;
+                font-family: 'Roboto Mono', monospace;
+                display: inline;
+            }
+
+			pre {
+				background-color: #E0E0E0;
+				overflow-x: scroll;
+				border-radius: 4px;
+				padding: 16px;
+			}
+
+			code {
+				font-family: 'Roboto Mono', monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1 id="title">Repository</h1>
+		</div>
+		<div class="links">
+			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;
+			<a id="link" href="/" target="_blank"></a>
+		</div>
+		<p id="content">
+            Something something something.
+		</p>
+	</body>
+	<script>
+		var title = document.getElementById('title');
+		var content = document.getElementById('content');
+		var github = document.getElementById('github');
+		var link = document.getElementById('link');
+
+	    var repository = parent.location.hash.substring(1);
+
+		document.title = repository.substring(repository.indexOf("/") + 1);
+		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
+
+		github.href = "https://github.com/" + repository + "/releases";
+
+        var releases = createCORSRequest("GET", "https://api.github.com/repos/" + repository + "/releases");
+        releases.onreadystatechange = function() {
+            if (releases.readyState === 4) {
+                if (releases.status === 200 || releases.status == 0) {
+                    console.log(releases.responseText);
+                    var html = "";
+                    JSON.parse(releases.responseText).forEach(function(obj) {
+                        html += "<div class=\"release\">";
+                        html += "<a href=\"" + obj.html_url + "\"><h2>" + obj.name + "</h2></a>";
+                        if (obj.prerelease)
+                            html += "<p class=\"warning\">UNSTABLE</p>";
+                        html += "<div>" + new showdown.Converter().makeHtml(obj.body) + "</div>";
+                        obj.assets.forEach(function(asset) {
+                            html += "<a href=\"" + asset.browser_download_url + "\">" + asset.name + "</a>&nbsp;&nbsp;";
+                        });
+                        html += "</div>";
+                    });
+                    content.innerHTML = html;
+                }
+            }
+        };
+        releases.send(null);
+
+		var repo = createCORSRequest("GET", "https://api.github.com/repos/" + repository);
+		repo.onreadystatechange = function() {
+			if (repo.readyState === 4) {
+				if (repo.status === 200 || repo.status == 0) {
+					var obj = JSON.parse(repo.responseText);
+					if (obj.homepage) {
+						if (obj.homepage.startsWith("https://play.google.com/"))
+							link.innerHTML = "Google Play";
+					    else {
+							if (obj.homepage.includes(".github.io")) {
+								link.innerHTML = "Website";
+							} else if (obj.homepage.replace(/[^.]/g, "").length > 1) {
+								var temp = obj.homepage.substring(obj.homepage.indexOf(".") + 1);
+								temp = temp.substring(0, temp.indexOf("."));
+								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
+							} else if (obj.homepage.replace(/[^.]/g, "").length > 0) {
+								var temp = obj.homepage.substring(obj.homepage.indexOf("/") + 2);
+								temp = temp.substring(0, temp.indexOf("."));
+								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
+							} else link.innerHTML = "Link";
+						}
+						link.href = obj.homepage;
+					}
+				}
+			}
+		};
+		repo.send(null);
+
+		function createCORSRequest(method, url) {
+    		var xhr = new XMLHttpRequest();
+    		if ("withCredentials" in xhr) {
+      			xhr.open(method, url, true);
+    		} else if (typeof XDomainRequest != "undefined") {
+      			xhr = new XDomainRequest();
+      			xhr.open(method, url);
+    		} else {
+      			xhr = null;
+    		}
+    		return xhr;
+  		}
+	</script>
+</html>
