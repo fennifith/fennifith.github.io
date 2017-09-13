@@ -104,6 +104,7 @@
 		</div>
 		<div class="links">
 			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;
+            <a id="about" href="/">About</a>&nbsp;&nbsp;
 			<a id="link" href="/" target="_blank"></a>
 		</div>
 		<p id="content">
@@ -114,6 +115,7 @@
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
+        var about = document.getElementById('about');
 		var link = document.getElementById('link');
 
 	    var repository = parent.location.hash.substring(1);
@@ -122,6 +124,7 @@
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository + "/releases";
+        about.href = "https://theandroidmaster.github.io/about/#" + repository;
 
         var releases = createCORSRequest("GET", "https://api.github.com/repos/" + repository + "/releases");
         releases.onreadystatechange = function() {

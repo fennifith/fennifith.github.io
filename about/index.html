@@ -80,6 +80,7 @@
 		</div>
 		<div class="links">
 			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;
+			<a id="releases" href="/">Releases</a>&nbsp;&nbsp;
 			<a id="link" href="/" target="_blank"></a>
 		</div>
 		<p id="content">
@@ -90,6 +91,7 @@
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
+		var releases = document.getElementById('releases');
 		var link = document.getElementById('link');
 
 	    var repository = parent.location.hash.substring(1);
@@ -99,6 +101,7 @@
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository;
+		releases.href = "https://theandroidmaster.github.io/about/releases/#" + repository;
 
 		var readme = createCORSRequest("GET", url);
 		readme.onreadystatechange = function() {
