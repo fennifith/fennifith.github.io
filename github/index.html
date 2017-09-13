@@ -16,7 +16,7 @@
 			}
 
 			.header {
-				padding: 16px calc(26px + 20%);
+				padding: 16px calc(8px + 20%);
 				margin: 0;
 				background-color: #E3F2FD;
 				color: black;
@@ -24,7 +24,7 @@
 			}
 
 			.links {
-				padding: 8px calc(26px + 20%);
+				padding: 8px calc(8px + 20%);
 				background-color: #BBDAD5;
 			}
 
@@ -38,7 +38,14 @@
 			}
 
 			#content {
-				padding: 8px calc(26px + 20%);
+				padding: 8px calc(8px + 20%);
+			}
+
+			pre {
+				background-color: #E0E0E0;
+				overflow-x: scroll;
+				border-radius: 4px;
+				padding: 16px;
 			}
 		</style>
 	</head>
@@ -89,7 +96,9 @@
 						if (obj.homepage.startsWith("https://play.google.com/"))
 							link.innerHTML = "Google Play";
 					    else {
-							if (obj.homepage.replace(/[^.]/g, "").length > 1) {
+							if (obj.homepage.includes(".github.io")) {
+								link.innerHTML = "Website";
+							} else if (obj.homepage.replace(/[^.]/g, "").length > 1) {
 								var temp = obj.homepage.substring(obj.homepage.indexOf(".") + 1);
 								temp = temp.substring(0, temp.indexOf("."));
 								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
