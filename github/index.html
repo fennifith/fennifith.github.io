@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Repository</title>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Slab" rel="stylesheet">
+		<script type="text/javascript" src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
+		<style>
+            * {
+				font-family: 'Roboto Slab', serif;
+			}
+
+			body {
+				padding: 0;
+				margin: 0;
+			}
+
+			.header {
+				padding: 16px calc(26px + 20%);
+				margin: 0;
+				background-color: #E3F2FD;
+				color: black;
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+
+			.links {
+				padding: 8px calc(26px + 20%);
+				background-color: #BBDAD5;
+			}
+
+			a {
+				color: black !important;
+				font-weight: bold;
+			}
+
+			.links > a {
+				text-decoration: none;
+			}
+
+			#content {
+				padding: 8px calc(26px + 20%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1 id="title">Repository</h1>
+		</div>
+		<div class="links">
+			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;
+			<a id="link" href="/" target="_blank"></a>
+		</div>
+		<p id="content">
+            Something something something.
+		</p>
+	</body>
+	<script>
+		var title = document.getElementById('title');
+		var content = document.getElementById('content');
+		var github = document.getElementById('github');
+		var link = document.getElementById('link');
+
+	    var repository = parent.location.hash.substring(1);
+		var url = "https://raw.githubusercontent.com/" + repository + "/master/README.md";
+
+		document.title = repository.substring(repository.indexOf("/") + 1);
+		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
+
+		github.href = "https://github.com/" + repository;
+
+		var readme = createCORSRequest("GET", url);
+		readme.onreadystatechange = function() {
+			if (readme.readyState === 4) {
+				if (readme.status === 200 || readme.status == 0) {
+					console.log(readme.responseText);
+					var converter = new showdown.Converter();
+					content.innerHTML = converter.makeHtml(readme.responseText);
+				}
+			}
+		};
+		readme.send(null);
+
+		var repo = createCORSRequest("GET", "https://api.github.com/repos/" + repository);
+		repo.onreadystatechange = function() {
+			if (repo.readyState === 4) {
+				if (repo.status === 200 || repo.status == 0) {
+					var obj = JSON.parse(repo.responseText);
+					if (obj.homepage) {
+						if (obj.homepage.startsWith("https://play.google.com/"))
+							link.innerHTML = "Google Play";
+					    else {
+							if (obj.homepage.replace(/[^.]/g, "").length > 1) {
+								var temp = obj.homepage.substring(obj.homepage.indexOf(".") + 1);
+								temp = temp.substring(0, temp.indexOf("."));
+								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
+							} else if (obj.homepage.replace(/[^.]/g, "").length > 0) {
+								var temp = obj.homepage.substring(obj.homepage.indexOf("/") + 2);
+								temp = temp.substring(0, temp.indexOf("."));
+								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
+							} else link.innerHTML = "Link";
+						}
+						link.href = obj.homepage;
+					}
+				}
+			}
+		};
+		repo.send(null);
+
+		function createCORSRequest(method, url) {
+    		var xhr = new XMLHttpRequest();
+    		if ("withCredentials" in xhr) {
+      			xhr.open(method, url, true);
+    		} else if (typeof XDomainRequest != "undefined") {
+      			xhr = new XDomainRequest();
+      			xhr.open(method, url);
+    		} else {
+      			xhr = null;
+    		}
+    		return xhr;
+  		}
+	</script>
+</html>
