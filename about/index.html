@@ -45,7 +45,7 @@
 
 			.links {
 				padding: 8px calc(8px + 20%);
-				background-color: #BBDAD5;
+				background-color: black;
 			}
 
 			a {
@@ -55,6 +55,7 @@
 
 			.links > a {
 				text-decoration: none;
+				color: white !important;
 			}
 
 			#content {
@@ -82,6 +83,20 @@
 				padding-right: 0px;
 				font-size: 1em;
 			}
+
+			@media(max-width: 800px) {
+				.header {
+					padding: 16px 16px;
+				}
+
+				.links {
+					padding: 8px 16px;
+				}
+
+				#content {
+					padding: 8px 16px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -89,7 +104,8 @@
 			<h1 id="title">Repository</h1>
 		</div>
 		<div class="links">
-			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;
+			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="releases" href="/">Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;
 			<a id="link" href="/" target="_blank"></a>
 		</div>
 		<p id="content">
@@ -100,6 +116,7 @@
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
+		var releases = document.getElementById('releases');
 		var link = document.getElementById('link');
 
 	    var repository = parent.location.hash.substring(1);
@@ -109,6 +126,7 @@
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository;
+		releases.href = "https://theandroidmaster.github.io/about/releases/#" + repository;
 
 		var readme = createCORSRequest("GET", url);
 		readme.onreadystatechange = function() {
