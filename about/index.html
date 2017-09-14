@@ -58,6 +58,10 @@
 				color: white !important;
 			}
 
+			img {
+				max-width: 100%;
+			}
+
 			#content {
 				padding: 8px calc(8px + 20%);
 			}
@@ -134,6 +138,7 @@
 				if (readme.status === 200 || readme.status == 0) {
 					console.log(readme.responseText);
 					var converter = new showdown.Converter();
+					converter.setOption('tables', true);
 					content.innerHTML = converter.makeHtml(readme.responseText);
 				}
 			}
