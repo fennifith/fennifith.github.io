@@ -390,7 +390,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <section data-route="projects">
               <h2 class="section-header">Published Apps</h2>
-              <div id="applist" class="flex"><paper-spinner active></paper-spinner></div>
+			  <paper-material elevation="1">
+				<div id="applist"><paper-spinner active></paper-spinner></div>
+			  </paper-material>
 
               <h2 class="section-header">Libraries</h2>
               <paper-material elevation="1">
@@ -716,8 +718,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if (obj[i].fork) {
               forkHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].full_name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-              var id = "release-" + i;
-              appHTML += "<paper-card image=\"https://placeholdit.imgix.net/~text?txtsize=70&bg=E3F2FD&txtclr=000000&w=500&h=200&txt=" + obj[i].name + "\"><div class=\"card-content\">" + obj[i].description + "<br>Last updated " + new Date(obj[i].pushed_at).toString().substr(0, 15) + "</div><div class=\"card-actions\"><a href=\"" + obj[i].homepage + "\"><paper-button>Play Store</paper-button></a><a href=\"" + obj[i].html_url + "\"><paper-button>Github</paper-button></a><a href=\"" + obj[i].html_url + "/releases" + "\"><paper-button>Releases</paper-button></a></div></paper-card>";      
+              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
               libHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else {
