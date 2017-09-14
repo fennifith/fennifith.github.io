@@ -718,9 +718,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             if (obj[i].fork) {
               forkHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].full_name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-              appHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
+              appHTML += "<a href=\"" + "https://theandroidmaster.github.io/about/#" + obj[i].full_name + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
-              libHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
+              libHTML += "<a href=\"" + "https://theandroidmaster.github.io/about/#" + obj[i].full_name + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
             } else {
               var homepage = obj[i].html_url;
               if (obj[i].homepage != null && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0)
