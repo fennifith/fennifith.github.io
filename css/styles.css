@@ -1,0 +1,163 @@
+* {
+	font-family: 'Miriam Libre', monospace;
+	animation-name: fadeIn;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.noanim {
+	animation: none;
+}
+
+.noanim>* {
+	animation: none;
+}
+
+body {
+	margin: 0;
+}
+
+p {
+	color: #616161;
+}
+
+a {
+	color: #0091EA;
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+a:hover {
+	color: #000000;
+}
+
+nav {
+	position: fixed;
+	height: 100%;
+	width: 28px;
+	padding: 12px 16px;
+	background-color: #212121;
+	overflow: hidden;
+	z-index: 100;
+	transition: width .25s;
+	-moz-transition: width .25s;
+	-webkit-transition: width .25s;
+}
+
+nav:hover {
+	width: 160px;
+}
+
+nav>a>span {
+	opacity: 0;
+	transition: opacity .25s;
+	-moz-transition: opacity .25s;
+	-webkit-transition: opacity .25s;
+}
+
+nav:hover>a>span {
+	opacity: 1;
+	transition-delay: .1s;
+}
+
+nav>a {
+	display: table;
+	padding: 16px 0;
+	font-size: larger;
+	color: white;
+	text-decoration: none;
+	user-select: none;
+	white-space: nowrap;
+}
+
+nav>a>i {
+	margin-right: 16px;
+}
+
+nav>a>* {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+nav>a:hover {
+	color: #0091EA;
+}
+
+main {
+	margin-left: calc(60px + 10vw);
+	margin-right: 10vw;
+	padding-top: 20vh;
+	transition: transform .25s;
+	-moz-transition: transform .25s;
+	-webkit-transition: transform .25s;
+}
+
+nav:hover ~ main {
+	transform: translateX(60px);
+}
+
+.grid {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10px;
+}
+
+.grid>div {
+	display: grid;
+	align-content: center;
+	text-align: center;
+	padding: 16px;
+	width: 200px;
+	border: 2px solid #0091EA;
+	margin: 10px;
+	transition: background-color .25s, box-shadow .25s;
+	-moz-transition: background-color .25s, box-shadow .25s;
+	-webkit-transition: background-color .25s, box-shadow .25s;
+}
+
+.grid>div:hover {
+	background-color: rgba(0, 0, 0, 0.03);
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+a>span {
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+}
+
+@media(max-width: 600px) {
+	nav {
+		width: 80vw !important;
+		position: relative;
+		height: auto;
+		text-align: center;
+		display: block;
+		padding: 8px 10vw;
+	}
+
+	nav>a {
+		display: inline-block;
+	}
+
+	a>span {
+		display: none;
+	}
+
+	main {
+		margin-left: 10vw;
+		padding-top: 16px;
+		transform: none !important;
+	}
+
+	.desktop {
+		display: none;
+	}
+}

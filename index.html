@@ -1,15 +1,6 @@
-<!doctype html>
-<!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
+<!DOCTYPE html>
 
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -18,511 +9,265 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="generator" content="James Fenn" />
   <title>James Fenn</title>
 
-  <meta name="theme-color" content="#2E3AA1">
+  <meta name="theme-color" content="#000000">
   <link rel="manifest" href="manifest.json">
-  <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="msapplication-TileColor" content="#000000">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="JF">
 
-  <link rel="icon" sizes="256x256" href="/jf2.ico">
+  <link rel="icon" sizes="256x256" href="jf2.ico">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="James Fenn">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-iphone-retina">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad">
-  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="/touch-icon-ipad-retina">
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="touch-icon-ipad.png">
+  <link rel="apple-touch-icon-precomposed" sizes="1997x993" href="touch-icon-ipad-retina.png">
 
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Miriam+Libre" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 
-  <link rel="import" href="elements/elements.html">
+	<style>
+		#projects>ul {
+			background-color: rgba(0, 145, 234, 0.15);
+			list-style-type: none;
+			padding: 20px;
+			width: 200px;
+		}
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-  <style is="custom-style" include="shared-styles"></style>
-  <style>
-    * {
-      transition: all .25s;
-      -moz-transition: all .25s;
-      -webkit-transition: all .25s;
-    }
+		#yes {
+			position: absolute;
+			display: none;
+			width: 100%;
+			height: 40vh;
+			border: none;
+			z-index: -2;
+		}
 
-    .flex {
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-    }
+		#yesfg {
+			position: absolute;
+			display: none;
+		  height: 40vh;
+		  width: 100%;
+			background: linear-gradient(to top,
+		     rgba(255, 255, 255, 1) 0%,
+				 rgba(255, 255, 255, 0.35) 20%,
+		     rgba(255, 255, 255, 0) 40%
+		  );
+			z-index: -1;
+		}
 
-    .selectable:hover {
-      transform: scale(1.1);
-    }
+		@media(min-width: 800px) {
+			#projects>ul {
+				position: fixed;
+			}
 
-    paper-ripple {
-      color: #9FA8DA;
-      transition: background-color .25s;
-      -moz-transition: background-color .25s;
-      -webkit-transition: background-color .25s;
-    }
+			#projects>div {
+				margin-left: 280px;
+			}
 
-    paper-ripple:hover {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
+			#yes {
+				display: block;
+			}
 
-    paper-button:hover{
-      background-color: #212121;
-    }
-
-    paper-button {
-      transition: background-color .25s;
-      -moz-transition: background-color .25s;
-      -webkit-transition: background-color .25s;
-    }
-
-    paper-material {
-      color: black;
-    }
-
-    img {
-      width: 100%;
-      max-height: 100%;
-    }
-
-    a {
-      color: #9FA8DA;
-      text-decoration: none;
-    }
-
-    iframe {
-      width: 100%;
-      border: 0px;
-      height: 1500px;
-      overflow: hidden;
-    }
-
-    .white {
-      color: white;
-    }
-
-    .purple {
-      background-color: #3f51b5;
-    }
-
-    paper-tabs {
-      background-color: #0d47a1;
-      color: white;
-    }
-
-    paper-tab {color:white;}
-
-    paper-toast {z-index:1;}
-
-    paper-item {
-      color: black;
-      transition: background-color .25s;
-      -moz-transition: background-color .25s;
-      -webkit-transition: background-color .25s;
-    }
-
-    paper-item:hover{
-      background-color:#f5f5f5;
-    }
-
-    paper-card {
-      margin:20px;
-      transition: all .25s;
-      -moz-transition: all .25s;
-      -webkit-transition: all .25s;
-    }
-
-    paper-spinner {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 56px;
-      margin-bottom: 56px;
-      display: block;
-    }
-
-    .flex > paper-card {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    paper-button {
-      background-color:#448aff;
-      color: white;
-      margin:10px;
-    }
-
-    paper-slider {
-      width:100%;
-    }
-
-    paper-fab {
-      position:fixed;
-      right:0px;
-      bottom:0px;
-      margin:20px;
-    }
-
-    iron-pages {
-      padding: 0px;
-    }
-
-    hr {
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      border-top: 1px solid #eee;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .selectable:hover {
-      opacity: 0.5;
-      transform: scale(1.1);
-    }
-
-    @media (min-width: 801px) {
-      section {
-        padding: 48px 62px;
-      }
-
-      div.horizon {
-        display: -webkit-flex;
-        display: flex;
-      }
-
-      div.ctr {
-        width:20%;
-      }
-    }
-
-    section.nopadding {
-      padding:0px;
-    }
-
-    div.horizon {
-      padding:0px;
-      height:20%;
-      width:100%;
-      margin: 5% 0px;
-    }
-
-    div.horizon::-webkit-scrollbar {
-      display: none;
-    }
-
-    div.ctr {
-      margin-left: auto;
-      margin-right: auto;
-      padding:5px;
-    }
-
-    h1.ctr {
-      width:100%;
-      text-align: center;
-    }
-
-    p.ctr {
-      width:100%;
-      text-align: center;
-    }
-
-    .circ {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      padding:20px;
-      margin:auto;
-    }
-
-    .icon {
-      height:50px;
-      width:auto;
-      margin-right:10px;
-    }
-  </style>
+			#yesfg {
+				display: block;
+			}
+		}
+	</style>
 </head>
-<body unresolved class="fullbleed layout vertical">
-  <span id="browser-sync-binding"></span>
-  <template is="dom-bind" id="app">
-    <paper-drawer-panel id="paperDrawerPanel">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed style="transition: width 0.2s ease-in;">
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Menu</span>
-        </paper-toolbar>
-        <!-- Drawer Content -->
-        <paper-menu id="drawermenu" class="list" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="/" on-click="onDataRouteClick">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
-          <a data-route="projects" href="/projects" on-click="onDataRouteClick">
-            <iron-icon icon="book"></iron-icon>
-            <span>Projects</span>
-          </a>
-          <a data-route="community" href="/community" on-click="onDataRouteClick">
-            <iron-icon icon="group-work"></iron-icon>
-            <span>Community</span>
-          </a>
-          <a data-route="events" href="/events" on-click="onDataRouteClick">
-            <iron-icon icon="event"></iron-icon>
-            <span>Events</span>
-          </a>
-          <a data-route="contact" href="/contact" on-click="onDataRouteClick">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-          <a data-route="about" href="/about" on-click="onDataRouteClick">
-            <iron-icon icon="info"></iron-icon>
-            <span>About</span>
-          </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
-      <!-- Main Area -->
-      <paper-scroll-header-panel main condenses no-reveal>
-        <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall" style="background-color: #FAFAFA; color: black;">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <span class="flex"></span>
-          <!-- Toolbar icons -->
-          <a href="https://play.google.com/store/apps/dev?id=5937321955284727208"><paper-icon-button icon="shop"></paper-icon-button></a>
-          <a href="https://plus.google.com/+JamesFennJAFFA2157/about"><paper-icon-button icon="perm-contact-calendar"></paper-icon-button></a>
-          <!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div class="app-name">James Fenn</div>
-          </div>
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">Android app developer and designer</div>
-          </div>
-        </paper-toolbar>
+<body>
+	<nav>
+		<a id="homeButton" onclick="setPage('home');"><i class="material-icons">home</i><span class="desktop">&nbsp;Home</span></a>
+		<a id="projectsButton" onclick="setPage('projects');"><i class="material-icons">work</i><span class="desktop">&nbsp;Projects</span></a>
+		<a id="communityButton" onclick="setPage('community');"><i class="material-icons">people</i><span class="desktop">&nbsp;Community</span></a>
+		<a id="contactButton" onclick="setPage('contact');"><i class="material-icons">phone</i><span class="desktop">&nbsp;Contact</span></a>
+		<a id="aboutButton" onclick="setPage('about');"><i class="material-icons">info</i><span class="desktop">&nbsp;About</span></a>
+	</nav>
+	<div>
+		<iframe id="yes" src="https://theandroidmaster.github.io/P5Samples/lines/"></iframe>
+		<div id="yesfg"></div>
+	</div>
+	<main id="main">
+		<div id="home">
+			<h1>Hi,</h1>
+			<h2 id="person">I'm a person.</h2>
+			<p>
+				I am currently in my senior year of high school. I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
+				and websites, but also design things and even occasionally write PHP. Nearly all the stuff I make is open source under some form of license, and I usually
+				accept PRs on all my projects unless stated otherwise.
+			</p>
+			<h2>Organizations</h2>
+			<p>
+				Sometimes I do things with other people. This is that stuff.
+			</p>
+			<div id="organizationlist" class="grid"></div>
+			<br>
+			<i id="pun"></i>
+		</div>
+		<div id="projects">
+			<ul class="sub">
+				<li><h4>Contents</h4></li>
+				<li><a id="projectsAppsButton" onclick="setSubPage('apps');">Apps</a></li>
+				<li><a id="projectsLibrariesButton" onclick="setSubPage('libraries');">Libraries</a></li>
+				<li><a id="projectsWebsitesButton" onclick="setSubPage('websites');">Websites</a></li>
+				<li><a id="projectsForksButton" onclick="setSubPage('forks');">Forks</a></li>
+				<li><a id="projectsOtherButton" onclick="setSubPage('other');">Other</a></li>
+			</ul>
+			<div id="apps">
+				<h2>Published Apps</h2>
+				<div id="applist" class="grid"></div>
+			</div>
+			<div id="libraries">
+				<h2>Libraries</h2>
+				<div id="liblist"></div>
+			</div>
+			<div id="websites">
+				<h2>Websites</h2>
+				<h4>
+					I still don't consider myself a good web developer yet, so most of these aren't intended to be a final product
+					of any sort. They're just here because I was bored and had nothing else to do.
+				</h4>
+				<div id="weblist"></div>
+			</div>
+			<div id="forks">
+				<h2>Forked Projects</h2>
+				<h4>
+					Unlike some other GitHub users, I don't just fork repositories as an alternative to starring them - projects
+					are usually here because I actually do intend to contribute to them in some way.
+				</h4>
+				<div id="forklist"></div>
+			</div>
+			<div id="other">
+				<h2>Other Projects</h2>
+				<h4>
+					This is a bunch of unsorted stuff that is sometimes interesting, but mostly just things I made in my free time
+					that aren't ready to be published yet.
+				</h4>
+				<div id="repolist"></div>
+			</div>
+		</div>
+		<div id="community">
+			<h2>People</h2>
+			<h4>
+				I'm great and all, but these people are also pretty great. They probably helped me out with something at some
+				point in time, or maybe I just find their projects interesting.
+				<br>
+				Go check out some of their work!
+			</h4>
+			<div id="userlist"></div>
+		</div>
+		<div id="contact">
+			<h2>Talk to me</h2>
+			<p>
+				I don't always reply to <a href="mailto:18jafenn90@gmail.com">email</a>s right away because of time limitations
+				(and I can't reply from my Android Wear), but my DMs on <a href="https://twitter.com/@IDontLikePHP">Twitter</a> are
+				always open, as well as <a href="https://www.instagram.com/idontlikephp/">Instagram</a> and Hangouts. You can also
+				find me on <a href="https://plus.google.com/+JamesFennJAFFA2157">Google+</a>, <a href="https://medium.com/@theandroidmaster">Medium</a>,
+				<a href="https://stackoverflow.com/users/4955981/james-fenn">Stack Overflow</a>,
+				<a href="https://github.com/TheAndroidMaster">GitHub</a>, <a href="https://www.uplabs.com/idontlikephp">UpLabs</a>,
+				<a href="http://steamcommunity.com/profiles/76561198322473575">Steam</a>, and just about every other social media site
+				in existence...
+			</p>
+			<p>
+				I have recently started to get bombarded with far more questions per day than I can ever hope to answer, so I am trying
+				to take steps to reduce the amount of time I spend responding to these. If you are trying to contact me with a question
+				or bug report about one of my apps, please make sure to check the issues section on GitHub first to make sure it hasn't
+				already been answered. If you want to contact me to discuss implementing your ad revenue framework in one of my apps,
+				don't bother: the answer's no. If you have a great idea for a new project for me to work on however, please don't hesitate
+				to shoot me a message, as I take great joy in adding to my growing pile of things for me to do when I don't have anything to do.
+			</p>
+		</div>
+		<div id="about">
+			<h2>Me, myself, and I</h2>
+			<p>
+				Well, since you must have clicked on a link to the "about" section of my website at some point, that must mean you are genuinely
+				interested in knowing more about me. Gosh, I'm flattered. Well, a bit of history then.
+			</p>
+			<p>
+				I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
+				the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
+				how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
+				because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
+				to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be farther from the truth.
+				Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
+				form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
+				I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
+				instructions when you first start programming is that there are no problems. Since you're following instructions that have already been
+				tried and tested, you know that everything will work properly. There is no design process - testing, problem solving, and finding solutions
+				are all skipped over. So while I did know the basics of python in middle school, I didn't make anything with it. It seemed pointless to me.
+			</p>
+			<p>
+				I got my first Android device (The Great Samsung Galaxy S2) when I was 13, and started making my first app on it
+				a little over a year later. Because I was a lazy idiot, my first few projects were made entirely with a WebView linked to a
+				Google Sites page, but I quickly realized the limitations of this method. During the summer break of 2015, I spent hours every day
+				scouring <a href="https://stackoverflow.com">Stack Overflow</a> for examples of how make an android app perform various tasks.
+				This was especially difficult as I had no prior knowledge of the Java language and I'm pretty sure that I didn't even know I was
+				writing Java for the first couple months. My first project was a basic app that took a paragraph as input, and make it 'bigger'
+				by replacing words with longer phrases and/or doubling the amount of spaces between words and sentences in the document. It wasn't
+				long after I finished this that I got my Google Play account and started working on a new app to display a collection of wallpapers
+				made by people I had met on Google Plus.
+			</p>
+			<p>
+				That app has since been unpublished because it was a complete abomination with the worst code style I have ever seen in my life,
+				and is currently collecting dust at the bottom of my GitHub profile. While making it, however, I managed to improve the app's UX
+				a great deal and learnt a lot about consumer-focused design, making the app's functionality both easy for new users to understand
+				and fast enough for existing users to navigate without feeling like they're wasting time.
+			</p>
+			<br>
+			<p>
+				Well, I'd say that's pretty good for an informal description of myself. Ever since I learnt to make Android apps, I've been
+				bouncing around between lots of different types of projects. Some are intended for regular consumers, some for people obsessed
+				with customization, and even a few for other developers like me.
+			</p>
+			<p>
+				I am currently in my senior year of high school and am trying to focus on getting into a good college. That said, I'm still hopelessly
+				addicted to programming, and will keep making anything and everything I can think of in my free time.
+			</p>
+		</div>
+	</main>
 
+	<script src="js/github.js"></script>
+  <script type="text/javascript">
+	function setPage(page) {
+		parent.location.hash = page;
+		document.getElementById('main').childNodes.forEach(function(e) {
+			if (e.id) {
+				e.style.display = "none";
+			}
+		});
 
-        <!-- Main Content -->
-        <div class="content">
-          <iron-pages attr-for-selected="data-route" selected="{{route}}">
-            <section data-route="home">
-              <paper-material elevation="1">
-                <div class="horizon">
-                  <div class="ctr selectable" onclick="location.href = 'https://doubledotlabs.github.io/';">
-                    <h1 class="ctr">
-                      <div class="circ">
-                        <iron-icon style="width: 100%; height: 100%;" icon="face"></iron-icon>
-                      </div>
-                      <br>
-                      Hi
-                    </h1>
-                    <p class="ctr">My name is James Fenn, I am an android app developer and a co-founder of <a href="https://doubledotlabs.github.io/">Double Dot Labs</a>.</p>
-                  </div>
-                  <div class="ctr selectable" onclick="location.href = 'https://theandroidmaster.github.io/#!/contact';">
-                    <h1 class="ctr">
-                      <div class="circ">
-                        <iron-icon style="width:100%; height:100%;" icon="send"></iron-icon>
-                      </div>
-                      <br>
-                      Contact Me
-                    </h1>
-                    <p class="ctr">I can be contacted through my email, hangouts, or google plus, which can be found <a data-route="contact" href="/contact" on-click="onDataRouteClick">here</a>.</p>
-                  </div>
-                  <div class="ctr selectable" onclick="location.href = 'https://play.google.com/store/apps/dev?id=5937321955284727208';">
-                    <h1 class="ctr">
-                      <div class="circ">
-                        <iron-icon style="width:100%; height:100%;" icon="android"></iron-icon>
-                      </div>
-                      <br>
-                      My Apps
-                    </h1>
-                    <p class="ctr">Most of my apps are open source, meaning that their source code can be modified and republished by anyone.</p>
-                  </div>
-                </div>
-              </paper-material>
+		switch (page) {
+			case "home":
+				document.getElementById('home').style.display = "block";
+				getOrganizations();
+				horriblePun();
+				break;
+			case "projects":
+				document.getElementById('projects').style.display = "block";
+				getRepos();
+				break;
+			case "community":
+				document.getElementById('community').style.display = "block";
+				getUsers();
+				break;
+			case "contact":
+				document.getElementById('contact').style.display = "block";
+				break;
+			case "about":
+				document.getElementById('about').style.display = "block";
+				break;
+		}
+	}
 
-              <paper-material elevation="1">
-                <h1>Organizations</h1>
-                <p class="paper-font-body">
-                  Here are a few of the organizations I am a part of.
-                </p>
-                <div id="organizationlist"><paper-spinner active></paper-spinner></div>
-              </paper-material>
+	function setSubPage(subPage) {
+		document.getElementById(subPage).scrollIntoView();
+	}
 
-              <paper-button onclick="document.querySelector('#collapse').toggle();" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">License
-                <div class="button" style="position:relative">
-                  <paper-ripple></paper-ripple>
-                </div>
-              </paper-button>
+	setPage(parent.location.hash ? parent.location.hash.substring(1) : "home");
 
-              <iron-collapse id="collapse">
-                <div>
-                  <p>Everything in this repo is BSD style license unless otherwise specified.</p>
-                  <p>Copyright (c) 2015 The Polymer Authors. All rights reserved.</p>
-                  <p>Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:</p>
-                  <ul>
-                    <li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>
-                    <li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>
-                    <li>Neither the name of Google Inc. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>
-                  </ul>
-                  <p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
-                </div>
-              </iron-collapse>
-
-              <paper-button onclick="sayHi()" tabindex="0" raised x-scope paper-button-0 role="button" animated aria-disabled="false" elevation="1">Say hi :)
-                <div class="button" style="position:relative">
-                  <paper-ripple></paper-ripple>
-                </div>
-              </paper-button>
-
-              <br>
-              <br>
-
-              <script src="https://apis.google.com/js/platform.js" async defer></script>
-              <div class="g-plusone" data-annotation="inline" data-width="300" data-href="https://theandroidmaster.github.io"></div>
-
-              <paper-toast id="toast" text="Hi"></paper-toast>
-            </section>
-
-            <section data-route="projects">
-              <h2 class="section-header">Published Apps</h2>
-			  <paper-material elevation="1">
-				<div id="applist"><paper-spinner active></paper-spinner></div>
-			  </paper-material>
-
-              <h2 class="section-header">Libraries</h2>
-              <paper-material elevation="1">
-                <div id="liblist"><paper-spinner active></paper-spinner></div>
-              </paper-material>
-
-              <h2 class="section-header">Other Projects</h2>
-              <paper-material elevation="1">
-                <div id="repolist"><paper-spinner active></paper-spinner></div>
-              </paper-material>
-
-              <h2 class="section-header">Forked Projects</h2>
-              <paper-material elevation="1">
-                <div id="forklist"><paper-spinner active></paper-spinner></div>
-              </paper-material>
-            </section>
-
-            <section data-route="community">
-              <paper-material elevation="1">
-                <h1>The Community</h1>
-                <p class="paper-font-body">
-                  There are a lot more awesome designers and developers like me! Please take some time to check them out below if you haven't already.
-                  <br>
-                  Just pointing out this list is taken from people I follow on Github, so I don't necessarily know everyone on here and not everyone on here knows me ;)
-                </p>
-
-                <div class="list short" role="listbox" id="userlist"></div>
-              </paper-material>
-            </section>
-
-            <section data-route="events">
-              <paper-material elevation="1">
-                <div id="relatedcontent"><paper-spinner active></paper-spinner></div>
-              </paper-material>
-            </section>
-
-            <section data-route="contact">
-              <paper-material elevation="1">
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='mailto:18jafenn90@gmail.com';">
-                  <div>Gmail<paper-tooltip>18jafenn90@gmail.com</paper-tooltip></div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@hotmail.com';">
-                  <div>Hotmail<paper-tooltip>na18jafenn90@hotmail.com</paper-tooltip></div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='mailto:na18jafenn90@outlook.com';">
-                  <div>Outlook<paper-tooltip>na18jafenn90@outlook.com</paper-tooltip></div>
-                </paper-item>
-              </paper-material>
-              <paper-material elevation="1">
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://plus.google.com/114612442558529845038';">
-                  <div>Google+</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://twitter.com/IDontLikePHP';">
-                  <div>Twitter</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='https://www.instagram.com/idontlikephp/';">
-                  <div>Instagram</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0" onclick="location.href='https://mastodon.technology/@idontlikephp';">
-                  <div>Mastodon</div>
-                </paper-item>
-              </paper-material>
-              <paper-material elevation="1">
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://play.google.com/store/apps/dev?id=5937321955284727208';">
-                  <div>Google Play</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://github.com/TheAndroidMaster';">
-                  <div>Github</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='http://stackoverflow.com/users/4955981/james-fenn';">
-                  <div>Stackoverflow</div>
-                </paper-item>
-                <paper-item role="option" tabindex="0" aria-disabled="false" class="x-scope paper-item-0"  onclick="location.href='https://medium.com/@theandroidmaster';">
-                  <div>Medium</div>
-                </paper-item>
-              </paper-material>
-            </section>
-
-            <section data-route="about">
-              <paper-material elevation="1">
-                <h1>About</h1>
-                <p>Here are a bunch of random statistics that are here simply to make this part of my website seem somewhat useful and professional.</p>
-                <br>
-                <h4>Time Spent Consuming Oranges:</h4>
-                <p>Peeling Oranges: 94%</p>
-                <p>Eating Oranges: 6%</p>
-                <br>
-                <h4>Time Spent Coding:</h4>
-                <p>Watching Netflix: 40%</p>
-                <p>Browsing Google+: 35%</p>
-                <p>Coding: 25%</p>
-                <br>
-                <div id="secret" style="display: none;">
-                  <h4>Time Spent Creaating Random Bugs on My Website:</h4>
-                  <p>&lt;a href=&quot;old/index.html&quot;&gt;75%&lt;/a&gt;</p>
-                  <p>Coding: 25%</p>
-                  <br>
-                </div>
-                <h4>Ingredients of Material Design:</h4>
-                <p>Butter: 90%</p>
-                <p>Skill: 0%</p>
-                <p>Buffalo: 5%</p>
-                <p>Dried Possums: 5%</p>
-                <br>
-                <h4>Components of Cabbage Juice:</h4>
-                <p>Cabbage: 71.4%</p>
-                <p>Juice: 28.6%</p>
-                <br>
-                <h4>What Steven is Doing: </h4>
-                <p>Drinking Cabbage Juice: 100%</p>
-                <br>
-                <br>
-                <p>Well okay, since you've read this far if you really want a bio or something you can read <a href="https://medium.com/@theandroidmaster/how-i-try-to-make-my-apps-better-e2935afde3cb">this Medium article</a>.</p>
-              </paper-material>
-            </section>
-          </iron-pages>
-        </div>
-      </paper-scroll-header-panel>
-    </paper-drawer-panel>
-
-    <paper-toast id="ratelimit" text="The rate limit of the Github API has been temporarily exceeded. Some content on this site will not display correctly."></paper-toast>
-    <paper-toast id="requesterror" text="An error occured while fetching resources from the Github API. Affected content may not display correctly."></paper-toast>
-
-    <script type="text/javascript">
-
-  function sayHi() {
+	function horriblePun() {
     var hellos = [
-      'Bye.',
-      'I don\'t like introductions.',
-      'give(\"' + atob("bWU=") + '\", \"' + atob("Zm9vZA==") + '\"); and I might talk.',
       'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
       'I\'d tell you a chemistry joke but I know I wouldn\'t get a reaction.',
       'Yesterday I accidentally swallowed some food coloring. The doctor says I\'m OK, but I feel like I died a little inside.',
@@ -543,365 +288,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       'What sound does a bouncing plane make? Boeing boeing boeing.'
     ];
 
-    document.querySelector('#toast').text = hellos[Math.floor(Math.random() * hellos.length)];
-    document.querySelector('#toast').show();
+    document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
   }
-
-  function createCORSRequest(method, url) {
-    var xhr = new XMLHttpRequest();
-    if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
-    } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
-    } else {
-      xhr = null;
-    }
-    return xhr;
-  }
-
-  function give(first, second) {
-      if (btoa(first) == "bWU=" && btoa(second) == "Zm9vZA==") {
-          document.getElementById("secret").style.display = 'block';
-          return 'There\'s something special in the about section ;)';
-      } else {
-          return 'The cabbage doesn\'t like you.';
-      }
-  }
-
-  function onError(status) {
-    if (!document.querySelector('#ratelimit').opened) {
-      document.querySelector('#requesterror').show();
-    }
-    console.log("Request failed, error " + status);
-  }
-
-  function getRequestLimit() {
-    var requestContent = new XMLHttpRequest();
-    requestContent.onreadystatechange = function () {
-      if(requestContent.readyState === 4) {
-        if(requestContent.status === 200 || requestContent.status == 0) {
-          var obj = JSON.parse(requestContent.responseText);
-          console.log(obj.resources.core.remaining + " out of " + obj.resources.core.limit + " requests left");
-          if (obj.resources.core.remaining == 0) {
-            document.querySelector('#ratelimit').show();
-          }
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    requestContent.open("GET", "https://api.github.com/rate_limit", true);
-    requestContent.send(null);
-  }
-
-  function setCache(url, cache) {
-    localStorage.setItem(url, new Date().getTime() + ":" + cache);
-  }
-
-  function getCache(url) {
-    var cache = localStorage.getItem(url);
-    if (cache != null && new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
-      cache = cache.substr(cache.indexOf(':') + 1);
-      setCache(url, cache);
-      return cache;
-    }
-  }
-
-  function getPerson(url) {
-    var cache = getCache(url);
-    if (cache != null) {
-        document.getElementById('userlist').innerHTML += cache;
-        return;
-    }
-
-    var personContent = new XMLHttpRequest();
-    personContent.onreadystatechange = function () {
-      if(personContent.readyState === 4) {
-        getRequestLimit();
-
-        if(personContent.status === 200 || personContent.status == 0) {
-          var obj = JSON.parse(personContent.responseText);
-
-          var url = obj.html_url;
-          if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
-
-          var name = obj.login;
-          if (obj.name != null && obj.name.length > 0) name = obj.name;
-
-          var bio = "This is a person.";
-          if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
-
-          var HTML = "<paper-item onclick=\"window.location.href = \'" + url + "\'\"><paper-item-body two-line><div>" + name + "</div><div secondary>" + bio + "</div></paper-item-body></paper-item>";
-          document.getElementById('userlist').innerHTML += HTML;
-          setCache(url, HTML);
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    personContent.open("GET", url, true);
-    personContent.send(null);
-  }
-
-  function getOrganizations() {
-    if (document.getElementById('organizationlist').set != null) return;
-
-    var url = "https://api.github.com/users/TheAndroidMaster/orgs";
-    var cache = getCache(url);
-    if (cache != null) {
-      document.getElementById('organizationlist').innerHTML = cache;
-      document.getElementById('organizationlist').set = true;
-      return;
-    }
-
-    var userContent = new XMLHttpRequest();
-    userContent.onreadystatechange = function () {
-      if(userContent.readyState === 4) {
-        getRequestLimit();
-
-        if(userContent.status === 200 || userContent.status == 0) {
-          var obj = JSON.parse(userContent.responseText);
-          var HTML = "";
-
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
-            HTML += "<paper-item onclick=\"window.location.href = \'" + "https://github.com/" + obj[i].login + "\'\"><img class=\"icon\" style=\"border-radius: 50%;\" src=\"" + obj[i].avatar_url + "\"></img><paper-item-body two-line><div>" + obj[i].login + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item>";
-          }
-
-          document.getElementById('organizationlist').innerHTML = HTML;
-          document.getElementById('organizationlist').set = true;
-
-          setCache(url, HTML);
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    userContent.open("GET", url, true);
-    userContent.send(null);
-  }
-
-  function getRepos() {
-    if (document.getElementById('applist').set != null) return;
-
-    var url = "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000";
-    var appCache = getCache(url + "-applist");
-    var libCache = getCache(url + "-liblist");
-    var repoCache = getCache(url + "-repolist");
-    var forkCache = getCache(url + "-forklist");
-    if (appCache != null && libCache != null && repoCache != null && forkCache != null) {
-      document.getElementById('applist').innerHTML = appCache;
-      document.getElementById('liblist').innerHTML = libCache;
-      document.getElementById('repolist').innerHTML = repoCache;
-      document.getElementById('forklist').innerHTML = forkCache;
-
-      document.getElementById('applist').set = true;
-      return;
-    }
-
-    var repoContent = new XMLHttpRequest();
-    repoContent.onreadystatechange = function () {
-      if(repoContent.readyState === 4) {
-        getRequestLimit();
-
-        if(repoContent.status === 200 || repoContent.status == 0) {
-          var obj = JSON.parse(repoContent.responseText);
-          var repoHTML = "";
-          var libHTML = "";
-          var appHTML = "";
-          var forkHTML = "";
-
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
-
-            if (obj[i].fork) {
-              forkHTML += "<a href=\"" + obj[i].html_url + "\"><paper-item><paper-item-body two-line><div>" + obj[i].full_name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-              appHTML += "<a href=\"" + "https://theandroidmaster.github.io/about/#" + obj[i].full_name + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
-              libHTML += "<a href=\"" + "https://theandroidmaster.github.io/about/#" + obj[i].full_name + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
-            } else {
-              var homepage = obj[i].html_url;
-              if (obj[i].homepage != null && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0)
-                homepage = obj[i].homepage;
-
-              repoHTML += "<a href=\"" + homepage + "\"><paper-item><paper-item-body two-line><div>" + obj[i].name + "</div><div secondary>" + obj[i].description + "</div></paper-item-body></paper-item></a>";
-            }
-          }
-
-          document.getElementById('applist').innerHTML = appHTML;
-          document.getElementById('liblist').innerHTML = libHTML;
-          document.getElementById('repolist').innerHTML = repoHTML;
-          document.getElementById('forklist').innerHTML = forkHTML;
-
-          setCache(url + "-applist", appHTML);
-          setCache(url + "-liblist", libHTML);
-          setCache(url + "-repolist", repoHTML);
-          setCache(url + "-forklist", forkHTML);
-
-          document.getElementById('applist').set = true;
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    repoContent.open("GET", url, true);
-    repoContent.send(null);
-  }
-
-  function getUsers() {
-    if (document.getElementById('userlist').set != null) return;
-
-    var userContent = new XMLHttpRequest();
-    userContent.onreadystatechange = function () {
-      if(userContent.readyState === 4) {
-        getRequestLimit();
-
-        if(userContent.status === 200 || userContent.status == 0) {
-          var obj = JSON.parse(userContent.responseText);
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
-            getPerson(obj[i].url);
-          }
-          document.getElementById('userlist').set = true;
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", true);
-    userContent.send(null);
-  }
-
-  function getEvents() {
-    if (document.getElementById('relatedcontent').set != null) return;
-
-    var url = "https://api.github.com/users/TheAndroidMaster/events";
-    var cache = getCache(url);
-    if (cache != null) {
-      document.getElementById('relatedcontent').innerHTML = cache;
-      document.getElementById('relatedcontent').set = true;
-      return;
-    }
-
-    var rawContent = new XMLHttpRequest();
-    rawContent.onreadystatechange = function () {
-      if (rawContent.readyState === 4) {
-        getRequestLimit();
-
-        if (rawContent.status === 200 || rawContent.status == 0) {
-          var obj = JSON.parse(rawContent.responseText);
-          var HTML = "";
-
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
-            var message = "";
-            var icon = "error-outline";
-            var url = "https://github.com/" + obj[i].repo.name;
-            if (obj[i].type == "PushEvent") {
-              message = obj[i].payload.commits[0].message;
-              icon = "swap-vert";
-            } else if (obj[i].type == "WatchEvent") {
-              message = "Starred " + obj[i].repo.name;
-              icon = "star";
-            } else if (obj[i].type == "MemberEvent") {
-              message = obj[i].payload.action + " " + obj[i].payload.member.login;
-              icon = "assignment-ind";
-            } else if (obj[i].type == "IssueCommentEvent") {
-              message = "Commented on issue #" + obj[i].payload.issue.number + ": " + obj[i].payload.issue.title;
-              url = obj[i].payload.issue.html_url;
-              icon = "announcement";
-            } else if (obj[i].type == "CommitCommentEvent") {
-              message = "Commented on commit " + obj[i].payload.comment.commit_id + " in " + obj[i].repo.name;
-              icon = "announcement";
-              url = obj[i].payload.comment.html_url;
-            } else if (obj[i].type == "CreateEvent") {
-              message = obj[i].payload.ref_type + " " + obj[i].payload.ref + " created";
-              icon = "add-box";
-            } else if (obj[i].type == "ForkEvent") {
-              message = "Forked " + obj[i].repo.name + " to " + obj[i].payload.forkee.full_name;
-              icon = "add-box";
-            } else if (obj[i].type == "IssuesEvent") {
-              message = obj[i].payload.action + " issue #" + obj[i].payload.issue.number;
-              icon = "announcement";
-            } else if (obj[i].type == "DeleteEvent") {
-              message = "Deleted " + obj[i].repo.name;
-              icon = "delete";
-            } else if (obj[i].type == "PullRequestEvent") {
-              message = "Pull request #" + obj[i].payload.number + " " + obj[i].payload.action;
-              icon = "compare-arrows";
-            } else if (obj[i].type == "ReleaseEvent") {
-              message = obj[i].payload.release.tag_name + " " + obj[i].payload.action;
-              icon = "cloud-upload";
-              url = obj[i].payload.release.html_url;
-            } else if (obj[i].type = "GollumEvent") {
-              message = obj[i].payload.pages[0].title + " page " + obj[i].payload.pages[0].action + " in " + obj[i].repo.name;
-              icon = "book";
-              url = "https://github.com" + obj[i].payload.pages[0].html_url;
-            }
-            HTML += "<a href=\"" + url + "\"><paper-item><iron-icon class=\"icon\" icon=\"" + icon + "\"></iron-icon><paper-item-body two-line><div>" + message + "</div><div secondary>" + new Date(obj[i].created_at).toString().substr(0, 15) + "&nbsp;&ndash;&nbsp;" + obj[i].repo.name + "</div></paper-item-body></paper-item></a>";
-          }
-
-          document.getElementById('relatedcontent').innerHTML = HTML;
-          document.getElementById('relatedcontent').set = true;
-
-          setCache(url, HTML);
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    };
-    rawContent.open("GET", url, true);
-    rawContent.send(null);
-  }
-
-  window.addEventListener('WebComponentsReady', function() {
-    // We use Page.js for routing. This is a Micro
-    // client-side router inspired by the Express router
-    // More info: https://visionmedia.github.io/page.js/
-    // Middleware
-    function scrollToTop(ctx, next) {
-      app.scrollPageToTop();
-      next();
-    }
-    // Routes
-    page('/', scrollToTop, function() {
-      app.route = 'home';
-      getOrganizations();
-    });
-
-    page('/projects', scrollToTop, function() {
-      app.route = 'projects';
-      getRepos();
-    });
-
-    page('/community', scrollToTop, function() {
-      app.route = 'community';
-      getUsers();
-    });
-
-    page('/events', scrollToTop, function() {
-      app.route = 'events';
-      getEvents();
-    });
-    page('/contact', scrollToTop, function() {
-      app.route = 'contact';
-    });
-
-    page('/about', scrollToTop, function() {
-      app.route = 'about';
-    });
-    // add #! before urls
-    page({
-      hashbang: true
-    });
-  });
   </script>
-  </template>
-  <!-- build:js scripts/app.js -->
-  <script src="scripts/app.js"></script>
-  <script src="../bower_components/page/page.js"></script>
 
 </body>
 </html>
