@@ -20,50 +20,13 @@
   		<link rel="apple-touch-icon-precomposed" sizes="1997x993" href="../touch-icon-ipad-retina">
   		<meta name="msapplication-TileImage" content="../images/touch/ms-touch-icon-144x144-precomposed.png">
 
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
 		<style>
-            * {
-				font-family: 'Roboto Slab', serif;
-			}
-
-			body {
-				padding: 0;
-				margin: 0;
-			}
-
-			.header {
-				padding: 16px calc(8px + 20%);
-				margin: 0;
-				background-color: #E3F2FD;
-				color: black;
-			}
-
-			.header > * {
-				font-family: 'Roboto Condensed', sans-serif;
-			}
-
-			.links {
-				padding: 8px calc(8px + 20%);
-				background-color: black;
-			}
-
-			a {
-				color: black !important;
-				font-weight: bold;
-			}
-
-			.links > a {
-				text-decoration: none;
-				color: white !important;
-			}
-
 			img {
 				max-width: 100%;
-			}
-
-			#content {
-				padding: 8px calc(8px + 20%);
 			}
 
 			pre {
@@ -87,34 +50,21 @@
 				padding-right: 0px;
 				font-size: 1em;
 			}
-
-			@media(max-width: 800px) {
-				.header {
-					padding: 16px 16px;
-				}
-
-				.links {
-					padding: 8px 16px;
-				}
-
-				#content {
-					padding: 8px 16px;
-				}
-			}
 		</style>
 	</head>
 	<body>
-		<div class="header">
+		<nav>
+			<a href="https://theandroidmaster.github.io/"><i class="material-icons">home</i><span class="desktop">&nbsp;Home</span></a>
+			<a id="github" href="/" target="_blank"><i class="material-icons">code</i><span class="desktop">&nbsp;GitHub</span></a>
+			<a id="releases" href="/"><i class="material-icons">new_releases</i><span class="desktop">&nbsp;Releases</span></a>
+			<a id="link" href="/" target="_blank" style="display: none;"><i class="material-icons">link</i><span class="desktop" id="linkname">&nbsp;</span></a>
+		</nav>
+		<main>
 			<h1 id="title">Repository</h1>
-		</div>
-		<div class="links">
-			<a id="github" href="/" target="_blank">GitHub</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a id="releases" href="/">Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a id="link" href="/" target="_blank"></a>
-		</div>
-		<p id="content">
-            Something something something.
-		</p>
+			<div id="content">
+          Something something something.
+			</div>
+		</main>
 	</body>
 	<script>
 		var title = document.getElementById('title');
@@ -122,8 +72,9 @@
 		var github = document.getElementById('github');
 		var releases = document.getElementById('releases');
 		var link = document.getElementById('link');
+		var linkname = document.getElementById('linkname');
 
-	    var repository = parent.location.hash.substring(1);
+	  var repository = parent.location.hash.substring(1);
 		var url = "https://raw.githubusercontent.com/" + repository + "/master/README.md";
 
 		document.title = repository.substring(repository.indexOf("/") + 1);
@@ -152,21 +103,22 @@
 					var obj = JSON.parse(repo.responseText);
 					if (obj.homepage) {
 						if (obj.homepage.startsWith("https://play.google.com/"))
-							link.innerHTML = "Google Play";
-					    else {
+							linkname.innerHTML += "Google Play";
+					  else {
 							if (obj.homepage.includes(".github.io")) {
-								link.innerHTML = "Website";
+								linkname.innerHTML += "Website";
 							} else if (obj.homepage.replace(/[^.]/g, "").length > 1) {
 								var temp = obj.homepage.substring(obj.homepage.indexOf(".") + 1);
 								temp = temp.substring(0, temp.indexOf("."));
-								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
+								linkname.innerHTML += temp.charAt(0).toUpperCase() + temp.substring(1);
 							} else if (obj.homepage.replace(/[^.]/g, "").length > 0) {
 								var temp = obj.homepage.substring(obj.homepage.indexOf("/") + 2);
 								temp = temp.substring(0, temp.indexOf("."));
-								link.innerHTML = temp.charAt(0).toUpperCase() + temp.substring(1);
-							} else link.innerHTML = "Link";
+								linkname.innerHTML += temp.charAt(0).toUpperCase() + temp.substring(1);
+							} else linkname.innerHTML += "Link";
 						}
 						link.href = obj.homepage;
+						link.style.display = "block";
 					}
 				}
 			}
