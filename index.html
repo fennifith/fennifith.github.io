@@ -240,11 +240,10 @@
   <script type="text/javascript">
 	function setPage(page) {
 		parent.location.hash = page;
-		document.getElementById('main').childNodes.forEach(function(e) {
-			if (e.id) {
-				e.style.display = "none";
-			}
-		});
+		for (var i = 0; i < document.getElementById('main').childNodes.length; i++) {
+			if (document.getElementById('main').childNodes[i].id)
+				document.getElementById('main').childNodes[i].style.display = "none";
+		}
 
 		switch (page) {
 			case "home":
