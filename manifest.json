@@ -2,20 +2,16 @@
   "name": "James Fenn",
   "short_name": "James Fenn",
   "icons": [{
-        "src": "touch-icon-iphone.png",
-        "sizes": "1007x993",
+        "src": "/images/favicon-96.png",
+        "sizes": "96x96",
         "type": "image/png"
       }, {
-        "src": "touch-icon-iphone-retina.png",
-        "sizes": "1007x993",
+        "src": "/images/favicon-144.png",
+        "sizes": "144x144",
         "type": "image/png"
       }, {
-        "src": "touch-icon-ipad.png",
-        "sizes": "1007x993",
-        "type": "image/png"
-      }, {
-        "src": "touch-icon-ipad-retina.png",
-        "sizes": "1007x993",
+        "src": "/images/favicon-192.png",
+        "sizes": "192x192",
         "type": "image/png"
       }],
   "start_url": "/?homescreen=1",
