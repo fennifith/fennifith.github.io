@@ -33,21 +33,24 @@
   }
 
   function setCache(url, cache) {
-    localStorage.setItem(url, new Date().getTime() + ":" + cache);
+    if (localStorage)
+			localStorage.setItem(url, new Date().getTime() + ":" + cache);
   }
 
   function getCache(url) {
-    var cache = localStorage.getItem(url);
-    if (cache != null && new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
-      cache = cache.substr(cache.indexOf(':') + 1);
-      setCache(url, cache);
-      return cache;
-    }
+		if (localStorage) {
+			var cache = localStorage.getItem(url);
+	    if (cache != null && new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
+	      cache = cache.substr(cache.indexOf(':') + 1);
+	      setCache(url, cache);
+	      return cache;
+	    }
+		}
   }
 
   function getPerson(url) {
     var cache = getCache(url);
-    if (cache != null) {
+    if (cache) {
         document.getElementById('userlist').innerHTML += cache;
         return;
     }
@@ -86,7 +89,7 @@
 
     var url = "https://api.github.com/users/TheAndroidMaster/orgs";
     var cache = getCache(url);
-    if (cache != null) {
+    if (cache) {
       document.getElementById('organizationlist').innerHTML = cache;
       document.getElementById('organizationlist').set = true;
       return;
