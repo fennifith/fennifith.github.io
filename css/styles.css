@@ -20,6 +20,7 @@
 
 body {
 	margin: 0;
+	background-color: #FFFFFF;
 }
 
 p {
@@ -90,6 +91,7 @@ nav>a:hover {
 }
 
 main {
+	margin-left: 80px;
 	margin-left: calc(60px + 10vw);
 	margin-right: 10vw;
 	padding-top: 20vh;
