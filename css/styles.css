@@ -163,3 +163,7 @@ a>span {
 		display: none;
 	}
 }
+
+.grid div {
+    cursor: pointer;
+}
