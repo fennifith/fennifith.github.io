@@ -239,7 +239,7 @@
 	<script src="js/github.js"></script>
   <script type="text/javascript">
 	function setPage(page) {
-		parent.location.hash = page;
+		window.history.replaceState(null, null, "?" + page);
 		for (var i = 0; i < document.getElementById('main').childNodes.length; i++) {
 			if (document.getElementById('main').childNodes[i].id)
 				document.getElementById('main').childNodes[i].style.display = "none";
@@ -273,7 +273,7 @@
 		document.getElementById(subPage).scrollIntoView();
 	}
 
-	setPage(parent.location.hash ? parent.location.hash.substring(1) : "home");
+	setPage(window.location.search ? window.location.search.substring(1) : "home");
 
 	function horriblePun() {
     var hellos = [
