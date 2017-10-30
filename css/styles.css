@@ -168,3 +168,24 @@ a>span {
 .grid div {
     cursor: pointer;
 }
+#applist a {
+    cursor: pointer;
+}
+#liblist a {
+    cursor: pointer;
+}
+#weblist a {
+    cursor: pointer;
+}
+#forklist a {
+    cursor: pointer;
+}
+#repolist a {
+    cursor: pointer;
+}
+#userlist a {
+    cursor: pointer;
+}
+.sub a {
+    cursor: pointer;
+}
