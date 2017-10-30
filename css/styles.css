@@ -91,6 +91,7 @@ nav>a:hover {
 }
 
 main {
+	display: block;
 	margin-left: 80px;
 	margin-left: calc(60px + 10vw);
 	margin-right: 10vw;
