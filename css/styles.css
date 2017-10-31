@@ -28,6 +28,7 @@ p {
 }
 
 a {
+	cursor: pointer;
 	color: #0091EA;
 	transition: color .25s;
 	-moz-transition: color .25s;
@@ -165,6 +166,6 @@ a>span {
 	}
 }
 
-.grid div {
+.item {
     cursor: pointer;
 }

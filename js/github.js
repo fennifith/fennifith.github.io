@@ -221,5 +221,5 @@
   }
 
 	function getListItem(url, title, subtitle, noanim) {
-		return "<div "+ (noanim ? "class=\"noanim\" " : "") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
+		return "<div "+ (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
 	}
