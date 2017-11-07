@@ -216,7 +216,7 @@
         }
       }
     }
-    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", true);
+    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", true);
     userContent.send(null);
   }
 
