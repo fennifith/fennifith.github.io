@@ -216,10 +216,10 @@
         }
       }
     }
-    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following", true);
+    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", true);
     userContent.send(null);
   }
 
 	function getListItem(url, title, subtitle, noanim) {
-		return "<div "+ (noanim ? "class=\"noanim\" " : "") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
+		return "<div "+ (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
 	}

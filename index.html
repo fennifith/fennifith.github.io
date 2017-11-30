@@ -102,7 +102,7 @@
 			<h2 id="person">I'm a person.</h2>
 			<p>
 				I am currently in my senior year of high school. I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
-				and websites, but also design things and even occasionally write PHP. Nearly all the stuff I make is open source under some form of license, and I usually
+				and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also design things and even occasionally write PHP. Nearly all the stuff I make is open source under some form of license, and I usually
 				accept PRs on all my projects unless stated otherwise.
 			</p>
 			<h2>Organizations</h2>
@@ -238,8 +238,8 @@
 
 	<script src="js/github.js"></script>
   <script type="text/javascript">
-	function setPage(page) {
-		window.history.replaceState(null, null, "?" + page);
+	function setPage(page, subPage) {
+    window.history.replaceState(null, null, "?" + page);
 		for (var i = 0; i < document.getElementById('main').childNodes.length; i++) {
 			if (document.getElementById('main').childNodes[i].id)
 				document.getElementById('main').childNodes[i].style.display = "none";
@@ -267,13 +267,35 @@
 				document.getElementById('about').style.display = "block";
 				break;
 		}
+
+    if (subPage)
+      setSubPage(subPage);
 	}
 
 	function setSubPage(subPage) {
-		document.getElementById(subPage).scrollIntoView();
+    var element = document.getElementById(subPage);
+    if (element) {
+      element.scrollIntoView();
+
+      var page = getSearch();
+      if (page.split('/').length > 1)
+        page = page.split('/')[0];
+
+      window.history.replaceState(null, null, "?" + page + "/" + subPage);
+    }
 	}
 
-	setPage(window.location.search ? window.location.search.substring(1) : "home");
+  function getSearch() {
+    if (window.location.search) 
+      return window.location.search.replace("?", "");
+    else return "home";
+  }
+
+  var page = getSearch();
+  if (page.split('/').length > 1) {
+    var pages = page.split('/');
+    setPage(pages[0], pages[1]);
+  } else setPage(page);
 
 	function horriblePun() {
     var hellos = [
