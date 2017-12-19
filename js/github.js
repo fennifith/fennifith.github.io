@@ -1,5 +1,4 @@
-
-  function createCORSRequest(method, url) {
+function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
       xhr.open(method, url, true);
@@ -10,216 +9,167 @@
       xhr = null;
     }
     return xhr;
-  }
+}
 
-  function onError(status) {
+function onError(status) {
     console.log("Request failed, error " + status);
-  }
+}
 
-  function getRequestLimit() {
+function getRequestLimit(fun, error) {
     var requestContent = new XMLHttpRequest();
     requestContent.onreadystatechange = function () {
       if(requestContent.readyState === 4) {
-        if(requestContent.status === 200 || requestContent.status == 0) {
+        if (requestContent.status === 200 || requestContent.status == 0) {
           var obj = JSON.parse(requestContent.responseText);
           console.log(obj.resources.core.remaining + " out of " + obj.resources.core.limit + " requests left");
+
+					if (fun) {
+						fun(obj.resources.core.remaining);
+					}
         } else {
           onError(rawContent.status);
+					error();
         }
       }
     }
     requestContent.open("GET", "https://api.github.com/rate_limit", true);
     requestContent.send(null);
-  }
+}
 
-  function setCache(url, cache) {
-    if (localStorage)
-			localStorage.setItem(url, new Date().getTime() + ":" + cache);
-  }
+function setCache(id, cache) {
+	if (localStorage)
+		localStorage.setItem(id, {"time": new Date().getTime(), "data": cache});
+}
 
-  function getCache(url) {
-		if (localStorage) {
-			var cache = localStorage.getItem(url);
-	    if (cache != null && new Date().getTime() - parseInt(cache.substr(0, cache.indexOf(':'))) < 100000) {
-	      cache = cache.substr(cache.indexOf(':') + 1);
-	      setCache(url, cache);
-	      return cache;
-	    }
-		}
-  }
+function getCache(url) {
+	if (localStorage)
+		return localStorage.getItem(url);
+}
 
-  function getPerson(url) {
-    var cache = getCache(url);
-    if (cache) {
-        document.getElementById('userlist').innerHTML += cache;
-        return;
-    }
+function getGitHubInfo(url, fun, error) {
+	if (!error) {
+		error = function() {
+			document.location.href = "/404";
+		};
+	}
 
-    var personContent = new XMLHttpRequest();
-    personContent.onreadystatechange = function () {
-      if(personContent.readyState === 4) {
-        getRequestLimit();
+	var cache = getCache(url);
+	if (cache && new Date().getTime() - cache.time < 100000) {
+		fun(cache.data);
+	} else {
+		getRequestLimit(function(remaining) {
+			if (remaining > 0) {
+				var requestContent = new XMLHttpRequest();
+				requestContent.onreadystatechange = function() {
+					if (requestContent.readyState === 4) {
+						if (requestContent.status === 200 || requestContent.status == 0) {
+							var response = JSON.parse(requestContent.responseText);
+							setCache(url, response);
+							fun(response);
+						} else error();
+					}
+				};
+				requestContent.open("GET", url.indexOf("https://api.github.com/") == 0 ? url : "https://api.github.com/" + url, true);
+				requestContent.send();
+			} else if (cache) {
+				fun(cache.data);
+			} else error();
+		}, function() {
+			if (cache) {
+				fun(cache.data);
+			} else error();
+		});
+	}
+}
 
-        if(personContent.status === 200 || personContent.status == 0) {
-          var obj = JSON.parse(personContent.responseText);
+function getPerson(url) {
+	getGitHubInfo(url, function(obj) {
+		var url = obj.html_url;
+		if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
 
-          var url = obj.html_url;
-          if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
+		var name = obj.login;
+		if (obj.name != null && obj.name.length > 0) name = obj.name;
 
-          var name = obj.login;
-          if (obj.name != null && obj.name.length > 0) name = obj.name;
+		var bio = "This is a person.";
+		if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
 
-          var bio = "This is a person.";
-          if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
+		var HTML = getListItem(url, name, bio, true);
+		document.getElementById('userlist').innerHTML += HTML;
+	}, function() {});
+}
 
-          var HTML = getListItem(url, name, bio, true);
-          document.getElementById('userlist').innerHTML += HTML;
-          setCache(url, HTML);
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    personContent.open("GET", url, true);
-    personContent.send(null);
-  }
-
-  function getOrganizations() {
+function getOrganizations() {
     if (document.getElementById('organizationlist').set != null) return;
 
-    var url = "https://api.github.com/users/TheAndroidMaster/orgs";
-    var cache = getCache(url);
-    if (cache) {
-      document.getElementById('organizationlist').innerHTML = cache;
-      document.getElementById('organizationlist').set = true;
-      return;
-    }
+	getGitHubInfo("users/TheAndroidMaster/orgs", function(obj) {
+		var HTML = "";
 
-    var userContent = new XMLHttpRequest();
-    userContent.onreadystatechange = function () {
-      if(userContent.readyState === 4) {
-        getRequestLimit();
+		for (var i = 0; obj[i]; i++) {
+			HTML += getListItem("https://github.com/" + obj[i].login, obj[i].login, obj[i].description);
+		}
 
-        if(userContent.status === 200 || userContent.status == 0) {
-          var obj = JSON.parse(userContent.responseText);
-          var HTML = "";
+		var organizationListElement = document.getElementById('organizationlist');
+		organizationListElement.style.display = null;
+		organizationListElement.innerHTML = HTML;
+		organizationListElement.set = true;
+	}, function() {
+		document.getElementById('organizationlist').style.display = "none";
+	});
+}
 
-          for (var i = 0; obj[i]; i++) {
-						HTML += getListItem("https://github.com/" + obj[i].login, obj[i].login, obj[i].description);
-          }
-
-          document.getElementById('organizationlist').innerHTML = HTML;
-          document.getElementById('organizationlist').set = true;
-
-          setCache(url, HTML);
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    userContent.open("GET", url, true);
-    userContent.send(null);
-  }
-
-  function getRepos() {
+function getRepos() {
     if (document.getElementById('applist').set != null) return;
 
-    var url = "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000";
-    var appCache = getCache(url + "-applist");
-    var libCache = getCache(url + "-liblist");
-    var repoCache = getCache(url + "-repolist");
-		var webCache = getCache(url + "-weblist");
-    var forkCache = getCache(url + "-forklist");
-    if (appCache && libCache && repoCache && webCache && forkCache) {
-      document.getElementById('applist').innerHTML = appCache;
-      document.getElementById('liblist').innerHTML = libCache;
-      document.getElementById('repolist').innerHTML = repoCache;
-			document.getElementById('weblist').innerHTML = webCache;
-      document.getElementById('forklist').innerHTML = forkCache;
+	getGitHubInfo("users/TheAndroidMaster/repos?per_page=1000", function(obj) {
+		var repoHTML = "";
+		var libHTML = "";
+		var webHTML = "";
+		var appHTML = "";
+		var forkHTML = "";
 
-      document.getElementById('applist').set = true;
-      return;
-    }
+		for (var i = 0; true; i++) {
+			if (obj[i] == null) break;
 
-    var repoContent = new XMLHttpRequest();
-    repoContent.onreadystatechange = function () {
-      if(repoContent.readyState === 4) {
-        getRequestLimit();
+			if (obj[i].fork) {
+				forkHTML += getListItem(obj[i].html_url, obj[i].name, obj[i].description);
+			} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
+				appHTML += getListItem("https://jfenn.me/about/?" + obj[i].full_name, obj[i].name, obj[i].description);
+			} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
+				libHTML += getListItem("https://jfenn.me/about/?" + obj[i].full_name, obj[i].name, obj[i].description);
+			} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && (obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0 || obj[i].homepage.indexOf("https://jfenn.me/") == 0) && obj[i].homepage.indexOf("/apps/") == -1) {
+				webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+			} else {
+				var homepage = obj[i].html_url;
+				if (obj[i].homepage != null && (obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0 || obj[i].homepage.indexOf("https://jfenn.me/") == 0))
+					homepage = obj[i].homepage;
 
-        if(repoContent.status === 200 || repoContent.status == 0) {
-          var obj = JSON.parse(repoContent.responseText);
-          var repoHTML = "";
-          var libHTML = "";
-					var webHTML = "";
-          var appHTML = "";
-          var forkHTML = "";
+				repoHTML += getListItem(homepage, obj[i].name, obj[i].description);
+			}
+		}
 
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
+		document.getElementById('applist').innerHTML = appHTML;
+		document.getElementById('liblist').innerHTML = libHTML;
+		document.getElementById('repolist').innerHTML = repoHTML;
+		document.getElementById('weblist').innerHTML = webHTML;
+		document.getElementById('forklist').innerHTML = forkHTML;
 
-            if (obj[i].fork) {
-              forkHTML += getListItem(obj[i].html_url, obj[i].name, obj[i].description);
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-              appHTML += getListItem("https://jfenn.me/about/?" + obj[i].full_name, obj[i].name, obj[i].description);
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
-              libHTML += getListItem("https://jfenn.me/about/?" + obj[i].full_name, obj[i].name, obj[i].description);
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && (obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0 || obj[i].homepage.indexOf("https://jfenn.me/") == 0) && obj[i].homepage.indexOf("/apps/") == -1) {
-							webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
-						} else {
-              var homepage = obj[i].html_url;
-              if (obj[i].homepage != null && (obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0 || obj[i].homepage.indexOf("https://jfenn.me/") == 0))
-                homepage = obj[i].homepage;
+		document.getElementById('applist').set = true;
+	});
+}
 
-              repoHTML += getListItem(homepage, obj[i].name, obj[i].description);
-            }
-          }
-
-          document.getElementById('applist').innerHTML = appHTML;
-          document.getElementById('liblist').innerHTML = libHTML;
-          document.getElementById('repolist').innerHTML = repoHTML;
-					document.getElementById('weblist').innerHTML = webHTML;
-          document.getElementById('forklist').innerHTML = forkHTML;
-
-          setCache(url + "-applist", appHTML);
-          setCache(url + "-liblist", libHTML);
-          setCache(url + "-repolist", repoHTML);
-					setCache(url + "-weblist", webHTML);
-          setCache(url + "-forklist", forkHTML);
-
-          document.getElementById('applist').set = true;
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    repoContent.open("GET", url, true);
-    repoContent.send(null);
-  }
-
-  function getUsers() {
+function getUsers() {
     if (document.getElementById('userlist').set != null) return;
 
-    var userContent = new XMLHttpRequest();
-    userContent.onreadystatechange = function () {
-      if(userContent.readyState === 4) {
-        getRequestLimit();
+	getGitHubInfo("users/TheAndroidMaster/following?per_page=1000", function(obj) {
+		for (var i = 0; true; i++) {
+			if (obj[i] == null) break;
+			getPerson(obj[i].url);
+		}
 
-        if(userContent.status === 200 || userContent.status == 0) {
-          var obj = JSON.parse(userContent.responseText);
-          for (var i = 0; true; i++) {
-            if (obj[i] == null) break;
-            getPerson(obj[i].url);
-          }
-          document.getElementById('userlist').set = true;
-        } else {
-          onError(rawContent.status);
-        }
-      }
-    }
-    userContent.open("GET", "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", true);
-    userContent.send(null);
-  }
+		document.getElementById('userlist').set = true;
+	});
+ }
 
-	function getListItem(url, title, subtitle, noanim) {
-		return "<div "+ (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
-	}
+function getListItem(url, title, subtitle, noanim) {
+	return "<div "+ (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
+}
