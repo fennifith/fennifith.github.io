@@ -38,12 +38,16 @@ function getRequestLimit(fun, error) {
 
 function setCache(id, cache) {
 	if (localStorage)
-		localStorage.setItem(id, {"time": new Date().getTime(), "data": cache});
+		localStorage.setItem(id, JSON.stringify({"time": new Date().getTime(), "data": cache}));
 }
 
 function getCache(url) {
-	if (localStorage)
-		return localStorage.getItem(url);
+	if (localStorage) {
+        try {
+		    return JSON.parse(localStorage.getItem(url));
+        } catch (e) {
+        }
+    }
 }
 
 function getGitHubInfo(url, fun, error) {
