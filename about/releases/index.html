@@ -67,7 +67,7 @@
 	</head>
 	<body>
 		<nav>
-			<a href="https://theandroidmaster.github.io/"><i class="material-icons">home</i><span class="desktop">&nbsp;Home</span></a>
+			<a href="https://jfenn.me/"><i class="material-icons">home</i><span class="desktop">&nbsp;Home</span></a>
 			<a id="github" href="/" target="_blank"><i class="material-icons">code</i><span class="desktop">&nbsp;GitHub</span></a>
 			<a id="about" href="/"><i class="material-icons">info</i><span class="desktop">&nbsp;About</span></a>
 		</nav>
@@ -90,7 +90,7 @@
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository + "/releases";
-    about.href = "https://theandroidmaster.github.io/about/#" + repository;
+    about.href = "https://jfenn.me/about/#" + repository;
 
     var releases = createCORSRequest("GET", "https://api.github.com/repos/" + repository + "/releases");
     releases.onreadystatechange = function() {

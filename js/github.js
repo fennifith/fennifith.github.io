@@ -160,14 +160,14 @@
             if (obj[i].fork) {
               forkHTML += getListItem(obj[i].html_url, obj[i].name, obj[i].description);
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-              appHTML += getListItem("https://theandroidmaster.github.io/about/#" + obj[i].full_name, obj[i].name, obj[i].description);
+              appHTML += getListItem("https://jfenn.me/about/#" + obj[i].full_name, obj[i].name, obj[i].description);
             } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://bintray.com/18jafenn90/maven/") == 0) {
-              libHTML += getListItem("https://theandroidmaster.github.io/about/#" + obj[i].full_name, obj[i].name, obj[i].description);
-            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0 && obj[i].homepage.indexOf("/apps/") == -1) {
+              libHTML += getListItem("https://jfenn.me/about/#" + obj[i].full_name, obj[i].name, obj[i].description);
+            } else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://jfenn.me/") == 0 && obj[i].homepage.indexOf("/apps/") == -1) {
 							webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
 						} else {
               var homepage = obj[i].html_url;
-              if (obj[i].homepage != null && obj[i].homepage.indexOf("https://theandroidmaster.github.io/") == 0)
+              if (obj[i].homepage != null && obj[i].homepage.indexOf("https://jfenn.me/") == 0)
                 homepage = obj[i].homepage;
 
               repoHTML += getListItem(homepage, obj[i].name, obj[i].description);
