@@ -84,13 +84,13 @@
 		var github = document.getElementById('github');
     var about = document.getElementById('about');
 
-	  var repository = parent.location.hash.substring(1);
+	  var repository = window.location.search.replace("?", "");
 
 		document.title = repository.substring(repository.indexOf("/") + 1);
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository + "/releases";
-    about.href = "https://jfenn.me/about/#" + repository;
+    about.href = "https://jfenn.me/about/?" + repository;
 
     var releases = createCORSRequest("GET", "https://api.github.com/repos/" + repository + "/releases");
     releases.onreadystatechange = function() {

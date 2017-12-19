@@ -83,14 +83,14 @@
 		var link = document.getElementById('link');
 		var linkname = document.getElementById('linkname');
 
-	  var repository = parent.location.hash.substring(1);
+	  var repository = window.location.search.replace("?", "");
 		var url = "https://raw.githubusercontent.com/" + repository + "/master/README.md";
 
 		document.title = repository.substring(repository.indexOf("/") + 1);
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository;
-		releases.href = "https://jfenn.me/about/releases/#" + repository;
+		releases.href = "https://jfenn.me/about/releases/?" + repository;
 
 		var readme = createCORSRequest("GET", url);
 		readme.onreadystatechange = function() {
