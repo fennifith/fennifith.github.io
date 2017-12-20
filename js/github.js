@@ -11,6 +11,23 @@ function createCORSRequest(method, url) {
     return xhr;
 }
 
+function createElement(html) {
+  var fragment = document.createDocumentFragment();
+	var temp = document.createElement('div');
+	temp.innerHTML = html;
+	while (temp.firstChild) {
+			fragment.appendChild(temp.firstChild);
+	}
+
+	return fragment;
+}
+
+function clearElement(element) {
+  while (element.firstChild) {
+		element.removeChild(element.firstChild);
+	}
+}
+
 function onError(status) {
     console.log("Request failed, error " + status);
 }
@@ -98,7 +115,7 @@ function getPerson(url) {
 		if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
 
 		var HTML = getListItem(url, name, bio, true);
-		document.getElementById('userlist').innerHTML += HTML;
+		document.getElementById('userlist').appendChild(createElement(HTML));
 	}, function() {});
 }
 
@@ -114,7 +131,8 @@ function getOrganizations() {
 
 		var organizationListElement = document.getElementById('organizationlist');
 		organizationListElement.style.display = null;
-		organizationListElement.innerHTML = HTML;
+    clearElement(organizationListElement);
+		organizationListElement.appendChild(createElement(HTML));
 		organizationListElement.set = true;
 	}, function() {
 		document.getElementById('organizationlist').style.display = "none";
@@ -151,13 +169,25 @@ function getRepos() {
 			}
 		}
 
-		document.getElementById('applist').innerHTML = appHTML;
-		document.getElementById('liblist').innerHTML = libHTML;
-		document.getElementById('repolist').innerHTML = repoHTML;
-		document.getElementById('weblist').innerHTML = webHTML;
-		document.getElementById('forklist').innerHTML = forkHTML;
+    var appListElement = document.getElementById('applist');
+    var libListElement = document.getElementById('liblist');
+    var repoListElement = document.getElementById('repolist');
+    var webListElement = document.getElementById('weblist');
+    var forkListElement = document.getElementById('forklist');
 
-		document.getElementById('applist').set = true;
+    clearElement(appListElement);
+    clearElement(libListElement);
+    clearElement(repoListElement);
+    clearElement(webListElement);
+    clearElement(forkListElement);
+
+    appListElement.appendChild(createElement(appHTML));
+    libListElement.appendChild(createElement(libHTML));
+    repoListElement.appendChild(createElement(repoHTML));
+    webListElement.appendChild(createElement(webHTML));
+    forkListElement.appendChild(createElement(forkHTML));
+
+		appListElement.set = true;
 	});
 }
 
