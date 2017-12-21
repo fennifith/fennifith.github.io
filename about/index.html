@@ -92,6 +92,9 @@
 			document.location.href = "/404";
 		}
 
+		if (repository.indexOf("/") == -1)
+			repository = "TheAndroidMaster/" + repository;
+
 		var url = "https://raw.githubusercontent.com/" + repository + "/master/README.md";
 
 		document.title = repository.substring(repository.indexOf("/") + 1);

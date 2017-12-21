@@ -93,6 +93,9 @@
 			document.location.href = "/404";
 		}
 
+		if (repository.indexOf("/") == -1)
+			repository = "TheAndroidMaster/" + repository;
+
 		document.title = repository.substring(repository.indexOf("/") + 1);
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
