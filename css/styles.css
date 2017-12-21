@@ -164,6 +164,10 @@ a>span {
 	.desktop {
 		display: none;
 	}
+
+	.grid > div {
+		width: 100%;
+	}
 }
 
 .item {
