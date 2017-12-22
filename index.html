@@ -106,7 +106,7 @@
 		<iframe id="yes" src="https://jfenn.me/P5Samples/lines/"></iframe>
 		<div id="yesfg"></div>
 	</div>
-	<main id="main">
+	<main id="main" style="display: none;">
 		<div id="home">
 			<h1>Hi,</h1>
 			<h2 id="person">I'm a person.</h2>
@@ -280,6 +280,8 @@
 
     if (subPage)
       setSubPage(subPage);
+
+    document.getElementById('main').style.display = null;
 	}
 
 	function setSubPage(subPage) {
