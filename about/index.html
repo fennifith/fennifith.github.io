@@ -122,10 +122,12 @@
 				if (repo.status === 200 || repo.status == 0) {
 					var obj = JSON.parse(repo.responseText);
 					if (obj.homepage) {
-						if (obj.homepage.startsWith("https://play.google.com/"))
+						if (obj.homepage.indexOf("https://jfenn.me/about") == 0) {
+							return;
+						} else if (obj.homepage.indexOf("https://play.google.com/") == 0)
 							linkname.innerHTML += "Google Play";
 					  else {
-							if (obj.homepage.includes(".github.io")) {
+							if (obj.homepage.indexOf(".github.io") >= 0 || obj.homepage.indexOf("jfenn.me") >= 0) {
 								linkname.innerHTML += "Website";
 							} else if (obj.homepage.replace(/[^.]/g, "").length > 1) {
 								var temp = obj.homepage.substring(obj.homepage.indexOf(".") + 1);
