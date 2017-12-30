@@ -87,7 +87,11 @@ function getGitHubInfo(url, fun, error) {
 							var response = JSON.parse(requestContent.responseText);
 							setCache(url, response);
 							fun(response);
-						} else error();
+						} else if (error) {
+              error();
+            } else {
+              console.log("Error fetching " + url);
+            }
 					}
 				};
 				requestContent.open("GET", url.indexOf("https://api.github.com/") == 0 ? url : "https://api.github.com/" + url, true);
@@ -98,7 +102,11 @@ function getGitHubInfo(url, fun, error) {
 		}, function() {
 			if (cache) {
 				fun(cache.data);
-			} else error();
+			} else if (error) {
+        error();
+      } else {
+        console.log("Error fetching request limit for " + url);
+      }
 		});
 	}
 }
