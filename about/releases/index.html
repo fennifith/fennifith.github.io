@@ -103,30 +103,26 @@
 		github.href = "https://github.com/" + repository + "/releases";
     about.href = "https://jfenn.me/about/?" + repository;
 
-    var releases = createCORSRequest("GET", "https://api.github.com/repos/" + repository + "/releases");
-    releases.onreadystatechange = function() {
-        if (releases.readyState === 4) {
-            if (releases.status === 200 || releases.status == 0) {
-                console.log(releases.responseText);
-                var html = "";
-                JSON.parse(releases.responseText).forEach(function(obj) {
-                    html += "<div class=\"release\">";
-                    html += "<a href=\"" + obj.html_url + "\"><h2>" + obj.name + "</h2></a>";
-                    if (obj.prerelease)
-                        html += "<p class=\"warning\">UNSTABLE</p>";
-                    html += "<div>" + new showdown.Converter().makeHtml(obj.body) + "</div>";
-                    obj.assets.forEach(function(asset) {
-                        html += "<a href=\"" + asset.browser_download_url + "\">" + asset.name + "</a>&nbsp;&nbsp;";
-                    });
-                    html += "</div>";
-                });
-                content.innerHTML = html;
-            } else {
-							document.location.href = "/404";
-						}
-        }
-    };
-    releases.send(null);
+		getGitHubInfo("repos/" + repository + "/releases", function(obj) {
+			var html = "";
+			for (var i = 0; i < obj.length; i++) {
+				html += "<div class=\"release\">";
+				html += "<a href=\"" + obj[i].html_url + "\"><h2>" + obj[i].name + "</h2></a>";
+				if (obj[i].prerelease)
+						html += "<p class=\"warning\">UNSTABLE</p>";
+				html += "<div>" + new showdown.Converter().makeHtml(obj[i].body) + "</div>";
+
+				for (var i2 = 0; i2 < obj[i].assets.length; i2++) {
+					html += "<a href=\"" + obj[i].assets[i2].browser_download_url + "\">" + obj[i].assets[i2].name + "</a>&nbsp;&nbsp;";
+				}
+				html += "</div>";
+			}
+
+			clearElement(content);
+			content.appendChild(createElement(html));
+		}, function() {
+			document.location.href = "/404";
+		});
 
 		function createCORSRequest(method, url) {
     		var xhr = new XMLHttpRequest();
