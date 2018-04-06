@@ -1,29 +1,29 @@
 function createCORSRequest(method, url) {
     var xhr = new XMLHttpRequest();
     if ("withCredentials" in xhr) {
-      xhr.open(method, url, true);
+      	xhr.open(method, url, true);
     } else if (typeof XDomainRequest != "undefined") {
-      xhr = new XDomainRequest();
-      xhr.open(method, url);
+      	xhr = new XDomainRequest();
+      	xhr.open(method, url);
     } else {
-      xhr = null;
+      	xhr = null;
     }
     return xhr;
 }
 
 function createElement(html) {
-  var fragment = document.createDocumentFragment();
+  	var fragment = document.createDocumentFragment();
 	var temp = document.createElement('div');
 	temp.innerHTML = html;
 	while (temp.firstChild) {
-			fragment.appendChild(temp.firstChild);
+		fragment.appendChild(temp.firstChild);
 	}
 
 	return fragment;
 }
 
 function clearElement(element) {
-  while (element.firstChild) {
+  	while (element.firstChild) {
 		element.removeChild(element.firstChild);
 	}
 }
@@ -35,19 +35,19 @@ function onError(status) {
 function getRequestLimit(fun, error) {
     var requestContent = new XMLHttpRequest();
     requestContent.onreadystatechange = function () {
-      if(requestContent.readyState === 4) {
-        if (requestContent.status === 200 || requestContent.status == 0) {
-          var obj = JSON.parse(requestContent.responseText);
-          console.log(obj.resources.core.remaining + " out of " + obj.resources.core.limit + " requests left");
+      	if(requestContent.readyState === 4) {
+        	if (requestContent.status === 200 || requestContent.status == 0) {
+          		var obj = JSON.parse(requestContent.responseText);
+         	 	console.log(obj.resources.core.remaining + " out of " + obj.resources.core.limit + " requests left");
 
-					if (fun) {
-						fun(obj.resources.core.remaining);
-					}
-        } else {
-          onError(rawContent.status);
-					error();
-        }
-      }
+				if (fun) {
+					fun(obj.resources.core.remaining);
+				}
+       	 	} else {
+          		onError(rawContent.status);
+				error();
+        	}
+      	}
     }
     requestContent.open("GET", "https://api.github.com/rate_limit", true);
     requestContent.send(null);
@@ -88,10 +88,10 @@ function getGitHubInfo(url, fun, error) {
 							setCache(url, response);
 							fun(response);
 						} else if (error) {
-              error();
-            } else {
-              console.log("Error fetching " + url);
-            }
+              				error();
+            			} else {
+              				console.log("Error fetching " + url);
+            			}
 					}
 				};
 				requestContent.open("GET", url.indexOf("https://api.github.com/") == 0 ? url : "https://api.github.com/" + url, true);
@@ -103,10 +103,10 @@ function getGitHubInfo(url, fun, error) {
 			if (cache) {
 				fun(cache.data);
 			} else if (error) {
-        error();
-      } else {
-        console.log("Error fetching request limit for " + url);
-      }
+       			error();
+      		} else {
+        		console.log("Error fetching request limit for " + url);
+      		}
 		});
 	}
 }
@@ -139,7 +139,7 @@ function getOrganizations() {
 
 		var organizationListElement = document.getElementById('organizationlist');
 		organizationListElement.style.display = null;
-    clearElement(organizationListElement);
+   	 	clearElement(organizationListElement);
 		organizationListElement.appendChild(createElement(HTML));
 		organizationListElement.set = true;
 	}, function() {
@@ -177,23 +177,23 @@ function getRepos() {
 			}
 		}
 
-    var appListElement = document.getElementById('applist');
-    var libListElement = document.getElementById('liblist');
-    var repoListElement = document.getElementById('repolist');
-    var webListElement = document.getElementById('weblist');
-    var forkListElement = document.getElementById('forklist');
+    	var appListElement = document.getElementById('applist');
+    	var libListElement = document.getElementById('liblist');
+    	var repoListElement = document.getElementById('repolist');
+    	var webListElement = document.getElementById('weblist');
+   	 	var forkListElement = document.getElementById('forklist');
 
-    clearElement(appListElement);
-    clearElement(libListElement);
-    clearElement(repoListElement);
-    clearElement(webListElement);
-    clearElement(forkListElement);
+	    clearElement(appListElement);
+    	clearElement(libListElement);
+	    clearElement(repoListElement);
+    	clearElement(webListElement);
+    	clearElement(forkListElement);
 
-    appListElement.appendChild(createElement(appHTML));
-    libListElement.appendChild(createElement(libHTML));
-    repoListElement.appendChild(createElement(repoHTML));
-    webListElement.appendChild(createElement(webHTML));
-    forkListElement.appendChild(createElement(forkHTML));
+	    appListElement.appendChild(createElement(appHTML));
+    	libListElement.appendChild(createElement(libHTML));
+    	repoListElement.appendChild(createElement(repoHTML));
+    	webListElement.appendChild(createElement(webHTML));
+    	forkListElement.appendChild(createElement(forkHTML));
 
 		appListElement.set = true;
 	});
