@@ -3,30 +3,39 @@
 	<head>
 		<meta charset="utf-8">
 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80302642-2"></script>
+		<script>
+		    window.dataLayer = window.dataLayer || [];
+		    function gtag(){dataLayer.push(arguments);}
+		    gtag('js', new Date());
+		  
+		    gtag('config', 'UA-80302642-2');
+		</script>
+
 		<meta name="description" content="App developer and designer">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta name="generator" content="James Fenn" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<meta name="generator" content="James Fenn" />
 		<title>Repository</title>
 
 		<meta name="theme-color" content="#FFFFFF">
 		<meta name="mobile-web-app-capable" content="yes">
-	  <link rel="manifest" href="manifest.json">
+	  	<link rel="manifest" href="manifest.json">
 
 		<meta name="application-name" content="JF">
-	  <meta name="msapplication-TileColor" content="#000000">
+	  	<meta name="msapplication-TileColor" content="#000000">
 		<meta name="msapplication-tooltip" content="James Fenn">
 		<meta name="msapplication-config" content="/ieconfig.xml">
 
 		<link rel="shortcut icon" href="/favicon.ico">
-	  <link rel="icon" sizes="16x16" href="/favicon.ico">
+	  	<link rel="icon" sizes="16x16" href="/favicon.ico">
 		<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
 		<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
 		<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
 		<link rel="icon" sizes="64x64" href="/images/favicon-48.ico">
 
-	  <meta name="apple-mobile-web-app-capable" content="yes">
-	  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	  <meta name="apple-mobile-web-app-title" content="James Fenn">
+	  	<meta name="apple-mobile-web-app-capable" content="yes">
+	  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	  	<meta name="apple-mobile-web-app-title" content="James Fenn">
 		<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
 
 		<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto+Mono" rel="stylesheet">
@@ -34,24 +43,23 @@
 		<link href="../../css/styles.css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdn.rawgit.com/showdownjs/showdown/1.7.4/dist/showdown.min.js"></script>
 		<style>
-
-      .release {
-        border-top: 1px solid rgba(0, 0, 0, 0.3);
-        margin: 8px 0;
+      		.release {
+        		border-top: 1px solid rgba(0, 0, 0, 0.3);
+        		margin: 8px 0;
 				padding: 16px 0;
-      }
+      		}
 
-      a > h2 {
-        margin: 0;
-      }
+      		a > h2 {
+        		margin: 0;
+      		}
 
-      .warning {
-        color: #D32F2F;
-        font-weight: bold;
-        margin: 8px 0;
-        font-size: 0.8em;
-        font-family: 'Roboto Mono', monospace;
-      }
+			.warning {
+        		color: #D32F2F;
+        		font-weight: bold;
+        		margin: 8px 0;
+        		font-size: 0.8em;
+        		font-family: 'Roboto Mono', monospace;
+      		}
 
 			pre {
 				background-color: #E0E0E0;
@@ -83,7 +91,7 @@
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
-    var about = document.getElementById('about');
+    	var about = document.getElementById('about');
 
 		var repository = null;
 		if (window.location.search && window.location.search.length > 1) {
@@ -101,7 +109,7 @@
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
 		github.href = "https://github.com/" + repository + "/releases";
-    about.href = "https://jfenn.me/about/?" + repository;
+    	about.href = "https://jfenn.me/about/?" + repository;
 
 		getGitHubInfo("repos/" + repository + "/releases", function(obj) {
 			var html = "";
@@ -109,7 +117,7 @@
 				html += "<div class=\"release\">";
 				html += "<a href=\"" + obj[i].html_url + "\"><h2>" + obj[i].name + "</h2></a>";
 				if (obj[i].prerelease)
-						html += "<p class=\"warning\">UNSTABLE</p>";
+					html += "<p class=\"warning\">UNSTABLE</p>";
 				html += "<div>" + new showdown.Converter().makeHtml(obj[i].body) + "</div>";
 
 				for (var i2 = 0; i2 < obj[i].assets.length; i2++) {
