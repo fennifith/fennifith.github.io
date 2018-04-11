@@ -111,7 +111,7 @@ function getGitHubInfo(url, fun, error) {
 	}
 }
 
-function getPerson(url) {
+function getPerson(url, element) {
 	getGitHubInfo(url, function(obj) {
 		var url = obj.html_url;
 		if (obj.blog != null && obj.blog.length > 0) url = obj.blog;
@@ -122,8 +122,12 @@ function getPerson(url) {
 		var bio = "This is a person.";
 		if (obj.bio != null && obj.bio.length > 0) bio = obj.bio;
 
-		var HTML = getListItem(url, name, bio, true);
-		document.getElementById('userlist').appendChild(createElement(HTML));
+	var HTML = getListItem(url, name, bio, true);
+		if (element) {
+			element.replaceWith(createElement(HTML));
+		} else {
+			document.getElementById('userlist').appendChild(createElement(HTML));			
+		}
 	}, function() {});
 }
 
@@ -205,13 +209,20 @@ function getUsers() {
 	getGitHubInfo("users/TheAndroidMaster/following?per_page=1000", function(obj) {
 		for (var i = 0; true; i++) {
 			if (obj[i] == null) break;
-			getPerson(obj[i].url);
+			var element = createElement(getListItem(obj[i].html_url, obj[i].login, "Hover over to load bio...", true, "id=\"user" + obj[i].login + "\""));
+			document.getElementById('userlist').appendChild(element);
+
+			const actualElement = document.getElementById("user" + obj[i].login);
+			actualElement.url = obj[i].url;
+			actualElement.addEventListener("mouseover", function() {
+				getPerson(actualElement.url, actualElement);
+			}, false);
 		}
 
 		document.getElementById('userlist').set = true;
 	});
  }
 
-function getListItem(url, title, subtitle, noanim) {
-	return "<div "+ (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
+function getListItem(url, title, subtitle, noanim, attrs) {
+	return "<div " + (attrs ? attrs + " " : " ") + (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a><br>" + subtitle + "</p></div>";
 }
