@@ -195,10 +195,10 @@
 				I have recently started to get bombarded with far more questions per day than I can ever hope to answer, so I am trying
 				to take steps to reduce the amount of time I spend responding to these. If you are trying to contact me with a question
 				or bug report about one of my apps, I would greatly appreciate it if you would check the issues section on GitHub first
-        to make sure it hasn't already been answered. If you want to contact me to discuss implementing your ad revenue framework
-        in one of my apps, don't bother: the answer's no. If you have a great idea for a new project for me to work on however, please
-        don't hesitate to shoot me a message, as I take great joy in adding to my growing pile of things for me to do when I don't have
-        anything to do. (yes, that's contradictory on purpose)
+        		to make sure it hasn't already been answered. If you want to contact me to discuss implementing your ad revenue framework
+        		in one of my apps, don't bother: the answer's no. If you have a great idea for a new project for me to work on however, please
+        		don't hesitate to shoot me a message, as I take great joy in adding to my growing pile of things for me to do when I don't have
+       	 		anything to do. (yes, that's contradictory on purpose)
 			</p>
 		</div>
 		<div id="about">
@@ -251,7 +251,7 @@
 	</main>
 
 	<script src="js/github.js"></script>
-  <script type="text/javascript">
+  	<script type="text/javascript">
 	function setPage(page, subPage) {
     window.history.replaceState(null, null, "?" + page);
 		for (var i = 0; i < document.getElementById('main').childNodes.length; i++) {
@@ -282,62 +282,62 @@
 				break;
 		}
 
-    if (subPage)
-      setSubPage(subPage);
+    	if (subPage)
+      		setSubPage(subPage);
 
-    document.getElementById('main').style.display = null;
+    	document.getElementById('main').style.display = null;
 	}
 
 	function setSubPage(subPage) {
-    var element = document.getElementById(subPage);
-    if (element) {
-      element.scrollIntoView();
+    	var element = document.getElementById(subPage);
+    	if (element) {
+      		element.scrollIntoView();
 
-      var page = getSearch();
-      if (page.split('/').length > 1)
-        page = page.split('/')[0];
+     	 	var page = getSearch();
+      		if (page.split('/').length > 1)
+        		page = page.split('/')[0];
 
-      window.history.replaceState(null, null, "?" + page + "/" + subPage);
-    }
+    		window.history.replaceState(null, null, "?" + page + "/" + subPage);
+    	}
 	}
 
-  function getSearch() {
-    if (window.location.search)
-      return window.location.search.replace("?", "");
-    else return "home";
-  }
+	function getSearch() {
+		if (window.location.search)
+			return window.location.search.replace("?", "");
+		else return "home";
+	}
 
-  var page = getSearch();
-  if (page.split('/').length > 1) {
-    var pages = page.split('/');
-    setPage(pages[0], pages[1]);
-  } else setPage(page);
+	var page = getSearch();
+	if (page.split('/').length > 1) {
+		var pages = page.split('/');
+		setPage(pages[0], pages[1]);
+	} else setPage(page);
 
 	function horriblePun() {
-    var hellos = [
-      'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
-      'I\'d tell you a chemistry joke but I know I wouldn\'t get a reaction.',
-      'Yesterday I accidentally swallowed some food coloring. The doctor says I\'m OK, but I feel like I died a little inside.',
-      'Have you ever tried to eat a clock? It\'s very time consuming.',
-      'I used to be a banker but I lost interest.',
-      'I relish the fact that you\'ve mustard the strength to ketchup to me.',
-      'I once heard a joke about amnesia, but I forgot how it goes.',
-      'I used to have a fear of hurdles, but I got over it.',
-      'Don\'t trust people that do acupuncture, they\'re back stabbers.',
-      'I used to be addicted to soap, but I\'m clean now.',
-      'When a clock is hungry it goes back four seconds.',
-      'The magician got so mad he pulled his hare out.',
-      'I took a picture of a field of wheat, it was grainy.',
-      'My tailor is happy to make a pair of pants for me, or at least sew it seams.',
-      'I was struggling to figure out how lightning works then it struck me.',
-      'My grade in Marine Biology is below sea-level.',
-      'I don\'t think I need a spine. It\'s holding me back.',
-      'What sound does a bouncing plane make? Boeing boeing boeing.'
-    ];
+		var hellos = [
+			'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
+			'I\'d tell you a chemistry joke but I know I wouldn\'t get a reaction.',
+			'Yesterday I accidentally swallowed some food coloring. The doctor says I\'m OK, but I feel like I died a little inside.',
+			'Have you ever tried to eat a clock? It\'s very time consuming.',
+			'I used to be a banker but I lost interest.',
+			'I relish the fact that you\'ve mustard the strength to ketchup to me.',
+			'I once heard a joke about amnesia, but I forgot how it goes.',
+			'I used to have a fear of hurdles, but I got over it.',
+			'Don\'t trust people that do acupuncture, they\'re back stabbers.',
+			'I used to be addicted to soap, but I\'m clean now.',
+			'When a clock is hungry it goes back four seconds.',
+			'The magician got so mad he pulled his hare out.',
+			'I took a picture of a field of wheat, it was grainy.',
+			'My tailor is happy to make a pair of pants for me, or at least sew it seams.',
+			'I was struggling to figure out how lightning works then it struck me.',
+			'My grade in Marine Biology is below sea-level.',
+			'I don\'t think I need a spine. It\'s holding me back.',
+			'What sound does a bouncing plane make? Boeing boeing boeing.'
+		];
 
-    document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
-  }
-  </script>
+		document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
+	}
+	</script>
 
 </body>
 </html>
