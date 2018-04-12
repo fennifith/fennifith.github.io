@@ -39,6 +39,37 @@ a:hover {
 	color: #000000;
 }
 
+snackbar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-left: calc(60px + 10vw);
+	padding-right: 10vw;
+	padding-top: 1em;
+	padding-bottom: .5em;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+	z-index: 102;
+
+	transition: padding .25s;
+	-moz-transition: padding .25s;
+	-webkit-transition: padding .25s;
+}
+
+snackbar > * {
+	vertical-align: middle;
+}
+
+snackbar > span {
+	display: inline-block;
+	padding-right: 2em;
+}
+
+snackbar > a {
+	float: right;
+}
+
 nav {
 	position: fixed;
 	height: 100%;
@@ -96,14 +127,33 @@ main {
 	margin-left: 80px;
 	margin-left: calc(60px + 10vw);
 	margin-right: 10vw;
+	margin-bottom: 2em;
 	padding-top: 20vh;
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
 }
 
-nav:hover ~ main {
+footer {
+	margin-left: calc(60px + 10vw);
+	margin-right: 10vw;
+	margin-bottom: 8em;
+	transition: transform .25s;
+	-moz-transition: transform .25s;
+	-webkit-transition: transform .25s;
+}
+
+footer > * {
+	display: block;
+}
+
+nav:hover ~ main,
+nav:hover ~ footer {
 	transform: translateX(60px);
+}
+
+nav:hover ~ snackbar {
+	padding-left: calc(120px + 10vw);
 }
 
 .grid {
@@ -159,6 +209,15 @@ a>span {
 		margin-left: 10vw;
 		padding-top: 16px;
 		transform: none !important;
+	}
+
+	footer {
+		margin-left: 10vw;
+		transform: none !important;
+	}
+
+	snackbar {
+		padding-left: 10vw !important;
 	}
 
 	.desktop {

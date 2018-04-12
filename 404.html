@@ -8,6 +8,15 @@ permalink: /404.html
 <head>
   <meta charset="utf-8">
 
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-80302642-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  	  gtag('js', new Date());
+  		  
+  	  gtag('config', 'UA-80302642-2');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Error 110010100</title>
 
@@ -99,6 +108,20 @@ permalink: /404.html
 		<p>
 			<a href="https://jfenn.me/">Homepage</a>
 		</p>
+		<snackbar id="evilstuff">
+			<span>This site may do shady things with cookies and stuff because it's evil. Please don't read my <a href="/policies/?web" target="_blank">privacy policy</a>.</span>
+			<a onclick="document.getElementById('evilstuff').style.display = 'none'; if (localStorage) localStorage.setItem('acceptedEvil', 'true');"><i class="material-icons">close</i></a>
+			<script>
+				if (localStorage && localStorage.getItem("acceptedEvil"))
+					document.getElementById("evilstuff").style.display = "none";
+			</script>
+		</snackbar>
+				
+		<footer>
+			<hr>
+			<a href="https://github.com/TheAndroidMaster/TheAndroidMaster.github.io/" target="_blank">Website Source Code</a>
+			<a href="/policies/?web" target="_blank">Privacy Policy</a>
+		</footer>
 	</main>
 </body>
 </html>
