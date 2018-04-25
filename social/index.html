@@ -14,18 +14,20 @@
 			
 			var requestContent = new XMLHttpRequest();
 			requestContent.onreadystatechange = function () {
-				if(requestContent.readyState === 4 && (requestContent.status === 200 || requestContent.status == 0)) {
-					var social = JSON.parse(requestContent.responseText);
-					if (social != null && social[id] != null) {
-						var url = social[id];
-						document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
-						window.location = url;
-						return;
+				if (requestContent.readyState === 4) {
+					if (requestContent.status === 200 || requestContent.status == 0) {				
+						var social = JSON.parse(requestContent.responseText);
+						if (social != null && social[id] != null) {
+							var url = social[id];
+							document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+							window.location = url;
+							return;
+						}
 					}
-				}
 
-				console.error(id, social);
-				window.location = "/404.html";
+					console.error(id, social);
+					window.location = "/404.html";
+				}
 			};
 			requestContent.open("GET", "data.json", true);
 			requestContent.send(null);
