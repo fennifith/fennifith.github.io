@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Redirecting to...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+		</style>
+	</head>
+	<body>
+		<p id="container"></p>
+		<script>
+			var id = window.location.search.substring(1);
+			
+			var requestContent = new XMLHttpRequest();
+			requestContent.onreadystatechange = function () {
+				if (requestContent.readyState === 4) {
+					if (requestContent.status === 200 || requestContent.status == 0) {				
+						var social = JSON.parse(requestContent.responseText);
+						if (social != null && social[id] != null) {
+							var url = social[id];
+							document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+							window.location = url;
+							return;
+						}
+					}
+
+					console.error(id, social);
+					window.location = "/404.html";
+				}
+			};
+			requestContent.open("GET", "data.json", true);
+			requestContent.send(null);
+		</script>
+	</body>
+</html>
