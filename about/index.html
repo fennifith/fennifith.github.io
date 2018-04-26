@@ -98,7 +98,7 @@
 			<a href="/policies/?web" target="_blank">Privacy Policy</a>
 		</footer>
 	</body>
-	<script src="../js/github.js"></script>
+	<script src="/js/github.js"></script>
 	<script>
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
@@ -139,7 +139,7 @@
 		};
 		readme.send(null);
 
-		getGitHubInfo("repos/" + repository, function(obj) {
+		GitHubUtil.getGitHubInfo("repos/" + repository, function(obj) {
 			if (obj.homepage) {
 				if (obj.homepage.indexOf("https://jfenn.me/about") == 0) {
 					return;

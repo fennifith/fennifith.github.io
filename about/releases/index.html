@@ -100,7 +100,8 @@
 			<a href="/policies/?web" target="_blank">Privacy Policy</a>
 		</footer>
 	</body>
-	<script src="../../js/github.js"></script>
+	<script src="/js/utils.js"></script>
+	<script src="/js/github.js"></script>
 	<script>
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
@@ -125,7 +126,7 @@
 		github.href = "https://github.com/" + repository + "/releases";
     	about.href = "https://jfenn.me/about/?" + repository;
 
-		getGitHubInfo("repos/" + repository + "/releases", function(obj) {
+		GitHubUtil.getGitHubInfo("repos/" + repository + "/releases", function(obj) {
 			var html = "";
 			for (var i = 0; i < obj.length; i++) {
 				html += "<div class=\"release\">";
@@ -140,8 +141,8 @@
 				html += "</div>";
 			}
 
-			clearElement(content);
-			content.appendChild(createElement(html));
+			ElementUtil.clearElement(content);
+			content.appendChild(ElementUtil.createElement(html));
 		}, function() {
 			document.location.href = "/404";
 		});
