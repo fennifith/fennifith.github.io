@@ -7,7 +7,8 @@
 	</head>
 	<body>
 		<p id="container"></p>
-		<script>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript">
 			var array = window.location.search.substring(1).split("&");
 			var args = {};
 			for (var i = 0; i < array.length; i++) {
@@ -18,12 +19,12 @@
 			}
 			
 			var requestContent = new XMLHttpRequest();
-			requestContent.onreadystatechange = function () {
+			requestContent.onreadystatechange = function() {
 				if (requestContent.readyState === 4) {
 					if (requestContent.status === 200 || requestContent.status == 0) {				
 						var social = JSON.parse(requestContent.responseText);
 						if (social != null && social[args.t] != null) {
-							var url = social[args.t].url + (args.d != null ? "/" + args.d : "");
+							var url = social[args.t].url + (args.d != null ? "/" + StringUtil.format(args.d, social[args.t].name) : "");
 							document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
 							window.location = url;
 							return;
