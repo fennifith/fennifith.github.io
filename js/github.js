@@ -118,3 +118,13 @@ GitHubUtil.getGitHubInfo = function(url, fun, error) {
 		});
 	}
 }
+
+GitHubUtil.getGitHubUserInfo = function(url, fun, error) {
+	WebUtil.getLinks(function(links) {
+		var name = "TheAndroidMaster";
+		if (links != null && links.github != null && links.github.name != null)
+			name = links.github.name;
+		
+		GitHubUtil.getGitHubInfo(StringUtil.format(url, name), fun, error);
+	});
+}

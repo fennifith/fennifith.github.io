@@ -16,3 +16,9 @@ ElementUtil.clearElement = function(element) {
 		element.removeChild(element.firstChild);
 	}
 };
+
+var StringUtil = {};
+
+StringUtil.format = function(string, value) {
+	return string.replace(/\${}/g, value);
+}
