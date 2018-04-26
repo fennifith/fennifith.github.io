@@ -1,11 +1,34 @@
 {
-	"twitter": "https://twitter.com/IDontLikePHP",
-	"googleplus": "https://plus.google.com/114612442558529845038",
-	"github": "https://github.com/TheAndroidMaster",
-	"instagram": "https://www.instagram.com/IDontlikePHP/",
-	"googleplay": "https://play.google.com/store/apps/dev?id=5937321955284727208",
-	"medium": "https://medium.com/@theandroidmaster",
-	"stackoverflow": "https://stackoverflow.com/users/4955981/",
-	"uplabs": "https://www.uplabs.com/idontlikephp",
-	"bintray": "https://bintray.com/18jafenn90"
+	"twitter": {
+		"url": "https://twitter.com/IDontLikePHP",
+		"name": "IDontLikePHP"
+	},
+	"googleplus": {
+		"url": "https://plus.google.com/114612442558529845038"
+	},
+	"github": {
+		"url": "https://github.com/TheAndroidMaster",
+		"name": "TheAndroidMaster"
+	},
+	"instagram": {
+		"url": "https://www.instagram.com/IDontLikePHP/",
+		"name": "IDontLikePHP"
+	},
+	"googleplay": {
+		"url": "https://play.google.com/store/apps/dev?id=5937321955284727208"
+	},
+	"medium": {
+		"url": "https://medium.com/@theandroidmaster",
+		"name": "theandroidmaster"
+	},
+	"stackoverflow": {
+		"url": "https://stackoverflow.com/users/4955981/"
+	},
+	"uplabs": {
+		"url": "https://www.uplabs.com/idontlikephp",
+		"name": "idontlikephp"
+	},
+	"bintray": {
+		"url": "https://bintray.com/18jafenn90"
+	}
 }

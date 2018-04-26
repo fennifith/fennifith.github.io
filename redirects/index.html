@@ -4,8 +4,6 @@
 		<meta charset="utf-8">
 		<title>Redirecting to...</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-		</style>
 	</head>
 	<body>
 		<p id="container"></p>
@@ -25,14 +23,14 @@
 					if (requestContent.status === 200 || requestContent.status == 0) {				
 						var social = JSON.parse(requestContent.responseText);
 						if (social != null && social[args.t] != null) {
-							var url = social[args.t] + (args.d != null ? "/" + args.d : "");
+							var url = social[args.t].url + (args.d != null ? "/" + args.d : "");
 							document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
 							window.location = url;
 							return;
 						}
 					}
 
-					console.error(id, social);
+					console.error(args, social);
 					window.location = "/404.html";
 				}
 			};
