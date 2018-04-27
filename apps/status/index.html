@@ -25,24 +25,19 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="156x156" href="https://theandroidmaster.github.io/touch-icon-iphone.png">
+    <link rel="icon" sizes="156x156" href="/touch-icon-iphone.png">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="blue">
     <meta name="apple-mobile-web-app-title" content="Status">
-    <link rel="apple-touch-icon-precomposed" href="https://theandroidmaster.github.io/touch-icon-iphone.png">
+    <link rel="apple-touch-icon-precomposed" href="/touch-icon-iphone.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="https://theandroidmaster.github.io/touch-icon-iphone.png">
+    <meta name="msapplication-TileImage" content="/touch-icon-iphone.png">
     <meta name="msapplication-TileColor" content="#2196F3">
 
-    <link rel="shortcut icon" href="https://theandroidmaster.github.io/touch-icon-iphone.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    <link rel="shortcut icon" href="/touch-icon-iphone.png">
 
     <link href="https://fonts.googleapis.com/css?family=Kelly+Slab" rel="stylesheet">
     
@@ -151,7 +146,7 @@
   <main class="mdl-layout__content">
     
     <div>
-      <img src="https://theandroidmaster.github.io/images/screenshots/Status-Home.png">
+      <img src="/images/screenshots/Status-Home.png">
       
       <div class="content mdl-font">
         <p>
@@ -208,7 +203,7 @@
             document.getElementById("faq").innerHTML = HTML;
           }
         }
-        request.open("GET", "https://jfenn.me/apps/status/faq.json", true);
+        request.open("GET", "faq.json", true);
         request.send(null);
         
         var issuesRequest = new XMLHttpRequest();
