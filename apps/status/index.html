@@ -189,6 +189,8 @@
   </main>
 </div>
     <script src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/github.js"></script>
     <script>
       var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
@@ -205,22 +207,16 @@
         }
         request.open("GET", "faq.json", true);
         request.send(null);
-        
-        var issuesRequest = new XMLHttpRequest();
-        issuesRequest.onreadystatechange = function () {
-          if(issuesRequest.readyState === 4 && (issuesRequest.status === 200 || issuesRequest.status == 0)) {
-            var obj = JSON.parse(issuesRequest.responseText);
-            var HTML = "";
-            
-            for (var i = 0; obj[i]; i++) {
-              HTML += "<h4 class=\"mdl-font\"><a href=\"" + obj[i].html_url + "\">" + obj[i].title + "</a></h4><p>" + obj[i].body + "</p><br>";
-            }
-            
-            document.getElementById("issues").innerHTML = HTML;
+
+        GitHubUtil.getGitHubUserInfo("https://api.github.com/repos/${}/Status/issues", function(issues) {
+          var HTML = "";
+        	            
+          for (var i = 0; issues[i]; i++) {
+            HTML += "<h4 class=\"mdl-font\"><a href=\"" + issues[i].html_url + "\">" + issues[i].title + "</a></h4><p>" + issues[i].body + "</p><br>";
           }
-        }
-        issuesRequest.open("GET", "https://api.github.com/repos/TheAndroidMaster/Status/issues", true);
-        issuesRequest.send(null);
+        	            
+          document.getElementById("issues").innerHTML = HTML;
+        });
     </script>
   </body>
 </html>
