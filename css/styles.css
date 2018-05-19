@@ -147,6 +147,11 @@ footer > * {
 	display: block;
 }
 
+footer > a {
+	font-size: .75em;
+	color: #606060;
+}
+
 nav:hover ~ main,
 nav:hover ~ footer {
 	transform: translateX(60px);
