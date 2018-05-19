@@ -53,6 +53,7 @@ function getRepos() {
 		
 			var repoHTML = "";
 			var libHTML = "";
+			var nodejsHTML = "";
 			var webHTML = "";
 			var appHTML = "";
 			var forkHTML = "";
@@ -62,12 +63,16 @@ function getRepos() {
 	
 				if (obj[i].fork) {
 					forkHTML += getListItem(obj[i].html_url, obj[i].name, obj[i].description);
-				} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://play.google.com/") == 0) {
-					appHTML += getListItem("https://jfenn.me/about/?" + obj[i].name, obj[i].name, obj[i].description);
-				} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf(bintrayLink) == 0) {
-					libHTML += getListItem("https://jfenn.me/about/?" + obj[i].name, obj[i].name, obj[i].description);
-				} else if (obj[i].homepage != null && obj[i].homepage.length > 0 && obj[i].homepage.indexOf("https://jfenn.me/") == 0 && obj[i].homepage.indexOf("/apps/") == -1) {
-					webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+				} else if (obj[i].homepage != null && obj[i].homepage.length > 0) {
+					if (obj[i].homepage.indexOf("https://play.google.com/") == 0) {
+						appHTML += getListItem("https://jfenn.me/about/?" + obj[i].name, obj[i].name, obj[i].description);
+					} else if (obj[i].homepage.indexOf(bintrayLink) == 0) {
+						libHTML += getListItem("https://jfenn.me/about/?" + obj[i].name, obj[i].name, obj[i].description);
+					} else if (obj[i].homepage.indexOf("https://npmjs.com/") == 0 || obj[i].homepage.indexOf("https://www.npmjs.com/") == 0) {
+						nodejsHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+					} else if (obj[i].homepage.indexOf("https://jfenn.me/") == 0 && obj[i].homepage.indexOf("/apps/") == -1) {
+						webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+					}
 				} else {
 					var homepage = obj[i].html_url;
 					if (obj[i].homepage != null && obj[i].homepage.indexOf("https://jfenn.me/") == 0)
@@ -79,18 +84,21 @@ function getRepos() {
 		
 	    	var appListElement = document.getElementById('applist');
 	    	var libListElement = document.getElementById('liblist');
+	    	var nodejsListElement = document.getElementById("nodejslist");
 	    	var repoListElement = document.getElementById('repolist');
 	    	var webListElement = document.getElementById('weblist');
 	   	 	var forkListElement = document.getElementById('forklist');
 		
 		    ElementUtil.clearElement(appListElement);
 	    	ElementUtil.clearElement(libListElement);
+	    	ElementUtil.clearElement(nodejsListElement);
 		    ElementUtil.clearElement(repoListElement);
 	    	ElementUtil.clearElement(webListElement);
 	    	ElementUtil.clearElement(forkListElement);
 		
 		    appListElement.appendChild(ElementUtil.createElement(appHTML));
 	    	libListElement.appendChild(ElementUtil.createElement(libHTML));
+	    	nodejsListElement.appendChild(ElementUtil.createElement(nodejsHTML));
 	    	repoListElement.appendChild(ElementUtil.createElement(repoHTML));
 	    	webListElement.appendChild(ElementUtil.createElement(webHTML));
 	    	forkListElement.appendChild(ElementUtil.createElement(forkHTML));
@@ -121,6 +129,6 @@ function getUsers() {
  }
 
  function getListItem(url, title, subtitle, noanim, attrs) {
- 	return "<div " + (attrs ? attrs + " " : " ") + (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + title + "</a>" + (subtitle ? "<br>" + subtitle : "") + "</p></div>";
+ 	return "<div " + (attrs ? attrs + " " : " ") + (noanim ? "class=\"item noanim\" " : "class=\"item\" ") + "onclick=\"window.open(\'" + url + "\', \'_blank\');\"><p><a>" + StringUtil.titleize(title) + "</a>" + (subtitle ? "<br>" + subtitle : "") + "</p></div>";
  }
  
