@@ -133,7 +133,10 @@
 				if (readme.status === 200 || readme.status == 0) {
 					var converter = new showdown.Converter();
 					converter.setOption('tables', true);
-					content.innerHTML = converter.makeHtml(readme.responseText);
+					content.innerHTML = converter.makeHtml(readme.responseText)
+						.replace(/(<img src=")(\/)([A-Za-z\/.?=]{0,})(">)/g, "$1https://raw.githubusercontent.com/" + repository + "/master/$3$4")
+						.replace(/(<a href="..\/..\/releases">)/g, "<a href=\"releases/?" + repository + "\">")
+						.replace(/(<a href="..\/..\/)([A-Za-z0-9\/.?=]{0,})(">)/g, "<a href=\"https://github.com/" + repository + "/$2\">");
 				}
 			}
 		};
