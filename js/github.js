@@ -92,7 +92,14 @@ GitHubUtil.getGitHubInfo = function(url, fun, error) {
 				requestContent.onreadystatechange = function() {
 					if (requestContent.readyState === 4) {
 						if (requestContent.status === 200 || requestContent.status == 0) {
-							var response = JSON.parse(requestContent.responseText);
+							var response = null;
+							try {
+								response = JSON.parse(requestContent.responseText);			
+							} catch (err) {
+								console.log(err);
+								response = requestContent.responseText;
+							}
+							
 							WebUtil.setCache(url, response);
 							fun(response);
 						} else if (error) {
@@ -102,7 +109,7 @@ GitHubUtil.getGitHubInfo = function(url, fun, error) {
             			}
 					}
 				};
-				requestContent.open("GET", url.indexOf("https://api.github.com/") == 0 ? url : "https://api.github.com/" + url, true);
+				requestContent.open("GET", url.indexOf("https://") == 0 ? url : "https://api.github.com/" + url, true);
 				requestContent.send();
 			} else if (cache) {
 				fun(cache.data);
@@ -124,7 +131,7 @@ GitHubUtil.getGitHubUserInfo = function(url, fun, error) {
 		var name = "TheAndroidMaster";
 		if (links != null && links.github != null && links.github.name != null)
 			name = links.github.name;
-		
+
 		GitHubUtil.getGitHubInfo(StringUtil.format(url, name), fun, error);
-	});
+	}, error);
 }

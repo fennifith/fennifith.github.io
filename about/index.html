@@ -73,10 +73,11 @@
 			<div page="about">
 				<h1 id="title">Repository</h1>
 				<div id="content">
-		        	Something something something.
+		        	Loading content...
 				</div>
 			</div>
 			<div id="releases" page="releases">
+				Loading releases...
 			</div>
 		</main>
 		<snackbar id="evilstuff">
@@ -94,6 +95,7 @@
 			<a href="/policies/?web" target="_blank">Privacy Policy</a>
 		</footer>
 	</body>
+	<script src="/js/utils.js"></script>
 	<script src="/js/github.js"></script>
 	<script src="/js/navigation.js"></script>
 	<script>
@@ -101,7 +103,6 @@
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
-		var releases = document.getElementById('releases');
 		var link = document.getElementById('link');
 		var linkname = document.getElementById('linkname');
 
@@ -114,33 +115,34 @@
 			document.location.href = "/404";
 		}
 
-		if (repository.indexOf("/") == -1)
-			repository = "TheAndroidMaster/" + repository;
-
-		var url = "https://raw.githubusercontent.com/" + repository + "/master/README.md";
-
-		document.title = repository.substring(repository.indexOf("/") + 1);
-		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
+		repository = repository.substring(repository.indexOf("/") + 1);
+		document.title = StringUtil.titleize(repository);
+		title.innerHTML = document.title;
 
 		github.setAttribute("url", "https://github.com/" + repository);
-		releases.setAttribute("url", "https://jfenn.me/about/releases/?" + repository);
 
-		var readme = createCORSRequest("GET", url);
-		readme.onreadystatechange = function() {
-			if (readme.readyState === 4) {
-				if (readme.status === 200 || readme.status == 0) {
-					var converter = new showdown.Converter();
-					converter.setOption('tables', true);
-					content.innerHTML = converter.makeHtml(readme.responseText)
-						.replace(/(<img src=")(\/)([A-Za-z\/.?=]{0,})(">)/g, "$1https://raw.githubusercontent.com/" + repository + "/master/$3$4")
-						.replace(/(<a href="..\/..\/releases">)/g, "<a href=\"releases/?" + repository + "\">")
-						.replace(/(<a href="..\/..\/)([A-Za-z0-9\/.?=]{0,})(">)/g, "<a href=\"https://github.com/" + repository + "/$2\">");
+		function onPage(page, element) {
+			if (page == "about") {
+				if (!content.isSet) {
+					GitHubUtil.getGitHubUserInfo("https://raw.githubusercontent.com/${}/" + repository + "/master/README.md", function(data, author) {
+						var converter = new showdown.Converter();
+						converter.setOption('tables', true);
+						content.innerHTML = converter.makeHtml(data)
+							.replace(/(<img src=")(\/)([A-Za-z\/.?=]{0,})(">)/g, "$1https://raw.githubusercontent.com/" + author + "/" + repository + "/master/$3$4")
+							.replace(/(<a href="..\/..\/releases">)/g, "<a href=\"releases/?" + repository + "\">")
+							.replace(/(<a href="..\/..\/)([A-Za-z0-9\/.?=]{0,})(">)/g, "<a href=\"https://github.com/" + author + "/" + repository + "/$2\">");
+
+						content.isSet = true;				
+					}, function() {
+						document.location.href = "/404";				
+					});			
 				}
-			}
-		};
-		readme.send(null);
+		 	} else if (page == "releases") {
+		 		
+		 	}			
+		}
 
-		GitHubUtil.getGitHubInfo("repos/" + repository, function(obj) {
+		GitHubUtil.getGitHubUserInfo("repos/${}/" + repository, function(obj) {
 			if (obj.homepage) {
 				if (obj.homepage.indexOf("https://jfenn.me/about") == 0) {
 					return;
@@ -165,19 +167,6 @@
 		}, function() {
 			document.location.href = "/404";
 		});
-
-		function createCORSRequest(method, url) {
-    		var xhr = new XMLHttpRequest();
-    		if ("withCredentials" in xhr) {
-      			xhr.open(method, url, true);
-    		} else if (typeof XDomainRequest != "undefined") {
-      			xhr = new XDomainRequest();
-      			xhr.open(method, url);
-    		} else {
-      			xhr = null;
-    		}
-    		return xhr;
-  		}
 
   		setPage("about", null, true);
 	</script>
