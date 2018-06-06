@@ -138,7 +138,7 @@
 		document.title = StringUtil.titleize(repository);
 		title.innerHTML = document.title;
 
-		github.setAttribute("url", "https://github.com/" + repository);
+		github.setAttribute("url", "https://github.com/TheAndroidMaster/" + repository);
 
 		function onPage(page, element) {
 			if (page == "about") {
@@ -203,6 +203,7 @@
 						linkname.innerHTML += temp.charAt(0).toUpperCase() + temp.substring(1);
 					} else linkname.innerHTML += "Link";
 				}
+				github.setAttribute("url", obj.html_url);
 				link.setAttribute("url", obj.homepage);
 				link.style.display = "inline-block";
 			}
