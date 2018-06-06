@@ -155,10 +155,6 @@ footer {
 	-webkit-transition: transform .25s;
 }
 
-footer > * {
-	display: block;
-}
-
 footer > a {
 	font-size: .75em;
 	color: #606060;
