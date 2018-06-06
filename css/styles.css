@@ -46,6 +46,35 @@ button {
 	padding: 0.5em 1.25em;
 	background-color: #0091EA;
 	color: #FFF !important;
+	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+
+	transition: box-shadow .25s, background-color .25s, color .25s;
+	-moz-transition: box-shadow .25s, background-color .25s, color .25s;
+	-webkit-transition: box-shadow .25s, background-color .25s, color .25s;
+}
+
+button.selectable {
+	background-color: rgba(0, 0, 0, 0);
+	color: #616161 !important;
+	box-shadow: none;
+}
+
+button:hover {
+	background-color: #0091EA;
+	color: #FFF !important;
+	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
+}
+
+button.selectable:hover {
+	background-color: rgba(0, 0, 0, 0);
+	color: #000 !important;
+	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+}
+
+button.selectable[selected] {
+	background-color: #0091EA;
+	color: #FFF !important;
+	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
 }
 
 snackbar {
