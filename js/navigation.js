@@ -1,3 +1,4 @@
+var onPage = null;
 var shouldIgnoreState = false;
 var mainElement = document.getElementsByTagName("main")[0];
 var navElements = document.getElementsByTagName("nav")[0].childNodes;
@@ -66,9 +67,3 @@ for (var i = 0; i < navElements.length; i++) {
 		});	
 	}
 }
-
-var page = getPage();
-if (page.split('/').length > 1) {
-	var pages = page.split('/');
-	setPage(pages[0], pages[1]);
-} else setPage(page);

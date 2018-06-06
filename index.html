@@ -272,7 +272,7 @@
 	<script src="js/content.js"></script>
 	<script src="js/navigation.js"></script>
   	<script type="text/javascript">
-  	function onPage(page, element) {
+  	onPage = function(page, element) {
   		switch (page) {
   			case "home":
   				getOrganizations();
@@ -311,6 +311,12 @@
 
 		document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
 	}
+
+	var page = getPage();
+	if (page.split('/').length > 1) {
+		var pages = page.split('/');
+		setPage(pages[0], pages[1]);
+	} else setPage(page);
 	</script>
 
 </body>
