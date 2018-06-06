@@ -43,7 +43,7 @@ button {
 	border: none;
 	outline: none;
 	user-select: none;
-	padding: 0.5em 1.25em;
+	padding: 0.75em 1.25em;
 	background-color: #0091EA;
 	color: #FFF !important;
 	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
@@ -54,7 +54,7 @@ button {
 }
 
 button.selectable {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(255, 255, 255, 0);
 	color: #616161 !important;
 	box-shadow: none;
 }
@@ -66,7 +66,7 @@ button:hover {
 }
 
 button.selectable:hover {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.2);
 	color: #000 !important;
 	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
 }
@@ -82,7 +82,7 @@ snackbar {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding-left: calc(60px + 10vw);
+	padding-left: 10vw;
 	padding-right: 10vw;
 	padding-top: 1em;
 	padding-bottom: .5em;
@@ -109,20 +109,16 @@ snackbar > a {
 }
 
 nav {
-	width: 80vw !important;
+	width: 80% !important;
 	height: auto;
 	text-align: center;
 	display: block;
-	padding: 8px 10vw;
+	padding: 8px 10%;
 	overflow: hidden;
 	z-index: 100;
 	transition: width .25s;
 	-moz-transition: width .25s;
 	-webkit-transition: width .25s;
-}
-
-nav:hover {
-	width: 160px;
 }
 
 nav>button {
@@ -134,28 +130,14 @@ nav>button {
 	margin: 4px;
 }
 
-nav>button>i {
-	font-size: 18px !important;
-	margin-bottom: 0.25em;
-}
-
-nav>button>span {
-	font-size: .8em;
-}
-
 nav>button>* {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-nav>button:hover {
-	color: #0091EA;
-}
-
 main {
 	display: block;
-	margin-left: 80px;
-	margin-left: calc(60px + 10vw);
+	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 2em;
 	padding-top: 20vh;
@@ -165,7 +147,7 @@ main {
 }
 
 footer {
-	margin-left: calc(60px + 10vw);
+	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 8em;
 	transition: transform .25s;
@@ -212,24 +194,15 @@ a>span {
 	text-align: center;
 }
 
-@media(max-width: 600px) {
-	a>span {
-		display: none;
+@media(min-width: 600px) {
+	nav>button>i {
+		margin-bottom: 0.25em;
 	}
+}
 
+@media(max-width: 599px) {
 	main {
-		margin-left: 10vw;
 		padding-top: 16px;
-		transform: none !important;
-	}
-
-	footer {
-		margin-left: 10vw;
-		transform: none !important;
-	}
-
-	snackbar {
-		padding-left: 10vw !important;
 	}
 
 	.desktop {
