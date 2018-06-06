@@ -39,6 +39,15 @@ a:hover {
 	color: #000000;
 }
 
+button {
+	border: none;
+	outline: none;
+	user-select: none;
+	padding: 0.5em 1.25em;
+	background-color: #0091EA;
+	color: #FFF !important;
+}
+
 snackbar {
 	position: fixed;
 	bottom: 0;
@@ -71,11 +80,11 @@ snackbar > a {
 }
 
 nav {
-	position: fixed;
-	height: 100%;
-	width: 28px;
-	padding: 12px 16px;
-	background-color: rgba(255, 255, 255, 0.5);
+	width: 80vw !important;
+	height: auto;
+	text-align: center;
+	display: block;
+	padding: 8px 10vw;
 	overflow: hidden;
 	z-index: 100;
 	transition: width .25s;
@@ -87,38 +96,30 @@ nav:hover {
 	width: 160px;
 }
 
-nav>a>span {
-	opacity: 0;
-	transition: opacity .25s;
-	-moz-transition: opacity .25s;
-	-webkit-transition: opacity .25s;
-}
-
-nav:hover>a>span {
-	opacity: 1;
-	transition-delay: .1s;
-}
-
-nav>a {
-	display: table;
-	padding: 16px 0;
-	font-size: larger;
+nav>button {
+	display: inline-block;
 	color: rgba(0, 0, 0, 0.5);
 	text-decoration: none;
 	user-select: none;
 	white-space: nowrap;
+	margin: 4px;
 }
 
-nav>a>i {
-	margin-right: 16px;
+nav>button>i {
+	font-size: 18px !important;
+	margin-bottom: 0.25em;
 }
 
-nav>a>* {
+nav>button>span {
+	font-size: .8em;
+}
+
+nav>button>* {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-nav>a:hover {
+nav>button:hover {
 	color: #0091EA;
 }
 
@@ -152,15 +153,6 @@ footer > a {
 	color: #606060;
 }
 
-nav:hover ~ main,
-nav:hover ~ footer {
-	transform: translateX(60px);
-}
-
-nav:hover ~ snackbar {
-	padding-left: calc(120px + 10vw);
-}
-
 .grid {
 	display: -webkit-flex;
 	display: flex;
@@ -188,24 +180,10 @@ nav:hover ~ snackbar {
 
 a>span {
 	display: inline-block;
-	width: 20px;
 	text-align: center;
 }
 
 @media(max-width: 600px) {
-	nav {
-		width: 80vw !important;
-		position: relative;
-		height: auto;
-		text-align: center;
-		display: block;
-		padding: 8px 10vw;
-	}
-
-	nav>a {
-		display: inline-block;
-	}
-
 	a>span {
 		display: none;
 	}
