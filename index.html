@@ -99,18 +99,18 @@
 </head>
 <body>
 	<nav>
-		<button id="homeButton" class="selectable" onclick="setPage('home');"><i class="material-icons">home</i><span class="desktop">Home</span></button>
-		<button id="projectsButton" class="selectable" onclick="setPage('projects');"><i class="material-icons">work</i><span class="desktop">Projects</span></button>
-		<button id="communityButton" class="selectable" onclick="setPage('community');"><i class="material-icons">people</i><span class="desktop">Community</span></button>
-		<button id="contactButton" class="selectable" onclick="setPage('contact');"><i class="material-icons">phone</i><span class="desktop">Contact</span></button>
-		<button id="aboutButton" class="selectable" onclick="setPage('about');"><i class="material-icons">info</i><span class="desktop">About</span></button>
+		<button page="home" class="selectable" onclick="setPage('home');"><i class="material-icons">home</i><span class="desktop">Home</span></button>
+		<button page="projects" class="selectable" onclick="setPage('projects');"><i class="material-icons">work</i><span class="desktop">Projects</span></button>
+		<button page="community" class="selectable" onclick="setPage('community');"><i class="material-icons">people</i><span class="desktop">Community</span></button>
+		<button page="contact" class="selectable" onclick="setPage('contact');"><i class="material-icons">phone</i><span class="desktop">Contact</span></button>
+		<button page="about" class="selectable" onclick="setPage('about');"><i class="material-icons">info</i><span class="desktop">About</span></button>
 	</nav>
 	<div>
 		<iframe id="yes" src="https://jfenn.me/P5Samples/lines/"></iframe>
 		<div id="yesfg"></div>
 	</div>
 	<main id="main" style="display: none;">
-		<div id="home">
+		<div page="home">
 			<h1>Hi,</h1>
 			<h2 id="person">I'm a person.</h2>
 			<p>
@@ -127,7 +127,7 @@
 			<br>
 			<i id="pun"></i>
 		</div>
-		<div id="projects">
+		<div page="projects">
 			<ul class="sub">
 				<li><h4>Contents</h4></li>
 				<li><a id="projectsAppsButton" onclick="setSubPage('apps');">Published Apps</a></li>
@@ -174,7 +174,7 @@
 				<div id="repolist"></div>
 			</div>
 		</div>
-		<div id="community">
+		<div page="community">
 			<h2>People</h2>
 			<h4>
 				I'm great and all, but these people are also pretty great. They probably helped me out with something at some
@@ -184,7 +184,7 @@
 			</h4>
 			<div id="userlist"></div>
 		</div>
-		<div id="contact">
+		<div page="contact">
 			<h2>Talk to me</h2>
 			<p>
 				I don't always reply to <a href="mailto:me@jfenn.me">email</a>s right away because of time limitations
@@ -204,7 +204,7 @@
        	 		anything to do. (yes, that's contradictory on purpose)
 			</p>
 		</div>
-		<div id="about">
+		<div page="about">
 			<h2>Me, myself, and I</h2>
 			<p>
 				Well, since you must have clicked on a link to the "about" section of my website at some point, that must mean you are genuinely
@@ -270,68 +270,23 @@
 	<script src="js/utils.js"></script>
 	<script src="js/github.js"></script>
 	<script src="js/content.js"></script>
+	<script src="js/navigation.js"></script>
   	<script type="text/javascript">
-	function setPage(page, subPage) {
-    window.history.replaceState(null, null, "?" + page);
-		for (var i = 0; i < document.getElementById('main').childNodes.length; i++) {
-			if (document.getElementById('main').childNodes[i].id)
-				document.getElementById('main').childNodes[i].style.display = "none";
-		}
-
-		switch (page) {
-			case "home":
-			default:
-				document.getElementById('home').style.display = "block";
-				getOrganizations();
-				horriblePun();
-				break;
-			case "projects":
-				document.getElementById('projects').style.display = "block";
-				getRepos();
-				break;
-			case "community":
-				document.getElementById('community').style.display = "block";
-				getUsers();
-				break;
-			case "contact":
-				document.getElementById('contact').style.display = "block";
-				break;
-			case "about":
-				document.getElementById('about').style.display = "block";
-				break;
-		}
-
-    	if (subPage)
-      		setSubPage(subPage);
-
-    	document.getElementById('main').style.display = null;
-	}
-
-	function setSubPage(subPage) {
-    	var element = document.getElementById(subPage);
-    	if (element) {
-      		element.scrollIntoView();
-
-     	 	var page = getSearch();
-      		if (page.split('/').length > 1)
-        		page = page.split('/')[0];
-
-    		window.history.replaceState(null, null, "?" + page + "/" + subPage);
-    	}
-	}
-
-	function getSearch() {
-		if (window.location.search)
-			return window.location.search.replace("?", "");
-		else return "home";
-	}
-
-	var page = getSearch();
-	if (page.split('/').length > 1) {
-		var pages = page.split('/');
-		setPage(pages[0], pages[1]);
-	} else setPage(page);
-
+  	function onPage(page, element) {
+  		switch (page) {
+  			case "home":
+  				getOrganizations();
+  				horriblePun();
+  				break;
+  			case "projects":
+  				getRepos();
+  				break;
+  			case "community":
+  				getUsers();
+  				break;
+  		}
+  	}
+	
 	function horriblePun() {
 		var hellos = [
 			'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
