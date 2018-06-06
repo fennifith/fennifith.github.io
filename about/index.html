@@ -63,15 +63,20 @@
 	</head>
 	<body>
 		<nav>
-			<a href="https://jfenn.me/"><i class="material-icons">home</i><span class="desktop">&nbsp;Home</span></a>
-			<a id="github" href="/" target="_blank"><i class="material-icons">code</i><span class="desktop">&nbsp;GitHub</span></a>
-			<a id="releases" href="/"><i class="material-icons">new_releases</i><span class="desktop">&nbsp;Releases</span></a>
-			<a id="link" href="/" target="_blank" style="display: none;"><i class="material-icons">link</i><span class="desktop" id="linkname">&nbsp;</span></a>
+			<button class="selectable" url="/"><i class="material-icons">home</i><span class="desktop">Home</span></button>
+			<button page="about" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
+			<button page="releases" class="selectable"><i class="material-icons">new_releases</i><span class="desktop">Releases</span></button>
+			<button id="github" class="selectable" url="/"><i class="material-icons">code</i><span class="desktop">GitHub</span></button>
+			<button id="link" class="selectable" url="/" style="display: none;"><i class="material-icons">link</i><span class="desktop" id="linkname"></span></button>
 		</nav>
-		<main>
-			<h1 id="title">Repository</h1>
-			<div id="content">
-          Something something something.
+		<main style="display: none;">
+			<div page="about">
+				<h1 id="title">Repository</h1>
+				<div id="content">
+		        	Something something something.
+				</div>
+			</div>
+			<div id="releases" page="releases">
 			</div>
 		</main>
 		<snackbar id="evilstuff">
@@ -90,7 +95,9 @@
 		</footer>
 	</body>
 	<script src="/js/github.js"></script>
+	<script src="/js/navigation.js"></script>
 	<script>
+		shouldIgnoreState = true;
 		var title = document.getElementById('title');
 		var content = document.getElementById('content');
 		var github = document.getElementById('github');
@@ -115,8 +122,8 @@
 		document.title = repository.substring(repository.indexOf("/") + 1);
 		title.innerHTML = repository.substring(repository.indexOf("/") + 1);
 
-		github.href = "https://github.com/" + repository;
-		releases.href = "https://jfenn.me/about/releases/?" + repository;
+		github.setAttribute("url", "https://github.com/" + repository);
+		releases.setAttribute("url", "https://jfenn.me/about/releases/?" + repository);
 
 		var readme = createCORSRequest("GET", url);
 		readme.onreadystatechange = function() {
@@ -152,8 +159,8 @@
 						linkname.innerHTML += temp.charAt(0).toUpperCase() + temp.substring(1);
 					} else linkname.innerHTML += "Link";
 				}
-				link.href = obj.homepage;
-				link.style.display = "block";
+				link.setAttribute("url", obj.homepage);
+				link.style.display = "inline-block";
 			}
 		}, function() {
 			document.location.href = "/404";
@@ -171,5 +178,7 @@
     		}
     		return xhr;
   		}
+
+  		setPage("about", null, true);
 	</script>
 </html>

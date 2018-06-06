@@ -1,8 +1,10 @@
-var mainElement = document.getElementById("main");
+var shouldIgnoreState = false;
+var mainElement = document.getElementsByTagName("main")[0];
 var navElements = document.getElementsByTagName("nav")[0].childNodes;
 
 function setPage(page, element) {
-	window.history.replaceState(null, null, "?" + page);
+	if (!shouldIgnoreState)
+		window.history.replaceState(null, null, "?" + page);
 
 	for (var i = 0; i < navElements.length; i++) {
 		if (navElements[i].getAttribute) {
@@ -37,8 +39,9 @@ function setPageElement(elementId) {
    	 	var page = getPage();
    		if (page.split('/').length > 1)
    	 		page = page.split('/')[0];
-   	 	
-   		window.history.replaceState(null, null, "?" + page + "/" + elementId);
+
+   	 	if (!shouldIgnoreState)
+   			window.history.replaceState(null, null, "?" + page + "/" + elementId);
    	}
 }
 
@@ -46,6 +49,22 @@ function getPage() {
 	if (window.location.search)
 		return window.location.search.replace("?", "");
 	else return "home";
+}
+
+for (var i = 0; i < navElements.length; i++) {
+	const element = navElements[i];
+	if (element.getAttribute) {
+		element.addEventListener("click", function() {
+			var page = element.getAttribute("url");
+			if (page) {
+				location.href = page;
+			} else {
+				page = element.getAttribute("page");
+				if (page)
+					setPage(page);
+			}				
+		});	
+	}
 }
 
 var page = getPage();
