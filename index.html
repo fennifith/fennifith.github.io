@@ -446,8 +446,7 @@
 	for (var i = 0; i < projectsCheckBoxElements.length; i++) {
 		const index = i;
 		projectsCheckBoxElements[i].addEventListener("click", function() {
-			var element = projectsCategoriesElement.children[index];
-			element.children[element.children.length - 1].style.display = projectsCheckBoxElements[index].checked == true ? null : "none";
+			projectsCategoriesElement.children[index].style.display = projectsCheckBoxElements[index].checked == true ? null : "none";
 		});
 	}
 
