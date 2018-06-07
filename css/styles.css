@@ -39,12 +39,91 @@ a:hover {
 	color: #000000;
 }
 
+i.material-icons.focusable {
+	color: rgba(0, 0, 0, 0.5);
+
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+i.material-icons.focusable:hover {
+	color: rgba(0, 0, 0, 1);
+}
+
+i.material-icons.clickable {
+	user-select: none;
+	cursor: pointer;
+}
+
+button {
+	border: none;
+	outline: none;
+	user-select: none;
+	padding: 0.75em 1.25em;
+	background-color: #0091EA;
+	color: #FFF !important;
+	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+
+	transition: box-shadow .25s, background-color .25s, color .25s;
+	-moz-transition: box-shadow .25s, background-color .25s, color .25s;
+	-webkit-transition: box-shadow .25s, background-color .25s, color .25s;
+}
+
+button.selectable {
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(0, 0, 0, 0.5) !important;
+	box-shadow: none;
+}
+
+button:hover {
+	background-color: #0091EA;
+	color: #FFF !important;
+	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
+}
+
+button.selectable:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #000 !important;
+	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+}
+
+button.selectable[selected] {
+	background-color: #0091EA;
+	color: #FFF !important;
+	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
+}
+
+input[type=checkbox] {
+	display: none;
+}
+
+input[type=checkbox] + label {
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+	padding: 0;
+	margin: 0;
+	margin-left: 24px;
+	margin-right: 16px;
+	background-image: url("/images/ic-checkbox-unchecked.svg");
+}
+
+input[type=checkbox]:checked + label {
+	background-image: url("/images/ic-checkbox-checked.svg");
+}
+
+input[type=checkbox] + label {
+	transform: translateY(6px);
+	cursor: pointer;
+}
+
 snackbar {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding-left: calc(60px + 10vw);
+	padding-left: 10vw;
 	padding-right: 10vw;
 	padding-top: 1em;
 	padding-bottom: .5em;
@@ -71,11 +150,11 @@ snackbar > a {
 }
 
 nav {
-	position: fixed;
-	height: 100%;
-	width: 28px;
-	padding: 12px 16px;
-	background-color: rgba(255, 255, 255, 0.5);
+	width: 80% !important;
+	height: auto;
+	text-align: center;
+	display: block;
+	padding: 8px 10%;
 	overflow: hidden;
 	z-index: 100;
 	transition: width .25s;
@@ -83,59 +162,33 @@ nav {
 	-webkit-transition: width .25s;
 }
 
-nav:hover {
-	width: 160px;
-}
-
-nav>a>span {
-	opacity: 0;
-	transition: opacity .25s;
-	-moz-transition: opacity .25s;
-	-webkit-transition: opacity .25s;
-}
-
-nav:hover>a>span {
-	opacity: 1;
-	transition-delay: .1s;
-}
-
-nav>a {
-	display: table;
-	padding: 16px 0;
-	font-size: larger;
+nav>button {
+	display: inline-block;
 	color: rgba(0, 0, 0, 0.5);
 	text-decoration: none;
 	user-select: none;
 	white-space: nowrap;
+	margin: 4px;
 }
 
-nav>a>i {
-	margin-right: 16px;
-}
-
-nav>a>* {
+nav>button>* {
 	display: table-cell;
 	vertical-align: middle;
 }
 
-nav>a:hover {
-	color: #0091EA;
-}
-
 main {
 	display: block;
-	margin-left: 80px;
-	margin-left: calc(60px + 10vw);
+	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 2em;
-	padding-top: 20vh;
+	padding-top: 2em;
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
 }
 
 footer {
-	margin-left: calc(60px + 10vw);
+	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 8em;
 	transition: transform .25s;
@@ -143,22 +196,9 @@ footer {
 	-webkit-transition: transform .25s;
 }
 
-footer > * {
-	display: block;
-}
-
 footer > a {
 	font-size: .75em;
 	color: #606060;
-}
-
-nav:hover ~ main,
-nav:hover ~ footer {
-	transform: translateX(60px);
-}
-
-nav:hover ~ snackbar {
-	padding-left: calc(120px + 10vw);
 }
 
 .grid {
@@ -188,41 +228,18 @@ nav:hover ~ snackbar {
 
 a>span {
 	display: inline-block;
-	width: 20px;
 	text-align: center;
 }
 
-@media(max-width: 600px) {
-	nav {
-		width: 80vw !important;
-		position: relative;
-		height: auto;
-		text-align: center;
-		display: block;
-		padding: 8px 10vw;
+@media(min-width: 600px) {
+	nav>button>i {
+		margin-bottom: 0.25em;
 	}
+}
 
-	nav>a {
-		display: inline-block;
-	}
-
-	a>span {
-		display: none;
-	}
-
+@media(max-width: 599px) {
 	main {
-		margin-left: 10vw;
 		padding-top: 16px;
-		transform: none !important;
-	}
-
-	footer {
-		margin-left: 10vw;
-		transform: none !important;
-	}
-
-	snackbar {
-		padding-left: 10vw !important;
 	}
 
 	.desktop {
