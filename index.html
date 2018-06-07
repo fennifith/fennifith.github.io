@@ -217,7 +217,7 @@
 		<div page="projects">
 			<div class="filter" tabindex="0">
 				<div class="title">
-					<input type="text" placeholder="Filter..."></input>
+					<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
 					<i class="material-icons">expand_more</i>
 				</div>
 				<div class="content">
@@ -442,6 +442,14 @@
 		setPage(pages[0], pages[1]);
 	} else setPage(page);
 	</script>
-
+	<script type="text/javascript">
+	var projectsFilterTextElement = document.getElementById("projectsFilterText");
+	var cappsElement = document.getElementById("capps");
+	var clibrariesElement = document.getElementById("clibraries");
+	var cnodejsElement = document.getElementById("cnodejs");
+	var cwebsitesElement = document.getElementById("cwebsites");
+	var cforksElement = document.getElementById("cforks");
+	var cotherElement = document.getElementById("cother");
+	</script>
 </body>
 </html>
