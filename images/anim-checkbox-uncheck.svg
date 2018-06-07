@@ -7,10 +7,19 @@
     <path
         id="box"
         d="M 19 3 L 5 3 C 3.89 3 3 3.89 3 5 L 3 19 C 3 19.53 3.211 20.039 3.586 20.414 C 3.961 20.789 4.47 21 5 21 L 19 21 C 19.53 21 20.039 20.789 20.414 20.414 C 20.789 20.039 21 19.53 21 19 L 21 5 C 21 3.89 20.1 3 19 3 Z"
-        fill="#000000"
+        fill="#0091EA"
         fill-opacity="1"
-        stroke="#000000"
+        stroke="#0091EA"
         stroke-width="0">
+
+        <animate
+        	attributeName="fill"
+        	from="#0091EA"
+          	to="#000000"
+           	dur="0.2s"
+           	begin="0s"
+           	repeatCount="0"
+           	fill="freeze" />
         
         <animate
             attributeName="fill-opacity"
@@ -22,6 +31,24 @@
             fill="freeze" />
 
         <animate
+   	       	attributeName="stroke"
+           	from="#0091EA"
+           	to="#000000"
+           	dur="0.2s"
+          	begin="0s"
+           	repeatCount="0"
+          	fill="freeze" />
+
+        <animate
+        	attributeName="stroke-opacity"
+        	from="1"
+        	to="0.5"
+        	dur="0.2s"
+        	begin="0s"
+        	repeatCount="0"
+        	fill="freeze" />
+
+        <animate
             attributeName="stroke-width"
             from="0"
             to="2"
@@ -29,7 +56,7 @@
             begin="0s"
             repeatCount="0"
             fill="freeze" />
-            
+        
     </path>
     <path
         id="check"
@@ -42,6 +69,15 @@
 			attributeName="fill"
 			from="#FFFFFF"
 			to="#000000"
+			dur="0.2s"
+			begin="0s"
+			repeatCount="0"
+			fill="freeze" />
+
+		<animate
+			attributeName="fill-opacity"
+			from="1"
+			to="0.5"
 			dur="0.2s"
 			begin="0s"
 			repeatCount="0"
