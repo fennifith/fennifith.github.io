@@ -468,6 +468,8 @@
 					img.onload = function() {
 						labelElement.style.backgroundImage = "url(" + img.src + ")";
 					};
+
+					labelElement.style.backgroundImage = "url(/images/ic-checkbox-" + (!inputElement.checked ? "check" : "uncheck") + "ed.svg)";
 					img.src = "/images/anim-checkbox-" + (inputElement.checked ? "check" : "uncheck") + ".svg?count=" + checkedCounter;
 					checkedCounter++;
 				});
