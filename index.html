@@ -410,8 +410,10 @@
 		var pages = page.split('/');
 		setPage(pages[0], pages[1]);
 	} else setPage(page);
-	</script>
-	<script type="text/javascript">
+
+
+
+	
 	var projectsElement = document.getElementById("projects");
 	var projectsFilterTextElement = document.getElementById("projectsFilterText");
 	var projectsCategoriesElement = document.getElementById("projectsCategories");
@@ -444,9 +446,33 @@
 	for (var i = 0; i < projectsCheckBoxElements.length; i++) {
 		const index = i;
 		projectsCheckBoxElements[i].addEventListener("click", function() {
-			var element = projectsElement.children[index + 1];
+			var element = projectsCategoriesElement.children[index];
 			element.children[element.children.length - 1].style.display = projectsCheckBoxElements[index].checked == true ? null : "none";
 		});
+	}
+
+
+
+
+	var labelElements = document.getElementsByTagName("label");
+	var checkedCounter = 0;
+	
+	for (var i = 0; i < labelElements.length; i++) {
+		const labelElement = labelElements[i];
+		if (labelElement.getAttribute && labelElement.hasAttribute("for")) {
+			const inputElement = document.getElementById(labelElement.getAttribute("for"));
+			if (inputElement.getAttribute && inputElement.getAttribute("type") == "checkbox") {
+				inputElement.addEventListener("click", function() {
+					const img = new Image();
+					img.id = "img" + checkedCounter;
+					img.onload = function() {
+						labelElement.style.backgroundImage = "url(" + img.src + ")";
+					};
+					img.src = "/images/anim-checkbox-" + (inputElement.checked ? "check" : "uncheck") + ".svg?count=" + checkedCounter;
+					checkedCounter++;
+				});
+			}
+		}
 	}
 	</script>
 </body>

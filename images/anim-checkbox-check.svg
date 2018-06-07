@@ -16,7 +16,7 @@
             attributeName="fill-opacity"
             from="0"
             to="1"
-            dur="0.3s"
+            dur="0.2s"
             begin="0s"
             repeatCount="0"
             fill="freeze" />
@@ -25,7 +25,7 @@
             attributeName="stroke-width"
             from="2"
             to="0"
-            dur="0.3s"
+            dur="0.2s"
             begin="0s"
             repeatCount="0"
             fill="freeze" />
@@ -42,7 +42,7 @@
 			attributeName="fill"
 			from="#000000"
 			to="#FFFFFF"
-			dur="0.3s"
+			dur="0.2s"
 			begin="0s"
 			repeatCount="0"
 			fill="freeze" />
