@@ -39,6 +39,23 @@ a:hover {
 	color: #000000;
 }
 
+i.material-icons.focusable {
+	color: rgba(0, 0, 0, 0.5);
+
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+i.material-icons.focusable:hover {
+	color: rgba(0, 0, 0, 1);
+}
+
+i.material-icons.clickable {
+	user-select: none;
+	cursor: pointer;
+}
+
 button {
 	border: none;
 	outline: none;

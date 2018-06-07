@@ -61,7 +61,7 @@
 			-webkit-transition: max-height .25s, box-shadow .25s;
 		}
 
-		.filter:focus, .filter:hover {
+		.filter:focus, .filter:focus-within {
 			max-height: 100vh;
 			box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
 		}
@@ -98,7 +98,7 @@
 		}
 
 		.filter:focus > .title > i.material-icons,
-		.filter:hover > .title > i.material-icons {
+		.filter:focus-within > .title > i.material-icons {
 			transform: rotate(180deg);
 		}
 
@@ -185,44 +185,44 @@
 			<div class="filter" tabindex="0">
 				<div class="title">
 					<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
-					<i class="material-icons">expand_more</i>
+					<i class="material-icons clickable">expand_more</i>
 				</div>
 				<div class="content">
 					<div class="fitem">
 						<input id="capps" type="checkbox" checked></input>
 						<label for="capps"></label>
 						<span>Published Apps</span>
-						<i class="material-icons" onclick="setSubPage('apps')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('apps')">find_in_page</i>
 					</div>
 					<div class="fitem">
 						<input id="clibraries" type="checkbox" checked></input>
 						<label for="clibraries"></label>
 						<span>Android/Java Libraries</span>
-						<i class="material-icons" onclick="setSubPage('libraries')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('libraries')">find_in_page</i>
 					</div>
 					<div class="fitem">
 						<input id="cnodejs" type="checkbox" checked></input>
 						<label for="cnodejs"></label>
 						<span>NodeJS Projects</span>
-						<i class="material-icons" onclick="setSubPage('nodejs')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('nodejs')">find_in_page</i>
 					</div>
 					<div class="fitem">
 						<input id="cwebsites" type="checkbox" checked></input>
 						<label for="cwebsites"></label>
 						<span>Websites</span>
-						<i class="material-icons" onclick="setSubPage('websites')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('websites')">find_in_page</i>
 					</div>
 					<div class="fitem">
 						<input id="cforks" type="checkbox" checked></input>
 						<label for="cforks"></label>
 						<span>Forked Projects</span>
-						<i class="material-icons" onclick="setSubPage('forks')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('forks')">find_in_page</i>
 					</div>
 					<div class="fitem">
 						<input id="cother" type="checkbox" checked></input>
 						<label for="cother"></label>
 						<span>Other</span>
-						<i class="material-icons" onclick="setSubPage('other')">find_in_page</i>
+						<i class="material-icons focusable clickable" onclick="setPageElement('other')">find_in_page</i>
 					</div>
 				</div>
 			</div>
@@ -424,7 +424,7 @@
 	projectsFilterTextElement.addEventListener("keyup", function() {
 		var projectElements = projectsElement.children;
 		for (var i = 1; i < projectElements.length; i++) {
-			var projects = projectElements[i].childNodes[projectElements[i].children.length - 1];
+			var projects = projectElements[i].children[projectElements[i].children.length - 1];
 			if (projects)
 				projects = projects.children;
 			else continue;
