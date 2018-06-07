@@ -10,8 +10,18 @@
         fill="#000000"
         fill-opacity="0"
         stroke="#000000"
-        stroke-width="2">
-        
+        stroke-width="2"
+        stroke-opacity="0.5">
+
+        <animate
+        	attributeName="fill"
+        	from="#000000"
+        	to="#0091EA"
+        	dur="0.2s"
+        	begin="0s"
+        	repeatCount="0"
+        	fill="freeze" />
+
         <animate
             attributeName="fill-opacity"
             from="0"
@@ -22,6 +32,15 @@
             fill="freeze" />
 
         <animate
+        	attributeName="stroke"
+        	from="#000000"
+        	to="#0091EA"
+        	dur="0.2s"
+        	begin="0s"
+        	repeatCount="0"
+        	fill="freeze" />
+
+        <animate
             attributeName="stroke-width"
             from="2"
             to="0"
@@ -29,19 +48,37 @@
             begin="0s"
             repeatCount="0"
             fill="freeze" />
+
+        <animate
+        	attributeName="stroke-opacity"
+        	from="0.5"
+        	to="1"
+        	dur="0.2s"
+        	begin="0s"
+        	repeatCount="0"
+        	fill="freeze" />
             
     </path>
     <path
         id="check"
         d="M 10 17 L 5 12 L 6.41 10.58 L 10 14.17 L 17.59 6.58 L 19 8 Z"
         fill="#000000"
-        fill-opacity="1"
+        fill-opacity="0.5"
         stroke-opacity="0">
 
 		<animate
 			attributeName="fill"
 			from="#000000"
 			to="#FFFFFF"
+			dur="0.2s"
+			begin="0s"
+			repeatCount="0"
+			fill="freeze" />
+
+		<animate
+			attributeName="fill-opacity"
+			from="0.5"
+			to="1"
 			dur="0.2s"
 			begin="0s"
 			repeatCount="0"

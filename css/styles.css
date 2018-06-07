@@ -63,7 +63,7 @@ button {
 	padding: 0.75em 1.25em;
 	background-color: #0091EA;
 	color: #FFF !important;
-	box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
 
 	transition: box-shadow .25s, background-color .25s, color .25s;
 	-moz-transition: box-shadow .25s, background-color .25s, color .25s;
@@ -79,7 +79,7 @@ button.selectable {
 button:hover {
 	background-color: #0091EA;
 	color: #FFF !important;
-	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
 }
 
 button.selectable:hover {
@@ -91,7 +91,7 @@ button.selectable:hover {
 button.selectable[selected] {
 	background-color: #0091EA;
 	color: #FFF !important;
-	box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.5);
 }
 
 input[type=checkbox] {
