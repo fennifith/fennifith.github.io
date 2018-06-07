@@ -36,6 +36,7 @@
 		<style>
 			img {
 				max-width: 100%;
+				max-height: 80vh;
 			}
 
 			pre {
@@ -60,10 +61,11 @@
 				font-size: 1em;
 			}
 
-			.release {
+			.release, .issue {
 				border: 1px solid rgba(0, 0, 0, 0.3);
 				margin: 1em 0;
 				padding: 1.75em 2.25em;
+				word-wrap: break-word;
 			}
 			
       		a > h2 {
@@ -85,6 +87,7 @@
 			<button class="selectable" url="/"><i class="material-icons">home</i><span class="desktop">Home</span></button>
 			<button page="about" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
 			<button page="releases" class="selectable"><i class="material-icons">new_releases</i><span class="desktop">Releases</span></button>
+			<button page="issues" class="selectable"><i class="material-icons">message</i><span class="desktop">Issues</span></button>
 			<button id="github" class="selectable" url="/"><i class="material-icons">code</i><span class="desktop">GitHub</span></button>
 			<button id="link" class="selectable" url="/" style="display: none;"><i class="material-icons">link</i><span class="desktop" id="linkname"></span></button>
 		</nav>
@@ -97,6 +100,9 @@
 			</div>
 			<div id="releases" page="releases">
 				Loading releases...
+			</div>
+			<div id="issues" page="issues">
+				Loading issues...
 			</div>
 		</main>
 		<snackbar id="evilstuff">
@@ -126,6 +132,7 @@
 		var link = document.getElementById('link');
 		var linkname = document.getElementById('linkname');
 		var releases = document.getElementById('releases');
+		var issues = document.getElementById("issues");
 
 		var repository = null;
 		if (window.location.search && window.location.search.length > 1) {
@@ -182,6 +189,23 @@
 		 			}, function() {
  						document.location.href = "/404";
 					});
+		 		}
+		 	} else if (page == "issues") {
+		 		if (!issues.isSet) {
+		 			GitHubUtil.getGitHubUserInfo("repos/${}/" + repository + "/issues", function(obj) {
+		 				var html = "";
+						for (var i = 0; i < obj.length; i++) {
+							html += "<div class=\"release\">";
+							html += "<a href=\"" + obj[i].html_url + "\"><h2>" + obj[i].title + "</h2></a>";
+							html += "<div>" + new showdown.Converter().makeHtml(obj[i].body) + "</div>";
+				 			html += "<small>Created by <a href=\"" + obj[i].user.html_url + "\">" + obj[i].user.login + "</a></small>"; 
+							html += "</div>";
+						}
+		 						 				
+						ElementUtil.clearElement(issues);
+						issues.appendChild(ElementUtil.createElement(html));
+						issues.isSet = true;
+		 			});
 		 		}
 		 	}			
 		}
