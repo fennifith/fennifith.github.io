@@ -182,7 +182,7 @@
 			<i id="pun"></i>
 		</div>
 		<div id="projects" page="projects">
-			<div class="filter" tabindex="0">
+			<div id="projectsFilter" class="filter" tabindex="0">
 				<div class="title">
 					<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
 					<i class="material-icons clickable">expand_more</i>
@@ -415,6 +415,7 @@
 
 	
 	var projectsElement = document.getElementById("projects");
+	var projectsFilterElement = document.getElementById("projectsFilter");
 	var projectsFilterTextElement = document.getElementById("projectsFilterText");
 	var projectsCategoriesElement = document.getElementById("projectsCategories");
 	var projectsCheckBoxElements = [
@@ -475,6 +476,14 @@
 			}
 		}
 	}
+
+	var currentScroll = window.pageYOffset | document.body.scrollTop;
+	window.onscroll = function() {
+		if (Math.abs(currentScroll - (window.pageYOffset | document.body.scrollTop)) > projectsFilterElement.offsetHeight) {
+			document.activeElement.blur();
+			currentScroll = window.pageYOffset | document.body.scrollTop;
+		}		
+	};
 	</script>
 </body>
 </html>
