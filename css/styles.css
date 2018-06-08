@@ -96,6 +96,7 @@ button.selectable[selected] {
 
 input[type=checkbox] {
 	display: none;
+	outline: none;
 }
 
 input[type=checkbox] + label {
@@ -107,6 +108,7 @@ input[type=checkbox] + label {
 	margin-left: 24px;
 	margin-right: 16px;
 	background-image: url("/images/ic-checkbox-unchecked.svg");
+	outline: none;
 }
 
 input[type=checkbox]:checked + label {
