@@ -120,6 +120,31 @@ input[type=checkbox] + label {
 	cursor: pointer;
 }
 
+table {
+	display: inline-block;
+	max-width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+	border: 1px solid #BDBDBD;
+}
+
+thead {
+	background: #BDBDBD;
+}
+
+th, td {
+	padding: 0.5em 1em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #BDBDBD;
+}
+
+tr:last-child {
+	border-bottom: none;
+}
+
 snackbar {
 	position: fixed;
 	bottom: 0;
