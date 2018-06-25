@@ -96,6 +96,7 @@ button.selectable[selected] {
 
 input[type=checkbox] {
 	display: none;
+	outline: none;
 }
 
 input[type=checkbox] + label {
@@ -107,6 +108,7 @@ input[type=checkbox] + label {
 	margin-left: 24px;
 	margin-right: 16px;
 	background-image: url("/images/ic-checkbox-unchecked.svg");
+	outline: none;
 }
 
 input[type=checkbox]:checked + label {
@@ -116,6 +118,31 @@ input[type=checkbox]:checked + label {
 input[type=checkbox] + label {
 	transform: translateY(6px);
 	cursor: pointer;
+}
+
+table {
+	display: inline-block;
+	max-width: 100%;
+	overflow-x: auto;
+	border-collapse: collapse;
+	border: 1px solid #BDBDBD;
+}
+
+thead {
+	background: #BDBDBD;
+}
+
+th, td {
+	padding: 0.5em 1em;
+	text-align: left;
+}
+
+tr {
+	border-bottom: 1px solid #BDBDBD;
+}
+
+tr:last-child {
+	border-bottom: none;
 }
 
 snackbar {
