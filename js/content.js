@@ -63,23 +63,28 @@ function getRepos() {
 	
 				if (obj[i].fork) {
 					forkHTML += getListItem(obj[i].html_url, obj[i].name, obj[i].description);
+					continue;
 				} else if (obj[i].homepage != null && obj[i].homepage.length > 0) {
 					if (obj[i].homepage.indexOf("https://play.google.com/") == 0) {
 						appHTML += getListItem("/about/?" + obj[i].name, obj[i].name, obj[i].description);
+						continue;
 					} else if (obj[i].homepage.indexOf(bintrayLink) == 0) {
 						libHTML += getListItem("/about/?" + obj[i].name, obj[i].name, obj[i].description);
+						continue;
 					} else if (obj[i].homepage.indexOf("https://npmjs.com/") == 0 || obj[i].homepage.indexOf("https://www.npmjs.com/") == 0) {
 						nodejsHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+						continue;
 					} else if (obj[i].homepage.indexOf("https://jfenn.me/") == 0 && obj[i].homepage.indexOf("/apps/") == -1) {
 						webHTML += getListItem(obj[i].homepage, obj[i].name, obj[i].description);
+						continue;
 					}
-				} else {
-					var homepage = obj[i].html_url;
-					if (obj[i].homepage != null && obj[i].homepage.indexOf("https://jfenn.me/") == 0)
-						homepage = obj[i].homepage;
-		
-					repoHTML += getListItem(homepage, obj[i].name, obj[i].description);
 				}
+
+				var homepage = obj[i].html_url;
+				if (obj[i].homepage != null && obj[i].homepage.indexOf("https://jfenn.me/") == 0)
+					homepage = obj[i].homepage;
+						
+				repoHTML += getListItem(homepage, obj[i].name, obj[i].description);
 			}
 		
 	    	var appListElement = document.getElementById('applist');
