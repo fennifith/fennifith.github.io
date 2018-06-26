@@ -41,11 +41,8 @@
 		}
 
 		.filter {
-			position: sticky;
-			top: 1em;
-			
-			background: #FFF;
-			box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.37);
+			background-color: #FFF;
+			border: 1px solid rgba(0, 0, 0, 0.25);
 			z-index: 70;
 			width: 80vw;
 			max-width: 492px;
@@ -61,7 +58,6 @@
 
 		.filter:focus, .filter:focus-within {
 			max-height: 100vh;
-			box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.3);
 		}
 
 		.filter > .title {
@@ -102,7 +98,7 @@
 		}
 
 		.filter > .content {
-			border-top: 1px solid rgba(0, 0, 0, 0.2);
+			border-top: 1px solid rgba(0, 0, 0, 0.25);
 			padding-top: 16px;
 			padding-bottom: 20px;
 		}
@@ -477,12 +473,8 @@
 		}
 	}
 
-	var currentScroll = window.pageYOffset | document.body.scrollTop;
 	window.onscroll = function() {
-		if (Math.abs(currentScroll - (window.pageYOffset | document.body.scrollTop)) > projectsFilterElement.offsetHeight) {
-			document.activeElement.blur();
-			currentScroll = window.pageYOffset | document.body.scrollTop;
-		}		
+		document.activeElement.blur();	
 	};
 	</script>
 </body>
