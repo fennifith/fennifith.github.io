@@ -235,7 +235,7 @@ footer > a {
 	margin: -10px;
 }
 
-.grid>div {
+.grid>.item {
 	display: grid;
 	align-content: center;
 	text-align: center;
@@ -248,9 +248,13 @@ footer > a {
 	-webkit-transition: background-color .25s, box-shadow .25s;
 }
 
-.grid>div:hover {
+.grid>.item:hover {
 	background-color: rgba(0, 0, 0, 0.03);
-	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
+}
+
+.item:hover>p>a {
+	color: #000;
 }
 
 a>span {
