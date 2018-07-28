@@ -60,6 +60,7 @@ button {
 	border: none;
 	outline: none;
 	user-select: none;
+	cursor: pointer;
 	padding: 0.75em 1.25em;
 	background-color: #0091EA;
 	color: #FFF !important;
