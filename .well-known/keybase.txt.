@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jafenn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jfenn.me
+  * I am jafenn (https://keybase.io/jafenn) on keybase.
+  * I have a public key ASAqbtXJuDtfshrI2lXMoTYs_cTyYm_RQzLAKySvcfRS1Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01202a6ed5c9b83b5fb21ac8da55cca1362cfdc4f2626fd14332c02b24af71f452d40a",
+      "host": "keybase.io",
+      "kid": "01202a6ed5c9b83b5fb21ac8da55cca1362cfdc4f2626fd14332c02b24af71f452d40a",
+      "uid": "e6494057cbb6c22d574adfd416516a19",
+      "username": "jafenn"
+    },
+    "merkle_root": {
+      "ctime": 1533769511,
+      "hash": "aea95ec3905ce46e2b9a61f5e7db541dae328e76ee19906f1f56f77a9a39ad2a86302bf4e353bc6432520eaf7772db293a8f4b1d6698473f74101c2ab049cfa3",
+      "hash_meta": "dcee4f3e0ee1753dd71013901dc84b1ee1d03ca9b049a890ac1371b022f247cf",
+      "seqno": 3429213
+    },
+    "service": {
+      "entropy": "LQFOrJFJvKWCupiCN7DT8NEe",
+      "hostname": "jfenn.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.3.0"
+  },
+  "ctime": 1533769536,
+  "expire_in": 504576000,
+  "prev": "4f89596d003467aadd9d20385d17be293fb955c3d45bb00d2657a23bb9fa99d0",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgKm7Vybg7X7IayNpVzKE2LP3E8mJv0UMywCskr3H0UtQKp3BheWxvYWTESpcCCcQgT4lZbQA0Z6rdnSA4XRe+KT+5VcPUW7ANJleiO7n6mdDEIPdFYV0ArW3Bwf1tjHExw/2mdCDNwhB8V4mGc7uVBy2DAgHCo3NpZ8RAY4GFT1Vm3SAuveWp/kYx7QWBBPrYF5JH9KWD1DPOHthHvoBsL7gcqtfnXV25QFaKnoSnM4YMv/D4/juUFog+BahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFJHLG3y/i8AdDuvEz6LYH8f8x5mLRZDmxTe9V/UJRJXo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jafenn
+
+==================================================================
