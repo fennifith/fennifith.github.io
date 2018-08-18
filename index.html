@@ -1,10 +1,15 @@
+---
+title: James Fenn
+permalink: /
+---
+
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 
-	<meta name="description" content="App developer and designer">
+	<meta name="description" content="James Fenn's portfolio site.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="generator" content="James Fenn" />
@@ -14,7 +19,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<link rel="manifest" href="manifest.json">
 
-	<meta name="application-name" content="JF">
+	<meta name="application-name" content="James Fenn">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-tooltip" content="James Fenn">
 	<meta name="msapplication-config" content="/ieconfig.xml">
@@ -193,82 +198,37 @@
 					<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
 					<i class="material-icons clickable">expand_more</i>
 				</div>
-				<div class="content">
+				<div id="projectCheckBoxes" class="content">
+					{% assign types = site.types | sort: "order" %}
+					{% for type in types %}
 					<div class="fitem">
-						<input id="capps" type="checkbox" checked></input>
-						<label for="capps"></label>
-						<span>Published Apps</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('apps')">find_in_page</i>
+						<input id="c{{ type.tag }}" type="checkbox" checked></input>
+						<label for="c{{ type.tag }}"></label>
+						<span>{{ type.title }}</span>
+						<i class="material-icons focusable clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
 					</div>
-					<div class="fitem">
-						<input id="clibraries" type="checkbox" checked></input>
-						<label for="clibraries"></label>
-						<span>Android/Java Libraries</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('libraries')">find_in_page</i>
-					</div>
-					<div class="fitem">
-						<input id="cnodejs" type="checkbox" checked></input>
-						<label for="cnodejs"></label>
-						<span>NodeJS Projects</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('nodejs')">find_in_page</i>
-					</div>
-					<div class="fitem">
-						<input id="cwebsites" type="checkbox" checked></input>
-						<label for="cwebsites"></label>
-						<span>Websites</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('websites')">find_in_page</i>
-					</div>
-					<div class="fitem">
-						<input id="cforks" type="checkbox" checked></input>
-						<label for="cforks"></label>
-						<span>Forked Projects</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('forks')">find_in_page</i>
-					</div>
-					<div class="fitem">
-						<input id="cother" type="checkbox" checked></input>
-						<label for="cother"></label>
-						<span>Other</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('other')">find_in_page</i>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 			<div id="projectsCategories" class="categories">
-				<div id="apps">
-					<h2>Published Apps</h2>
-					<div id="applist" class="grid"></div>
+				{% assign types = site.types | sort: "order" %}
+				{% for type in types %}
+				<div id="{{ type.tag }}">
+					<h2>{{ type.title }}</h2>
+					<div id="{{ type.tag }}list">
+						{% assign projects = site.projects | where: 'type', type.tag %}
+						{% for project in projects %}
+						<div class="item">
+							<p>
+								<a>{{ project.title }}</a>
+								<br>
+								{{ project.description }}
+							</p>
+						</div>
+						{% endfor %}
+					</div>
 				</div>
-				<div id="libraries">
-					<h2>Libraries</h2>
-					<div id="liblist"></div>
-				</div>
-				<div id="nodejs">
-					<h2>NodeJS Projects</h2>
-					<div id="nodejslist"></div>
-				</div>
-				<div id="websites">
-					<h2>Websites</h2>
-					<h4>
-						I still don't consider myself a good web developer yet, so most of these aren't intended to be a final product
-						of any sort. They're just here because I was bored and had nothing else to do.
-					</h4>
-					<div id="weblist"></div>
-				</div>
-				<div id="forks">
-					<h2>Forked Projects</h2>
-					<h4>
-						Unlike some other GitHub users, I don't just fork repositories as an alternative to starring them - projects
-						are usually here because I actually do intend to contribute to them in some way.
-					</h4>
-					<div id="forklist"></div>
-				</div>
-				<div id="other">
-					<h2>Other Projects</h2>
-					<h4>
-						This is a bunch of unsorted stuff that is sometimes interesting, but mostly just things I made in my free time
-						that aren't ready to be published yet.
-					</h4>
-					<div id="repolist"></div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 		<div page="community">
@@ -367,26 +327,11 @@
 		<a href="/policies/?web" target="_blank">Privacy Policy</a>
 	</footer>
 
-	<script src="js/utils.js"></script>
-	<script src="js/github.js"></script>
-	<script src="js/content.js"></script>
-	<script src="js/navigation.js"></script>
-  	<script type="text/javascript">
-  	onPage = function(page, element) {
-  		switch (page) {
-  			case "home":
-  				getOrganizations();
-  				horriblePun();
-  				break;
-  			case "projects":
-  				getRepos();
-  				break;
-  			case "community":
-  				getUsers();
-  				break;
-  		}
-  	}
-	
+	<script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/github.js"></script>
+	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript" src="js/navigation.js"></script>
+  	<script type="text/javascript">	
 	function horriblePun() {
 		var hellos = [
 			'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
@@ -425,14 +370,11 @@
 	var projectsFilterElement = document.getElementById("projectsFilter");
 	var projectsFilterTextElement = document.getElementById("projectsFilterText");
 	var projectsCategoriesElement = document.getElementById("projectsCategories");
-	var projectsCheckBoxElements = [
-		document.getElementById("capps"),
-		document.getElementById("clibraries"),
-		document.getElementById("cnodejs"),
-		document.getElementById("cwebsites"),
-		document.getElementById("cforks"),
-		document.getElementById("cother")
-	];
+	var projectsCheckBoxElements = [];
+	for (var i = 0; i < projectsCategoriesElement.childNodes.length; i++) {
+		if (projectsCategoriesElement.childNodes[i].id)
+			projectsCheckBoxElements.push(document.getElementById("c" + projectsCategoriesElement.childNodes[i].id));
+	}
 
 	projectsFilterTextElement.addEventListener("keyup", function() {
 		var categories = projectsCategoriesElement.children;
