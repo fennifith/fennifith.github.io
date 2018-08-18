@@ -1,0 +1,8 @@
+<snackbar id="evilstuff">
+	<span>This site may do shady things with cookies and stuff because it's evil. Please don't read my <a href="/policies/?web" target="_blank">privacy policy</a>.</span>
+	<a onclick="document.getElementById('evilstuff').style.display = 'none'; if (localStorage) localStorage.setItem('acceptedEvil', 'true');"><i class="material-icons">close</i></a>
+	<script>
+	if (localStorage && localStorage.getItem("acceptedEvil"))
+		document.getElementById("evilstuff").style.display = "none";
+	</script>
+</snackbar>
