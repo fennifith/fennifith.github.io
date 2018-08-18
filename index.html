@@ -1,337 +1,168 @@
 ---
+layout: default
 title: James Fenn
 permalink: /
 ---
 
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-
-	<meta name="description" content="James Fenn's portfolio site.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="generator" content="James Fenn" />
-	<title>James Fenn</title>
-
-	<meta name="theme-color" content="#FFFFFF">
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="manifest" href="manifest.json">
-
-	<meta name="application-name" content="James Fenn">
-	<meta name="msapplication-TileColor" content="#000000">
-	<meta name="msapplication-tooltip" content="James Fenn">
-	<meta name="msapplication-config" content="/ieconfig.xml">
-
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="icon" sizes="16x16" href="/favicon.ico">
-	<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
-	<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
-	<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
-	<link rel="icon" sizes="64x64" href="/images/favicon-48.ico">
-
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="James Fenn">
-	<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
-
-	<link href="https://fonts.googleapis.com/css?family=Miriam+Libre" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-
-  	<style>
-		#main {
-			padding-bottom: 2em;
-		}
-
-		.filter {
-			background-color: #FFF;
-			border: 1px solid rgba(0, 0, 0, 0.25);
-			z-index: 70;
-			width: 80vw;
-			max-width: 492px;
-			height: auto;
-			max-height: 4em;
-			outline: none;
-			overflow: hidden;
-
-			transition: max-height .25s, box-shadow .25s;
-			-moz-transition: max-height .25s, box-shadow .25s;
-			-webkit-transition: max-height .25s, box-shadow .25s;
-		}
-
-		.filter:focus, .filter:focus-within {
-			max-height: 100vh;
-		}
-
-		.filter > .title {
-			width: 100%;
-			height: 4em;
-			background-color: #F5F5F5;
-		}
-
-		.filter > .title > input {
-			height: 100%;
-			width: calc(100% - 88px);
-			outline: none;
-			border: none;
-			padding-left: 24px;
-			background-color: rgba(0, 0, 0, 0);
-		}
-
-		.filter i.material-icons {
-			color: rgba(0, 0, 0, 0.5);
-			margin-left: 12px;
-			margin-right: 12px;
-			position: relative;
-			right: 0;
-		}
-
-		.filter > .title > i.material-icons {
-			top: calc(1em - 16px);
-			transform: rotate(0deg);
-
-			transition: transform .25s;
-			-moz-transition: transform .25s;
-			-webkit-transition: transform .25s;
-		}
-
-		.filter:focus > .title > i.material-icons,
-		.filter:focus-within > .title > i.material-icons {
-			transform: rotate(180deg);
-		}
-
-		.filter > .content {
-			border-top: 1px solid rgba(0, 0, 0, 0.25);
-			padding-top: 16px;
-			padding-bottom: 20px;
-		}
-
-		.filter .fitem {
-			display: table;
-			width: 100%;
-			padding: 0.25em 0;
-			user-select: none;
-		}
-
-		.filter .fitem > span {
-			display: inline-block;
-			width: calc(100% - 2em - 92px);
-		}
-
-		.filter .fitem > i.material-icons {
-			transform: translateY(6px);
-		}
-
-		#yes, #yesfg {
-			position: absolute;
-			display: none;
-			height: 16em;
-			width: 100%;
-			border: none;
-		}
-
-		#yes {
-			z-index: -2;
-		}
-
-		#yesfg {
-			background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.35) 20%, rgba(255, 255, 255, 0) 40%);
-			z-index: -1;
-		}
-
-		@media(min-width: 1040px) {
-			#yes, #yesfg {
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-			}
-		}
-  </style>
-</head>
-<body>
-	<nav>
-		<button page="home" class="selectable"><i class="material-icons">home</i><span class="desktop">Home</span></button>
-		<button page="projects" class="selectable"><i class="material-icons">code</i><span class="desktop">Projects</span></button>
-		<button page="community" class="selectable"><i class="material-icons">people</i><span class="desktop">Community</span></button>
-		<button page="contact" class="selectable"><i class="material-icons">phone</i><span class="desktop">Contact</span></button>
-		<button page="about" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
-	</nav>
-	<div>
-		<iframe id="yes" src="https://jfenn.me/P5Samples/lines/"></iframe>
-		<div id="yesfg"></div>
+<nav>
+	<button page="home" class="selectable"><i class="material-icons">home</i><span class="desktop">Home</span></button>
+	<button page="projects" class="selectable"><i class="material-icons">code</i><span class="desktop">Projects</span></button>
+	<button page="community" class="selectable"><i class="material-icons">people</i><span class="desktop">Community</span></button>
+	<button page="contact" class="selectable"><i class="material-icons">phone</i><span class="desktop">Contact</span></button>
+	<button page="about" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
+</nav>
+<main id="main" style="display: none;">
+	<div page="home">
+		<h1>Hi,</h1>
+		<h2 id="person">I'm a person.</h2>
+		<p>
+			I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
+			I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
+			and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also design things and even occasionally write PHP. Nearly everything that I make 
+			is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
+			PRs on all of my projects unless stated otherwise.
+		</p>
+		<h2>Find me in places.</h2>
+		<a href="/redirects/?t=github">I commit.</a><br>
+		<a href="/blog">I blog.</a><br>
+		<a href="/redirects/?t=twitter">I tweet.</a><br>
+		<a href="/redirects/?t=medium">I write.</a><br>
+		<a href="/redirects/?t=reddit">I snoo.</a><br>
+		<a href="/redirects/?t=bintray">I bin.</a><br>
+		<a href="/redirects/?t=stackoverflow">I stack.</a><br>
+		<a href="/redirects/?t=keybase">I am.</a><br>
+		<h2>See my work.</h2>
+		<p>
+			You can find most of my projects <a href="/?projects">here</a>. I've also worked on a couple projects in some organizations:
+		</p>
+		<div id="organizationlist" class="grid"></div>
+		<br>
+		<i id="pun"></i>
 	</div>
-	<main id="main" style="display: none;">
-		<div page="home">
-			<h1>Hi,</h1>
-			<h2 id="person">I'm a person.</h2>
-			<p>
-				I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
-				I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
-				and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also design things and even occasionally write PHP. Nearly everything that I make 
-				is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
-				PRs on all of my projects unless stated otherwise.
-			</p>
-			<h2>Find me in places.</h2>
-			<a href="/redirects/?t=github">I commit.</a><br>
-			<a href="/blog">I blog.</a><br>
-			<a href="/redirects/?t=twitter">I tweet.</a><br>
-			<a href="/redirects/?t=medium">I write.</a><br>
-			<a href="/redirects/?t=reddit">I snoo.</a><br>
-			<a href="/redirects/?t=bintray">I bin.</a><br>
-			<a href="/redirects/?t=stackoverflow">I stack.</a><br>
-			<a href="/redirects/?t=keybase">I am.</a><br>
-			<h2>See my work.</h2>
-			<p>
-				You can find most of my projects <a href="/?projects">here</a>. I've also worked on a couple projects in some organizations:
-			</p>
-			<div id="organizationlist" class="grid"></div>
-			<br>
-			<i id="pun"></i>
-		</div>
-		<div id="projects" page="projects">
-			<div id="projectsFilter" class="filter" tabindex="0">
-				<div class="title">
-					<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
-					<i class="material-icons clickable">expand_more</i>
+	<div id="projects" page="projects">
+		<filter id="projectsFilter" tabindex="0">
+			<div class="title">
+				<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
+				<i class="material-icons clickable">expand_more</i>
+			</div>
+			<div id="projectCheckBoxes" class="content">
+				{% assign types = site.types | sort: "order" %}
+				{% for type in types %}
+				<div class="fitem">
+					<input id="c{{ type.tag }}" type="checkbox" checked></input>
+					<label for="c{{ type.tag }}"></label>
+					<span>{{ type.title }}</span>
+					<i class="material-icons focusable clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
 				</div>
-				<div id="projectCheckBoxes" class="content">
-					{% assign types = site.types | sort: "order" %}
-					{% for type in types %}
-					<div class="fitem">
-						<input id="c{{ type.tag }}" type="checkbox" checked></input>
-						<label for="c{{ type.tag }}"></label>
-						<span>{{ type.title }}</span>
-						<i class="material-icons focusable clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
+				{% endfor %}
+			</div>
+		</filter>
+		<div id="projectsCategories" class="categories">
+			{% assign types = site.types | sort: "order" %}
+			{% for type in types %}
+			<div id="{{ type.tag }}">
+				<h2>{{ type.title }}</h2>
+				<div id="{{ type.tag }}list">
+					{% assign projects = site.projects | where: 'type', type.tag %}
+					{% for project in projects %}
+					<div class="item">
+						<p>
+							<a>{{ project.title }}</a>
+							<br>
+							{{ project.description }}
+						</p>
 					</div>
 					{% endfor %}
 				</div>
 			</div>
-			<div id="projectsCategories" class="categories">
-				{% assign types = site.types | sort: "order" %}
-				{% for type in types %}
-				<div id="{{ type.tag }}">
-					<h2>{{ type.title }}</h2>
-					<div id="{{ type.tag }}list">
-						{% assign projects = site.projects | where: 'type', type.tag %}
-						{% for project in projects %}
-						<div class="item">
-							<p>
-								<a>{{ project.title }}</a>
-								<br>
-								{{ project.description }}
-							</p>
-						</div>
-						{% endfor %}
-					</div>
-				</div>
-				{% endfor %}
-			</div>
+			{% endfor %}
 		</div>
-		<div page="community">
-			<h2>People</h2>
-			<h4>
-				I'm great and all, but these people are also pretty great. They probably helped me out with something at some
-				point in time, or maybe I just find their projects interesting.
-				<br>
-				Go check out some of their work!
-			</h4>
-			<div id="userlist"></div>
-		</div>
-		<div page="contact">
-			<h2>Talk to me</h2>
-			<p>
-				I don't always reply to <a href="mailto:me@jfenn.me">email</a>s right away because of time limitations
-				(and I can't reply from my Android Wear), but my DMs on <a href="/redirects/?t=twitter">Twitter</a> are
-				always open, as well as <a href="/redirects/?t=instagram">Instagram</a>, <a href="/redirects/?t=redddit">Reddit</a>, 
-				and Hangouts. You can also find me on <a href="/redirects/?t=googleplus">Google+</a>, <a href="/redirects/?t=medium">Medium</a>,
-				<a href="/redirects/?t=stackoverflow">Stack Overflow</a>, <a href="/redirects/?t=github">GitHub</a>, 
-				<a href="/redirects/?t=uplabs">UpLabs</a>, and just about every other social media site in existence...
-			</p>
-			<p>
-				I have recently started to get bombarded with far more questions per day than I can ever hope to answer, so I am trying
-				to take steps to reduce the amount of time I spend responding to these. If you are trying to contact me with a question
-				or bug report about one of my apps, I would greatly appreciate it if you would check the issues section on GitHub first
-        		to make sure it hasn't already been answered. If you want to contact me to discuss implementing your ad revenue framework
-        		in one of my apps, don't bother: the answer's no. If you have a great idea for a new project for me to work on however, please
-        		don't hesitate to shoot me a message, as I take great joy in adding to my growing pile of things for me to do when I don't have
-       	 		anything to do. (yes, that's contradictory on purpose)
-			</p>
-		</div>
-		<div page="about">
-			<h2>Me, myself, and I</h2>
-			<p>
-				Well, since you must have clicked on a link to the "about" section of my website at some point, that must mean you are genuinely
-				interested in knowing more about me. Gosh, I'm flattered. Well, a bit of history then.
-			</p>
-			<p>
-				I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
-				the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
-				how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
-				because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
-				to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be farther from the truth.
-				Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
-				form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
-				I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
-				instructions when you first start programming is that there are no problems. Since you're following instructions that have already been
-				tried and tested, you know that everything will work properly. There is no design process - testing, problem solving, and finding solutions
-				are all skipped over. So while I did know the basics of python in middle school, I didn't make anything with it. It seemed pointless to me.
-			</p>
-			<p>
-				I got my first Android device (The Great Samsung Galaxy S2) when I was 13, and started making my first app on it
-				a little over a year later. Because I was a lazy idiot, my first few projects consisted entirely of a WebView linked to a
-				Google Sites page, but I quickly realized the limitations of this method. During the summer break of 2015, I spent hours every day
-				scouring <a href="https://stackoverflow.com">Stack Overflow</a> for examples of how make an android app perform various tasks.
-				This was especially difficult as I had no prior knowledge of the Java language and I'm pretty sure that I didn't even know I was
-				writing Java for the first couple months. My first project was a basic app that took a paragraph as input, and make it 'bigger'
-				by replacing words with longer phrases and/or doubling the amount of spaces between words and sentences in the document. It wasn't
-				long after I finished this that I got my Google Play account and started working on a new app to display a collection of wallpapers
-				made by people I had met on Google Plus.
-			</p>
-			<p>
-				That app has since been unpublished because it was a complete abomination with the worst code style I have ever seen in my life,
-				and is currently collecting dust at the bottom of my GitHub profile. While making it, however, I managed to improve the app's UX
-				a great deal and learnt a lot about consumer-focused design, making the app's functionality both easy for new users to understand
-				and fast enough for existing users to navigate without feeling like they're wasting time.
-			</p>
+	</div>
+	<div page="community">
+		<h2>People</h2>
+		<h4>
+			I'm great and all, but these people are also pretty great. They probably helped me out with something at some
+			point in time, or maybe I just find their projects interesting.
 			<br>
-			<p>
-				Well, that's about all I can think of for an informal description of myself. Ever since I learnt to make Android apps, I've been
-				bouncing around between lots of different types of projects. Some are intended for regular consumers, some for people obsessed
-				with customization, and even a few for other developers like me.
-			</p>
-			<p>
-				I am currently in my freshman year of college at the University of Pittsburgh trying to figure out what on earth I want to do with
-				my life. That said, I'm still hopelessly addicted to programming, and will keep making anything and everything I can think of in my 
-				free time.
-			</p>
-		</div>
-	</main>
-
-	<snackbar id="evilstuff">
-		<span>This site may do shady things with cookies and stuff because it's evil. Please don't read my <a href="/policies/?web" target="_blank">privacy policy</a>.</span>
-		<a onclick="document.getElementById('evilstuff').style.display = 'none'; if (localStorage) localStorage.setItem('acceptedEvil', 'true');"><i class="material-icons">close</i></a>
-		<script>
-			if (localStorage && localStorage.getItem("acceptedEvil"))
-				document.getElementById("evilstuff").style.display = "none";
-		</script>
-	</snackbar>
-
-	<footer>
-		<hr>
-		<a href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+			Go check out some of their work!
+		</h4>
+		<div id="userlist"></div>
+	</div>
+	<div page="contact">
+		<h2>Talk to me</h2>
+		<p>
+			I don't always reply to <a href="mailto:me@jfenn.me">email</a>s right away because of time limitations
+			(and I can't reply from my Android Wear), but my DMs on <a href="/redirects/?t=twitter">Twitter</a> are
+			always open, as well as <a href="/redirects/?t=instagram">Instagram</a>, <a href="/redirects/?t=redddit">Reddit</a>, 
+			and Hangouts. You can also find me on <a href="/redirects/?t=googleplus">Google+</a>, <a href="/redirects/?t=medium">Medium</a>,
+			<a href="/redirects/?t=stackoverflow">Stack Overflow</a>, <a href="/redirects/?t=github">GitHub</a>, 
+			<a href="/redirects/?t=uplabs">UpLabs</a>, and just about every other social media site in existence...
+		</p>
+		<p>
+			I have recently started to get bombarded with far more questions per day than I can ever hope to answer, so I am trying
+			to take steps to reduce the amount of time I spend responding to these. If you are trying to contact me with a question
+			or bug report about one of my apps, I would greatly appreciate it if you would check the issues section on GitHub first
+       		to make sure it hasn't already been answered. If you want to contact me to discuss implementing your ad revenue framework
+       		in one of my apps, don't bother: the answer's no. If you have a great idea for a new project for me to work on however, please
+       		don't hesitate to shoot me a message, as I take great joy in adding to my growing pile of things for me to do when I don't have
+   	 		anything to do. (yes, that's contradictory on purpose)
+		</p>
+	</div>
+	<div page="about">
+		<h2>Me, myself, and I</h2>
+		<p>
+			Well, since you must have clicked on a link to the "about" section of my website at some point, that must mean you are genuinely
+			interested in knowing more about me. Gosh, I'm flattered. Well, a bit of history then.
+		</p>
+		<p>
+			I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
+			the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
+			how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
+			because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
+			to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be farther from the truth.
+			Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
+			form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
+			I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
+			instructions when you first start programming is that there are no problems. Since you're following instructions that have already been
+			tried and tested, you know that everything will work properly. There is no design process - testing, problem solving, and finding solutions
+			are all skipped over. So while I did know the basics of python in middle school, I didn't make anything with it. It seemed pointless to me.
+		</p>
+		<p>
+			I got my first Android device (The Great Samsung Galaxy S2) when I was 13, and started making my first app on it
+			a little over a year later. Because I was a lazy idiot, my first few projects consisted entirely of a WebView linked to a
+			Google Sites page, but I quickly realized the limitations of this method. During the summer break of 2015, I spent hours every day
+			scouring <a href="https://stackoverflow.com">Stack Overflow</a> for examples of how make an android app perform various tasks.
+			This was especially difficult as I had no prior knowledge of the Java language and I'm pretty sure that I didn't even know I was
+			writing Java for the first couple months. My first project was a basic app that took a paragraph as input, and make it 'bigger'
+			by replacing words with longer phrases and/or doubling the amount of spaces between words and sentences in the document. It wasn't
+			long after I finished this that I got my Google Play account and started working on a new app to display a collection of wallpapers
+			made by people I had met on Google Plus.
+		</p>
+		<p>
+			That app has since been unpublished because it was a complete abomination with the worst code style I have ever seen in my life,
+			and is currently collecting dust at the bottom of my GitHub profile. While making it, however, I managed to improve the app's UX
+			a great deal and learnt a lot about consumer-focused design, making the app's functionality both easy for new users to understand
+			and fast enough for existing users to navigate without feeling like they're wasting time.
+		</p>
 		<br>
-		<a href="/policies/?web" target="_blank">Privacy Policy</a>
-	</footer>
+		<p>
+			Well, that's about all I can think of for an informal description of myself. Ever since I learnt to make Android apps, I've been
+			bouncing around between lots of different types of projects. Some are intended for regular consumers, some for people obsessed
+			with customization, and even a few for other developers like me.
+		</p>
+		<p>
+			I am currently in my freshman year of college at the University of Pittsburgh trying to figure out what on earth I want to do with
+			my life. That said, I'm still hopelessly addicted to programming, and will keep making anything and everything I can think of in my 
+			free time.
+		</p>
+	</div>
+</main>
 
-	<script type="text/javascript" src="js/utils.js"></script>
-	<script type="text/javascript" src="js/github.js"></script>
-	<script type="text/javascript" src="js/content.js"></script>
-	<script type="text/javascript" src="js/navigation.js"></script>
-  	<script type="text/javascript">	
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/github.js"></script>
+<script type="text/javascript" src="js/content.js"></script>
+<script type="text/javascript" src="js/navigation.js"></script>
+<script type="text/javascript">	
 	function horriblePun() {
 		var hellos = [
 			'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
@@ -429,6 +260,4 @@ permalink: /
 	window.onscroll = function() {
 		document.activeElement.blur();	
 	};
-	</script>
-</body>
-</html>
+</script>

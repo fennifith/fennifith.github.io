@@ -177,6 +177,86 @@ snackbar > a {
 	float: right;
 }
 
+filter {
+	display: block;
+	background-color: #FFF;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	z-index: 70;
+	width: 80vw;
+	max-width: 492px;
+	height: auto;
+	max-height: 4em;
+	outline: none;
+	overflow: hidden;
+
+	transition: max-height .25s, box-shadow .25s;
+	-moz-transition: max-height .25s, box-shadow .25s;
+	-webkit-transition: max-height .25s, box-shadow .25s;
+}
+
+filter:focus, filter:focus-within {
+	max-height: 100vh;
+}
+
+filter > .title {
+	width: 100%;
+	height: 4em;
+	background-color: #F5F5F5;
+}
+
+filter > .title > input {
+	height: 100%;
+	width: calc(100% - 88px);
+	outline: none;
+	border: none;
+	padding-left: 24px;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+filter i.material-icons {
+	color: rgba(0, 0, 0, 0.5);
+	margin-left: 12px;
+	margin-right: 12px;
+	position: relative;
+	right: 0;
+}
+
+filter > .title > i.material-icons {
+	top: calc(1em - 16px);
+	transform: rotate(0deg);
+	
+	transition: transform .25s;
+	-moz-transition: transform .25s;
+	-webkit-transition: transform .25s;
+}
+
+filter:focus > .title > i.material-icons,
+filter:focus-within > .title > i.material-icons {
+	transform: rotate(180deg);
+}
+
+filter > .content {
+	border-top: 1px solid rgba(0, 0, 0, 0.25);
+	padding-top: 16px;
+	padding-bottom: 20px;
+}
+
+filter .fitem {
+	display: table;
+	width: 100%;
+	padding: 0.25em 0;
+	user-select: none;
+}
+
+filter .fitem > span {
+	display: inline-block;
+	width: calc(100% - 2em - 92px);
+}
+
+filter .fitem > i.material-icons {
+	transform: translateY(6px);
+}
+
 nav {
 	width: 80% !important;
 	height: auto;
