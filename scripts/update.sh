@@ -1,3 +1,4 @@
+npm cache clear --force
 git pull
 
 jekyll serve &
