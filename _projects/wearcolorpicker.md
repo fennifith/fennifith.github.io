@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/WearColorPicker
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Bintray
     url: https://bintray.com/18jafenn90/maven/wearcolorpicker
     icon: https://bintray.com/favicon.ico
 contributors:

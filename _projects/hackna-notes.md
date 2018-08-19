@@ -11,6 +11,9 @@ links:
   - name: HackNA 2019
     url: http://hackna.org/
     icon: https://hackna.org/favicon.ico
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/HackNA-Notes/wiki
+    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

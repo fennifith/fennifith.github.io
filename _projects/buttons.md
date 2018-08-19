@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Buttons
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Bintray
     url: https://bintray.com/18jafenn90/maven/buttons
     icon: https://bintray.com/favicon.ico
   - name: app-debug.apk

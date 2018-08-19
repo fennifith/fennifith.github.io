@@ -14,6 +14,9 @@ links:
   - name: PortAuthorityComplainter.apk
     url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/releases/download/v1.1/PortAuthorityComplainter.apk
     icon: /images/ic/download.svg
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/wiki
+    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

@@ -11,6 +11,9 @@ links:
   - name: npm
     url: https://npmjs.com/package/passerator
     icon: https://npmjs.com/favicon.ico
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/Passerator/wiki
+    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

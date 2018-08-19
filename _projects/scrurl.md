@@ -11,6 +11,9 @@ links:
   - name: Website
     url: https://jfenn.me/Scrurl/
     icon: https://jfenn.me/images/favicon-32.ico
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/Scrurl/wiki
+    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
