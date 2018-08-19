@@ -277,6 +277,7 @@ nav {
 	padding: 8px 10%;
 	overflow: hidden;
 	z-index: 100;
+	
 	transition: width .25s;
 	-moz-transition: width .25s;
 	-webkit-transition: width .25s;
@@ -302,6 +303,7 @@ main {
 	margin-right: 10vw;
 	margin-bottom: 2em;
 	padding-top: 2em;
+	
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
@@ -311,6 +313,7 @@ footer {
 	margin-left: 10vw;
 	margin-right: 10vw;
 	margin-bottom: 8em;
+	
 	transition: transform .25s;
 	-moz-transition: transform .25s;
 	-webkit-transition: transform .25s;
@@ -321,6 +324,31 @@ footer > a {
 	color: #606060;
 }
 
+.item {
+	display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #616161;
+    margin-bottom: 1em;
+
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+.item > span {
+	display: block;
+	color: #0091EA;
+
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
+}
+
+.item:hover > span {
+	color: #000;
+}
+
 .grid {
 	display: -webkit-flex;
 	display: flex;
@@ -328,35 +356,33 @@ footer > a {
 	margin: -10px;
 }
 
-.grid>.item {
+.grid > .item {
 	display: grid;
-	align-content: center;
+	align-content: baseline;
 	text-align: center;
-	padding: 16px;
+	padding: 1.5em 16px;
 	width: 200px;
 	border: 2px solid #0091EA;
 	margin: 10px;
-	transition: background-color .25s, box-shadow .25s;
-	-moz-transition: background-color .25s, box-shadow .25s;
-	-webkit-transition: background-color .25s, box-shadow .25s;
+
+	word-break: break-word;
+	word-wrap: break-word;
+	
+	transition: color .25s, background-color .25s, box-shadow .25s;
+	-moz-transition: color .25s, background-color .25s, box-shadow .25s;
+	-webkit-transition: color .25s, background-color .25s, box-shadow .25s;
 }
 
-.grid>.item:hover {
+.grid > .item > img {
+	width: 48px;
+	height: 48px;
+	margin: auto;
+	margin-bottom: 1em;
+}
+
+.grid > .item:hover {
 	background-color: rgba(0, 0, 0, 0.03);
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
-}
-
-.item {
-    cursor: pointer;
-}
-
-.item:hover>p>a {
-	color: #000;
-}
-
-a>span {
-	display: inline-block;
-	text-align: center;
 }
 
 sidebar {
