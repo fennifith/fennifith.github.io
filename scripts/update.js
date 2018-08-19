@@ -168,8 +168,25 @@ try {
 
 		fs.writeFileSync(path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
 			+ "title: " + (person.name ? person.name : person.login) + "\n"
-			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ") : "This is a person.") + "\n"
+			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.") + "\n"
+			+ "avatar: " + person.avatar_url + "\n"
 			+ "link: " + person.html_url + "\n"
+			+ "---\n");
+	}
+
+	let orgs = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
+		headers: { 
+			"User-Agent": "TheAndroidMaster.github.io",
+			"Authorization": token ? "token " + token : null
+		}
+	}).getBody('utf8'));
+
+	for (let i = 0; i < orgs.length; i++) {
+		fs.writeFileSync(path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
+			+ "title: " + orgs[i].login + "\n"
+			+ "description: " + (orgs[i].description ? orgs[i].description : "Things happen.") + "\n"
+			+ "avatar: " + orgs[i].avatar_url + "\n"
+			+ "link: https://github.com/" + orgs[i].login + "\n"
 			+ "---\n");
 	}
 } catch (error) {

@@ -1,11 +1,13 @@
 npm cache clear --force
 git pull
 
+rm -r _projects && mkdir _projects
+rm -r _people && mkdir _people
+rm -r _orgs && mkdir _orgs
+
 jekyll serve &
 JEKYLL_ID=$!
 
-rm -r _projects && mkdir _projects
-rm -r _people && mkdir _people
 cd _site/scripts
 rm -rf node_modules && npm install
 node update.js
