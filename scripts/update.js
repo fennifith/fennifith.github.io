@@ -65,7 +65,15 @@ try {
 						"Authorization": token ? "token " + token : null
 					}
 				}).getBody('utf8'));
+				
 				let contributors = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/contributors", {
+					headers: { 
+						"User-Agent": "TheAndroidMaster.github.io",
+						"Authorization": token ? "token " + token : null
+					}
+				}).getBody('utf8'));
+
+				let releases = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/releases", {
 					headers: { 
 						"User-Agent": "TheAndroidMaster.github.io",
 						"Authorization": token ? "token " + token : null
@@ -86,6 +94,10 @@ try {
 						links += "  - name: Google Play\n"
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico\n";
+					} else if (repo.homepage.includes("bintray.com")) {
+						links += "  - name: Bintray\n"
+							+ "    url: " + repo.homepage + "\n"
+							+ "    icon: https://bintray.com/favicon.ico\n";
 					} else {
 						let page = cheerio.load(request('GET', repo.homepage).getBody('utf8'));
 						let linkTitle = page("head > title").text().trim();
@@ -101,6 +113,20 @@ try {
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
 					}
+				}
+
+				if (releases[0]) {
+					for (let i2 = 0; i2 < releases[0].assets.length; i2++) {
+						links += "  - name: " + releases[0].assets[i2].name + "\n"
+							+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
+							+ "    icon: /images/ic/download.svg\n"; 
+					}
+				}
+
+				if (repo.has_wiki) {
+					links += "  - name: Documentation\n"
+						+ "    url: " + repo.html_url + "/wiki\n"
+						+ "    icon: /images/ic/assignment.svg\n"
 				}
 
 				//TODO: read front matter in `readme` to obtain more links
