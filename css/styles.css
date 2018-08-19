@@ -211,9 +211,10 @@ filter:focus, filter:focus-within {
 }
 
 filter > .title {
-	width: 100%;
+	width: calc(100% - 1px);
 	height: 4em;
 	background-color: #F5F5F5;
+	margin-left: 1px;
 }
 
 filter > .title > input {
