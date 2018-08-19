@@ -81,7 +81,17 @@ permalink: /
 			<br>
 			Go check out some of their work!
 		</h4>
-		<div id="userlist"></div>
+		<div>
+			{% for person in site.people %}
+			<div class="item" onclick="location.href='{{ person.link }}';">
+				<p>
+					<a>{{ person.title }}</a>
+					<br>
+					{{ person.description }}
+				</p>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
 	<div page="about">
 		<h2>Me, myself, and I</h2>

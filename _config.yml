@@ -8,6 +8,8 @@ collections:
         output: false
     links:
         output: false
+    people:
+        output: false
     projects:
         output: true
 
