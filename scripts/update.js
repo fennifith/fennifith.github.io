@@ -85,6 +85,22 @@ try {
 					+ "    url: " + repo.html_url + "\n"
 					+ "    icon: https://github.com/favicon.ico\n";
 
+				links += "  - name: Issues\n"
+					+ "    url: " + repo.html_url + "/issues\n"
+					+ "    icon: /images/ic/bug.svg\n";
+
+				if (repo.has_wiki) {
+					links += "  - name: Documentation\n"
+						+ "    url: " + repo.html_url + "/wiki\n"
+						+ "    icon: /images/ic/assignment.svg\n"
+				}
+
+				if (repo.license && repo.license.key) {
+					links += "  - name: " + (repo.license.name ? repo.license.name : "License") + "\n"
+						+ "    url: https://choosealicense.com/licenses/" + repo.license.key + "/\n"
+						+ "    icon: /images/ic/copyright.svg\n"
+				}
+
 				if (repo.homepage) {				
 					if (repo.homepage.includes("jfenn.me")) {
 						links += "  - name: Website\n"
@@ -121,12 +137,6 @@ try {
 							+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
 							+ "    icon: /images/ic/download.svg\n"; 
 					}
-				}
-
-				if (repo.has_wiki) {
-					links += "  - name: Documentation\n"
-						+ "    url: " + repo.html_url + "/wiki\n"
-						+ "    icon: /images/ic/assignment.svg\n"
 				}
 
 				//TODO: read front matter in `readme` to obtain more links
