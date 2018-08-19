@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/RadialLayout
     icon: https://github.com/favicon.ico
-  - name: radiallayout
+  - name: Google Play
     url: https://bintray.com/18jafenn90/maven/radiallayout
     icon: https://bintray.com/favicon.ico
   - name: RadialLayout.apk

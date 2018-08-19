@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/SignalStrengths
     icon: https://github.com/favicon.ico
-  - name: signalstrengths
+  - name: Google Play
     url: https://bintray.com/18jafenn90/maven/signalstrengths
     icon: https://bintray.com/favicon.ico
   - name: app-debug.apk
