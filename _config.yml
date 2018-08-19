@@ -1,0 +1,21 @@
+name: James Fenn
+description: James Fenn's portfolio site.
+url: https://jfenn.me
+baseurl: "/"
+
+collections:
+    types:
+        output: false
+    links:
+        output: false
+    people:
+        output: false
+    projects:
+        output: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME

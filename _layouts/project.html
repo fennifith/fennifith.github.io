@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	{% include head.html %}
+	<link href="/css/md.css" rel="stylesheet">
+</head>
+<body>
+	<sidebar>
+		<h2>Links</h2>
+		{% for link in page.links %}
+		<a class="link" href="{{ link.url }}">
+			<object data="{{ link.icon }}" type="image/png">
+				<img src="/images/ic/link.svg">
+			</object>
+			<span>{{ link.name }}</span>
+		</a>
+		{% endfor %}
+		<h2>Contributors</h2>
+		{% for contributor in page.contributors %}
+		<a class="link" href="{{ contributor.url }}">
+			<object class="round" data="{{ contributor.avatar }}" type="image/png">
+				<img class="round" src="/images/ic/person.svg">
+			</object>
+			<span>{{ contributor.login }}</span>
+		</a>
+		{% endfor %}
+	</sidebar>
+
+	<main>
+		<h1>{{ page.title }}</h1>
+		<div id="content">
+			{{ content }}
+		</div>
+	</main>
+	
+	{% include snackbar.html %}
+	{% include footer.html %}
+</body>
+</html>

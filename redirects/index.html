@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,6 +13,16 @@
 		<p id="container"></p>
 		<script type="text/javascript" src="/js/utils.js"></script>
 		<script type="text/javascript">
+			var links = {
+				{% assign links = site.links | sort: 'order' %}
+				{% for link in links %}
+				{{ link.title }}: {
+					{% if link.name %}"name": "{{ link.name }}",{% endif %}
+					"url": "{{ link.link }}"
+				}{% unless link.order == 1 %},{% endunless %}
+				{% endfor %} 
+			};
+		
 			var array = window.location.search.substring(1).split("&");
 			var args = {};
 			for (var i = 0; i < array.length; i++) {
@@ -18,25 +32,11 @@
 				} else args[array[i]] = true;
 			}
 			
-			var requestContent = new XMLHttpRequest();
-			requestContent.onreadystatechange = function() {
-				if (requestContent.readyState === 4) {
-					if (requestContent.status === 200 || requestContent.status == 0) {				
-						var social = JSON.parse(requestContent.responseText);
-						if (social != null && social[args.t] != null) {
-							var url = social[args.t].url + (args.d != null ? "/" + StringUtil.format(args.d, social[args.t].name) : "");
-							document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
-							window.location = url;
-							return;
-						}
-					}
-
-					console.error(args, social);
-					window.location = "/404.html";
-				}
-			};
-			requestContent.open("GET", "data.json", true);
-			requestContent.send(null);
+			if (links[args.t]) {
+				var url = links[args.t].url + (args.d != null ? "/" + StringUtil.format(args.d, links[args.t].name) : "");
+				document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+				window.location = url;
+			} else location.href="/404.html";
 		</script>
 	</body>
 </html>

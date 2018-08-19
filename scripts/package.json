@@ -1,0 +1,11 @@
+{
+  "name": "scripts",
+  "author": "James Fenn <18jafenn90@gmail.com> (https://jfenn.me/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "sync-request": "^6.0.0"
+  }
+}
