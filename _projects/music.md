@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Music
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/Music/issues
+    icon: /images/ic/bug.svg
   - name: Website
     url: https://jfenn.me/Music
     icon: https://jfenn.me/images/favicon-32.ico

@@ -8,15 +8,21 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/issues
+    icon: /images/ic/bug.svg
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/wiki
+    icon: /images/ic/assignment.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=me.jfenn.pacomplaints
     icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico
   - name: PortAuthorityComplainter.apk
     url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/releases/download/v1.1/PortAuthorityComplainter.apk
     icon: /images/ic/download.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/wiki
-    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

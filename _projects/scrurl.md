@@ -8,12 +8,18 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Scrurl
     icon: https://github.com/favicon.ico
-  - name: Website
-    url: https://jfenn.me/Scrurl/
-    icon: https://jfenn.me/images/favicon-32.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/Scrurl/issues
+    icon: /images/ic/bug.svg
   - name: Documentation
     url: https://github.com/TheAndroidMaster/Scrurl/wiki
     icon: /images/ic/assignment.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
+  - name: Website
+    url: https://jfenn.me/Scrurl/
+    icon: https://jfenn.me/images/favicon-32.ico
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

@@ -30,7 +30,17 @@ permalink: /
 		<p>
 			You can find most of my projects <a href="/?projects">here</a>. I've also worked on a couple projects in some organizations:
 		</p>
-		<div id="organizationlist" class="grid"></div>
+		<div id="organizationlist" class="grid">
+			{% for org in site.orgs %}
+			<div class="item" onclick="location.href='{{ org.link }}';">
+				<p>
+					<a>{{ org.title }}</a>
+					<br>
+					{{ org.description }}
+				</p>
+			</div>
+			{% endfor %}
+		</div>
 		<br>
 		<i id="pun"></i>
 	</div>

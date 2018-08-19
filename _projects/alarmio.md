@@ -8,6 +8,12 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Alarmio
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/Alarmio/issues
+    icon: /images/ic/bug.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
   - name: Alarmio.apk
     url: https://github.com/TheAndroidMaster/Alarmio/releases/download/0.3/Alarmio.apk
     icon: /images/ic/download.svg

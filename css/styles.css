@@ -64,8 +64,7 @@ img {
 img.round,
 object.round {
 	border-radius: 50%;
-	border: 1.5px solid #000000;
-	margin: -1.5px;
+	border: 1px inset #000000;
 }
 
 button {
@@ -418,7 +417,7 @@ sidebar > .link:hover > span {
 	}
 }
 
-@media(min-width: 600px) {
+@media(min-width: 800px) {
 	sidebar ~ main {
 		width: calc(70% - 20vw);
 	}

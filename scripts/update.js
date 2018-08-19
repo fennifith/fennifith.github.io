@@ -85,6 +85,22 @@ try {
 					+ "    url: " + repo.html_url + "\n"
 					+ "    icon: https://github.com/favicon.ico\n";
 
+				links += "  - name: Issues\n"
+					+ "    url: " + repo.html_url + "/issues\n"
+					+ "    icon: /images/ic/bug.svg\n";
+
+				if (repo.has_wiki) {
+					links += "  - name: Documentation\n"
+						+ "    url: " + repo.html_url + "/wiki\n"
+						+ "    icon: /images/ic/assignment.svg\n"
+				}
+
+				if (repo.license && repo.license.key) {
+					links += "  - name: " + (repo.license.name ? repo.license.name : "License") + "\n"
+						+ "    url: https://choosealicense.com/licenses/" + repo.license.key + "/\n"
+						+ "    icon: /images/ic/copyright.svg\n"
+				}
+
 				if (repo.homepage) {				
 					if (repo.homepage.includes("jfenn.me")) {
 						links += "  - name: Website\n"
@@ -121,12 +137,6 @@ try {
 							+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
 							+ "    icon: /images/ic/download.svg\n"; 
 					}
-				}
-
-				if (repo.has_wiki) {
-					links += "  - name: Documentation\n"
-						+ "    url: " + repo.html_url + "/wiki\n"
-						+ "    icon: /images/ic/assignment.svg\n"
 				}
 
 				//TODO: read front matter in `readme` to obtain more links
@@ -168,8 +178,25 @@ try {
 
 		fs.writeFileSync(path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
 			+ "title: " + (person.name ? person.name : person.login) + "\n"
-			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ") : "This is a person.") + "\n"
+			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.") + "\n"
+			+ "avatar: " + person.avatar_url + "\n"
 			+ "link: " + person.html_url + "\n"
+			+ "---\n");
+	}
+
+	let orgs = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
+		headers: { 
+			"User-Agent": "TheAndroidMaster.github.io",
+			"Authorization": token ? "token " + token : null
+		}
+	}).getBody('utf8'));
+
+	for (let i = 0; i < orgs.length; i++) {
+		fs.writeFileSync(path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
+			+ "title: " + orgs[i].login + "\n"
+			+ "description: " + (orgs[i].description ? orgs[i].description : "Things happen.") + "\n"
+			+ "avatar: " + orgs[i].avatar_url + "\n"
+			+ "link: https://github.com/" + orgs[i].login + "\n"
 			+ "---\n");
 	}
 } catch (error) {
