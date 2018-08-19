@@ -4,29 +4,8 @@
 <head>
 	{% include head.html %}
 	<link href="/css/md.css" rel="stylesheet">
-	<style>
-	img {
-		max-width: 100%;
-		max-height: 80vh;
-	}
-	</style>
 </head>
 <body>
-	<nav>
-		<button onclick="location.href='/';" class="selectable"><i class="material-icons">home</i><span class="desktop">Home</span></button>
-		<button onclick="location.href='/?projects';" class="selectable" selected="true"><i class="material-icons">code</i><span class="desktop">Projects</span></button>
-		<button onclick="location.href='/?community';" class="selectable"><i class="material-icons">people</i><span class="desktop">Community</span></button>
-		<button onclick="location.href='/?contact';" class="selectable"><i class="material-icons">phone</i><span class="desktop">Contact</span></button>
-		<button onclick="location.href='/?about';" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
-	</nav>
-
-	<main>
-		<h1>{{ page.title }}</h1>
-		<div id="content">
-			{{ content }}
-		</div>
-	</main>
-	
 	<sidebar>
 		<h2>Links</h2>
 		{% for link in page.links %}
@@ -35,7 +14,7 @@
 			<span>{{ link.name }}</span>
 		</a>
 		{% endfor %}
-		<h2>Contributor</h2>
+		<h2>Contributors</h2>
 		{% for contributor in page.contributors %}
 		<a class="link" href="{{ contributor.url }}">
 			<img class="round" src="{{ contributor.avatar }}">
@@ -43,6 +22,13 @@
 		</a>
 		{% endfor %}
 	</sidebar>
+
+	<main>
+		<h1>{{ page.title }}</h1>
+		<div id="content">
+			{{ content }}
+		</div>
+	</main>
 	
 	{% include snackbar.html %}
 	{% include footer.html %}
