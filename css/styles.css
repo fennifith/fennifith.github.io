@@ -61,7 +61,8 @@ img {
 	max-height: 80vh;
 }
 
-img.round {
+img.round,
+object.round {
 	border-radius: 50%;
 	border: 1.5px solid #000000;
 	margin: -1.5px;
@@ -377,7 +378,8 @@ sidebar > .link {
 	margin-bottom: 0.5em;
 }
 
-sidebar > .link > img {
+sidebar > .link > img,
+sidebar > .link > object {
 	width: 24px;
 	height: 24px;
 	margin-right: 1em;
@@ -385,6 +387,10 @@ sidebar > .link > img {
 
 sidebar > .link > span {
 	color: #808080;
+	
+	transition: color .25s;
+	-moz-transition: color .25s;
+	-webkit-transition: color .25s;
 }
 
 sidebar > .link:hover > span {

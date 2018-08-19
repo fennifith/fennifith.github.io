@@ -10,14 +10,18 @@
 		<h2>Links</h2>
 		{% for link in page.links %}
 		<a class="link" href="{{ link.url }}">
-			<img src="{{ link.icon }}">
+			<object data="{{ link.icon }}" type="image/png">
+				<img src="/images/ic/link.svg">
+			</object>
 			<span>{{ link.name }}</span>
 		</a>
 		{% endfor %}
 		<h2>Contributors</h2>
 		{% for contributor in page.contributors %}
 		<a class="link" href="{{ contributor.url }}">
-			<img class="round" src="{{ contributor.avatar }}">
+			<object class="round" data="{{ contributor.avatar }}" type="image/png">
+				<img class="round" src="/images/ic/person.svg">
+			</object>
 			<span>{{ contributor.login }}</span>
 		</a>
 		{% endfor %}
