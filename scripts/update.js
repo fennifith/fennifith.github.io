@@ -150,6 +150,28 @@ try {
 			} else console.error("NULL TYPE:", repos[i].full_name);
 		}
 	}
+
+	let people = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", {
+		headers: { 
+			"User-Agent": "TheAndroidMaster.github.io",
+			"Authorization": token ? "token " + token : null
+		}
+	}).getBody('utf8'));
+
+	for (let i = 0; i < people.length; i++) {
+		let person = JSON.parse(request('GET', "https://api.github.com/users/" + people[i].login, {
+			headers: { 
+				"User-Agent": "TheAndroidMaster.github.io",
+				"Authorization": token ? "token " + token : null
+			}
+		}).getBody('utf8'));
+
+		fs.writeFileSync(path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
+			+ "title: " + (person.name ? person.name : person.login) + "\n"
+			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ") : "This is a person.") + "\n"
+			+ "link: " + person.html_url + "\n"
+			+ "---\n");
+	}
 } catch (error) {
 	console.error(error);
 }
