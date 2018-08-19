@@ -32,13 +32,11 @@ permalink: /
 		</p>
 		<div id="organizationlist" class="grid">
 			{% for org in site.orgs %}
-			<div class="item" onclick="location.href='{{ org.link }}';">
-				<p>
-					<a>{{ org.title }}</a>
-					<br>
-					{{ org.description }}
-				</p>
-			</div>
+			<a class="item" href="{{ org.link }}">
+				<img class="round" src="{{ org.avatar }}">
+				<span>{{ org.title }}</span>
+				{{ org.description }}
+			</a>
 			{% endfor %}
 		</div>
 		<br>
@@ -70,13 +68,10 @@ permalink: /
 				<div id="{{ type.tag }}list">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
-					<div class="item" onclick="location.href='{{ project.id }}';">
-						<p>
-							<a>{{ project.title }}</a>
-							<br>
-							{{ project.description }}
-						</p>
-					</div>
+					<a class="item" href="{{ project.id }}">
+						<span>{{ project.title }}</span>
+						{{ project.description }}
+					</a>
 					{% endfor %}
 				</div>
 			</div>
@@ -86,20 +81,18 @@ permalink: /
 	<div page="community">
 		<h2>People</h2>
 		<h4>
-			I'm great and all, but these people are also pretty great. They probably helped me out with something at some
+			I'm great and all, but these people are also pretty great. They have probably helped me out with something at some
 			point in time, or maybe I just find their projects interesting.
 			<br>
 			Go check out some of their work!
 		</h4>
-		<div>
+		<div class="grid">
 			{% for person in site.people %}
-			<div class="item" onclick="location.href='{{ person.link }}';">
-				<p>
-					<a>{{ person.title }}</a>
-					<br>
-					{{ person.description }}
-				</p>
-			</div>
+			<a class="item" href="{{ person.link }}">
+				<img src="{{ person.avatar }}" class="round">
+				<span>{{ person.title }}</span>
+				{{ person.description }}
+			</a>
 			{% endfor %}
 		</div>
 	</div>
