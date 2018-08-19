@@ -17,5 +17,4 @@ contributors:
     url: https://github.com/TheAndroidMaster
 ---
 
-# Monochrome
-A monochromatic pixelated adventure game.
+Monochrome is a monochromatic pixelated game that doesn't have a purpose. It doesn't have a purpose because it hasn't been finished yet. No, that's not a part of the plot, it actually hasn't been finished. It doesn't have a plot. I need to think of one.

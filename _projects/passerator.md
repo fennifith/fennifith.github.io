@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Passerator
     icon: https://github.com/favicon.ico
-  - name: npmjs
+  - name: npm
     url: https://npmjs.com/package/passerator
     icon: https://npmjs.com/favicon.ico
 contributors:

@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Attribouter
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: attribouter
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
 contributors:

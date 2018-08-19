@@ -20,11 +20,11 @@ Feedage is a basic "news reader" app that sorts articles from various RSS feeds 
 
 |Categories|Article|About|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/.screenshots/categories.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/.screenshots/article.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/.screenshots/about.png?raw=true)|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/categories.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/article.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/about.png?raw=true)|
 
 ## Contributing
 
-Pull requests are welcome. Please see [CONTRIBUTING.md](/.github/CONTRIBUTING.md) for more information on steps to take before submitting a pull request.
+Pull requests are welcome. Please see [CONTRIBUTING.md](https://github.com/TheAndroidMaster/Feedage/blob/master/./.github/CONTRIBUTING.md) for more information on steps to take before submitting a pull request.
 
 ## Organization
 

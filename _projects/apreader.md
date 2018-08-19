@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/APReader
     icon: https://github.com/favicon.ico
-  - name: androidpolice
+  - name: Android Police
     url: https://www.androidpolice.com/
     icon: https://www.androidpolice.com/favicon.ico
 contributors:

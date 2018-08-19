@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/SignalStrengths
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: signalstrengths
     url: https://bintray.com/18jafenn90/maven/signalstrengths
     icon: https://bintray.com/favicon.ico
 contributors:

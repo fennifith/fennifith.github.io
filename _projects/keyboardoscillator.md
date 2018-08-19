@@ -8,11 +8,10 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/KeyboardOscillator
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Website
     url: https://jfenn.me/KeyboardOscillator/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
 ---
 
-# Keyboard Oscillator
-Small website that turns your keyboard into a weird synth thingy.
+Keyboard Oscillator is a tiny website that turns your keyboard into a weird synth thingy.

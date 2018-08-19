@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Music
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Website
     url: https://jfenn.me/Music
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
@@ -17,6 +17,4 @@ contributors:
     url: https://github.com/TheAndroidMaster
 ---
 
-# Music
-
-A collection of my piano compositions and other music-related projects. Exists mainly as documentation, and for practice creating music/media-related websites, not because I am a good musician. I am an experienced musician, not a good one. Don't blame me if any of it gives you a headache.
+This website is a collection of my piano compositions and other music-related projects. It exists mainly as documentation, and for practice creating music/media-related websites, not because I am a good musician. I am an experienced musician, not a good one. Don't blame me if anything gives you a headache.

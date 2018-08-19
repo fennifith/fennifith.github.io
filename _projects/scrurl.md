@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Scrurl
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Website
     url: https://jfenn.me/Scrurl/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:

@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/WearColorPicker
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: wearcolorpicker
     url: https://bintray.com/18jafenn90/maven/wearcolorpicker
     icon: https://bintray.com/favicon.ico
 contributors:
@@ -20,6 +20,7 @@ contributors:
 WearColorPicker is lightweight color picker library for Android Wear.
 
 ## Screenshots
+
 |Square Watch|Round Watch|
 |--------|--------|
 |![img](https://theandroidmaster.github.io/images/screenshots/WearColorPicker-Square.png)|![img](https://theandroidmaster.github.io/images/screenshots/WearColorPicker-Round.png)|

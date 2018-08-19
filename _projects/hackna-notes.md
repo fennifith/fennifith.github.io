@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/HackNA-Notes
     icon: https://github.com/favicon.ico
-  - name: hackna
+  - name: HackNA 2019
     url: http://hackna.org/
     icon: https://hackna.org/favicon.ico
 contributors:

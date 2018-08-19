@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/AdaptiveIconView
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: adaptiveiconview
     url: https://bintray.com/18jafenn90/maven/adaptiveiconview
     icon: https://bintray.com/favicon.ico
 contributors:

@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/RadialLayout
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: radiallayout
     url: https://bintray.com/18jafenn90/maven/radiallayout
     icon: https://bintray.com/favicon.ico
 contributors:
@@ -23,7 +23,7 @@ RadialLayout is a scrollable-ish view that arranges images in circles extending 
 
 |With Shadows|Without Shadows|GIF (pronounced "jeff")|
 |-----|-----|-----|
-|<img src="/images/shadows.png?raw=true">|<img src="/images/noshadows.png?raw=true">|<img src="/images/jeff.gif?raw=true">|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/shadows.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/noshadows.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/jeff.gif?raw=true)|
 
 ## Usage
 

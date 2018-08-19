@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/TheAndroidMaster.github.io
     icon: https://github.com/favicon.ico
-  - name: Google Play
+  - name: Website
     url: https://jfenn.me/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:

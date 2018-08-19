@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/ColorPickerDialog
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: colorpickerdialog
     url: https://bintray.com/18jafenn90/maven/colorpickerdialog
     icon: https://bintray.com/favicon.ico
 contributors:

@@ -8,7 +8,7 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PaletteGetter
     icon: https://github.com/favicon.ico
-  - name: bintray
+  - name: palettegetter
     url: https://bintray.com/18jafenn90/maven/palettegetter
     icon: https://bintray.com/favicon.ico
 contributors:
