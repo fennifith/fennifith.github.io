@@ -109,14 +109,12 @@ try {
 					} else if (repo.homepage.includes("play.google.com")) {
 						links += "  - name: Google Play\n"
 							+ "    url: " + repo.homepage + "\n"
-							+ "    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico\n";
-					} else if (repo.homepage.includes("bintray.com")) {
-						links += "  - name: Bintray\n"
-							+ "    url: " + repo.homepage + "\n"
-							+ "    icon: https://bintray.com/favicon.ico\n";
+							+ "    icon: /images/ic/play-store.svg\n";
 					} else {
 						let page = cheerio.load(request('GET', repo.homepage).getBody('utf8'));
 						let linkTitle = page("head > title").text().trim();
+						if (repo.homepage.includes("bintray.com"))
+							linkTitle = "Bintray";
 
 						while (linkTitle.includes("-")) {
 							let parts = linkTitle.split("-");
