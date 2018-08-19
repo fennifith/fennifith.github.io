@@ -1,4 +1,5 @@
 ---
+layout: redirect
 order: 0
 title: bintray
 link: https://bintray.com/18jafenn90

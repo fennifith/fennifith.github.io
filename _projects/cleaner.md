@@ -16,7 +16,7 @@ links:
     icon: /images/ic/copyright.svg
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.cleaner
-    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico
+    icon: /images/ic/play-store.svg
   - name: Cleaner.apk
     url: https://github.com/TheAndroidMaster/Cleaner/releases/download/v1.2/Cleaner.apk
     icon: /images/ic/download.svg

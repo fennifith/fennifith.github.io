@@ -16,7 +16,7 @@ links:
     icon: /images/ic/copyright.svg
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.metronome
-    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico
+    icon: /images/ic/play-store.svg
   - name: Metronome.phone.apk
     url: https://github.com/TheAndroidMaster/Metronome-Android/releases/download/v1.7/Metronome.phone.apk
     icon: /images/ic/download.svg
