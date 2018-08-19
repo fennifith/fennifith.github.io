@@ -423,9 +423,51 @@ sidebar > .link:hover > span {
 	color: #000;
 }
 
-@media(min-width: 600px) {
-	nav>button>i {
-		margin-bottom: 0.25em;
+@media(max-width: 2854px) {
+	.grid > .item {
+		width: calc(12.5% - 56px);
+	}
+}
+
+@media(max-width: 2534px) {
+	.grid > .item {
+		width: calc(14.2% - 56px);
+	}
+}
+
+@media(max-width: 2214px) {
+	.grid > .item {
+		width: calc(16.5% - 56px);
+	}
+}
+
+@media(max-width: 1894px) {
+	.grid > .item {
+		width: calc(20% - 56px);
+	}
+}
+
+@media(max-width: 1574px) {
+	.grid > .item {
+		width: calc(25% - 56px);
+	}
+}
+
+@media(max-width: 1254px) {
+	.grid > .item {
+		width: calc(33.3% - 56px);
+	}
+}
+
+@media(max-width: 934px) {
+	.grid > .item {
+		width: calc(50% - 56px);
+	}
+}
+
+@media(max-width: 614px) {
+	.grid > .item {
+		width: calc(100% - 56px);
 	}
 }
 
@@ -437,9 +479,11 @@ sidebar > .link:hover > span {
 	.desktop {
 		display: none;
 	}
+}
 
-	.grid > div {
-		width: 100%;
+@media(min-width: 600px) {
+	nav>button>i {
+		margin-bottom: 0.25em;
 	}
 }
 
