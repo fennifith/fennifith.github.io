@@ -1,4 +1,5 @@
 ---
+layout: redirect
 order: 0
 title: twitter
 name: IDontLikePHP

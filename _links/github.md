@@ -1,4 +1,5 @@
 ---
+layout: redirect
 order: 0
 title: github
 link: https://github.com/TheAndroidMaster

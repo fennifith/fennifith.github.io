@@ -7,7 +7,7 @@ collections:
     types:
         output: false
     links:
-        output: false
+        output: true
     people:
         output: false
     orgs:
