@@ -21,6 +21,7 @@
 body {
 	margin: 0;
 	background-color: #FFFFFF;
+	color: #424242;
 }
 
 p {
@@ -409,6 +410,34 @@ sidebar > .link > object {
 	width: 24px;
 	height: 24px;
 	margin-right: 1em;
+}
+
+sidebar > .link > img.round,
+sidebar > .link > object.round {
+	border-color: #808080;
+
+	transition: border .25s;
+	-moz-transition: border .25s;
+	-webkit-transition: border .25s;
+}
+
+sidebar > .link:hover > img.round,
+sidebar > .link:hover > object.round {
+	border-color: #000000;
+}
+
+sidebar > .link > img:not(.round),
+sidebar > .link > object:not(.round) {
+	filter: contrast(0);
+
+	transition: filter .25s;
+	-moz-transition: filter .25s;
+	-webkit-transition: filter .25s;
+}
+
+sidebar > .link:hover > img:not(.round),
+sidebar > .link:hover > object:not(.round) {
+	filter: contrast(0) brightness(0);
 }
 
 sidebar > .link > span {
