@@ -13,6 +13,7 @@ const types = [
 const path = require("path");
 const fs = require('fs');
 const request = require('sync-request');
+const cheerio = require('cheerio');
 
 let token = null;
 try {
@@ -52,7 +53,7 @@ try {
 				try {
 					readme = request('GET', "https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md").getBody('utf8');
 					readme = readme.replace(/(!\[img\]\(.)([A-Za-z\/.?=]{0,})(\))/g, "![img](https://raw.githubusercontent.com/" + repos[i].full_name + "/master/.$2)")
-						.replace(/(\[)([A-Za-z]{0,})(\]\(.)([A-Za-z\/.?=]{0,})(\))/g, "[$2](" + repos[i].html_url + "/blob/master/.$4)");
+						.replace(/(\[)([A-Za-z.`]{0,})(\]\(.)([A-Za-z\/.?=`]{0,})(\))/g, "[$2](" + repos[i].html_url + "/blob/master/.$4)");
 				} catch (error) {
 					console.error("NO README:", repos[i].full_name);
 					continue;
@@ -76,29 +77,27 @@ try {
 					+ "    url: " + repo.html_url + "\n"
 					+ "    icon: https://github.com/favicon.ico\n";
 
-				if (repo.homepage) {
+				if (repo.homepage) {				
 					if (repo.homepage.includes("jfenn.me")) {
-						links += "  - name: Google Play\n"
+						links += "  - name: Website\n"
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://jfenn.me/images/favicon-32.ico\n";
 					} else if (repo.homepage.includes("play.google.com")) {
 						links += "  - name: Google Play\n"
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico\n";
-					} else if (repo.homepage.replace(/[^.]/g, "").length > 1) {
-						let name = repo.homepage.substring(repo.homepage.indexOf(".") + 1);
-						name = name.substring(0, name.indexOf("."));
-						links += "  - name: " + name + "\n"
-							+ "    url: " + repo.homepage + "\n"
-							+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
-					} else if (repo.homepage.replace(/[^.]/g, "").length > 0) {
-						let name = repo.homepage.substring(repo.homepage.indexOf("/") + 2);
-						name = name.substring(0, name.indexOf("."));
-						links += "  - name: " + name + "\n"
-							+ "    url: " + repo.homepage + "\n"
-							+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
 					} else {
-						links += "  - name: Link\n"
+						let page = cheerio.load(request('GET', repo.homepage).getBody('utf8'));
+						let linkTitle = page("head > title").text().trim();
+
+						while (linkTitle.includes("-")) {
+							let parts = linkTitle.split("-");
+							if (parts[0].length > parts[1].length)
+								linkTitle = parts[1].trim();
+							else linkTitle = parts[0].trim();
+						}
+
+						links += "  - name: " + linkTitle + "\n"
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
 					}

@@ -4,7 +4,7 @@ git pull
 jekyll serve &
 JEKYLL_ID=$!
 
-rm _projects/*
+rm -r _projects && mkdir _projects
 cd _site/scripts
 rm -rf node_modules && npm install
 node update.js
