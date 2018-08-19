@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Alarmio
     icon: https://github.com/favicon.ico
+  - name: Alarmio.apk
+    url: https://github.com/TheAndroidMaster/Alarmio/releases/download/0.3/Alarmio.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

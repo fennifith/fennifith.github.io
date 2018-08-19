@@ -11,6 +11,9 @@ links:
   - name: crasher
     url: https://bintray.com/18jafenn90/maven/crasher/
     icon: https://bintray.com/favicon.ico
+  - name: Crasher.apk
+    url: https://github.com/TheAndroidMaster/Crasher/releases/download/0.0.2/Crasher.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

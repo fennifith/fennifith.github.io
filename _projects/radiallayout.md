@@ -11,6 +11,9 @@ links:
   - name: radiallayout
     url: https://bintray.com/18jafenn90/maven/radiallayout
     icon: https://bintray.com/favicon.ico
+  - name: RadialLayout.apk
+    url: https://github.com/TheAndroidMaster/RadialLayout/releases/download/v0.0.1/RadialLayout.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

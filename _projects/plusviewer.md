@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PlusViewer
     icon: https://github.com/favicon.ico
+  - name: Plus.Viewer.apk
+    url: https://github.com/TheAndroidMaster/PlusViewer/releases/download/v1.0/Plus.Viewer.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

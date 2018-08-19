@@ -11,6 +11,12 @@ links:
   - name: Android Police
     url: https://www.androidpolice.com/
     icon: https://www.androidpolice.com/favicon.ico
+  - name: APReader.App.apk
+    url: https://github.com/TheAndroidMaster/APReader/releases/download/v1.2/APReader.App.apk
+    icon: /images/ic/download.svg
+  - name: APReader.Wear.apk
+    url: https://github.com/TheAndroidMaster/APReader/releases/download/v1.2/APReader.Wear.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

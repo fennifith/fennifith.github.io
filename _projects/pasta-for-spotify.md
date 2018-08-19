@@ -11,6 +11,9 @@ links:
   - name: Website
     url: https://jfenn.me/apps/pasta/
     icon: https://jfenn.me/images/favicon-32.ico
+  - name: Pasta.for.Spotify.BETA.apk
+    url: https://github.com/TheAndroidMaster/Pasta-for-Spotify/releases/download/v1.8/Pasta.for.Spotify.BETA.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

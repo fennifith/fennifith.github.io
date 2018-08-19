@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/ListLauncher
     icon: https://github.com/favicon.ico
+  - name: List.Launcher.apk
+    url: https://github.com/TheAndroidMaster/ListLauncher/releases/download/v1.2/List.Launcher.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/BatteryAlert
     icon: https://github.com/favicon.ico
+  - name: app-debug.apk
+    url: https://github.com/TheAndroidMaster/BatteryAlert/releases/download/v1.1/app-debug.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

@@ -11,6 +11,9 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.rocket
     icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico
+  - name: Rocket.apk
+    url: https://github.com/TheAndroidMaster/Rocket/releases/download/v1.6/Rocket.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

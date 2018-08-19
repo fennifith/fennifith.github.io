@@ -11,6 +11,9 @@ links:
   - name: signalstrengths
     url: https://bintray.com/18jafenn90/maven/signalstrengths
     icon: https://bintray.com/favicon.ico
+  - name: app-debug.apk
+    url: https://github.com/TheAndroidMaster/SignalStrengths/releases/download/v0.2/app-debug.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

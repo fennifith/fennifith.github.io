@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Snowflakes
     icon: https://github.com/favicon.ico
+  - name: Snowflakes.apk
+    url: https://github.com/TheAndroidMaster/Snowflakes/releases/download/v1.1/Snowflakes.apk
+    icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
