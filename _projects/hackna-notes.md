@@ -8,12 +8,18 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/HackNA-Notes
     icon: https://github.com/favicon.ico
-  - name: HackNA 2019
-    url: http://hackna.org/
-    icon: https://hackna.org/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/HackNA-Notes/issues
+    icon: /images/ic/bug.svg
   - name: Documentation
     url: https://github.com/TheAndroidMaster/HackNA-Notes/wiki
     icon: /images/ic/assignment.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
+  - name: HackNA 2019
+    url: http://hackna.org/
+    icon: https://hackna.org/favicon.ico
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4

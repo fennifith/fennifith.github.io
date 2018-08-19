@@ -8,6 +8,9 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Crasher
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/Crasher/issues
+    icon: /images/ic/bug.svg
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/crasher/
     icon: https://bintray.com/favicon.ico

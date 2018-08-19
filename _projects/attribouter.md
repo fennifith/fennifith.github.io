@@ -8,15 +8,21 @@ links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Attribouter
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/TheAndroidMaster/Attribouter/issues
+    icon: /images/ic/bug.svg
+  - name: Documentation
+    url: https://github.com/TheAndroidMaster/Attribouter/wiki
+    icon: /images/ic/assignment.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
   - name: Attribouter.apk
     url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.0/Attribouter.apk
     icon: /images/ic/download.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/Attribouter/wiki
-    icon: /images/ic/assignment.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
