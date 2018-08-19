@@ -1,4 +1,6 @@
 ---
+layout: null
+title: FOUR HUNDRED AND FOUR
 permalink: /404.html
 ---
 
@@ -6,90 +8,9 @@ permalink: /404.html
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Error 110010100</title>
-
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="manifest" href="manifest.json">
-
-  <meta name="application-name" content="JF">
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="msapplication-tooltip" content="James Fenn">
-  <meta name="msapplication-config" content="/ieconfig.xml">
-
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="icon" sizes="16x16" href="/favicon.ico">
-  <link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
-  <link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
-  <link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
-  <link rel="icon" sizes="64x64" href="/images/favicon-48.ico">
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="James Fenn">
-  <link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
-
-  <link href="https://fonts.googleapis.com/css?family=Miriam+Libre" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://jfenn.me/css/styles.css" rel="stylesheet">
-
-  <style>
-    #projects>ul {
-      background-color: rgba(0, 145, 234, 0.15);
-      list-style-type: none;
-      padding: 20px;
-      width: 200px;
-    }
-
-		#yes {
-			position: absolute;
-			display: none;
-			width: 100%;
-			height: calc(20vh + 136px);
-			border: none;
-			z-index: -2;
-		}
-
-		#yesfg {
-			position: absolute;
-			display: none;
-		  height: calc(20vh + 136px);
-		  width: 100%;
-			background: linear-gradient(to top,
-		     rgba(255, 255, 255, 1) 0%,
-				 rgba(255, 255, 255, 0.35) 20%,
-		     rgba(255, 255, 255, 0) 40%
-		  );
-			z-index: -1;
-		}
-
-		@media(min-width: 800px) {
-			#projects>ul {
-				position: fixed;
-			}
-
-			#projects>div {
-				margin-left: 280px;
-			}
-
-			#yes {
-				display: block;
-			}
-
-			#yesfg {
-				display: block;
-			}
-		}
-	</style>
+	{% include head.html %}
 </head>
 <body>
-	<div>
-		<iframe id="yes" src="https://jfenn.me/P5Samples/lines/"></iframe>
-		<div id="yesfg"></div>
-	</div>
 	<main id="main">
 		<h1>Error 404</h1>
 		<h4>
@@ -99,21 +20,8 @@ permalink: /404.html
 		<p>
 			<a href="https://jfenn.me/">Homepage</a>
 		</p>
-		<snackbar id="evilstuff">
-			<span>This site may do shady things with cookies and stuff because it's evil. Please don't read my <a href="/policies/?web" target="_blank">privacy policy</a>.</span>
-			<a onclick="document.getElementById('evilstuff').style.display = 'none'; if (localStorage) localStorage.setItem('acceptedEvil', 'true');"><i class="material-icons">close</i></a>
-			<script>
-				if (localStorage && localStorage.getItem("acceptedEvil"))
-					document.getElementById("evilstuff").style.display = "none";
-			</script>
-		</snackbar>
-				
-		<footer>
-			<hr>
-			<a href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
-			<br>
-			<a href="/policies/?web" target="_blank">Privacy Policy</a>
-		</footer>
 	</main>
+	{% include footer.html %}
+	{% include snackbar.html %}
 </body>
 </html>
