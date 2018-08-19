@@ -16,7 +16,7 @@ links:
     icon: /images/ic/copyright.svg
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.status
-    icon: https://www.gstatic.com/android/market_images/web/favicon_v2.ico
+    icon: /images/ic/play-store.svg
   - name: Status.apk
     url: https://github.com/TheAndroidMaster/Status/releases/download/v3.7/Status.apk
     icon: /images/ic/download.svg
