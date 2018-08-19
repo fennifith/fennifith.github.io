@@ -22,15 +22,10 @@ permalink: /
 			PRs on all of my projects unless stated otherwise.
 		</p>
 		<h2>Find me in places.</h2>
-		<a href="/redirects/?t=github">I commit.</a><br>
-		<a href="/blog">I blog.</a><br>
-		<a href="/redirects/?t=twitter">I tweet.</a><br>
-		<a href="/redirects/?t=linkedin">I link.</a><br>
-		<a href="/redirects/?t=medium">I write.</a><br>
-		<a href="/redirects/?t=reddit">I snoo.</a><br>
-		<a href="/redirects/?t=bintray">I bin.</a><br>
-		<a href="/redirects/?t=stackoverflow">I stack.</a><br>
-		<a href="/redirects/?t=keybase">I am.</a><br>
+		{% assign links = site.links | sort: 'order' %}
+		{% for link in links %}
+		{% if link.verb %}<a href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.title }})</small><br>{% endif %} 
+		{% endfor %}
 		<h2>See my work.</h2>
 		<p>
 			You can find most of my projects <a href="/?projects">here</a>. I've also worked on a couple projects in some organizations:

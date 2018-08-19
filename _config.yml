@@ -6,6 +6,8 @@ baseurl: "/"
 collections:
     types:
         output: false
+    links:
+        output: false
     projects:
         output: true
 

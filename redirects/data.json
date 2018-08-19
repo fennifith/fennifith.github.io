@@ -1,42 +1,13 @@
+---
+layout: null
+---
+
 {
-	"twitter": {
-		"url": "https://twitter.com/IDontLikePHP",
-		"name": "IDontLikePHP"
-	},
-	"googleplus": {
-		"url": "https://plus.google.com/114612442558529845038"
-	},
-	"github": {
-		"url": "https://github.com/TheAndroidMaster",
-		"name": "TheAndroidMaster"
-	},
-	"instagram": {
-		"url": "https://www.instagram.com/IDontLikePHP/",
-		"name": "IDontLikePHP"
-	},
-	"googleplay": {
-		"url": "https://play.google.com/store/apps/dev?id=5937321955284727208"
-	},
-	"medium": {
-		"url": "https://medium.com/@theandroidmaster",
-		"name": "theandroidmaster"
-	},
-	"stackoverflow": {
-		"url": "https://stackoverflow.com/users/4955981/"
-	},
-	"uplabs": {
-		"url": "https://www.uplabs.com/idontlikephp",
-		"name": "idontlikephp"
-	},
-	"bintray": {
-		"url": "https://bintray.com/18jafenn90"
-	},
-	"keybase": {
-		"url": "https://keybase.io/jafenn",
-		"name": "jafenn"
-	},
-	"reddit": {
-		"url": "https://www.reddit.com/u/Fennifith",
-		"name": "Fennifith"
-	}
+	{% assign links = site.links | sort: 'order' %}
+	{% for link in links %}
+	"{{ link.title }}": {
+		{% if link.name %}"name": "{{ link.name }}",{% endif %}
+		"url": "{{ link.link }}"
+	}{% unless link.order == 1 %},{% endunless %}
+	{% endfor %} 
 }
