@@ -60,7 +60,7 @@ permalink: /
 				<div id="{{ type.tag }}list">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
-					<div class="item" onclick="location.href='{{ project.id }}.html';">
+					<div class="item" onclick="location.href='{{ project.id }}';">
 						<p>
 							<a>{{ project.title }}</a>
 							<br>
