@@ -53,7 +53,7 @@ try {
 				try {
 					readme = request('GET', "https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md").getBody('utf8');
 					readme = readme.replace(/(!\[img\]\(.)([A-Za-z\/.?=]{0,})(\))/g, "![img](https://raw.githubusercontent.com/" + repos[i].full_name + "/master/.$2)")
-						.replace(/(\[)([A-Za-z.`]{0,})(\]\(.)([A-Za-z\/.?=`]{0,})(\))/g, "[$2](" + repos[i].html_url + "/blob/master/.$4)");
+						.replace(/(\[)([A-Za-z.`\s]{0,})(\]\(.)([A-Za-z\/.?=`]{0,})(\))/g, "[$2](" + repos[i].html_url + "/blob/master/.$4)");
 				} catch (error) {
 					console.error("NO README:", repos[i].full_name);
 					continue;
