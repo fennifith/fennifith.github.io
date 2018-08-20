@@ -107,6 +107,12 @@ button.selectable[selected] {
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.5);
 }
 
+button.big {
+	background-color: #424242;
+	font-size: 1em;
+	font-weight: bolder;
+}
+
 input[type=checkbox] {
 	display: none;
 	outline: none;
