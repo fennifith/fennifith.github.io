@@ -1,3 +1,1 @@
-# TheAndroidMaster.github.io
-
-A website to display all of my current projects and applications.
+This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/Client-Side-JavaScript/), it is now written mostly in Jekyll. It does not update its content automatically, but there is [this Node.js script](./scripts/update.js) and [a shell script](./scripts/update.sh) that may be used to update it periodically. Pull requests are welcome.
