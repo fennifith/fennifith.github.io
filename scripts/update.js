@@ -131,7 +131,7 @@ try {
 
 				if (releases[0]) {
 					for (let i2 = 0; i2 < releases[0].assets.length; i2++) {
-						links += "  - name: " + releases[0].assets[i2].name + "\n"
+						links += "  - name: " + releases[0].assets[i2].name + " (" + releases[0].tag_name + (releases[0].prerelease ? " unstable" : " stable") + ")\n"
 							+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
 							+ "    icon: /images/ic/download.svg\n"; 
 					}
