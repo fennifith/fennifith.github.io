@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.cleaner
     icon: /images/ic/play-store.svg
-  - name: Cleaner.apk
+  - name: Cleaner.apk (v1.2 stable)
     url: https://github.com/TheAndroidMaster/Cleaner/releases/download/v1.2/Cleaner.apk
     icon: /images/ic/download.svg
 contributors:

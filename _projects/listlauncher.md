@@ -14,7 +14,7 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: List.Launcher.apk
+  - name: List.Launcher.apk (v1.2 stable)
     url: https://github.com/TheAndroidMaster/ListLauncher/releases/download/v1.2/List.Launcher.apk
     icon: /images/ic/download.svg
 contributors:

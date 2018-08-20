@@ -17,7 +17,7 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/adaptiveiconview
     icon: https://bintray.com/favicon.ico
-  - name: AdaptiveIconView.apk
+  - name: AdaptiveIconView.apk (v0.0.1 stable)
     url: https://github.com/TheAndroidMaster/AdaptiveIconView/releases/download/v0.0.1/AdaptiveIconView.apk
     icon: /images/ic/download.svg
 contributors:

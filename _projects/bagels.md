@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.bagels
     icon: /images/ic/play-store.svg
-  - name: Bagels.apk
+  - name: Bagels.apk (v1.3 stable)
     url: https://github.com/TheAndroidMaster/Bagels/releases/download/v1.3/Bagels.apk
     icon: /images/ic/download.svg
 contributors:

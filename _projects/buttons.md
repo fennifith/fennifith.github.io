@@ -17,7 +17,7 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/buttons
     icon: https://bintray.com/favicon.ico
-  - name: app-debug.apk
+  - name: app-debug.apk (v0.0.3 stable)
     url: https://github.com/TheAndroidMaster/Buttons/releases/download/v0.0.3/app-debug.apk
     icon: /images/ic/download.svg
 contributors:

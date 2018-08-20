@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.status
     icon: /images/ic/play-store.svg
-  - name: Status.apk
+  - name: Status.apk (v3.7 stable)
     url: https://github.com/TheAndroidMaster/Status/releases/download/v3.7/Status.apk
     icon: /images/ic/download.svg
 contributors:

@@ -17,10 +17,10 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.metronome
     icon: /images/ic/play-store.svg
-  - name: Metronome.phone.apk
+  - name: Metronome.phone.apk (v1.7 stable)
     url: https://github.com/TheAndroidMaster/Metronome-Android/releases/download/v1.7/Metronome.phone.apk
     icon: /images/ic/download.svg
-  - name: Metronome.wear.apk
+  - name: Metronome.wear.apk (v1.7 stable)
     url: https://github.com/TheAndroidMaster/Metronome-Android/releases/download/v1.7/Metronome.wear.apk
     icon: /images/ic/download.svg
 contributors:

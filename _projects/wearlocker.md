@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.wearlocker
     icon: /images/ic/play-store.svg
-  - name: Wear.Locker.apk
+  - name: Wear.Locker.apk (v1.1 stable)
     url: https://github.com/TheAndroidMaster/WearLocker/releases/download/v1.1/Wear.Locker.apk
     icon: /images/ic/download.svg
 contributors:

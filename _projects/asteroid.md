@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.asteroid
     icon: /images/ic/play-store.svg
-  - name: app-release.apk
+  - name: app-release.apk (v1.2 stable)
     url: https://github.com/TheAndroidMaster/Asteroid/releases/download/v1.2/app-release.apk
     icon: /images/ic/download.svg
 contributors:

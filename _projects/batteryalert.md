@@ -14,7 +14,7 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: app-debug.apk
+  - name: app-debug.apk (v1.1 unstable)
     url: https://github.com/TheAndroidMaster/BatteryAlert/releases/download/v1.1/app-debug.apk
     icon: /images/ic/download.svg
 contributors:

@@ -20,7 +20,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=me.jfenn.pacomplaints
     icon: /images/ic/play-store.svg
-  - name: PortAuthorityComplainter.apk
+  - name: PortAuthorityComplainter.apk (v1.1 stable)
     url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter/releases/download/v1.1/PortAuthorityComplainter.apk
     icon: /images/ic/download.svg
 contributors:

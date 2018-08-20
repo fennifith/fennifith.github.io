@@ -17,7 +17,7 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/palettegetter
     icon: https://bintray.com/favicon.ico
-  - name: app-debug.apk
+  - name: app-debug.apk (v1.0 stable)
     url: https://github.com/TheAndroidMaster/PaletteGetter/releases/download/v1.0/app-debug.apk
     icon: /images/ic/download.svg
 contributors:

@@ -14,7 +14,7 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Feedage.apk
+  - name: Feedage.apk (v0.2 unstable)
     url: https://github.com/TheAndroidMaster/Feedage/releases/download/v0.2/Feedage.apk
     icon: /images/ic/download.svg
 contributors:

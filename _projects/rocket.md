@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.rocket
     icon: /images/ic/play-store.svg
-  - name: Rocket.apk
+  - name: Rocket.apk (v1.6 stable)
     url: https://github.com/TheAndroidMaster/Rocket/releases/download/v1.6/Rocket.apk
     icon: /images/ic/download.svg
 contributors:

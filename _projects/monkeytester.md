@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.monkeytester
     icon: /images/ic/play-store.svg
-  - name: MonkeyTester.apk
+  - name: MonkeyTester.apk (v1.2 stable)
     url: https://github.com/TheAndroidMaster/MonkeyTester/releases/download/v1.2/MonkeyTester.apk
     icon: /images/ic/download.svg
 contributors:

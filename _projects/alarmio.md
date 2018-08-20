@@ -14,7 +14,7 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Alarmio.apk
+  - name: Alarmio.apk (0.3 unstable)
     url: https://github.com/TheAndroidMaster/Alarmio/releases/download/0.3/Alarmio.apk
     icon: /images/ic/download.svg
 contributors:

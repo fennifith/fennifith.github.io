@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.medianotification
     icon: /images/ic/play-store.svg
-  - name: MediaNotification.apk
+  - name: MediaNotification.apk (v1.0 stable)
     url: https://github.com/TheAndroidMaster/MediaNotification/releases/download/v1.0/MediaNotification.apk
     icon: /images/ic/download.svg
 contributors:

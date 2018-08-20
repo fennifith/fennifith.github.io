@@ -17,7 +17,7 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.monochrome
     icon: /images/ic/play-store.svg
-  - name: Monochrome.apk
+  - name: Monochrome.apk (v0.2 unstable)
     url: https://github.com/TheAndroidMaster/Monochrome/releases/download/v0.2/Monochrome.apk
     icon: /images/ic/download.svg
 contributors:

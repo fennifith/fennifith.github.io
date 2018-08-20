@@ -20,8 +20,8 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
-  - name: Attribouter.apk
-    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.0/Attribouter.apk
+  - name: Attribouter.apk (v0.1.1 stable)
+    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.1/Attribouter.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
@@ -30,6 +30,9 @@ contributors:
   - login: gcantoni
     avatar: https://avatars0.githubusercontent.com/u/30368951?v=4
     url: https://github.com/gcantoni
+  - login: rroyGit
+    avatar: https://avatars2.githubusercontent.com/u/20290568?v=4
+    url: https://github.com/rroyGit
 ---
 
 Attribouter is a lightweight "about screen" for Android apps, built to allow developers to easily give credit to a project's contributors and open source libraries, while matching the style of their app and saving the largest amount of time and effort possible. It is meant to use GitHub's [REST API](https://developer.github.com/v3/) to fetch and display information about open source projects and contributors, but it allows you to define some or all of its data in its configuration file in your app as well.
@@ -53,7 +56,7 @@ For demonstration and experimentation, an apk of the sample project can be downl
 The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your app's build.gradle file.
  
 ```gradle
-implementation 'me.jfenn:attribouter:0.1.0'
+implementation 'me.jfenn:attribouter:0.1.1'
 ```
 
 #### Starting an Activity
@@ -78,4 +81,4 @@ This library does not use an auth key for the GitHub API by default. It does cac
 
 By default, Attribouter will use the configuration file at [res/xml/attribouter.xml](./attribouter/src/main/res/xml/attribouter.xml). You can either name your configuration file "attribouter.xml" to override the resource, or name it differently and call `.withFile(R.xml.[name])` on your instance of `Attribouter` instead.
 
-The configuration file consists of a single root element, `<about>`, with many child elements that can be placed any amount of times in any order, the same as views in a layout file. These elements, called "wedges" in this library for no apparent reason, are created by Attribouter and added to the page in the order and heirarchy that they are defined in. To create your configuration file, you can either use the [file from the sample project](./app/src/main/res/xml/about.xml) as a template or use [the documentation](https://jfenn.me/Attribouter/) to write your own.
+The configuration file consists of a single root element, `<about>`, with many child elements that can be placed any amount of times in any order, the same as views in a layout file. These elements, called "wedges" in this library for no apparent reason, are created by Attribouter and added to the page in the order and heirarchy that they are defined in. To create your configuration file, you can either use the [file from the sample project](https://github.com/TheAndroidMaster/Attribouter/blob/master/./app/src/main/res/xml/about.xml) as a template or use [the documentation](https://jfenn.me/Attribouter/) to write your own.
