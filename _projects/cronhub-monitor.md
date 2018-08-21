@@ -1,21 +1,21 @@
 ---
 layout: project
 type: android-app
-title: Cron Hub Android
+title: Cronhub Monitor
 description: A native CronHub notification client for Android.
-repo: TheAndroidMaster/CronHub-Android
+repo: TheAndroidMaster/Cronhub-Monitor
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/CronHub-Android
+    url: https://github.com/TheAndroidMaster/Cronhub-Monitor
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/CronHub-Android/issues
+    url: https://github.com/TheAndroidMaster/Cronhub-Monitor/issues
     icon: /images/ic/bug.svg
   - name: Cronhub
     url: https://cronhub.io/
     icon: https://cronhub.io/favicon.ico
-  - name: CronHub-Android.apk (v1.0 stable)
-    url: https://github.com/TheAndroidMaster/CronHub-Android/releases/download/v1.0/CronHub-Android.apk
+  - name: Cronhub-Monitor.apk (v1.0 stable)
+    url: https://github.com/TheAndroidMaster/Cronhub-Monitor/releases/download/v1.0/Cronhub-Monitor.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
@@ -29,11 +29,11 @@ This app serves as a native Android notification client for [cronhub.io](https:/
 
 |Login Screen|Interface|Notification|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/CronHub-Android/master/./.github/images/login.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/CronHub-Android/master/./.github/images/interface.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/CronHub-Android/master/./.github/images/notification.png?raw=true)|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/Cronhub-Monitor/master/./.github/images/login.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Cronhub-Monitor/master/./.github/images/interface.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Cronhub-Monitor/master/./.github/images/notification.png?raw=true)|
 
 ## Contributing
 
-See this repository's [CONTRIBUTING.md](https://github.com/TheAndroidMaster/CronHub-Android/blob/master/./.github/CONTRIBUTING.md) for more information.
+See this repository's [CONTRIBUTING.md](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/./.github/CONTRIBUTING.md) for more information.
 
 ## Disclaimer
 
