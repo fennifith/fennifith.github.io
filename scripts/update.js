@@ -123,6 +123,13 @@ try {
 							else linkTitle = parts[0].trim();
 						}
 
+						while (linkTitle.includes(":")) {
+							let parts = linkTitle.split(":");
+							if (parts[0].length > parts[1].length)
+								linkTitle = parts[1].trim();
+							else linkTitle = parts[0].trim();
+						}
+
 						links += "  - name: " + linkTitle + "\n"
 							+ "    url: " + repo.homepage + "\n"
 							+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
