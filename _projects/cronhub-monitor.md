@@ -11,6 +11,9 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Cronhub-Monitor/issues
     icon: /images/ic/bug.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
   - name: Cronhub
     url: https://cronhub.io/
     icon: https://cronhub.io/favicon.ico
