@@ -14,9 +14,9 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Cronhub
-    url: https://cronhub.io/
-    icon: https://cronhub.io/favicon.ico
+  - name: Cronhub Docs | Community
+    url: https://docs.cronhub.io/community.html
+    icon: https://docs.cronhub.io/favicon.ico
   - name: Cronhub-Monitor.apk (v1.0 stable)
     url: https://github.com/TheAndroidMaster/Cronhub-Monitor/releases/download/v1.0/Cronhub-Monitor.apk
     icon: /images/ic/download.svg

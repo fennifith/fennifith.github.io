@@ -20,8 +20,8 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
-  - name: Attribouter.apk (v0.1.1 stable)
-    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.1/Attribouter.apk
+  - name: Attribouter.apk (v0.1.2 stable)
+    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.2/Attribouter.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
@@ -56,7 +56,7 @@ For demonstration and experimentation, an apk of the sample project can be downl
 The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your app's build.gradle file.
  
 ```gradle
-implementation 'me.jfenn:attribouter:0.1.1'
+implementation 'me.jfenn:attribouter:0.1.2'
 ```
 
 #### Starting an Activity
