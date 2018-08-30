@@ -17,7 +17,7 @@ const cheerio = require('cheerio');
 
 let token = null;
 try {
-	token = fs.readFileSync(path.join(process.env.HOME, "Desktop/github.txt"), 'utf8');
+	token = fs.readFileSync(path.join(process.env.HOME, "keys/github.txt"), 'utf8');
 } catch (error) {
 	console.error("No GitHub Token:", error);
 }
