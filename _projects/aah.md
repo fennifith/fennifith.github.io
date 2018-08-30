@@ -11,10 +11,13 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/AAH/issues
     icon: /images/ic/bug.svg
-  - name: AAH-linux-386 (v1.0.0 stable)
+  - name: MIT License
+    url: https://choosealicense.com/licenses/mit/
+    icon: /images/ic/copyright.svg
+  - name: AAH-linux-386 (v1.0.0 unstable)
     url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.0/AAH-linux-386
     icon: /images/ic/download.svg
-  - name: AAH-linux-amd64 (v1.0.0 stable)
+  - name: AAH-linux-amd64 (v1.0.0 unstable)
     url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.0/AAH-linux-amd64
     icon: /images/ic/download.svg
 contributors:
