@@ -24,6 +24,9 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+  - login: codekidX
+    avatar: https://avatars1.githubusercontent.com/u/3619949?v=4
+    url: https://github.com/codekidX
 ---
 
 AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help me do basic things I should already know.
