@@ -14,11 +14,11 @@ links:
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
     icon: /images/ic/copyright.svg
-  - name: AAH-linux-386 (v1.0.0 unstable)
-    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.0/AAH-linux-386
+  - name: AAH-linux-386 (v1.0.1 stable)
+    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.1/AAH-linux-386
     icon: /images/ic/download.svg
-  - name: AAH-linux-amd64 (v1.0.0 unstable)
-    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.0/AAH-linux-amd64
+  - name: AAH-linux-amd64 (v1.0.1 stable)
+    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.1/AAH-linux-amd64
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
@@ -31,7 +31,7 @@ AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help 
 For example:
 
 ```
-~$ AAH disk mount
+~$ AAH drive mount
 mount: 		mkdir /mnt/disk && mount <device> /mnt/disk
 ~$
 ```
@@ -131,7 +131,7 @@ thing:
             stuff: this is a thing
 ```
 
-You could type `AAH thing something yes stuff` to get the value `this is a thing`. Alternatively, you could just type `AAH thing something yes` to get a list of everything below the key `yes` in the YAML hierarchy.
+You could type `AAH thing something yes stuff` to get the value `this is a thing`. Alternatively, you could just type `AAH thing something yes` to get a list of everything below the key `yes` in the YAML hierarchy. And if you are very lazy, you can even shorten some of the names provided they are still differentiable from the other keys, ex: `AAH th some y`.
 
 ## Contributing
 
