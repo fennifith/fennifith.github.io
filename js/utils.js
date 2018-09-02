@@ -56,7 +56,7 @@ UrlUtil.argumentsToString = function(args) {
 
 UrlUtil.getCurrentArguments = function() {
   if (window.location.search)
-    return UrlUtils.stringToArguments(window.location.search.replace("?", ""));
+    return UrlUtil.stringToArguments(window.location.search.replace("?", ""));
   else return {};
 };
 
