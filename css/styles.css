@@ -365,6 +365,11 @@ footer > a {
 }
 
 .grid > .item {
+	word-break: break-word;
+	word-wrap: break-word;
+}
+
+.grid > .box {
 	display: grid;
 	align-content: baseline;
 	text-align: center;
@@ -373,22 +378,19 @@ footer > a {
 	border: 2px solid #0091EA;
 	margin: 10px;
 
-	word-break: break-word;
-	word-wrap: break-word;
-	
 	transition: color .25s, background-color .25s, box-shadow .25s;
 	-moz-transition: color .25s, background-color .25s, box-shadow .25s;
 	-webkit-transition: color .25s, background-color .25s, box-shadow .25s;
 }
 
-.grid > .item > img {
+.grid > .box > img {
 	width: 48px;
 	height: 48px;
 	margin: auto;
 	margin-bottom: 1em;
 }
 
-.grid > .item:hover {
+.grid > .box:hover {
 	background-color: rgba(0, 0, 0, 0.03);
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
 }

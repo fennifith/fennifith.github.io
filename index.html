@@ -33,7 +33,7 @@ permalink: /
 		</p>
 		<div id="organizationlist" class="grid">
 			{% for org in site.orgs %}
-			<a class="item" href="{{ org.link }}">
+			<a class="item box" href="{{ org.link }}">
 				<img class="round" src="{{ org.avatar }}">
 				<span>{{ org.title }}</span>
 				{{ org.description }}
@@ -89,7 +89,7 @@ permalink: /
 		</h4>
 		<div class="grid">
 			{% for person in site.people %}
-			<a class="item" href="{{ person.link }}">
+			<a class="item box" href="{{ person.link }}">
 				<img src="{{ person.avatar }}" class="round">
 				<span>{{ person.title }}</span>
 				{{ person.description }}
