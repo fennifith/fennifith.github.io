@@ -11,6 +11,9 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/MarkdownToJupyter/issues
     icon: /images/ic/bug.svg
+  - name: MIT License
+    url: https://choosealicense.com/licenses/mit/
+    icon: /images/ic/copyright.svg
   - name: npm
     url: https://www.npmjs.com/package/mtjc
     icon: https://www.npmjs.com/favicon.ico
