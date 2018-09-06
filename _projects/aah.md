@@ -2,7 +2,7 @@
 layout: project
 type: undefined
 title: AAH
-description: A basic cmdline program for Linux to help me do basic things I should already know. Ex&#58; "AAH disk mount"
+description: A basic cmdline program for Linux to help me do basic things I should already know. Ex&#58; "AAH drive mount"
 repo: TheAndroidMaster/AAH
 links:
   - name: GitHub
