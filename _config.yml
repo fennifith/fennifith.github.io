@@ -16,7 +16,7 @@ collections:
         output: true
     blogs:
         output: true
-        permalink: /blog/:title
+        permalink: /blog/:title/
 
 exclude:
   - Gemfile
