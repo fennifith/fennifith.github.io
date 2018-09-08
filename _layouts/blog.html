@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}'s Blog</title>
+
+    {% include head.html %}
+  </head>
+  <body>
+
+    <sidebar>
+      {% if page.links and page.links.size > 0 %}
+      <h2>Links</h2>
+      {% for link in page.links %}
+	  <a class="link" href="{{ link.url }}">
+	    <object data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
+	      <img src="/images/ic/link.svg">
+	    </object>
+	    <span>{{ link.name }}</span>
+	  </a>
+	  {% endfor %}
+	  {% endif %}
+	  <h2>Author</h2>
+	  <a class="link" href="/">
+	    <object class="round" data="https://avatars3.githubusercontent.com/u/13000407" type="image/png">
+	      <img src="/images/ic/person.svg">
+	    </object>
+	    <span>James Fenn</span>
+	  </a>
+    </sidebar>
+
+    <main id="main" role="main">
+      <article class="post">
+        <h1>
+  	  {{ page.title }}
+  	  <br>
+	  <span style="font-size: 0.6em;">Written on {{ page.date | date: "%B %e, %Y" }}</span>
+        </h1>
+
+        <div class="entry">
+          {{ content }}
+        </div>
+
+        <a href="{{ site.baseurl }}/"><button class="big"><-- Back to All Posts</button></a>
+      </article>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<nav>
+	<button class="selectable" onclick="location.href='/';"><i class="material-icons">home</i><span class="desktop">Home</span></button>
+	<button class="selectable" onclick="location.href='/blog/';" selected="true"><i class="material-icons">notes</i><span class="desktop">Blog</span></button>
+	<button class="selectable" onclick="location.href='/blog/feed';"><i class="material-icons">rss_feed</i><span class="desktop">Feed</span></button>
+	<button class="selectable" onclick="location.href='/?about';"><i class="material-icons">info</i><span class="desktop">About</span></button>
+</nav>
+<main>
+  {% for blog in site.blogs %}
+  <a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+  	<span>{{ blog.title }}</span>
+  	{{ blog.date | date: "%B %e, %Y" }}
+  </a>
+  {% endfor %}
+</main>
