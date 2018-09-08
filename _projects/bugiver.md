@@ -4,6 +4,7 @@ type: website
 title: bugiver
 description: A small website that gives you an issue to fix when there is nothing to do.
 repo: TheAndroidMaster/bugiver
+git: git://github.com/TheAndroidMaster/bugiver.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/bugiver

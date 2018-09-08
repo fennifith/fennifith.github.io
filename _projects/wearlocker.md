@@ -4,6 +4,7 @@ type: android-app
 title: Wear Locker
 description: A basic lock screen that prevents accidental touches on Android Wear 2.0.
 repo: TheAndroidMaster/WearLocker
+git: git://github.com/TheAndroidMaster/WearLocker.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/WearLocker

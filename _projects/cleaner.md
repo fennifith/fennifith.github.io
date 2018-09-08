@@ -4,6 +4,7 @@ type: android-app
 title: Cleaner
 description: The only storage saving app that actually works! &#58;D
 repo: TheAndroidMaster/Cleaner
+git: git://github.com/TheAndroidMaster/Cleaner.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Cleaner

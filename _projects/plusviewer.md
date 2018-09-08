@@ -4,6 +4,7 @@ type: android-app
 title: Plus Viewer
 description: A basic google plus client using a WebView
 repo: TheAndroidMaster/PlusViewer
+git: git://github.com/TheAndroidMaster/PlusViewer.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PlusViewer

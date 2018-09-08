@@ -4,6 +4,7 @@ type: android-app
 title: Alarmio
 description: A simple alarm clock focused on design, readability, and internet radio.
 repo: TheAndroidMaster/Alarmio
+git: git://github.com/TheAndroidMaster/Alarmio.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Alarmio

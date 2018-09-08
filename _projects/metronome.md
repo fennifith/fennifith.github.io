@@ -4,6 +4,7 @@ type: website
 title: Metronome
 description: A lightweight metronome web app.
 repo: TheAndroidMaster/Metronome
+git: git://github.com/TheAndroidMaster/Metronome.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Metronome

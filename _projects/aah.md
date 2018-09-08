@@ -4,6 +4,7 @@ type: undefined
 title: AAH
 description: A basic cmdline program for Linux to help me do basic things I should already know. Ex&#58; "AAH drive mount"
 repo: TheAndroidMaster/AAH
+git: git://github.com/TheAndroidMaster/AAH.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/AAH

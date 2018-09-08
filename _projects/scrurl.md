@@ -4,6 +4,7 @@ type: website
 title: Scrurl
 description: Scrolling urls, a.k.a. the second worst website I've ever made.
 repo: TheAndroidMaster/Scrurl
+git: git://github.com/TheAndroidMaster/Scrurl.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Scrurl

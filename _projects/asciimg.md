@@ -4,6 +4,7 @@ type: nodejs
 title: Asciimg
 description: A command line tool to display images in ASCII.
 repo: TheAndroidMaster/Asciimg
+git: git://github.com/TheAndroidMaster/Asciimg.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Asciimg

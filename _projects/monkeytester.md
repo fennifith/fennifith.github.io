@@ -4,6 +4,7 @@ type: android-app
 title: Monkey Tester
 description: Determines whether a user is a monkey, a goat, or both, based on values obtained from android's ActivityManager and UserManager.
 repo: TheAndroidMaster/MonkeyTester
+git: git://github.com/TheAndroidMaster/MonkeyTester.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/MonkeyTester

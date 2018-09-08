@@ -4,6 +4,7 @@ type: android-library
 title: Wear Color Picker
 description: A lightweight color picker library for Android Wear.
 repo: TheAndroidMaster/WearColorPicker
+git: git://github.com/TheAndroidMaster/WearColorPicker.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/WearColorPicker

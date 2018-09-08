@@ -158,6 +158,7 @@ try {
 				+ "title: " + repo.name.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2") + "\n"
 				+ (repo.description ? "description: " + repo.description.split(":").join("&#58;") + "\n" : "")
 				+ "repo: " + repo.full_name + "\n"
+				+ "git: " + repo.git_url + "\n"
 				+ "links:\n" + links
 				+ "contributors:\n" + people
 				+ "---\n\n" + readme);

@@ -408,7 +408,7 @@ sidebar * {
 	color: #616161;
 }
 
-sidebar > .link {
+.link {
 	text-decoration: none;
 	display: flex;
 	align-items: center;
@@ -416,15 +416,15 @@ sidebar > .link {
 	margin-bottom: 0.5em;
 }
 
-sidebar > .link > img,
-sidebar > .link > object {
+.link > img,
+.link > object {
 	width: 24px;
 	height: 24px;
 	margin-right: 1em;
 }
 
-sidebar > .link > img.round,
-sidebar > .link > object.round {
+.link > img.round,
+.link > object.round {
 	border-color: #808080;
 
 	transition: border .25s;
@@ -432,13 +432,13 @@ sidebar > .link > object.round {
 	-webkit-transition: border .25s;
 }
 
-sidebar > .link:hover > img.round,
-sidebar > .link:hover > object.round {
+.link:hover > img.round,
+.link:hover > object.round {
 	border-color: #000000;
 }
 
-sidebar > .link > img:not(.round),
-sidebar > .link > object:not(.round) {
+.link > img:not(.round),
+.link > object:not(.round) {
 	filter: contrast(0);
 
 	transition: filter .25s;
@@ -446,12 +446,12 @@ sidebar > .link > object:not(.round) {
 	-webkit-transition: filter .25s;
 }
 
-sidebar > .link:hover > img:not(.round),
-sidebar > .link:hover > object:not(.round) {
+.link:hover > img:not(.round),
+.link:hover > object:not(.round) {
 	filter: contrast(0) brightness(0);
 }
 
-sidebar > .link > span {
+.link > span {
 	color: #808080;
 	
 	transition: color .25s;
@@ -459,7 +459,7 @@ sidebar > .link > span {
 	-webkit-transition: color .25s;
 }
 
-sidebar > .link:hover > span {
+.link:hover > span {
 	color: #000;
 }
 

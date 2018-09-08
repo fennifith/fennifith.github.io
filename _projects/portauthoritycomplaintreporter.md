@@ -4,6 +4,7 @@ type: android-app
 title: Port Authority Complaint Reporter
 description: A small application to make it easier for riders to report issues to the Pittsburgh Port Authority bus system.
 repo: TheAndroidMaster/PortAuthorityComplaintReporter
+git: git://github.com/TheAndroidMaster/PortAuthorityComplaintReporter.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PortAuthorityComplaintReporter

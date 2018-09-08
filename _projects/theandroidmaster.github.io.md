@@ -4,6 +4,7 @@ type: website
 title: The Android Master.github.io
 description: My personal website.
 repo: TheAndroidMaster/TheAndroidMaster.github.io
+git: git://github.com/TheAndroidMaster/TheAndroidMaster.github.io.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/TheAndroidMaster.github.io

@@ -4,6 +4,7 @@ type: undefined
 title: Greed Detector
 description: A website/quiz that supposedly measures how greedy you are.
 repo: TheAndroidMaster/GreedDetector
+git: git://github.com/TheAndroidMaster/GreedDetector.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/GreedDetector

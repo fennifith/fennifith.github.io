@@ -4,6 +4,7 @@ type: android-app
 title: Bagels
 description: A live wallpaper that blurs the screen after a period of time without any actions.
 repo: TheAndroidMaster/Bagels
+git: git://github.com/TheAndroidMaster/Bagels.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Bagels

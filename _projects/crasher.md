@@ -4,6 +4,7 @@ type: android-library
 title: Crasher
 description: An easy to use crash reporting library for Android.
 repo: TheAndroidMaster/Crasher
+git: git://github.com/TheAndroidMaster/Crasher.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Crasher

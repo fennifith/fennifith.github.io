@@ -4,6 +4,7 @@ type: undefined
 title: Robotics
 description: Documentation of stuff done in my robotics class.
 repo: TheAndroidMaster/Robotics
+git: git://github.com/TheAndroidMaster/Robotics.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Robotics

@@ -4,6 +4,7 @@ type: android-app
 title: Snowflakes
 description: Make it rain! Or um... snow.
 repo: TheAndroidMaster/Snowflakes
+git: git://github.com/TheAndroidMaster/Snowflakes.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Snowflakes

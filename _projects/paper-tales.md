@@ -4,6 +4,7 @@ type: undefined
 title: Paper Tales
 description: A modified version of Fornax that gets its content from Wordpress articles.
 repo: TheAndroidMaster/Paper-Tales
+git: git://github.com/TheAndroidMaster/Paper-Tales.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Paper-Tales

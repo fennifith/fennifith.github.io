@@ -4,6 +4,7 @@ type: android-app
 title: AP Reader
 description: A small app that displays Android Police articles without waiting for the website to load.
 repo: TheAndroidMaster/APReader
+git: git://github.com/TheAndroidMaster/APReader.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/APReader

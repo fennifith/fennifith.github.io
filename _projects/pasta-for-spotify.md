@@ -4,6 +4,7 @@ type: android-app
 title: Pasta for Spotify
 description: A material design Spotify client for Android
 repo: TheAndroidMaster/Pasta-for-Spotify
+git: git://github.com/TheAndroidMaster/Pasta-for-Spotify.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Pasta-for-Spotify

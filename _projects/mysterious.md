@@ -3,6 +3,7 @@ layout: project
 type: undefined
 title: Mysterious
 repo: TheAndroidMaster/Mysterious
+git: git://github.com/TheAndroidMaster/Mysterious.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Mysterious

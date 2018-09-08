@@ -4,6 +4,7 @@ type: website
 title: Tables
 description: A simple website that makes a table/graph from a function.
 repo: TheAndroidMaster/Tables
+git: git://github.com/TheAndroidMaster/Tables.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Tables

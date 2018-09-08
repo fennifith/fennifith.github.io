@@ -4,6 +4,7 @@ type: android-app
 title: Status
 description: A no-root status bar replacement for Android.
 repo: TheAndroidMaster/Status
+git: git://github.com/TheAndroidMaster/Status.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Status

@@ -4,6 +4,7 @@ type: nodejs
 title: Passerator
 description: A simple password generator made in my free time. It's probably safe to use. I think.
 repo: TheAndroidMaster/Passerator
+git: git://github.com/TheAndroidMaster/Passerator.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Passerator

@@ -4,6 +4,7 @@ type: android-library
 title: Palette Getter
 description: A library that can get the color scheme of any app.
 repo: TheAndroidMaster/PaletteGetter
+git: git://github.com/TheAndroidMaster/PaletteGetter.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/PaletteGetter

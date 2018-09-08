@@ -4,6 +4,7 @@ type: android-app
 title: Hack NA Notes
 description: A small sample project created for a workshop at HackNA.
 repo: TheAndroidMaster/HackNA-Notes
+git: git://github.com/TheAndroidMaster/HackNA-Notes.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/HackNA-Notes

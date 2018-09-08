@@ -4,6 +4,7 @@ type: android-app
 title: Metronome Android
 description: A lightweight, well designed metronome app for Android.
 repo: TheAndroidMaster/Metronome-Android
+git: git://github.com/TheAndroidMaster/Metronome-Android.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Metronome-Android

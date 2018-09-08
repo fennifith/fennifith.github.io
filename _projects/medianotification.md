@@ -4,6 +4,7 @@ type: android-app
 title: Media Notification
 description: Slightly unstable attempt to replace all media notifications with Android O styled copies.
 repo: TheAndroidMaster/MediaNotification
+git: git://github.com/TheAndroidMaster/MediaNotification.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/MediaNotification

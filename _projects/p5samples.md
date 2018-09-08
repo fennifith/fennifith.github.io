@@ -4,6 +4,7 @@ type: website
 title: P5Samples
 description: Stuff I made messing around with p5js in my free time.
 repo: TheAndroidMaster/P5Samples
+git: git://github.com/TheAndroidMaster/P5Samples.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/P5Samples

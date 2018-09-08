@@ -4,6 +4,7 @@ type: android-game
 title: Rocket
 description: A basic tap-to-fly game experimenting with view animation.
 repo: TheAndroidMaster/Rocket
+git: git://github.com/TheAndroidMaster/Rocket.git
 links:
   - name: GitHub
     url: https://github.com/TheAndroidMaster/Rocket
