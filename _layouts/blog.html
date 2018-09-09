@@ -8,8 +8,9 @@
   <body>
 
     <sidebar>
-      {% if page.links and page.links.size > 0 %}
-      <h2>Links</h2>
+      {% if page.links or page.project %}
+      <h2>Referenced</h2>
+      {% if page.links %}
       {% for link in page.links %}
 	  <a class="link" href="{{ link.url }}">
 	    <object data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
@@ -18,6 +19,32 @@
 	    <span>{{ link.name }}</span>
 	  </a>
 	  {% endfor %}
+	  {% endif %}
+	  {% if page.project %}
+	  {% assign project = site.projects | where: "title", page.project | first %}
+	  <a class="link" href="{{ project.url }}">
+	  	<img src="/images/ic/link.svg">
+	  	<span>{{ project.title }}</span>
+	  </a>
+	  <h2>Links</h2>
+	  {% for link in project.links %}
+	  <a class="link" href="{{ link.url }}">
+	    <object data="{{ link.icon }}" type="image/png">
+	      <img src="/images/ic/link.svg">
+	    </object>
+	    <span>{{ link.name }}</span>
+	  </a>
+	  {% endfor %}
+	  <h2>Contributors</h2>
+	  {% for contributor in project.contributors %}
+	  <a class="link" href="{{ contributor.url }}">
+	  	<object class="round" data="{{ contributor.avatar }}" type="image/png">
+	  	  <img class="round" src="/images/ic/person.svg">
+	  	</object>
+	  	<span>{{ contributor.login }}</span>
+	  </a>
+	  {% endfor %}
+	  {% endif %}
 	  {% endif %}
 	  <h2>Author</h2>
 	  <a class="link" href="/">

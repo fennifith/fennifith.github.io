@@ -2,15 +2,6 @@
 layout: blog
 title: Attribouter
 project: Attribouter
-links:
-  - name: Attribouter
-    url: /projects/attribouter
-  - name: Documentation
-    url: /Attribouter/
-    icon: /images/ic/assignment.svg
-  - name: GitHub
-    url: https://jfenn.me/redirects/?t=github&d=Attribouter
-    icon: https://github.com/favicon.ico
 ---
 
 A few months ago, I got tired of building about screens into all of my projects. I like building projects, and I find it very rewarding when others contribute to them and find them useful, but when the amount of work I force myself to do in order to give credit to the people that have helped me is greater than the work they have done to help me in the first place, it gets a little annoying.
