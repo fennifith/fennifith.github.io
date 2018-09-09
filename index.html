@@ -6,6 +6,7 @@ permalink: /
 
 <nav>
 	<button page="home" class="selectable"><i class="material-icons">home</i><span class="desktop">Home</span></button>
+	<button page="blog" class="selectable"><i class="material-icons">notes</i><span class="desktop">Blog</span></button>
 	<button page="projects" class="selectable"><i class="material-icons">code</i><span class="desktop">Projects</span></button>
 	<button page="community" class="selectable"><i class="material-icons">people</i><span class="desktop">Community</span></button>
 	<button page="about" class="selectable"><i class="material-icons">info</i><span class="desktop">About</span></button>
@@ -21,7 +22,7 @@ permalink: /
 			is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
 			PRs on all of my projects unless stated otherwise.
 		</p>
-		<p>You can see all of my latest blog posts <a href="/blog/">here</a>.</p>
+		<p>You can see all of my latest blog posts <a href="/?blog">here</a>.</p>
 		<h2>Find me in places.</h2>
 		{% assign links = site.links | sort: 'order' %}
 		{% for link in links %}
@@ -42,6 +43,19 @@ permalink: /
 		</div>
 		<br>
 		<i id="pun"></i>
+	</div>
+	<div page="blog">
+		<p>
+			These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post
+			often, but if you wish to subscribe to updates, you can find an RSS feed of all of the posts <a href="/blog/feed">here</a>. I may also create some form
+			of an email notification system, but that will not be done for a while.
+		</p>
+		{% for blog in site.blogs reversed %}
+		<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+			<span>{{ blog.title }}</span>
+			{{ blog.date | date: "%B %e %Y" }}
+		</a>
+		{% endfor %}
 	</div>
 	<div id="projects" page="projects">
 		<filter id="projectsFilter" tabindex="0">
