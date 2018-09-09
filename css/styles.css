@@ -360,6 +360,21 @@ footer > a {
 	color: #000;
 }
 
+.item.image > div {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-height: 40vh;
+	margin-top: 1em;
+	overflow: hidden;
+}
+
+.item.image > div > img,
+.item.image > div > object {
+	width: 100%;
+	max-height: initial;
+}
+
 .grid {
 	display: -webkit-flex;
 	display: flex;
