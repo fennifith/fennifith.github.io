@@ -25,6 +25,16 @@
 			<span>{{ contributor.login }}</span>
 		</a>
 		{% endfor %}
+		{% assign blogs = site.blogs | where: "project", page.title %}
+		{% if blogs.size > 0 %}		
+		<h2>Posts</h2>
+		{% for blog in blogs %}
+		<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+			<span>{{ blog.title }}</span>
+			{{ blog.date | date: "%B %e, %Y" }}
+		</a>
+		{% endfor %}
+		{% endif %}
 	</sidebar>
 
 	<main>

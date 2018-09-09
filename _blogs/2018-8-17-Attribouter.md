@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Attribouter
+project: Attribouter
 links:
   - name: Attribouter
     url: /projects/attribouter

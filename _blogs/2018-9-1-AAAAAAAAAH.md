@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: AAAAAAAAAAAAAAAAAAAAAAAHHH
+project: AAH
 links:
   - name: AAH
     url: /projects/aah
