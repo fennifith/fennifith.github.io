@@ -360,12 +360,16 @@ footer > a {
 	color: #000;
 }
 
+.item.image {
+	margin-bottom: 2em;
+}
+
 .item.image > div {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	max-height: 40vh;
-	margin-top: 1em;
+	margin-bottom: 0.5em;
 	overflow: hidden;
 }
 
@@ -373,6 +377,16 @@ footer > a {
 .item.image > div > object {
 	width: 100%;
 	max-height: initial;
+	transform: scale(1);
+
+	transition: transform .25s;
+	-moz-transition: transform .25s;
+	-webkit-transition: transform .25s;
+}
+
+.item.image:hover > div > img,
+.item.image:hover > div > object {
+	transform: scale(1.25);
 }
 
 .grid {
