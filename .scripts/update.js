@@ -162,6 +162,8 @@ try {
 				+ "links:\n" + links
 				+ "contributors:\n" + people
 				+ "---\n\n" + readme);
+
+			console.log("Fetched project " + repo.full_name);
 		}
 	}
 
@@ -186,6 +188,8 @@ try {
 			+ "avatar: " + person.avatar_url + "\n"
 			+ "link: " + person.html_url + "\n"
 			+ "---\n");
+
+		console.log("Fetched person " + person.login);
 	}
 
 	let orgs = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
@@ -202,6 +206,8 @@ try {
 			+ "avatar: " + orgs[i].avatar_url + "\n"
 			+ "link: https://github.com/" + orgs[i].login + "\n"
 			+ "---\n");
+
+		console.log("Fetched org " + orgs[i].login);
 	}
 } catch (error) {
 	console.error(error);

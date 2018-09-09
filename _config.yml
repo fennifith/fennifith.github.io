@@ -24,3 +24,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+include:
+  - .scripts
