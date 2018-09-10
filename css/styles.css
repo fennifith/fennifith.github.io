@@ -362,13 +362,21 @@ footer > a {
 
 .item.image {
 	margin-bottom: 2em;
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .item.image > span {
-	background: rgba(0, 0, 0, 0.2);
 	color: rgba(0, 0, 0, 0.7);
 	padding: 1em 2em;
+
+	transition: background-color .25s, color .25s;
+	-moz-transition: background-color .25s, color .25s;
+	-webkit-transition: background-color .25s, color .25s;
+}
+
+.item.image:hover > span {
+	background-color: rgba(0, 0, 0, 0.03);
+	color: #000;
 }
 
 .item.image > div {
@@ -392,7 +400,7 @@ footer > a {
 
 .item.image:hover > div > img,
 .item.image:hover > div > object {
-	transform: scale(1.25);
+	transform: scale(1.1);
 }
 
 .grid {
