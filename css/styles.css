@@ -365,6 +365,12 @@ footer > a {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.item.image > span {
+	background: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.7);
+	padding: 1em 2em;
+}
+
 .item.image > div {
 	display: flex;
 	align-items: center;
@@ -387,12 +393,6 @@ footer > a {
 .item.image:hover > div > img,
 .item.image:hover > div > object {
 	transform: scale(1.25);
-}
-
-.item.image > div > span {
-	background: rgba(0, 0, 0, 0.2);
-	color: rgba(0, 0, 0, 0.7);
-	padding: 1em 2em;
 }
 
 .grid {
