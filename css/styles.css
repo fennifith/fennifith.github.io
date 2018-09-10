@@ -441,6 +441,19 @@ footer > a {
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
 }
 
+.item.box.image > div {
+	margin: -1.5em -16px;
+	margin-bottom: 1em;
+	max-height: 8em;
+	width: calc(100% + 31.5px);
+}
+
+.item.box.image > span {
+	padding: 0;
+	background: initial;
+	font-weight: bolder;
+}
+
 sidebar {
 	display: block;
 	padding: 2em 10vw;
