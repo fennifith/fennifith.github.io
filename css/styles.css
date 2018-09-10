@@ -362,6 +362,7 @@ footer > a {
 
 .item.image {
 	margin-bottom: 2em;
+	border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .item.image > div {
@@ -369,7 +370,6 @@ footer > a {
 	align-items: center;
 	width: 100%;
 	max-height: 40vh;
-	margin-bottom: 0.5em;
 	overflow: hidden;
 }
 
@@ -387,6 +387,12 @@ footer > a {
 .item.image:hover > div > img,
 .item.image:hover > div > object {
 	transform: scale(1.25);
+}
+
+.item.image > div > span {
+	background: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.7);
+	padding: 1em 2em;
 }
 
 .grid {
