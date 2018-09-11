@@ -441,6 +441,11 @@ footer > a {
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
 }
 
+.item.box.image {
+	border-color: #000;
+	background-color: var(--item-bg);
+}
+
 .item.box.image > div {
 	margin: -1.5em -16px;
 	margin-bottom: 1em;
@@ -451,6 +456,8 @@ footer > a {
 .item.box.image > span {
 	padding: 0;
 	background: initial;
+	background-color: var(--item-bg);
+	color: var(--item-fg);
 	font-weight: bolder;
 }
 
