@@ -68,7 +68,8 @@ img {
 img.round,
 object.round {
 	border-radius: 50%;
-	border: 1px inset #000000;
+	border: 1px solid #000000;
+	box-shadow: 0 0 1px 0px #000, 0 0 1px 0px #000;
 }
 
 button {
