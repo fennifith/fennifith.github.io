@@ -444,6 +444,7 @@ footer > a {
 .item.box.image {
 	border-color: #000;
 	background-color: var(--item-bg);
+	color: var(--item-fg);
 }
 
 .item.box.image > div {
