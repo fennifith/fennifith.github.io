@@ -1,6 +1,6 @@
 ---
 layout: project
-type: undefined
+type: website
 title: photos
 description: A collection of my photography, published under the Creative Commons License.
 repo: TheAndroidMaster/photos
