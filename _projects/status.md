@@ -18,8 +18,8 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=com.james.status
     icon: /images/ic/play-store.svg
-  - name: Status.apk (v3.8-beta unstable)
-    url: https://github.com/TheAndroidMaster/Status/releases/download/v3.8-beta/Status.apk
+  - name: Status.apk (v3.8.1-beta unstable)
+    url: https://github.com/TheAndroidMaster/Status/releases/download/v3.8.1-beta/Status.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
