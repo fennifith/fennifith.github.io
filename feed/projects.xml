@@ -1,0 +1,21 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.name }}</title>
+		<description>James Fenn's project list.</description>
+		<link>{{ site.url }}</link>
+		{% for project in site.projects %}
+		<item>
+			<title>{{ project.title | xml_escape }}</title>
+			<description>{{ project.content | xml_escape }}</description>
+			<pubDate>{{ project.date | date_to_xmlschema }}</pubDate>
+			<link>{{ project.id | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ project.id | prepend: site.url }}</guid>
+		</item>
+		{% endfor %}
+	</channel>
+</rss>
