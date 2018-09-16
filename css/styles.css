@@ -72,7 +72,7 @@ object.round {
 	box-shadow: 0 0 1px 0px #000, 0 0 1px 0px #000;
 }
 
-button {
+button, input[type=submit] {
 	border: none;
 	outline: none;
 	user-select: none;
@@ -93,7 +93,7 @@ button.selectable {
 	box-shadow: none;
 }
 
-button:hover {
+button:hover, input[type=submit]:hover {
 	background-color: #0091EA;
 	color: #FFF !important;
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
@@ -109,6 +109,10 @@ button.selectable[selected] {
 	background-color: #0091EA;
 	color: #FFF !important;
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.5);
+}
+
+input[type=submit] {
+	padding: 3px 8px;
 }
 
 button.big {

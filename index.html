@@ -48,15 +48,19 @@ permalink: /
 	<div page="blog">
 		<p>
 			These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post
-			often, but if you wish to subscribe to updates, you can find an RSS feed of all of the posts <a href="/blog/feed">here</a>. I may also create some form
-			of an email notification system, but that will not be done for a while.
+			often, but if you wish to subscribe to updates, you can find an RSS feed of all of the posts <a href="/blog/feed">here</a>.
 		</p>
-		{% for blog in site.blogs reversed %}
-		<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
-			<span>{{ blog.title }}</span>
-			{{ blog.date | date: "%B %e %Y" }}
-		</a>
-		{% endfor %}
+		<h4 style="margin-bottom: .5em;">Want to receive updates when I publish a blog post?</h4>
+		{% include feedform.html feed="fennifith" %}
+		<h2>Posts</h2>
+		<p>
+			{% for blog in site.blogs reversed %}
+			<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+				<span>{{ blog.title }}</span>
+				{{ blog.date | date: "%B %e %Y" }}
+			</a>
+			{% endfor %}
+		</p>
 	</div>
 	<div id="projects" page="projects">
 		<filter id="projectsFilter" tabindex="0">
@@ -76,6 +80,9 @@ permalink: /
 				{% endfor %}
 			</div>
 		</filter>
+		<br>
+		<h4 style="margin-bottom: .5em;">Want to receive updates when I publish a new project?</h4>
+		{% include feedform.html feed="fennifith-projects" %}
 		<div id="projectsCategories" class="categories">
 			{% assign types = site.types | sort: "order" %}
 			{% for type in types %}
