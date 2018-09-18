@@ -28,6 +28,9 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+  - login: divadsn
+    avatar: https://avatars2.githubusercontent.com/u/28547847?v=4
+    url: https://github.com/divadsn
   - login: gcantoni
     avatar: https://avatars0.githubusercontent.com/u/30368951?v=4
     url: https://github.com/gcantoni
@@ -57,7 +60,7 @@ For demonstration and experimentation, an apk of the sample project can be downl
 The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your app's build.gradle file.
  
 ```gradle
-implementation 'me.jfenn:attribouter:0.1.2'
+implementation 'me.jfenn:attribouter:0.1.3'
 ```
 
 #### Starting an Activity
