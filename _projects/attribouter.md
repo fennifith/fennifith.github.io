@@ -21,8 +21,8 @@ links:
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
-  - name: Attribouter.apk (v0.1.2 stable)
-    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.2/Attribouter.apk
+  - name: Attribouter.apk (v0.1.3 stable)
+    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.3/Attribouter.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
