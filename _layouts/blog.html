@@ -58,12 +58,12 @@
     <main id="main" role="main">
       <article class="post">
         <h1>
-  	  {{ page.title }}
-  	  <br>
-	  <span style="font-size: 0.6em;">Written on {{ page.date | date: "%B %e, %Y" }}</span>
+          {{ page.title }}
+  	      <br>
+	      <span style="font-size: 0.6em;">Written on {{ page.date | date: "%B %e, %Y" }}</span>
         </h1>
 
-        <div class="entry">
+        <div class="entry" style="line-height: 1.8;">
           {{ content }}
         </div>
       </article>
