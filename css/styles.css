@@ -121,6 +121,10 @@ button.big {
 	font-weight: bolder;
 }
 
+input[type=text] {
+	padding: 1px 6px;
+}
+
 input[type=checkbox] {
 	display: none;
 	outline: none;
