@@ -1,4 +1,5 @@
-<form style="border: 1px solid #ccc; padding: 0 24px; display: inline-block;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri={{ include.feed }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<form class="wide" style="padding: 2em 10vw; background-color: #F5F5F5; border-top: 1px solid rgba(0, 0, 0, 0.25); border-bottom: 1px solid rgba(0, 0, 0, 0.25); width: 100%; text-align: center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri={{ include.feed }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+	<h3 style="display: inline;">{{ include.title }}</h3>
 	<p>Enter your email address:</p>
 	<p>
 		<input type="text" style="width:140px" name="email" placeholder="email@example.com"/>
