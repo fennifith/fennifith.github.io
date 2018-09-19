@@ -241,6 +241,7 @@ filter > .title > input {
 	width: calc(100% - 88px);
 	outline: none;
 	border: none;
+	padding: 0;
 	padding-left: 24px;
 	background-color: rgba(0, 0, 0, 0);
 }
