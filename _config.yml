@@ -27,3 +27,6 @@ exclude:
 
 include:
   - .scripts
+
+plugins:
+  - jekyll-sitemap
