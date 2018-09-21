@@ -57,4 +57,5 @@ Scrurl.display(null);
 
 ### Sample Implementations
 
-- [Preventing Scrurl from interfering with address bar input.](./examples/focusable.html#L62)
+- [Literally the simplest implementation possible](https://github.com/TheAndroidMaster/Scrurl/blob/master/./examples/simple.js)
+- [Preventing Scrurl from interfering with address bar input](https://github.com/TheAndroidMaster/Scrurl/blob/master/./examples/focusable.js)
