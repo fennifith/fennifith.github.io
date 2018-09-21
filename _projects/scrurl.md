@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Scrurl/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/Scrurl/wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
@@ -57,3 +54,7 @@ This will stop the url from scrolling, but will not remove it from the address b
 ```javascript
 Scrurl.display(null);
 ```
+
+### Sample Implementations
+
+- [Preventing Scrurl from interfering with address bar input.](./examples/focusable.html#L62)
