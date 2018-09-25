@@ -2,7 +2,7 @@
 layout: project
 type: undefined
 title: Exceptional Traveler
-description: An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.
+description: An implementation of the Travelling Salesperson Problem using the fundamentals of Exceptional Programming.
 repo: TheAndroidMaster/ExceptionalTraveler
 git: git://github.com/TheAndroidMaster/ExceptionalTraveler.git
 links:
@@ -15,6 +15,9 @@ links:
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
     icon: /images/ic/copyright.svg
+  - name: Exceptional Programming – Pointer IO – Medium
+    url: https://medium.com/pointer-io/exceptional-programming-62ea8150f61f
+    icon: https://medium.com/favicon.ico
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
@@ -27,6 +30,8 @@ This program is a joke. It is not serious. Please do not take this program serio
 
 The idea for this program was taken from Chet Haase's article for Pointer IO on [Exceptional Programming](https://medium.com/pointer-io/exceptional-programming-62ea8150f61f), which describes a programming style using just try/catch blocks and exceptions as the only control structure.
 
+This specific program takes a set of coordinates as input and uses a basic double neighbor heuristic to find the (probably) shortest (ish) possible path that crosses all of the points. It also keeps track of the total distance that has been covered, and outputs it with all of the points at the end of the program.
+
 ## Setup
 
 Obviously, this is a Java program. In order to run this program, download the source code and run the following commands:
@@ -36,7 +41,7 @@ javac Main.java
 java Main
 ```
 
-The program will then prompt you to input coordinates, after which it will pass the coordinates to `TravelingSalesPerson.java`, which will calculate and output the resulting order.
+The program will then prompt you to input coordinates, after which it will pass the coordinates to `TravellingSalesPerson.java`, which will calculate and output the resulting order.
 
 ## Guidelines
 
