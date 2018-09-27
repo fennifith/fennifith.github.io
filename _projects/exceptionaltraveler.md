@@ -2,7 +2,7 @@
 layout: project
 type: undefined
 title: Exceptional Traveler
-description: An implementation of the Travelling Salesperson Problem using the fundamentals of Exceptional Programming.
+description: An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.
 repo: TheAndroidMaster/ExceptionalTraveler
 git: git://github.com/TheAndroidMaster/ExceptionalTraveler.git
 links:
@@ -41,7 +41,7 @@ javac Main.java
 java Main
 ```
 
-The program will then prompt you to input coordinates, after which it will pass the coordinates to `TravellingSalesPerson.java`, which will calculate and output the resulting order.
+The program will then prompt you to input coordinates, after which it will pass the coordinates to `TravelingSalesPerson.java`, which will calculate and output the resulting order.
 
 ## Guidelines
 
