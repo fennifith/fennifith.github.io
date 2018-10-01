@@ -15,13 +15,19 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Alarmio.apk (0.3 unstable)
-    url: https://github.com/TheAndroidMaster/Alarmio/releases/download/0.3/Alarmio.apk
+  - name: Google Play
+    url: https://play.google.com/apps/testing/james.alarmio
+    icon: /images/ic/play-store.svg
+  - name: Alarmio.apk (v0.4 unstable)
+    url: https://github.com/TheAndroidMaster/Alarmio/releases/download/v0.4/Alarmio.apk
     icon: /images/ic/download.svg
 contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+  - login: Suburbanno
+    avatar: https://avatars1.githubusercontent.com/u/13632826?v=4
+    url: https://github.com/Suburbanno
   - login: FriederZi
     avatar: https://avatars1.githubusercontent.com/u/29213511?v=4
     url: https://github.com/FriederZi

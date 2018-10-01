@@ -12,7 +12,7 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/photos/issues
     icon: /images/ic/bug.svg
-  - name: Creative Commons Attribution Share Alike 4.0
+  - name: Creative Commons Attribution Share Alike 4.0 International
     url: https://choosealicense.com/licenses/cc-by-sa-4.0/
     icon: /images/ic/copyright.svg
   - name: Website
