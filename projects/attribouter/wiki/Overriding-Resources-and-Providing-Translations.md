@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Overriding Resources and Providing Translations"
+title: Overriding Resources and Providing Translations
 ---
 
 ## Problem

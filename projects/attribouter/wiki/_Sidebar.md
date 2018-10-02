@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: " Sidebar"
+title:  Sidebar
 ---
 
 ## Tutorials

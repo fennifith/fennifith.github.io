@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Translator Wedge"
+title: Translator Wedge
 ---
 
 The `TranslatorWedge` displays information about a translator in an only slightly more concise layout than the [`ContributorWedge`](ContributorWedge).

@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "License Wedge"
+title: License Wedge
 ---
 
 The `LicenseWedge` is intended to display information about libraries used by your project. Simply displaying this wedge does not guarantee that you are following all of the conditions of the project's license, but it is a good start.

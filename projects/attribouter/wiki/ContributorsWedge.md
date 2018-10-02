@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Contributors Wedge"
+title: Contributors Wedge
 ---
 
 A `ContributorsWedge` displays a list of child [`ContributorWedge`](ContributorWedge)s under a title, sorted by their `position` attributes. If the `repo` attribute is specified, this list will be merged with contributors from GitHub. If the `showDefaults` attribute is unspecified or `true`, it will also merge it with contributors to this repository. 

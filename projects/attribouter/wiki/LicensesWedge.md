@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Licenses Wedge"
+title: Licenses Wedge
 ---
 
 The `LicensesWedge` displays a list of child [`LicenseWedge`](LicenseWedge)s with a title at the top. If the `showDefaults` attribute is undefined or `true`, this list will be merged with the licenses used by Attribouter. See ["Overriding Resources and Providing Translations"](Overriding-Resources-and-Providing-Translations) for more information on how merges work.

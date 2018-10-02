@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Text Wedge"
+title: Text Wedge
 ---
 
 A `TextWedge` is a block of text. Fairly simple.

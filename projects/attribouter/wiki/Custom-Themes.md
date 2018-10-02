@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Custom Themes"
+title: Custom Themes
 ---
 
 ## Activity / Dialog Themes
