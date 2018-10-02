@@ -6,8 +6,36 @@
 	<link href="/css/md.css" rel="stylesheet">
 </head>
 <body>
+	{% if page.project %}
+	{% assign project = site.projects | where: "title", page.project | first %}
+	<sidebar>
+		<h2>Links</h2>
+		{% assign links = project.links | where_exp: "link", "link.name != 'Wiki'" %}
+		{% for link in links %}
+			<a class="link" href="{{ link.url }}">
+				<object data="{{ link.icon }}" type="image/png">
+					<img src="/images/ic/link.svg">
+				</object>
+			<span>{{ link.name }}</span>
+		</a>
+		{% endfor %}
+		<h2>Contributors</h2>
+		{% for contributor in project.contributors %}
+		<a class="link" href="{{ contributor.url }}">
+			<object class="round" data="{{ contributor.avatar }}" type="image/png">
+				<img class="round" src="/images/ic/person.svg">
+			</object>
+			<span>{{ contributor.login }}</span>
+		</a>
+		{% endfor %}
+	</sidebar>
+	{% endif %}
 	<main>
+		{% if page.project %}
 		<a class="link" href="../"><img src="/images/ic/back.svg"><span>Project Info</span></a>
+		{% else %}
+		<a class="link" href="./"><img src="/images/ic/back.svg"><span>Wiki Home</span></a>
+		{% endif %}
 		<br>
 		{{ content }}
 	</main>
