@@ -2,7 +2,7 @@
 layout: project
 type: android-app
 title: "Feedage"
-description: "A basic "news reader" that sorts posts from various RSS feeds into categories."
+description: "A basic \"news reader\" that sorts posts from various RSS feeds into categories."
 repo: TheAndroidMaster/Feedage
 git: git://github.com/TheAndroidMaster/Feedage.git
 links:
