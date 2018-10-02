@@ -21,7 +21,7 @@ function titleize(str) {
 }
 
 function safestrize(str) {
-	return "\"" + str.replace(/(\")/g, "\"") + "\"";
+	return "\"" + str.replace(/(\")/g, "\\\"") + "\"";
 }
 
 let token = null;
@@ -196,7 +196,7 @@ try {
 							+ "---\n\n" + wiki);
 						
 						if (fileName == "Home.md") {
-							_fs.writeFileSync(wikiDir + "/README.md", "---\n"
+							_fs.writeFileSync(wikiDir + "/index.md", "---\n"
 								+ "layout: wiki\n"
 								+ "title: " + titleize(repo.name) + " Wiki\n"
 								+ "---\n\n" + wiki);
