@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Radial Layout
-description: A scrollable-ish view that arranges images in circles extending from the center of the screen.
+title: "Radial Layout"
+description: "A scrollable-ish view that arranges images in circles extending from the center of the screen."
 repo: TheAndroidMaster/RadialLayout
 git: git://github.com/TheAndroidMaster/RadialLayout.git
 links:

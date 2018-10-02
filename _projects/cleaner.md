@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: Cleaner
-description: The only storage saving app that actually works! &#58;D
+title: "Cleaner"
+description: "The only storage saving app that actually works! &#58;D"
 repo: TheAndroidMaster/Cleaner
 git: git://github.com/TheAndroidMaster/Cleaner.git
 links:

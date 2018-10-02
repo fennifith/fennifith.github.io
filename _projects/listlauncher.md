@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: List Launcher
-description: A launcher that shows apps in a scrollable layout.
+title: "List Launcher"
+description: "A launcher that shows apps in a scrollable layout."
 repo: TheAndroidMaster/ListLauncher
 git: git://github.com/TheAndroidMaster/ListLauncher.git
 links:

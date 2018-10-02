@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: Cronhub Monitor
-description: A native CronHub notification client for Android.
+title: "Cronhub Monitor"
+description: "A native CronHub notification client for Android."
 repo: TheAndroidMaster/Cronhub-Monitor
 git: git://github.com/TheAndroidMaster/Cronhub-Monitor.git
 links:

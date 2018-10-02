@@ -1,8 +1,8 @@
 ---
 layout: project
 type: nodejs
-title: Passerator
-description: A simple password generator made in my free time. It's probably safe to use. I think.
+title: "Passerator"
+description: "A simple password generator made in my free time. It's probably safe to use. I think."
 repo: TheAndroidMaster/Passerator
 git: git://github.com/TheAndroidMaster/Passerator.git
 links:
@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Passerator/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/Passerator/wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg

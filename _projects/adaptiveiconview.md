@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Adaptive Icon View
-description: A library to allow easy implementation of pre-Oreo adaptive icon support in Android launchers.
+title: "Adaptive Icon View"
+description: "A library to allow easy implementation of pre-Oreo adaptive icon support in Android launchers."
 repo: TheAndroidMaster/AdaptiveIconView
 git: git://github.com/TheAndroidMaster/AdaptiveIconView.git
 links:

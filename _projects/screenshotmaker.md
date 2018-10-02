@@ -1,8 +1,8 @@
 ---
 layout: project
 type: undefined
-title: Screenshot Maker
-description: A small java applet to generate uniform Play Store screenshots with titles and descriptions.
+title: "Screenshot Maker"
+description: "A small java applet to generate uniform Play Store screenshots with titles and descriptions."
 repo: TheAndroidMaster/ScreenshotMaker
 git: git://github.com/TheAndroidMaster/ScreenshotMaker.git
 links:

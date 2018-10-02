@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: Battery Alert
-description: Makes your phone vibrate a lot once it discharges to a specified level.
+title: "Battery Alert"
+description: "Makes your phone vibrate a lot once it discharges to a specified level."
 repo: TheAndroidMaster/BatteryAlert
 git: git://github.com/TheAndroidMaster/BatteryAlert.git
 links:

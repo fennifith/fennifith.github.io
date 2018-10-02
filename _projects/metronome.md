@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: Metronome
-description: A lightweight metronome web app.
+title: "Metronome"
+description: "A lightweight metronome web app."
 repo: TheAndroidMaster/Metronome
 git: git://github.com/TheAndroidMaster/Metronome.git
 links:

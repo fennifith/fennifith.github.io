@@ -1,8 +1,8 @@
 ---
 layout: project
 type: undefined
-title: Exceptional Traveler
-description: An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.
+title: "Exceptional Traveler"
+description: "An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming."
 repo: TheAndroidMaster/ExceptionalTraveler
 git: git://github.com/TheAndroidMaster/ExceptionalTraveler.git
 links:

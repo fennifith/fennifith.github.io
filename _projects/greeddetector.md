@@ -1,8 +1,8 @@
 ---
 layout: project
 type: undefined
-title: Greed Detector
-description: A website/quiz that supposedly measures how greedy you are.
+title: "Greed Detector"
+description: "A website/quiz that supposedly measures how greedy you are."
 repo: TheAndroidMaster/GreedDetector
 git: git://github.com/TheAndroidMaster/GreedDetector.git
 links:

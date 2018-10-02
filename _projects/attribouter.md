@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Attribouter
-description: A lightweight "about screen" library to allow quick but customizable attribution in Android apps.
+title: "Attribouter"
+description: "A lightweight "about screen" library to allow quick but customizable attribution in Android apps."
 repo: TheAndroidMaster/Attribouter
 git: git://github.com/TheAndroidMaster/Attribouter.git
 links:
@@ -13,7 +13,7 @@ links:
     url: https://github.com/TheAndroidMaster/Attribouter/issues
     icon: /images/ic/bug.svg
   - name: Documentation
-    url: https://github.com/TheAndroidMaster/Attribouter/wiki
+    url: wiki
     icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/

@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: photos
-description: A collection of my photography, published under the Creative Commons License.
+title: "photos"
+description: "A collection of my photography, published under the Creative Commons License."
 repo: TheAndroidMaster/photos
 git: git://github.com/TheAndroidMaster/photos.git
 links:

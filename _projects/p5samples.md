@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: P5Samples
-description: Stuff I made messing around with p5js in my free time.
+title: "P5Samples"
+description: "Stuff I made messing around with p5js in my free time."
 repo: TheAndroidMaster/P5Samples
 git: git://github.com/TheAndroidMaster/P5Samples.git
 links:
@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/P5Samples/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/P5Samples/wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg

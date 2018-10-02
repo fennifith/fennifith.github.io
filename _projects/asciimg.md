@@ -1,8 +1,8 @@
 ---
 layout: project
 type: nodejs
-title: Asciimg
-description: A command line tool to display images in ASCII.
+title: "Asciimg"
+description: "A command line tool to display images in ASCII."
 repo: TheAndroidMaster/Asciimg
 git: git://github.com/TheAndroidMaster/Asciimg.git
 links:
@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Asciimg/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/Asciimg/wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg

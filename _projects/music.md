@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: Music
-description: A collection of my piano compositions and other music-related projects.
+title: "Music"
+description: "A collection of my piano compositions and other music-related projects."
 repo: TheAndroidMaster/Music
 git: git://github.com/TheAndroidMaster/Music.git
 links:

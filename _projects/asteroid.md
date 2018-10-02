@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-game
-title: Asteroid
-description: A simple Android game based on avoiding incoming asteroids
+title: "Asteroid"
+description: "A simple Android game based on avoiding incoming asteroids"
 repo: TheAndroidMaster/Asteroid
 git: git://github.com/TheAndroidMaster/Asteroid.git
 links:

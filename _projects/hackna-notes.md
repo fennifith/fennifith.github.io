@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: Hack NA Notes
-description: A small sample project created for a workshop at HackNA.
+title: "Hack NA Notes"
+description: "A small sample project created for a workshop at HackNA."
 repo: TheAndroidMaster/HackNA-Notes
 git: git://github.com/TheAndroidMaster/HackNA-Notes.git
 links:
@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/HackNA-Notes/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
-    url: https://github.com/TheAndroidMaster/HackNA-Notes/wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg

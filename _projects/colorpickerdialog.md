@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Color Picker Dialog
-description: A simple dialog making it quick and easy to add color picking functionality to any app.
+title: "Color Picker Dialog"
+description: "A simple dialog making it quick and easy to add color picking functionality to any app."
 repo: TheAndroidMaster/ColorPickerDialog
 git: git://github.com/TheAndroidMaster/ColorPickerDialog.git
 links:

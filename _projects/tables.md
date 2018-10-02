@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: Tables
-description: A simple website that makes a table/graph from a function.
+title: "Tables"
+description: "A simple website that makes a table/graph from a function."
 repo: TheAndroidMaster/Tables
 git: git://github.com/TheAndroidMaster/Tables.git
 links:

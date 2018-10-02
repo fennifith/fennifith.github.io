@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-game
-title: Monochrome
-description: A monochromatic pixelated adventure game.
+title: "Monochrome"
+description: "A monochromatic pixelated adventure game."
 repo: TheAndroidMaster/Monochrome
 git: git://github.com/TheAndroidMaster/Monochrome.git
 links:

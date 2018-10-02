@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Signal Strengths
-description: A library and sample application with the purpose of getting an accurate signal strength on different Android phones.
+title: "Signal Strengths"
+description: "A library and sample application with the purpose of getting an accurate signal strength on different Android phones."
 repo: TheAndroidMaster/SignalStrengths
 git: git://github.com/TheAndroidMaster/SignalStrengths.git
 links:

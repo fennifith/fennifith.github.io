@@ -1,8 +1,8 @@
 ---
 layout: project
 type: website
-title: Keyboard Oscillator
-description: Small website that turns your keyboard into a weird synth thingy.
+title: "Keyboard Oscillator"
+description: "Small website that turns your keyboard into a weird synth thingy."
 repo: TheAndroidMaster/KeyboardOscillator
 git: git://github.com/TheAndroidMaster/KeyboardOscillator.git
 links:

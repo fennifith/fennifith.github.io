@@ -1,8 +1,8 @@
 ---
 layout: project
 type: undefined
-title: Social Studies
-description: A website created to host my Social Studies projects.
+title: "Social Studies"
+description: "A website created to host my Social Studies projects."
 repo: TheAndroidMaster/SocialStudies
 git: git://github.com/TheAndroidMaster/SocialStudies.git
 links:

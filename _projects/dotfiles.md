@@ -1,8 +1,8 @@
 ---
 layout: project
 type: undefined
-title: dotfiles
-description: My "generic Linux distro" dotfiles. Used to sync stuff between laptops and not much else.
+title: "dotfiles"
+description: "My "generic Linux distro" dotfiles. Used to sync stuff between laptops and not much else."
 repo: TheAndroidMaster/dotfiles
 git: git://github.com/TheAndroidMaster/dotfiles.git
 links:

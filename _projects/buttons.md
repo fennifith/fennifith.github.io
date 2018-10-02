@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-library
-title: Buttons
-description: A library with a large amount of themable styled buttons.
+title: "Buttons"
+description: "A library with a large amount of themable styled buttons."
 repo: TheAndroidMaster/Buttons
 git: git://github.com/TheAndroidMaster/Buttons.git
 links:

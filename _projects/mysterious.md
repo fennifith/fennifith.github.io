@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: Mysterious
+title: "Mysterious"
 repo: TheAndroidMaster/Mysterious
 git: git://github.com/TheAndroidMaster/Mysterious.git
 links:

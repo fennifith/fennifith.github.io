@@ -1,8 +1,8 @@
 ---
 layout: project
 type: android-app
-title: Plus Viewer
-description: A basic google plus client using a WebView
+title: "Plus Viewer"
+description: "A basic google plus client using a WebView"
 repo: TheAndroidMaster/PlusViewer
 git: git://github.com/TheAndroidMaster/PlusViewer.git
 links:
