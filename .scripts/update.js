@@ -16,6 +16,10 @@ const _request = require('sync-request');
 const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
 
+function titleize(str) {
+	return str.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2");
+}
+
 let token = null;
 try {
 	token = _fs.readFileSync(_path.join(process.env.HOME, "keys/github.txt"), 'utf8');
@@ -91,7 +95,7 @@ try {
 
 			if (repo.has_wiki) {
 				links += "  - name: Documentation\n"
-					+ "    url: " + repo.html_url + "/wiki\n"
+					+ "    url: wiki\n"
 					+ "    icon: /images/ic/assignment.svg\n"
 			}
 
@@ -156,15 +160,41 @@ try {
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
 				+ "layout: project\n"
 				+ "type: " + type + "\n"
-				+ "title: " + repo.name.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2") + "\n"
-				+ (repo.description ? "description: " + repo.description.split(":").join("&#58;") + "\n" : "")
+				+ "title: \"" + titleize(repo.name) + "\"\n"
+				+ (repo.description ? "description: \"" + repo.description.split(":").join("&#58;") + "\"\n" : "")
 				+ "repo: " + repo.full_name + "\n"
 				+ "git: " + repo.git_url + "\n"
 				+ "links:\n" + links
 				+ "contributors:\n" + people
 				+ "---\n\n" + readme);
-
+				
 			console.log("Fetched project " + repo.full_name);
+				
+			if (repo.has_wiki) {
+				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
+				if (!_fs.existsSync(wikiDir)) {
+					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
+						_fs.mkdirSync(_path.resolve("../../projects/" + repo.name.toLowerCase()));
+					
+					_fs.mkdirSync(wikiDir);
+				}
+				
+				if (!_fs.existsSync(wikiDir + "/.temp"))
+					_fs.mkdirSync(wikiDir + "/.temp");
+				
+				_clone("https://github.com/" + repo.full_name + ".wiki", wikiDir + "/.temp");
+				_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
+					if (fileName.endsWith(".md")) {
+						let wiki = _fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8");
+						_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
+							+ "layout: wiki\n"
+							+ "title: \"" + titleize(fileName.substring(0, fileName.length - 3)) + "\"\n"
+							+ "---\n\n" + wiki);
+					}
+				});
+				
+				console.log("Fetched project wiki " + repo.full_name);
+			}
 		}
 	}
 
