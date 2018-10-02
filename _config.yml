@@ -14,7 +14,7 @@ collections:
         output: false
     projects:
         output: true
-        permalink: /projects/:title/index.html
+        permalink: /projects/:title/
     blogs:
         output: true
         permalink: /blog/:year-:month-:day-:title/
