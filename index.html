@@ -89,7 +89,7 @@ permalink: /
 				<div id="{{ type.tag }}list">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
-					<a class="item" href="{{ project.id }}">
+					<a class="item" href="{{ project.url }}">
 						<span>{{ project.title }}</span>
 						{{ project.description }}
 					</a>
