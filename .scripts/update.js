@@ -10,20 +10,21 @@ const types = [
 	{% endfor %}
 ];
 
-const path = require("path");
-const fs = require('fs');
-const request = require('sync-request');
-const cheerio = require('cheerio');
+const _path = require("path");
+const _fs = require('fs');
+const _request = require('sync-request');
+const _cheerio = require('cheerio');
+const _clone = require('git-clone-sync');
 
 let token = null;
 try {
-	token = fs.readFileSync(path.join(process.env.HOME, "keys/github.txt"), 'utf8');
+	token = _fs.readFileSync(_path.join(process.env.HOME, "keys/github.txt"), 'utf8');
 } catch (error) {
 	console.error("No GitHub Token:", error);
 }
 
 try {
-	let repos = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000", {
+	let repos = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000", {
 		headers: { 
 			"User-Agent": "TheAndroidMaster.github.io",
 			"Authorization": token ? "token " + token : null
@@ -32,7 +33,7 @@ try {
 
 	for (let i = 0; i < repos.length; i++) {
 		if (!repos[i].fork && (!repos[i].description || !repos[i].description.startsWith("("))) {
-			let topics = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
+			let topics = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
 				headers: { 
 					"Accept": "application/vnd.github.mercy-preview+json",
 					"User-Agent": "TheAndroidMaster.github.io",
@@ -50,7 +51,7 @@ try {
 
 			let readme = null;
 			try {
-				readme = request('GET', "https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md").getBody('utf8');
+				readme = _request('GET', "https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md").getBody('utf8');
 				readme = readme.replace(/(!\[img\]\(.)([A-Za-z\/.?=]{0,})(\))/g, "![img](https://raw.githubusercontent.com/" + repos[i].full_name + "/master/.$2)")
 					.replace(/(\[)([A-Za-z.`\s]{0,})(\]\(.)([A-Za-z\/.?=`]{0,})(\))/g, "[$2](" + repos[i].html_url + "/blob/master/.$4)");
 			} catch (error) {
@@ -58,21 +59,21 @@ try {
 				continue;
 			}
 				
-			let repo = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name, {
+			let repo = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name, {
 				headers: { 
 					"User-Agent": "TheAndroidMaster.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
 				
-			let contributors = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/contributors", {
+			let contributors = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/contributors", {
 				headers: { 
 					"User-Agent": "TheAndroidMaster.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
 
-			let releases = JSON.parse(request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/releases", {
+			let releases = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/releases", {
 				headers: { 
 					"User-Agent": "TheAndroidMaster.github.io",
 					"Authorization": token ? "token " + token : null
@@ -110,7 +111,7 @@ try {
 						+ "    url: " + repo.homepage + "\n"
 						+ "    icon: /images/ic/play-store.svg\n";
 				} else {
-					let page = cheerio.load(request('GET', repo.homepage).getBody('utf8'));
+					let page = _cheerio.load(_request('GET', repo.homepage).getBody('utf8'));
 					let linkTitle = page("head > title").text().trim();
 					if (repo.homepage.includes("bintray.com"))
 						linkTitle = "Bintray";
@@ -152,7 +153,7 @@ try {
 					+ "    url: " + contributors[i2].html_url + "\n";
 			}				
 
-			fs.writeFileSync(path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
+			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
 				+ "layout: project\n"
 				+ "type: " + type + "\n"
 				+ "title: " + repo.name.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2") + "\n"
@@ -167,7 +168,7 @@ try {
 		}
 	}
 
-	let people = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", {
+	let people = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", {
 		headers: { 
 			"User-Agent": "TheAndroidMaster.github.io",
 			"Authorization": token ? "token " + token : null
@@ -175,14 +176,14 @@ try {
 	}).getBody('utf8'));
 
 	for (let i = 0; i < people.length; i++) {
-		let person = JSON.parse(request('GET', "https://api.github.com/users/" + people[i].login, {
+		let person = JSON.parse(_request('GET', "https://api.github.com/users/" + people[i].login, {
 			headers: { 
 				"User-Agent": "TheAndroidMaster.github.io",
 				"Authorization": token ? "token " + token : null
 			}
 		}).getBody('utf8'));
 
-		fs.writeFileSync(path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
+		_fs.writeFileSync(_path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
 			+ "title: " + (person.name ? person.name : person.login) + "\n"
 			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.") + "\n"
 			+ "avatar: " + person.avatar_url + "\n"
@@ -192,7 +193,7 @@ try {
 		console.log("Fetched person " + person.login);
 	}
 
-	let orgs = JSON.parse(request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
+	let orgs = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
 		headers: { 
 			"User-Agent": "TheAndroidMaster.github.io",
 			"Authorization": token ? "token " + token : null
@@ -200,7 +201,7 @@ try {
 	}).getBody('utf8'));
 
 	for (let i = 0; i < orgs.length; i++) {
-		fs.writeFileSync(path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
+		_fs.writeFileSync(_path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
 			+ "title: " + orgs[i].login + "\n"
 			+ "description: " + (orgs[i].description ? orgs[i].description : "Things happen.") + "\n"
 			+ "avatar: " + orgs[i].avatar_url + "\n"
