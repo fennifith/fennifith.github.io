@@ -199,6 +199,7 @@ try {
 							_fs.writeFileSync(wikiDir + "/index.md", "---\n"
 								+ "layout: wiki\n"
 								+ "title: " + titleize(repo.name) + " Wiki\n"
+								+ "project: " + repo.name.toLowerCase() + "\n"
 								+ "---\n\n" + wiki);
 						}
 					}
