@@ -12,7 +12,7 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Attribouter/issues
     icon: /images/ic/bug.svg
-  - name: Documentation
+  - name: Wiki
     url: wiki
     icon: /images/ic/assignment.svg
   - name: Apache License 2.0

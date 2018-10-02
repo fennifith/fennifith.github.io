@@ -98,7 +98,7 @@ try {
 				+ "    icon: /images/ic/bug.svg\n";
 
 			if (repo.has_wiki) {
-				links += "  - name: Documentation\n"
+				links += "  - name: Wiki\n"
 					+ "    url: wiki\n"
 					+ "    icon: /images/ic/assignment.svg\n"
 			}
