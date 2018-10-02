@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	{% include head.html %}
+	<link href="/css/md.css" rel="stylesheet">
+</head>
+<body>
+	<main>
+		<a class="link" href="../"><img src="/images/ic/back.svg"><span>Project Info</span></a>
+		<br>
+		{{ content }}
+	</main>
+
+	{% include snackbar.html %}
+	{% include footer.html %}
+</body>
+</html>
+	
