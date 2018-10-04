@@ -1,6 +1,1 @@
----
-layout: wiki
-title:  Footer
----
-
 This documentation can also be found at [https://jfenn.me/](https://jfenn.me/projects/attribouter/wiki).

@@ -1,8 +1,3 @@
----
-layout: wiki
-title:  Sidebar
----
-
 ## Tutorials
 
 - [The Configuration File](./The-Configuration-File)
