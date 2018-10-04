@@ -190,17 +190,21 @@ try {
 				_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
 					if (fileName.endsWith(".md")) {
 						let wiki = _fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8");
-						_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
-							+ "layout: wiki\n"
-							+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
-							+ "---\n\n" + wiki);
-						
-						if (fileName == "Home.md") {
-							_fs.writeFileSync(wikiDir + "/index.md", "---\n"
+						if (fileName.startsWith("_")) {
+							_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
+						} else {
+							_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
 								+ "layout: wiki\n"
-								+ "title: " + titleize(repo.name) + " Wiki\n"
-								+ "project: " + repo.name.toLowerCase() + "\n"
+								+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
 								+ "---\n\n" + wiki);
+						
+							if (fileName == "Home.md") {
+								_fs.writeFileSync(wikiDir + "/index.md", "---\n"
+									+ "layout: wiki\n"
+									+ "title: " + titleize(repo.name) + " Wiki\n"
+									+ "project: " + repo.name.toLowerCase() + "\n"
+									+ "---\n\n" + wiki);
+							}
 						}
 					}
 				});
