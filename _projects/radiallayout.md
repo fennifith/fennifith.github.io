@@ -25,6 +25,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: true
+isWiki: false
 ---
 
 RadialLayout is a scrollable-ish view that arranges images in circles extending from the center of the screen that was originally made for [Lemonade](https://lemonade.social). For demonstration and experimentation, an apk of the sample project can be downloaded [here](https://github.com/TheAndroidMaster/RadialLayout/blob/master/../../releases).

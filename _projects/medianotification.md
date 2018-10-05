@@ -34,6 +34,8 @@ contributors:
   - login: jahirfiquitiva
     avatar: https://avatars0.githubusercontent.com/u/10360816?v=4
     url: https://github.com/jahirfiquitiva
+isDocs: false
+isWiki: false
 ---
 
 MediaNotification is a slightly unstable attempt to create Android O styled media notifications. Please note that this app does not replace media notifications coming from other apps, but it creates new notifications on its own. The most common methods of use are as follows:

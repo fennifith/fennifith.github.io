@@ -19,6 +19,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 This website is a collection of my piano compositions and other music-related projects. It exists mainly as documentation, and for practice creating music/media-related websites, not because I am a good musician. I am an experienced musician, not a good one. Don't blame me if anything gives you a headache.

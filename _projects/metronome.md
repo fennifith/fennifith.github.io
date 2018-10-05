@@ -22,6 +22,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 Metronome is lightweight metronome web app. It is very simple. It does what it needs to. I made an Android version with more features that you can find [here](../../../Metronome-Android).

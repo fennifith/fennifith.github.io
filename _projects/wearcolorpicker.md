@@ -22,6 +22,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 WearColorPicker is lightweight color picker library for Android Wear.

@@ -19,6 +19,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 [This](https://theandroidmaster.github.io/GreedDetector/) is a website/quiz that supposedly measures how greedy you are. It was made for an english project, but why not, I might as well make it open source so everyone can roast me for my horrible organization and code style.

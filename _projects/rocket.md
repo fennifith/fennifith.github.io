@@ -25,6 +25,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: true
+isWiki: false
 ---
 
 Rocket is a very old game that I originally made when I was experimenting with view animation. It is currently being rebuilt to use the Canvas API because view animation is bad.

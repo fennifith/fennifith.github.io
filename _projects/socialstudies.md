@@ -22,6 +22,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 This repository was created to host my Social Studies projects from American History class in 11th grade (2016/2017). All of these projects were built as horribly as possible, and one of them even uses a broken PHP script. They are here for the sole purpose of my own amusement.

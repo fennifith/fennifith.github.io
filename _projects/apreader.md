@@ -28,6 +28,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: true
+isWiki: false
 ---
 
 APReader is small app that displays Android Police articles without waiting for the website to load.

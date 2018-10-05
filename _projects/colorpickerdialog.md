@@ -28,6 +28,8 @@ contributors:
   - login: jahirfiquitiva
     avatar: https://avatars0.githubusercontent.com/u/10360816?v=4
     url: https://github.com/jahirfiquitiva
+isDocs: false
+isWiki: false
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.

@@ -12,9 +12,6 @@ links:
   - name: Issues
     url: https://github.com/TheAndroidMaster/Attribouter/issues
     icon: /images/ic/bug.svg
-  - name: Wiki
-    url: wiki
-    icon: /images/ic/assignment.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
@@ -37,6 +34,8 @@ contributors:
   - login: rroyGit
     avatar: https://avatars2.githubusercontent.com/u/20290568?v=4
     url: https://github.com/rroyGit
+isDocs: true
+isWiki: true
 ---
 
 Attribouter is a lightweight "about screen" for Android apps, built to allow developers to easily give credit to a project's contributors and open source libraries, while matching the style of their app and saving the largest amount of time and effort possible. It is meant to use GitHub's [REST API](https://developer.github.com/v3/) to fetch and display information about open source projects and contributors, but it allows you to define some or all of its data in its configuration file in your app as well.

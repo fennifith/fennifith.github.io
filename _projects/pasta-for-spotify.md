@@ -31,6 +31,8 @@ contributors:
   - login: alexandrepiveteau
     avatar: https://avatars2.githubusercontent.com/u/6318990?v=4
     url: https://github.com/alexandrepiveteau
+isDocs: false
+isWiki: false
 ---
 
 Pasta for Spotify is a third party [material design](https://material.google.com/) Spotify client for Android.

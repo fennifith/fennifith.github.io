@@ -25,6 +25,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: true
+isWiki: false
 ---
 
 This app serves as a native Android notification client for [cronhub.io](https://cronhub.io/). Its only purpose is to deliver status notifications at the alert time specified on CronHub, using their [public API](https://docs.cronhub.io/public-api.html). It does not currently allow users to edit CronHub monitors, but that functionality may be added in the future.

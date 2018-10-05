@@ -22,6 +22,8 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
+isDocs: false
+isWiki: false
 ---
 
 Snowflakes was once published on the Play Store as a completely useless app that made snowflakes appear whenever the screen changed, but it has now been removed as a result of [this really annoying thing](https://www.reddit.com/r/Android/comments/7c4go5/is_google_play_really_going_to_suspend_all_apps/), and will not be re-uploaded.

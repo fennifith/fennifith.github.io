@@ -28,6 +28,8 @@ contributors:
   - login: kartikarora
     avatar: https://avatars2.githubusercontent.com/u/6591617?v=4
     url: https://github.com/kartikarora
+isDocs: false
+isWiki: false
 ---
 
 This app was made in order to determine whether a user is a monkey, a goat, or both, depending on booleans obtained from android's ActivityManager and UserManager.

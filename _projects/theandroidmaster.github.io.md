@@ -28,6 +28,8 @@ contributors:
   - login: x4m3
     avatar: https://avatars3.githubusercontent.com/u/8809909?v=4
     url: https://github.com/x4m3
+isDocs: false
+isWiki: false
 ---
 
 This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/Client-Side-JavaScript/), it is now written mostly in Jekyll. It does not update its content automatically, but there is [this Node.js script](https://github.com/TheAndroidMaster/TheAndroidMaster.github.io/blob/master/./scripts/update.js) and [a shell script](https://github.com/TheAndroidMaster/TheAndroidMaster.github.io/blob/master/./scripts/update.sh) that may be used to update it periodically. Pull requests are welcome.
