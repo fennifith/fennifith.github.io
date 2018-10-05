@@ -1,8 +1,17 @@
----
-layout: default
----
+<!DOCTYPE html>
 
-<main>
-	{{ content }}
-</main>
+<html lang="en">
+<head>
+	{% include head.html %}
+	<link href="/css/files.css" rel="stylesheet">
+</head>
+<body>
+	<main>
+		{{ content }}
+	</main>
+
+	{% include snackbar.html %}
+	{% include footer.html %}
+</body>
+</html>
 	
