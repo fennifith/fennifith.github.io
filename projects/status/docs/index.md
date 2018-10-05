@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 - [app / src / main / java / com / james / status / data / icon / IconData](app/src/main/java/com/james/status/data/icon/IconData)
 - [app / src / main / java / com / james / status / data / preference / AppNotificationsPreferenceData](app/src/main/java/com/james/status/data/preference/AppNotificationsPreferenceData)

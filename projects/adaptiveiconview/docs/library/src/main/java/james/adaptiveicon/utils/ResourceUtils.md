@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: ResourceUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [adaptiveicon](./../index) > [utils](./index) > **ResourceUtils.java**
 

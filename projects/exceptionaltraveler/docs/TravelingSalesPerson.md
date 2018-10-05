@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: TravelingSalesPerson Documentation
 ---
 #### [.](./index) > **TravelingSalesPerson.java**
 

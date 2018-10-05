@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 - [library / src / main / java / me / jfenn / radiallayout / BaseRadialItem](library/src/main/java/me/jfenn/radiallayout/BaseRadialItem)
 - [library / src / main / java / me / jfenn / radiallayout / CenteredRadialItem](library/src/main/java/me/jfenn/radiallayout/CenteredRadialItem)

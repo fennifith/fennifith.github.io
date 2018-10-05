@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: CenteredRadialItem Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [radiallayout](./index) > **CenteredRadialItem.java**
 

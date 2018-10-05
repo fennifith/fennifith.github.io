@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: AdaptiveIcon Documentation
 ---
 #### [.](./../../../../../../index) > [library](./../../../../../index) > [src](./../../../../index) > [main](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveicon](./index) > **AdaptiveIcon.java**
 

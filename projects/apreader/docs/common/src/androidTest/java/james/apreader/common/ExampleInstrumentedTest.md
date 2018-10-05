@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: ExampleInstrumentedTest Documentation
 ---
 #### [.](./../../../../../../../index) > [common](./../../../../../../index) > [src](./../../../../../index) > [androidTest](./../../../../index) > [java](./../../../index) > [james](./../../index) > [apreader](./../index) > [common](./index) > **ExampleInstrumentedTest.java**
 

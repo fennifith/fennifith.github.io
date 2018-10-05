@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: RadialLayoutView Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [radiallayout](./index) > **RadialLayoutView.java**
 

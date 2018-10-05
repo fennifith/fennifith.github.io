@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: StaticUtils Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [james](./../../index) > [status](./../index) > [utils](./index) > **StaticUtils.java**
 

@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 - [app / src / androidTest / java / james / adaptiveiconsample / ExampleInstrumentedTest](app/src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest)
 - [app / src / test / java / james / adaptiveiconsample / ExampleUnitTest](app/src/test/java/james/adaptiveiconsample/ExampleUnitTest)

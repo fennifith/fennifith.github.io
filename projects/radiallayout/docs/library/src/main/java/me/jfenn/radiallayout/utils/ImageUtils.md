@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: ImageUtils Documentation
 ---
 #### [.](./../../../../../../../../index) > [library](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [radiallayout](./../index) > [utils](./index) > **ImageUtils.java**
 

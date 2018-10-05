@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: ExampleUnitTest Documentation
 ---
 #### [.](./../../../../../../index) > [library](./../../../../../index) > [src](./../../../../index) > [test](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveicon](./index) > **ExampleUnitTest.java**
 

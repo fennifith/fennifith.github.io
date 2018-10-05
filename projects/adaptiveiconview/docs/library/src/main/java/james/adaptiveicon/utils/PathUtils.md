@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: PathUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [adaptiveicon](./../index) > [utils](./index) > **PathUtils.java**
 

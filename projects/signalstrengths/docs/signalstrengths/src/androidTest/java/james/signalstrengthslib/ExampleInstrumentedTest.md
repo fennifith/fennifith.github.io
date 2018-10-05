@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: ExampleInstrumentedTest Documentation
 ---
 #### [.](./../../../../../../index) > [signalstrengths](./../../../../../index) > [src](./../../../../index) > [androidTest](./../../../index) > [java](./../../index) > [james](./../index) > [signalstrengthslib](./index) > **ExampleInstrumentedTest.java**
 

@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: PageIndicator Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [james](./../../index) > [papertales](./../index) > [views](./index) > **PageIndicator.java**
 

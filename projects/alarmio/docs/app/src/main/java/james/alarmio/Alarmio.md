@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: Alarmio Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [main](./../../../index) > [java](./../../index) > [james](./../index) > [alarmio](./index) > **Alarmio.java**
 

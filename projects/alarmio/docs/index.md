@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 - [app / src / androidTest / java / james / alarmio / ExampleInstrumentedTest](app/src/androidTest/java/james/alarmio/ExampleInstrumentedTest)
 - [app / src / main / java / james / alarmio / Alarmio](app/src/main/java/james/alarmio/Alarmio)

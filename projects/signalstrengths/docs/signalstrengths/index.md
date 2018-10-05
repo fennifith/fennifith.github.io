@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 #### [.](./../index) > [signalstrengths](./index) > **/**
 

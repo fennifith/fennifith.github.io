@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: GitHubData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [attribouter](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [me](./../../../../index) > [jfenn](./../../../index) > [attribouter](./../../index) > [data](./../index) > [github](./index) > **GitHubData.java**
 

@@ -1,5 +1,6 @@
 ---
 layout: docs-index
+title: Documentation Pages
 ---
 - [BaseGameUtils / src / main / java / com / google / example / games / basegameutils / BaseGameActivity](BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity)
 - [BaseGameUtils / src / main / java / com / google / example / games / basegameutils / BaseGameUtils](BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils)
