@@ -1,0 +1,13 @@
+---
+layout: docs-index
+---
+- [app/src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest](app/src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest)
+- [app/src/test/java/james/adaptiveiconsample/ExampleUnitTest](app/src/test/java/james/adaptiveiconsample/ExampleUnitTest)
+- [library/src/androidTest/java/james/adaptiveicon/ExampleInstrumentedTest](library/src/androidTest/java/james/adaptiveicon/ExampleInstrumentedTest)
+- [library/src/main/java/james/adaptiveicon/AdaptiveIcon](library/src/main/java/james/adaptiveicon/AdaptiveIcon)
+- [library/src/main/java/james/adaptiveicon/AdaptiveIconView](library/src/main/java/james/adaptiveicon/AdaptiveIconView)
+- [library/src/main/java/james/adaptiveicon/utils/ConversionUtils](library/src/main/java/james/adaptiveicon/utils/ConversionUtils)
+- [library/src/main/java/james/adaptiveicon/utils/ImageUtils](library/src/main/java/james/adaptiveicon/utils/ImageUtils)
+- [library/src/main/java/james/adaptiveicon/utils/PathUtils](library/src/main/java/james/adaptiveicon/utils/PathUtils)
+- [library/src/main/java/james/adaptiveicon/utils/ResourceUtils](library/src/main/java/james/adaptiveicon/utils/ResourceUtils)
+- [library/src/test/java/james/adaptiveicon/ExampleUnitTest](library/src/test/java/james/adaptiveicon/ExampleUnitTest)
