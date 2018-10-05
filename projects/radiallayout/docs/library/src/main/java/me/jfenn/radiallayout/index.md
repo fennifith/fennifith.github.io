@@ -7,5 +7,5 @@ layout: docs-index
 - [CenteredRadialItem](CenteredRadialItem)
 - [RadialItem](RadialItem)
 - [RadialLayoutView](RadialLayoutView)
-- [utils/ConversionUtils](utils/ConversionUtils)
-- [utils/ImageUtils](utils/ImageUtils)
+- [utils / ConversionUtils](utils/ConversionUtils)
+- [utils / ImageUtils](utils/ImageUtils)

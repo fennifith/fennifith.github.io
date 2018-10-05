@@ -5,7 +5,7 @@ layout: docs-index
 
 - [AdaptiveIcon](AdaptiveIcon)
 - [AdaptiveIconView](AdaptiveIconView)
-- [utils/ConversionUtils](utils/ConversionUtils)
-- [utils/ImageUtils](utils/ImageUtils)
-- [utils/PathUtils](utils/PathUtils)
-- [utils/ResourceUtils](utils/ResourceUtils)
+- [utils / ConversionUtils](utils/ConversionUtils)
+- [utils / ImageUtils](utils/ImageUtils)
+- [utils / PathUtils](utils/PathUtils)
+- [utils / ResourceUtils](utils/ResourceUtils)
