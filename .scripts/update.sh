@@ -12,7 +12,7 @@ cd _site/.scripts
 rm -rf node_modules && npm install
 node update.js
 
-rm -rf ../../projects/*/wiki/.temp
+rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
 git add ../../_projects ../../projects ../../_people
 git status
 read -p "[Enter] to commit & push, [Ctrl+C] to cancel."

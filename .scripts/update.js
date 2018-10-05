@@ -15,6 +15,7 @@ const _fs = require('fs');
 const _request = require('sync-request');
 const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
+const _javadoc = require('mdjavadoc-api');
 
 function titleize(str) {
 	return str.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2");
@@ -173,6 +174,29 @@ try {
 				+ "---\n\n" + readme);
 				
 			console.log("Fetched project " + repo.full_name);
+			
+			if (repo.language == "Java" || repo.language == "JavaScript") {
+				let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
+				if (!_fs.existsSync(docsDir)) {
+					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
+						_fs.mkdirSync(_path.resolve("../../projects/" + repo.name.toLowerCase()));
+					
+					_fs.mkdirSync(docsDir);
+				}
+				
+				if (!_fs.existsSync(docsDir + "/.temp"))
+					_fs.mkdirSync(docsDir + "/.temp");
+				
+				_clone("https://github.com/" + repo.full_name, docsDir + "/.temp");
+				_javadoc.generateMarkdownFiles(docsDir + "/.temp", docsDir, {
+					reg: repo.language == "Java" ? /.*(\.java)$/ : /.*(\.js)$/,
+					breadcrumbs: true,
+					index: "index.md",
+					template: "../../.scripts/.docs.template.md",
+					indexTemplate: "../../.scripts/.docs-index.template.md",
+					sourcePrefix: "https://github.com/" + repo.full_name + "/blob/master"
+				});
+			}
 				
 			if (repo.has_wiki) {
 				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
