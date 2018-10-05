@@ -15,7 +15,7 @@ const _fs = require('fs');
 const _request = require('sync-request');
 const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
-const _javadoc = require('mdjavadoc-api');
+const _javadoc = require('/home/james/js/mdjavadoc/api/index.js');
 
 function titleize(str) {
 	return str.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2");
@@ -98,12 +98,6 @@ try {
 				+ "    url: " + repo.html_url + "/issues\n"
 				+ "    icon: /images/ic/bug.svg\n";
 
-			if (repo.has_wiki) {
-				links += "  - name: Wiki\n"
-					+ "    url: wiki\n"
-					+ "    icon: /images/ic/assignment.svg\n"
-			}
-
 			if (repo.license && repo.license.key) {
 				links += "  - name: " + (repo.license.name ? repo.license.name : "License") + "\n"
 					+ "    url: https://choosealicense.com/licenses/" + repo.license.key + "/\n"
@@ -160,21 +154,11 @@ try {
 				people += "  - login: " + contributors[i2].login + "\n"
 					+ "    avatar: " + contributors[i2].avatar_url + "\n"
 					+ "    url: " + contributors[i2].html_url + "\n";
-			}				
-
-			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
-				+ "layout: project\n"
-				+ "type: " + type + "\n"
-				+ "title: \"" + titleize(repo.name) + "\"\n"
-				+ (repo.description ? "description: " + safestrize(repo.description.split(":").join("&#58;")) + "\n" : "")
-				+ "repo: " + repo.full_name + "\n"
-				+ "git: " + repo.git_url + "\n"
-				+ "links:\n" + links
-				+ "contributors:\n" + people
-				+ "---\n\n" + readme);
+			}
 				
 			console.log("Fetched project " + repo.full_name);
 			
+			let isDocs = false;
 			if (repo.language == "Java" || repo.language == "JavaScript") {
 				let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
 				if (!_fs.existsSync(docsDir)) {
@@ -188,7 +172,7 @@ try {
 					_fs.mkdirSync(docsDir + "/.temp");
 				
 				_clone("https://github.com/" + repo.full_name, docsDir + "/.temp");
-				_javadoc.generateMarkdownFiles(docsDir + "/.temp", docsDir, {
+				let files = _javadoc.generateMarkdownFiles(docsDir + "/.temp", docsDir, {
 					reg: repo.language == "Java" ? /.*(\.java)$/ : /.*(\.js)$/,
 					breadcrumbs: true,
 					index: "index.md",
@@ -196,8 +180,12 @@ try {
 					indexTemplate: "../../.scripts/.docs-index.template.md",
 					sourcePrefix: "https://github.com/" + repo.full_name + "/blob/master"
 				});
-			}
 				
+				isDocs = files.length > 0;
+				console.log("Generated project docs " + repo.full_name);
+			}
+			
+			let isWiki = false;
 			if (repo.has_wiki) {
 				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
 				if (!_fs.existsSync(wikiDir)) {
@@ -223,6 +211,7 @@ try {
 								+ "---\n\n" + wiki);
 						
 							if (fileName == "Home.md") {
+								isWiki = true;
 								_fs.writeFileSync(wikiDir + "/index.md", "---\n"
 									+ "layout: wiki\n"
 									+ "title: " + titleize(repo.name) + " Wiki\n"
@@ -235,6 +224,19 @@ try {
 				
 				console.log("Fetched project wiki " + repo.full_name);
 			}
+			
+			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
+				+ "layout: project\n"
+				+ "type: " + type + "\n"
+				+ "title: \"" + titleize(repo.name) + "\"\n"
+				+ (repo.description ? "description: " + safestrize(repo.description.split(":").join("&#58;")) + "\n" : "")
+				+ "repo: " + repo.full_name + "\n"
+				+ "git: " + repo.git_url + "\n"
+				+ "links:\n" + links
+				+ "contributors:\n" + people
+				+ "isDocs: " + isDocs + "\n"
+				+ "isWiki: " + isWiki + "\n"
+				+ "---\n\n" + readme);
 		}
 	}
 
