@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	{% include head.html %}
+	<link href="/css/md.css" rel="stylesheet">
+</head>
+<body>
+	<sidebar>
+	    <h2>Adjacent Files</h2>
+		{% capture sidebar_include %}{% include_relative index.md %}{% endcapture %}
+		{{ sidebar_include | newline_to_br | split: '<br />' | shift | shift | shift | shift | shift | join: '' | markdownify }}
+	</sidebar>
+	<main>
+		{{ content }}
+	</main>
+
+	{% include snackbar.html %}
+	{% include footer.html %}
+</body>
+</html>
+	
