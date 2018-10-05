@@ -12,6 +12,11 @@
 		{{ sidebar_include | newline_to_br | split: '<br />' | shift | shift | shift | shift | shift | join: '' | markdownify }}
 	</sidebar>
 	<main>
+		{% assign parts = page.url | split: '/' %}
+		<a class="link" href="{% for i in (5..parts.size) %}../{% endfor %}">
+			<img src="/images/ic/back.svg"><span>Project Info</span>
+		</a>
+		
 		{{ content }}
 	</main>
 
