@@ -297,7 +297,8 @@ nav {
 	text-align: center;
 	display: block;
 	padding: 8px 10%;
-	overflow: hidden;
+	overflow: visible;
+	overflow: overlay;
 	z-index: 100;
 	
 	transition: width .25s;
