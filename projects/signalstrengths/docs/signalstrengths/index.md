@@ -4,5 +4,6 @@ title: Documentation Pages
 ---
 #### [.](./../index) > [signalstrengths](./index) > **/**
 
-- [src / androidTest / java / ](src/androidTest/java/)
-- [src / test / java / ](src/test/java/)
+- [src/](src)
+	- [androidTest/java/james/signalstrengthslib/ExampleInstrumentedTest](src/androidTest/java/james/signalstrengthslib/ExampleInstrumentedTest)
+	- [test/java/james/signalstrengthslib/ExampleUnitTest](src/test/java/james/signalstrengthslib/ExampleUnitTest)

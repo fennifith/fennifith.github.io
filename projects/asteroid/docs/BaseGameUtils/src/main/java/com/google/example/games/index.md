@@ -4,8 +4,9 @@ title: Documentation Pages
 ---
 #### [.](./../../../../../../../../index) > [BaseGameUtils](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [google](./../../index) > [example](./../index) > [games](./index) > **/**
 
-- [basegameutils / BaseGameActivity](basegameutils/BaseGameActivity)
-- [basegameutils / BaseGameUtils](basegameutils/BaseGameUtils)
-- [basegameutils / GameHelper](basegameutils/GameHelper)
-- [basegameutils / GameHelperUtils](basegameutils/GameHelperUtils)
-- [basegameutils / SnapshotCoordinator](basegameutils/SnapshotCoordinator)
+- [basegameutils/](basegameutils)
+	- [BaseGameActivity](basegameutils/BaseGameActivity)
+	- [BaseGameUtils](basegameutils/BaseGameUtils)
+	- [GameHelper](basegameutils/GameHelper)
+	- [GameHelperUtils](basegameutils/GameHelperUtils)
+	- [SnapshotCoordinator](basegameutils/SnapshotCoordinator)

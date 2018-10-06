@@ -8,5 +8,6 @@ title: Documentation Pages
 - [CenteredRadialItem](CenteredRadialItem)
 - [RadialItem](RadialItem)
 - [RadialLayoutView](RadialLayoutView)
-- [utils / ConversionUtils](utils/ConversionUtils)
-- [utils / ImageUtils](utils/ImageUtils)
+- [utils/](utils)
+	- [ConversionUtils](utils/ConversionUtils)
+	- [ImageUtils](utils/ImageUtils)

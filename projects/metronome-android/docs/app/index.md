@@ -4,5 +4,6 @@ title: Documentation Pages
 ---
 #### [.](./../index) > [app](./index) > **/**
 
-- [src / androidTest / java / ](src/androidTest/java/)
-- [src / test / java / ](src/test/java/)
+- [src/](src)
+	- [androidTest/java/james/metronome/ExampleInstrumentedTest](src/androidTest/java/james/metronome/ExampleInstrumentedTest)
+	- [test/java/james/metronome/ExampleUnitTest](src/test/java/james/metronome/ExampleUnitTest)

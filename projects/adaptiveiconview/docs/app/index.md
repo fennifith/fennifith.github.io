@@ -4,5 +4,6 @@ title: Documentation Pages
 ---
 #### [.](./../index) > [app](./index) > **/**
 
-- [src / androidTest / java / ](src/androidTest/java/)
-- [src / test / java / ](src/test/java/)
+- [src/](src)
+	- [androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest](src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest)
+	- [test/java/james/adaptiveiconsample/ExampleUnitTest](src/test/java/james/adaptiveiconsample/ExampleUnitTest)

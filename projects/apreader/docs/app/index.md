@@ -4,4 +4,4 @@ title: Documentation Pages
 ---
 #### [.](./../index) > [app](./index) > **/**
 
-- [src / main / java / ](src/main/java/)
+- [src/main/java/james/apreader/views/PageIndicator](src/main/java/james/apreader/views/PageIndicator)
