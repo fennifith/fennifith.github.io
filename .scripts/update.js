@@ -88,6 +88,13 @@ try {
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
+			
+			let languages = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/languages", {
+				headers: { 
+					"User-Agent": "TheAndroidMaster.github.io",
+					"Authorization": token ? "token " + token : null
+				}
+			}).getBody('utf8'));
 
 			let links = "";
 			links += "  - name: GitHub\n"
@@ -155,6 +162,11 @@ try {
 					+ "    avatar: " + contributors[i2].avatar_url + "\n"
 					+ "    url: " + contributors[i2].html_url + "\n";
 			}
+			
+			let langs = "";
+			for (let language in languages) {
+				langs += "  - " + language + "\n";
+			}
 				
 			console.log("Fetched project " + repo.full_name);
 			
@@ -208,6 +220,7 @@ try {
 							_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
 								+ "layout: wiki\n"
 								+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
+								+ "languages:\n" + langs
 								+ "---\n\n" + wiki);
 						
 							if (fileName == "Home.md") {
@@ -215,6 +228,7 @@ try {
 								_fs.writeFileSync(wikiDir + "/index.md", "---\n"
 									+ "layout: wiki\n"
 									+ "title: " + titleize(repo.name) + " Wiki\n"
+									+ "languages:\n" + langs
 									+ "project: " + repo.name.toLowerCase() + "\n"
 									+ "---\n\n" + wiki);
 							}
@@ -236,6 +250,7 @@ try {
 				+ "contributors:\n" + people
 				+ "isDocs: " + isDocs + "\n"
 				+ "isWiki: " + isWiki + "\n"
+				+ "languages:\n" + langs
 				+ "---\n\n" + readme);
 		}
 	}
