@@ -3,6 +3,9 @@
 <html lang="en">
 <head>
 	{% include head.html %}
+	{% if page.languages %}
+		{% include head-highlightjs.html languages=page.languages %}
+	{% endif %}
 	<link href="/css/md.css" rel="stylesheet">
 </head>
 <body>
