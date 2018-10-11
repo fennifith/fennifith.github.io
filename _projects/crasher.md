@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
  Crasher is a library built to allow users to easily send stack traces and useful device info to developers without the use of third party services. For demonstration purposes, sample APKs can be downloaded [here](https://github.com/TheAndroidMaster/Crasher/releases).

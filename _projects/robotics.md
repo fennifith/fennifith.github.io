@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - C
 ---
 
 This repo documents all the stuff I wrote in my high school robotics class.

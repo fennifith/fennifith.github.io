@@ -27,6 +27,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
 Buttons is a library with a large amount of themable styled buttons.

@@ -24,6 +24,9 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: true
 isWiki: false
+languages:
+  - JavaScript
+  - HTML
 ---
 
 Stuff I made messing around with [p5js](https://p5js.org/) in my free time.

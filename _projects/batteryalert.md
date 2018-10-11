@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
 Makes your phone vibrate a lot once it discharges to a specified level.

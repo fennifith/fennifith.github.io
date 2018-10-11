@@ -30,6 +30,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: true
 isWiki: false
+languages:
+  - Java
 ---
 
 APReader is small app that displays Android Police articles without waiting for the website to load.

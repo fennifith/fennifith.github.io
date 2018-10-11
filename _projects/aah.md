@@ -30,6 +30,9 @@ contributors:
     url: https://github.com/codekidX
 isDocs: false
 isWiki: false
+languages:
+  - Go
+  - Shell
 ---
 
 AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help me do basic things I should already know.

@@ -1,6 +1,8 @@
 ---
 layout: wiki
 title: Translator Wedge
+languages:
+  - Java
 ---
 
 The `TranslatorWedge` displays information about a translator in an only slightly more concise layout than the [`ContributorWedge`](ContributorWedge).

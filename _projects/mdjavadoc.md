@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: true
 isWiki: false
+languages:
+  - JavaScript
 ---
 
 Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an [API](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./api/README.md) and [CLI](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./cli/README.md). If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.
@@ -43,7 +45,7 @@ npm install -g mdjavadoc
 ```shell
 git clone https://github.com/TheAndroidMaster/mdjavadoc
 cd mdjavadoc/cli
-sudo npm install -g
+npm install
 sudo npm link
 ```
 

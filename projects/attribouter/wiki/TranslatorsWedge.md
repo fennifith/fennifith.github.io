@@ -1,6 +1,8 @@
 ---
 layout: wiki
 title: Translators Wedge
+languages:
+  - Java
 ---
 
 The `TranslatorsWedge` displays a list of [`TranslatorWedge`](TranslatorWedge)s in sections, sorted by locale. If a translator has translated multiple locales, they will appear under every locale that they have translated.

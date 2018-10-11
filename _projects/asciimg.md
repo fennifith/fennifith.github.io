@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - JavaScript
 ---
 
 Asciimg (pronounced _ask-ee-em_) is a command line tool that displays images in ASCII.

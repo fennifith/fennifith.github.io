@@ -27,6 +27,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: true
 isWiki: false
+languages:
+  - Java
 ---
 
 Asteroid is a simple Android game based on avoiding incoming asteroids. It is made entirely using the Android Canvas API. All in-game graphics are either stored as a vector drawable or drawn during runtime.

@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: true
 isWiki: false
+languages:
+  - Java
 ---
 
 Feedage is a basic "news reader" app that sorts articles from various RSS feeds into categories. This project was created as a final project for my Computer Science class in high school. 

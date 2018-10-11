@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - HTML
 ---
 
 Bugiver is a simple website that iterates through everyone that you are following on GitHub and selects a random issue in a completely random repository in a language of your choice. I have designed it as my personal "I have nothing to do" button that gives me something to do in a possibly futile attempt to encourage myself to contribute to more repositories than I create.

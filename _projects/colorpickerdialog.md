@@ -30,6 +30,8 @@ contributors:
     url: https://github.com/jahirfiquitiva
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.

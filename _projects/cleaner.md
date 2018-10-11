@@ -27,6 +27,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
 Storage Cleaner is the only space saving app that actually does its job! :D

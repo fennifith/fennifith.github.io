@@ -24,6 +24,9 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - HTML
+  - JavaScript
 ---
 
 Probably one of the worst things I've ever used my free time for, [this](https://jfenn.me/Scrurl/) is a script that displays scrolling text in the address bar. It is almost entirely useless. Please do not use it for anything. That said, if you want to make it any worse than it already is, please feel free to make a PR.

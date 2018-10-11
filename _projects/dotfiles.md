@@ -18,6 +18,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - Shell
 ---
 
 These are my dotfiles. You may look, but please do not touch. They bite.

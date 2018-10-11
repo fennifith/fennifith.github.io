@@ -24,6 +24,9 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - JavaScript
+  - Jupyter Notebook
 ---
 
 The Markdown to Jupyter Conversion tool (MTJC) is a fairly simple script that converts a markdown file with code blocks to the JSON format used by [Jupyter](https://jupyter.org/) to create [Notebooks](https://jupyter-notebook.readthedocs.io/en/stable/).

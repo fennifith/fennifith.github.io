@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - HTML
 ---
 
 Tables is a simple website that makes a table from an equation

@@ -33,6 +33,8 @@ contributors:
     url: https://github.com/alexandrepiveteau
 isDocs: false
 isWiki: false
+languages:
+  - Java
 ---
 
 Pasta for Spotify is a third party [material design](https://material.google.com/) Spotify client for Android.

@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - JavaScript
 ---
 
 Passerator is simple password generator that I made in my free time. To be perfectly clear, I do not reccomend its use at all. If someone gets their hands on your password and they know that you use this program, it would be entirely possible for them to reverse engineer it to brute force their way into your other accounts much faster than they would under normal conditions. That said, it would still take a lot of effort to replicate the "master file" used by this program to generate passwords, and you can customize the keys used to generate passwords to further increase the difficulty of replicating them (for example, generating all of you passwords using "https://example.com/?somethingconfusing" as the key instead of just "https://example.com").

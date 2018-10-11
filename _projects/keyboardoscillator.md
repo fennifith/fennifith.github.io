@@ -24,6 +24,8 @@ contributors:
     url: https://github.com/TheAndroidMaster
 isDocs: false
 isWiki: false
+languages:
+  - HTML
 ---
 
 Keyboard Oscillator is a tiny website that turns your keyboard into a weird synth thingy.
