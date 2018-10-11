@@ -33,15 +33,3 @@ pre > code {
 pre > code * {
 	font-size: 1em;
 }
-
-.hljs {
-	display: initial;
-	background: initial;
-	overflow-x: initial;
-	padding: initial;
-}
-
-pre.highlight {
-	background-color: rgb(25, 23, 28);
-	color: #FFFFFF;
-}
