@@ -44,9 +44,9 @@ Alarmio is a simple alarm clock that implements many useful features while follo
 
 ## Screenshots
 
-|Home|Alarms|Timers|Themes|
-|-----|-----|-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/home.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/alarms.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/timers.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/themes.png?raw=true)|
+|Home|Alarms|Timers|Themes|Ringing|
+|-----|-----|-----|-----|-----|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/home.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/alarms.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/timers.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/themes.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Alarmio/master/./.github/images/alert.gif?raw=true)|
 
 ## Contributing & Build Instructions
 

@@ -4,7 +4,7 @@ title: ApplicationTest Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [androidTest](./../../../../index) > [java](./../../../index) > [com](./../../index) > [james](./../index) > [listlauncher](./index) > **ApplicationTest.java**
 
-# [ApplicationTestCase<Application>](https://github.com/TheAndroidMaster/ListLauncher/blob/master/app/src/androidTest/java/com/james/listlauncher/ApplicationTest.java#L7)
+# [ApplicationTestCase](https://github.com/TheAndroidMaster/ListLauncher/blob/master/app/src/androidTest/java/com/james/listlauncher/ApplicationTest.java#L7)
 
 **Type:** `public` `class` `ApplicationTest` `extends`
 

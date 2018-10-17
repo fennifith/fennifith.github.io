@@ -183,9 +183,9 @@ are involved via AsyncTasks.
 
 
 
-## [waitForClosed](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L153)
+## [PendingResultwaitForClosed](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L153)
 
-**Type:** `public` `PendingResult<Result>`
+**Type:** `public`
 
 Blocking wait for the given file to be closed. Returns immediately if the 
 file is not open. 
@@ -222,9 +222,9 @@ Interface to be triggered when a PendingResult is completed.
 
 
 
-# [PendingResult<T>](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L453)
+# [PendingResult](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L453)
 
-**Type:** `private` `class` `CoordinatedPendingResult<T` `extends` `Result>` `extends`
+**Type:** `private` `class` `CoordinatedPendingResultextends`
 
 Wrapper of PendingResult so the coordinator class is notified when an operation completes. 
 

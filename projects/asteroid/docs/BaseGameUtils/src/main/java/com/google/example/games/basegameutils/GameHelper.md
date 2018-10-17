@@ -410,9 +410,9 @@ match available.
 
 
 
-## [getRequests](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L493)
+## [ArrayListgetRequests](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L493)
 
-**Type:** `public` `ArrayList<GameRequest>`
+**Type:** `public`
 
 Returns the requests received through the onConnected bundle. This should 
 be called from your GameHelperListener's 

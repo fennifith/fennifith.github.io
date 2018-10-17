@@ -4,7 +4,7 @@ title: ApplicationTest Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [androidTest](./../../../../index) > [java](./../../../index) > [com](./../../index) > [james](./../index) > [rocket](./index) > **ApplicationTest.java**
 
-# [ApplicationTestCase<Application>](https://github.com/TheAndroidMaster/Rocket/blob/master/app/src/androidTest/java/com/james/rocket/ApplicationTest.java#L7)
+# [ApplicationTestCase](https://github.com/TheAndroidMaster/Rocket/blob/master/app/src/androidTest/java/com/james/rocket/ApplicationTest.java#L7)
 
 **Type:** `public` `class` `ApplicationTest` `extends`
 

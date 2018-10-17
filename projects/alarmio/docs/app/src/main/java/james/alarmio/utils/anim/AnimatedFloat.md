@@ -4,7 +4,7 @@ title: AnimatedFloat Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [james](./../../../index) > [alarmio](./../../index) > [utils](./../index) > [anim](./index) > **AnimatedFloat.java**
 
-# [AnimatedValue<Float>](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedFloat.java#L4)
+# [AnimatedValue](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedFloat.java#L4)
 
 **Type:** `public` `class` `AnimatedFloat` `extends`
 
