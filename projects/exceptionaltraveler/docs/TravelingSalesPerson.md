@@ -4,7 +4,9 @@ title: TravelingSalesPerson Documentation
 ---
 #### [.](./index) > **TravelingSalesPerson.java**
 
-## [](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L16)
+## [run](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L16)
+
+**Type:** `public` `static` `void`
 
 Runs the traveling sales person algorithm and prints the results in the console. 
 
@@ -23,7 +25,9 @@ Runs the traveling sales person algorithm and prints the results in the console.
 
 
 
-## [](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L127)
+## [getPath](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L127)
+
+**Type:** `private` `static` `void`
 
 Applies the double neighbor heuristic and adds the closest points to the path. The first 
 two points should be calculated first before calling this method. 
@@ -44,7 +48,9 @@ two points should be calculated first before calling this method.
 
 
 
-## [](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L244)
+## [getNearest](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L244)
+
+**Type:** `private` `static` `void`
 
 Finds the point nearest to a given parameter... 
 
@@ -64,7 +70,9 @@ Finds the point nearest to a given parameter...
 
 
 
-## [](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L384)
+## [printPath](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L384)
+
+**Type:** `private` `static` `void`
 
 Prints all of the "path" points in the console. 
 

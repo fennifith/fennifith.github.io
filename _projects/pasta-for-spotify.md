@@ -25,9 +25,6 @@ contributors:
   - login: TheAndroidMaster
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/TheAndroidMaster
-  - login: jlelse
-    avatar: https://avatars1.githubusercontent.com/u/8822316?v=4
-    url: https://github.com/jlelse
   - login: alexandrepiveteau
     avatar: https://avatars2.githubusercontent.com/u/6318990?v=4
     url: https://github.com/alexandrepiveteau

@@ -6,7 +6,7 @@ title: Documentation Pages
 
 - [AdaptiveIcon](AdaptiveIcon)
 - [AdaptiveIconView](AdaptiveIconView)
-- [utils /](utils)
+- [utils/](utils)
 	- [ConversionUtils](utils/ConversionUtils)
 	- [ImageUtils](utils/ImageUtils)
 	- [PathUtils](utils/PathUtils)

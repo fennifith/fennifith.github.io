@@ -133,9 +133,9 @@ Listen for any other item being pressed.
 
 
 
-## [ListgetItems](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L186)
+## [getItems](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L186)
 
-**Type:** `public`
+**Type:** `public` `List<BaseRadialItem>`
 
 Get all the items being displayed in the view. 
 
