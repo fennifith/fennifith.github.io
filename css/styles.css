@@ -72,7 +72,8 @@ object.round {
 	box-shadow: 0 0 1px 0px #000, 0 0 1px 0px #000;
 }
 
-button, input[type=submit] {
+button, input[type=submit],
+input[type=file] + label {
 	border: none;
 	outline: none;
 	user-select: none;
@@ -93,7 +94,8 @@ button.selectable {
 	box-shadow: none;
 }
 
-button:hover, input[type=submit]:hover {
+button:hover, input[type=submit]:hover,
+input[type=file] + label:hover {
 	background-color: #0091EA;
 	color: #FFF !important;
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
@@ -150,6 +152,120 @@ input[type=checkbox]:checked + label {
 input[type=checkbox] + label {
 	transform: translateY(6px);
 	cursor: pointer;
+}
+
+input[type=file] {
+	display: none;
+}
+
+input[type=file] + label {
+	font-size: .8em;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	width: 128px;
+	height: 20px;
+	margin: 0;
+	border: none;
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	outline: none;
+}
+
+input[type=range]::-moz-range-track {
+	border: none;
+	background: transparent;
+}
+
+input[type=range]::-ms-track {
+	border: inherit;
+	color: transparent;
+	background: transparent;
+}
+
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+	background: transparent;
+}
+
+input[type=range]::-ms-tooltip {
+	display: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 24px;
+	height: 20px;
+	border: none;
+	background-color: #0091EA;
+	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
+}
+
+input[type=range] + label {
+	display: inline-block;
+	height: 20px;
+	min-width: 40px;
+	padding: 0 .5em;
+	text-align: center;
+	vertical-align: top;
+	line-height: 22px;
+	background: #FFF;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+select {
+	display: block;
+	outline: none;
+	padding: 0.4em 0.8em;
+	padding-right: 30px;
+	margin-bottom: 0.8em;
+	min-width: 100%;
+	background-color: #0091EA;
+	color: #FFF;
+	border: none;
+	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	background: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%), #0091EA;
+  	background-position: calc(100% - 17px) 1em, calc(100% - 12px) 1em;
+  	background-size: 5px 5px, 5px 5px;
+  	background-repeat: no-repeat;
+
+	-webkit-transition: color .25s, background-color .25s, box-shadow .25s;
+	-moz-transition: color .25s, background-color .25s, box-shadow .25s;
+	transition: color .25s, background-color .25s, box-shadow .25s;
+}
+
+select:hover {
+	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.3);
+}
+
+select:focus {
+	background-color: transparent;
+	color: #000;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select * {
+	background-color: #FFF;
+	color: #000;
+
+	-webkit-transition: color .25s, background-color .25s;
+	-moz-transition: color .25s, background-color .25s;
+	transition: color .25s, background-color .25s;
+}
+
+select *:hover {
+	background-color: #0091EA;
+	color: #FFF;
 }
 
 table {
