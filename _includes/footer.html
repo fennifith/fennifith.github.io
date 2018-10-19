@@ -1,5 +1,29 @@
 <footer>
 	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+		const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			document.body.className = _darkThemeCheckBoxElement.checked ? "--theme-dark" : "";
+		
+			if (localStorage) {
+				if (_darkThemeCheckBoxElement.checked)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+		});
+
+		if (localStorage && localStorage.getItem("darkTheme")) {
+			_darkThemeCheckBoxElement.checked = true;
+			document.body.className = "--theme-dark";
+		}
+	</script>
+	
 	<a href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
 	<br>
 	<a href="/policies/?web" target="_blank">Privacy Policy</a>

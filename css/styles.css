@@ -425,7 +425,7 @@ snackbar > a {
 filter {
 	display: block;
 	background-color: #FFF;
-	background-color: var(--normal-background-darker);
+	background-color: var(--normal-background);
 	border: 1px solid #BDBDBD;
 	border: 1px solid var(--normal-outline);
 	z-index: 70;
@@ -720,6 +720,7 @@ sidebar {
 	user-select: none;
 	overflow-y: hidden;
 	max-height: 0px;
+	z-index: 98;
 
 	transition: max-height .25s;
 	-moz-transition: max-height .25s;
