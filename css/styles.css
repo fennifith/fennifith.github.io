@@ -10,14 +10,16 @@
 	--normal-color-focusable: #808080;
 	--normal-background: #FFFFFF;
 	--normal-background-dark: #F5F5F5;
+	--normal-background-darker: #FAFAFA;
 	--normal-outline: #BDBDBD;
 	--normal-outline-dark: #000000;
 	--accent-color: #0091EA;
+	--accent-color-text: #0067A4;
 	--accent-background: #0091EA;
 	--accent-outline: #0091EA;
 	--accent-outline-fade: rgba(0, 72, 117, 0.3);
 	--accent-outline-fade2: rgba(0, 72, 117, 0.5);
-	--inverse-color-focus: #FFFFFF;
+	--accent-inverse: #FFFFFF;
 }
 
 .--theme-dark,
@@ -25,17 +27,19 @@
 	--normal-color: #F5F5F5;
 	--normal-color-text: #BDBDBD;
 	--normal-color-focus: #FFFFFF;
-	--normal-color-focusable: #808080;
+	--normal-color-focusable: #A8A8A8;
 	--normal-background: #212121;
 	--normal-background-dark: #303030;
+	--normal-background-darker: #424242;
 	--normal-outline: #424242;
 	--normal-outline-dark: #FFFFFF;
-	--accent-color: #0091EA;
-	--accent-background: #0091EA;
-	--accent-outline: #0091EA;
+	--accent-color: #09A3FF;
+	--accent-color-text: #58BDF9;
+	--accent-background: #2FA4E9;
+	--accent-outline: #09A3FF;
 	--accent-outline-fade: rgba(0, 72, 117, 0.3);
 	--accent-outline-fade2: rgba(0, 72, 117, 0.5);
-	--inverse-color-focus: #000000;
+	--accent-inverse: #000000;
 }
 
 @keyframes fadeIn {
@@ -70,6 +74,7 @@ p {
 a {
 	cursor: pointer;
 	color: #0091EA;
+	color: var(--accent-color-text);
 	transition: color .25s;
 	-moz-transition: color .25s;
 	-webkit-transition: color .25s;
@@ -121,9 +126,9 @@ input[type=file] + label {
 	cursor: pointer;
 	padding: 0.75em 1.25em;
 	background-color: #0091EA;
-	background-color: var(--accent-color);
+	background-color: var(--accent-background);
 	color: #FFF !important;
-	color: var(--inverse-color-focus) !important;
+	color: var(--accent-inverse) !important;
 	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
 	box-shadow: 0 0.1em 0.3em var(--accent-outline-fade);
 
@@ -142,9 +147,9 @@ button.selectable {
 button:hover, input[type=submit]:hover,
 input[type=file] + label:hover {
 	background-color: #0091EA;
-	background-color: var(--accent-color);
+	background-color: var(--accent-background);
 	color: #FFF !important;
-	color: var(--inverse-color-focus) !important;
+	color: var(--accent-inverse) !important;
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.37);
 	box-shadow: 0 0.4em 1.2em var(--accent-outline-fade);
 }
@@ -159,7 +164,9 @@ button.selectable:hover {
 
 button.selectable[selected] {
 	background-color: #0091EA;
+	background-color: var(--accent-background);
 	color: #FFF !important;
+	color: var(--accent-inverse) !important;
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.5);
 	box-shadow: 0 0.4em 1.2em var(--accent-outline-fade2);
 }
@@ -172,6 +179,8 @@ input[type=text] {
 	padding: calc(.6em - 1px) .8em;
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	border: 1px solid var(--normal-outline);
+	background-color: #FFF;
+	background-color: var(--normal-background);
 }
 
 input[type=checkbox] {
@@ -276,7 +285,7 @@ select {
 	background-color: #0091EA;
 	background-color: var(--accent-color);
 	color: #FFF;
-	color: var(--inverse-color-focus);
+	color: var(--accent-inverse);
 	border: none;
 	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
 	box-shadow: 0 0.1em 0.3em var(--accent-outline-fade);
@@ -286,7 +295,7 @@ select {
 	appearance: none;
 
 	background: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%), #0091EA;
-	background: linear-gradient(45deg, transparent 50%, var(--inverse-color-focus) 50%), linear-gradient(135deg, var(--inverse-color-focus) 50%, transparent 50%), var(--accent-color);
+	background: linear-gradient(45deg, transparent 50%, var(--accent-inverse) 50%), linear-gradient(135deg, var(--accent-inverse) 50%, transparent 50%), var(--accent-color);
   	background-position: calc(100% - 17px) 1em, calc(100% - 12px) 1em;
   	background-size: 5px 5px, 5px 5px;
   	background-repeat: no-repeat;
@@ -326,7 +335,25 @@ select *:hover {
 	background-color: #0091EA;
 	background-color: var(--accent-color);
 	color: #FFF;
-	color: var(--inverse-color-focus);
+	color: var(--accent-inverse);
+}
+
+form {
+	padding: 2em 4em;
+	background-color: #F5F5F5;
+	background-color: var(--normal-background-dark);
+	border-top: 1px solid #BDBDBD;
+	border-top: 1px solid var(--normal-outline);
+	border-bottom: 1px solid #BDBDBD;
+	border-bottom: 1px solid var(--normal-outline);
+	width: 100%;
+	text-align: center;
+}
+
+form.wide {
+	width: 100% !important;
+	padding-left: 10vw;
+	padding-right: 10vw;
 }
 
 table {
@@ -393,6 +420,7 @@ snackbar > a {
 filter {
 	display: block;
 	background-color: #FFF;
+	background-color: var(--normal-background-darker);
 	border: 1px solid #BDBDBD;
 	border: 1px solid var(--normal-outline);
 	z-index: 70;
@@ -557,7 +585,7 @@ footer > a {
 .item > span {
 	display: block;
 	color: #0091EA;
-	color: var(--accent-color);
+	color: var(--accent-color-text);
 
 	transition: color .25s;
 	-moz-transition: color .25s;
