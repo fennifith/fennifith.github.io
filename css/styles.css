@@ -22,6 +22,7 @@
 	--accent-outline-fade: rgba(0, 72, 117, 0.3);
 	--accent-outline-fade2: rgba(0, 72, 117, 0.5);
 	--accent-inverse: #FFFFFF;
+	--image-brightness-focus: 0;
 }
 
 .--theme-dark,
@@ -44,6 +45,7 @@
 	--accent-outline-fade: rgba(0, 72, 117, 0.3);
 	--accent-outline-fade2: rgba(0, 72, 117, 0.5);
 	--accent-inverse: #000000;
+	--image-brightness-focus: 2;
 }
 
 @keyframes fadeIn {
@@ -802,6 +804,7 @@ sidebar:hover::before {
 .link:hover > img:not(.round),
 .link:hover > object:not(.round) {
 	filter: contrast(0) brightness(0);
+	filter: contrast(0) brightness(var(--image-brightness-focus));
 }
 
 .link > span {
