@@ -33,9 +33,11 @@ try {
 }
 
 try {
-	let repos = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/repos?per_page=1000", {
+	{% assign github = site.links | where: "title", "github" | first %}
+
+	let repos = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/repos?per_page=1000", {
 		headers: { 
-			"User-Agent": "TheAndroidMaster.github.io",
+			"User-Agent": "{{ github.name }}.github.io",
 			"Authorization": token ? "token " + token : null
 		}
 	}).getBody('utf8'));
@@ -45,7 +47,7 @@ try {
 			let topics = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
 				headers: { 
 					"Accept": "application/vnd.github.mercy-preview+json",
-					"User-Agent": "TheAndroidMaster.github.io",
+					"User-Agent": "{{ github.name }}.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
@@ -70,28 +72,28 @@ try {
 				
 			let repo = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name, {
 				headers: { 
-					"User-Agent": "TheAndroidMaster.github.io",
+					"User-Agent": "{{ github.name }}.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
 				
 			let contributors = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/contributors", {
 				headers: { 
-					"User-Agent": "TheAndroidMaster.github.io",
+					"User-Agent": "{{ github.name }}.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
 
 			let releases = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/releases", {
 				headers: { 
-					"User-Agent": "TheAndroidMaster.github.io",
+					"User-Agent": "{{ github.name }}.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
 			
 			let languages = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/languages", {
 				headers: { 
-					"User-Agent": "TheAndroidMaster.github.io",
+					"User-Agent": "{{ github.name }}.github.io",
 					"Authorization": token ? "token " + token : null
 				}
 			}).getBody('utf8'));
@@ -255,9 +257,9 @@ try {
 		}
 	}
 
-	let people = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/following?per_page=1000", {
+	let people = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/following?per_page=1000", {
 		headers: { 
-			"User-Agent": "TheAndroidMaster.github.io",
+			"User-Agent": "{{ github.name }}.github.io",
 			"Authorization": token ? "token " + token : null
 		}
 	}).getBody('utf8'));
@@ -265,7 +267,7 @@ try {
 	for (let i = 0; i < people.length; i++) {
 		let person = JSON.parse(_request('GET', "https://api.github.com/users/" + people[i].login, {
 			headers: { 
-				"User-Agent": "TheAndroidMaster.github.io",
+				"User-Agent": "{{ github.name }}.github.io",
 				"Authorization": token ? "token " + token : null
 			}
 		}).getBody('utf8'));
@@ -280,9 +282,9 @@ try {
 		console.log("Fetched person " + person.login);
 	}
 
-	let orgs = JSON.parse(_request('GET', "https://api.github.com/users/TheAndroidMaster/orgs", {
+	let orgs = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/orgs", {
 		headers: { 
-			"User-Agent": "TheAndroidMaster.github.io",
+			"User-Agent": "{{ github.name }}.github.io",
 			"Authorization": token ? "token " + token : null
 		}
 	}).getBody('utf8'));
