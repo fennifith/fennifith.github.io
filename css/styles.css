@@ -10,9 +10,11 @@
 	--normal-color-focusable: #808080;
 	--normal-background: #FFFFFF;
 	--normal-background-dark: #F5F5F5;
-	--normal-background-darker: #FAFAFA;
+	--normal-background-darker: #E0E0E0;
 	--normal-outline: #BDBDBD;
 	--normal-outline-dark: #000000;
+	--normal-focus: rgba(0, 0, 0, 0.1);
+	--normal-focus-light: rgba(0, 0, 0, 0.03);
 	--accent-color: #0091EA;
 	--accent-color-text: #0067A4;
 	--accent-background: #0091EA;
@@ -33,6 +35,8 @@
 	--normal-background-darker: #424242;
 	--normal-outline: #424242;
 	--normal-outline-dark: #FFFFFF;
+	--normal-focus: rgba(255, 255, 255, 0.1);
+	--normal-focus-light: rgba(255, 255, 255, 0.03);
 	--accent-color: #09A3FF;
 	--accent-color-text: #58BDF9;
 	--accent-background: #2FA4E9;
@@ -177,7 +181,7 @@ input[type=submit] {
 
 input[type=text] {
 	padding: calc(.6em - 1px) .8em;
-	border: 1px solid rgba(0, 0, 0, 0.25);
+	border: 1px solid #BDBDBD;
 	border: 1px solid var(--normal-outline);
 	background-color: #FFF;
 	background-color: var(--normal-background);
@@ -224,7 +228,8 @@ input[type=range] {
 	height: 20px;
 	margin: 0;
 	border: none;
-	background: rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.1);
+	background-color: var(--normal-focus);
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	border: 1px solid var(--normal-outline);
 	outline: none;
@@ -271,7 +276,7 @@ input[type=range] + label {
 	line-height: 22px;
 	background: #FFF;
 	background: var(--normal-background);
-	border: 1px solid rgba(0, 0, 0, 0.25);
+	border: 1px solid #BDBDBD;
 	border: 1px solid var(--normal-outline);
 }
 
@@ -599,7 +604,8 @@ footer > a {
 
 .item.image {
 	margin-bottom: 2em;
-	border: 1px solid rgba(0, 0, 0, 0.4);
+	border: 1px solid #BDBDBD;
+	border: 1px solid var(--normal-outline);
 }
 
 .item.image > span {
@@ -613,7 +619,9 @@ footer > a {
 
 .item.image:hover > span {
 	background-color: rgba(0, 0, 0, 0.03);
+	background-color: var(--normal-focus-light);
 	color: #000;
+	color: var(--normal-color-focus);
 }
 
 .item.image > div {
@@ -676,6 +684,7 @@ footer > a {
 
 .grid > .box:hover {
 	background-color: rgba(0, 0, 0, 0.03);
+	background-color: var(--normal-focus-light);
 	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.37);
 	box-shadow: 0 0.4em 1.2em var(--accent-outline-fade);
 }

@@ -1,6 +1,8 @@
 pre {
 	background-color: #E0E0E0;
+	background-color: var(--normal-background-darker);
 	border: 1px solid #BDBDBD;
+	border: 1px solid var(--normal-outline);
 	overflow-x: auto;
 	padding: 16px;
 }
@@ -8,6 +10,7 @@ pre {
 code {
 	font-family: 'Roboto Mono', monospace;
 	background-color: #E0E0E0;
+	background-color: var(--normal-background-darker);
 	padding-left: 4px;
 	padding-right: 4px;
 	font-size: 0.9em;
