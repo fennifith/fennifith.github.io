@@ -1,6 +1,6 @@
 ---
 layout: project
-type: nodejs
+type: cli
 title: "Asciimg"
 description: "A command line tool to display images in ASCII."
 repo: TheAndroidMaster/Asciimg
@@ -73,12 +73,12 @@ asciimg <image> --usergb
 The 'test.png' included in the repository is over 4000000 pixels in size, so it will take a while for the tool to convert it. Here are screenshots of the result of that and a few other images:
 
 ### My Profile Picture
-![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/Asciimg-Me.png)
+![img](https://raw.githubusercontent.com/TheAndroidMaster/Asciimg/master/./.github/images/me.png?raw=true)
 
 ### A Fidget Spinner
 Why not.
 
-![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/Asciimg-FidgetSpinner.png)
+![img](https://raw.githubusercontent.com/TheAndroidMaster/Asciimg/master/./.github/images/fidgetspinner.png?raw=true)
 
 ### The Top Half of a Samsung Galaxy S2
-![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/Asciimg-GalaxyS2.png)
+![img](./.github/images/galaxys2.png?raw=true)

@@ -16,7 +16,7 @@ links:
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
   - name: Website
-    url: https://jfenn.me/about/?P5Samples
+    url: https://jfenn.me/projects/p5samples
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
   - login: TheAndroidMaster

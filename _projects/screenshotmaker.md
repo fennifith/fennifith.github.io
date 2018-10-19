@@ -30,7 +30,7 @@ languages:
 
 ScreenshotMaker is small java applet used to generate uniform Play Store screenshots with titles and descriptions with minimal effort.
 
-![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/ScreenshotMaker-Main.png)
+![img](https://raw.githubusercontent.com/TheAndroidMaster/ScreenshotMaker/master/./.github/images/main.png?raw=true)
 
 ## Installation
 

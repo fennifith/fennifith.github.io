@@ -43,10 +43,10 @@ Disclaimer: This app is not an official Android Police client. It was made by a 
 
 |Home Screen|Article Screen|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/APReader-Main.png)|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/APReader-Article.png)|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/APReader/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/APReader/master/./.github/images/article.png?raw=true)|
 
 ### Wear OS
 
 |Home Screen|Article Screen|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/APReader-Wear-Main.png)|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/APReader-Wear-Article.png)|
+|![img](./.github/images/wear-main.png?raw=true)|![img](./.github/images/wear-article.png?raw=true)|

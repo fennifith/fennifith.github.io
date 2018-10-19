@@ -1,6 +1,6 @@
 ---
 layout: project
-type: undefined
+type: cli
 title: "AAH"
 description: "A basic cmdline program for Linux to help me do basic things I should already know. Ex&#58; \"AAH drive mount\""
 repo: TheAndroidMaster/AAH

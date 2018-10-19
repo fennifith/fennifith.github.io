@@ -4,7 +4,7 @@ title: AnimatedInteger Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [james](./../../../index) > [alarmio](./../../index) > [utils](./../index) > [anim](./index) > **AnimatedInteger.java**
 
-# [AnimatedValue](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L4)
+# [AnimatedValue<Integer>](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L4)
 
 **Type:** `public` `class` `AnimatedInteger` `extends`
 

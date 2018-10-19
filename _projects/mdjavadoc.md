@@ -1,6 +1,6 @@
 ---
 layout: project
-type: nodejs
+type: cli
 title: "mdjavadoc"
 description: "A script that generates markdown javadocs for use in Jekyll and GitHub Pages."
 repo: TheAndroidMaster/mdjavadoc

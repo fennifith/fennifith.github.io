@@ -1,6 +1,6 @@
 ---
 layout: project
-type: nodejs
+type: cli
 title: "Markdown To Jupyter"
 description: "NodeJS script to execute & convert code blocks in markdown files to a JupyterLab Notebook."
 repo: TheAndroidMaster/MarkdownToJupyter

@@ -36,6 +36,6 @@ The slideshow presentation associated with this project can be viewed [here](htt
 
 ## Screenshots
 
-Add A Note | View Notes | Remove A Note
----- | ---- | ----
-![img](https://theandroidmaster.github.io/images/screenshots/notes-0.png) | ![img](https://theandroidmaster.github.io/images/screenshots/notes-1.png) | ![img](https://theandroidmaster.github.io/images/screenshots/notes-2.png)
+| Add A Note | View Notes | Remove A Note |
+|------------|------------|---------------|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/new.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/list.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/remove.png?raw=true)|

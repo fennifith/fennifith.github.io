@@ -34,7 +34,7 @@ languages:
 
 |Main Screen|Somewhat Unnecessary Proof of StackOverflow|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/Crasher-Main.png)|![img](https://raw.githubusercontent.com/TheAndroidMaster/TheAndroidMaster.github.io/master/images/screenshots/Crasher-StackOverflow.png)|
+|![img](https://raw.githubusercontent.com/TheAndroidMaster/Crasher/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Crasher/master/./.github/images/stackoverflow.png?raw=true)|
 
 ## Usage
 
