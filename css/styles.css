@@ -187,6 +187,18 @@ input[type=text] {
 	border: 1px solid var(--normal-outline);
 	background-color: #FFF;
 	background-color: var(--normal-background);
+	color: #000;
+	color: var(--normal-color);
+	outline: none;
+
+	transition: border .25s;
+	-moz-transition: border .25s;
+	-webkit-transition: border .25s;
+}
+
+input[type=text]:focus {
+	border: 1px solid #000;
+	border: 1px solid var(--normal-color);
 }
 
 input[type=checkbox] {
@@ -235,6 +247,15 @@ input[type=range] {
 	border: 1px solid rgba(0, 0, 0, 0.25);
 	border: 1px solid var(--normal-outline);
 	outline: none;
+
+	-webkit-transition: border .25s;
+	-moz-transition: border .25s;
+	transition: border .25s;
+}
+
+input[type=range]:hover {
+	border: 1px solid #000;
+	border: 1px solid var(--normal-color);
 }
 
 input[type=range]::-moz-range-track {
@@ -289,38 +310,32 @@ select {
 	padding-right: 30px;
 	margin-bottom: 0.8em;
 	min-width: 100%;
-	background-color: #0091EA;
-	background-color: var(--accent-color);
-	color: #FFF;
-	color: var(--accent-inverse);
-	border: none;
-	box-shadow: 0 0.1em 0.3em rgba(0, 72, 117, 0.37);
-	box-shadow: 0 0.1em 0.3em var(--accent-outline-fade);
+	color: #000;
+	color: var(--normal-color);
+	border: 1px solid #BDBDBD;
+	border: 1px solid var(--normal-outline);
 
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 
 	background: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%), #0091EA;
-	background: linear-gradient(45deg, transparent 50%, var(--accent-inverse) 50%), linear-gradient(135deg, var(--accent-inverse) 50%, transparent 50%), var(--accent-color);
+	background: linear-gradient(45deg, transparent 50%, var(--normal-color) 50%), linear-gradient(135deg, var(--normal-color) 50%, transparent 50%), var(--normal-background);
   	background-position: calc(100% - 17px) 1em, calc(100% - 12px) 1em;
   	background-size: 5px 5px, 5px 5px;
   	background-repeat: no-repeat;
 
-	-webkit-transition: color .25s, background-color .25s, box-shadow .25s;
-	-moz-transition: color .25s, background-color .25s, box-shadow .25s;
-	transition: color .25s, background-color .25s, box-shadow .25s;
+	-webkit-transition: color .25s, border .25s, box-shadow .25s;
+	-moz-transition: color .25s, border .25s, box-shadow .25s;
+	transition: color .25s, border .25s, box-shadow .25s;
 }
 
 select:hover {
-	box-shadow: 0 0.4em 1.2em rgba(0, 72, 117, 0.37);
-	box-shadow: 0 0.4em 1.2em var(--accent-outline-fade);
-}
-
-select:focus {
-	background-color: transparent;
 	color: #000;
 	color: var(--normal-color-focus);
+	border: 1px solid #000;
+	border: 1px solid var(--normal-color-focus);
+	box-shadow: none;
 }
 
 select::-ms-expand {
@@ -459,7 +474,7 @@ filter > .title > input {
 	height: 100%;
 	width: calc(100% - 88px);
 	outline: none;
-	border: none;
+	border: none !important;
 	padding: 0;
 	padding-left: 24px;
 	background-color: rgba(0, 0, 0, 0);
