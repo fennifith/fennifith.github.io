@@ -70,6 +70,10 @@ body {
 
 	word-wrap: break-word;
 	word-break: break-word;
+
+	transition: background-color .25s;
+	-moz-transition: background-color .25s;
+	-webkit-transition: background-color .25s;
 }
 
 p {
