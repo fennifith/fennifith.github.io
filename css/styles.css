@@ -541,7 +541,7 @@ nav {
 	-webkit-transition: width .25s;
 }
 
-nav>button {
+nav > button {
 	display: inline-block;
 	color: #808080;
 	color: var(--normal-color-focusable);
@@ -549,11 +549,17 @@ nav>button {
 	user-select: none;
 	white-space: nowrap;
 	margin: 4px;
+	width: calc(100% - 8px);
+	text-align: left;
 }
 
-nav>button>* {
-	display: table-cell;
+nav > button > * {
+	display: inline;
 	vertical-align: middle;
+}
+
+nav > button > i.material-icons {
+	margin-right: 1em;
 }
 
 main {
@@ -895,7 +901,19 @@ sidebar:hover::before {
 }
 
 @media(min-width: 600px) {
-	nav>button>i {
+	nav > button {
+		width: auto;
+		text-align: inherit;
+	}
+
+	nav > button > * {
+		margin: 0;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	nav > button > i {
+		margin-right: 0 !important;
 		margin-bottom: 0.25em;
 	}
 }

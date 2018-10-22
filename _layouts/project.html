@@ -44,12 +44,12 @@
 	<main>
 		{% if page.isWiki or page.isDocs %}
 		<nav>
-			<button class="selectable" selected><i class="material-icons">info</i><span class="desktop">About</span></button>
+			<button class="selectable" selected><i class="material-icons">info</i><span>About</span></button>
 			{% if page.isWiki %}
-			<button class="selectable" onclick="location.href='wiki/';"><i class="material-icons">assignment</i><span class="desktop">Wiki</span></button>
+			<button class="selectable" onclick="location.href='wiki/';"><i class="material-icons">assignment</i><span>Wiki</span></button>
 			{% endif %}
 			{% if page.isDocs %}
-			<button class="selectable" onclick="location.href='docs/';"><i class="material-icons">list_alt</i><span class="desktop">Docs</span></button>
+			<button class="selectable" onclick="location.href='docs/';"><i class="material-icons">list_alt</i><span>Docs</span></button>
 			{% endif %}
 		</nav>
 		<br>
