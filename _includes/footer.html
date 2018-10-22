@@ -9,7 +9,13 @@
 	<script type="text/javascript">
 		const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
 		_darkThemeCheckBoxElement.addEventListener("change", function() {
-			document.body.className = _darkThemeCheckBoxElement.checked ? "--theme-dark" : "";
+			if (_darkThemeCheckBoxElement.checked) {
+				document.body.className = "--theme-dark";
+				document.querySelector("meta[name='theme-color']").setAttribute("content", "#212121");
+			} else {
+				document.body.className = "";
+				document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
+			}
 		
 			if (localStorage) {
 				if (_darkThemeCheckBoxElement.checked)
@@ -21,6 +27,9 @@
 		if (localStorage && localStorage.getItem("darkTheme")) {
 			_darkThemeCheckBoxElement.checked = true;
 			document.body.className = "--theme-dark";
+			document.querySelector("meta[name='theme-color']").setAttribute("content", "#212121");
+		} else {
+			document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
 		}
 	</script>
 	
