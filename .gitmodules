@@ -1,4 +1,4 @@
 [submodule "css"]
 	path = css
 	url = https://github.com/TheAndroidMaster/styles
-	branch = bem-css
+	branch = css
