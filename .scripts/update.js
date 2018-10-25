@@ -25,6 +25,10 @@ function safestrize(str) {
 	return "\"" + str.replace(/(\")/g, "\\\"") + "\"";
 }
 
+function unhighlightize(str) {
+	return str.replace(/(\n{2,})\`{3} *(\n{1,})/g, "$1```nohighlight$2");
+}
+
 let token = null;
 try {
 	token = _fs.readFileSync(_path.join(process.env.HOME, "keys/github.txt"), 'utf8');
@@ -215,7 +219,7 @@ try {
 				_clone("https://github.com/" + repo.full_name + ".wiki", wikiDir + "/.temp");
 				_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
 					if (fileName.endsWith(".md")) {
-						let wiki = _fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8");
+						let wiki = unhighlightize(_fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8"));
 						if (fileName.startsWith("_")) {
 							_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
 						} else {
@@ -253,7 +257,7 @@ try {
 				+ "isDocs: " + isDocs + "\n"
 				+ "isWiki: " + isWiki + "\n"
 				+ "languages:\n" + langs
-				+ "---\n\n" + readme);
+				+ "---\n\n" + unhighlightize(readme));
 		}
 	}
 
