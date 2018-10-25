@@ -8,7 +8,9 @@ Once this is done, you can run `jekyll build` to generate the HTML (storing it i
 
 ## License
 
-As this is **my** personal site, I have some issues with placing it under a license for public use. However, I am trying to separate parts of it so that I can open-source projects such as [bugiver](https://jfenn.me/projects/bugiver) and [photos](https://jfenn.me/projects/photos) separately. To clarify, I have no problem with borrowing small snippets from this repository for use in other projects, I am only trying to prevent people from just changing the text and claiming this entire project as their own.
+As this is my _personal_ site, I have some issues with placing the whole thing under a license for public use. However, I am trying to split it into parts so that I can open-source projects such as [bugiver](https://jfenn.me/projects/bugiver) and [photos](https://jfenn.me/projects/photos) separately. To clarify, I have no problem with borrowing small snippets from this repository for use in other projects, I am only trying to prevent people from just changing the text and claiming this entire project as their own.
+
+If you want a template to use for your own portfolio and do not want to put in the time to write it yourself, I recommend using something like [quicksilver](https://github.com/jacksonhvisuals/quicksilver) instead. For inspiration designing your own, see [personalsit.es](https://personalsit.es/) for a list of random people's websites.
 
 ## Contributing
 
