@@ -6,27 +6,26 @@
 	{% if page.languages %}
 		{% include head-highlightjs.html languages=page.languages %}
 	{% endif %}
-	<link href="/css/md.css" rel="stylesheet">
 </head>
 <body>
 
-	<sidebar>
+	<sidebar class="sidebar">
 		<h2>Links</h2>
 		{% for link in page.links %}
 		<a class="link" href="{{ link.url }}">
-			<object data="{{ link.icon }}" type="image/png">
-				<img src="/images/ic/link.svg">
+			<object class="link__img" data="{{ link.icon }}" type="image/png">
+				<img class="link__img" src="/images/ic/link.svg">
 			</object>
-			<span>{{ link.name }}</span>
+			<span class="link__title">{{ link.name }}</span>
 		</a>
 		{% endfor %}
 		<h2>Contributors</h2>
 		{% for contributor in page.contributors %}
 		<a class="link" href="{{ contributor.url }}">
-			<object class="round" data="{{ contributor.avatar }}" type="image/png">
-				<img class="round" src="/images/ic/person.svg">
+			<object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
+				<img class="link__img--round" src="/images/ic/person.svg">
 			</object>
-			<span>{{ contributor.login }}</span>
+			<span class="link__title">{{ contributor.login }}</span>
 		</a>
 		{% endfor %}
 		{% assign blogs = site.blogs | where: "project", page.title %}
@@ -34,7 +33,7 @@
 		<h2>Posts</h2>
 		{% for blog in blogs reversed %}
 		<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
-			<span>{{ blog.title }}</span>
+			<span class="item__title">{{ blog.title }}</span>
 			{{ blog.date | date: "%B %e, %Y" }}
 		</a>
 		{% endfor %}
@@ -43,20 +42,32 @@
 
 	<main>
 		{% if page.isWiki or page.isDocs %}
-		<nav>
-			<button class="selectable" selected><i class="material-icons">info</i><span>About</span></button>
+		<nav class="nav">
+			<button class="nav__item" selected>
+				<i class="nav__item__icon material-icons">info</i>
+				<span class="nav__item__text">About</span>
+			</button>
 			{% if page.isWiki %}
-			<button class="selectable" onclick="location.href='wiki/';"><i class="material-icons">assignment</i><span>Wiki</span></button>
+			<button class="nav__item" onclick="location.href='wiki/';">
+				<i class="nav__item__icon material-icons">assignment</i>
+				<span class="nav__item__text">Wiki</span>
+			</button>
 			{% endif %}
 			{% if page.isDocs %}
-			<button class="selectable" onclick="location.href='docs/';"><i class="material-icons">list_alt</i><span>Docs</span></button>
+			<button class="nav__item" onclick="location.href='docs/';">
+				<i class="nav__item__icon material-icons">list_alt</i>
+				<span class="nav__item__text">Docs</span>
+			</button>
 			{% endif %}
 		</nav>
 		<br>
 		{% endif %}
 	
 		<h1>{{ page.title }}</h1>
-		<a class="link" href="{{ page.git }}"><img src="/images/ic/git.png"><span>{{ page.git }}</span></a>
+		<a class="link" href="{{ page.git }}">
+			<img class="link__img" src="/images/ic/git.png">
+			<span class="link__title">{{ page.git }}</span>
+		</a>
 		<div id="content">
 			{{ content }}
 		</div>
