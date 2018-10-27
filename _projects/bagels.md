@@ -39,7 +39,7 @@ Bagels is a live wallpaper that blurs the screen after a period of time without 
 
 ## License
 
-```
+```nohighlight
 Copyright 2016 James Fenn
 
 Licensed under the Apache License, Version 2.0 (the "License");

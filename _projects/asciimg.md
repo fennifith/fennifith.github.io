@@ -50,13 +50,13 @@ npm install
 
 ## Usage
 
-```
+```nohighlight
 asciimg <image>
 ```
 
 Or, to change the dimensions:
 
-```
+```nohighlight
 asciimg <image> -h [height] -w [width]
 ```
 
@@ -64,7 +64,7 @@ If either the height or width is not specified, asciimg will pick the value that
 
 If your command line supports rgb color values:
 
-```
+```nohighlight
 asciimg <image> --usergb
 ```
 

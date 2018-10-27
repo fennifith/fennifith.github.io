@@ -39,7 +39,7 @@ Asteroid is a simple Android game based on avoiding incoming asteroids. It is ma
 
 ## License
 
-```
+```nohighlight
 Copyright 2017 James Fenn
 
 Licensed under the Apache License, Version 2.0 (the "License");

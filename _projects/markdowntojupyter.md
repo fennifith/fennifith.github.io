@@ -63,12 +63,12 @@ npm install
 
 ## Usage
 
-```
+```nohighlight
 mtjc <file.md>
 ```
 
 Or, to specify a path for the output file...
 
-```
+```nohighlight
 mtjc <file.md> <output.ipynb>
 ```

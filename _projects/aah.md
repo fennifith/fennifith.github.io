@@ -39,7 +39,7 @@ AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help 
 
 For example:
 
-```
+```nohighlight
 ~$ AAH drive mount
 mount: 		mkdir /mnt/disk && mount <device> /mnt/disk
 ~$
