@@ -9,7 +9,8 @@
 	<main>
 		{% assign parts = page.url | split: '/' %}
 		<a class="link" href="{% for i in (4..parts.size) %}../{% endfor %}">
-			<img src="/images/ic/back.svg"><span>Project Info</span>
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
 		</a>
 		{% if parts.size == 4 %}
 			<h2>Documentation Pages</h2>

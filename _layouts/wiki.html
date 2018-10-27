@@ -4,18 +4,23 @@
 <head>
 	{% include head.html %}
 	{% include head-highlightjs.html languages=page.languages %}
-	<link href="/css/md.css" rel="stylesheet">
 </head>
 <body>
-	<sidebar>
+	<sidebar class="sidebar">
 		{% capture sidebar_include %}{% include_relative _Sidebar.md %}{% endcapture %}
 		{{ sidebar_include | markdownify }}
 	</sidebar>
 	<main>
 		{% if page.project %}
-		<a class="link" href="../"><img src="/images/ic/back.svg"><span>Project Info</span></a>
+		<a class="link" href="../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
 		{% else %}
-		<a class="link" href="./"><img src="/images/ic/back.svg"><span>Wiki Home</span></a>
+		<a class="link" href="./">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Wiki Home</span>
+		</a>
 		{% endif %}
 		<br>
 		<h1>{{ page.title }}</h1>

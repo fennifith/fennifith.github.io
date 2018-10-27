@@ -4,12 +4,27 @@ title: James Fenn
 permalink: /
 ---
 
-<nav>
-	<button page="home" class="selectable"><i class="material-icons">home</i><span>Home</span></button>
-	<button page="blog" class="selectable"><i class="material-icons">notes</i><span>Blog</span></button>
-	<button page="projects" class="selectable"><i class="material-icons">code</i><span>Projects</span></button>
-	<button page="community" class="selectable"><i class="material-icons">people</i><span>Community</span></button>
-	<button page="about" class="selectable"><i class="material-icons">info</i><span>About</span></button>
+<nav class="nav">
+	<button page="home" class="nav__item">
+		<i class="nav__item__icon material-icons">home</i>
+		<span class="nav__item__title">Home</span>
+	</button>
+	<button page="blog" class="nav__item">
+		<i class="nav__item__icon material-icons">notes</i>
+		<span class="nav__item__title">Blog</span>
+	</button>
+	<button page="projects" class="nav__item">
+		<i class="nav__item__icon material-icons">code</i>
+		<span class="nav__item__title">Projects</span>
+	</button>
+	<button page="community" class="nav__item">
+		<i class="nav__item__icon material-icons">people</i>
+		<span class="nav__item__title">Community</span>
+	</button>
+	<button page="about" class="nav__item">
+		<i class="nav__item__icon material-icons">info</i>
+		<span class="nav__item__title">About</span>
+	</button>
 </nav>
 <main id="main" style="display: none;">
 	<div page="home">
@@ -33,11 +48,11 @@ permalink: /
 		<p>
 			You can find most of my projects <a href="/?projects">here</a> on this site, but I have also worked on a few for some organizations:
 		</p>
-		<div id="organizationlist" class="grid">
+		<div id="organizationlist" class="layout--grid">
 			{% for org in site.orgs %}
-			<a class="item box" href="{{ org.link }}">
-				<img class="round" src="{{ org.avatar }}">
-				<span>{{ org.title }}</span>
+			<a class="item item--box" href="{{ org.link }}">
+				<img class="img--round item--box__img" src="{{ org.avatar }}">
+				<span class="item__title">{{ org.title }}</span>
 				{{ org.description }}
 			</a>
 			{% endfor %}
@@ -55,7 +70,7 @@ permalink: /
 		<p>
 			{% for blog in site.blogs reversed %}
 			<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
-				<span>{{ blog.title }}</span>
+				<span class="item__title">{{ blog.title }}</span>
 				{{ blog.date | date: "%B %e %Y" }}
 			</a>
 			{% endfor %}
@@ -65,7 +80,7 @@ permalink: /
 		<filter id="projectsFilter" tabindex="0">
 			<div class="title">
 				<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
-				<i class="material-icons clickable">expand_more</i>
+				<i class="material-icons --clickable">expand_more</i>
 			</div>
 			<div id="projectCheckBoxes" class="content">
 				{% assign types = site.types | sort: "order" %}
@@ -74,7 +89,7 @@ permalink: /
 					<input id="c{{ type.tag }}" type="checkbox" checked></input>
 					<label for="c{{ type.tag }}"></label>
 					<span>{{ type.title }}</span>
-					<i class="material-icons focusable clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
+					<i class="material-icons --focusable --clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
 				</div>
 				{% endfor %}
 			</div>
@@ -90,7 +105,7 @@ permalink: /
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
 					<a class="item" href="{{ project.url }}">
-						<span>{{ project.title }}</span>
+						<span class="item__title">{{ project.title }}</span>
 						{{ project.description }}
 					</a>
 					{% endfor %}
@@ -107,11 +122,11 @@ permalink: /
 			<br>
 			Go check out some of their work!
 		</h4>
-		<div class="grid">
+		<div class="layout--grid">
 			{% for person in site.people %}
-			<a class="item box" href="{{ person.link }}">
-				<img src="{{ person.avatar }}" class="round">
-				<span>{{ person.title }}</span>
+			<a class="item item--box" href="{{ person.link }}">
+				<img class="img--round item--box__img" src="{{ person.avatar }}" class="round">
+				<span class="item__title">{{ person.title }}</span>
 				{{ person.description }}
 			</a>
 			{% endfor %}

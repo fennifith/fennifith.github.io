@@ -1,11 +1,11 @@
-<form class="wide" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri={{ include.feed }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<form class="form--wide" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri={{ include.feed }}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
 	<h3 style="display: inline;">{{ include.title }}</h3>
 	<p>Enter your email address:</p>
 	<p>
 		<input type="text" style="width:140px" name="email" placeholder="email@example.com"/>
 		<input type="hidden" value="{{ include.feed }}" name="uri"/>
 		<input type="hidden" name="loc" value="en_US"/>
-		<input type="submit" value="Subscribe" />
+		<input class="button" type="submit" value="Subscribe" />
 		<br>
 		<small>Delivered by <a href="https://feedburner.google.com" target="_blank">FeedBurner</a></small>
 	</p>
