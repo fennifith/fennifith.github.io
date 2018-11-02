@@ -40,8 +40,7 @@ permalink: /
 		<p>You can see all of my latest blog posts <a href="/?blog">here</a>.</p>
 		<p>You can also find a few pictures that I have taken, published under the Creative Commons License, <a href="/photos/">here</a>.</p>
 		<h2>Find me in places.</h2>
-		{% assign links = site.links | sort: 'order' %}
-		{% for link in links %}
+		{% for link in site.links %}
 		{% if link.verb %}<a href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.title }})</small><br>{% endif %} 
 		{% endfor %}
 		<h2>See my work.</h2>
