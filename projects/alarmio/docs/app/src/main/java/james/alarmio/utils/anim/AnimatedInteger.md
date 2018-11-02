@@ -4,7 +4,7 @@ title: AnimatedInteger Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [james](./../../../index) > [alarmio](./../../index) > [utils](./../index) > [anim](./index) > **AnimatedInteger.java**
 
-# [AnimatedValue<Integer>](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L4)
+# [AnimatedValue<Integer>](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L4)
 
 **Type:** `public` `class` `AnimatedInteger` `extends`
 
@@ -24,7 +24,7 @@ animation will be regarded as complete.
 
 
 
-## [nextVal](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L16)
+## [nextVal](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedInteger.java#L16)
 
 **Type:** `@Override` `public` `Integer`
 

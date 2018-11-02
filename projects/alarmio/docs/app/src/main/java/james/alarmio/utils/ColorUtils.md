@@ -4,7 +4,7 @@ title: ColorUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [utils](./index) > **ColorUtils.java**
 
-## [isColorDark](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ColorUtils.java#L10)
+## [isColorDark](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ColorUtils.java#L10)
 
 **Type:** `public` `static` `boolean`
 

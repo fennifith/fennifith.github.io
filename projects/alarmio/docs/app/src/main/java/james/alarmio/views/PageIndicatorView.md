@@ -4,7 +4,7 @@ title: PageIndicatorView Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [views](./index) > **PageIndicatorView.java**
 
-## [setViewPager](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/views/PageIndicatorView.java#L144)
+## [setViewPager](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/views/PageIndicatorView.java#L144)
 
 **Type:** `public` `void`
 

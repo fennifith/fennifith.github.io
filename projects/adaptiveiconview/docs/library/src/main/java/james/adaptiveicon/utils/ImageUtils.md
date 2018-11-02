@@ -4,7 +4,7 @@ title: ImageUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [adaptiveicon](./../index) > [utils](./index) > **ImageUtils.java**
 
-## [drawableToBitmap](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L16)
+## [drawableToBitmap](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L16)
 
 **Type:** `public` `static` `Bitmap`
 
@@ -28,7 +28,7 @@ Converts a drawable to a bitmap
 
 
 
-## [hasTransparency](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L46)
+## [hasTransparency](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L46)
 
 **Type:** `public` `static` `boolean`
 
@@ -53,7 +53,7 @@ whether it has any transparent parts.
 
 
 
-## [removeShadow](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L64)
+## [removeShadow](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L64)
 
 **Type:** `public` `static` `Bitmap`
 
@@ -78,7 +78,7 @@ from a bitmap.
 
 
 
-## [getDominantColor](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L86)
+## [getDominantColor](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/ImageUtils.java#L86)
 
 **Type:** `@ColorInt` `public` `static` `int`
 

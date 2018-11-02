@@ -3,25 +3,25 @@ layout: project
 type: android-app
 title: "Feedage"
 description: "A basic \"news reader\" that sorts posts from various RSS feeds into categories."
-repo: TheAndroidMaster/Feedage
-git: git://github.com/TheAndroidMaster/Feedage.git
+repo: fennifith/Feedage
+git: git://github.com/fennifith/Feedage.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Feedage
+    url: https://github.com/fennifith/Feedage
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Feedage/issues
+    url: https://github.com/fennifith/Feedage/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
   - name: Feedage.apk (v0.2 unstable)
-    url: https://github.com/TheAndroidMaster/Feedage/releases/download/v0.2/Feedage.apk
+    url: https://github.com/fennifith/Feedage/releases/download/v0.2/Feedage.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:
@@ -34,11 +34,11 @@ Feedage is a basic "news reader" app that sorts articles from various RSS feeds 
 
 |Categories|Article|About|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/categories.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/article.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Feedage/master/./screenshots/about.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/Feedage/master/./screenshots/categories.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Feedage/master/./screenshots/article.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Feedage/master/./screenshots/about.png?raw=true)|
 
 ## Contributing
 
-Pull requests are welcome. Please see [CONTRIBUTING.md](https://github.com/TheAndroidMaster/Feedage/blob/master/./.github/CONTRIBUTING.md) for more information on steps to take before submitting a pull request.
+Pull requests are welcome. Please see [CONTRIBUTING.md](https://github.com/fennifith/Feedage/blob/master/./.github/CONTRIBUTING.md) for more information on steps to take before submitting a pull request.
 
 ## Organization
 

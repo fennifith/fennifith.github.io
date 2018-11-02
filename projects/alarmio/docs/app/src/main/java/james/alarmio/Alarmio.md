@@ -4,7 +4,7 @@ title: Alarmio Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [main](./../../../index) > [java](./../../index) > [james](./../index) > [alarmio](./index) > **Alarmio.java**
 
-## [newAlarm](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L119)
+## [newAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L119)
 
 **Type:** `public` `AlarmData`
 
@@ -24,7 +24,7 @@ Create a new alarm, assigning it an unused preference id.
 
 
 
-## [removeAlarm](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L131)
+## [removeAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L131)
 
 **Type:** `public` `void`
 
@@ -45,7 +45,7 @@ Remove an alarm and all of its its preferences.
 
 
 
-## [onAlarmCountChanged](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L149)
+## [onAlarmCountChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L149)
 
 **Type:** `public` `void`
 
@@ -62,7 +62,7 @@ Update preferences to show that the alarm count has been changed.
 
 
 
-## [onAlarmsChanged](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L156)
+## [onAlarmsChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L156)
 
 **Type:** `public` `void`
 
@@ -79,7 +79,7 @@ Notify the application of changes to the current alarms.
 
 
 
-## [newTimer](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L165)
+## [newTimer](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L165)
 
 **Type:** `public` `TimerData`
 
@@ -99,7 +99,7 @@ Create a new timer, assigning it an unused preference id.
 
 
 
-## [removeTimer](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L177)
+## [removeTimer](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L177)
 
 **Type:** `public` `void`
 
@@ -120,7 +120,7 @@ Remove a timer and all of its preferences.
 
 
 
-## [onTimerCountChanged](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L195)
+## [onTimerCountChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L195)
 
 **Type:** `public` `void`
 
@@ -137,7 +137,7 @@ Update the preferences to show that the timer count has been changed.
 
 
 
-## [onTimersChanged](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L202)
+## [onTimersChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L202)
 
 **Type:** `public` `void`
 
@@ -154,7 +154,7 @@ Notify the application of changes to the current timers.
 
 
 
-## [onTimerStarted](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L211)
+## [onTimerStarted](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L211)
 
 **Type:** `public` `void`
 
@@ -171,7 +171,7 @@ Starts the timer service after a timer has been set.
 
 
 
-## [getPrefs](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L218)
+## [getPrefs](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L218)
 
 **Type:** `public` `SharedPreferences`
 
@@ -194,7 +194,7 @@ Get an instance of SharedPreferences.
 
 
 
-## [updateTheme](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L228)
+## [updateTheme](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L228)
 
 **Type:** `public` `void`
 
@@ -211,7 +211,7 @@ Update the application theme.
 
 
 
-## [isNight](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L283)
+## [isNight](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L283)
 
 **Type:** `public` `boolean`
 
@@ -231,7 +231,7 @@ Determine if the theme should be a night theme.
 
 
 
-## [getActivityTheme](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L293)
+## [getActivityTheme](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L293)
 
 **Type:** `public` `int`
 
@@ -254,7 +254,7 @@ Alarmio.THEME_NIGHT, or Alarmio.THEME_AMOLED.
 
 
 
-## [isDayAuto](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L305)
+## [isDayAuto](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L305)
 
 **Type:** `public` `boolean`
 
@@ -274,7 +274,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [getDayStart](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L314)
+## [getDayStart](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L314)
 
 **Type:** `public` `int`
 
@@ -292,7 +292,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [getDayEnd](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L323)
+## [getDayEnd](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L323)
 
 **Type:** `public` `int`
 
@@ -310,7 +310,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [getSunrise](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L332)
+## [getSunrise](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L332)
 
 **Type:** `@Nullable` `public` `Integer`
 
@@ -328,7 +328,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [getSunset](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L342)
+## [getSunset](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L342)
 
 **Type:** `@Nullable` `public` `Integer`
 
@@ -346,7 +346,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [getSunsetCalculator](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L352)
+## [getSunsetCalculator](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L352)
 
 **Type:** `@Nullable` `private` `SunriseSunsetCalculator`
 
@@ -367,7 +367,7 @@ Determine if the sunrise/sunset stuff should occur automatically.
 
 
 
-## [isRingtonePlaying](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L371)
+## [isRingtonePlaying](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L371)
 
 **Type:** `public` `boolean`
 
@@ -387,7 +387,7 @@ Determine if a ringtone is currently playing.
 
 
 
-## [getCurrentRingtone](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L380)
+## [getCurrentRingtone](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L380)
 
 **Type:** `@Nullable` `public` `Ringtone`
 
@@ -407,7 +407,7 @@ Get the currently playing ringtone.
 
 
 
-## [playStream](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L399)
+## [playStream](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L399)
 
 **Type:** `public` `void`
 
@@ -431,7 +431,7 @@ Play a stream ringtone.
 
 
 
-## [playStream](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L412)
+## [playStream](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L412)
 
 **Type:** `public` `void`
 
@@ -456,7 +456,7 @@ Play a stream ringtone.
 
 
 
-## [stopStream](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L425)
+## [stopStream](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L425)
 
 **Type:** `public` `void`
 
@@ -473,7 +473,7 @@ Stop the currently playing stream.
 
 
 
-## [isPlayingStream](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L433)
+## [isPlayingStream](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L433)
 
 **Type:** `public` `boolean`
 
@@ -497,7 +497,7 @@ Determine if the passed url matches the stream that is currently playing.
 
 
 
-## [stopCurrentSound](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L444)
+## [stopCurrentSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/Alarmio.java#L444)
 
 **Type:** `public` `void`
 

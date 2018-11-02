@@ -3,14 +3,14 @@ layout: project
 type: cli
 title: "Markdown To Jupyter"
 description: "NodeJS script to execute & convert code blocks in markdown files to a JupyterLab Notebook."
-repo: TheAndroidMaster/MarkdownToJupyter
-git: git://github.com/TheAndroidMaster/MarkdownToJupyter.git
+repo: fennifith/MarkdownToJupyter
+git: git://github.com/fennifith/MarkdownToJupyter.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/MarkdownToJupyter
+    url: https://github.com/fennifith/MarkdownToJupyter
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/MarkdownToJupyter/issues
+    url: https://github.com/fennifith/MarkdownToJupyter/issues
     icon: /images/ic/bug.svg
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
@@ -19,9 +19,9 @@ links:
     url: https://www.npmjs.com/package/mtjc
     icon: https://www.npmjs.com/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

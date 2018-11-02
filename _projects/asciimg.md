@@ -3,14 +3,14 @@ layout: project
 type: cli
 title: "Asciimg"
 description: "A command line tool to display images in ASCII."
-repo: TheAndroidMaster/Asciimg
-git: git://github.com/TheAndroidMaster/Asciimg.git
+repo: fennifith/Asciimg
+git: git://github.com/fennifith/Asciimg.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Asciimg
+    url: https://github.com/fennifith/Asciimg
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Asciimg/issues
+    url: https://github.com/fennifith/Asciimg/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: https://npmjs.com/package/asciimg
     icon: https://npmjs.com/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -73,12 +73,12 @@ asciimg <image> --usergb
 The 'test.png' included in the repository is over 4000000 pixels in size, so it will take a while for the tool to convert it. Here are screenshots of the result of that and a few other images:
 
 ### My Profile Picture
-![img](https://raw.githubusercontent.com/TheAndroidMaster/Asciimg/master/./.github/images/me.png?raw=true)
+![img](https://raw.githubusercontent.com/fennifith/Asciimg/master/./.github/images/me.png?raw=true)
 
 ### A Fidget Spinner
 Why not.
 
-![img](https://raw.githubusercontent.com/TheAndroidMaster/Asciimg/master/./.github/images/fidgetspinner.png?raw=true)
+![img](https://raw.githubusercontent.com/fennifith/Asciimg/master/./.github/images/fidgetspinner.png?raw=true)
 
 ### The Top Half of a Samsung Galaxy S2
 ![img](./.github/images/galaxys2.png?raw=true)

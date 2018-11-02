@@ -4,7 +4,7 @@ title: ExampleUnitTest Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [test](./../../../index) > [java](./../../index) > [james](./../index) > [metronome](./index) > **ExampleUnitTest.java**
 
-# [ExampleUnitTest](https://github.com/TheAndroidMaster/Metronome-Android/blob/master/app/src/test/java/james/metronome/ExampleUnitTest.java#L8)
+# [ExampleUnitTest](https://github.com/fennifith/Metronome-Android/blob/master/app/src/test/java/james/metronome/ExampleUnitTest.java#L8)
 
 **Type:** `public` `class`
 

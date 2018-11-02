@@ -4,7 +4,7 @@ title: GameHelperUtils Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **GameHelperUtils.java**
 
-# [GameHelperUtils](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelperUtils.java#L17)
+# [GameHelperUtils](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelperUtils.java#L17)
 
 **Type:** `class`
 

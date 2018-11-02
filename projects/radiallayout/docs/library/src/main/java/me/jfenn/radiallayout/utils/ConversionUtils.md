@@ -4,7 +4,7 @@ title: ConversionUtils Documentation
 ---
 #### [.](./../../../../../../../../index) > [library](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [radiallayout](./../index) > [utils](./index) > **ConversionUtils.java**
 
-## [dpToPx](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/utils/ConversionUtils.java#L8)
+## [dpToPx](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/utils/ConversionUtils.java#L8)
 
 **Type:** `public` `static` `int`
 
@@ -28,7 +28,7 @@ Converts density pixels to regular pixels.
 
 
 
-## [pxToDp](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/utils/ConversionUtils.java#L18)
+## [pxToDp](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/utils/ConversionUtils.java#L18)
 
 **Type:** `public` `static` `float`
 

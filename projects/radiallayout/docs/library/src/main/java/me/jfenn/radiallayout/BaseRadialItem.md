@@ -4,7 +4,7 @@ title: BaseRadialItem Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [radiallayout](./index) > **BaseRadialItem.java**
 
-# [BaseRadialItem](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L12)
+# [BaseRadialItem](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L12)
 
 **Type:** `public` `abstract` `class`
 
@@ -23,7 +23,7 @@ from the center of the layout.
 
 
 
-## [BaseRadialItem](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L44)
+## [BaseRadialItem](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L44)
 
 **Type:** `public`
 
@@ -49,7 +49,7 @@ from the center.
 
 
 
-## [copy](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L74)
+## [copy](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L74)
 
 **Type:** `abstract` `BaseRadialItem`
 
@@ -69,7 +69,7 @@ Creates a copy of the BaseRadialItem by calling the constructor with itself as a
 
 
 
-## [setRadius](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L93)
+## [setRadius](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L93)
 
 **Type:** `abstract` `void`
 
@@ -91,7 +91,7 @@ the required dimensions.
 
 
 
-## [getCircleImage](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L109)
+## [getCircleImage](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L109)
 
 **Type:** `abstract` `Bitmap`
 
@@ -115,7 +115,7 @@ Creates a new circular bitmap if the current one does not match the required dim
 
 
 
-## [getMatrix](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L117)
+## [getMatrix](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L117)
 
 **Type:** `Matrix`
 
@@ -132,7 +132,7 @@ Creates a Matrix to scale the image to the correct dimensions on a Canvas.
 
 
 
-## [needsFrame](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L140)
+## [needsFrame](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L140)
 
 **Type:** `boolean`
 
@@ -152,7 +152,7 @@ Determines whether calling nextFrame() will result in any different values or no
 
 
 
-## [nextFrame](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L152)
+## [nextFrame](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L152)
 
 **Type:** `void`
 
@@ -173,7 +173,7 @@ Updates values to display the next frame of the item.
 
 
 
-## [animateTo](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L172)
+## [animateTo](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L172)
 
 **Type:** `void`
 
@@ -196,7 +196,7 @@ Animates this BaseRadialItem to the dimensions and position of the parameter.
 
 
 
-## [clickDown](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L198)
+## [clickDown](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L198)
 
 **Type:** `void`
 
@@ -217,7 +217,7 @@ Creates a bouncy scale animation intended for touch feedback.
 
 
 
-## [clickUp](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L210)
+## [clickUp](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L210)
 
 **Type:** `void`
 
@@ -238,7 +238,7 @@ Creates a bouncy scale animation intended for touch feedback.
 
 
 
-## [clickBack](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L222)
+## [clickBack](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L222)
 
 **Type:** `void`
 
@@ -259,7 +259,7 @@ Creates a bouncy scale animation intended for touch feedback.
 
 
 
-## [removeFrom](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L235)
+## [removeFrom](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L235)
 
 **Type:** `void`
 

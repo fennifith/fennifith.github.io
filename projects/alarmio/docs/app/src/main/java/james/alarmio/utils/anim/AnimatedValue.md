@@ -4,7 +4,7 @@ title: AnimatedValue Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [james](./../../../index) > [alarmio](./../../index) > [utils](./../index) > [anim](./index) > **AnimatedValue.java**
 
-# [AnimatedValue<T>](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L6)
+# [AnimatedValue<T>](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L6)
 
 **Type:** `public` `abstract` `class`
 
@@ -31,7 +31,7 @@ function of System.currentTimeMillis.
 
 
 
-## [set](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L33)
+## [set](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L33)
 
 **Type:** `public` `void`
 
@@ -52,7 +52,7 @@ Set the current value to be drawn.
 
 
 
-## [setDefault](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L42)
+## [setDefault](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L42)
 
 **Type:** `public` `void`
 
@@ -73,7 +73,7 @@ Set the default value to return to.
 
 
 
-## [setCurrent](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L51)
+## [setCurrent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L51)
 
 **Type:** `public` `void`
 
@@ -94,7 +94,7 @@ Set the current (and target) value.
 
 
 
-## [val](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L60)
+## [val](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L60)
 
 **Type:** `public` `T`
 
@@ -114,7 +114,7 @@ Get the current value to be drawn.
 
 
 
-## [nextVal](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L69)
+## [nextVal](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L69)
 
 **Type:** `public` `T`
 
@@ -135,7 +135,7 @@ the current value to it.
 
 
 
-## [nextVal](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L79)
+## [nextVal](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L79)
 
 **Type:** `public` `T`
 
@@ -160,7 +160,7 @@ the current value to it.
 
 
 
-## [nextVal](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L91)
+## [nextVal](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L91)
 
 **Type:** `abstract` `T`
 
@@ -186,7 +186,7 @@ the current value to it.
 
 
 
-## [getTarget](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L103)
+## [getTarget](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L103)
 
 **Type:** `public` `T`
 
@@ -206,7 +206,7 @@ Get the target value that is currently being animated to.
 
 
 
-## [getDefault](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L112)
+## [getDefault](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L112)
 
 **Type:** `public` `T`
 
@@ -226,7 +226,7 @@ Get the default value that the animation should return to.
 
 
 
-## [isTarget](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L121)
+## [isTarget](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L121)
 
 **Type:** `public` `boolean`
 
@@ -247,7 +247,7 @@ the animation is complete).
 
 
 
-## [isDefault](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L132)
+## [isDefault](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L132)
 
 **Type:** `public` `boolean`
 
@@ -267,7 +267,7 @@ Determine if the default value has been drawn.
 
 
 
-## [isTargetDefault](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L142)
+## [isTargetDefault](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L142)
 
 **Type:** `public` `boolean`
 
@@ -288,7 +288,7 @@ target.
 
 
 
-## [toDefault](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L153)
+## [toDefault](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L153)
 
 **Type:** `public` `void`
 
@@ -305,7 +305,7 @@ Animate to the default value.
 
 
 
-## [to](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L161)
+## [to](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L161)
 
 **Type:** `public` `void`
 
@@ -326,7 +326,7 @@ Set the value to be animated towards.
 
 
 
-## [next](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L171)
+## [next](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L171)
 
 **Type:** `public` `void`
 
@@ -347,7 +347,7 @@ Update the current value.
 
 
 
-## [next](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L180)
+## [next](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/anim/AnimatedValue.java#L180)
 
 **Type:** `public` `void`
 

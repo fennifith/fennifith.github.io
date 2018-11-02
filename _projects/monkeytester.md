@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Monkey Tester"
 description: "Determines whether a user is a monkey, a goat, or both, based on values obtained from android's ActivityManager and UserManager."
-repo: TheAndroidMaster/MonkeyTester
-git: git://github.com/TheAndroidMaster/MonkeyTester.git
+repo: fennifith/MonkeyTester
+git: git://github.com/fennifith/MonkeyTester.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/MonkeyTester
+    url: https://github.com/fennifith/MonkeyTester
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/MonkeyTester/issues
+    url: https://github.com/fennifith/MonkeyTester/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=james.monkeytester
     icon: /images/ic/play-store.svg
   - name: MonkeyTester.apk (v1.2 stable)
-    url: https://github.com/TheAndroidMaster/MonkeyTester/releases/download/v1.2/MonkeyTester.apk
+    url: https://github.com/fennifith/MonkeyTester/releases/download/v1.2/MonkeyTester.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: kartikarora
     avatar: https://avatars2.githubusercontent.com/u/6591617?v=4
     url: https://github.com/kartikarora
@@ -42,4 +42,4 @@ According to the android developer documentation, if you are a monkey it means t
 
 |Main Screen|Dialog|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/MonkeyTester/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/MonkeyTester/master/./.github/images/dialog.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/MonkeyTester/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/MonkeyTester/master/./.github/images/dialog.png?raw=true)|

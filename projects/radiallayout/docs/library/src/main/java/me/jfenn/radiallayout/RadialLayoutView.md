@@ -4,7 +4,7 @@ title: RadialLayoutView Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [radiallayout](./index) > **RadialLayoutView.java**
 
-## [isFirstDrawn](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L89)
+## [isFirstDrawn](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L89)
 
 **Type:** `private` `boolean`
 
@@ -21,7 +21,7 @@ true once the view has been drawn - will invalidate continuously until then as a
 
 
 
-## [getPaint](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L126)
+## [getPaint](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L126)
 
 **Type:** `public` `Paint`
 
@@ -39,7 +39,7 @@ true once the view has been drawn - will invalidate continuously until then as a
 
 
 
-## [getShadowPaint](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L133)
+## [getShadowPaint](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L133)
 
 **Type:** `public` `Paint`
 
@@ -57,7 +57,7 @@ true once the view has been drawn - will invalidate continuously until then as a
 
 
 
-## [setShadowColor](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L140)
+## [setShadowColor](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L140)
 
 **Type:** `public` `void`
 
@@ -78,7 +78,7 @@ Sets the color of the shadow of all items in the view
 
 
 
-## [setCenterItem](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L159)
+## [setCenterItem](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L159)
 
 **Type:** `public` `void`
 
@@ -99,7 +99,7 @@ Set the item to be displayed in the center of the view.
 
 
 
-## [setOnCenterClickListener](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L172)
+## [setOnCenterClickListener](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L172)
 
 **Type:** `public` `void`
 
@@ -116,7 +116,7 @@ Listen for the center item being pressed.
 
 
 
-## [setOnItemClickListener](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L179)
+## [setOnItemClickListener](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L179)
 
 **Type:** `public` `void`
 
@@ -133,7 +133,7 @@ Listen for any other item being pressed.
 
 
 
-## [getItems](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L186)
+## [getItems](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L186)
 
 **Type:** `public` `List<BaseRadialItem>`
 
@@ -153,7 +153,7 @@ Get all the items being displayed in the view.
 
 
 
-## [setItems](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L195)
+## [setItems](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L195)
 
 **Type:** `public` `Builder`
 
@@ -178,7 +178,7 @@ for calculating item positions.
 
 
 
-## [updateItems](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L214)
+## [updateItems](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/RadialLayoutView.java#L214)
 
 **Type:** `public` `Builder`
 

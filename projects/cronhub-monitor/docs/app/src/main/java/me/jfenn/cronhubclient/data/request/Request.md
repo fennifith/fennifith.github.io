@@ -4,7 +4,7 @@ title: Request Documentation
 ---
 #### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [me](./../../../../index) > [jfenn](./../../../index) > [cronhubclient](./../../index) > [data](./../index) > [request](./index) > **Request.java**
 
-## [init](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L46)
+## [init](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L46)
 
 **Type:** `private` `void`
 
@@ -25,7 +25,7 @@ Called once the request to github servers has been successfully completed.
 
 
 
-## [failure](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L61)
+## [failure](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L61)
 
 **Type:** `private` `void`
 
@@ -42,7 +42,7 @@ Called when there is a failure.
 
 
 
-## [initJson](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L70)
+## [initJson](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L70)
 
 **Type:** `protected` `boolean`
 
@@ -64,7 +64,7 @@ overridden if necessary.
 
 
 
-## [onInit](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L89)
+## [onInit](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L89)
 
 **Type:** `protected` `void`
 
@@ -82,7 +82,7 @@ if necessary.
 
 
 
-## [startInit](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L96)
+## [startInit](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L96)
 
 **Type:** `public` `final` `void`
 
@@ -99,7 +99,7 @@ Starts the network request thread, should only be called once.
 
 
 
-## [merge](https://github.com/TheAndroidMaster/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L110)
+## [merge](https://github.com/fennifith/Cronhub-Monitor/blob/master/app/src/main/java/me/jfenn/cronhubclient/data/request/Request.java#L110)
 
 **Type:** `public` `final` `Request`
 

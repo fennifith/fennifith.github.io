@@ -3,14 +3,14 @@ layout: project
 type: android-library
 title: "Radial Layout"
 description: "A scrollable-ish view that arranges images in circles extending from the center of the screen."
-repo: TheAndroidMaster/RadialLayout
-git: git://github.com/TheAndroidMaster/RadialLayout.git
+repo: fennifith/RadialLayout
+git: git://github.com/fennifith/RadialLayout.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/RadialLayout
+    url: https://github.com/fennifith/RadialLayout
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/RadialLayout/issues
+    url: https://github.com/fennifith/RadialLayout/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,25 +19,25 @@ links:
     url: https://bintray.com/18jafenn90/maven/radiallayout
     icon: https://bintray.com/favicon.ico
   - name: RadialLayout.apk (v0.0.1 stable)
-    url: https://github.com/TheAndroidMaster/RadialLayout/releases/download/v0.0.1/RadialLayout.apk
+    url: https://github.com/fennifith/RadialLayout/releases/download/v0.0.1/RadialLayout.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:
   - Java
 ---
 
-RadialLayout is a scrollable-ish view that arranges images in circles extending from the center of the screen that was originally made for [Lemonade](https://lemonade.social). For demonstration and experimentation, an apk of the sample project can be downloaded [here](https://github.com/TheAndroidMaster/RadialLayout/blob/master/../../releases).
+RadialLayout is a scrollable-ish view that arranges images in circles extending from the center of the screen that was originally made for [Lemonade](https://lemonade.social). For demonstration and experimentation, an apk of the sample project can be downloaded [here](https://github.com/fennifith/RadialLayout/blob/master/../../releases).
 
 ## Screenshots
 
 |With Shadows|Without Shadows|GIF (pronounced "jeff")|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/shadows.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/noshadows.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/RadialLayout/master/./images/jeff.gif?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/shadows.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/noshadows.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/jeff.gif?raw=true)|
 
 ## Usage
 

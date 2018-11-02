@@ -4,7 +4,7 @@ title: ExampleUnitTest Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [test](./../../../index) > [java](./../../index) > [james](./../index) > [monochrome](./index) > **ExampleUnitTest.java**
 
-# [ExampleUnitTest](https://github.com/TheAndroidMaster/Monochrome/blob/master/app/src/test/java/james/monochrome/ExampleUnitTest.java#L8)
+# [ExampleUnitTest](https://github.com/fennifith/Monochrome/blob/master/app/src/test/java/james/monochrome/ExampleUnitTest.java#L8)
 
 **Type:** `public` `class`
 

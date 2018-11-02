@@ -3,14 +3,14 @@ layout: project
 type: android-game
 title: "Asteroid"
 description: "A simple Android game based on avoiding incoming asteroids"
-repo: TheAndroidMaster/Asteroid
-git: git://github.com/TheAndroidMaster/Asteroid.git
+repo: fennifith/Asteroid
+git: git://github.com/fennifith/Asteroid.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Asteroid
+    url: https://github.com/fennifith/Asteroid
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Asteroid/issues
+    url: https://github.com/fennifith/Asteroid/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=james.asteroid
     icon: /images/ic/play-store.svg
   - name: app-release.apk (v1.2 stable)
-    url: https://github.com/TheAndroidMaster/Asteroid/releases/download/v1.2/app-release.apk
+    url: https://github.com/fennifith/Asteroid/releases/download/v1.2/app-release.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

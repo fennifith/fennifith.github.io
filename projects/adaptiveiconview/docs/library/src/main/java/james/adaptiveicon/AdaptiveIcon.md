@@ -4,7 +4,7 @@ title: AdaptiveIcon Documentation
 ---
 #### [.](./../../../../../../index) > [library](./../../../../../index) > [src](./../../../../index) > [main](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveicon](./index) > **AdaptiveIcon.java**
 
-## [AdaptiveIcon](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L40)
+## [AdaptiveIcon](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L40)
 
 **Type:** `public`
 
@@ -25,7 +25,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [AdaptiveIcon](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L51)
+## [AdaptiveIcon](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L51)
 
 **Type:** `public`
 
@@ -46,7 +46,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [getFgDrawable](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L62)
+## [getFgDrawable](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L62)
 
 **Type:** `public` `Drawable`
 
@@ -68,7 +68,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [getBgDrawable](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L72)
+## [getBgDrawable](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L72)
 
 **Type:** `@Nullable` `public` `Drawable`
 
@@ -90,7 +90,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [getFgBitmap](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L83)
+## [getFgBitmap](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L83)
 
 **Type:** `public` `Bitmap`
 
@@ -108,7 +108,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [getBgBitmap](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L92)
+## [getBgBitmap](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L92)
 
 **Type:** `@Nullable` `public` `Bitmap`
 
@@ -126,7 +126,7 @@ title: AdaptiveIcon Documentation
 
 
 
-## [recycle](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L106)
+## [recycle](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L106)
 
 **Type:** `public` `void`
 
@@ -143,7 +143,7 @@ Recycles the bitmaps used in this icon
 
 
 
-## [with](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L121)
+## [with](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L121)
 
 **Type:** `public` `Loader`
 
@@ -165,7 +165,7 @@ Recycles the bitmaps used in this icon
 
 
 
-## [fallback](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L130)
+## [fallback](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L130)
 
 **Type:** `public` `Loader`
 
@@ -190,7 +190,7 @@ cannot be obtained.
 
 
 
-## [load](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L142)
+## [load](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L142)
 
 **Type:** `@Nullable` `public` `AdaptiveIcon`
 
@@ -214,7 +214,7 @@ Loads an adaptive icon.
 
 
 
-## [loadAsync](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L280)
+## [loadAsync](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L280)
 
 **Type:** `public` `Thread`
 
@@ -239,7 +239,7 @@ Crappy async implementation
 
 
 
-## [withBackgroundColor](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L313)
+## [withBackgroundColor](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L313)
 
 **Type:** `public` `RoundIconFallback`
 
@@ -261,7 +261,7 @@ Crappy async implementation
 
 
 
-## [withBackground](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L322)
+## [withBackground](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L322)
 
 **Type:** `public` `RoundIconFallback`
 
@@ -283,7 +283,7 @@ Crappy async implementation
 
 
 
-## [withScale](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L331)
+## [withScale](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L331)
 
 **Type:** `public` `RoundIconFallback`
 
@@ -305,7 +305,7 @@ Crappy async implementation
 
 
 
-## [shouldRemoveShadow](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L340)
+## [shouldRemoveShadow](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L340)
 
 **Type:** `public` `RoundIconFallback`
 
@@ -327,7 +327,7 @@ Crappy async implementation
 
 
 
-## [withBackgroundColor](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L433)
+## [withBackgroundColor](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L433)
 
 **Type:** `public` `LegacyIconFallback`
 
@@ -349,7 +349,7 @@ Crappy async implementation
 
 
 
-## [withBackground](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L442)
+## [withBackground](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L442)
 
 **Type:** `public` `LegacyIconFallback`
 
@@ -371,7 +371,7 @@ Crappy async implementation
 
 
 
-## [shouldClip](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L451)
+## [shouldClip](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L451)
 
 **Type:** `public` `LegacyIconFallback`
 
@@ -393,7 +393,7 @@ Crappy async implementation
 
 
 
-## [withScale](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L460)
+## [withScale](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L460)
 
 **Type:** `public` `LegacyIconFallback`
 
@@ -415,7 +415,7 @@ Crappy async implementation
 
 
 
-## [shouldRemoveShadow](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L469)
+## [shouldRemoveShadow](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L469)
 
 **Type:** `public` `LegacyIconFallback`
 
@@ -437,7 +437,7 @@ Crappy async implementation
 
 
 
-## [withFallback](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L511)
+## [withFallback](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L511)
 
 **Type:** `public` `final` `Fallback`
 
@@ -462,7 +462,7 @@ fails to obtain an acceptable AdaptiveIcon.
 
 
 
-## [load](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L527)
+## [load](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L527)
 
 **Type:** `@Nullable` `public` `abstract` `AdaptiveIcon`
 

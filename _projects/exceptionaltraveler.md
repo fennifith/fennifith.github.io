@@ -3,14 +3,14 @@ layout: project
 type: undefined
 title: "Exceptional Traveler"
 description: "An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming."
-repo: TheAndroidMaster/ExceptionalTraveler
-git: git://github.com/TheAndroidMaster/ExceptionalTraveler.git
+repo: fennifith/ExceptionalTraveler
+git: git://github.com/fennifith/ExceptionalTraveler.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/ExceptionalTraveler
+    url: https://github.com/fennifith/ExceptionalTraveler
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/ExceptionalTraveler/issues
+    url: https://github.com/fennifith/ExceptionalTraveler/issues
     icon: /images/ic/bug.svg
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
@@ -19,9 +19,9 @@ links:
     url: https://medium.com/pointer-io/exceptional-programming-62ea8150f61f
     icon: https://medium.com/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:
@@ -155,4 +155,4 @@ Another possible argument for this is that assertions are intended mainly for us
 
 ## Contributing
 
-Please do not contribute to this project, it is horrific enough already. However, if you would like to contribute, you can see [CONTRIBUTING.md](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master/./.github/CONTRIBUTING.md) for more information.
+Please do not contribute to this project, it is horrific enough already. However, if you would like to contribute, you can see [CONTRIBUTING.md](https://github.com/fennifith/ExceptionalTraveler/blob/master/./.github/CONTRIBUTING.md) for more information.

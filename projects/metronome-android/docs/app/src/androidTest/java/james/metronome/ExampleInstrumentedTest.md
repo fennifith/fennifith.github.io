@@ -4,7 +4,7 @@ title: ExampleInstrumentedTest Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [androidTest](./../../../index) > [java](./../../index) > [james](./../index) > [metronome](./index) > **ExampleInstrumentedTest.java**
 
-# [ExampleInstrumentedTest](https://github.com/TheAndroidMaster/Metronome-Android/blob/master/app/src/androidTest/java/james/metronome/ExampleInstrumentedTest.java#L13)
+# [ExampleInstrumentedTest](https://github.com/fennifith/Metronome-Android/blob/master/app/src/androidTest/java/james/metronome/ExampleInstrumentedTest.java#L13)
 
 **Type:** `@RunWith` `public` `class`
 

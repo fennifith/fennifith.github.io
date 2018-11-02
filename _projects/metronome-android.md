@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Metronome Android"
 description: "A lightweight, well designed metronome app for Android."
-repo: TheAndroidMaster/Metronome-Android
-git: git://github.com/TheAndroidMaster/Metronome-Android.git
+repo: fennifith/Metronome-Android
+git: git://github.com/fennifith/Metronome-Android.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Metronome-Android
+    url: https://github.com/fennifith/Metronome-Android
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Metronome-Android/issues
+    url: https://github.com/fennifith/Metronome-Android/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,15 +19,15 @@ links:
     url: https://play.google.com/store/apps/details?id=james.metronome
     icon: /images/ic/play-store.svg
   - name: Metronome.phone.apk (v1.7 stable)
-    url: https://github.com/TheAndroidMaster/Metronome-Android/releases/download/v1.7/Metronome.phone.apk
+    url: https://github.com/fennifith/Metronome-Android/releases/download/v1.7/Metronome.phone.apk
     icon: /images/ic/download.svg
   - name: Metronome.wear.apk (v1.7 stable)
-    url: https://github.com/TheAndroidMaster/Metronome-Android/releases/download/v1.7/Metronome.wear.apk
+    url: https://github.com/fennifith/Metronome-Android/releases/download/v1.7/Metronome.wear.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:
@@ -38,4 +38,4 @@ Metronome is a lightweight, well designed metronome app for Android focused on o
 
 | Home   | About  | Themes |
 |--------|--------|--------|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Metronome-Android/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Metronome-Android/master/./.github/images/about.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Metronome-Android/master/./.github/images/theme.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/about.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/theme.png?raw=true)|

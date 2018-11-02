@@ -4,7 +4,7 @@ title: PageIndicator Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [apreader](./../index) > [views](./index) > **PageIndicator.java**
 
-## [setViewPager](https://github.com/TheAndroidMaster/APReader/blob/master/app/src/main/java/james/apreader/views/PageIndicator.java#L102)
+## [setViewPager](https://github.com/fennifith/APReader/blob/master/app/src/main/java/james/apreader/views/PageIndicator.java#L102)
 
 **Type:** `public` `void`
 

@@ -4,7 +4,7 @@ title: PageIndicator Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [james](./../../index) > [papertales](./../index) > [views](./index) > **PageIndicator.java**
 
-## [setViewPager](https://github.com/TheAndroidMaster/Paper-Tales/blob/master/app/src/main/java/com/james/papertales/views/PageIndicator.java#L102)
+## [setViewPager](https://github.com/fennifith/Paper-Tales/blob/master/app/src/main/java/com/james/papertales/views/PageIndicator.java#L102)
 
 **Type:** `public` `void`
 

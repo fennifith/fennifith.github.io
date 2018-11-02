@@ -3,14 +3,14 @@ layout: project
 type: website
 title: "P5Samples"
 description: "Stuff I made messing around with p5js in my free time."
-repo: TheAndroidMaster/P5Samples
-git: git://github.com/TheAndroidMaster/P5Samples.git
+repo: fennifith/P5Samples
+git: git://github.com/fennifith/P5Samples.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/P5Samples
+    url: https://github.com/fennifith/P5Samples
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/P5Samples/issues
+    url: https://github.com/fennifith/P5Samples/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: https://jfenn.me/projects/p5samples
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

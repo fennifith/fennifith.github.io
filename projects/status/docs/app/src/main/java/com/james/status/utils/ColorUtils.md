@@ -4,7 +4,7 @@ title: ColorUtils Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [james](./../../index) > [status](./../index) > [utils](./index) > **ColorUtils.java**
 
-## [getDifference](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/utils/ColorUtils.java#L229)
+## [getDifference](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/utils/ColorUtils.java#L229)
 
 **Type:** `public` `static` `double`
 

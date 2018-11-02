@@ -4,7 +4,7 @@ title: GitHubData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [attribouter](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [me](./../../../../index) > [jfenn](./../../../index) > [attribouter](./../../index) > [data](./../index) > [github](./index) > **GitHubData.java**
 
-## [init](https://github.com/TheAndroidMaster/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L47)
+## [init](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L47)
 
 **Type:** `private` `void`
 
@@ -25,7 +25,7 @@ Called once the request to github servers has been successfully completed.
 
 
 
-## [initJson](https://github.com/TheAndroidMaster/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L61)
+## [initJson](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L61)
 
 **Type:** `protected` `void`
 
@@ -47,7 +47,7 @@ overridden if necessary.
 
 
 
-## [onInit](https://github.com/TheAndroidMaster/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L76)
+## [onInit](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L76)
 
 **Type:** `protected` `void`
 
@@ -65,7 +65,7 @@ if necessary.
 
 
 
-## [startInit](https://github.com/TheAndroidMaster/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L83)
+## [startInit](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L83)
 
 **Type:** `public` `final` `void`
 
@@ -82,7 +82,7 @@ Starts the network request thread, should only be called once.
 
 
 
-## [merge](https://github.com/TheAndroidMaster/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L95)
+## [merge](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L95)
 
 **Type:** `public` `final` `GitHubData`
 

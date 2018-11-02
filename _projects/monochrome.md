@@ -3,14 +3,14 @@ layout: project
 type: android-game
 title: "Monochrome"
 description: "A monochromatic pixelated adventure game."
-repo: TheAndroidMaster/Monochrome
-git: git://github.com/TheAndroidMaster/Monochrome.git
+repo: fennifith/Monochrome
+git: git://github.com/fennifith/Monochrome.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Monochrome
+    url: https://github.com/fennifith/Monochrome
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Monochrome/issues
+    url: https://github.com/fennifith/Monochrome/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=james.monochrome
     icon: /images/ic/play-store.svg
   - name: Monochrome.apk (v0.2 unstable)
-    url: https://github.com/TheAndroidMaster/Monochrome/releases/download/v0.2/Monochrome.apk
+    url: https://github.com/fennifith/Monochrome/releases/download/v0.2/Monochrome.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

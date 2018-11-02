@@ -3,22 +3,22 @@ layout: project
 type: website
 title: "Music"
 description: "A collection of my piano compositions and other music-related projects."
-repo: TheAndroidMaster/Music
-git: git://github.com/TheAndroidMaster/Music.git
+repo: fennifith/Music
+git: git://github.com/fennifith/Music.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Music
+    url: https://github.com/fennifith/Music
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Music/issues
+    url: https://github.com/fennifith/Music/issues
     icon: /images/ic/bug.svg
   - name: Website
     url: https://jfenn.me/Music
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

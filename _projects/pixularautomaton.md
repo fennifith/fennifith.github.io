@@ -3,14 +3,14 @@ layout: project
 type: website
 title: "pixularautomaton"
 description: "A basic cellular automaton that makes pretty animations from images."
-repo: TheAndroidMaster/pixularautomaton
-git: git://github.com/TheAndroidMaster/pixularautomaton.git
+repo: fennifith/pixularautomaton
+git: git://github.com/fennifith/pixularautomaton.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/pixularautomaton
+    url: https://github.com/fennifith/pixularautomaton
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/pixularautomaton/issues
+    url: https://github.com/fennifith/pixularautomaton/issues
     icon: /images/ic/bug.svg
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
@@ -19,9 +19,9 @@ links:
     url: https://jfenn.me/pixularautomaton
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

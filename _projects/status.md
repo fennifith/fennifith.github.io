@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Status"
 description: "A no-root status bar replacement for Android."
-repo: TheAndroidMaster/Status
-git: git://github.com/TheAndroidMaster/Status.git
+repo: fennifith/Status
+git: git://github.com/fennifith/Status.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Status
+    url: https://github.com/fennifith/Status
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Status/issues
+    url: https://github.com/fennifith/Status/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=com.james.status
     icon: /images/ic/play-store.svg
   - name: Status.apk (v3.8-beta5 unstable)
-    url: https://github.com/TheAndroidMaster/Status/releases/download/v3.8-beta5/Status.apk
+    url: https://github.com/fennifith/Status/releases/download/v3.8-beta5/Status.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: Technologx
     avatar: https://avatars3.githubusercontent.com/u/17693282?v=4
     url: https://github.com/Technologx
@@ -77,7 +77,7 @@ Special thanks to the contributors that have helped to design the app, fix issue
 Okay, there aren't really any guidelines over issue formatting provided that you don't create issues that already exist, test the app throughly before creating an issue (ex: try clearing the app data), and don't create issues like "It's pointless, just use root". You're not helping.
 
 ### Pull Requests
-Contributions are accepted. See [CONTRIBUTING.md](https://github.com/TheAndroidMaster/Status/blob/master/./.github/CONTRIBUTING.md) for more information.
+Contributions are accepted. See [CONTRIBUTING.md](https://github.com/fennifith/Status/blob/master/./.github/CONTRIBUTING.md) for more information.
 
 ### Icons
 There used to be a list of all the possible icon formats here to use as a reference, but I stopped updating it and it's pretty useless now. If you want to make status bar icons to add to this app, either [contact me](mailto:contact@jfenn.me) or look in the repository for the existing icon files.

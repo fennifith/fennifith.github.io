@@ -4,7 +4,7 @@ title: AdaptiveIconView Documentation
 ---
 #### [.](./../../../../../../index) > [library](./../../../../../index) > [src](./../../../../index) > [main](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveicon](./index) > **AdaptiveIconView.java**
 
-## [setIcon](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L66)
+## [setIcon](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L66)
 
 **Type:** `public` `void`
 
@@ -27,7 +27,7 @@ will not be clipped and any scaling will not be applied.
 
 
 
-## [getIcon](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L80)
+## [getIcon](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L80)
 
 **Type:** `public` `AdaptiveIcon`
 
@@ -47,7 +47,7 @@ Returns the current AdaptiveIcon.
 
 
 
-## [setPath](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L89)
+## [setPath](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L89)
 
 **Type:** `public` `void`
 
@@ -70,7 +70,7 @@ a background image
 
 
 
-## [setPath](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L103)
+## [setPath](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L103)
 
 **Type:** `public` `void`
 
@@ -91,7 +91,7 @@ Sets a path for this view to use from one of the presets.
 
 
 
-## [setPath](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L137)
+## [setPath](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L137)
 
 **Type:** `public` `void`
 
@@ -112,7 +112,7 @@ Sets a custom path from string data.
 
 
 
-## [getPath](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L147)
+## [getPath](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L147)
 
 **Type:** `public` `Path`
 
@@ -132,7 +132,7 @@ Returns the current path this view is using.
 
 
 
-## [setOffset](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L156)
+## [setOffset](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L156)
 
 **Type:** `public` `void`
 

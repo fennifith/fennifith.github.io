@@ -3,14 +3,14 @@ layout: project
 type: website
 title: "bugiver"
 description: "A small website that gives you an issue to fix when there is nothing to do."
-repo: TheAndroidMaster/bugiver
-git: git://github.com/TheAndroidMaster/bugiver.git
+repo: fennifith/bugiver
+git: git://github.com/fennifith/bugiver.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/bugiver
+    url: https://github.com/fennifith/bugiver
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/bugiver/issues
+    url: https://github.com/fennifith/bugiver/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: https://jfenn.me/bugiver/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -40,4 +40,4 @@ Bugiver is a simple website that iterates through everyone that you are followin
 
 ## Contributing
 
-Contributions are accepted. See [CONTRIBUTING.md](https://github.com/TheAndroidMaster/bugiver/blob/master/./.github/CONTRIBUTING.md) for more information.
+Contributions are accepted. See [CONTRIBUTING.md](https://github.com/fennifith/bugiver/blob/master/./.github/CONTRIBUTING.md) for more information.

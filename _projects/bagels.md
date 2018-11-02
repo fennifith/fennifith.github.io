@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Bagels"
 description: "A live wallpaper that blurs the screen after a period of time without any actions."
-repo: TheAndroidMaster/Bagels
-git: git://github.com/TheAndroidMaster/Bagels.git
+repo: fennifith/Bagels
+git: git://github.com/fennifith/Bagels.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Bagels
+    url: https://github.com/fennifith/Bagels
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Bagels/issues
+    url: https://github.com/fennifith/Bagels/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=com.james.bagels
     icon: /images/ic/play-store.svg
   - name: Bagels.apk (v1.3 stable)
-    url: https://github.com/TheAndroidMaster/Bagels/releases/download/v1.3/Bagels.apk
+    url: https://github.com/fennifith/Bagels/releases/download/v1.3/Bagels.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -35,7 +35,7 @@ Bagels is a live wallpaper that blurs the screen after a period of time without 
 
 |Bagels|More Bagels|
 |--------|--------|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Bagels/master/./.github/images/bagels.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Bagels/master/./.github/images/blurred.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/Bagels/master/./.github/images/bagels.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Bagels/master/./.github/images/blurred.png?raw=true)|
 
 ## License
 

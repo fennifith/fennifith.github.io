@@ -3,14 +3,14 @@ layout: project
 type: android-library
 title: "Adaptive Icon View"
 description: "A library to allow easy implementation of pre-Oreo adaptive icon support in Android launchers."
-repo: TheAndroidMaster/AdaptiveIconView
-git: git://github.com/TheAndroidMaster/AdaptiveIconView.git
+repo: fennifith/AdaptiveIconView
+git: git://github.com/fennifith/AdaptiveIconView.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/AdaptiveIconView
+    url: https://github.com/fennifith/AdaptiveIconView
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/AdaptiveIconView/issues
+    url: https://github.com/fennifith/AdaptiveIconView/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://bintray.com/18jafenn90/maven/adaptiveiconview
     icon: https://bintray.com/favicon.ico
   - name: AdaptiveIconView.apk (v0.0.1 stable)
-    url: https://github.com/TheAndroidMaster/AdaptiveIconView/releases/download/v0.0.1/AdaptiveIconView.apk
+    url: https://github.com/fennifith/AdaptiveIconView/releases/download/v0.0.1/AdaptiveIconView.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

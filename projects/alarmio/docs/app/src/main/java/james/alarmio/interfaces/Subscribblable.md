@@ -4,7 +4,7 @@ title: Subscribblable Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [interfaces](./index) > **Subscribblable.java**
 
-## [Subscribblable](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/interfaces/Subscribblable.java#L4)
+## [Subscribblable](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/interfaces/Subscribblable.java#L4)
 
 **Type:** `public` `interface`
 

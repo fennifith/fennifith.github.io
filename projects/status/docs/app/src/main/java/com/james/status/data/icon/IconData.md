@@ -4,7 +4,7 @@ title: IconData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [james](./../../../index) > [status](./../../index) > [data](./../index) > [icon](./index) > **IconData.java**
 
-## [setBackgroundColor](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L293)
+## [setBackgroundColor](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L293)
 
 **Type:** `public` `void`
 
@@ -26,7 +26,7 @@ some of which are icon-specific.
 
 
 
-## [draw](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L388)
+## [draw](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L388)
 
 **Type:** `public` `void`
 
@@ -49,7 +49,7 @@ Draws the icon on a canvas.
 
 
 
-## [getWidth](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L430)
+## [getWidth](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L430)
 
 **Type:** `public` `int`
 

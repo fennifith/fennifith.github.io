@@ -4,7 +4,7 @@ title: StatusServiceImpl Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [james](./../../index) > [status](./../index) > [services](./index) > **StatusServiceImpl.java**
 
-## [onTaskRemoved](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/services/StatusServiceImpl.java#L205)
+## [onTaskRemoved](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/services/StatusServiceImpl.java#L205)
 
 **Type:** `public` `void`
 
@@ -25,7 +25,7 @@ I can't remember why this is here or what it does, but it seems important.
 
 
 
-## [setUp](https://github.com/TheAndroidMaster/Status/blob/master/app/src/main/java/com/james/status/services/StatusServiceImpl.java#L223)
+## [setUp](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/services/StatusServiceImpl.java#L223)
 
 **Type:** `public` `void`
 

@@ -3,25 +3,25 @@ layout: project
 type: android-library
 title: "Crasher"
 description: "An easy to use crash reporting library for Android."
-repo: TheAndroidMaster/Crasher
-git: git://github.com/TheAndroidMaster/Crasher.git
+repo: fennifith/Crasher
+git: git://github.com/fennifith/Crasher.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Crasher
+    url: https://github.com/fennifith/Crasher
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Crasher/issues
+    url: https://github.com/fennifith/Crasher/issues
     icon: /images/ic/bug.svg
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/crasher/
     icon: https://bintray.com/favicon.ico
   - name: Crasher.apk (0.0.2 stable)
-    url: https://github.com/TheAndroidMaster/Crasher/releases/download/0.0.2/Crasher.apk
+    url: https://github.com/fennifith/Crasher/releases/download/0.0.2/Crasher.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -34,7 +34,7 @@ languages:
 
 |Main Screen|Somewhat Unnecessary Proof of StackOverflow|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/Crasher/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/Crasher/master/./.github/images/stackoverflow.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/Crasher/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Crasher/master/./.github/images/stackoverflow.png?raw=true)|
 
 ## Usage
 

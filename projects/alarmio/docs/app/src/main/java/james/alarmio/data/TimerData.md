@@ -4,7 +4,7 @@ title: TimerData Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [data](./index) > **TimerData.java**
 
-## [onIdChanged](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L44)
+## [onIdChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L44)
 
 **Type:** `public` `void`
 
@@ -26,7 +26,7 @@ Moves this TimerData's preferences to another "id".
 
 
 
-## [onRemoved](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L61)
+## [onRemoved](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L61)
 
 **Type:** `public` `void`
 
@@ -47,7 +47,7 @@ Removes this TimerData's preferences.
 
 
 
-## [isSet](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L74)
+## [isSet](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L74)
 
 **Type:** `public` `boolean`
 
@@ -67,7 +67,7 @@ Decides if the Timer has been set or should be ignored.
 
 
 
-## [getRemainingMillis](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L83)
+## [getRemainingMillis](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L83)
 
 **Type:** `public` `long`
 
@@ -88,7 +88,7 @@ may return a negative number.
 
 
 
-## [getDuration](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L93)
+## [getDuration](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L93)
 
 **Type:** `public` `long`
 
@@ -108,7 +108,7 @@ The total length of the timer.
 
 
 
-## [setDuration](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L102)
+## [setDuration](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L102)
 
 **Type:** `public` `void`
 
@@ -130,7 +130,7 @@ Set the duration of the timer.
 
 
 
-## [setVibrate](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L113)
+## [setVibrate](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L113)
 
 **Type:** `public` `void`
 
@@ -152,7 +152,7 @@ Set whether the timer should vibrate when it goes off.
 
 
 
-## [hasSound](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L124)
+## [hasSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L124)
 
 **Type:** `public` `boolean`
 
@@ -172,7 +172,7 @@ Return whether the timer has a sound or not.
 
 
 
-## [getSound](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L134)
+## [getSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L134)
 
 **Type:** `@Nullable` `public` `SoundData`
 
@@ -192,7 +192,7 @@ Get the [SoundData](./SoundData) sound specified for the timer.
 
 
 
-## [setSound](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L145)
+## [setSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L145)
 
 **Type:** `public` `void`
 
@@ -214,7 +214,7 @@ Set the sound that the timer should make.
 
 
 
-## [set](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L157)
+## [set](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L157)
 
 **Type:** `public` `void`
 
@@ -236,7 +236,7 @@ Set the next time for the timer to ring.
 
 
 
-## [setAlarm](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L170)
+## [setAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L170)
 
 **Type:** `public` `void`
 
@@ -258,7 +258,7 @@ Schedule a time for the alert to ring at.
 
 
 
-## [cancel](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L182)
+## [cancel](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L182)
 
 **Type:** `public` `void`
 
@@ -280,7 +280,7 @@ Cancel the pending alert.
 
 
 
-## [getIntent](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L195)
+## [getIntent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/TimerData.java#L195)
 
 **Type:** `private` `PendingIntent`
 

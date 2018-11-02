@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Hack NA Notes"
 description: "A small sample project created for a workshop at HackNA."
-repo: TheAndroidMaster/HackNA-Notes
-git: git://github.com/TheAndroidMaster/HackNA-Notes.git
+repo: fennifith/HackNA-Notes
+git: git://github.com/fennifith/HackNA-Notes.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/HackNA-Notes
+    url: https://github.com/fennifith/HackNA-Notes
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/HackNA-Notes/issues
+    url: https://github.com/fennifith/HackNA-Notes/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: http://hackna.org/
     icon: https://hackna.org/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -38,4 +38,4 @@ The slideshow presentation associated with this project can be viewed [here](htt
 
 | Add A Note | View Notes | Remove A Note |
 |------------|------------|---------------|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/new.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/list.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/HackNA-Notes/master/./.github/images/remove.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/new.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/list.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/remove.png?raw=true)|

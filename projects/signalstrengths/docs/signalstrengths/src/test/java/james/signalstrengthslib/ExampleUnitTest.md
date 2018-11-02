@@ -4,7 +4,7 @@ title: ExampleUnitTest Documentation
 ---
 #### [.](./../../../../../../index) > [signalstrengths](./../../../../../index) > [src](./../../../../index) > [test](./../../../index) > [java](./../../index) > [james](./../index) > [signalstrengthslib](./index) > **ExampleUnitTest.java**
 
-# [ExampleUnitTest](https://github.com/TheAndroidMaster/SignalStrengths/blob/master/signalstrengths/src/test/java/james/signalstrengthslib/ExampleUnitTest.java#L8)
+# [ExampleUnitTest](https://github.com/fennifith/SignalStrengths/blob/master/signalstrengths/src/test/java/james/signalstrengthslib/ExampleUnitTest.java#L8)
 
 **Type:** `public` `class`
 

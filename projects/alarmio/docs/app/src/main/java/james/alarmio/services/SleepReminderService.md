@@ -4,7 +4,7 @@ title: SleepReminderService Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [services](./index) > **SleepReminderService.java**
 
-## [refreshState](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L63)
+## [refreshState](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L63)
 
 **Type:** `public` `void`
 
@@ -22,7 +22,7 @@ should be shown, or stop the service if it shouldn't.
 
 
 
-## [getSleepyAlarm](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L96)
+## [getSleepyAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L96)
 
 **Type:** `@Nullable` `public` `static` `AlarmData`
 
@@ -46,7 +46,7 @@ Get a sleepy alarm. Well, get the next alarm that should trigger a sleep alert.
 
 
 
-## [getNextWakeAlarm](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L119)
+## [getNextWakeAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L119)
 
 **Type:** `@Nullable` `public` `static` `AlarmData`
 
@@ -70,7 +70,7 @@ Get the next scheduled [AlarmData](../data/AlarmData) that will ring.
 
 
 
-## [refreshSleepTime](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L155)
+## [refreshSleepTime](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/SleepReminderService.java#L155)
 
 **Type:** `public` `static` `void`
 

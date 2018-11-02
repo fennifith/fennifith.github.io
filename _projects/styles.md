@@ -3,22 +3,22 @@ layout: project
 type: website
 title: "styles"
 description: "A collection of all my CSS styles, organized and documented."
-repo: TheAndroidMaster/styles
-git: git://github.com/TheAndroidMaster/styles.git
+repo: fennifith/styles
+git: git://github.com/fennifith/styles.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/styles
+    url: https://github.com/fennifith/styles
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/styles/issues
+    url: https://github.com/fennifith/styles/issues
     icon: /images/ic/bug.svg
   - name: Website
     url: https://jfenn.me/styles/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

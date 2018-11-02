@@ -4,7 +4,7 @@ title: ConversionUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [utils](./index) > **ConversionUtils.java**
 
-## [getStatusBarHeight](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L9)
+## [getStatusBarHeight](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L9)
 
 **Type:** `public` `static` `int`
 
@@ -28,7 +28,7 @@ Returns the height of the device's status bar, in px.
 
 
 
-## [dpToPx](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L21)
+## [dpToPx](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L21)
 
 **Type:** `public` `static` `int`
 
@@ -52,7 +52,7 @@ Converts dp units to pixels.
 
 
 
-## [pxToDp](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L31)
+## [pxToDp](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L31)
 
 **Type:** `public` `static` `float`
 
@@ -76,7 +76,7 @@ Converts pixels to dp.
 
 
 
-## [spToPx](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L41)
+## [spToPx](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L41)
 
 **Type:** `public` `static` `int`
 
@@ -100,7 +100,7 @@ Converts sp to pixels.
 
 
 
-## [pxToSp](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L51)
+## [pxToSp](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/ConversionUtils.java#L51)
 
 **Type:** `public` `static` `float`
 

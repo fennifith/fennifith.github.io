@@ -3,25 +3,25 @@ layout: project
 type: android-app
 title: "Plus Viewer"
 description: "A basic google plus client using a WebView"
-repo: TheAndroidMaster/PlusViewer
-git: git://github.com/TheAndroidMaster/PlusViewer.git
+repo: fennifith/PlusViewer
+git: git://github.com/fennifith/PlusViewer.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/PlusViewer
+    url: https://github.com/fennifith/PlusViewer
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/PlusViewer/issues
+    url: https://github.com/fennifith/PlusViewer/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
   - name: Plus.Viewer.apk (v1.0 unstable)
-    url: https://github.com/TheAndroidMaster/PlusViewer/releases/download/v1.0/Plus.Viewer.apk
+    url: https://github.com/fennifith/PlusViewer/releases/download/v1.0/Plus.Viewer.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

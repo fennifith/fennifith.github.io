@@ -4,7 +4,7 @@ title: CenteredRadialItem Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [radiallayout](./index) > **CenteredRadialItem.java**
 
-## [setOutline](https://github.com/TheAndroidMaster/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/CenteredRadialItem.java#L37)
+## [setOutline](https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/CenteredRadialItem.java#L37)
 
 **Type:** `public` `void`
 

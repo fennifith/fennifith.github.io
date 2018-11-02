@@ -4,7 +4,7 @@ title: TravelingSalesPerson Documentation
 ---
 #### [.](./index) > **TravelingSalesPerson.java**
 
-## [run](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L16)
+## [run](https://github.com/fennifith/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L16)
 
 **Type:** `public` `static` `void`
 
@@ -25,7 +25,7 @@ Runs the traveling sales person algorithm and prints the results in the console.
 
 
 
-## [getPath](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L127)
+## [getPath](https://github.com/fennifith/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L127)
 
 **Type:** `private` `static` `void`
 
@@ -48,7 +48,7 @@ two points should be calculated first before calling this method.
 
 
 
-## [getNearest](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L244)
+## [getNearest](https://github.com/fennifith/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L244)
 
 **Type:** `private` `static` `void`
 
@@ -70,7 +70,7 @@ Finds the point nearest to a given parameter...
 
 
 
-## [printPath](https://github.com/TheAndroidMaster/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L384)
+## [printPath](https://github.com/fennifith/ExceptionalTraveler/blob/master//TravelingSalesPerson.java#L384)
 
 **Type:** `private` `static` `void`
 

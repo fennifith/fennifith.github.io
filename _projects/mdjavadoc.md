@@ -3,14 +3,14 @@ layout: project
 type: cli
 title: "mdjavadoc"
 description: "A script that generates markdown javadocs for use in Jekyll and GitHub Pages."
-repo: TheAndroidMaster/mdjavadoc
-git: git://github.com/TheAndroidMaster/mdjavadoc.git
+repo: fennifith/mdjavadoc
+git: git://github.com/fennifith/mdjavadoc.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/mdjavadoc
+    url: https://github.com/fennifith/mdjavadoc
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/mdjavadoc/issues
+    url: https://github.com/fennifith/mdjavadoc/issues
     icon: /images/ic/bug.svg
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
@@ -19,16 +19,16 @@ links:
     url: https://www.npmjs.com/package/mdjavadoc
     icon: https://www.npmjs.com/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:
   - JavaScript
 ---
 
-Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an [API](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./api/README.md) and [CLI](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./cli/README.md). If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.
+Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an [API](https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md) and [CLI](https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md). If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.
 
 ## Installation
 
@@ -49,7 +49,7 @@ npm install
 sudo npm link
 ```
 
-For specific usage instructions, see the README for the [API](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./api/README.md) or [CLI](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./cli/README.md) components.
+For specific usage instructions, see the README for the [API](https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md) or [CLI](https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md) components.
 
 ## Functionality
 
@@ -121,4 +121,4 @@ This is a method which does a thing with something and stuff.
 
 ## Contributing
 
-Contributions are accepted. See this project's [CONTRIBUTING.md](https://github.com/TheAndroidMaster/mdjavadoc/blob/master/./.github/CONTRIBUTING.md) for instructions on how to contribute to this project.
+Contributions are accepted. See this project's [CONTRIBUTING.md](https://github.com/fennifith/mdjavadoc/blob/master/./.github/CONTRIBUTING.md) for instructions on how to contribute to this project.

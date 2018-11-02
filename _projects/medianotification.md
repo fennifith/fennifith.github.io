@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Media Notification"
 description: "Slightly unstable attempt to replace all media notifications with Android O styled copies."
-repo: TheAndroidMaster/MediaNotification
-git: git://github.com/TheAndroidMaster/MediaNotification.git
+repo: fennifith/MediaNotification
+git: git://github.com/fennifith/MediaNotification.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/MediaNotification
+    url: https://github.com/fennifith/MediaNotification
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/MediaNotification/issues
+    url: https://github.com/fennifith/MediaNotification/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=james.medianotification
     icon: /images/ic/play-store.svg
   - name: MediaNotification.apk (v1.0 stable)
-    url: https://github.com/TheAndroidMaster/MediaNotification/releases/download/v1.0/MediaNotification.apk
+    url: https://github.com/fennifith/MediaNotification/releases/download/v1.0/MediaNotification.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: BrianValente
     avatar: https://avatars3.githubusercontent.com/u/3992081?v=4
     url: https://github.com/BrianValente

@@ -4,7 +4,7 @@ title: BaseGameActivity Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **BaseGameActivity.java**
 
-# [implements](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L27)
+# [implements](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L27)
 
 **Type:** `public` `abstract` `class` `BaseGameActivity` `extends` `FragmentActivity`
 
@@ -36,7 +36,7 @@ gets called, otherwise the call will have no effect.
 
 
 
-## [BaseGameActivity](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L62)
+## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L62)
 
 **Type:** `protected`
 
@@ -53,7 +53,7 @@ Constructs a BaseGameActivity with default client (GamesClient).
 
 
 
-## [BaseGameActivity](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L69)
+## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L69)
 
 **Type:** `protected`
 
@@ -74,7 +74,7 @@ Constructs a BaseGameActivity with the requested clients.
 
 
 
-## [setRequestedClients](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L80)
+## [setRequestedClients](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L80)
 
 **Type:** `protected` `void`
 

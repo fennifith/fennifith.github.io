@@ -4,7 +4,7 @@ title: PathUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [library](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [adaptiveicon](./../index) > [utils](./index) > **PathUtils.java**
 
-## [createPathFromPathData](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L33)
+## [createPathFromPathData](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L33)
 
 **Type:** `public` `static` `Path`
 
@@ -26,7 +26,7 @@ title: PathUtils Documentation
 
 
 
-## [PathDataNode](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L47)
+## [PathDataNode](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L47)
 
 **Type:** `public` `static`
 
@@ -48,7 +48,7 @@ title: PathUtils Documentation
 
 
 
-## [float](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L85)
+## [float](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L85)
 
 **Type:** `private` `static`
 
@@ -73,7 +73,7 @@ This is an optimized version of parseFloat(s.split(",|\\s"));
 
 
 
-## [extract](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L116)
+## [extract](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L116)
 
 **Type:** `private` `static` `int`
 
@@ -98,7 +98,7 @@ Calculate the position of the next comma or space
 
 
 
-## [arcToBezier](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L444)
+## [arcToBezier](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/utils/PathUtils.java#L444)
 
 **Type:** `private` `static` `void`
 

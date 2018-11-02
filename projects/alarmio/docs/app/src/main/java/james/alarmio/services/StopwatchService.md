@@ -4,7 +4,7 @@ title: StopwatchService Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [services](./index) > **StopwatchService.java**
 
-## [reset](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L118)
+## [reset](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L118)
 
 **Type:** `public` `void`
 
@@ -21,7 +21,7 @@ Reset the stopwatch, cancelling any notifications and setting everything to zero
 
 
 
-## [toggle](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L138)
+## [toggle](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L138)
 
 **Type:** `public` `void`
 
@@ -39,7 +39,7 @@ time if so).
 
 
 
-## [lap](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L161)
+## [lap](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L161)
 
 **Type:** `public` `void`
 
@@ -56,7 +56,7 @@ Record the current time as a "lap".
 
 
 
-## [getNotification](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L175)
+## [getNotification](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/services/StopwatchService.java#L175)
 
 **Type:** `private` `Notification`
 

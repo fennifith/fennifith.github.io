@@ -4,7 +4,7 @@ title: ListPreferenceData Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [james](./../../../index) > [alarmio](./../../index) > [data](./../index) > [preference](./index) > **ListPreferenceData.java**
 
-## [addItem](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/preference/ListPreferenceData.java#L79)
+## [addItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/preference/ListPreferenceData.java#L79)
 
 **Type:** `public` `final` `void`
 
@@ -26,7 +26,7 @@ adds an item to the end of the list
 
 
 
-## [removeItem](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/data/preference/ListPreferenceData.java#L95)
+## [removeItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/preference/ListPreferenceData.java#L95)
 
 **Type:** `public` `final` `void`
 

@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Cleaner"
 description: "The only storage saving app that actually works! &#58;D"
-repo: TheAndroidMaster/Cleaner
-git: git://github.com/TheAndroidMaster/Cleaner.git
+repo: fennifith/Cleaner
+git: git://github.com/fennifith/Cleaner.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Cleaner
+    url: https://github.com/fennifith/Cleaner
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Cleaner/issues
+    url: https://github.com/fennifith/Cleaner/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://play.google.com/store/apps/details?id=com.james.cleaner
     icon: /images/ic/play-store.svg
   - name: Cleaner.apk (v1.2 stable)
-    url: https://github.com/TheAndroidMaster/Cleaner/releases/download/v1.2/Cleaner.apk
+    url: https://github.com/fennifith/Cleaner/releases/download/v1.2/Cleaner.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

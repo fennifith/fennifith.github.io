@@ -3,14 +3,14 @@ layout: project
 type: website
 title: "photos"
 description: "A collection of my photography, published under the Creative Commons License."
-repo: TheAndroidMaster/photos
-git: git://github.com/TheAndroidMaster/photos.git
+repo: fennifith/photos
+git: git://github.com/fennifith/photos.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/photos
+    url: https://github.com/fennifith/photos
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/photos/issues
+    url: https://github.com/fennifith/photos/issues
     icon: /images/ic/bug.svg
   - name: Creative Commons Attribution Share Alike 4.0 International
     url: https://choosealicense.com/licenses/cc-by-sa-4.0/
@@ -19,9 +19,9 @@ links:
     url: https://jfenn.me/photos/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -38,7 +38,7 @@ This website is appropriately built with Jekyll. Photo data is obviously stored 
 
 ### The Magical Script of Wizardry
 
-The script has two parts: [`update.sh`](https://github.com/TheAndroidMaster/photos/blob/master/./.scripts/update.sh) (responsible for pulling changes, installing NPM packages, running the NodeJS script, and pushing the modifications to GitHub when it is complete) and [`update.js`](https://github.com/TheAndroidMaster/photos/blob/master/./.scripts/update.js) (handles authentication and fetches/parses data from the API). The [`_uid`](./scripts/update.js#L5) variable specifies the Flickr user id to fetch albums from.
+The script has two parts: [`update.sh`](https://github.com/fennifith/photos/blob/master/./.scripts/update.sh) (responsible for pulling changes, installing NPM packages, running the NodeJS script, and pushing the modifications to GitHub when it is complete) and [`update.js`](https://github.com/fennifith/photos/blob/master/./.scripts/update.js) (handles authentication and fetches/parses data from the API). The [`_uid`](./scripts/update.js#L5) variable specifies the Flickr user id to fetch albums from.
 
 #### Authentication
 

@@ -4,7 +4,7 @@ title: FormatUtils Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [utils](./index) > **FormatUtils.java**
 
-## [getFormat](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L22)
+## [getFormat](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L22)
 
 **Type:** `public` `static` `String`
 
@@ -29,7 +29,7 @@ Get the proper hh:mm:ss time format to use, dependent on whether
 
 
 
-## [getShortFormat](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L33)
+## [getShortFormat](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L33)
 
 **Type:** `public` `static` `String`
 
@@ -54,7 +54,7 @@ in the 12-hour version.
 
 
 
-## [format](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L44)
+## [format](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L44)
 
 **Type:** `public` `static` `String`
 
@@ -79,7 +79,7 @@ Formats the provided time into a string using [getFormat](#getformat).
 
 
 
-## [formatShort](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L55)
+## [formatShort](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L55)
 
 **Type:** `public` `static` `String`
 
@@ -104,7 +104,7 @@ Formats the provided time into a string using [getShortFormat](#getshortformat).
 
 
 
-## [format](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L66)
+## [format](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L66)
 
 **Type:** `public` `static` `String`
 
@@ -129,7 +129,7 @@ Formats the provided time into the provided format.
 
 
 
-## [formatMillis](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L77)
+## [formatMillis](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L77)
 
 **Type:** `public` `static` `String`
 
@@ -153,7 +153,7 @@ Formats a duration of milliseconds into a "0h 00m 00s 00" string.
 
 
 
-## [formatUnit](https://github.com/TheAndroidMaster/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L96)
+## [formatUnit](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/utils/FormatUtils.java#L96)
 
 **Type:** `public` `static` `String`
 

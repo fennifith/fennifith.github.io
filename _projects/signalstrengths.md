@@ -3,14 +3,14 @@ layout: project
 type: android-library
 title: "Signal Strengths"
 description: "A library and sample application with the purpose of getting an accurate signal strength on different Android phones."
-repo: TheAndroidMaster/SignalStrengths
-git: git://github.com/TheAndroidMaster/SignalStrengths.git
+repo: fennifith/SignalStrengths
+git: git://github.com/fennifith/SignalStrengths.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/SignalStrengths
+    url: https://github.com/fennifith/SignalStrengths
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/SignalStrengths/issues
+    url: https://github.com/fennifith/SignalStrengths/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://bintray.com/18jafenn90/maven/signalstrengths
     icon: https://bintray.com/favicon.ico
   - name: app-debug.apk (v0.2 stable)
-    url: https://github.com/TheAndroidMaster/SignalStrengths/releases/download/v0.2/app-debug.apk
+    url: https://github.com/fennifith/SignalStrengths/releases/download/v0.2/app-debug.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: true
 isWiki: false
 languages:

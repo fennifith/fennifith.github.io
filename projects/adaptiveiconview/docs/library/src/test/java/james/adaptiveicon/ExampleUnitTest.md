@@ -4,7 +4,7 @@ title: ExampleUnitTest Documentation
 ---
 #### [.](./../../../../../../index) > [library](./../../../../../index) > [src](./../../../../index) > [test](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveicon](./index) > **ExampleUnitTest.java**
 
-# [ExampleUnitTest](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/test/java/james/adaptiveicon/ExampleUnitTest.java#L8)
+# [ExampleUnitTest](https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/test/java/james/adaptiveicon/ExampleUnitTest.java#L8)
 
 **Type:** `public` `class`
 

@@ -3,25 +3,25 @@ layout: project
 type: android-app
 title: "Snowflakes"
 description: "Make it rain! Or um... snow."
-repo: TheAndroidMaster/Snowflakes
-git: git://github.com/TheAndroidMaster/Snowflakes.git
+repo: fennifith/Snowflakes
+git: git://github.com/fennifith/Snowflakes.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Snowflakes
+    url: https://github.com/fennifith/Snowflakes
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Snowflakes/issues
+    url: https://github.com/fennifith/Snowflakes/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
   - name: Snowflakes.apk (v1.1 stable)
-    url: https://github.com/TheAndroidMaster/Snowflakes/releases/download/v1.1/Snowflakes.apk
+    url: https://github.com/fennifith/Snowflakes/releases/download/v1.1/Snowflakes.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:

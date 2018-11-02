@@ -3,28 +3,28 @@ layout: project
 type: cli
 title: "AAH"
 description: "A basic cmdline program for Linux to help me do basic things I should already know. Ex&#58; \"AAH drive mount\""
-repo: TheAndroidMaster/AAH
-git: git://github.com/TheAndroidMaster/AAH.git
+repo: fennifith/AAH
+git: git://github.com/fennifith/AAH.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/AAH
+    url: https://github.com/fennifith/AAH
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/AAH/issues
+    url: https://github.com/fennifith/AAH/issues
     icon: /images/ic/bug.svg
   - name: MIT License
     url: https://choosealicense.com/licenses/mit/
     icon: /images/ic/copyright.svg
   - name: AAH-linux-386 (v1.0.1 stable)
-    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.1/AAH-linux-386
+    url: https://github.com/fennifith/AAH/releases/download/v1.0.1/AAH-linux-386
     icon: /images/ic/download.svg
   - name: AAH-linux-amd64 (v1.0.1 stable)
-    url: https://github.com/TheAndroidMaster/AAH/releases/download/v1.0.1/AAH-linux-amd64
+    url: https://github.com/fennifith/AAH/releases/download/v1.0.1/AAH-linux-amd64
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: codekidX
     avatar: https://avatars1.githubusercontent.com/u/3619949?v=4
     url: https://github.com/codekidX
@@ -51,7 +51,7 @@ Installation is fairly simple. You can either install from source or use the pre
 
 ### Prebuilt Binary
 
-Downloading a prebuilt binary is fairly simple. Simply choose a file from the [releases](https://github.com/TheAndroidMaster/AAH/blob/master/../../releases) page and run the commands below, replacing the information in brackets with their respective values.
+Downloading a prebuilt binary is fairly simple. Simply choose a file from the [releases](https://github.com/fennifith/AAH/blob/master/../../releases) page and run the commands below, replacing the information in brackets with their respective values.
 
 ```shell
 wget https://github.com/TheAndroidMaster/AAH/releases/download/{version}/AAH-{platform}
@@ -125,7 +125,7 @@ After this, you can try running `AAH` to check that it has installed properly.
 
 ## Configuration
 
-Configuration is fairly basic. The program will use the [`aahelp.yaml`](https://github.com/TheAndroidMaster/AAH/blob/master/./aahelp.yaml) file in the repository by default. You can override the values in this file or add your own by creating another located at `~/.aahelp.yaml`.
+Configuration is fairly basic. The program will use the [`aahelp.yaml`](https://github.com/fennifith/AAH/blob/master/./aahelp.yaml) file in the repository by default. You can override the values in this file or add your own by creating another located at `~/.aahelp.yaml`.
 
 The file uses basic YAML syntax (which can be easily learnt by just taking a glance at the default file in the repository), though it should be noted that there is no support for arrays as they do not make much sense in this context.
 
@@ -144,4 +144,4 @@ You could type `AAH thing something yes stuff` to get the value `this is a thing
 
 ## Contributing
 
-See this project's [CONTRIBUTING.md](https://github.com/TheAndroidMaster/AAH/blob/master/./.github/CONTRIBUTING.md) for instructions on how to contribute to this project.
+See this project's [CONTRIBUTING.md](https://github.com/fennifith/AAH/blob/master/./.github/CONTRIBUTING.md) for instructions on how to contribute to this project.

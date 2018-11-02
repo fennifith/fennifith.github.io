@@ -4,7 +4,7 @@ title: StoryData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [android](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [com](./../../../index) > [darin](./../../index) > [mysterious](./../index) > [data](./index) > **StoryData.java**
 
-## [isAvailable](https://github.com/TheAndroidMaster/Mysterious/blob/master/android/app/src/main/java/com/darin/mysterious/data/StoryData.java#L38)
+## [isAvailable](https://github.com/fennifith/Mysterious/blob/master/android/app/src/main/java/com/darin/mysterious/data/StoryData.java#L38)
 
 **Type:** `public` `boolean`
 
@@ -22,7 +22,7 @@ title: StoryData Documentation
 
 
 
-## [loadBook](https://github.com/TheAndroidMaster/Mysterious/blob/master/android/app/src/main/java/com/darin/mysterious/data/StoryData.java#L90)
+## [loadBook](https://github.com/fennifith/Mysterious/blob/master/android/app/src/main/java/com/darin/mysterious/data/StoryData.java#L90)
 
 **Type:** `public` `void`
 

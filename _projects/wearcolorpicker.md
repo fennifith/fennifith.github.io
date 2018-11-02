@@ -3,14 +3,14 @@ layout: project
 type: android-library
 title: "Wear Color Picker"
 description: "A lightweight color picker library for Android Wear."
-repo: TheAndroidMaster/WearColorPicker
-git: git://github.com/TheAndroidMaster/WearColorPicker.git
+repo: fennifith/WearColorPicker
+git: git://github.com/fennifith/WearColorPicker.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/WearColorPicker
+    url: https://github.com/fennifith/WearColorPicker
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/WearColorPicker/issues
+    url: https://github.com/fennifith/WearColorPicker/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: https://bintray.com/18jafenn90/maven/wearcolorpicker
     icon: https://bintray.com/favicon.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -34,7 +34,7 @@ WearColorPicker is lightweight color picker library for Android Wear.
 
 |Square Watch|Round Watch|
 |--------|--------|
-|![img](https://raw.githubusercontent.com/TheAndroidMaster/WearColorPicker/master/./.github/images/square.png?raw=true)|![img](https://raw.githubusercontent.com/TheAndroidMaster/WearColorPicker/master/./.github/images/round.png?raw=true)|
+|![img](https://raw.githubusercontent.com/fennifith/WearColorPicker/master/./.github/images/square.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/WearColorPicker/master/./.github/images/round.png?raw=true)|
 
 ## Usage
 

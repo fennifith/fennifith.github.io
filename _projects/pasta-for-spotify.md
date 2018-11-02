@@ -3,14 +3,14 @@ layout: project
 type: android-app
 title: "Pasta for Spotify"
 description: "A material design Spotify client for Android"
-repo: TheAndroidMaster/Pasta-for-Spotify
-git: git://github.com/TheAndroidMaster/Pasta-for-Spotify.git
+repo: fennifith/Pasta-for-Spotify
+git: git://github.com/fennifith/Pasta-for-Spotify.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Pasta-for-Spotify
+    url: https://github.com/fennifith/Pasta-for-Spotify
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Pasta-for-Spotify/issues
+    url: https://github.com/fennifith/Pasta-for-Spotify/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://jfenn.me/apps/pasta/
     icon: https://jfenn.me/images/favicon-32.ico
   - name: Pasta.for.Spotify.BETA.apk (v1.8 unstable)
-    url: https://github.com/TheAndroidMaster/Pasta-for-Spotify/releases/download/v1.8/Pasta.for.Spotify.BETA.apk
+    url: https://github.com/fennifith/Pasta-for-Spotify/releases/download/v1.8/Pasta.for.Spotify.BETA.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: alexandrepiveteau
     avatar: https://avatars2.githubusercontent.com/u/6318990?v=4
     url: https://github.com/alexandrepiveteau
@@ -76,7 +76,7 @@ There are a few major issues with the implementation of the Spotify API, some of
 
 Splash Screen | Home Screen | Now Playing
 ------------- | ----------- | -----------
-![](https://github.com/TheAndroidMaster/Pasta-for-Spotify/blob/master/./.github/images/splash.png?raw=true) | ![](https://github.com/TheAndroidMaster/Pasta-for-Spotify/blob/master/./.github/images/home.png?raw=true) | ![](https://github.com/TheAndroidMaster/Pasta-for-Spotify/blob/master/./.github/images/playing.png?raw=true)
+![](https://github.com/fennifith/Pasta-for-Spotify/blob/master/./.github/images/splash.png?raw=true) | ![](https://github.com/fennifith/Pasta-for-Spotify/blob/master/./.github/images/home.png?raw=true) | ![](https://github.com/fennifith/Pasta-for-Spotify/blob/master/./.github/images/playing.png?raw=true)
 
 ## Contributing
 ### Issues

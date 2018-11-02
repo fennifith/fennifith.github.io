@@ -4,7 +4,7 @@ title: ExampleInstrumentedTest Documentation
 ---
 #### [.](./../../../../../../index) > [signalstrengths](./../../../../../index) > [src](./../../../../index) > [androidTest](./../../../index) > [java](./../../index) > [james](./../index) > [signalstrengthslib](./index) > **ExampleInstrumentedTest.java**
 
-# [ExampleInstrumentedTest](https://github.com/TheAndroidMaster/SignalStrengths/blob/master/signalstrengths/src/androidTest/java/james/signalstrengthslib/ExampleInstrumentedTest.java#L13)
+# [ExampleInstrumentedTest](https://github.com/fennifith/SignalStrengths/blob/master/signalstrengths/src/androidTest/java/james/signalstrengthslib/ExampleInstrumentedTest.java#L13)
 
 **Type:** `@RunWith` `public` `class`
 

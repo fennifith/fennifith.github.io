@@ -3,14 +3,14 @@ layout: project
 type: website
 title: "Scrurl"
 description: "Scrolling urls, a.k.a. the second worst website I've ever made."
-repo: TheAndroidMaster/Scrurl
-git: git://github.com/TheAndroidMaster/Scrurl.git
+repo: fennifith/Scrurl
+git: git://github.com/fennifith/Scrurl.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Scrurl
+    url: https://github.com/fennifith/Scrurl
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Scrurl/issues
+    url: https://github.com/fennifith/Scrurl/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,9 +19,9 @@ links:
     url: https://jfenn.me/Scrurl/
     icon: https://jfenn.me/images/favicon-32.ico
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -62,5 +62,5 @@ Scrurl.display(null);
 
 ### Sample Implementations
 
-- [Literally the simplest implementation possible](https://github.com/TheAndroidMaster/Scrurl/blob/master/./examples/simple.js)
-- [Preventing Scrurl from interfering with address bar input](https://github.com/TheAndroidMaster/Scrurl/blob/master/./examples/focusable.js)
+- [Literally the simplest implementation possible](https://github.com/fennifith/Scrurl/blob/master/./examples/simple.js)
+- [Preventing Scrurl from interfering with address bar input](https://github.com/fennifith/Scrurl/blob/master/./examples/focusable.js)

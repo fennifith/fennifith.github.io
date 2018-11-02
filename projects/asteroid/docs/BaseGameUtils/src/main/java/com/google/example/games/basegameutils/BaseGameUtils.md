@@ -4,7 +4,7 @@ title: BaseGameUtils Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **BaseGameUtils.java**
 
-## [showAlert](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L17)
+## [showAlert](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L17)
 
 **Type:** `public` `static` `void`
 
@@ -26,7 +26,7 @@ Show an with an 'OK' button and a message.
 
 
 
-## [resolveConnectionFailure](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L28)
+## [resolveConnectionFailure](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L28)
 
 **Type:** `public` `static` `boolean`
 
@@ -55,7 +55,7 @@ Resolve a connection failure from
 
 
 
-## [verifySampleSetup](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L69)
+## [verifySampleSetup](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L69)
 
 **Type:** `public` `static` `boolean`
 
@@ -82,7 +82,7 @@ DO NOT call this method from a production app, it's meant only for samples!
 
 
 
-## [showActivityResultError](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L108)
+## [showActivityResultError](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L108)
 
 **Type:** `public` `static` `void`
 
@@ -106,7 +106,7 @@ Show a with the correct message for a connection error.
 
 
 
-## [makeSimpleDialog](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L153)
+## [makeSimpleDialog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L153)
 
 **Type:** `public` `static` `Dialog`
 
@@ -131,7 +131,7 @@ Create a simple with an 'OK' button and a message.
 
 
 
-## [makeSimpleDialog](https://github.com/TheAndroidMaster/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L165)
+## [makeSimpleDialog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameUtils.java#L165)
 
 **Type:** `public` `static` `Dialog`
 

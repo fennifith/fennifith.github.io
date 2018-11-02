@@ -3,14 +3,14 @@ layout: project
 type: android-library
 title: "Attribouter"
 description: "A lightweight \"about screen\" library to allow quick but customizable attribution in Android apps."
-repo: TheAndroidMaster/Attribouter
-git: git://github.com/TheAndroidMaster/Attribouter.git
+repo: fennifith/Attribouter
+git: git://github.com/fennifith/Attribouter.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/Attribouter
+    url: https://github.com/fennifith/Attribouter
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/Attribouter/issues
+    url: https://github.com/fennifith/Attribouter/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
@@ -19,12 +19,12 @@ links:
     url: https://bintray.com/18jafenn90/maven/attribouter
     icon: https://bintray.com/favicon.ico
   - name: Attribouter.apk (v0.1.4 stable)
-    url: https://github.com/TheAndroidMaster/Attribouter/releases/download/v0.1.4/Attribouter.apk
+    url: https://github.com/fennifith/Attribouter/releases/download/v0.1.4/Attribouter.apk
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
   - login: divadsn
     avatar: https://avatars2.githubusercontent.com/u/28547847?v=4
     url: https://github.com/divadsn
@@ -87,7 +87,7 @@ This library does not use an auth key for the GitHub API by default. It does cac
 
 By default, Attribouter will use the configuration file at [res/xml/attribouter.xml](./attribouter/src/main/res/xml/attribouter.xml). You can either name your configuration file "attribouter.xml" to override the resource, or name it differently and call `.withFile(R.xml.[name])` on your instance of `Attribouter` instead.
 
-The configuration file consists of a single root element, `<about>`, with many child elements that can be placed any amount of times in any order, the same as views in a layout file. These elements, called "wedges" in this library for no apparent reason, are created by Attribouter and added to the page in the order and heirarchy that they are defined in. To create your configuration file, you can either use the [file from the sample project](https://github.com/TheAndroidMaster/Attribouter/blob/master/./app/src/main/res/xml/about.xml) as a template or use [the documentation](https://jfenn.me/projects/attribouter/wiki) to write your own.
+The configuration file consists of a single root element, `<about>`, with many child elements that can be placed any amount of times in any order, the same as views in a layout file. These elements, called "wedges" in this library for no apparent reason, are created by Attribouter and added to the page in the order and heirarchy that they are defined in. To create your configuration file, you can either use the [file from the sample project](https://github.com/fennifith/Attribouter/blob/master/./app/src/main/res/xml/about.xml) as a template or use [the documentation](https://jfenn.me/projects/attribouter/wiki) to write your own.
 
 ## Proguard
 

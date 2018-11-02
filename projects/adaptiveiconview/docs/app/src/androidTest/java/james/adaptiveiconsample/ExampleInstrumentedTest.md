@@ -4,7 +4,7 @@ title: ExampleInstrumentedTest Documentation
 ---
 #### [.](./../../../../../../index) > [app](./../../../../../index) > [src](./../../../../index) > [androidTest](./../../../index) > [java](./../../index) > [james](./../index) > [adaptiveiconsample](./index) > **ExampleInstrumentedTest.java**
 
-# [ExampleInstrumentedTest](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/app/src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest.java#L13)
+# [ExampleInstrumentedTest](https://github.com/fennifith/AdaptiveIconView/blob/master/app/src/androidTest/java/james/adaptiveiconsample/ExampleInstrumentedTest.java#L13)
 
 **Type:** `@RunWith` `public` `class`
 

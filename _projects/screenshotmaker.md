@@ -3,25 +3,25 @@ layout: project
 type: undefined
 title: "Screenshot Maker"
 description: "A small java applet to generate uniform Play Store screenshots with titles and descriptions."
-repo: TheAndroidMaster/ScreenshotMaker
-git: git://github.com/TheAndroidMaster/ScreenshotMaker.git
+repo: fennifith/ScreenshotMaker
+git: git://github.com/fennifith/ScreenshotMaker.git
 links:
   - name: GitHub
-    url: https://github.com/TheAndroidMaster/ScreenshotMaker
+    url: https://github.com/fennifith/ScreenshotMaker
     icon: https://github.com/favicon.ico
   - name: Issues
-    url: https://github.com/TheAndroidMaster/ScreenshotMaker/issues
+    url: https://github.com/fennifith/ScreenshotMaker/issues
     icon: /images/ic/bug.svg
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
   - name: ScreenshotMaker.jar (v1.2 stable)
-    url: https://github.com/TheAndroidMaster/ScreenshotMaker/releases/download/v1.2/ScreenshotMaker.jar
+    url: https://github.com/fennifith/ScreenshotMaker/releases/download/v1.2/ScreenshotMaker.jar
     icon: /images/ic/download.svg
 contributors:
-  - login: TheAndroidMaster
+  - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/TheAndroidMaster
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
@@ -30,7 +30,7 @@ languages:
 
 ScreenshotMaker is small java applet used to generate uniform Play Store screenshots with titles and descriptions with minimal effort.
 
-![img](https://raw.githubusercontent.com/TheAndroidMaster/ScreenshotMaker/master/./.github/images/main.png?raw=true)
+![img](https://raw.githubusercontent.com/fennifith/ScreenshotMaker/master/./.github/images/main.png?raw=true)
 
 ## Installation
 
