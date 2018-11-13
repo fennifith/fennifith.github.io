@@ -15,11 +15,11 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Bintray
-    url: https://bintray.com/18jafenn90/maven/attribouter
-    icon: https://bintray.com/favicon.ico
-  - name: Attribouter.apk (v0.1.4 stable)
-    url: https://github.com/fennifith/Attribouter/releases/download/v0.1.4/Attribouter.apk
+  - name: JitPack
+    url: https://jitpack.io/#me.jfenn/Attribouter
+    icon: /images/ic/launch.svg
+  - name: Attribouter.apk (0.1.5 stable)
+    url: https://github.com/fennifith/Attribouter/releases/download/0.1.5/Attribouter.apk
     icon: /images/ic/download.svg
 contributors:
   - login: fennifith
@@ -42,6 +42,8 @@ languages:
 
 Attribouter is a lightweight "about screen" for Android apps, built to allow developers to easily give credit to a project's contributors and open source libraries, while matching the style of their app and saving the largest amount of time and effort possible. It is meant to use GitHub's [REST API](https://developer.github.com/v3/) to fetch and display information about open source projects and contributors, but it allows you to define some or all of its data in its configuration file in your app as well.
 
+[![](https://jitpack.io/v/me.jfenn/Attribouter.svg)](https://jitpack.io/#me.jfenn/Attribouter)
+
 ### Screenshots
 
 This is just sample data. It is not real. Though Jahir is lazy, so that part is (joking).
@@ -52,15 +54,27 @@ This is just sample data. It is not real. Though Jahir is lazy, so that part is 
 
 ### APK
 
-For demonstration and experimentation, an apk of the sample project can be downloaded [here](https://github.com/TheAndroidMaster/Attribouter/releases/).
+For demonstration and experimentation, an apk of the sample project can be downloaded [here](https://github.com/fennifith/Attribouter/blob/master/../../releases/).
 
 ## Usage
 
-The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your app's build.gradle file.
+This project is published on [JitPack](https://jitpack.io), which you can add to your project by copying the following to your root build.gradle at the end of "repositories".
 
 ```gradle
-implementation 'me.jfenn:attribouter:0.1.4'
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
 ```
+
+To add the dependency, copy this line into your app module's build.gradle file.
+
+```gradle
+implementation 'me.jfenn:Attribouter:0.1.5'
+```
+
 ##### Support Libraries
 
 The Android support libraries have been refactored from `android.support.*` to `androidx.*` as detailed [here](https://developer.android.com/topic/libraries/support-library/androidx-overview). As such, Attribouter only uses the new dependencies. If your project still uses the older support libraries for some reason, you may either compile your own version of Attribouter or use the last version to use the old support libraries, `0.1.2`.

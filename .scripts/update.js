@@ -126,6 +126,10 @@ try {
 					links += "  - name: Google Play\n"
 						+ "    url: " + repo.homepage + "\n"
 						+ "    icon: /images/ic/play-store.svg\n";
+				} else if (repo.homepage.includes("jitpack.io")) {
+					links += "  - name: JitPack\n"
+						+ "    url: " + repo.homepage + "\n"
+						+ "    icon: /images/ic/launch.svg\n";
 				} else {
 					let page = _cheerio.load(_request('GET', repo.homepage).getBody('utf8'));
 					let linkTitle = page("head > title").text().trim();
@@ -141,6 +145,13 @@ try {
 
 					while (linkTitle.includes(":")) {
 						let parts = linkTitle.split(":");
+						if (parts[0].length > parts[1].length)
+							linkTitle = parts[1].trim();
+						else linkTitle = parts[0].trim();
+					}
+
+					while (linkTitle.includes("|")) {
+						let parts = linkTitle.split("|");
 						if (parts[0].length > parts[1].length)
 							linkTitle = parts[1].trim();
 						else linkTitle = parts[0].trim();

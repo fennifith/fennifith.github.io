@@ -15,9 +15,9 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Bintray
-    url: https://bintray.com/18jafenn90/maven/colorpickerdialog
-    icon: https://bintray.com/favicon.ico
+  - name: JitPack
+    url: https://jitpack.io/#me.jfenn/ColorPickerDialog
+    icon: /images/ic/launch.svg
   - name: ColorPickerDialog.apk (0.1.0 stable)
     url: https://github.com/fennifith/ColorPickerDialog/releases/download/0.1.0/ColorPickerDialog.apk
     icon: /images/ic/download.svg

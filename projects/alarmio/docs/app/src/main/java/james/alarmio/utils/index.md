@@ -8,7 +8,7 @@ title: Documentation Pages
 - [ConversionUtils](ConversionUtils)
 - [FormatUtils](FormatUtils)
 - [ImageUtils](ImageUtils)
-- [anim /](anim)
+- [anim/](anim)
 	- [AnimatedFloat](anim/AnimatedFloat)
 	- [AnimatedInteger](anim/AnimatedInteger)
 	- [AnimatedValue](anim/AnimatedValue)

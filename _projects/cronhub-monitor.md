@@ -15,11 +15,14 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: Cronhub Docs | Community
+  - name: Community
     url: https://docs.cronhub.io/community.html
     icon: https://docs.cronhub.io/favicon.ico
-  - name: Cronhub-Monitor.apk (v1.0 stable)
-    url: https://github.com/fennifith/Cronhub-Monitor/releases/download/v1.0/Cronhub-Monitor.apk
+  - name: app-release.apk (1.1 unstable)
+    url: https://github.com/fennifith/Cronhub-Monitor/releases/download/1.1/app-release.apk
+    icon: /images/ic/download.svg
+  - name: output.json (1.1 unstable)
+    url: https://github.com/fennifith/Cronhub-Monitor/releases/download/1.1/output.json
     icon: /images/ic/download.svg
 contributors:
   - login: fennifith
@@ -32,6 +35,8 @@ languages:
 ---
 
 This app serves as a native Android notification client for [cronhub.io](https://cronhub.io/). Its only purpose is to deliver status notifications at the alert time specified on CronHub, using their [public API](https://docs.cronhub.io/public-api.html). It does not currently allow users to edit CronHub monitors, but that functionality may be added in the future.
+
+[![Build Status](https://travis-ci.com/fennifith/Cronhub-Monitor.svg?branch=master)](https://travis-ci.com/fennifith/Cronhub-Monitor)
 
 ## Screenshots
 
