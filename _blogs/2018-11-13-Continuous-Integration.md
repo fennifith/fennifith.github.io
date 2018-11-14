@@ -9,9 +9,9 @@ links:
 
 Last week, I started setting up continuous integrations for some of my projects. The basic idea of a continuous integration is that you have a server to build your project on a regular basis, verify that it works correctly, and deploy it to wherever your project is published. In this case, my project will be deployed to the releases of its GitHub repository and an alpha channel on the Google Play Store. In order to do this, I decided to use [Travis CI](https://travis-ci.com/), as it seems to be the most used and documented solution (though there are others as well).
 
-A small preface, make sure that you create your account on [travis-ci.com](https://travis-ci.com/), not [travis-ci.org](https://travis-ci.org/). Travis previously had their free plans on their .org site and only took paying customers on .com, but they have since begun migrating all of their users to travis-ci.com. However, for some reason they have decided _not to say anything about it_ when you create a new account, so it would be very easy to set up all of your projects on their .org site, then realize two months later that you have to move to .com. This isn't a huge issue, but it could be a little annoying if you have _almost 100 repositories_ like me which you would have to change (though I have only just started using Travis, so it doesn't affect me). Just something to note.
+A small preface, make sure that you create your account on [travis-ci.com](https://travis-ci.com/), not [travis-ci.org](https://travis-ci.org/). Travis previously had their free plans on their .org site and only took paying customers on .com, but they have since begun [migrating all of their users](https://docs.travis-ci.com/user/open-source-on-travis-ci-com/) to travis-ci.com. However, for some reason they have decided _not to say anything about it_ when you create a new account, so it would be very easy to set up all of your projects on their .org site, then (X months later) realize that you have to move to .com. This isn't a huge issue, but it could be a little annoying if you have _almost 100 repositories_ like I do which you would have to change (though I have only just started using Travis, so it doesn't actually affect me). Just something to note.
 
-## Step 1: start your first build
+## Step 1: Start your first build
 
 There are a few basic things to do in order to build your project. Assuming that you have already [set up your account](https://docs.travis-ci.com/user/tutorial/) and authenticated it with your GitHub, you will next want to create a file named `.travis.yml` in your project's root directory. One thing to keep in mind here is that the YAML format in this file is heavily dependent on whitespace; tab characters are invalid, indents must be made only in spaces, and a sub-section or parameter **must** be indented or it will not be treated as such. To start, let's write a basic file that should properly build most up-to-date Android projects.
 
@@ -36,7 +36,7 @@ You will want to update the `android` and `build-tools` versions to match the re
 
 Now, when you commit this file to your repository (the branch should not make a difference), Travis should build your project and notify you of the result.
 
-## Step 2. signing APKs
+## Step 2. Signing APKs
 
 So Travis _can_ successfully build your APK, but that itself is not very useful. It can do something with debug APKs, sure, but deploying them won't be very useful as they won't be under the same signature, and users won't be able to update from the existing application. So... we need a way to sign the application using an existing keystore that Travis has access to.
 
@@ -48,7 +48,7 @@ Not a bad idea. This will easily give Travis the ability to sign our APK. Isn't 
 
 No, they can't. This is because the values passed to the command are two [environment variables](https://docs.travis-ci.com/user/environment-variables/) which Travis creates when you encrypt the files. As long as you _don't_ check the "show value in log" box when you create an environment variable, they will never be output anywhere in your build logs, and nobody will be able to see them or know what they are.
 
-### A. encrypting files
+### Part A. Encrypting files
 
 You can go about this two ways: a difficult way, or a difficult way. You can either install [Travis's CLI tool](https://docs.travis-ci.com/user/encrypting-files/) for the sole purpose of logging in, encrypting your file, and setting its environment variables, or you can just do it yourself. I will provide instructions for both. Do what you like.
 
@@ -58,7 +58,7 @@ Note that if you want to automatically deploy your builds to Google Play, you wi
 
 First, install it. Assuming you have Ruby set up, you'll want to run `gem install travis`. Since not everyone has Ruby set up, [here are their installation instructions](https://www.ruby-lang.org/en/documentation/installation/). A bit of a pain for something that you can just write yourself in my opinion, but hey, anything to avoid writing more code.
 
-After that, you'll want to log in. Run `travis login` and it will walk you through it. Note: (related to the preface at the start) no matter what site you are using, you should append either `--org` or `--com` to **each command** to specify which site it should go to.
+After that, you'll want to log in. Run `travis login` and it will walk you through it. Note: (related to the preface at the start) no matter what site you are using when you use the Travis CLI, you should append either `--org` or `--com` to **every command** to specify which site it should use.
 
 Now, find your keystore. Place it in your root directory. The CLI detects git repos to determine what project you want to modify, so this is necessary. Do not add it to git. That is bad and not good. Don't do that.
 
@@ -86,7 +86,7 @@ before_install:
 
 That's it! Push your changes to `.travis.yml` as well as `key.jks.enc`, and Jekyll should build your project.
 
-### B. signing the apk
+### Part B. Signing the APK
 
 Now we want to actually use the key to sign our APKs. This requires a few changes to our app's build.gradle. Specifically, we need to specify a `signingConfig` that ONLY exists on Travis - we don't want our local builds (or the builds of other contributors) to be affected by this. Luckily, not only can we read environment variables from our `build.gradle` file using `System.getenv`, Travis automatically creates a nice "CI" variable to tell us that the build is happening in a Continuous Integration, so why don't we use that.
 
@@ -126,7 +126,7 @@ script:
 
 Now it will create a proper release using these signing configs. Push everything to git and it should build a properly signed APK. Yay.
 
-## Step 3. deploying to github releases
+## Step 3. Deploying to github releases
 
 This part is fairly simple, as Travis provides its own deployment functionality for this purpose. According to [their documentation](https://docs.travis-ci.com/user/deployment/releases/), for the bare minimum functionality all that you will need is to add the following to your `.travis.yml`...
 
@@ -145,9 +145,9 @@ Now, you _could_ follow this exactly and place your GitHub token directly in you
 
 This should now create a release with a built (and signed) APK each time there is a new tag. Fair enough; all you have to do for it to deploy is create a new tag.
 
-### Creating Tags
+### Part A. Creating tags
 
-What if you're lazy like me, though? What if you want to create a new release on each push to the master branch? (I have two branches in most of my projects, `develop` and `master`, for this purpose)
+What if you're lazy like me, though? What if you want to create a new release on each push to the master branch? (I have two branches in most of my projects, `develop` and `master`, for this purpose - only the commits currently in production are in the `master` branch)
 
 A simple modification to the `on` section of the previous snippet does the trick.
 
@@ -159,6 +159,8 @@ deploy:
 ```
 
 Well, it almost does the trick. The thing is, since we haven't created a tag, Travis doesn't know what version number we want to use. It just creates a new release using the commit hash as a title. That isn't very good. I wonder if we could somehow get the version number from our build.gradle file and use that instead...
+
+### Part B. Version numbers
 
 Let's write a gradle task to print our version number! Place the following in your app's `build.gradle`.
 
@@ -197,17 +199,17 @@ deploy:
 
 Yay! Now we have fully automated releases on each push to master. Because of the `overwrite` parameter, it will overwrite existing releases if the version number has not been changed (a new release will be created if it has), so they will always be up to date.
 
-## Step 4. deploying to the play store
+## Step 4. Deploying to the Play Store
 
-Travis doesn't have a deployment for the Play Store, so we will have to use a third party tool. I found [Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher/), which should work, except there isn't an option to deploy an existing APK without building the project. Not only would a deployment that requires building a project _twice_ be super wasteful and take... well, twice as long, [I ran into problems signing the APK](/redirects/?t=twitter&d=) when I tried it, so... let's not. Instead, we'll modify the `script` to run the `./gradlew publish` command when a build is triggered from the master branch.
+Travis doesn't have a deployment for the Play Store, so we will have to use a third party tool. I found [Triple-T/gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher/), which should work, except there isn't an option to deploy an existing APK without building the project. Not only would a deployment that requires building a project _twice_ be super wasteful and take... well, twice as long, [I ran into problems signing the APK](/redirects/?t=twitter&d=status/1061620100409761792) when I tried it, so... let's not. Instead, we'll modify the `script` to run the `./gradlew publish` command when a build is triggered from the master branch.
 
-### A. setup
+### Part A. Setup
 
 Setup is fairly simple; just follow the directions in the plugin's readme. However, what should we do with the JSON file? PLEASE DO NOT ADD IT TO GIT. ANYONE WITH THIS FILE HAS ACCESS TO YOUR PLAY CONSOLE. WE'RE ENCRYPTING IT.
 
 You can either encrypt it as a separate file, or you can put them both in a tar (`tar -cvf secrets.tar key.jks service.json`), encrypt that, and run `tar -xvf secrets.tar` once it has been decrypted. I am not sure if either will affect how secure they are. I have opted for the tar method as it gives me less things to keep track of.
 
-### B. publishing
+### Part B. Publishing
 
 Now we can modify the `script` section of our `.travis.yml` to run the `./gradlew publish` command when a build is triggered from the master branch. This can be done using the "TRAVIS_BRANCH" environment variable which Travis handily creates for us. In other words...
 
@@ -216,7 +218,7 @@ script:
   - if [ "$TRAVIS_BRANCH" = "master" ]; then ./gradlew publish; else ./gradlew build; fi
 ```
 
-### C. changelogs
+### Part C. Changelogs
 
 Now, gradle-play-publisher requires you to specify a changelog at `app/src/main/play/release-notes/en-US/default.txt` for it to publish an APK. What if we want to use the same changelog for GitHub releases? We'll add another line to the `before_deploy` section and GitHub deployment to do so.
 
