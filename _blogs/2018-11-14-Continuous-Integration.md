@@ -8,7 +8,7 @@ links:
     icon: /images/ic/link.svg
 ---
 
-Last week, I started setting up continuous integrations for some of my projects. The basic idea of a continuous integration is that you have a server to build your project on a regular basis, verify that it works correctly, and deploy it to wherever your project is published. In this case, my project will be deployed to the releases of its GitHub repository and an alpha channel on the Google Play Store. In order to do this, I decided to use [Travis CI](https://travis-ci.com/), as it seems to be the most used and documented solution (though there are others as well). Throughout this blog, I will add small snippets of the files I am editing, but (save for the initial `.travis.yml`) never an entire file. If you get lost or would like to see a working example of this, you can find a sample project [here](https://github.com/fennifith/TravisAndroidExample).
+Last week, I started setting up continuous integrations for some of my projects. The basic idea of a continuous integration is that you have a server to build your project on a regular basis, verify that it works correctly, and deploy it to wherever your project is published. In this case, my project will be deployed to the releases of its GitHub repository and an alpha channel on the Google Play Store. In order to do this, I decided to use [Travis CI](https://travis-ci.com/), as it seems to be the most used and documented solution (though there are others as well). Throughout this blog, I will add small snippets of the files I am editing, but (save for the initial `.travis.yml`) never an entire file. If you get lost or would like to see a working example of this, you can find a sample project [here](/redirects/?t=github&d=TravisAndroidExample).
 
 A small preface, make sure that you create your account on [travis-ci.com](https://travis-ci.com/), not [travis-ci.org](https://travis-ci.org/). Travis previously had their free plans on their .org site and only took paying customers on .com, but they have since begun [migrating all of their users](https://docs.travis-ci.com/user/open-source-on-travis-ci-com/) to travis-ci.com. However, for some reason they have decided _not to say anything about it_ when you create a new account, so it would be very easy to set up all of your projects on their .org site, then (X months later) realize that you have to move to .com. This isn't a huge issue, but it could be a little annoying if you have _almost 100 repositories_ like I do which you would have to change (though I have only just started using Travis, so it doesn't actually affect me). Just something to note.
 
@@ -93,7 +93,7 @@ That's it! Push your changes to `.travis.yml` as well as `key.jks.enc`, and Jeky
 
 ### Part B. Dummy files
 
-This isn't entirely necessary, but you can use some fake "dummy" files to add to version control alongside the "real" encrypted ones. When Travis decrypts your encrypted files, they will be overwritten, but otherwise they serve as quite a nice substitute to prevent anyone from getting their hands on the real files (and to prevent you from uploading the real ones by accident). You can find a few (`key.jks`, `service.json`, and `secrets.tar`) in the sample project [here](https://github.com/fennifith/TravisAndroidExample).
+This isn't entirely necessary, but you can use some fake "dummy" files to add to version control alongside the "real" encrypted ones. When Travis decrypts your encrypted files, they will be overwritten, but otherwise they serve as quite a nice substitute to prevent anyone from getting their hands on the real files (and to prevent you from uploading the real ones by accident). You can find a few (`key.jks`, `service.json`, and `secrets.tar`) in the sample project [here](/redirects/?t=github&d=TravisAndroidExample).
 
 ### Part C. Signing the APK
 
@@ -247,4 +247,4 @@ deploy:
 
 Hopefully this blog has gone over the basics of using Travis to deploy to GitHub and the Play Store. In later blogs, I hope to also cover how to implement UI and Unit tests, though I have yet to actually use them myself so I cannot yet write an article about them.
 
-If you would like to see a working example of all of this, you can find it in a sample project [here](https://github.com/fennifith/TravisAndroidExample).
+If you would like to see a working example of all of this, you can find it in a sample project [here](/redirects/?t=github&d=TravisAndroidExample).
