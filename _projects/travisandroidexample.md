@@ -9,9 +9,6 @@ links:
   - name: GitHub
     url: https://github.com/fennifith/TravisAndroidExample
     icon: https://github.com/favicon.ico
-  - name: Issues
-    url: https://github.com/fennifith/TravisAndroidExample/issues
-    icon: /images/ic/bug.svg
   - name: Other
     url: https://choosealicense.com/licenses/other/
     icon: /images/ic/copyright.svg

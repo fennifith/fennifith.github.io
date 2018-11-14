@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Continuous Integration with Travis CI for Android
-project: "Travis Android Example"
+project: ValCanBuild/TravisAndroidExample
 links:
   - name: Travis CI
     url: https://travis-ci.com/
