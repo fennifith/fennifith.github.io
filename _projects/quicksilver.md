@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "quicksilver"
+title: "jacksonhvisuals/quicksilver"
 description: "A free, (mostly) material-design template for the web"
 repo: fennifith/quicksilver
 git: git://github.com/fennifith/quicksilver.git

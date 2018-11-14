@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "android issue reporter"
+title: "heinrichreimer/android-issue-reporter"
 description: "A powerful and simple library to open issues on GitHub directly from your app. "
 repo: fennifith/android-issue-reporter
 git: git://github.com/fennifith/android-issue-reporter.git

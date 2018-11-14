@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "storage chooser"
+title: "codekidX/storage-chooser"
 description: "Lets user choose between internal or external storage with just few lines of code."
 repo: fennifith/storage-chooser
 git: git://github.com/fennifith/storage-chooser.git

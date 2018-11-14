@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Raspi Calcuberry"
+title: "wyager/MicroMechBoard"
 description: "An attempt at making an affordable, DIY scientific calculator that offers better performance and more productivity than the current standard."
 repo: fennifith/Raspi-Calcuberry
 git: git://github.com/fennifith/Raspi-Calcuberry.git

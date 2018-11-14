@@ -22,7 +22,7 @@ contributors:
   - login: fennifith
     avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
     url: https://github.com/fennifith
-isDocs: true
+isDocs: false
 isWiki: false
 languages:
   - JavaScript

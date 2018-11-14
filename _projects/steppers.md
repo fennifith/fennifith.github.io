@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Steppers"
+title: "drozdzynski/Steppers"
 description: "Steppers view library for Android, based on Google Material design guidelines"
 repo: fennifith/Steppers
 git: git://github.com/fennifith/Steppers.git

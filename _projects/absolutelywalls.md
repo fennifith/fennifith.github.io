@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Absolutely Walls"
+title: "ercsoftware11/AbsolutelyWalls"
 description: "Absolutely Wallpapers community app"
 repo: fennifith/AbsolutelyWalls
 git: git://github.com/fennifith/AbsolutelyWalls.git

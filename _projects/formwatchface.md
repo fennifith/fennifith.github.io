@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "FORM Watch Face"
+title: "romannurik/FORMWatchFace"
 description: "A fork of Roman Nurik's FORM watch face that adds extra features for Android Wear 2.0."
 repo: fennifith/FORMWatchFace
 git: git://github.com/fennifith/FORMWatchFace.git

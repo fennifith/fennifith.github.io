@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Travis Android Example"
+title: "ValCanBuild/TravisAndroidExample"
 description: "Example of distributing an Android app to GitHub / Play Store releases."
 repo: fennifith/TravisAndroidExample
 git: git://github.com/fennifith/TravisAndroidExample.git

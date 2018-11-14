@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Blue Rain"
+title: "Technologx/BlueRain"
 description: "A widget dashboard to make your life easier!"
 repo: fennifith/BlueRain
 git: git://github.com/fennifith/BlueRain.git

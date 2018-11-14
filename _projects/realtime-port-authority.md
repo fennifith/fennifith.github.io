@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Realtime Port Authority"
+title: "rectangle-dbmi/Realtime-Port-Authority"
 description: "Realtime transit tracker of Pittsburgh's Port Authority buses using the realtime PAT API using Google Maps to Display the Maps"
 repo: fennifith/Realtime-Port-Authority
 git: git://github.com/fennifith/Realtime-Port-Authority.git

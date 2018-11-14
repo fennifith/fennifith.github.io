@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "artme"
+title: "crazeeadil/artme"
 description: "ArtMe - A wallpaper app."
 repo: fennifith/artme
 git: git://github.com/fennifith/artme.git

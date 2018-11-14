@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "Fast Hub"
+title: "k0shk0sh/FastHub"
 description: "FastHub the ultimate GitHub client for Android."
 repo: fennifith/FastHub
 git: git://github.com/fennifith/FastHub.git

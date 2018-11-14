@@ -1,7 +1,7 @@
 ---
 layout: project
 type: undefined
-title: "github secret keeper"
+title: "HenrikJoreteg/github-secret-keeper"
 description: "Microservice to enable GitHub login for multiple server-less applications."
 repo: fennifith/github-secret-keeper
 git: git://github.com/fennifith/github-secret-keeper.git
