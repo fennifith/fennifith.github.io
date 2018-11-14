@@ -15,6 +15,10 @@ node update.js
 rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
 git add ../../_projects ../../projects ../../_people
 git status
+
+trap "kill 0" EXIT
+$(cd ../../ && jekyll serve > /dev/null) &
+
 read -p "[Enter] to commit & push, [Ctrl+C] to cancel."
 git commit -m "Auto-commit: updated pages"
 git push

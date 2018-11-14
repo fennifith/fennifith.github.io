@@ -47,7 +47,8 @@ try {
 	}).getBody('utf8'));
 
 	for (let i = 0; i < repos.length; i++) {
-		if (!repos[i].fork && (!repos[i].description || !repos[i].description.startsWith("("))) {
+		console.log(repos[i].full_name);
+		if (repos[i].description && !repos[i].description.startsWith("(")) {
 			let topics = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
 				headers: { 
 					"Accept": "application/vnd.github.mercy-preview+json",
@@ -73,7 +74,7 @@ try {
 				console.error("NO README:", repos[i].full_name);
 				continue;
 			}
-				
+			
 			let repo = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name, {
 				headers: { 
 					"User-Agent": "{{ github.name }}.github.io",
@@ -117,7 +118,7 @@ try {
 					+ "    icon: /images/ic/copyright.svg\n"
 			}
 
-			if (repo.homepage) {				
+			if (repo.homepage && !repo.fork) {				
 				if (repo.homepage.includes("jfenn.me")) {
 					links += "  - name: Website\n"
 						+ "    url: " + repo.homepage + "\n"
@@ -188,7 +189,7 @@ try {
 			console.log("Fetched project " + repo.full_name);
 			
 			let isDocs = false;
-			if (repo.language == "Java" || repo.language == "JavaScript") {
+			if (repo.language == "Java" && !repo.fork) {
 				let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
 				if (!_fs.existsSync(docsDir)) {
 					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
@@ -215,7 +216,7 @@ try {
 			}
 			
 			let isWiki = false;
-			if (repo.has_wiki) {
+			if (repo.has_wiki && !repo.fork) {
 				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
 				if (!_fs.existsSync(wikiDir)) {
 					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
@@ -259,7 +260,7 @@ try {
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
 				+ "layout: project\n"
 				+ "type: " + type + "\n"
-				+ "title: \"" + titleize(repo.name) + "\"\n"
+				+ "title: \"" + (repo.fork && repo.parent ? repo.parent.full_name : titleize(repo.name)) + "\"\n"
 				+ (repo.description ? "description: " + safestrize(repo.description.split(":").join("&#58;")) + "\n" : "")
 				+ "repo: " + repo.full_name + "\n"
 				+ "git: " + repo.git_url + "\n"
