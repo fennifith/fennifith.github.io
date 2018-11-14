@@ -46,7 +46,7 @@ Not a bad idea. This will easily give Travis the ability to sign our APK. Isn't 
 
 > But... can't someone just look in your `.travis.yml`, get the command, and use it to decrypt your file?
 
-No, they can't. This is because the values passed to the command are two [environment variables](https://docs.travis-ci.com/user/environment-variables/) which Travis creates when you encrypt the files. As long as you _don't_ check the "show value in log" box when you create an environment variable, they will never be output anywhere in your build logs, and nobody will be able to see them or know what they are.
+No, they can't. This is because the values passed to the command are two [environment variables](https://docs.travis-ci.com/user/environment-variables/) which are stored only on Travis. As long as you _don't_ check the "show value in log" box when you create an environment variable, they will never be output anywhere in your build logs, and nobody will be able to see them or know what they are.
 
 ### Part A. Encrypting files
 
