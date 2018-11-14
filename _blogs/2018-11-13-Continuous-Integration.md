@@ -52,7 +52,7 @@ No, they can't. This is because the values passed to the command are two [enviro
 
 You can go about this two ways: a difficult way, or a difficult way. You can either install [Travis's CLI tool](https://docs.travis-ci.com/user/encrypting-files/) for the sole purpose of logging in, encrypting your file, and setting its environment variables, or you can just do it yourself. I will provide instructions for both. Do what you like.
 
-Note that if you want to automatically deploy your builds to Google Play, you will want to come back here and go through the exact same process later on, so you may want to skip this for now. If you don't, or want to do it twice anyway... carry on...
+Note that if you want to automatically deploy your builds to Google Play, you may want to come back here and go through the exact same process later on, so you might want to skip this for now. If you don't, or want to do it twice anyway... carry on...
 
 #### Using Travis's CLI
 
