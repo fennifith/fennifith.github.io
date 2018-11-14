@@ -1,13 +1,14 @@
 ---
 layout: blog
 title: Continuous Integration with Travis CI for Android
+project: "Travis Android Example"
 links:
   - name: Travis CI
     url: https://travis-ci.com/
     icon: /images/ic/link.svg
 ---
 
-Last week, I started setting up continuous integrations for some of my projects. The basic idea of a continuous integration is that you have a server to build your project on a regular basis, verify that it works correctly, and deploy it to wherever your project is published. In this case, my project will be deployed to the releases of its GitHub repository and an alpha channel on the Google Play Store. In order to do this, I decided to use [Travis CI](https://travis-ci.com/), as it seems to be the most used and documented solution (though there are others as well).
+Last week, I started setting up continuous integrations for some of my projects. The basic idea of a continuous integration is that you have a server to build your project on a regular basis, verify that it works correctly, and deploy it to wherever your project is published. In this case, my project will be deployed to the releases of its GitHub repository and an alpha channel on the Google Play Store. In order to do this, I decided to use [Travis CI](https://travis-ci.com/), as it seems to be the most used and documented solution (though there are others as well). Throughout this blog, I will add small snippets of the files I am editing, but (save for the initial `.travis.yml`) never an entire file. If you get lost or would like to see a working example of this, you can find a sample project [here](https://github.com/fennifith/TravisAndroidExample).
 
 A small preface, make sure that you create your account on [travis-ci.com](https://travis-ci.com/), not [travis-ci.org](https://travis-ci.org/). Travis previously had their free plans on their .org site and only took paying customers on .com, but they have since begun [migrating all of their users](https://docs.travis-ci.com/user/open-source-on-travis-ci-com/) to travis-ci.com. However, for some reason they have decided _not to say anything about it_ when you create a new account, so it would be very easy to set up all of your projects on their .org site, then (X months later) realize that you have to move to .com. This isn't a huge issue, but it could be a little annoying if you have _almost 100 repositories_ like I do which you would have to change (though I have only just started using Travis, so it doesn't actually affect me). Just something to note.
 
@@ -46,7 +47,9 @@ Not a bad idea. This will easily give Travis the ability to sign our APK. Isn't 
 
 > But... can't someone just look in your `.travis.yml`, get the command, and use it to decrypt your file?
 
-No, they can't. This is because the values passed to the command are two [environment variables](https://docs.travis-ci.com/user/environment-variables/) which are stored only on Travis. As long as you _don't_ check the "show value in log" box when you create an environment variable, they will never be output anywhere in your build logs, and nobody will be able to see them or know what they are.
+No, they can't. This is because the values passed to the command are two [environment variables](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings) which are stored only on Travis. As long as you _don't_ check the "show value in log" box when you create an environment variable, they will never be output anywhere in your build logs, and nobody will be able to see them or know what they are.
+
+If you are worried about security (or if you aren't worried enough), I highly recommend that you read [Travis's documentation](https://docs.travis-ci.com/user/best-practices-security/#Steps-Travis-CI-takes-to-secure-your-data) on best practices regarding secure data. 
 
 ### Part A. Encrypting files
 
@@ -220,6 +223,8 @@ script:
   - if [ "$TRAVIS_BRANCH" = "master" ]; then ./gradlew publish; else ./gradlew build; fi
 ```
 
+This should build a signed APK and upload it to the Play Store whenever a push is made to the `master` branch, then deploy the same APK to GitHub if it was built successfully. Important to note that using this method, the build will also fail if it has failed to upload the APK to the Play Store - so it _might_ not be an issue with your project if it results in a failure unexpectedly.
+
 ### Part C. Changelogs
 
 Now, gradle-play-publisher requires you to specify a changelog at `app/src/main/play/release-notes/en-US/default.txt` for it to publish an APK. What if we want to use the same changelog for GitHub releases? We'll add another line to the `before_deploy` section and GitHub deployment to do so.
@@ -234,5 +239,8 @@ deploy:
     body: "$APP_CHANGELOG"
 ```
 
+## Finish
 
+Hopefully this blog has gone over the basics of using Travis to deploy to GitHub and the Play Store. In later blogs, I hope to also cover how to implement UI and Unit tests, though I have yet to actually use them myself so I cannot yet write an article about them.
 
+If you would like to see a working example of all of this, you can find it in a sample project [here](https://github.com/fennifith/TravisAndroidExample).
