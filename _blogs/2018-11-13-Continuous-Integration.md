@@ -91,7 +91,11 @@ before_install:
 
 That's it! Push your changes to `.travis.yml` as well as `key.jks.enc`, and Jekyll should build your project.
 
-### Part B. Signing the APK
+### Part B. Dummy files
+
+This isn't entirely necessary, but you can use some fake "dummy" files to add to version control alongside the "real" encrypted ones. When Travis decrypts your encrypted files, they will be overwritten, but otherwise they serve as quite a nice substitute to prevent anyone from getting their hands on the real files (and to prevent you from uploading the real ones by accident). You can find a few (`key.jks`, `service.json`, and `secrets.tar`) in the sample project [here](https://github.com/fennifith/TravisAndroidExample).
+
+### Part C. Signing the APK
 
 Now we want to actually use the key to sign our APKs. This requires a few changes to our app's build.gradle. Specifically, we need to specify a `signingConfig` that ONLY exists on Travis - we don't want our local builds (or the builds of other contributors) to be affected by this. Luckily, not only can we read environment variables from our `build.gradle` file using `System.getenv`, Travis automatically creates a nice "CI" variable to tell us that the build is happening in a Continuous Integration, so why don't we use that.
 
