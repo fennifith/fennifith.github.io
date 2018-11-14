@@ -2,7 +2,7 @@
 layout: project
 type: android-library
 title: "Android Utils"
-description: "A bunch of util classes that I use in basically every project anyway."
+description: "A bunch of util classes that I use in almost every project I write."
 repo: fennifith/AndroidUtils
 git: git://github.com/fennifith/AndroidUtils.git
 links:

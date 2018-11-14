@@ -12,6 +12,9 @@ links:
   - name: Issues
     url: https://github.com/fennifith/Crasher/issues
     icon: /images/ic/bug.svg
+  - name: Apache License 2.0
+    url: https://choosealicense.com/licenses/apache-2.0/
+    icon: /images/ic/copyright.svg
   - name: Bintray
     url: https://bintray.com/18jafenn90/maven/crasher/
     icon: https://bintray.com/favicon.ico
