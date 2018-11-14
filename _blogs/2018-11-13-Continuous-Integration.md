@@ -64,13 +64,15 @@ Now, find your keystore. Place it in your root directory. The CLI detects git re
 
 Assuming you have named your keystore `key.jks`, you will want to run `travis encrypt-file key.jks --add`. This will encrypt the file, add the command to your `.travis.yml`, and upload the environment variables all at once. You can then add `key.jks.enc` to git, commit and push, and it will be available to your next build.
 
+Side-note: if your keystore is a `.keystore` file, it shouldn't make a difference - just replace `key.jks` with `key.keystore` (or whatever it is named) whenever it appears.
+
 #### Doing It Yourself
 
-Pick a key and a password. They shouldn't be excessively long, but not tiny either. Do not use special characters. In this example, I will use the "php" as the key and "aaaaa" as the password.
+Pick a key and a password. They shouldn't be excessively long, but not tiny either. Do not use special characters. In this example, I will use "php" as the key and "aaaaa" as the password.
 
-Add them to Travis CI as environment variables. You can do this by going to your project page in Travis, clicking on "More Options > Settings", then scrolling down to "Environment Variables". I will name mine "keystore_key" and "keystore_pass", respectively.
+Add them to Travis CI as environment variables. You can do this by going to your project page in Travis, clicking on "More Options > Settings", then scrolling down to "Environment Variables". I will name mine "enc_keystore_key" and "enc_keystore_pass", respectively.
 
-Now, time to encrypt the file.
+Now, time to encrypt the file. Run this command in the terminal:
 
 ```bash
 openssl aes-256-cbc -K "php" -iv "aaaaa" -in key.jks -out key.jks.enc
@@ -81,7 +83,7 @@ Now, you will want to add a line to decrypt the file in `before_install` of your
 ```yml
 before_install:
   - ...
-  - openssl aes-256-cbc -K $keystore_key -iv $keystore_pass -in key.jks.enc -out key.jks -d
+  - openssl aes-256-cbc -K $enc_keystore_key -iv $enc_keystore_pass -in key.jks.enc -out key.jks -d
 ```
 
 That's it! Push your changes to `.travis.yml` as well as `key.jks.enc`, and Jekyll should build your project.
@@ -92,7 +94,7 @@ Now we want to actually use the key to sign our APKs. This requires a few change
 
 Full credit, this solution was taken from [this wonderful article](https://android.jlelse.eu/using-travisci-to-securely-build-and-deploy-a-signed-version-of-your-android-app-94afdf5cf5b4) that describes almost the same thing that I have been explaining since the start of this article.
 
-I'll create three environment variables that will be used here: the keystore password as "signing_password", the keystore alias as "signing_alias", and the alias's password as "signing_alias_password". Note that special characters cannot be used in these either.
+I'll create three environment variables that will be used here: the keystore password as "keystore_password", the keystore alias as "keystore_alias", and the alias's password as "keystore_alias_password". Note that special characters cannot be used in these either.
 
 ```gradle
 android {
@@ -110,9 +112,9 @@ android {
     def isRunningOnTravis = System.getenv("CI") == "true"
     if (isRunningOnTravis) {
         signingConfigs.release.storeFile = file("../key.jks")
-        signingConfigs.release.storePassword = System.getenv("signing_password")
-        signingConfigs.release.keyAlias = System.getenv("signing_alias")
-        signingConfigs.release.keyPassword = System.getenv("signing_alias_password")
+        signingConfigs.release.storePassword = System.getenv("keystore_password")
+        signingConfigs.release.keyAlias = System.getenv("keystore_alias")
+        signingConfigs.release.keyPassword = System.getenv("keystore_alias_password")
     }
 }
 ```
@@ -141,7 +143,7 @@ deploy:
         tags: true
 ```
 
-Now, you _could_ follow this exactly and place your GitHub token directly in your `.travis.yml`, but that's just asking for trouble. Luckily, you can use MORE ENVIRONMENT VARIABLES! Enter your API key with the name ex. "github_token", and write `api_key: "$github_token"`.
+Now, you _could_ follow this exactly and place your GitHub token directly in your `.travis.yml`, but that's just asking for trouble. Luckily, you can use MORE ENVIRONMENT VARIABLES! Enter your API key with the name ex. "GITHUB_TOKEN", and write `api_key: "$GITHUB_TOKEN"` instead.
 
 This should now create a release with a built (and signed) APK each time there is a new tag. Fair enough; all you have to do for it to deploy is create a new tag.
 
@@ -178,21 +180,21 @@ Just as there is a `before_install` section of our `.travis.yml`, there is also 
 
 ```yml
 before_deploy:
-  - export app_version=$(./gradlew :app:printVersionName)
+  - export APP_VERSION=$(./gradlew :app:printVersionName)
 ```
 
-This creates an environment variable ("app_version") containing our app's version name, which we can then reference from the actual deployment as follows...
+This creates an environment variable ("APP_VERSION") containing our app's version name, which we can then reference from the actual deployment as follows...
 
 ```yml
 deploy:
   - provider: releases
-    api_key: "$github_token"
+    api_key: "$GITHUB_TOKEN"
     file: app/build/outputs/apk/release/*
     file_glob: true
     skip_cleanup: true
     overwrite: true
-    name: "$app_version"
-    tag_name: "$app_version"
+    name: "$APP_VERSION"
+    tag_name: "$APP_VERSION"
     on:
         branch: master
 ```
@@ -225,11 +227,11 @@ Now, gradle-play-publisher requires you to specify a changelog at `app/src/main/
 ```yml
 before_deploy:
     ...
-  - export app_changelog=$(cat app/src/main/play/release-notes/en-US/default.txt)
+  - export APP_CHANGELOG=$(cat app/src/main/play/release-notes/en-US/default.txt)
 deploy:
   - provider: releases
     ...
-    body: "$app_changelog"
+    body: "$APP_CHANGELOG"
 ```
 
 
