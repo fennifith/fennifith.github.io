@@ -15,7 +15,7 @@ const _fs = require('fs');
 const _request = require('sync-request');
 const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
-const _javadoc = require('/home/james/js/mdjavadoc/api/index.js');
+const _javadoc = require('mdjavadoc-api');
 
 function titleize(str) {
 	return str.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2");
