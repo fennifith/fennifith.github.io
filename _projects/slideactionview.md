@@ -29,6 +29,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
+pushed: 2018-11-13T17:04:19Z
 ---
 
 SlideActionView is a simple widget that provides a nice slide-to-left/right interaction. This is a part of my efforts to modularize some of the things that I write; it was originally a part of [Alarmio](https://jfenn.me/projects/alarmio), and has been separated into its own library.

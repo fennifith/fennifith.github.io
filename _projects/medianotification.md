@@ -38,6 +38,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2018-04-25T23:16:34Z
 ---
 
 MediaNotification is a slightly unstable attempt to create Android O styled media notifications. Please note that this app does not replace media notifications coming from other apps, but it creates new notifications on its own. The most common methods of use are as follows:

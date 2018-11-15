@@ -20,6 +20,7 @@ isDocs: false
 isWiki: false
 languages:
   - JavaScript
+pushed: 2015-09-15T20:30:09Z
 ---
 
 # github-secret-keeper

@@ -32,6 +32,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
+pushed: 2018-10-18T19:10:55Z
 ---
 
 APReader is small app that displays Android Police articles without waiting for the website to load.

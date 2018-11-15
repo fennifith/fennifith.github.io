@@ -32,6 +32,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2018-10-18T19:36:37Z
 ---
 
 Pasta for Spotify is a third party [material design](https://material.google.com/) Spotify client for Android.

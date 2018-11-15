@@ -26,6 +26,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2018-10-18T19:31:37Z
 ---
 
 ScreenshotMaker is small java applet used to generate uniform Play Store screenshots with titles and descriptions with minimal effort.
