@@ -7,6 +7,7 @@ then
 	git config --global user.email "travis@travis-ci.com"
 
 	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER"
+	git fetch --unshallow || true
 	git push https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io HEAD:master
 fi
 
