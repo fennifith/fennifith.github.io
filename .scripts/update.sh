@@ -33,7 +33,7 @@ then
 	git commit -m "Auto-commit: updated pages"
 	git push
 else
-	jekyll build
+	cd ../../ && jekyll build
 fi
 
 exit 0
