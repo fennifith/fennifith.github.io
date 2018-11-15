@@ -15,10 +15,10 @@ rm -rf node_modules && npm install
 node update.js
 
 rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
-git add ../../_projects ../../projects ../../_people ../../_orgs
 
 if [ -z "$CI" ]
 then
+	git add ../../_projects ../../projects ../../_people ../../_orgs
 	git status
 	
 	trap "kill 0" EXIT
