@@ -29,6 +29,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2017-09-14T13:45:17Z
 ---
 
 PaletteGetter is a library that attempts to reliably obtain the color scheme of any app from just the package or component name.

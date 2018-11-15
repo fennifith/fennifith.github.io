@@ -29,6 +29,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
+pushed: 2018-08-07T22:34:46Z
 ---
 
 The Port Authority Feedback Reporter is a small application to make it easier for bus riders in Pittsburgh, PA to report incedents on the Port Authority bus system (such as missing / damaged bike racks - the main reason for creating this app). It works by scraping & injecting javascript into [this page](http://www.portauthority.org/paac/apps/webcomments/pgcomment.asp?t=con), and is designed to make it easier to report issues on mobile devices by using larger and more significant touch targets, auto-filling the date and time, and remembering the name, email, and phone number fields so that the user has less actions to perform in order to submit feedback.

@@ -32,6 +32,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2018-10-18T19:23:08Z
 ---
 
 This app was made in order to determine whether a user is a monkey, a goat, or both, depending on booleans obtained from android's ActivityManager and UserManager.

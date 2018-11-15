@@ -9,6 +9,9 @@ links:
   - name: GitHub
     url: https://github.com/fennifith/TravisAndroidExample
     icon: https://github.com/favicon.ico
+  - name: Issues
+    url: https://github.com/fennifith/TravisAndroidExample/issues
+    icon: /images/ic/bug.svg
   - name: Other
     url: https://choosealicense.com/licenses/other/
     icon: /images/ic/copyright.svg
@@ -23,6 +26,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
+pushed: 2018-11-14T21:20:16Z
 ---
 
 TravisAndroidExample is a sample project demonstrating how to distribute an Android app to GitHub and Play Store releases using [Travis CI](https://travis-ci.com/).

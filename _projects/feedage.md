@@ -26,6 +26,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
+pushed: 2018-09-06T20:41:17Z
 ---
 
 Feedage is a basic "news reader" app that sorts articles from various RSS feeds into categories. This project was created as a final project for my Computer Science class in high school. 

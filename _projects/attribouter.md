@@ -38,6 +38,7 @@ isDocs: true
 isWiki: true
 languages:
   - Java
+pushed: 2018-11-09T20:02:00Z
 ---
 
 Attribouter is a lightweight "about screen" for Android apps, built to allow developers to easily give credit to a project's contributors and open source libraries, while matching the style of their app and saving the largest amount of time and effort possible. It is meant to use GitHub's [REST API](https://developer.github.com/v3/) to fetch and display information about open source projects and contributors, but it allows you to define some or all of its data in its configuration file in your app as well.

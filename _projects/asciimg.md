@@ -26,6 +26,7 @@ isDocs: false
 isWiki: false
 languages:
   - JavaScript
+pushed: 2018-10-18T18:46:53Z
 ---
 
 Asciimg (pronounced _ask-ee-em_) is a command line tool that displays images in ASCII.

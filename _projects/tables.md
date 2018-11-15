@@ -26,6 +26,7 @@ isDocs: false
 isWiki: false
 languages:
   - HTML
+pushed: 2018-08-19T00:27:15Z
 ---
 
 Tables is a simple website that makes a table from an equation

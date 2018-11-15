@@ -33,6 +33,7 @@ isWiki: false
 languages:
   - Go
   - Shell
+pushed: 2018-09-17T19:25:40Z
 ---
 
 AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help me do basic things I should already know.

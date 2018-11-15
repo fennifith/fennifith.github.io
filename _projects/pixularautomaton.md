@@ -26,6 +26,7 @@ isDocs: false
 isWiki: false
 languages:
   - HTML
+pushed: 2018-11-02T01:33:11Z
 ---
 
 This "Pixular Automaton", as it has been called, is a basic [Cellular Automaton](https://en.wikipedia.org/wiki/Cellular_automaton) based on [Conway's Game of Life](http://mathworld.wolfram.com/GameofLife.html). There is no specific purpose for building this website other than to generate a pretty animation from input images, but its inner workings are reasonably complex, so allow me to explain them a little bit.
