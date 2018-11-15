@@ -8,11 +8,6 @@ then
 	export GITHUB_TOKEN=$(cat ~/keys/github.txt)
 fi
 
-rm -r _projects && mkdir _projects
-rm -r _people && mkdir _people
-rm -r _orgs && mkdir _orgs
-rm -rf projects/*/
-
 jekyll build
 
 cd _site/.scripts

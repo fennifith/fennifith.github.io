@@ -42,8 +42,26 @@ try {
 	}).getBody('utf8'));
 
 	for (let i = 0; i < repos.length; i++) {
-		console.log(repos[i].full_name);
 		if (repos[i].description && !repos[i].description.startsWith("(")) {
+			let projectFile = null;
+			try {
+				projectFile = _fs.readFileSync(_path.resolve("../../_projects/" + repos[i].name.toLowerCase() + ".md"), "utf8");
+			} catch (e) {
+				console.log("New project: " + repos[i].full_name);
+			}
+			
+			if (projectFile && repos[i].pushed_at && repos[i].pushed_at.length > 0) {
+				let frontMatter = projectFile.split("---")[1];
+				if (frontMatter && frontMatter.includes("pushed: ")) {
+					let date = new Date(frontMatter.split("pushed: ")[1].split("\n")[0]);
+					let pushDate = new Date(repos[i].pushed_at);
+					if (!isNaN(date) && !isNaN(pushDate) && date >= pushDate) {
+						console.log("Skipping " + repos[i].full_name + " - last push was " + repos[i].pushed_at);
+						continue;
+					}
+				}
+			}
+		
 			let topics = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
 				headers: { 
 					"Accept": "application/vnd.github.mercy-preview+json",
@@ -264,6 +282,7 @@ try {
 				+ "isDocs: " + isDocs + "\n"
 				+ "isWiki: " + isWiki + "\n"
 				+ "languages:\n" + langs
+				+ (repo.pushed_at && repo.pushed_at.length > 0 ? "pushed: " + repo.pushed_at + "\n" : "")
 				+ "---\n\n" + unhighlightize(readme));
 		}
 	}
