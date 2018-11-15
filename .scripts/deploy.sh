@@ -7,8 +7,7 @@ then
 	git config --global user.email "travis@travis-ci.com"
 
 	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER"
-	git remote set-url origin https://${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io.git > /dev/null 2>&1
-	git push origin master --quiet > /dev/null 2>&1
+	git push https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io HEAD:master --quiet > /dev/null 2>&1
 fi
 
 exit 0
