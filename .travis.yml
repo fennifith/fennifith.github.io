@@ -6,11 +6,13 @@ before_install:
 install:
   - bundle install
 script:
-  - jekyll build
+  - ./.scripts/update.sh
+before_deploy:
+  - git status
 deploy:
   provider: script
+  skip_cleanup: true
   script: 
-    - bash ./.scripts/update.sh
-    - bash ./.scripts/deploy.sh
+    - ./.scripts/deploy.sh
   on:
     branch: master

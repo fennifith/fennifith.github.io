@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-git add projects _projects _people _orgs
-git status
-
 if git diff --name-only --cached
 then
 	git config --global user.name "Travis CI"
