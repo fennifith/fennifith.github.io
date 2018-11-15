@@ -2,6 +2,7 @@
 set -e
 
 git add projects _projects _people _orgs
+git status
 
 if git diff --name-only --cached
 then
