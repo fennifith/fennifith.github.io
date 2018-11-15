@@ -29,12 +29,7 @@ function unhighlightize(str) {
 	return str.replace(/(\n{2,})\`{3} *(\n{1,})/g, "$1```nohighlight$2");
 }
 
-let token = null;
-try {
-	token = _fs.readFileSync(_path.join(process.env.HOME, "keys/github.txt"), 'utf8');
-} catch (error) {
-	console.error("No GitHub Token:", error);
-}
+let token = process.env.GITHUB_TOKEN;
 
 try {
 	{% assign github = site.links | where: "title", "github" | first %}

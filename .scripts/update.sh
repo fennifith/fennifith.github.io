@@ -1,5 +1,12 @@
-npm cache clear --force
-git pull
+#!/bin/bash
+set -e
+
+if [ -z "$CI" ] 
+then 
+	npm cache clear --force
+	git pull
+	export GITHUB_TOKEN=$(cat ~/keys/github.txt)
+fi
 
 rm -r _projects && mkdir _projects
 rm -r _people && mkdir _people
@@ -13,14 +20,20 @@ rm -rf node_modules && npm install
 node update.js
 
 rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
-git add ../../_projects ../../projects ../../_people
-git status
+git add ../../_projects ../../projects ../../_people ../../_orgs
 
-trap "kill 0" EXIT
-$(cd ../../ && jekyll serve > /dev/null) &
-
-read -p "[Enter] to commit & push, [Ctrl+C] to cancel."
-git commit -m "Auto-commit: updated pages"
-git push
+if [ -z "$CI" ]
+then
+	git status
+	
+	trap "kill 0" EXIT
+	$(cd ../../ && jekyll serve > /dev/null) &
+	
+	read -p "[Enter] to commit & push, [Ctrl+C] to cancel."
+	git commit -m "Auto-commit: updated pages"
+	git push
+else
+	jekyll build
+fi
 
 exit 0

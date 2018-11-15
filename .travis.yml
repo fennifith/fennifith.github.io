@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 10.8.0
+before_install:
+  - rvm install 2.4.1
+install:
+  - bundle install
+script:
+  - ./.scripts/update.sh
+deploy:
+  provider: script
+  script: bash ./.scripts/deploy.sh
+  on:
+    branch: master
