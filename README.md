@@ -1,5 +1,7 @@
 This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](./scripts/update.js) and [a shell script](./scripts/update.sh) that may be used to update it periodically.
 
+[![Build Status](https://travis-ci.com/fennifith/fennifith.github.io.svg?branch=master)](https://travis-ci.com/fennifith/fennifith.github.io)
+
 ## Building
 
 After cloning the project, run `git submodule init` and `git submodule update` in the root directory to fetch the project's [CSS styles](https://jfenn.me/redirects/?t=github&d=styles), which are stored in a separate repository to simplify versioning (different parts of my site use different versions of the css, so I don't have to worry about things breaking immediately if I change something).
