@@ -18,8 +18,8 @@ links:
   - name: JitPack
     url: https://jitpack.io/#me.jfenn/SunriseSunsetView
     icon: /images/ic/launch.svg
-  - name: SunriseSunsetView.apk (0.0.1 stable)
-    url: https://github.com/fennifith/SunriseSunsetView/releases/download/0.0.1/SunriseSunsetView.apk
+  - name: SunriseSunsetView.apk (0.0.2 stable)
+    url: https://github.com/fennifith/SunriseSunsetView/releases/download/0.0.2/SunriseSunsetView.apk
     icon: /images/ic/download.svg
 contributors:
   - login: fennifith
@@ -29,7 +29,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-11-16T04:51:32Z
+pushed: 2018-11-16T18:18:04Z
 ---
 
 SunriseSunsetView is a lightweight Android view used for displaying and/or editing sunrise and sunset times. This is a part of my efforts to modularize some of the things that I write; it was originally a part of [Alarmio](https://jfenn.me/projects/alarmio), and has been separated into its own library.
@@ -96,4 +96,4 @@ The sunrise and sunset times are passed as milliseconds ranging from 0 to "24 ho
 
 You can set these values by calling `.setDayStart(millis)` and `.setDayEnd(millis)`.
 
-As I am too lazy to write any more documentation, you can see my automated documentation for the view [here](https://jfenn.me/projects/sunrisesunsetview/docs/me/jfenn/sunrisesunsetview/SunriseSunsetView).
+As I am too lazy to write any more documentation, you can see my automated documentation for the view [here](https://jfenn.me/projects/sunrisesunsetview/docs/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView).
