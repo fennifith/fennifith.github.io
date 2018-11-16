@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 10.8.0
 before_install:
-  - if echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "Auto-commit"; then echo "Last commit was made by Travis, exiting..." && exit 0; fi
+  - if [ "$TRAVIS_EVENT_TYPE" !="cron" ] && echo "$TRAVIS_COMMIT_MESSAGE" | grep -F -q "Auto-commit"; then echo "Last commit was made by Travis, exiting..." && exit 0; fii
   - rvm install 2.4.1
 install:
   - bundle install
