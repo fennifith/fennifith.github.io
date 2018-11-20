@@ -1,7 +1,7 @@
 ---
 layout: redirect
 title: twitter
-name: Fennifith
-link: https://twitter.com/Fennifith
+name: fennifith
+link: https://twitter.com/fennifith
 verb: tweet
 ---
