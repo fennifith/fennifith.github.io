@@ -4,7 +4,7 @@ title: AlarmData Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [james](./../../index) > [alarmio](./../index) > [data](./index) > **AlarmData.java**
 
-## [onIdChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L50)
+## [onIdChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L49)
 
 **Type:** `public` `void`
 
@@ -26,7 +26,7 @@ Moves this AlarmData's preferences to another "id".
 
 
 
-## [onRemoved](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L72)
+## [onRemoved](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L71)
 
 **Type:** `public` `void`
 
@@ -47,7 +47,7 @@ Removes this AlarmData's preferences.
 
 
 
-## [getName](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L90)
+## [getName](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L89)
 
 **Type:** `public` `String`
 
@@ -72,7 +72,7 @@ Returns the user-defined "name" of the alarm, defaulting to
 
 
 
-## [isRepeat](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L103)
+## [isRepeat](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L102)
 
 **Type:** `public` `boolean`
 
@@ -93,7 +93,7 @@ or not.
 
 
 
-## [setName](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L118)
+## [setName](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L117)
 
 **Type:** `public` `void`
 
@@ -115,7 +115,7 @@ Sets the user-defined "name" of the alarm.
 
 
 
-## [setTime](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L129)
+## [setTime](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L128)
 
 **Type:** `public` `void`
 
@@ -138,7 +138,7 @@ Change the scheduled alarm time,
 
 
 
-## [setEnabled](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L146)
+## [setEnabled](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L145)
 
 **Type:** `public` `void`
 
@@ -161,7 +161,7 @@ Set whether the alarm is enabled.
 
 
 
-## [setDays](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L161)
+## [setDays](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L160)
 
 **Type:** `public` `void`
 
@@ -185,7 +185,7 @@ and will not repeat.
 
 
 
-## [setVibrate](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L178)
+## [setVibrate](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L177)
 
 **Type:** `public` `void`
 
@@ -207,7 +207,7 @@ Set whether the alarm should vibrate.
 
 
 
-## [hasSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L189)
+## [hasSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L188)
 
 **Type:** `public` `boolean`
 
@@ -227,7 +227,7 @@ Return whether the alarm has a sound or not.
 
 
 
-## [getSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L199)
+## [getSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L198)
 
 **Type:** `@Nullable` `public` `SoundData`
 
@@ -247,7 +247,7 @@ Get the [SoundData](./SoundData) sound specified for the alarm.
 
 
 
-## [setSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L211)
+## [setSound](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L210)
 
 **Type:** `public` `void`
 
@@ -269,7 +269,7 @@ Set the sound that the alarm should make.
 
 
 
-## [getNext](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L223)
+## [getNext](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L222)
 
 **Type:** `@Nullable` `public` `Calendar`
 
@@ -292,7 +292,7 @@ Get the next time that the alarm should wring.
 
 
 
-## [set](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L263)
+## [set](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L262)
 
 **Type:** `public` `Date`
 
@@ -317,7 +317,7 @@ Set the next time for the alarm to ring.
 
 
 
-## [setAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L277)
+## [setAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L276)
 
 **Type:** `private` `void`
 
@@ -340,7 +340,7 @@ Schedule a time for the alarm to ring at.
 
 
 
-## [cancel](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L311)
+## [cancel](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L310)
 
 **Type:** `public` `void`
 
@@ -362,7 +362,7 @@ Cancel the next time for the alarm to ring.
 
 
 
-## [getIntent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L327)
+## [getIntent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/james/alarmio/data/AlarmData.java#L326)
 
 **Type:** `private` `PendingIntent`
 

@@ -20,7 +20,7 @@ isDocs: false
 isWiki: false
 languages:
   - Shell
-pushed: 2018-11-10T20:49:44Z
+pushed: 2018-11-19T22:50:53Z
 ---
 
 These are my dotfiles. You may look, but please do not touch. They bite.
