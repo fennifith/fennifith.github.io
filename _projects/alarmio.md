@@ -41,12 +41,14 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-11-20T20:26:44Z
+pushed: 2018-11-21T15:17:51Z
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).
 
 [![Build Status](https://travis-ci.com/fennifith/Alarmio.svg?branch=master)](https://travis-ci.com/fennifith/Alarmio)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/kgqJ5hM)
+
 
 ## Screenshots
 
