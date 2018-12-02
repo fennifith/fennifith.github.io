@@ -242,32 +242,34 @@ try {
 					_fs.mkdirSync(wikiDir + "/.temp");
 				
 				_clone("https://github.com/" + repo.full_name + ".wiki", wikiDir + "/.temp");
-				_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
-					if (fileName.endsWith(".md")) {
-						let wiki = unhighlightize(_fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8"));
-						if (fileName.startsWith("_")) {
-							_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
-						} else {
-							_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
-								+ "layout: wiki\n"
-								+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
-								+ "languages:\n" + langs
-								+ "---\n\n" + wiki);
-						
-							if (fileName == "Home.md") {
-								isWiki = true;
-								_fs.writeFileSync(wikiDir + "/index.md", "---\n"
+				if (_fs.existsSync(wikiDir + "/.temp")) {
+					_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
+						if (fileName.endsWith(".md")) {
+							let wiki = unhighlightize(_fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8"));
+							if (fileName.startsWith("_")) {
+								_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
+							} else {
+								_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
 									+ "layout: wiki\n"
-									+ "title: " + titleize(repo.name) + " Wiki\n"
+									+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
 									+ "languages:\n" + langs
-									+ "project: " + repo.name.toLowerCase() + "\n"
 									+ "---\n\n" + wiki);
+							
+								if (fileName == "Home.md") {
+									isWiki = true;
+									_fs.writeFileSync(wikiDir + "/index.md", "---\n"
+										+ "layout: wiki\n"
+										+ "title: " + titleize(repo.name) + " Wiki\n"
+										+ "languages:\n" + langs
+										+ "project: " + repo.name.toLowerCase() + "\n"
+										+ "---\n\n" + wiki);
+								}
 							}
 						}
-					}
-				});
-				
-				console.log("Fetched project wiki " + repo.full_name);
+					});
+
+					console.log("Fetched project wiki " + repo.full_name);
+				}
 			}
 			
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
