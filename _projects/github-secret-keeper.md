@@ -16,11 +16,14 @@ contributors:
   - login: HenrikJoreteg
     avatar: https://avatars1.githubusercontent.com/u/67925?v=4
     url: https://github.com/HenrikJoreteg
+  - login: fennifith
+    avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
+    url: https://github.com/fennifith
 isDocs: false
 isWiki: false
 languages:
   - JavaScript
-pushed: 2015-09-15T20:30:09Z
+pushed: 2018-12-06T00:24:32Z
 ---
 
 # github-secret-keeper
