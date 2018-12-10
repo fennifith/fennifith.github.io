@@ -29,7 +29,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-07-26T18:03:08Z
+pushed: 2018-12-10T20:38:09Z
 ---
 
 Asteroid is a simple Android game based on avoiding incoming asteroids. It is made entirely using the Android Canvas API. All in-game graphics are either stored as a vector drawable or drawn during runtime.
