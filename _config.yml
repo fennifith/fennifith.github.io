@@ -1,6 +1,6 @@
 name: James Fenn
 description: James Fenn's portfolio site.
-url: https://jfenn.me
+url: "/"
 baseurl: "/"
 
 collections:
