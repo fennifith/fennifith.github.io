@@ -4,9 +4,9 @@ title: BaseGameActivity Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **BaseGameActivity.java**
 
-# [implements](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L27)
+# [implements](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L28)
 
-**Type:** `public` `abstract` `class` `BaseGameActivity` `extends` `FragmentActivity`
+**Type:** `public` `abstract` `class` `BaseGameActivity` `extends` `AppCompatActivity`
 
 Example base class for games. This implementation takes care of setting up 
 the API client object and managing its lifecycle. Subclasses only need to 
@@ -36,7 +36,7 @@ gets called, otherwise the call will have no effect.
 
 
 
-## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L62)
+## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L63)
 
 **Type:** `protected`
 
@@ -53,7 +53,7 @@ Constructs a BaseGameActivity with default client (GamesClient).
 
 
 
-## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L69)
+## [BaseGameActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L70)
 
 **Type:** `protected`
 
@@ -74,7 +74,7 @@ Constructs a BaseGameActivity with the requested clients.
 
 
 
-## [setRequestedClients](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L80)
+## [setRequestedClients](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/BaseGameActivity.java#L81)
 
 **Type:** `protected` `void`
 

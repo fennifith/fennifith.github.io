@@ -4,7 +4,7 @@ title: SnapshotCoordinator Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **SnapshotCoordinator.java**
 
-# [Snapshots](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L43)
+# [Snapshots](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L45)
 
 **Type:** `public` `class` `SnapshotCoordinator` `implements`
 
@@ -42,7 +42,7 @@ to obtain a PendingResult which will be resolved when the file is ready to be op
 
 
 
-## [getInstance](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L73)
+## [getInstance](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L75)
 
 **Type:** `public` `static` `SnapshotCoordinator`
 
@@ -64,7 +64,7 @@ detect usages that would cause data corruption.
 
 
 
-## [isAlreadyOpen](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L93)
+## [isAlreadyOpen](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L95)
 
 **Type:** `public` `synchronized` `boolean`
 
@@ -89,7 +89,7 @@ operation since it is highly likely that multiple threads are involved via Async
 
 
 
-## [isAlreadyClosing](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L104)
+## [isAlreadyClosing](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L106)
 
 **Type:** `public` `synchronized` `boolean`
 
@@ -114,7 +114,7 @@ operation since it is highly likely that multiple threads are involved via Async
 
 
 
-## [setIsClosing](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L115)
+## [setIsClosing](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L117)
 
 **Type:** `private` `synchronized` `void`
 
@@ -137,7 +137,7 @@ are involved via AsyncTasks.
 
 
 
-## [setClosed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L126)
+## [setClosed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L128)
 
 **Type:** `private` `synchronized` `void`
 
@@ -160,7 +160,7 @@ are involved via AsyncTasks.
 
 
 
-## [setIsOpening](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L141)
+## [setIsOpening](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L143)
 
 **Type:** `private` `synchronized` `void`
 
@@ -183,7 +183,7 @@ are involved via AsyncTasks.
 
 
 
-## [waitForClosed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L153)
+## [waitForClosed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L155)
 
 **Type:** `public` `PendingResult<Result>`
 
@@ -205,7 +205,7 @@ file is not open.
 
 
 
-## [ResultListener](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L446)
+## [ResultListener](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L422)
 
 **Type:** `private` `interface`
 
@@ -222,7 +222,7 @@ Interface to be triggered when a PendingResult is completed.
 
 
 
-# [PendingResult<T>](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L453)
+# [PendingResult<T>](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L429)
 
 **Type:** `private` `class` `CoordinatedPendingResult<T` `extends` `Result>` `extends`
 
@@ -243,7 +243,7 @@ Wrapper of PendingResult so the coordinator class is notified when an operation 
 
 
 
-## [doInBackground](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L610)
+## [doInBackground](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L554)
 
 **Type:** `@Override` `protected` `Void`
 
@@ -279,7 +279,7 @@ on the UI thread.
 
 
 
-## [doInBackground](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L662)
+## [doInBackground](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L591)
 
 **Type:** `@Override` `protected` `Void`
 

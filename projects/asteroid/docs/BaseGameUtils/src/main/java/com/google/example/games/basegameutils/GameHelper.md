@@ -4,7 +4,7 @@ title: GameHelper Documentation
 ---
 #### [.](./../../../../../../../../../index) > [BaseGameUtils](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [google](./../../../index) > [example](./../../index) > [games](./../index) > [basegameutils](./index) > **GameHelper.java**
 
-## [GameHelperListener](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L52)
+## [GameHelperListener](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L54)
 
 **Type:** `public` `interface`
 
@@ -21,7 +21,7 @@ Listener for sign-in success or failure events.
 
 
 
-## [onSignInFailed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L56)
+## [onSignInFailed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L58)
 
 **Type:** `void`
 
@@ -54,7 +54,7 @@ occurred.
 
 
 
-## [onSignInSucceeded](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L78)
+## [onSignInSucceeded](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L80)
 
 **Type:** `void`
 
@@ -71,9 +71,9 @@ Called when sign-in succeeds.
 
 
 
-## [mActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L97)
+## [mActivity](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L99)
 
-**Type:** `Activity`
+**Type:** `AppCompatActivity`
 
 The Activity we are bound to. We need to keep a reference to the Activity 
 because some games methods require an Activity (a Context won't do). We 
@@ -90,7 +90,7 @@ are careful not to leak these references: we release them on onStop().
 
 
 
-## [GameHelper](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L189)
+## [GameHelper](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L191)
 
 **Type:** `public`
 
@@ -113,7 +113,7 @@ method of your Activity.
 
 
 
-## [setMaxAutoSignInAttempts](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L204)
+## [setMaxAutoSignInAttempts](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L206)
 
 **Type:** `public` `void`
 
@@ -137,7 +137,7 @@ startup.
 
 
 
-## [setGamesApiOptions](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L238)
+## [setGamesApiOptions](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L240)
 
 **Type:** `public` `void`
 
@@ -155,7 +155,7 @@ setup().
 
 
 
-## [setPlusApiOptions](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L247)
+## [setPlusApiOptions](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L249)
 
 **Type:** `public` `void`
 
@@ -173,7 +173,7 @@ setup().
 
 
 
-## [createApiClientBuilder](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L256)
+## [createApiClientBuilder](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L258)
 
 **Type:** `public` `GoogleApiClient.Builder`
 
@@ -193,7 +193,7 @@ GoogleApiClient.Builder before calling @link{#setup}.
 
 
 
-## [setup](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L292)
+## [setup](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L294)
 
 **Type:** `public` `void`
 
@@ -217,7 +217,7 @@ method of your Activity.
 
 
 
-## [getApiClient](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L319)
+## [getApiClient](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L321)
 
 **Type:** `public` `GoogleApiClient`
 
@@ -235,7 +235,7 @@ must have called @link{setup}.
 
 
 
-## [isSignedIn](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L331)
+## [isSignedIn](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L333)
 
 **Type:** `public` `boolean`
 
@@ -252,7 +252,7 @@ Returns whether or not the user is signed in.
 
 
 
-## [isConnecting](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L338)
+## [isConnecting](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L340)
 
 **Type:** `public` `boolean`
 
@@ -269,7 +269,7 @@ Returns whether or not we are currently connecting
 
 
 
-## [hasSignInError](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L345)
+## [hasSignInError](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L347)
 
 **Type:** `public` `boolean`
 
@@ -287,7 +287,7 @@ sign-in process.
 
 
 
-## [getSignInError](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L353)
+## [getSignInError](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L355)
 
 **Type:** `public` `SignInFailureReason`
 
@@ -305,7 +305,7 @@ error occurred.
 
 
 
-## [onStart](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L366)
+## [onStart](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L368)
 
 **Type:** `public` `void`
 
@@ -322,7 +322,7 @@ Call this method from your Activity's onStart().
 
 
 
-## [onStop](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L397)
+## [onStop](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L394)
 
 **Type:** `public` `void`
 
@@ -339,7 +339,7 @@ Call this method from your Activity's onStop().
 
 
 
-## [getInvitationId](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L416)
+## [getInvitationId](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L413)
 
 **Type:** `public` `String`
 
@@ -363,7 +363,7 @@ case, accept the invitation.
 
 
 
-## [getInvitation](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L434)
+## [getInvitation](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L431)
 
 **Type:** `public` `Invitation`
 
@@ -387,7 +387,7 @@ case, accept the invitation.
 
 
 
-## [getTurnBasedMatch](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L476)
+## [getTurnBasedMatch](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L473)
 
 **Type:** `public` `TurnBasedMatch`
 
@@ -410,7 +410,7 @@ match available.
 
 
 
-## [getRequests](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L493)
+## [getRequests](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L490)
 
 **Type:** `public` `ArrayList<GameRequest>`
 
@@ -434,7 +434,7 @@ handled.
 
 
 
-## [enableDebugLog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L511)
+## [enableDebugLog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L508)
 
 **Type:** `public` `void`
 
@@ -451,7 +451,7 @@ Enables debug logging
 
 
 
-## [signOut](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L528)
+## [signOut](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L525)
 
 **Type:** `public` `void`
 
@@ -468,7 +468,7 @@ Sign out and disconnect from the APIs.
 
 
 
-## [onActivityResult](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L559)
+## [onActivityResult](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L556)
 
 **Type:** `public` `void`
 
@@ -487,7 +487,7 @@ process, processes it appropriately.
 
 
 
-## [beginUserInitiatedSignIn](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L635)
+## [beginUserInitiatedSignIn](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L632)
 
 **Type:** `public` `void`
 
@@ -507,7 +507,7 @@ onSignInSucceeded() or onSignInFailed() methods will be called.
 
 
 
-## [reconnectClient](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L697)
+## [reconnectClient](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L694)
 
 **Type:** `public` `void`
 
@@ -524,7 +524,7 @@ Disconnects the API client, then connects again.
 
 
 
-## [onConnected](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L711)
+## [onConnected](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L708)
 
 **Type:** `@Override` `public` `void`
 
@@ -541,7 +541,7 @@ Called when we successfully obtain a connection to a client.
 
 
 
-## [onConnectionFailed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L788)
+## [onConnectionFailed](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L785)
 
 **Type:** `@Override` `public` `void`
 
@@ -558,7 +558,7 @@ Handles a connection failure.
 
 
 
-## [resolveConnectionResult](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L846)
+## [resolveConnectionResult](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L843)
 
 **Type:** `void`
 
@@ -577,7 +577,7 @@ necessary for sign-in to work.
 
 
 
-## [giveUp](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L899)
+## [giveUp](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L896)
 
 **Type:** `void`
 
@@ -598,7 +598,7 @@ new version, etc).
 
 
 
-## [onConnectionSuspended](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L921)
+## [onConnectionSuspended](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L918)
 
 **Type:** `@Override` `public` `void`
 
@@ -615,7 +615,7 @@ Called when we are disconnected from the Google API client.
 
 
 
-## [showFailureDialog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L948)
+## [showFailureDialog](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L945)
 
 **Type:** `public` `static` `void`
 
