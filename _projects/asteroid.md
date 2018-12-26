@@ -18,8 +18,8 @@ links:
   - name: Google Play
     url: https://play.google.com/store/apps/details?id=james.asteroid
     icon: /images/ic/play-store.svg
-  - name: app-release.apk (v1.2 stable)
-    url: https://github.com/fennifith/Asteroid/releases/download/v1.2/app-release.apk
+  - name: app-release.apk (1.3 stable)
+    url: https://github.com/fennifith/Asteroid/releases/download/1.3/app-release.apk
     icon: /images/ic/download.svg
 contributors:
   - login: fennifith
@@ -32,7 +32,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-12-24T19:13:40Z
+pushed: 2018-12-26T17:47:27Z
 ---
 
 # Asteroid
