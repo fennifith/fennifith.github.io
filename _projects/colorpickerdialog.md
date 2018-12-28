@@ -32,7 +32,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-11-21T15:19:21Z
+pushed: 2018-12-26T20:23:39Z
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.
