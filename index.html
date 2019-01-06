@@ -62,9 +62,8 @@ permalink: /
 	<div page="blog">
 		<p>
 			These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post often,
-			as it takes quite a while to write these posts, but you may subscribe for updates by entering your email in the form below.
+			as it takes quite a while to write these posts, but you can subscribe for updates through <a href="http://feeds.feedburner.com/fennifith">Feedburner</a>.
 		</p>
-		{% include feedform.html feed="fennifith" title="Want to receive updates when I publish a blog post?" %}
 		<h2>Posts</h2>
 		<p>
 			{% for blog in site.blogs reversed %}
@@ -94,7 +93,6 @@ permalink: /
 			</div>
 		</filter>
 		<br>
-		{% include feedform.html feed="fennifith-projects" title="Want to receive updates when I publish a new project?" %}
 		<div id="projectsCategories" class="categories">
 			{% assign types = site.types | sort: "order" %}
 			{% for type in types %}
