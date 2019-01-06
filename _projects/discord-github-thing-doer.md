@@ -23,7 +23,7 @@ isDocs: false
 isWiki: false
 languages:
   - JavaScript
-pushed: 2018-12-27T03:33:46Z
+pushed: 2019-01-05T19:52:20Z
 ---
 
 The `discord-github-thing-doer` is a WIP Discord bot that does github-related things. It is primarily for personal use, but I'm open-sourcing it because... why not. You can see it in action in the Discord server below.
