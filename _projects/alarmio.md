@@ -18,8 +18,11 @@ links:
   - name: Google Play
     url: https://play.google.com/apps/testing/james.alarmio
     icon: /images/ic/play-store.svg
-  - name: app-release.apk (0.9.1 stable)
-    url: https://github.com/fennifith/Alarmio/releases/download/0.9.1/app-release.apk
+  - name: app-release.apk (0.8 unstable)
+    url: https://github.com/fennifith/Alarmio/releases/download/0.8/app-release.apk
+    icon: /images/ic/download.svg
+  - name: output.json (0.8 unstable)
+    url: https://github.com/fennifith/Alarmio/releases/download/0.8/output.json
     icon: /images/ic/download.svg
 contributors:
   - login: fennifith
@@ -39,7 +42,7 @@ isWiki: false
 languages:
   - Java
   - Shell
-pushed: 2019-01-06T17:34:53Z
+pushed: 2019-01-06T20:34:25Z
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).
