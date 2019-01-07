@@ -81,7 +81,7 @@ public class MyWedge extends Wedge<MyWedge.MyViewHolder> {
 
 ## GitHub Requests
 
-If you wish to make a request to the GitHub API from your wedge, simply call `addRequest(GitHubData)` with an instance of one of the [classes extending GitHubData](../tree/master/attribouter/src/main/java/me/jfenn/attribouter/data/github/), or you can create your own. Thanks to [GSON](https://github.com/google/gson)'s magic, this is ridiculously simple, and if you've gotten this far you can probably figure it out yourself just by looking at the source code.
+If you wish to make a request to the GitHub API from your wedge, simply call `addRequest(GitHubData)` with an instance of one of the [classes extending GitHubData](https://jfenn.me/redirects/?t=github&d=Attribouter/tree/91ff71a11338cc501c332b82ba8ddd6fa042bd24/attribouter/src/main/java/me/jfenn/attribouter/data/github), or you can create your own. Thanks to [GSON](https://github.com/google/gson)'s magic, this is ridiculously simple, and if you've gotten this far you can probably figure it out yourself just by looking at the source code.
 
 After calling `addRequest()` with an instance of `GitHubData`, Attribouter will obtain and parse the data itself (as well as caching, combining duplicate requests, and other complicated things), and will pass it back to the `onInit(GitHubData)` method - which you should probably extend - of your wedge class, where you can modify any of your wedge's data with the information you have obtained. Once `onInit` has been called, Attribouter will notify the RecyclerView of a change to your wedge, and you wedge's `bind()` method will be called shortly afterwards.
 

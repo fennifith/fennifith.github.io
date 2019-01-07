@@ -41,12 +41,14 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-12-27T03:34:54Z
+  - Shell
+pushed: 2019-01-06T20:34:25Z
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).
 
 [![Build Status](https://travis-ci.com/fennifith/Alarmio.svg?branch=master)](https://travis-ci.com/fennifith/Alarmio)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e214b14f27464ce39a24539fc0ca27a5)](https://www.codacy.com/app/fennifith/Alarmio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Alarmio&amp;utm_campaign=Badge_Grade)
 [![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/kgqJ5hM)
 
 
@@ -55,6 +57,16 @@ Alarmio is a simple alarm clock that implements many useful features while follo
 |Home|Alarms|Timers|Themes|Ringing|
 |-----|-----|-----|-----|-----|
 |![img](https://raw.githubusercontent.com/fennifith/Alarmio/master/./.github/images/home.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Alarmio/master/./.github/images/alarms.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Alarmio/master/./.github/images/timers.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Alarmio/master/./.github/images/themes.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Alarmio/master/./.github/images/alert.gif?raw=true)|
+
+## Installation
+
+The app is published on Google Play:
+
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+    alt="Get it on Google Play"
+    height="80">](https://play.google.com/store/apps/details?id=james.alarmio)
+
+Alternatively, you can download the latest APK from [the GitHub releases](https://github.com/fennifith/Alarmio/blob/master/../../releases/).
 
 ## Contributing & Build Instructions
 
