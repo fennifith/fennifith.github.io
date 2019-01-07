@@ -36,7 +36,7 @@ MTJC separates the provided markdown file into "cells", looking for headers and 
 
 When a code block is encountered, it writes the code to a file in .temp (relative to the folder it is run in), passes it to the relevant program to run, and stores the result.
 
-For demonstration purposes, here is a sample [markdown file](./test-python.md) and the [notebook](./test-python.ipynb) output from the program as a result.
+For demonstration purposes, here is a sample [markdown file](https://github.com/fennifith/MarkdownToJupyter/blob/master/./test-python.md) and the [notebook](https://github.com/fennifith/MarkdownToJupyter/blob/master/./test-python.ipynb) output from the program as a result.
 
 ## Limitations
 

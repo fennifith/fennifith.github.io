@@ -44,7 +44,7 @@ Asteroid is a simple Android game about avoiding incoming asteroids. It is made 
 
 |Main Screen|Gameplay|
 |--------|--------|
-|![img](https://raw.githubusercontent.com/fennifith/Asteroid/master/./.github/main.png)|![img](https://raw.githubusercontent.com/fennifith/Asteroid/master/./.github/gameplay.png)|
+|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/main.png)|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/gameplay.png)|
 
 ## Install
 

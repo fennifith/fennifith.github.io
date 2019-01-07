@@ -38,7 +38,7 @@ RadialLayout is a scrollable-ish view that arranges images in circles extending 
 
 |With Shadows|Without Shadows|GIF (pronounced "jeff")|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/shadows.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/noshadows.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/RadialLayout/master/./images/jeff.gif?raw=true)|
+|![img](https://github.com/fennifith/RadialLayout/blob/master/./images/shadows.png?raw=true)|![img](https://github.com/fennifith/RadialLayout/blob/master/./images/noshadows.png?raw=true)|![img](https://github.com/fennifith/RadialLayout/blob/master/./images/jeff.gif?raw=true)|
 
 ## Usage
 

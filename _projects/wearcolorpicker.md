@@ -35,7 +35,7 @@ WearColorPicker is lightweight color picker library for Android Wear.
 
 |Square Watch|Round Watch|
 |--------|--------|
-|![img](https://raw.githubusercontent.com/fennifith/WearColorPicker/master/./.github/images/square.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/WearColorPicker/master/./.github/images/round.png?raw=true)|
+|![img](https://github.com/fennifith/WearColorPicker/blob/master/./.github/images/square.png?raw=true)|![img](https://github.com/fennifith/WearColorPicker/blob/master/./.github/images/round.png?raw=true)|
 
 ## Usage
 

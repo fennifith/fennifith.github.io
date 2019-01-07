@@ -36,7 +36,7 @@ Bagels is a live wallpaper that blurs the screen after a period of time without 
 
 |Bagels|More Bagels|
 |--------|--------|
-|![img](https://raw.githubusercontent.com/fennifith/Bagels/master/./.github/images/bagels.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Bagels/master/./.github/images/blurred.png?raw=true)|
+|![img](https://github.com/fennifith/Bagels/blob/master/./.github/images/bagels.png?raw=true)|![img](https://github.com/fennifith/Bagels/blob/master/./.github/images/blurred.png?raw=true)|
 
 ## License
 

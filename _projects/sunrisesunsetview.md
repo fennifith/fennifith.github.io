@@ -40,7 +40,7 @@ For testing and experimentation purposes, a sample apk can be downloaded [here](
 
 |A Screenshot|
 |-----|
-|![img](https://raw.githubusercontent.com/fennifith/SunriseSunsetView/master/./.github/images/screenshot.png?raw=true)|
+|![img](https://github.com/fennifith/SunriseSunsetView/blob/master/./.github/images/screenshot.png?raw=true)|
 
 ## Usage
 

@@ -15,7 +15,7 @@ links:
   - name: Apache License 2.0
     url: https://choosealicense.com/licenses/apache-2.0/
     icon: /images/ic/copyright.svg
-  - name: HackNA 2019
+  - name: 
     url: http://hackna.org/
     icon: https://hackna.org/favicon.ico
 contributors:
@@ -39,4 +39,4 @@ The slideshow presentation associated with this project can be viewed [here](htt
 
 | Add A Note | View Notes | Remove A Note |
 |------------|------------|---------------|
-|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/new.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/list.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/HackNA-Notes/master/./.github/images/remove.png?raw=true)|
+|![img](https://github.com/fennifith/HackNA-Notes/blob/master/./.github/images/new.png?raw=true)|![img](https://github.com/fennifith/HackNA-Notes/blob/master/./.github/images/list.png?raw=true)|![img](https://github.com/fennifith/HackNA-Notes/blob/master/./.github/images/remove.png?raw=true)|

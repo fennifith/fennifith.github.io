@@ -44,7 +44,7 @@ For testing and experimentation purposes, a sample apk can be downloaded [here](
 
 |Color Picker|No Alpha|Dark Theme|
 |--------|--------|--------|
-|![img](https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/picker.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/noalpha.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/darktheme.png?raw=true)|
+|![img](https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/picker.png?raw=true)|![img](https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/noalpha.png?raw=true)|![img](https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/darktheme.png?raw=true)|
 
 ## Usage
 

@@ -31,7 +31,7 @@ languages:
 pushed: 2018-10-23T19:25:51Z
 ---
 
-![Quicksilver](https://github.com/fennifith/quicksilver/blob/master/.mages/qs.png)
+![Quicksilver](images/qs.png)
 
 # Quicksilver
 A free, simple, (mostly) material-design template for the web.

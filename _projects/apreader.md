@@ -44,10 +44,10 @@ Disclaimer: This app is not an official Android Police client. It was made by a 
 
 |Home Screen|Article Screen|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/fennifith/APReader/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/APReader/master/./.github/images/article.png?raw=true)|
+|![img](https://github.com/fennifith/APReader/blob/master/./.github/images/main.png?raw=true)|![img](https://github.com/fennifith/APReader/blob/master/./.github/images/article.png?raw=true)|
 
 ### Wear OS
 
 |Home Screen|Article Screen|
 |-----|-----|
-|![img](./.github/images/wear-main.png?raw=true)|![img](./.github/images/wear-article.png?raw=true)|
+|![img](https://github.com/fennifith/APReader/blob/master/./.github/images/wear-main.png?raw=true)|![img](https://github.com/fennifith/APReader/blob/master/./.github/images/wear-article.png?raw=true)|

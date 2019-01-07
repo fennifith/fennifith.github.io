@@ -32,7 +32,7 @@ The `discord-github-thing-doer` is a WIP Discord bot that does github-related th
 
 | GitHub   | Travis   |
 |----------|----------|
-| ![GitHub Discord Logo](https://github.com/fennifith/discord-github-thing-doer/blob/master/./.github/logo.png?raw=true) | ![Travis Discord Logo](./.github/travis-logo.png?raw=true) |
+| ![GitHub Discord Logo](https://github.com/fennifith/discord-github-thing-doer/blob/master/./.github/logo.png?raw=true) | ![Travis Discord Logo](https://github.com/fennifith/discord-github-thing-doer/blob/master/./.github/travis-logo.png?raw=true) |
 
 ^ `github-thing-doer`'s awesome logo by [rjt](https://twitter.com/rjt_rockx) (Travis variant by me)
 

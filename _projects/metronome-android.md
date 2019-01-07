@@ -39,4 +39,4 @@ Metronome is a lightweight, well designed metronome app for Android focused on o
 
 | Home   | About  | Themes |
 |--------|--------|--------|
-|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/about.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Metronome-Android/master/./.github/images/theme.png?raw=true)|
+|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/main.png?raw=true)|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/about.png?raw=true)|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/theme.png?raw=true)|

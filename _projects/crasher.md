@@ -38,7 +38,7 @@ pushed: 2018-11-13T20:58:42Z
 
 |Main Screen|Somewhat Unnecessary Proof of StackOverflow|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/fennifith/Crasher/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Crasher/master/./.github/images/stackoverflow.png?raw=true)|
+|![img](https://github.com/fennifith/Crasher/blob/master/./.github/images/main.png?raw=true)|![img](https://github.com/fennifith/Crasher/blob/master/./.github/images/stackoverflow.png?raw=true)|
 
 ## Usage
 

@@ -74,12 +74,12 @@ asciimg <image> --usergb
 The 'test.png' included in the repository is over 4000000 pixels in size, so it will take a while for the tool to convert it. Here are screenshots of the result of that and a few other images:
 
 ### My Profile Picture
-![img](https://raw.githubusercontent.com/fennifith/Asciimg/master/./.github/images/me.png?raw=true)
+![img](https://github.com/fennifith/Asciimg/blob/master/./.github/images/me.png?raw=true)
 
 ### A Fidget Spinner
 Why not.
 
-![img](https://raw.githubusercontent.com/fennifith/Asciimg/master/./.github/images/fidgetspinner.png?raw=true)
+![img](https://github.com/fennifith/Asciimg/blob/master/./.github/images/fidgetspinner.png?raw=true)
 
 ### The Top Half of a Samsung Galaxy S2
-![img](./.github/images/galaxys2.png?raw=true)
+![img](https://github.com/fennifith/Asciimg/blob/master/./.github/images/galaxys2.png?raw=true)

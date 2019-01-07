@@ -40,7 +40,7 @@ For testing and experimentation purposes, a sample apk can be downloaded [here](
 
 |Sample App|Use in Alarmio|
 |------|------|
-|![img](https://raw.githubusercontent.com/fennifith/SlideActionView/master/./.github/images/sample.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/SlideActionView/master/./.github/images/alert.gif?raw=true)|
+|![img](https://github.com/fennifith/SlideActionView/blob/master/./.github/images/sample.png?raw=true)|![img](https://github.com/fennifith/SlideActionView/blob/master/./.github/images/alert.gif?raw=true)|
 
 ## Usage
 

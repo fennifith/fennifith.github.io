@@ -285,11 +285,11 @@ Read the [**contribution guide**](.github/CONTRIBUTING.md) for more detailed inf
 
 | Feeds | Drawer |
 |:-:|:-:|
-| ![First](https://github.com/fennifith/FastHub/blob/master/..github/assets/first.png?raw=true) | ![Sec](https://github.com/fennifith/FastHub/blob/master/..github/assets/sec.png?raw=true) |
+| ![First](/.github/assets/first.png?raw=true) | ![Sec](/.github/assets/sec.png?raw=true) |
 
 | Repo | Profile |
 |:-:|:-:|
-| ![Third](https://github.com/fennifith/FastHub/blob/master/..github/assets/third.png?raw=true) | ![Fourth](https://github.com/fennifith/FastHub/blob/master/..github/assets/fourth.png?raw=true) |
+| ![Third](/.github/assets/third.png?raw=true) | ![Fourth](/.github/assets/fourth.png?raw=true) |
 
 ## FastHub Logo
 

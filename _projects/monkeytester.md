@@ -43,4 +43,4 @@ According to the android developer documentation, if you are a monkey it means t
 
 |Main Screen|Dialog|
 |-----|-----|
-|![img](https://raw.githubusercontent.com/fennifith/MonkeyTester/master/./.github/images/main.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/MonkeyTester/master/./.github/images/dialog.png?raw=true)|
+|![img](https://github.com/fennifith/MonkeyTester/blob/master/./.github/images/main.png?raw=true)|![img](https://github.com/fennifith/MonkeyTester/blob/master/./.github/images/dialog.png?raw=true)|

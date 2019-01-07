@@ -44,7 +44,7 @@ This app serves as a native Android notification client for [cronhub.io](https:/
 
 |Login Screen|Interface|Notification|
 |-----|-----|-----|
-|![img](https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/./.github/images/login.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/./.github/images/interface.png?raw=true)|![img](https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/./.github/images/notification.png?raw=true)|
+|![img](https://github.com/fennifith/Cronhub-Monitor/blob/master/./.github/images/login.png?raw=true)|![img](https://github.com/fennifith/Cronhub-Monitor/blob/master/./.github/images/interface.png?raw=true)|![img](https://github.com/fennifith/Cronhub-Monitor/blob/master/./.github/images/notification.png?raw=true)|
 
 ## Contributing
 
