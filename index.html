@@ -103,16 +103,18 @@ permalink: /
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
 					<a class="item item--box" href="{{ project.url }}">
-						<span class="item__title">{{ project.title }}</span>
-						{{ project.description }}
+						<div class="link">
+							<img class="link__img{% if project.meta %} link__img--color{% endif %}" src="{% if project.meta %}https://raw.githubusercontent.com/{{ project.repo }}/master/{{ project.meta.icon }}{% else %}/images/ic/launch.svg{% endif %}">
+							<h3 class="link__title item__title">{{ project.title }}</h3>
+						</div>
 						{% if project.meta %}
-						<br><br>
-						<div class="pager">
+						<br><div class="pager">
 							{% for screenshot in project.meta.screenshots %}
 							<img class="pager__item" src="https://raw.githubusercontent.com/{{ project.repo }}/master/{{ screenshot }}">
 							{% endfor %}
-						</div>
+						</div><br>
 						{% endif %}
+						{{ project.description }}
 					</a>
 					{% endfor %}
 				</div>
