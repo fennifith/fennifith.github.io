@@ -14,6 +14,7 @@ const _path = require("path");
 const _fs = require('fs');
 const _request = require('sync-request');
 const _cheerio = require('cheerio');
+const _yaml = require('js-yaml');
 const _clone = require('git-clone-sync');
 const _javadoc = require('mdjavadoc-api');
 
@@ -186,13 +187,18 @@ try {
 
 			let meta = null;
 			try {
-				meta = _request('GET', "https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml", {
+				meta = _yaml.safeLoad(_request('GET', "https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml", {
 					headers: { 
 						"User-Agent": "{{ github.name }}.github.io",
 						"Authorization": token ? "token " + token : null
 					}
-				}).getBody('utf8');
+				}).getBody('utf8'));
 			} catch (e) {}
+
+			let screenshots = "";
+			for (let i2 = 0; meta && meta.screenshots && i2 < meta.screenshots.length; i2++) {
+				screenshots += "  - \"https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.screenshots[i2] + "\"\n";
+			}
 
 			let people = "";
 			for (let i2 = 0; i2 < contributors.length; i2++) {
@@ -284,6 +290,7 @@ try {
 				+ "type: " + type + "\n"
 				+ "title: \"" + (repo.fork && repo.parent ? repo.parent.full_name : titleize(repo.name)) + "\"\n"
 				+ (repo.description ? "description: " + safestrize(repo.description.split(":").join("&#58;")) + "\n" : "")
+				+ (meta && meta.icon ? "icon: \"https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.icon + "\"\n" : "")
 				+ "repo: " + repo.full_name + "\n"
 				+ "git: " + repo.git_url + "\n"
 				+ "links:\n" + links
@@ -291,7 +298,7 @@ try {
 				+ "isDocs: " + isDocs + "\n"
 				+ "isWiki: " + isWiki + "\n"
 				+ "languages:\n" + langs
-				+ (meta ? "meta:\n  " + meta.replace(/\n/g, "\n  ") + "\n" : "")
+				+ (screenshots.length > 0 ? "screenshots:\n" + screenshots : "")
 				+ (repo.pushed_at && repo.pushed_at.length > 0 ? "pushed: " + repo.pushed_at + "\n" : "")
 				+ "---\n\n" + unhighlightize(readme));
 		}

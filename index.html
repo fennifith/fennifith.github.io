@@ -67,7 +67,7 @@ permalink: /
 		<h2>The Blogs</h2>
 		<p>
 			{% for blog in site.blogs reversed %}
-			<a class="item item--box" href="{{ site.baseurl }}{{ blog.url }}">
+			<a class="item item--box" href="{{ blog.url }}">
 				<span class="item__title">{{ blog.title }}</span>
 				{{ blog.description }}<br><br>
 				<small>{{ blog.date | date: "%B %e %Y" }}</small>
@@ -103,7 +103,7 @@ permalink: /
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
 					<a class="item item--box" href="{{ project.url }}">
-						<img class="item--box__img" src="{% if project.meta %}https://raw.githubusercontent.com/{{ project.repo }}/master/{{ project.meta.icon }}{% else %}/images/ic/launch.svg{% endif %}">
+						<img class="item--box__img{% unless project.icon %} link__img{% endunless %}" src="{% if project.icon %}{{ project.icon }}{% else %}/images/ic/code.svg{% endif %}">
 						<span class="item__title">{{ project.title }}</span>
 						{{ project.description }}
 					</a>
@@ -156,7 +156,7 @@ permalink: /
 			the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
 			how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
 			because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
-			to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be farther from the truth.
+			to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be further from the truth.
 			Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
 			form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
 			I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
