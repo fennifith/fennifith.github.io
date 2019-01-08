@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Wear Locker"
 description: "A basic lock screen that prevents accidental touches on Android Wear 2.0."
+icon: "https://raw.githubusercontent.com/fennifith/WearLocker/master/wear/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
 repo: fennifith/WearLocker
 git: git://github.com/fennifith/WearLocker.git
 links:
@@ -29,7 +30,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
-pushed: 2017-04-09T20:37:22Z
+pushed: 2019-01-08T23:08:19Z
 ---
 
 # WearLocker

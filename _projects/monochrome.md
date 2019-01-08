@@ -3,6 +3,7 @@ layout: project
 type: android-game
 title: "Monochrome"
 description: "A monochromatic pixelated adventure game."
+icon: "https://raw.githubusercontent.com/fennifith/Monochrome/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/Monochrome
 git: git://github.com/fennifith/Monochrome.git
 links:
@@ -29,7 +30,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-08-19T00:21:15Z
+pushed: 2019-01-08T23:10:51Z
 ---
 
 Monochrome is a monochromatic pixelated game that doesn't have a purpose. It doesn't have a purpose because it hasn't been finished yet. No, that's not a part of the plot, it actually hasn't been finished. It doesn't have a plot. I need to think of one.

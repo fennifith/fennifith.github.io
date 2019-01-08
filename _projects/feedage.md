@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Feedage"
 description: "A basic \"news reader\" that sorts posts from various RSS feeds into categories."
+icon: "https://raw.githubusercontent.com/fennifith/Feedage/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/Feedage
 git: git://github.com/fennifith/Feedage.git
 links:
@@ -26,7 +27,11 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-09-06T20:41:17Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/Feedage/master/.github/images/categories.png"
+  - "https://raw.githubusercontent.com/fennifith/Feedage/master/.github/images/article.png"
+  - "https://raw.githubusercontent.com/fennifith/Feedage/master/.github/images/about.png"
+pushed: 2019-01-08T04:11:09Z
 ---
 
 Feedage is a basic "news reader" app that sorts articles from various RSS feeds into categories. This project was created as a final project for my Computer Science class in high school. 
@@ -35,7 +40,7 @@ Feedage is a basic "news reader" app that sorts articles from various RSS feeds 
 
 |Categories|Article|About|
 |-----|-----|-----|
-|![img](https://github.com/fennifith/Feedage/blob/master/./screenshots/categories.png?raw=true)|![img](https://github.com/fennifith/Feedage/blob/master/./screenshots/article.png?raw=true)|![img](https://github.com/fennifith/Feedage/blob/master/./screenshots/about.png?raw=true)|
+|![img](https://github.com/fennifith/Feedage/blob/master/./.github/images/categories.png?raw=true)|![img](https://github.com/fennifith/Feedage/blob/master/./.github/images/article.png?raw=true)|![img](https://github.com/fennifith/Feedage/blob/master/./.github/images/about.png?raw=true)|
 
 ## Contributing
 

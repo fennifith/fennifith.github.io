@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Status"
 description: "A no-root status bar replacement for Android."
+icon: "https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
 repo: fennifith/Status
 git: git://github.com/fennifith/Status.git
 links:
@@ -35,7 +36,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2019-01-06T16:21:29Z
+pushed: 2019-01-08T23:06:36Z
 ---
 
 > **A message from the idiot that wrote this program:**

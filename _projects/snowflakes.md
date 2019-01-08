@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Snowflakes"
 description: "Make it rain! Or um... snow."
+icon: "https://raw.githubusercontent.com/fennifith/Snowflakes/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
 repo: fennifith/Snowflakes
 git: git://github.com/fennifith/Snowflakes.git
 links:
@@ -26,7 +27,7 @@ isDocs: false
 isWiki: false
 languages:
   - Java
-pushed: 2017-11-14T19:00:17Z
+pushed: 2019-01-08T23:04:41Z
 ---
 
 Snowflakes was once published on the Play Store as a completely useless app that made snowflakes appear whenever the screen changed, but it has now been removed as a result of [this really annoying thing](https://www.reddit.com/r/Android/comments/7c4go5/is_google_play_really_going_to_suspend_all_apps/), and will not be re-uploaded.

@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Port Authority Complaint Reporter"
 description: "A small application to make it easier for riders to report issues to the Pittsburgh Port Authority bus system."
+icon: "https://raw.githubusercontent.com/fennifith/PortAuthorityComplaintReporter/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/PortAuthorityComplaintReporter
 git: git://github.com/fennifith/PortAuthorityComplaintReporter.git
 links:
@@ -29,11 +30,16 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-08-07T22:34:46Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/PortAuthorityComplaintReporter/master/.github/images/input-1.png"
+  - "https://raw.githubusercontent.com/fennifith/PortAuthorityComplaintReporter/master/.github/images/input-2.png"
+  - "https://raw.githubusercontent.com/fennifith/PortAuthorityComplaintReporter/master/.github/images/preview.png"
+  - "https://raw.githubusercontent.com/fennifith/PortAuthorityComplaintReporter/master/.github/images/about.png"
+pushed: 2019-01-08T16:35:06Z
 ---
 
 The Port Authority Feedback Reporter is a small application to make it easier for bus riders in Pittsburgh, PA to report incedents on the Port Authority bus system (such as missing / damaged bike racks - the main reason for creating this app). It works by scraping & injecting javascript into [this page](http://www.portauthority.org/paac/apps/webcomments/pgcomment.asp?t=con), and is designed to make it easier to report issues on mobile devices by using larger and more significant touch targets, auto-filling the date and time, and remembering the name, email, and phone number fields so that the user has less actions to perform in order to submit feedback.
 
 |Input|Input|Preview|About (using [Attribouter](https://jfenn.me/about/?Attribouter)|
 |-----|-----|-----|-----|
-|![img](https://jfenn.me/images/screenshots/PAComplainter-Input.png?s=1)|![img](https://jfenn.me/images/screenshots/PAComplainter-Input2.png)|![img](https://jfenn.me/images/screenshots/PAComplainter-Preview.png)|![img](https://jfenn.me/images/screenshots/PAComplainter-About.png)|
+|![img](https://github.com/fennifith/PortAuthorityComplaintReporter/blob/master/./.github/images/input-1.png?raw=true)|![img](https://github.com/fennifith/PortAuthorityComplaintReporter/blob/master/./.github/images/input-2.png?raw=true)|![img](https://github.com/fennifith/PortAuthorityComplaintReporter/blob/master/./.github/images/preview.png?raw=true)|![img](https://github.com/fennifith/PortAuthorityComplaintReporter/blob/master/./.github/images/about.png?raw=true)|

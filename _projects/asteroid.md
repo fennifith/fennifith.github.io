@@ -3,6 +3,7 @@ layout: project
 type: android-game
 title: "Asteroid"
 description: "A simple Android game based on avoiding incoming asteroids"
+icon: "https://raw.githubusercontent.com/fennifith/Asteroid/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/Asteroid
 git: git://github.com/fennifith/Asteroid.git
 links:
@@ -32,7 +33,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-12-26T17:47:27Z
+pushed: 2019-01-08T23:09:51Z
 ---
 
 # Asteroid

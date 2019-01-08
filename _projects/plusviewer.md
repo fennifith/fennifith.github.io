@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Plus Viewer"
 description: "A basic google plus client using a WebView"
+icon: "https://raw.githubusercontent.com/fennifith/PlusViewer/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/PlusViewer
 git: git://github.com/fennifith/PlusViewer.git
 links:
@@ -26,7 +27,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2016-09-14T23:58:03Z
+pushed: 2019-01-08T23:02:00Z
 ---
 
 # PlusViewer

@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Monkey Tester"
 description: "Determines whether a user is a monkey, a goat, or both, based on values obtained from android's ActivityManager and UserManager."
+icon: "https://raw.githubusercontent.com/fennifith/MonkeyTester/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/MonkeyTester
 git: git://github.com/fennifith/MonkeyTester.git
 links:
@@ -32,7 +33,10 @@ isDocs: false
 isWiki: false
 languages:
   - Java
-pushed: 2018-10-18T19:23:08Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/MonkeyTester/master/.github/images/main.png"
+  - "https://raw.githubusercontent.com/fennifith/MonkeyTester/master/.github/images/dialog.png"
+pushed: 2019-01-08T16:28:48Z
 ---
 
 This app was made in order to determine whether a user is a monkey, a goat, or both, depending on booleans obtained from android's ActivityManager and UserManager.

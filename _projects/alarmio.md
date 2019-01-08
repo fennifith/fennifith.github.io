@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Alarmio"
 description: "A simple alarm clock focused on design, readability, and internet radio."
+icon: "https://raw.githubusercontent.com/fennifith/Alarmio/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/Alarmio
 git: git://github.com/fennifith/Alarmio.git
 links:
@@ -42,7 +43,13 @@ isWiki: false
 languages:
   - Java
   - Shell
-pushed: 2019-01-06T20:34:25Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/home.png"
+  - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/alarms.png"
+  - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/timers.png"
+  - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/themes.png"
+  - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/alert.gif"
+pushed: 2019-01-08T13:42:23Z
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).

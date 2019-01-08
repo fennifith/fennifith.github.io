@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "AP Reader"
 description: "A small app that displays Android Police articles without waiting for the website to load."
+icon: "https://raw.githubusercontent.com/fennifith/APReader/master/app/src/main/ic_launcher-web.png"
 repo: fennifith/APReader
 git: git://github.com/fennifith/APReader.git
 links:
@@ -32,7 +33,12 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-10-18T19:10:55Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/APReader/master/.github/images/main.png"
+  - "https://raw.githubusercontent.com/fennifith/APReader/master/.github/images/article.png"
+  - "https://raw.githubusercontent.com/fennifith/APReader/master/.github/images/wear-main.png"
+  - "https://raw.githubusercontent.com/fennifith/APReader/master/.github/images/wear-article.png"
+pushed: 2019-01-08T13:58:30Z
 ---
 
 APReader is small app that displays Android Police articles without waiting for the website to load.

@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Bagels"
 description: "A live wallpaper that blurs the screen after a period of time without any actions."
+icon: "https://raw.githubusercontent.com/fennifith/Bagels/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
 repo: fennifith/Bagels
 git: git://github.com/fennifith/Bagels.git
 links:
@@ -29,7 +30,10 @@ isDocs: false
 isWiki: false
 languages:
   - Java
-pushed: 2018-10-18T19:29:43Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/Bagels/master/.github/images/bagels.png"
+  - "https://raw.githubusercontent.com/fennifith/Bagels/master/.github/images/blurred.png"
+pushed: 2019-01-08T14:00:49Z
 ---
 
 Bagels is a live wallpaper that blurs the screen after a period of time without any actions. It was designed to create a good user experience while using minimal resources and taking up the least amount of space possible. Also, I really like bagels.

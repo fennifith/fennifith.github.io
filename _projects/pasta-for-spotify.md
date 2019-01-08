@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Pasta for Spotify"
 description: "A material design Spotify client for Android"
+icon: "https://raw.githubusercontent.com/fennifith/Pasta-for-Spotify/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
 repo: fennifith/Pasta-for-Spotify
 git: git://github.com/fennifith/Pasta-for-Spotify.git
 links:
@@ -32,7 +33,11 @@ isDocs: false
 isWiki: false
 languages:
   - Java
-pushed: 2018-10-18T19:36:37Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/Pasta-for-Spotify/master/.github/images/splash.png"
+  - "https://raw.githubusercontent.com/fennifith/Pasta-for-Spotify/master/.github/images/home.png"
+  - "https://raw.githubusercontent.com/fennifith/Pasta-for-Spotify/master/.github/images/playing.png"
+pushed: 2019-01-08T16:30:15Z
 ---
 
 Pasta for Spotify is a third party [material design](https://material.google.com/) Spotify client for Android.

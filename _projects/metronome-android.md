@@ -3,6 +3,7 @@ layout: project
 type: android-app
 title: "Metronome Android"
 description: "A lightweight, well designed metronome app for Android."
+icon: "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
 repo: fennifith/Metronome-Android
 git: git://github.com/fennifith/Metronome-Android.git
 links:
@@ -32,7 +33,11 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-12-08T03:41:00Z
+screenshots:
+  - "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/.github/images/main.png"
+  - "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/.github/images/about.png"
+  - "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/.github/images/theme.png"
+pushed: 2019-01-08T16:27:35Z
 ---
 
 Metronome is a lightweight, well designed metronome app for Android focused on offering a consistent and usable design without limiting functionality.
