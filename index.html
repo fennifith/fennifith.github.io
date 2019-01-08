@@ -99,21 +99,12 @@ permalink: /
 			{% for type in types %}
 			<div id="{{ type.tag }}">
 				<h2>{{ type.title }}</h2>
-				<div id="{{ type.tag }}list">
+				<div id="{{ type.tag }}list" class="layout--grid">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
 					<a class="item item--box" href="{{ project.url }}">
-						<div class="link">
-							<img class="link__img{% if project.meta %} link__img--color{% endif %}" src="{% if project.meta %}https://raw.githubusercontent.com/{{ project.repo }}/master/{{ project.meta.icon }}{% else %}/images/ic/launch.svg{% endif %}">
-							<h3 class="link__title item__title">{{ project.title }}</h3>
-						</div>
-						{% if project.meta %}
-						<br><div class="pager">
-							{% for screenshot in project.meta.screenshots %}
-							<img class="pager__item" src="https://raw.githubusercontent.com/{{ project.repo }}/master/{{ screenshot }}">
-							{% endfor %}
-						</div><br>
-						{% endif %}
+						<img class="item--box__img" src="{% if project.meta %}https://raw.githubusercontent.com/{{ project.repo }}/master/{{ project.meta.icon }}{% else %}/images/ic/launch.svg{% endif %}">
+						<span class="item__title">{{ project.title }}</span>
 						{{ project.description }}
 					</a>
 					{% endfor %}
@@ -123,7 +114,7 @@ permalink: /
 		</div>
 	</div>
 	<div page="community">
-		<h2>The Community</h2>
+		<h2>Open Source</h2>
 		<p>
 			I have a strong distaste for projects that purposefully attempt to hide the way that they function from their users.
 			There are many reasons to justify this distaste, but things such as <a href="https://en.wikipedia.org/wiki/Dark_pattern">
@@ -141,12 +132,13 @@ permalink: /
 			in the Discord channel below.
 		</p>
 		<iframe src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="250" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
-		<h4>
+		<h2>The Community</h2>
+		<p>
 			While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
 			have helped me to solve problems and learn new things along the way.
 			<br><br>
 			If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
-		</h4>
+		</p>
 		<div class="layout--grid">
 			{% for person in site.people %}
 			<a class="item item--box" href="{{ person.link }}">
