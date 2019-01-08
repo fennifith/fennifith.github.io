@@ -67,10 +67,10 @@ permalink: /
 		<h2>Posts</h2>
 		<p>
 			{% for blog in site.blogs reversed %}
-			<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+			<a class="item item--box" href="{{ site.baseurl }}{{ blog.url }}">
 				<span class="item__title">{{ blog.title }}</span>
 				{{ blog.description }}<br><br>
-				{{ blog.date | date: "%B %e %Y" }}
+				<small>{{ blog.date | date: "%B %e %Y" }}</small>
 			</a>
 			{% endfor %}
 		</p>
