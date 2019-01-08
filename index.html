@@ -102,9 +102,17 @@ permalink: /
 				<div id="{{ type.tag }}list">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
-					<a class="item" href="{{ project.url }}">
+					<a class="item item--box" href="{{ project.url }}">
 						<span class="item__title">{{ project.title }}</span>
 						{{ project.description }}
+						{% if project.meta %}
+						<br><br>
+						<div class="pager">
+							{% for screenshot in project.meta.screenshots %}
+							<img class="pager__item" src="https://raw.githubusercontent.com/{{ project.repo }}/master/{{ screenshot }}">
+							{% endfor %}
+						</div>
+						{% endif %}
 					</a>
 					{% endfor %}
 				</div>
