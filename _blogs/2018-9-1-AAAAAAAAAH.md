@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: AAAAAAAAAAAAAAAAAAAAAAAHHH
+description: "A small command-line utility I wrote with Go that I had a lot of fun with."
 project: AAH
 ---
 

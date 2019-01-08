@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Hello World
+description: "I made a blog."
 ---
 
 A couple days ago I decided to fulfill my wish to try messing around with a static site generator like [GatsbyJS](https://www.gatsbyjs.org/) or [Jekyll](https://jekyllrb.com/). I also decided that this would be a good opportunity to make myself a blog for the purpose of documenting some more information about my projects that cannot easily be obtained from their GitHub repositories. I had previously considered using [Ghost](https://github.com/TryGhost/Ghost) for this, but as I am in no position to host my own site, I wanted to stick to the static hosting provided by GitHub as much as possible. With this in mind, Jekyll seemed like the perfect choice.

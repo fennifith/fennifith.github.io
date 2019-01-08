@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: CSS Submodules
+description: "How I organize my site's CSS and why."
 project: styles
 links:
   - name: Block Element Modifier

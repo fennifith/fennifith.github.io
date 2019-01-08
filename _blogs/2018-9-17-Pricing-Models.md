@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Pricing Models
+description: "TL;DR - Don't work for free."
 project: Status
 ---
 

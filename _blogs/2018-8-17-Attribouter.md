@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Attribouter
+description: "A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects."
 project: Attribouter
 ---
 

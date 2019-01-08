@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Client-Side JavaScript
+description: "Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time."
 links:
   - name: Website
     url: /

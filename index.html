@@ -69,6 +69,7 @@ permalink: /
 			{% for blog in site.blogs reversed %}
 			<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
 				<span class="item__title">{{ blog.title }}</span>
+				{{ blog.description }}<br><br>
 				{{ blog.date | date: "%B %e %Y" }}
 			</a>
 			{% endfor %}
