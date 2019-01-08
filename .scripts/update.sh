@@ -5,7 +5,7 @@ if [ -z "$CI" ]
 then 
 	npm cache clear --force
 	git pull
-	export GITHUB_TOKEN=$(cat ~/keys/github.txt)
+	export GITHUB_TOKEN=$(cat ~/keys/github)
 fi
 
 jekyll build
