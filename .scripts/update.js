@@ -184,7 +184,15 @@ try {
 				}
 			}
 
-			//TODO: read front matter in `readme` to obtain more links
+			let meta = null;
+			try {
+				meta = _request('GET', "https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml", {
+					headers: { 
+						"User-Agent": "{{ github.name }}.github.io",
+						"Authorization": token ? "token " + token : null
+					}
+				}).getBody('utf8');
+			} catch (e) {}
 
 			let people = "";
 			for (let i2 = 0; i2 < contributors.length; i2++) {
@@ -283,6 +291,7 @@ try {
 				+ "isDocs: " + isDocs + "\n"
 				+ "isWiki: " + isWiki + "\n"
 				+ "languages:\n" + langs
+				+ (meta ? "meta:\n  " + meta.replace(/\n/g, "\n  ") + "\n" : "")
 				+ (repo.pushed_at && repo.pushed_at.length > 0 ? "pushed: " + repo.pushed_at + "\n" : "")
 				+ "---\n\n" + unhighlightize(readme));
 		}
