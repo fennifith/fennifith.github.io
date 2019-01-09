@@ -59,9 +59,9 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 IN THE SOFTWARE.
 ```
 
-## [sync-request](https://github.com/ForbesLindesay/sync-request)
+## [then-request](https://github.com/then/then-request)
 
-Make synchronous web requests with cross-platform support.
+A request library that returns promises.
 
 ```
 Copyright (c) 2014 Forbes Lindesay
@@ -140,6 +140,34 @@ A script that generates markdown javadocs primarily for use in Jekyll and GitHub
 MIT License
 
 Copyright (c) 2018 James Fenn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## [js-yaml](https://github.com/nodeca/js-yaml)
+
+An implementation of [YAML](http://yaml.org/), a human-friendly data serialization language, for JavaScript.
+
+```
+(The MIT License)
+
+Copyright (C) 2011-2015 by Vitaly Puzrin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
