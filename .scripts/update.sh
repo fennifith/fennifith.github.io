@@ -25,7 +25,7 @@ then
 	$(cd ../../ && jekyll serve > /dev/null) &
 	
 	read -p "[Enter] to commit & push, [Ctrl+C] to cancel."
-	git commit -m "Auto-commit: updated pages"
+	git commit -m "Auto-commit: updated pages [ci skip]"
 	git push
 else
 	cd ../../ && jekyll build
