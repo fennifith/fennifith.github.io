@@ -145,26 +145,14 @@ async function main() {
 					if (repo.homepage.includes("bintray.com"))
 						linkTitle = "Bintray";
 
-					while (linkTitle.includes("-")) {
-						let parts = linkTitle.split("-");
-						if (parts[0].length > parts[1].length)
-							linkTitle = parts[1].trim();
-						else linkTitle = parts[0].trim();
-					}
-
-					while (linkTitle.includes(":")) {
-						let parts = linkTitle.split(":");
-						if (parts[0].length > parts[1].length)
-							linkTitle = parts[1].trim();
-						else linkTitle = parts[0].trim();
-					}
-
-					while (linkTitle.includes("|")) {
-						let parts = linkTitle.split("|");
-						if (parts[0].length > parts[1].length)
-							linkTitle = parts[1].trim();
-						else linkTitle = parts[0].trim();
-					}
+					['-', ':', '|'].forEach(separator => {
+						while (linkTitle.includes(separator)) {
+							let parts = linkTitle.split(separator);
+							if (parts[0].length > parts[1].length)
+								linkTitle = parts[1].trim();
+							else linkTitle = parts[0].trim();
+						}
+					});
 
 					links += "  - name: " + linkTitle + "\n"
 						+ "    url: " + repo.homepage + "\n"
