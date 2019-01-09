@@ -12,7 +12,7 @@ const types = [
 
 const _path = require("path");
 const _fs = require('fs');
-const _request = require('sync-request');
+const _request = require('then-request');
 const _cheerio = require('cheerio');
 const _yaml = require('js-yaml');
 const _clone = require('git-clone-sync');
@@ -30,17 +30,40 @@ function unhighlightize(str) {
 	return str.replace(/(\n{2,})\`{3} *(\n{1,})/g, "$1```nohighlight$2");
 }
 
+function request(url, headers, data) {
+	return _request('GET', url, {
+		headers: headers,
+		json: data
+	}).then(result => {
+		return result.getBody('utf8');
+	}).catch(err => null);
+}
+
+function jsonRequest(url, headers, data) {
+	return request(url, headers, data).then(result => {
+		return JSON.parse(result);
+	}).catch(err => null);
+}
+
+function yamlRequest(url, headers, data) {
+	return request(url, headers, data).then(result => {
+		return _yaml.safeLoad(result);
+	}).catch(err => null);
+}
+
+function githubRequest(endpoint, headers, data) {
+	return jsonRequest("https://api.github.com/" + endpoint, Object.assign({
+		"User-Agent": "fennifith",
+		"Authorization": token ? "token " + token : null
+	}, headers), data);
+}
+
 let token = process.env.GITHUB_TOKEN;
 
-try {
+async function main() {
 	{% assign github = site.links | where: "title", "github" | first %}
 
-	let repos = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/repos?per_page=1000", {
-		headers: { 
-			"User-Agent": "{{ github.name }}.github.io",
-			"Authorization": token ? "token " + token : null
-		}
-	}).getBody('utf8'));
+	let repos = await githubRequest("users/{{ github.name }}/repos?per_page=1000");
 
 	for (let i = 0; i < repos.length; i++) {
 		if (repos[i].description && !repos[i].description.startsWith("(")) {
@@ -50,7 +73,7 @@ try {
 			} catch (e) {
 				console.log("New project: " + repos[i].full_name);
 			}
-			
+
 			if (projectFile && repos[i].pushed_at && repos[i].pushed_at.length > 0) {
 				let frontMatter = projectFile.split("---")[1];
 				if (frontMatter && frontMatter.includes("pushed: ")) {
@@ -62,14 +85,10 @@ try {
 					}
 				}
 			}
-		
-			let topics = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/topics", {
-				headers: { 
-					"Accept": "application/vnd.github.mercy-preview+json",
-					"User-Agent": "{{ github.name }}.github.io",
-					"Authorization": token ? "token " + token : null
-				}
-			}).getBody('utf8'));
+
+			let topics = await githubRequest("repos/" + repos[i].full_name + "/topics", {
+				"Accept": "application/vnd.github.mercy-preview+json"
+			});
 
 			let type = "undefined";
 			for (let i2 = 0; i2 < types.length; i2++) {
@@ -79,42 +98,18 @@ try {
 				}
 			}
 
-			let readme = null;
-			try {
-				readme = _request('GET', "https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md").getBody('utf8');
+			let readme = await request("https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md");
+			if (readme) {
 				readme = readme.replace(/\[([A-Za-z0-9.`'" ]*)\]\((\.[A-Za-z0-9\/\-\.\?\=]*)\)/g, "[$1](" + repos[i].html_url + "/blob/master/$2)");
-			} catch (error) {
+			} else {
 				console.error("NO README:", repos[i].full_name);
 				continue;
 			}
-			
-			let repo = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name, {
-				headers: { 
-					"User-Agent": "{{ github.name }}.github.io",
-					"Authorization": token ? "token " + token : null
-				}
-			}).getBody('utf8'));
-				
-			let contributors = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/contributors", {
-				headers: { 
-					"User-Agent": "{{ github.name }}.github.io",
-					"Authorization": token ? "token " + token : null
-				}
-			}).getBody('utf8'));
 
-			let releases = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/releases", {
-				headers: { 
-					"User-Agent": "{{ github.name }}.github.io",
-					"Authorization": token ? "token " + token : null
-				}
-			}).getBody('utf8'));
-			
-			let languages = JSON.parse(_request('GET', "https://api.github.com/repos/" + repos[i].full_name + "/languages", {
-				headers: { 
-					"User-Agent": "{{ github.name }}.github.io",
-					"Authorization": token ? "token " + token : null
-				}
-			}).getBody('utf8'));
+			let repo = await githubRequest("repos/" + repos[i].full_name);
+			let contributors = await githubRequest("repos/" + repos[i].full_name + "/contributors");
+			let releases = await githubRequest("repos/" + repos[i].full_name + "/releases");
+			let languages = await githubRequest("repos/" + repos[i].full_name + "/languages");
 
 			let links = "";
 			links += "  - name: GitHub\n"
@@ -131,7 +126,7 @@ try {
 					+ "    icon: /images/ic/copyright.svg\n"
 			}
 
-			if (repo.homepage && !repo.fork) {				
+			if (repo.homepage && !repo.fork) {
 				if (repo.homepage.includes("jfenn.me")) {
 					links += "  - name: Website\n"
 						+ "    url: " + repo.homepage + "\n"
@@ -145,7 +140,7 @@ try {
 						+ "    url: " + repo.homepage + "\n"
 						+ "    icon: /images/ic/launch.svg\n";
 				} else {
-					let page = _cheerio.load(_request('GET', repo.homepage).getBody('utf8'));
+					let page = _cheerio.load(await request(repo.homepage));
 					let linkTitle = page("head > title").text().trim();
 					if (repo.homepage.includes("bintray.com"))
 						linkTitle = "Bintray";
@@ -181,19 +176,11 @@ try {
 				for (let i2 = 0; i2 < releases[0].assets.length; i2++) {
 					links += "  - name: " + releases[0].assets[i2].name + " (" + releases[0].tag_name + (releases[0].prerelease ? " unstable" : " stable") + ")\n"
 						+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
-						+ "    icon: /images/ic/download.svg\n"; 
+						+ "    icon: /images/ic/download.svg\n";
 				}
 			}
 
-			let meta = null;
-			try {
-				meta = _yaml.safeLoad(_request('GET', "https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml", {
-					headers: { 
-						"User-Agent": "{{ github.name }}.github.io",
-						"Authorization": token ? "token " + token : null
-					}
-				}).getBody('utf8'));
-			} catch (e) {}
+			let meta = await yamlRequest("https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml");
 
 			let screenshots = "";
 			for (let i2 = 0; meta && meta.screenshots && i2 < meta.screenshots.length; i2++) {
@@ -206,27 +193,27 @@ try {
 					+ "    avatar: " + contributors[i2].avatar_url + "\n"
 					+ "    url: " + contributors[i2].html_url + "\n";
 			}
-			
+
 			let langs = "";
 			for (let language in languages) {
 				langs += "  - " + language + "\n";
 			}
-				
+
 			console.log("Fetched project " + repo.full_name);
-			
+
 			let isDocs = false;
 			if (repo.language == "Java" && !repo.fork) {
 				let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
 				if (!_fs.existsSync(docsDir)) {
 					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
 						_fs.mkdirSync(_path.resolve("../../projects/" + repo.name.toLowerCase()));
-					
+
 					_fs.mkdirSync(docsDir);
 				}
-				
+
 				if (!_fs.existsSync(docsDir + "/.temp"))
 					_fs.mkdirSync(docsDir + "/.temp");
-				
+
 				_clone("https://github.com/" + repo.full_name, docsDir + "/.temp");
 				let files = _javadoc.generateMarkdownFiles(docsDir + "/.temp", docsDir, {
 					reg: repo.language == "Java" ? /.*(\.java)$/ : /.*(\.js)$/,
@@ -236,24 +223,24 @@ try {
 					indexTemplate: "../../.scripts/.docs-index.template.md",
 					sourcePrefix: "https://github.com/" + repo.full_name + "/blob/master"
 				});
-				
+
 				isDocs = files.length > 0;
 				console.log("Generated project docs " + repo.full_name);
 			}
-			
+
 			let isWiki = false;
 			if (repo.has_wiki && !repo.fork) {
 				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
 				if (!_fs.existsSync(wikiDir)) {
 					if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
 						_fs.mkdirSync(_path.resolve("../../projects/" + repo.name.toLowerCase()));
-					
+
 					_fs.mkdirSync(wikiDir);
 				}
-				
+
 				if (!_fs.existsSync(wikiDir + "/.temp"))
 					_fs.mkdirSync(wikiDir + "/.temp");
-				
+
 				_clone("https://github.com/" + repo.full_name + ".wiki", wikiDir + "/.temp");
 				if (_fs.existsSync(wikiDir + "/.temp")) {
 					_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
@@ -267,7 +254,7 @@ try {
 									+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
 									+ "languages:\n" + langs
 									+ "---\n\n" + wiki);
-							
+
 								if (fileName == "Home.md") {
 									isWiki = true;
 									_fs.writeFileSync(wikiDir + "/index.md", "---\n"
@@ -284,7 +271,7 @@ try {
 					console.log("Fetched project wiki " + repo.full_name);
 				}
 			}
-			
+
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
 				+ "layout: project\n"
 				+ "type: " + type + "\n"
@@ -304,20 +291,10 @@ try {
 		}
 	}
 
-	let people = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/following?per_page=1000", {
-		headers: { 
-			"User-Agent": "{{ github.name }}.github.io",
-			"Authorization": token ? "token " + token : null
-		}
-	}).getBody('utf8'));
+	let people = await githubRequest("users/{{ github.name }}/following?per_page=1000");
 
 	for (let i = 0; i < people.length; i++) {
-		let person = JSON.parse(_request('GET', "https://api.github.com/users/" + people[i].login, {
-			headers: { 
-				"User-Agent": "{{ github.name }}.github.io",
-				"Authorization": token ? "token " + token : null
-			}
-		}).getBody('utf8'));
+		let person = await githubRequest("users/" + people[i].login);
 
 		_fs.writeFileSync(_path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
 			+ "title: " + (person.name ? person.name : person.login) + "\n"
@@ -329,12 +306,7 @@ try {
 		console.log("Fetched person " + person.login);
 	}
 
-	let orgs = JSON.parse(_request('GET', "https://api.github.com/users/{{ github.name }}/orgs", {
-		headers: { 
-			"User-Agent": "{{ github.name }}.github.io",
-			"Authorization": token ? "token " + token : null
-		}
-	}).getBody('utf8'));
+	let orgs = await githubRequest("users/{{ github.name }}/orgs");
 
 	for (let i = 0; i < orgs.length; i++) {
 		_fs.writeFileSync(_path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
@@ -346,6 +318,10 @@ try {
 
 		console.log("Fetched org " + orgs[i].login);
 	}
-} catch (error) {
-	console.error(error);
+}
+
+try {
+	main();
+} catch (err) {
+	console.error(err);
 }
