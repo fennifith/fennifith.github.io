@@ -33,10 +33,12 @@ isWiki: false
 languages:
   - Go
   - Shell
-pushed: 2018-09-17T19:25:40Z
+pushed: 2019-01-09T16:23:19Z
 ---
 
 AAH, or the Annoyingly Advanced Helper, is a basic command-line program to help me do basic things I should already know.
+
+[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/u5pUkFV)
 
 For example:
 
@@ -55,7 +57,7 @@ Installation is fairly simple. You can either install from source or use the pre
 Downloading a prebuilt binary is fairly simple. Simply choose a file from the [releases](https://github.com/fennifith/AAH/blob/master/../../releases) page and run the commands below, replacing the information in brackets with their respective values.
 
 ```shell
-wget https://github.com/TheAndroidMaster/AAH/releases/download/{version}/AAH-{platform}
+wget https://github.com/fennifith/AAH/releases/download/{version}/AAH-{platform}
 mv AAH-{platform} AAH
 chmod +x AAH
 ```
@@ -117,8 +119,8 @@ After saving the file, run `source ~/.bashrc` and you're good to go.
 This bit is fairly simple.
 
 ```shell
-go get github.com/TheAndroidMaster/AAH
-cd ~/go/src/github.com/TheAndroidMaster/AAH
+go get github.com/fennifith/AAH
+cd ~/go/src/github.com/fennifith/AAH
 go get && go build && go install
 ```
 

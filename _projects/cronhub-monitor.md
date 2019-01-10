@@ -33,11 +33,12 @@ isDocs: true
 isWiki: false
 languages:
   - Java
+  - Shell
 screenshots:
   - "https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/.github/images/login.png"
   - "https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/.github/images/interface.png"
   - "https://raw.githubusercontent.com/fennifith/Cronhub-Monitor/master/.github/images/notification.png"
-pushed: 2019-01-08T16:17:14Z
+pushed: 2019-01-09T18:05:41Z
 ---
 
 This app serves as a native Android notification client for [cronhub.io](https://cronhub.io/). Its only purpose is to deliver status notifications at the alert time specified on CronHub, using their [public API](https://docs.cronhub.io/public-api.html). It does not currently allow users to edit CronHub monitors, but that functionality may be added in the future.

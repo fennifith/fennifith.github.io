@@ -34,7 +34,7 @@ screenshots:
   - "https://raw.githubusercontent.com/fennifith/Cleaner/master/.github/images/clean.png"
   - "https://raw.githubusercontent.com/fennifith/Cleaner/master/.github/images/info.png"
   - "https://raw.githubusercontent.com/fennifith/Cleaner/master/.github/images/uninstall.png"
-pushed: 2019-01-08T16:15:46Z
+pushed: 2019-01-09T18:35:37Z
 ---
 
 Storage Cleaner is the only space saving app that actually does its job! :D
@@ -47,7 +47,7 @@ Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
 | Clean Up Space | The Info Button | Uninstall Useless Apps |
 |----------------|-----------------|------------------------|
-| ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/clean.png) | ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/info.png) | ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/uninstall.png) |
+| ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/clean.png?raw=true) | ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/info.png?raw=true) | ![img](https://github.com/fennifith/Cleaner/blob/master/./.github/images/uninstall.png?raw=true) |
 
 ## What is the point?
 
