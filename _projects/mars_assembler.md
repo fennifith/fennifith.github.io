@@ -15,6 +15,9 @@ links:
   - name: Other
     url: https://choosealicense.com/licenses/other/
     icon: /images/ic/copyright.svg
+  - name: Mars.jar (james-4.5.1 unstable)
+    url: https://github.com/fennifith/MARS_Assembler/releases/download/james-4.5.1/Mars.jar
+    icon: /images/ic/download.svg
 contributors:
   - login: JarrettBillingsley
     avatar: https://avatars0.githubusercontent.com/u/452240?v=4
@@ -32,7 +35,7 @@ languages:
   - HTML
   - Shell
   - Batchfile
-pushed: 2019-01-10T13:55:33Z
+pushed: 2019-01-11T05:41:11Z
 ---
 
 [MARS](http://courses.missouristate.edu/KenVollmar/MARS/index.htm) is a lightweight interactive development environment (IDE) for programming in MIPS assembly language, intended for educational-level use with Patterson and Hennessy's Computer Organization and Design.
@@ -41,7 +44,15 @@ MARS has been jointly developed by [Pete Sanderson](http://faculty.otterbein.edu
 
 ## Purpose of this repo
 
-This is a fork of Jarrett's mirror of the MARS Assembler source code, mainly for personal use (though I am not averse to contributions) / adding more theming options.
+This is a fork of Jarrett's mirror of the MARS Assembler source code, mainly for personal use (though I am not averse to contributions) / adding more theming options. I am currently working on it across two branches:
+
+- `clean`, which stays as close as possible to the original source code and only contains the "features" that I add
+- `master`, which contains all of my changes, including a "dark theme" as the default settings.
+
+[![Build Status](https://travis-ci.com/fennifith/MARS_Assembler.svg)](https://travis-ci.com/fennifith/MARS_Assembler)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/s5Se8vU)
+
+If for some reason you would like to obtain a copy of this version of MARS without compiling it from source, you can find a .jar file [here](https://github.com/fennifith/MARS_Assembler/blob/master/../../releases/).
 
 Huge thanks to Jarrett for maintaining the [original fork](https://github.com/JarrettBillingsley/MARS_Assembler) of MARS.
 
