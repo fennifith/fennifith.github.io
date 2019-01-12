@@ -35,7 +35,7 @@ languages:
   - HTML
   - Shell
   - Batchfile
-pushed: 2019-01-11T05:41:11Z
+pushed: 2019-01-12T02:35:50Z
 ---
 
 [MARS](http://courses.missouristate.edu/KenVollmar/MARS/index.htm) is a lightweight interactive development environment (IDE) for programming in MIPS assembly language, intended for educational-level use with Patterson and Hennessy's Computer Organization and Design.
