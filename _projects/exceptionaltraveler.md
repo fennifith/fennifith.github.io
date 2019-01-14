@@ -26,12 +26,12 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2018-09-26T01:13:59Z
+pushed: 2019-01-14T02:33:03Z
 ---
 
 > My programming is always Exceptional.
 
-This program is a joke. It is not serious. Please do not take this program seriously. It is not a good demonstration of my programming skills. Do not use this program as reference material. Please don't use this program to educate yourself or others on Java programming. Avoid looking at this program for extended amounts of time. If you experience dizziness or a loss of balance while viewing this program, stop staring at it in awe and seek medical help immediately. If you feel the effects depression or anxiety after becoming aware of this program's existence, please see a qualified counselor for assistance.
+This program is a joke. It is not serious. Please do not take this program seriously. It is not a good demonstration of my programming skills. Do not use this program as reference material. Please don't use this program to educate yourself or others on Java programming. Avoid looking at this program for extended amounts of time. If you experience dizziness or a loss of balance while viewing this program, stop staring at it in awe and seek medical help immediately. If you feel the effects of depression or anxiety after becoming aware of this program's existence, please see a qualified counselor for assistance.
 
 The idea for this program was taken from Chet Haase's article for Pointer IO on [Exceptional Programming](https://medium.com/pointer-io/exceptional-programming-62ea8150f61f), which describes a programming style using just try/catch blocks and exceptions as the only control structure.
 
@@ -88,7 +88,7 @@ As it has been over a year since the article was written and there have been no 
 	- A `throw` statement.
 - As exceptions must be thrown in each statement, it is impossible to instantiate an object (without throwing an exception in its constructor).
 	- The Reflection APIs might bypass this rule, but in my opinion are not worth the effort.
-- The only way a value can be returned is 
+- The only way a value can be returned is by modifying a variable with a scope larger than that of the current function, and throwing an exception (that is not caught within the function) to signify its "end".
 
 ### Modifications
 
@@ -106,7 +106,7 @@ As programs by definition are meant to run in chronological order, I had a bit o
 
 - if a `finally` block is used, an exception must be thrown in the try/catch/finally block that it is a part of.
 
-This allows one specific functionality which is necessary in order to use the standard Java APIs: throwing an exception even if one is not thrown by a statement (or throwing a different one if it is).
+This allows one specific functionality which is necessary in order to make use of the standard Java APIs: throwing an exception even if one is not thrown by a statement (or throwing a different one if it is).
 
 #### Statements Without Exceptions
 
