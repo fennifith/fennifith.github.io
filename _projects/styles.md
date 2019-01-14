@@ -23,7 +23,7 @@ isDocs: false
 isWiki: false
 languages:
   - HTML
-pushed: 2019-01-14T13:16:55Z
+pushed: 2019-01-14T18:55:57Z
 ---
 
 This repository contains all of the CSS styles used throughout [my site](https://jfenn.me/). I generally use a [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) that pulls from the `css` branch of this repository in each of my projects. This ensures that simply updating the css in this repository cannot break anything; I must update the submodule in each repository before the changes are applied.
