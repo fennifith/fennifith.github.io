@@ -49,7 +49,7 @@ screenshots:
   - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/timers.png"
   - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/themes.png"
   - "https://raw.githubusercontent.com/fennifith/Alarmio/master/.github/images/alert.gif"
-pushed: 2019-01-16T04:21:10Z
+pushed: 2019-01-20T23:19:30Z
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).

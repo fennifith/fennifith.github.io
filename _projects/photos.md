@@ -25,10 +25,10 @@ contributors:
 isDocs: false
 isWiki: false
 languages:
-  - JavaScript
   - HTML
+  - JavaScript
   - Shell
-pushed: 2019-01-18T16:29:40Z
+pushed: 2019-01-20T23:26:59Z
 ---
 
 This website is a collection of a few of the pictures that I have taken over the past few years. All images are published under the [Creative Commons Attribution Share Alike 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/) license. In other words, they can be used for (mostly) whatever you want, provided you give me credit and don't try to claim ownership of them.
