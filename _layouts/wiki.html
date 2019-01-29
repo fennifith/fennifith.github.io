@@ -24,7 +24,9 @@
 		{% endif %}
 		<br>
 		<h1>{{ page.title }}</h1>
-		{{ content }}
+		<div class="markdown">
+			{{ content }}
+		</div>
 	</main>
 
 	{% include snackbar.html %}
