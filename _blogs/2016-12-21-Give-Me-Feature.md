@@ -21,7 +21,7 @@ There are a few possible solutions to this, however it should also be noted that
 
 ![A user review: Annoying. The app kept overlaying the same status bar over to of the other one. I thought that it was annoying.](/images/blogs/wonderous.png)
 
-Now, there are many categories of bad reviews. Some are just bad, as in they don’t specifically describe what the problem is, like a couple I’ve gotten previous saying “It crashes” or “What is this trash”. Some describe the user’s problem, but don’t really have anything to do with the app itself. Others just purely insult the developer(s).
+Now, there are many categories of bad reviews. Some are just bad, as in they don’t specifically describe what the problem is, like a couple I’ve gotten previously saying “It crashes” or “What is this trash”. Some describe the user’s problem, but don’t really have anything to do with the app itself. Others just purely insult the developer(s).
 
 After sorting through the reviews in some of my apps, I’ve come up with a few ways user experience could be improved in order to reduce the amount of bad reviews.
 
