@@ -115,31 +115,33 @@ permalink: /
 		</div>
 	</div>
 	<div page="community">
-		<h2>Open Source</h2>
-		<p>
-			I have a strong distaste for projects that purposefully attempt to hide the way that they function from their users.
-			There are many reasons to justify this distaste, but things such as <a href="https://en.wikipedia.org/wiki/Dark_pattern">
-			Dark Patterns</a>, <a href="https://cryptojackingtest.com/">Cryptojacking</a>, or even old-school 
-			<a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a> stand out as the most offensive. To oppose this,
-			I strive to make all of my projects accessible to the public so that it is possible for anyone to not only see how they 
-			are built, but also contribute to their development and benefit from their existence in other ways than just using the 
-			product. Nearly every one of my projects is published under some form of <a href="https://opensource.org/licenses">Open 
-			Source license</a>, and I try to accept every pull request that is created (or at least provide some helpful criticism 
-			so that not all effort is wasted if it is not merged).
-		</p>
-		<p>
-			If you have a question about any of my projects, posts, or... really anything, I can be contacted through many of the
-			"places" listed in <a href="/?home">/home</a>, emailed at <a href="mailto:me@jfenn.me">me@jfenn.me</a>, or cord...ed (?)
-			in the Discord channel below.
-		</p>
-		<iframe src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="250" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
-		<h2>The Community</h2>
-		<p>
-			While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
-			have helped me to solve problems and learn new things along the way.
-			<br><br>
-			If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
-		</p>
+		<div class="markdown">
+			<h2>Open Source</h2>
+			<p>
+				I have a strong distaste for projects that purposefully attempt to hide the way that they function from their users.
+				There are many reasons to justify this distaste, but things such as <a href="https://en.wikipedia.org/wiki/Dark_pattern">
+				Dark Patterns</a>, <a href="https://cryptojackingtest.com/">Cryptojacking</a>, or even old-school 
+				<a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a> stand out as the most offensive. To oppose this,
+				I strive to make all of my projects accessible to the public so that it is possible for anyone to not only see how they 
+				are built, but also contribute to their development and benefit from their existence in other ways than just using the 
+				product. Nearly every one of my projects is published under some form of <a href="https://opensource.org/licenses">Open 
+				Source license</a>, and I try to accept every pull request that is created (or at least provide some helpful criticism 
+				so that not all effort is wasted if it is not merged).
+			</p>
+			<p>
+				If you have a question about any of my projects, posts, or... really anything, I can be contacted through many of the
+				"places" listed in <a href="/?home">/home</a>, emailed at <a href="mailto:me@jfenn.me">me@jfenn.me</a>, or cord...ed (?)
+				in the Discord channel below.
+			</p>
+			<iframe src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="250" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
+			<h2>The Community</h2>
+			<p>
+				While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
+				have helped me to solve problems and learn new things along the way.
+				<br><br>
+				If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
+			</p>
+		</div>
 		<div class="layout--grid">
 			{% for person in site.people %}
 			<a class="item item--box" href="{{ person.link }}">
@@ -150,7 +152,7 @@ permalink: /
 			{% endfor %}
 		</div>
 	</div>
-	<div page="about">
+	<div page="about" class="markdown">
 		<h2>Me, myself, and I</h2>
 		<p>
 			I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
