@@ -29,7 +29,7 @@ isDocs: true
 isWiki: false
 languages:
   - Java
-pushed: 2019-01-22T19:24:05Z
+pushed: 2019-01-30T23:02:08Z
 ---
 
 AdaptiveIconView is a library built to allow an easy implementation of pre-Oreo adaptive icon support in Android launchers. Special thanks to [Lawnchair](https://github.com/LawnchairLauncher/Lawnchair) and its developers for providing the method used to access -v26 assets on pre-Oreo devices. 
@@ -74,7 +74,7 @@ The Android support libraries have been refactored from `android.support.*` to `
 
 ### Loading an Icon
 
-The [`AdaptiveIcon`](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java) class contains multiple ways to load and store the assets required to pass to an [`AdaptiveIconView`](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java). Most methods involve the `AdaptiveIcon.Loader` subclass, which contains many customization options and several 'fallback' classes for applications passed that do not have an adaptive icon.
+The [`AdaptiveIcon`](https://github.com/fennifith/AdaptiveIconView/blob/master/./library/src/main/java/james/adaptiveicon/AdaptiveIcon.java) class contains multiple ways to load and store the assets required to pass to an [`AdaptiveIconView`](https://github.com/fennifith/AdaptiveIconView/blob/master/./library/src/main/java/james/adaptiveicon/AdaptiveIconView.java). Most methods involve the `AdaptiveIcon.Loader` subclass, which contains many customization options and several 'fallback' classes for applications passed that do not have an adaptive icon.
 
 #### Method 1: Simple, Easy, and Just About The Worst Thing That You Could Possibly Do
 
@@ -106,7 +106,7 @@ One thing to keep in mind here is that the scale (the third parameter passed to 
 
 ### Creating a View
 
-The [AdaptiveIconView](https://github.com/TheAndroidMaster/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java) class should be pretty simple to use. The `setIcon` and `getIcon` methods set and get the `AdaptiveIcon` class it uses, updating the view automatically. `setPath(Rect, Path)`, or `setPath(String)` (which accepts a path string within a 100x100 rect) can be used to specify a shape for the icon to clip to, but you may find it easier to use `setPath(int pathType)` instead (provided types are `PATH_CIRCLE`, `PATH_SQUIRCLE`, `PATH_ROUNDED_SQUARE`, `PATH_SQUARE`, and the infamous `PATH_TEARDROP`). `setOffset(x, y)` can be used to quickly offset the drawables inside the icon for fancy movement animations.
+The [AdaptiveIconView](https://github.com/fennifith/AdaptiveIconView/blob/master/./library/src/main/java/james/adaptiveicon/AdaptiveIconView.java) class should be pretty simple to use. The `setIcon` and `getIcon` methods set and get the `AdaptiveIcon` class it uses, updating the view automatically. `setPath(Rect, Path)`, or `setPath(String)` (which accepts a path string within a 100x100 rect) can be used to specify a shape for the icon to clip to, but you may find it easier to use `setPath(int pathType)` instead (provided types are `PATH_CIRCLE`, `PATH_SQUIRCLE`, `PATH_ROUNDED_SQUARE`, `PATH_SQUARE`, and the infamous `PATH_TEARDROP`). `setOffset(x, y)` can be used to quickly offset the drawables inside the icon for fancy movement animations.
 
 By default, the view will set its own touch listener to animate the icon scale when it is clicked. This can be disabled by setting another touch listener (or just passing null). There are currently no methods to scale the icon yourself, but they should be added soon.
 
