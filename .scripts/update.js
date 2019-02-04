@@ -14,7 +14,7 @@ const _path = require("path");
 const _fs = require('fs');
 const _request = require('then-request');
 const _cheerio = require('cheerio');
-const _yaml = require('js-yaml');
+const _yaml = require('./yaml.js');
 const _clone = require('git-clone-sync');
 const _javadoc = require('mdjavadoc-api');
 
@@ -23,7 +23,7 @@ function titleize(str) {
 }
 
 function safestrize(str) {
-	return "\"" + str.replace(/(\")/g, "\\\"") + "\"";
+	return str.replace(/(\")/g, "\\\"").replace(/(\:)/g, "&#58;");
 }
 
 function unhighlightize(str) {
@@ -47,7 +47,7 @@ function jsonRequest(url, headers, data) {
 
 function yamlRequest(url, headers, data) {
 	return request(url, headers, data).then(result => {
-		return _yaml.safeLoad(result);
+		return _yaml.parse(result);
 	}).catch(err => null);
 }
 
@@ -86,110 +86,116 @@ async function main() {
 				}
 			}
 
-			let topics = await githubRequest("repos/" + repos[i].full_name + "/topics", {
-				"Accept": "application/vnd.github.mercy-preview+json"
-			});
-
-			let type = "undefined";
-			for (let i2 = 0; i2 < types.length; i2++) {
-				if (topics.names.includes(types[i2])) {
-					type = types[i2];
-					break;
-				}
-			}
-
-			let readme = await request("https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md");
-			if (readme) {
-				readme = readme.replace(/\[([A-Za-z0-9.`'" ]*)\]\((\.[A-Za-z0-9\/\-\.\?\=]*)\)/g, "[$1](" + repos[i].html_url + "/blob/master/$2)");
-			} else {
-				console.error("NO README:", repos[i].full_name);
-				continue;
-			}
-
 			let repo = await githubRequest("repos/" + repos[i].full_name);
 			let contributors = await githubRequest("repos/" + repos[i].full_name + "/contributors");
 			let releases = await githubRequest("repos/" + repos[i].full_name + "/releases");
 			let languages = await githubRequest("repos/" + repos[i].full_name + "/languages");
+			let meta = await yamlRequest("https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml");
+			let topics = await githubRequest("repos/" + repos[i].full_name + "/topics", {
+				"Accept": "application/vnd.github.mercy-preview+json"
+			});
 
-			let links = "";
-			links += "  - name: GitHub\n"
-				+ "    url: " + repo.html_url + "\n"
-				+ "    icon: https://github.com/favicon.ico\n";
+			let content = {
+				layout: "project",
+				type: "undefined",
+				title: repo.fork && repo.parent ? repo.parent.full_name : titleize(repo.name),
+				description: repo.description ? safestrize(repo.description) : null,
+				icon: meta && meta.icon ? "https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.icon : null,
+				repo: repo.full_name,
+				git: repo.git_url,
+				links: [],
+				contributors: [],
+				screenshots: [],
+				languages: Object.keys(languages),
+				isDocs: false,
+				isWiki: false,
+				pushed: repo.pushed_at && repo.pushed_at.length > 0 ? repo.pushed_at : null
+			};
 
-			links += "  - name: Issues\n"
-				+ "    url: " + repo.html_url + "/issues\n"
-				+ "    icon: /images/ic/bug.svg\n";
+			for (let i2 = 0; i2 < types.length; i2++) {
+				if (topics.names.includes(types[i2])) {
+					content.type = types[i2];
+					break;
+				}
+			}
+
+			content.links.push({
+				name: "GitHub",
+				url: repo.html_url,
+				icon: "https://github.com/favicon.ico"
+			});
+
+			content.links.push({
+				name: "Issues",
+				url: repo.html_url + "/issues",
+				icon: "/images/ic/bug.svg"
+			});
 
 			if (repo.license && repo.license.key) {
-				links += "  - name: " + (repo.license.name ? repo.license.name : "License") + "\n"
-					+ "    url: https://choosealicense.com/licenses/" + repo.license.key + "/\n"
-					+ "    icon: /images/ic/copyright.svg\n"
+				content.links.push({
+					name: repo.license.name ? repo.license.name : "License",
+					url: "https://choosealicense.com/licenses/" + repo.license.key + "/",
+					icon: "/images/ic/copyright.svg"
+				});
 			}
 
 			if (repo.homepage && !repo.fork) {
+				let link = {
+					name: "Website",
+					url: repo.homepage,
+					icon: "/images/ic/launch.svg"
+				};
+
 				if (repo.homepage.includes("jfenn.me")) {
-					links += "  - name: Website\n"
-						+ "    url: " + repo.homepage + "\n"
-						+ "    icon: https://jfenn.me/images/favicon-32.ico\n";
+					link.icon = "https://jfenn.me/images/favicon-32.ico";
 				} else if (repo.homepage.includes("play.google.com")) {
-					links += "  - name: Google Play\n"
-						+ "    url: " + repo.homepage + "\n"
-						+ "    icon: /images/ic/play-store.svg\n";
+					link.name = "Google Play";
+					link.icon = "/images/ic/play-store.svg";
 				} else if (repo.homepage.includes("jitpack.io")) {
-					links += "  - name: JitPack\n"
-						+ "    url: " + repo.homepage + "\n"
-						+ "    icon: /images/ic/launch.svg\n";
+					link.name = "JitPack";
+				} else if (repo.homepage.includes("bintray.com")) {
+					link.name = "Bintray";
 				} else {
 					let page = _cheerio.load(await request(repo.homepage));
-					let linkTitle = page("head > title").text().trim();
-					if (repo.homepage.includes("bintray.com"))
-						linkTitle = "Bintray";
+					link.name = page("head > title").text().trim();
 
 					['-', ':', '|'].forEach(separator => {
-						while (linkTitle.includes(separator)) {
-							let parts = linkTitle.split(separator);
+						while (link.name.includes(separator)) {
+							let parts = link.name.split(separator);
 							if (parts[0].length > parts[1].length)
-								linkTitle = parts[1].trim();
-							else linkTitle = parts[0].trim();
+								link.name = parts[1].trim();
+							else link.name = parts[0].trim();
 						}
 					});
 
-					links += "  - name: " + linkTitle + "\n"
-						+ "    url: " + repo.homepage + "\n"
-						+ "    icon: https://" + repo.homepage.split("/")[2] + "/favicon.ico\n";
+					link.icon = "https://" + repo.homepage.split("/")[2] + "/favicon.ico";
 				}
+
+				content.links.push(link);
 			}
 
-			if (releases[0]) {
-				for (let i2 = 0; i2 < releases[0].assets.length; i2++) {
-					links += "  - name: " + releases[0].assets[i2].name + " (" + releases[0].tag_name + (releases[0].prerelease ? " unstable" : " stable") + ")\n"
-						+ "    url: " + releases[0].assets[i2].browser_download_url + "\n"
-						+ "    icon: /images/ic/download.svg\n";
-				}
+			for (let i2 = 0; releases[0] && i2 < releases[0].assets.length; i2++) {
+				content.links.push({
+					name: releases[0].assets[i2].name + " (" + releases[0].tag_name + (releases[0].prerelease ? " unstable" : " stable") + ")",
+					url: releases[0].assets[i2].browser_download_url,
+					icon: "/images/ic/download.svg"						
+				});
 			}
 
-			let meta = await yamlRequest("https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml");
-
-			let screenshots = "";
 			for (let i2 = 0; meta && meta.screenshots && i2 < meta.screenshots.length; i2++) {
-				screenshots += "  - \"https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.screenshots[i2] + "\"\n";
+				content.screenshots.push("https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.screenshots[i2]);
 			}
 
-			let people = "";
 			for (let i2 = 0; i2 < contributors.length; i2++) {
-				people += "  - login: " + contributors[i2].login + "\n"
-					+ "    avatar: " + contributors[i2].avatar_url + "\n"
-					+ "    url: " + contributors[i2].html_url + "\n";
-			}
-
-			let langs = "";
-			for (let language in languages) {
-				langs += "  - " + language + "\n";
+				content.contributors.push({
+					login: contributors[i2].login,
+					avatar: contributors[i2].avatar_url,
+					url: contributors[i2].html_url
+				});
 			}
 
 			console.log("Fetched project " + repo.full_name);
 
-			let isDocs = false;
 			if (repo.language == "Java" && !repo.fork) {
 				let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
 				if (!_fs.existsSync(docsDir)) {
@@ -212,11 +218,10 @@ async function main() {
 					sourcePrefix: "https://github.com/" + repo.full_name + "/blob/master"
 				});
 
-				isDocs = files.length > 0;
+				content.isDocs = files.length > 0;
 				console.log("Generated project docs " + repo.full_name);
 			}
 
-			let isWiki = false;
 			if (repo.has_wiki && !repo.fork) {
 				let wikiDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/wiki");
 				if (!_fs.existsSync(wikiDir)) {
@@ -238,19 +243,20 @@ async function main() {
 								_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
 							} else {
 								_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
-									+ "layout: wiki\n"
-									+ "title: " + titleize(fileName.substring(0, fileName.length - 3)) + "\n"
-									+ "languages:\n" + langs
-									+ "---\n\n" + wiki);
-
+									+ _yaml.stringify({
+										layout: "wiki",
+										title: titleize(fileName.substring(0, fileName.length - 3)),
+										languages: content.languages
+									}) + "\n---\n\n" + wiki);
 								if (fileName == "Home.md") {
-									isWiki = true;
+									content.isWiki = true;
 									_fs.writeFileSync(wikiDir + "/index.md", "---\n"
-										+ "layout: wiki\n"
-										+ "title: " + titleize(repo.name) + " Wiki\n"
-										+ "languages:\n" + langs
-										+ "project: " + repo.name.toLowerCase() + "\n"
-										+ "---\n\n" + wiki);
+										+ _yaml.stringify({
+											layout: "wiki",
+											title: titleize(repo.name) + " Wiki",
+											languages: content.languages,
+											project: repo.name.toLowerCase()
+										}) + "\n---\n\n" + wiki);
 								}
 							}
 						}
@@ -260,21 +266,16 @@ async function main() {
 				}
 			}
 
+			let readme = await request("https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md");
+			if (readme) {
+				readme = readme.replace(/\[([A-Za-z0-9.`'" ]*)\]\((\.[A-Za-z0-9\/\-\.\?\=]*)\)/g, "[$1](" + repos[i].html_url + "/blob/master/$2)");
+			} else {
+				console.error("NO README:", repos[i].full_name);
+				continue;
+			}
+
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
-				+ "layout: project\n"
-				+ "type: " + type + "\n"
-				+ "title: \"" + (repo.fork && repo.parent ? repo.parent.full_name : titleize(repo.name)) + "\"\n"
-				+ (repo.description ? "description: " + safestrize(repo.description.split(":").join("&#58;")) + "\n" : "")
-				+ (meta && meta.icon ? "icon: \"https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.icon + "\"\n" : "")
-				+ "repo: " + repo.full_name + "\n"
-				+ "git: " + repo.git_url + "\n"
-				+ "links:\n" + links
-				+ "contributors:\n" + people
-				+ "isDocs: " + isDocs + "\n"
-				+ "isWiki: " + isWiki + "\n"
-				+ "languages:\n" + langs
-				+ (screenshots.length > 0 ? "screenshots:\n" + screenshots : "")
-				+ (repo.pushed_at && repo.pushed_at.length > 0 ? "pushed: " + repo.pushed_at + "\n" : "")
+				+ _yaml.stringify(content) + "\n"
 				+ "---\n\n" + unhighlightize(readme));
 		}
 	}
@@ -285,11 +286,12 @@ async function main() {
 		let person = await githubRequest("users/" + people[i].login);
 
 		_fs.writeFileSync(_path.resolve("../../_people/" + person.login.toLowerCase() + ".md"), "---\n"
-			+ "title: " + (person.name ? person.name : person.login) + "\n"
-			+ "description: " + (person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.") + "\n"
-			+ "avatar: " + person.avatar_url + "\n"
-			+ "link: " + person.html_url + "\n"
-			+ "---\n");
+			+ _yaml.stringify({
+				title: person.name ? person.name : person.login,
+				description: person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.",
+				avatar: person.avatar_url,
+				link: person.html_url
+			}) + "\n---\n");
 
 		console.log("Fetched person " + person.login);
 	}
@@ -298,11 +300,12 @@ async function main() {
 
 	for (let i = 0; i < orgs.length; i++) {
 		_fs.writeFileSync(_path.resolve("../../_orgs/" + orgs[i].login.toLowerCase() + ".md"), "---\n"
-			+ "title: " + orgs[i].login + "\n"
-			+ "description: " + (orgs[i].description ? orgs[i].description : "Things happen.") + "\n"
-			+ "avatar: " + orgs[i].avatar_url + "\n"
-			+ "link: https://github.com/" + orgs[i].login + "\n"
-			+ "---\n");
+			+ _yaml.stringify({
+				title: orgs[i].login,
+				description: orgs[i].description ? orgs[i].description : "Things happen.",
+				avatar: orgs[i].avatar_url,
+				link: "https://github.com/" + orgs[i].login
+			}) + "\n---\n");
 
 		console.log("Fetched org " + orgs[i].login);
 	}

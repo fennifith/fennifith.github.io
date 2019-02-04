@@ -12,6 +12,7 @@ jekyll build
 
 cd _site/.scripts
 rm -rf node_modules && npm install
+npm test
 node update.js
 
 rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
