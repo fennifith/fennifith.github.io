@@ -35,7 +35,7 @@ module.exports = function(token) {
 	_token = token;
 	
 	return {
-		test: request,
+		text: request,
 		json: jsonRequest,
 		yaml: yamlRequest,
 		github: githubRequest

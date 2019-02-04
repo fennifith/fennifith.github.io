@@ -30,8 +30,8 @@ function unhighlightize(str) {
 	return str.replace(/(\n{2,})\`{3} *(\n{1,})/g, "$1```nohighlight$2");
 }
 
-async function getRepo(repo) {
-	let repo = await _request.github("repos/" + repo.full_name);
+async function getRepo(partialRepo) {
+	let repo = await _request.github("repos/" + partialRepo.full_name);
 	
 	repo.contributors = await _request.github("repos/" + repo.full_name + "/contributors");
 	for (let i in repo.contributors) {
@@ -173,7 +173,7 @@ function getRepoWiki(repo) {
 							+ _yaml.stringify({
 								layout: "wiki",
 								title: titleize(fileName.substring(0, fileName.length - 3)),
-								languages: content.languages
+								languages: Object.keys(repo.languages)
 							}) + "\n---\n\n" + wiki);
 						if (fileName == "Home.md") {
 							isWiki = true;
@@ -182,7 +182,7 @@ function getRepoWiki(repo) {
 								+ _yaml.stringify({
 									layout: "wiki",
 									title: titleize(repo.name) + " Wiki",
-									languages: content.languages,
+									languages: Object.keys(repo.languages),
 									project: repo.name.toLowerCase()
 								}) + "\n---\n\n" + wiki);
 						}
@@ -223,8 +223,7 @@ async function main() {
 				}
 			}
 
-			console.log(repo);
-			repo = await getRepo(repos[i]);
+			let repo = await getRepo(repos[i]);
 			if (!repo) {
 				console.log("Failed to obtain repository info.");
 				continue;
@@ -264,7 +263,7 @@ async function main() {
 						let screenshots = [];
 
 						for (let i in repo.meta.screenshots) {
-							screenshots.push("https://raw.githubusercontent.com/" + repo.full_name + "/master/" + meta.screenshots[i]);
+							screenshots.push("https://raw.githubusercontent.com/" + repo.full_name + "/master/" + repo.meta.screenshots[i]);
 						}
 
 						return screenshots;
@@ -272,7 +271,7 @@ async function main() {
 				})(),
 				languages: Object.keys(repo.languages),
 				isDocs: getRepoDocs(repo),
-				isWiki: getRepoWiki(wiki),
+				isWiki: getRepoWiki(repo),
 				pushed: repo.pushed_at && repo.pushed_at.length > 0 ? repo.pushed_at : null
 			};
 
