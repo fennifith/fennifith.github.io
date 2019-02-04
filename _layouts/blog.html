@@ -72,6 +72,20 @@
           {{ content }}
         </div>
       </article>
+      <div>
+      	{% if page.previous.url %}
+      	<a class="link" style="display: inline-flex;" href="{{ page.previous.url }}">
+      		<i class="link__img material-icons">arrow_back</i>
+      		<span class="link__title">Previous</span>
+      	</a>
+      	{% endif %}
+      	{% if page.next.url %}
+      	<a class="link" style="float: right;" href="{{ page.next.url }}">
+      		<span class="link__title">Next</span>
+      		<i class="link__img material-icons">arrow_forward</i>
+      	</a>
+      	{% endif %}
+      </div>
     </main>
 
     {% include footer.html %}
