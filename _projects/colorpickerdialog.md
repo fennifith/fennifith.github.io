@@ -1,38 +1,38 @@
 ---
-layout: project
-type: android-library
+layout: "project"
+type: "android-library"
 title: "Color Picker Dialog"
 description: "A simple dialog making it quick and easy to add color picking functionality to any app."
-repo: fennifith/ColorPickerDialog
-git: git://github.com/fennifith/ColorPickerDialog.git
-links:
-  - name: GitHub
-    url: https://github.com/fennifith/ColorPickerDialog
-    icon: https://github.com/favicon.ico
-  - name: Issues
-    url: https://github.com/fennifith/ColorPickerDialog/issues
-    icon: /images/ic/bug.svg
-  - name: Apache License 2.0
-    url: https://choosealicense.com/licenses/apache-2.0/
-    icon: /images/ic/copyright.svg
-  - name: JitPack
-    url: https://jitpack.io/#me.jfenn/ColorPickerDialog
-    icon: /images/ic/launch.svg
-  - name: ColorPickerDialog.apk (0.1.0 stable)
-    url: https://github.com/fennifith/ColorPickerDialog/releases/download/0.1.0/ColorPickerDialog.apk
-    icon: /images/ic/download.svg
-contributors:
-  - login: fennifith
-    avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/fennifith
-  - login: jahirfiquitiva
-    avatar: https://avatars0.githubusercontent.com/u/10360816?v=4
-    url: https://github.com/jahirfiquitiva
-isDocs: true
-isWiki: false
-languages:
-  - Java
-pushed: 2019-02-02T02:37:32Z
+repo: "fennifith/ColorPickerDialog"
+git: "git://github.com/fennifith/ColorPickerDialog.git"
+links: 
+  - name: "GitHub"
+    url: "https://github.com/fennifith/ColorPickerDialog"
+    icon: "https://github.com/favicon.ico"
+  - name: "Issues"
+    url: "https://github.com/fennifith/ColorPickerDialog/issues"
+    icon: "/images/ic/bug.svg"
+  - name: "Apache License 2.0"
+    url: "https://choosealicense.com/licenses/apache-2.0/"
+    icon: "/images/ic/copyright.svg"
+  - name: "JitPack"
+    url: "https://jitpack.io/#me.jfenn/ColorPickerDialog"
+    icon: "/images/ic/launch.svg"
+  - name: "ColorPickerDialog.apk (0.1.0 stable)"
+    url: "https://github.com/fennifith/ColorPickerDialog/releases/download/0.1.0/ColorPickerDialog.apk"
+    icon: "/images/ic/download.svg"
+contributors: 
+  - login: "fennifith"
+    avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
+    url: "https://github.com/fennifith"
+  - login: "jahirfiquitiva"
+    avatar: "https://avatars0.githubusercontent.com/u/10360816?v=4"
+    url: "https://github.com/jahirfiquitiva"
+languages: 
+  - "Java"
+isDocs: "true"
+isWiki: "false"
+pushed: "2019-02-05T22:45:43Z"
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.

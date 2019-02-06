@@ -1,7 +1,7 @@
 ---
 layout: "project"
 type: "website"
-title: "fennifith.github.io"
+title: "Fennifith.github.io"
 description: "My personal website."
 repo: "fennifith/fennifith.github.io"
 git: "git://github.com/fennifith/fennifith.github.io.git"
@@ -36,7 +36,7 @@ languages:
   - "Ruby"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-02-04T22:24:52Z"
+pushed: "2019-02-06T01:02:17Z"
 ---
 
 This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.js) and [a shell script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.sh) that may be used to update it periodically.

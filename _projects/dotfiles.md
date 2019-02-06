@@ -1,27 +1,27 @@
 ---
-layout: project
-type: undefined
-title: "dotfiles"
+layout: "project"
+type: "undefined"
+title: "Dotfiles"
 description: "My \"generic Linux distro\" dotfiles. Used to sync stuff between laptops and not much else."
-repo: fennifith/dotfiles
-git: git://github.com/fennifith/dotfiles.git
-links:
-  - name: GitHub
-    url: https://github.com/fennifith/dotfiles
-    icon: https://github.com/favicon.ico
-  - name: Issues
-    url: https://github.com/fennifith/dotfiles/issues
-    icon: /images/ic/bug.svg
-contributors:
-  - login: fennifith
-    avatar: https://avatars1.githubusercontent.com/u/13000407?v=4
-    url: https://github.com/fennifith
-isDocs: false
-isWiki: false
-languages:
-  - Shell
-  - JavaScript
-pushed: 2019-01-31T05:26:11Z
+repo: "fennifith/dotfiles"
+git: "git://github.com/fennifith/dotfiles.git"
+links: 
+  - name: "GitHub"
+    url: "https://github.com/fennifith/dotfiles"
+    icon: "https://github.com/favicon.ico"
+  - name: "Issues"
+    url: "https://github.com/fennifith/dotfiles/issues"
+    icon: "/images/ic/bug.svg"
+contributors: 
+  - login: "fennifith"
+    avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
+    url: "https://github.com/fennifith"
+languages: 
+  - "Shell"
+  - "JavaScript"
+isDocs: "false"
+isWiki: "false"
+pushed: "2019-02-05T01:22:11Z"
 ---
 
 These are my dotfiles. You may look, but please do not touch. They bite.
