@@ -17,18 +17,7 @@ const _yaml = require('./yaml.js');
 const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
 const _javadoc = require('mdjavadoc-api');
-
-function titleize(str) {
-	return str.split("_").join(" ").split("-").join(" ").replace(/([a-z])([A-Z])/g,"$1 $2").replace(/([A-Z])([A-Z][a-z])/g,"$1 $2");
-}
-
-function safestrize(str) {
-	return str.replace(/(\")/g, "\\\"").replace(/(\:)/g, "&#58;");
-}
-
-function unhighlightize(str) {
-	return str.replace(/(\n{2,})\`{3} *(\n{1,})/g, "$1```nohighlight$2");
-}
+const _strings = require('./strings.js');
 
 async function getRepo(partialRepo) {
 	let repo = await _request.github("repos/" + partialRepo.full_name);
@@ -165,14 +154,14 @@ function getRepoWiki(repo) {
 		if (_fs.existsSync(wikiDir + "/.temp")) {
 			_fs.readdirSync(wikiDir + "/.temp").forEach((fileName) => {
 				if (fileName.endsWith(".md")) {
-					let wiki = unhighlightize(_fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8"));
+					let wiki = _strings.unhighlightize(_fs.readFileSync(wikiDir + "/.temp/" + fileName, "utf8"));
 					if (fileName.startsWith("_")) {
 						_fs.writeFileSync(wikiDir + "/" + fileName, wiki);
 					} else {
 						_fs.writeFileSync(wikiDir + "/" + fileName, "---\n"
 							+ _yaml.stringify({
 								layout: "wiki",
-								title: titleize(fileName.substring(0, fileName.length - 3)),
+								title: _strings.titleize(fileName.substring(0, fileName.length - 3)),
 								languages: Object.keys(repo.languages)
 							}) + "\n---\n\n" + wiki);
 						if (fileName == "Home.md") {
@@ -181,7 +170,7 @@ function getRepoWiki(repo) {
 							_fs.writeFileSync(wikiDir + "/index.md", "---\n"
 								+ _yaml.stringify({
 									layout: "wiki",
-									title: titleize(repo.name) + " Wiki",
+									title: _strings.titleize(repo.name) + " Wiki",
 									languages: Object.keys(repo.languages),
 									project: repo.name.toLowerCase()
 								}) + "\n---\n\n" + wiki);
@@ -239,8 +228,8 @@ async function main() {
 
 					return "undefined";
 				})(),
-				title: repo.fork && repo.parent ? repo.parent.full_name : titleize(repo.name),
-				description: repo.description ? safestrize(repo.description) : null,
+				title: repo.fork && repo.parent ? repo.parent.full_name : _strings.titleize(repo.name),
+				description: repo.description ? _strings.safestrize(repo.description) : null,
 				icon: repo.meta && repo.meta.icon ? "https://raw.githubusercontent.com/" + repo.full_name + "/master/" + repo.meta.icon : null,
 				repo: repo.full_name,
 				git: repo.git_url,
@@ -287,7 +276,7 @@ async function main() {
 
 			_fs.writeFileSync(_path.resolve("../../_projects/" + repo.name.toLowerCase() + ".md"), "---\n"
 				+ _yaml.stringify(content) + "\n"
-				+ "---\n\n" + unhighlightize(readme));
+				+ "---\n\n" + _strings.unhighlightize(readme));
 		}
 	}
 
