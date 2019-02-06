@@ -1,5 +1,6 @@
 const expect = require('chai').expect;
 const _yaml = require("./yaml.js");
+const _strings = require("./strings.js");
 
 describe("YAML Formatter (./yaml.js)", () => {
 	it("should surround strings with quotes", () => {
@@ -40,6 +41,78 @@ describe("YAML Formatter (./yaml.js)", () => {
 			"something: \"hi\"\n" +
 			"nested: \n" +
 			"  something: \"hi again\""
+		);
+	});
+});
+
+describe("titleize() Title Formatting (./strings.js)", () => {
+	it("replaces dashes with spaces", () => {
+		expect(_strings.titleize("Something-Thing")).to.be.equal("Something Thing");
+	});
+
+	it("replaces underscores with spaces", () => {
+		expect(_strings.titleize("Something_Thing")).to.be.equal("Something Thing");
+	});
+
+	it("capitalizes words split by hyphens", () => {
+		expect(_strings.titleize("hyphen-splitting")).to.be.equal("Hyphen Splitting");
+	});
+
+	it("doesn't capitalize short words", () => {
+		expect(_strings.titleize("capitalizing_the_short_words")).to.be.equal("Capitalizing the Short Words");
+	});
+
+	it("splits words in CamelCase", () => {
+		expect(_strings.titleize("CamelCaseTitle")).to.be.equal("Camel Case Title");
+	});
+
+	it("capitalizes the first letter of camelCase", () => {
+		expect(_strings.titleize("camelCaseTitle")).to.be.equal("Camel Case Title");
+	});
+
+	it("ignores acronyms in camelCaseSE", () => {
+		expect(_strings.titleize("CamelCaseACRONYM")).to.be.equal("Camel Case ACRONYM");
+	});
+
+	it("separates words after an acronym", () => {
+		expect(_strings.titleize("ACRonym")).to.be.equal("AC Ronym");
+	});
+});
+
+describe("safestrize() String Escaping (./strings.js)", () => {
+	it("should escape quotes", () => {
+		expect(_strings.safestrize("This is \"something\"")).to.be.equal("This is \\\"something\\\"");
+	});
+
+	it("should replace colons with their html char sequences", () => {
+		expect(_strings.safestrize("Something: yes")).to.be.equal("Something&#58; yes");
+	});
+});
+
+describe("unhighlightize() Markdown Code Block Formatting (./strings.js)", () => {
+	it("should explicitly specify 'nohighlight' on unhighlighted code blocks", () => {
+		expect(_strings.unhighlightize(
+			"\n\n" +
+			"```\n" +
+			"Some random unhighlighted stuff.\n" +
+			"```"
+		)).to.be.equal(
+			"\n\n" +
+			"```nohighlight\n" +
+			"Some random unhighlighted stuff.\n" +
+			"```"
+		);
+	});
+	
+	it("should leave highlighted code blocks unchanged", () => {
+		expect(_strings.unhighlightize(
+			"```java\n" +
+			"thisIsSomeJavaCode();\n" +
+			"```"
+		)).to.be.equal(
+			"```java\n" +
+			"thisIsSomeJavaCode();\n" +
+			"```"
 		);
 	});
 });
