@@ -1,8 +1,8 @@
 ---
-layout: wiki
-title: Home
-languages:
-  - Java
+layout: "wiki"
+title: "Home"
+languages: 
+  - "Java"
 ---
 
 Welcome to Attribouter's in-depth documentation page! It provides several examples of possible use cases that you could encounter with this library, and aims to be as useful and accurate as possible. If you discover any inaccuracies in this documentation, please feel free to [create an issue](https://jfenn.me/redirects/?t=github&d=Attribouter/issues/new) or see this repo's [CONTRIBUTING.md](https://jfenn.me/redirects/?t=github&d=Attribouter/blob/master/.github/CONTRIBUTING.md) for instructions on making a pull request.

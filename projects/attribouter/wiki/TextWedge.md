@@ -1,8 +1,8 @@
 ---
-layout: wiki
-title: Text Wedge
-languages:
-  - Java
+layout: "wiki"
+title: "Text Wedge"
+languages: 
+  - "Java"
 ---
 
 A `TextWedge` is a block of text. Fairly simple.

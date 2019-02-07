@@ -1,8 +1,8 @@
 ---
-layout: wiki
-title: Link Wedge
-languages:
-  - Java
+layout: "wiki"
+title: "Link Wedge"
+languages: 
+  - "Java"
 ---
 
 Link tags can exist as children of the [App](AppWedge), [Contributor](ContributorWedge), and [License](LicenseWedge) wedges. They can also be added as children of the root tag, though that is not their intended use. A few links are generated automatically by these wedges, such as links to the github profile of contributors for which the `login` attribute has been specified, and so on. These auto-generated links are specified in the wedges' individual documentation pages. 

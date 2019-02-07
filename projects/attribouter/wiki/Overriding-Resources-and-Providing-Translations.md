@@ -1,8 +1,8 @@
 ---
-layout: wiki
-title: Overriding Resources and Providing Translations
-languages:
-  - Java
+layout: "wiki"
+title: "Overriding Resources and Providing Translations"
+languages: 
+  - "Java"
 ---
 
 ## Problem

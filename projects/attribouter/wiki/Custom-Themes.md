@@ -1,8 +1,8 @@
 ---
-layout: wiki
-title: Custom Themes
-languages:
-  - Java
+layout: "wiki"
+title: "Custom Themes"
+languages: 
+  - "Java"
 ---
 
 ## Activity / Dialog Themes
