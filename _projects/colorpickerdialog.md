@@ -33,7 +33,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-02-07T21:34:49Z"
+pushed: "2019-02-08T00:32:50Z"
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.

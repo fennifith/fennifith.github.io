@@ -36,7 +36,7 @@ languages:
   - "Ruby"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-02-07T22:10:48Z"
+pushed: "2019-02-08T00:08:58Z"
 ---
 
 This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.js) and [a shell script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.sh) that may be used to update it periodically.
