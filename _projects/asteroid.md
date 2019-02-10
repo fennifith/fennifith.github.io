@@ -34,7 +34,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-01-09T16:58:41Z"
+pushed: "2019-02-10T03:45:39Z"
 ---
 
 # Asteroid
@@ -42,11 +42,11 @@ pushed: "2019-01-09T16:58:41Z"
 Asteroid is a simple Android game about avoiding incoming asteroids. It is made entirely using the Android Canvas API. All in-game graphics are either stored as vector drawables or drawn during runtime.
 
 [![Build Status](https://travis-ci.com/fennifith/Asteroid.svg?branch=master)](https://travis-ci.com/fennifith/Asteroid)
-[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/hTAZHJt)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.gg/hTAZHJt)
 
 |Main Screen|Gameplay|
 |--------|--------|
-|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/main.png)|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/gameplay.png)|
+|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/main.png?raw=true)|![img](https://github.com/fennifith/Asteroid/blob/master/./.github/gameplay.png?raw=true)|
 
 ## Install
 

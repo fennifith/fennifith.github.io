@@ -4,7 +4,7 @@ title: AppNotificationsPreferenceData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [james](./../../../index) > [status](./../../index) > [data](./../index) > [preference](./index) > **AppNotificationsPreferenceData.java**
 
-## [getApps](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/AppNotificationsPreferenceData.java#L34)
+## [getApps](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/AppNotificationsPreferenceData.java#L50)
 
 **Type:** `public` `List<AppPreferenceData>`
 

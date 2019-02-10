@@ -15,7 +15,7 @@ links:
   - name: "Apache License 2.0"
     url: "https://choosealicense.com/licenses/apache-2.0/"
     icon: "/images/ic/copyright.svg"
-  - name: ""
+  - name: "HackNA"
     url: "http://hackna.org/"
     icon: "https://hackna.org/favicon.ico"
 contributors: 
