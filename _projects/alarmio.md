@@ -49,7 +49,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-01-20T23:19:30Z"
+pushed: "2019-02-12T16:01:29Z"
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use. APKs can be downloaded [here](https://github.com/fennifith/Alarmio/blob/master/./../../releases). The alpha testing community (linked to Google Play) is [here](https://plus.google.com/communities/116326840674933604304).
