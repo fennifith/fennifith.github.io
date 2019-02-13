@@ -26,11 +26,23 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
+  - login: "TacoTheDank"
+    avatar: "https://avatars3.githubusercontent.com/u/32376686?v=4"
+    url: "https://github.com/TacoTheDank"
 languages: 
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-01-08T23:10:51Z"
+pushed: "2019-02-13T03:31:18Z"
 ---
 
-Monochrome is a monochromatic pixelated game that doesn't have a purpose. It doesn't have a purpose because it hasn't been finished yet. No, that's not a part of the plot, it actually hasn't been finished. It doesn't have a plot. I need to think of one.
+Monochrome is a monochromatic pixelated game that doesn't have a purpose.
+It doesn't have a purpose because it hasn't been finished yet.
+No, that's not a part of the plot, it actually hasn't been finished.
+It doesn't have a plot.
+I need to think of one.
+
+<a href="https://play.google.com/store/apps/details?id=james.monochrome">
+    <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+        alt="Get it on the Play Store" height="80">
+</a>
