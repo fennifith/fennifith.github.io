@@ -4,7 +4,7 @@ title: SlideActionView Documentation
 ---
 #### [.](./../../../../../../../index) > [slideactionview](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [slideactionview](./index) > **SlideActionView.java**
 
-## [setListener](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L98)
+## [setListener](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L100)
 
 **Type:** `public` `void`
 
@@ -26,7 +26,7 @@ is selected.
 
 
 
-## [setLeftIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L108)
+## [setLeftIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L110)
 
 **Type:** `public` `void`
 
@@ -50,7 +50,7 @@ drawable to a bitmap, then call the same method again.
 
 
 
-## [setLeftIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L120)
+## [setLeftIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L122)
 
 **Type:** `public` `void`
 
@@ -71,7 +71,7 @@ Specifies the icon to display on the left side of the view.
 
 
 
-## [setRightIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L130)
+## [setRightIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L132)
 
 **Type:** `public` `void`
 
@@ -95,7 +95,7 @@ drawable to a bitmap, then call the same method again.
 
 
 
-## [setRightIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L143)
+## [setRightIcon](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L144)
 
 **Type:** `public` `void`
 
@@ -116,7 +116,7 @@ Specifies the icon to display on the right side of the view.
 
 
 
-## [setTouchHandleColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L152)
+## [setTouchHandleColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L154)
 
 **Type:** `public` `void`
 
@@ -139,7 +139,7 @@ between 0 and 150.
 
 
 
-## [getTouchHandleColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L163)
+## [getTouchHandleColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L165)
 
 **Type:** `@ColorInt` `public` `int`
 
@@ -157,7 +157,7 @@ between 0 and 150.
 
 
 
-## [setOutlineColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L171)
+## [setOutlineColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L173)
 
 **Type:** `public` `void`
 
@@ -178,7 +178,7 @@ Specify the color of the random outlines drawn all over the place.
 
 
 
-## [getOutlineColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L180)
+## [getOutlineColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L182)
 
 **Type:** `@ColorInt` `public` `int`
 
@@ -196,7 +196,7 @@ Specify the color of the random outlines drawn all over the place.
 
 
 
-## [setIconColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L188)
+## [setIconColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L190)
 
 **Type:** `public` `void`
 
@@ -217,7 +217,7 @@ Specify the color applied to the left/right icons as a filter.
 
 
 
-## [getIconColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L197)
+## [getIconColor](https://github.com/fennifith/SlideActionView/blob/master/slideactionview/src/main/java/me/jfenn/slideactionview/SlideActionView.java#L200)
 
 **Type:** `@ColorInt` `public` `int`
 

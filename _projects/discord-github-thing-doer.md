@@ -23,7 +23,7 @@ languages:
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-02-10T03:46:09Z"
+pushed: "2019-02-13T20:09:24Z"
 ---
 
 The `discord-github-thing-doer` is a WIP Discord bot that does github-related things. It is primarily for personal use, but I'm open-sourcing it because... why not. You can see it in action in the Discord server below.

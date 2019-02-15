@@ -38,7 +38,7 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "true"
-pushed: "2019-01-06T03:34:15Z"
+pushed: "2019-02-14T23:35:28Z"
 ---
 
 Attribouter is a lightweight "about screen" for Android apps, built to allow developers to easily give credit to a project's contributors and open source libraries, while matching the style of their app and saving the largest amount of time and effort possible. It is meant to use GitHub's [REST API](https://developer.github.com/v3/) to fetch and display information about open source projects and contributors, but it allows you to define some or all of its data in its configuration file in your app as well.
@@ -46,15 +46,16 @@ Attribouter is a lightweight "about screen" for Android apps, built to allow dev
 [![](https://jitpack.io/v/me.jfenn/Attribouter.svg)](https://jitpack.io/#me.jfenn/Attribouter)
 [![Build Status](https://travis-ci.com/fennifith/Attribouter.svg)](https://travis-ci.com/fennifith/Attribouter)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/91f0d7f732be4668aa428d5c634a531d)](https://www.codacy.com/app/fennifith/Attribouter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Attribouter&amp;utm_campaign=Badge_Grade)
-[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/amDKN6A)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.gg/amDKN6A)
+[![Liberapay](https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay)](https://liberapay.com/fennifith/donate)
 
 ### Screenshots
 
 This is just sample data. It is not real. Though Jahir is lazy, so that part is (joking).
 
-|Contributors|Contributor|Licenses|License|
-|-----|-----|-----|-----|
-|![img](https://jfenn.me/images/screenshots/Attribouter-Main.png)|![img](https://jfenn.me/images/screenshots/Attribouter-Contributor.png)|![img](https://jfenn.me/images/screenshots/Attribouter-Licenses.png)|![img](https://jfenn.me/images/screenshots/Attribouter-License.png)|
+| Contributors | Contributor | Licenses | License |
+|--------------|-------------|----------|---------|
+| ![img](https://jfenn.me/images/screenshots/Attribouter-Main.png) | ![img](https://jfenn.me/images/screenshots/Attribouter-Contributor.png) | ![img](https://jfenn.me/images/screenshots/Attribouter-Licenses.png) | ![img](https://jfenn.me/images/screenshots/Attribouter-License.png) |
 
 ### APK
 
