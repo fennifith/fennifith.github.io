@@ -4,9 +4,9 @@
 {% if page.title %}{% assign title = page.title %}{% endif %}
 {% assign description = site.description %}
 {% if page.description %}{% assign description = page.description | xml_escape %}{% endif %}
-{% assign icon = site.url | append: site.icon %}
+{% assign icon = site.domainurl | append: site.icon %}
 {% if page.icon %}{% assign icon = page.icon %}{% endif %}
-{% assign image = site.url | append: site.image %}
+{% assign image = site.domainurl | append: site.image %}
 {% if page.image %}{% assign image = page.image %}{% endif %}
 
 <meta name="description" content="{{ description }}">
@@ -63,7 +63,7 @@
 <meta name="og:type" content="website">
 {% endif %}
 <meta name="og:image" content="{{ image }}">
-<meta name="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="og:url" content="{{ site.domainurl }}{{ page.url }}">
 <meta name="og:description" content="{{ description }}">
 <meta name="og:locale" content="en_US">
 <meta name="og:site_name" content="{{ site.name }}">

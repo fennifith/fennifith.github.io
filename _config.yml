@@ -1,10 +1,11 @@
 name: James Fenn
 author: James Fenn
-description: "Writer of bad puns and better software. This website contains information about my adventures in programming, current projects, and me."
+description: "Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me."
 icon: "/images/me.jpg"
 image: "/images/headers/snowytrees.jpg"
 
 url: "/"
+domainurl: "https://jfenn.me"
 baseurl: "/"
 
 collections:
