@@ -18,8 +18,8 @@ links:
   - name: "JitPack"
     url: "https://jitpack.io/#me.jfenn/SunriseSunsetView"
     icon: "/images/ic/launch.svg"
-  - name: "SunriseSunsetView.apk (0.0.2 stable)"
-    url: "https://github.com/fennifith/SunriseSunsetView/releases/download/0.0.2/SunriseSunsetView.apk"
+  - name: "SunriseSunsetView.apk (0.0.3 stable)"
+    url: "https://github.com/fennifith/SunriseSunsetView/releases/download/0.0.3/SunriseSunsetView.apk"
     icon: "/images/ic/download.svg"
 contributors: 
   - login: "fennifith"
@@ -27,14 +27,17 @@ contributors:
     url: "https://github.com/fennifith"
 languages: 
   - "Java"
+  - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2018-11-16T18:18:04Z"
+pushed: "2019-02-12T15:50:07Z"
 ---
 
 SunriseSunsetView is a lightweight Android view used for displaying and/or editing sunrise and sunset times. This is a part of my efforts to modularize some of the things that I write; it was originally a part of [Alarmio](https://jfenn.me/projects/alarmio), and has been separated into its own library.
 
-[![](https://jitpack.io/v/me.jfenn/SunriseSunsetView.svg)](https://jitpack.io/#me.jfenn/SunriseSunsetView)
+[![JitPack](https://jitpack.io/v/me.jfenn/SunriseSunsetView.svg)](https://jitpack.io/#me.jfenn/SunriseSunsetView)
+[![Build Status](https://travis-ci.com/fennifith/SunriseSunsetView.svg?branch=master)](https://travis-ci.com/fennifith/SunriseSunsetView)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.gg/5VcJgmy)
 
 For testing and experimentation purposes, a sample apk can be downloaded [here](https://jfenn.me/projects/sunrisesunsetview).
 

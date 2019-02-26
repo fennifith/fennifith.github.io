@@ -4,7 +4,7 @@ title: SunriseSunsetView Documentation
 ---
 #### [.](./../../../../../../../index) > [sunrisesunsetview](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [sunrisesunsetview](./index) > **SunriseSunsetView.java**
 
-## [setSunriseColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L75)
+## [setSunriseColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L80)
 
 **Type:** `public` `void`
 
@@ -26,7 +26,7 @@ sun is above the horizon.
 
 
 
-## [getSunriseColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L86)
+## [getSunriseColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L91)
 
 **Type:** `@ColorInt` `public` `int`
 
@@ -44,7 +44,7 @@ sun is above the horizon.
 
 
 
-## [setSunsetColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L95)
+## [setSunsetColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L100)
 
 **Type:** `public` `void`
 
@@ -66,7 +66,7 @@ sun is below the horizon.
 
 
 
-## [getSunsetColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L106)
+## [getSunsetColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L111)
 
 **Type:** `@ColorInt` `public` `int`
 
@@ -84,7 +84,7 @@ sun is below the horizon.
 
 
 
-## [setFutureColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L115)
+## [setFutureColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L120)
 
 **Type:** `public` `void`
 
@@ -117,7 +117,7 @@ occur?
 
 
 
-## [getFutureColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L137)
+## [getFutureColor](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L142)
 
 **Type:** `@ColorInt` `public` `int`
 
@@ -135,7 +135,7 @@ occur?
 
 
 
-## [setSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L146)
+## [setSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L151)
 
 **Type:** `public` `void`
 
@@ -158,7 +158,30 @@ period. Change in values will not be animated.
 
 
 
-## [setSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L157)
+## [setMinMax](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L162)
+
+**Type:** `public` `void`
+
+Set the minimum and maximum distance allowed between sunrise 
+and sunset. 
+
+
+
+
+
+|Parameter Name|Description|
+|-----|-----|
+|minMinutes|The minimum distance, in minutes.|
+|maxMinutes|The maximum distance, in minutes.  |
+
+
+
+
+
+
+
+
+## [setSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L174)
 
 **Type:** `public` `void`
 
@@ -182,7 +205,7 @@ period.
 
 
 
-## [getSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L174)
+## [getSunrise](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L191)
 
 **Type:** `public` `long`
 
@@ -203,7 +226,7 @@ will not range beyond a 24 hour period.
 
 
 
-## [setSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L184)
+## [setSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L201)
 
 **Type:** `public` `void`
 
@@ -226,7 +249,7 @@ period. Change in values will not be animated.
 
 
 
-## [setSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L195)
+## [setSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L212)
 
 **Type:** `public` `void`
 
@@ -250,7 +273,7 @@ period.
 
 
 
-## [getSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L212)
+## [getSunset](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L229)
 
 **Type:** `public` `long`
 
@@ -271,7 +294,7 @@ will not range beyond a 24 hour period.
 
 
 
-## [setListener](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L222)
+## [setListener](https://github.com/fennifith/SunriseSunsetView/blob/master/sunrisesunsetview/src/main/java/me/jfenn/sunrisesunsetview/SunriseSunsetView.java#L239)
 
 **Type:** `public` `void`
 
