@@ -1,5 +1,9 @@
 name: James Fenn
+author: James Fenn
 description: James Fenn's portfolio site.
+icon: "/images/me.jpg"
+image: "/images/headers/snowytrees.jpg"
+
 url: "/"
 baseurl: "/"
 

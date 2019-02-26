@@ -4,8 +4,13 @@
 {% if page.title %}{% assign title = page.title %}{% endif %}
 {% assign description = site.description %}
 {% if page.description %}{% assign description = page.description | xml_escape %}{% endif %}
+{% assign icon = site.url | append: site.icon %}
+{% if page.icon %}{% assign icon = page.icon %}{% endif %}
+{% assign image = site.url | append: site.image %}
+{% if page.image %}{% assign image = page.image %}{% endif %}
 
 <meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.author }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="generator" content="{{ site.name }}">
 <title>{{ title }}</title>
@@ -36,10 +41,29 @@
 <link href="/css/styles.css" rel="stylesheet">
 
 <meta name="twitter:card" content="summary">
-
 {% assign twitterLink = site.links | where: "title", "twitter" | first %}
-{% if twitterLink %}<meta name="twitter:creator" content="@{{ twitterLink.name }}">{% endif %}
+{% if twitterLink %}
+<meta name="twitter:creator" content="@{{ twitterLink.name }}">
+<meta name="twitter:site" content="@{{ twitterLink.name }}">
+{% endif %}
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ icon }}">
 
-<meta name="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="og:title" content="{{ title }}">
+{% if layout.article %}
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="{{ page.date }}">
+<meta name="article:author" content="{{ site.author }}">
+{% elsif layout.profile %}
+<meta name="og:type" content="profile">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+{% else %}
+<meta name="og:type" content="website">
+{% endif %}
+<meta name="og:image" content="{{ image }}">
+<meta name="og:url" content="{{ site.url }}{{ page.url }}">
 <meta name="og:description" content="{{ description }}">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="{{ site.name }}">
