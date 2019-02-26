@@ -1,4 +1,4 @@
-var onPage = null;
+<script type="text/javascript">
 var shouldIgnoreState = false;
 var mainElement = document.getElementsByTagName("main")[0];
 var navElements = document.getElementsByTagName("nav")[0].childNodes;
@@ -27,9 +27,6 @@ function setPage(page, element) {
 		setPageElement(element);
 
 	mainElement.style.display = null;
-
-	if (onPage && typeof onPage == "function")
-		onPage(page, element);
 }
 
 function setPageElement(elementId) {
@@ -52,18 +49,23 @@ function getPage() {
 	else return "home";
 }
 
-for (var i = 0; i < navElements.length; i++) {
-	const element = navElements[i];
-	if (element.getAttribute) {
-		element.addEventListener("click", function() {
-			var page = element.getAttribute("url");
-			if (page) {
-				location.href = page;
-			} else {
-				page = element.getAttribute("page");
-				if (page)
-					setPage(page);
-			}				
-		});	
-	}
+function createPageTrigger(element) {
+	element.addEventListener("click", function() {
+		var page = element.getAttribute("url");
+		if (page) {
+			location.href = page;
+		} else {
+			page = element.getAttribute("page");
+			if (page)
+				setPage(page);
+		}				
+	});	
 }
+
+for (var i = 0; i < navElements.length; i++) {
+	if (navElements[i].getAttribute) 
+	    createPageTrigger(navElements[i]);
+}
+
+setPage(getPage());
+</script>

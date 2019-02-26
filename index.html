@@ -199,10 +199,8 @@ profile: true
 	</div>
 </main>
 
-<script type="text/javascript" src="js/utils.js"></script>
-<script type="text/javascript" src="js/github.js"></script>
-<script type="text/javascript" src="js/content.js"></script>
-<script type="text/javascript" src="js/navigation.js"></script>
+{% include navjs.html %}
+
 <script type="text/javascript">	
 	function horriblePun() {
 		var hellos = [
@@ -228,15 +226,6 @@ profile: true
 
 		document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
 	}
-
-	var page = getPage();
-	if (page.split('/').length > 1) {
-		var pages = page.split('/');
-		setPage(pages[0], pages[1]);
-	} else setPage(page);
-
-
-
 	
 	var projectsElement = document.getElementById("projects");
 	var projectsFilterElement = document.getElementById("projectsFilter");
