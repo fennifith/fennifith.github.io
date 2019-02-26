@@ -32,7 +32,7 @@
 		{% if blogs.size > 0 %}		
 		<h2>Posts</h2>
 		{% for blog in blogs reversed %}
-		<a class="item" href="{{ site.baseurl }}{{ blog.url }}">
+		<a class="item" href="{{ site.url }}{{ blog.url }}">
 			<span class="item__title">{{ blog.title }}</span>
 			{{ blog.date | date: "%B %e, %Y" }}
 		</a>
