@@ -105,7 +105,7 @@ profile: true
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
 					<a class="item item--box" href="{{ project.url }}">
-						<img class="item--box__img{% unless project.icon %} link__img{% endunless %}" src="{% if project.icon %}{{ project.icon }}{% else %}/images/ic/code.svg{% endif %}">
+						<img class="lozad item--box__img{% unless project.icon %} link__img{% endunless %}" src="/images/ic/code.svg" data-src="{% if project.icon %}{{ project.icon }}{% else %}/images/ic/code.svg{% endif %}">
 						<span class="item__title">{{ project.title }}</span>
 						{{ project.description }}
 					</a>
@@ -134,7 +134,7 @@ profile: true
 				"places" listed in <a href="/?home">/home</a>, emailed at <a href="mailto:me@jfenn.me">me@jfenn.me</a>, or cord...ed (?)
 				in the Discord channel below.
 			</p>
-			<iframe src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="250" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
+			<iframe class="lozad" data-src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="450" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
 			<h2>The Community</h2>
 			<p>
 				While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
@@ -146,7 +146,7 @@ profile: true
 		<div class="layout--grid">
 			{% for person in site.people %}
 			<a class="item item--box" href="{{ person.link }}">
-				<img class="img--round item--box__img" src="{{ person.avatar }}" class="round">
+				<img class="lozad img--round item--box__img" src="/images/ic/person.svg" data-src="{{ person.avatar }}" class="round" alt="Profile picture">
 				<span class="item__title">{{ person.title }}</span>
 				{{ person.description }}
 			</a>
@@ -200,6 +200,7 @@ profile: true
 </main>
 
 {% include navjs.html %}
+{% include lazyjs.html %}
 
 <script type="text/javascript">	
 	function horriblePun() {
