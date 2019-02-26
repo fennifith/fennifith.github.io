@@ -50,11 +50,11 @@
 <meta name="twitter:image" content="{{ icon }}">
 
 <meta name="og:title" content="{{ title }}">
-{% if layout.article %}
+{% if layout.article or page.article %}
 <meta name="og:type" content="article">
 <meta name="article:published_time" content="{{ page.date }}">
 <meta name="article:author" content="{{ site.author }}">
-{% elsif layout.profile %}
+{% elsif layout.profile or page.profile %}
 <meta name="og:type" content="profile">
 <meta name="profile:first_name" content="James">
 <meta name="profile:last_name" content="Fenn">
