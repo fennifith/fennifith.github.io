@@ -40,7 +40,16 @@
 <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="/css/styles.css" rel="stylesheet">
 
+{% if page.googleplay %}
+<meta name="twitter:card" content="app">
+<meta name="twitter:app:name:googleplay" content="{{ page.title }}">
+<meta name="twitter:app:id:googleplay" content="{{ page.package }}">
+<meta name="twitter:app:url:googleplay" content="{{ page.googleplay }}">
+{% elsif page.banner %}
+<meta name="twitter:card" content="summary_large_image">
+{% else %}
 <meta name="twitter:card" content="summary">
+{% endif %}
 {% assign twitterLink = site.links | where: "title", "twitter" | first %}
 {% if twitterLink %}
 <meta name="twitter:creator" content="@{{ twitterLink.name }}">
