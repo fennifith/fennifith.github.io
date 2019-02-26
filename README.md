@@ -4,9 +4,11 @@ This is a website that displays all of my current projects and applications. As 
 
 ## Building
 
-After cloning the project, run `git submodule init` and `git submodule update` in the root directory to fetch the project's [CSS styles](https://jfenn.me/redirects/?t=github&d=styles), which are stored in a separate repository to simplify versioning (different parts of my site use different versions of the css, so I don't have to worry about things breaking immediately if I change something).
+I use [`make`](https://gnu.org/software/make/) for local testing and development. To install the project's dependencies, run `make install`. Once that is finished, simply running `make` should build and serve a local version of the site. To clean up build files and such afterwards, run `make clean`.
 
-Once this is done, you can run `jekyll build` to generate the HTML (storing it in "_site/"), or `jekyll serve` to start a server so that you can view the site in a browser.
+## CSS
+
+This project's [CSS styles](https://jfenn.me/redirects/?t=github&d=styles) are stored in a separate repository to simplify versioning (different parts of my site use different versions of the css, so I don't have to worry about things breaking immediately if I change something). The `make install` command contains a `git submodule init` and `git submodule update` to fetch the CSS.
 
 ## License
 

@@ -6,6 +6,8 @@ build:
 	bundle exec jekyll build --config _config.yml,_config-dev.yml
 
 install:
+	git submodule init
+	git submodule update
 	bundle install
 	cd .scripts && npm install
 
