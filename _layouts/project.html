@@ -51,18 +51,18 @@
 		<nav class="nav">
 			<button class="nav__item" selected>
 				<i class="nav__item__icon material-icons">info</i>
-				<span class="nav__item__text">About</span>
+				<span class="nav__item__title">About</span>
 			</button>
 			{% if page.isWiki == "true" %}
 			<button class="nav__item" onclick="location.href='wiki/';">
 				<i class="nav__item__icon material-icons">assignment</i>
-				<span class="nav__item__text">Wiki</span>
+				<span class="nav__item__title">Wiki</span>
 			</button>
 			{% endif %}
 			{% if page.isDocs == "true" %}
 			<button class="nav__item" onclick="location.href='docs/';">
 				<i class="nav__item__icon material-icons">list_alt</i>
-				<span class="nav__item__text">Docs</span>
+				<span class="nav__item__title">Docs</span>
 			</button>
 			{% endif %}
 		</nav>
