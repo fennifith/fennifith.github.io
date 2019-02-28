@@ -19,6 +19,11 @@ const _javadoc = require('mdjavadoc-api');
 const _strings = require('./strings.js');
 const _github = require('./github.js');
 
+/**
+ * Generate documentation files for the passed
+ * repository object. Return true if the files
+ * were successfully created, false if not.
+ */
 function getRepoDocs(repo) {
 	if (repo.language == "Java" && !repo.fork) {
 		let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
@@ -49,6 +54,11 @@ function getRepoDocs(repo) {
 	return false;
 }
 
+/**
+ * Generate wiki files for the passed repository
+ * object. Return true if they were created
+ * successfully, false if not.
+ */
 function getRepoWiki(repo) {
 	let isWiki = false;
 	
@@ -100,6 +110,25 @@ function getRepoWiki(repo) {
 	return isWiki;
 }
 
+/**
+ * Parses the front matter of a file's content.
+ * This assumes that the file follows Jekyll's
+ * format of containing the YAML matter between
+ * "---" sequences at the start of the file.
+ *
+ * @param file      string: the content of the file.
+ */
+function parseFrontMatter(file) {
+    if (!file || typeof file !== "string")
+        return;
+
+    let frontMatter = file.split("---")[1];
+    if (!frontMatter)
+        return;
+
+    return _yaml.parse(frontMatter);
+}
+
 async function main() {
 	{% assign github = site.links | where: "title", "github" | first %}
 
@@ -114,10 +143,10 @@ async function main() {
 				console.log("New project: " + repos[i].full_name);
 			}
 
-			if (projectFile && repos[i].pushed_at && repos[i].pushed_at.length > 0) {
-				let frontMatter = projectFile.split("---")[1];
-				if (frontMatter && frontMatter.includes("pushed: ")) {
-					let date = new Date(frontMatter.split("pushed: ")[1].split("\n")[0]);
+			if (repos[i].pushed_at && repos[i].pushed_at.length > 0) {
+				let frontMatter = parseFrontMatter(projectFile);
+				if (frontMatter && 'pushed' in frontMatter) {
+					let date = new Date(frontMatter.pushed);
 					let pushDate = new Date(repos[i].pushed_at);
 					if (!isNaN(date) && !isNaN(pushDate) && date >= pushDate) {
 						console.log("Skipping " + repos[i].full_name + " - last push was " + repos[i].pushed_at);
