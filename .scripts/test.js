@@ -1,6 +1,7 @@
 const expect = require('chai').expect;
 const _yaml = require("./yaml.js");
 const _strings = require("./strings.js");
+const _github = require("./github.js");
 
 describe("YAML Formatter (./yaml.js)", () => {
 	it("should surround strings with quotes", () => {
@@ -115,4 +116,33 @@ describe("unhighlightize() Markdown Code Block Formatting (./strings.js)", () =>
 			"```"
 		);
 	});
+});
+
+describe("getRepo() GitHub repo fetcher (./github.js)", (strings) => {
+    it("should fetch repository content without a terrible failure", async () => {
+        expect(await _github.getRepo({
+            full_name: "fennifith/fennifith.github.io"
+        })).to.be.ok;
+    });
+});
+
+describe("getRepoLinks() GitHub link finder (./github.js)", (strings) => {
+    it("should generate basic links without failure", async () => {
+        expect(await _github.getLinks({
+            html_url: "https://example.com",
+            releases: []
+        })).to.be.ok;
+    });
+
+    it("should fetch info from other pages", async () => {
+        expect(await _github.getLinks({
+            html_url: "https://example.com",
+            homepage: "https://example.com",
+            releases: []
+        })).to.include.deep.members([{
+            name: "Example Domain",
+            url: "https://example.com",
+            icon: "https://example.com/favicon.ico"
+        }]);
+    });
 });

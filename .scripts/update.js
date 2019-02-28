@@ -14,96 +14,10 @@ const _path = require("path");
 const _fs = require('fs');
 const _request = require('./request.js')(process.env.GITHUB_TOKEN);
 const _yaml = require('./yaml.js');
-const _cheerio = require('cheerio');
 const _clone = require('git-clone-sync');
 const _javadoc = require('mdjavadoc-api');
 const _strings = require('./strings.js');
-
-async function getRepo(partialRepo) {
-	let repo = await _request.github("repos/" + partialRepo.full_name);
-	
-	repo.contributors = await _request.github("repos/" + repo.full_name + "/contributors");
-	for (let i in repo.contributors) {
-		repo.contributors[i] = await _request.github("users/" + repo.contributors[i].login) || repo.contributors[i];
-	}
-	
-	repo.releases = await _request.github("repos/" + repo.full_name + "/releases") || repo.releases;
-	repo.languages = await _request.github("repos/" + repo.full_name + "/languages") || repo.languages;
-	repo.meta = await _request.yaml("https://raw.githubusercontent.com/" + repo.full_name + "/master/.meta.yml");
-	repo.topics = await _request.github("repos/" + repo.full_name + "/topics", {
-		"Accept": "application/vnd.github.mercy-preview+json"
-	});
-
-	return repo;
-}
-
-async function getRepoLinks(repo) {
-	let links = [
-		{
-			name: "GitHub",
-			url: repo.html_url,
-			icon: "https://github.com/favicon.ico"
-		},
-		{
-			name: "Issues",
-			url: repo.html_url + "/issues",
-			icon: "/images/ic/bug.svg"
-		}
-	];
-
-	if (repo.license && repo.license.key) {
-		links.push({
-			name: repo.license.name ? repo.license.name : "License",
-			url: "https://choosealicense.com/licenses/" + repo.license.key + "/",
-			icon: "/images/ic/copyright.svg"
-		});
-	}
-
-	if (repo.homepage && !repo.fork) {
-		let link = {
-			name: "Website",
-			url: repo.homepage,
-			icon: "/images/ic/launch.svg"
-		};
-
-		if (repo.homepage.includes("jfenn.me")) {
-			link.icon = "https://jfenn.me/images/favicon-32.ico";
-		} else if (repo.homepage.includes("play.google.com")) {
-			link.name = "Google Play";
-			link.icon = "/images/ic/play-store.svg";
-		} else if (repo.homepage.includes("jitpack.io")) {
-			link.name = "JitPack";
-		} else if (repo.homepage.includes("bintray.com")) {
-			link.name = "Bintray";
-		} else {
-			let page = _cheerio.load(await _request.text(repo.homepage));
-			link.name = page("head > title").text().trim();
-
-			['-', ':', '|'].forEach(separator => {
-				while (link.name.includes(separator)) {
-					let parts = link.name.split(separator);
-					if (parts[0].length > parts[1].length)
-						link.name = parts[1].trim();
-					else link.name = parts[0].trim();
-				}
-			});
-
-			link.icon = "https://" + repo.homepage.split("/")[2] + "/favicon.ico";
-		}
-
-		links.push(link);
-	}
-
-	for (let i2 = 0; repo.releases[0] && i2 < repo.releases[0].assets.length; i2++) {
-		links.push({
-			name: repo.releases[0].assets[i2].name + " (" + repo.releases[0].tag_name + (repo.releases[0].prerelease ? " unstable" : " stable") + ")",
-			url: repo.releases[0].assets[i2].browser_download_url,
-			icon: "/images/ic/download.svg"						
-		});
-	}
-
-	return links;
-}
+const _github = require('./github.js');
 
 function getRepoDocs(repo) {
 	if (repo.language == "Java" && !repo.fork) {
@@ -212,7 +126,7 @@ async function main() {
 				}
 			}
 
-			let repo = await getRepo(repos[i]);
+			let repo = await _github.getRepo(repos[i]);
 			if (!repo) {
 				console.log("Failed to obtain repository info.");
 				continue;
@@ -235,7 +149,7 @@ async function main() {
 				package: repo.meta && repo.meta.package ? repo.meta.package : null,
 				repo: repo.full_name,
 				git: repo.git_url,
-				links: await getRepoLinks(repo),
+				links: await _github.getLinks(repo),
 				contributors: (() => {
 					let contributors = [];
 					
