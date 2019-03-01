@@ -118,14 +118,6 @@ describe("unhighlightize() Markdown Code Block Formatting (./strings.js)", () =>
 	});
 });
 
-describe("getRepo() GitHub repo fetcher (./github.js)", (strings) => {
-    it("should fetch repository content without a terrible failure", async () => {
-        expect(await _github.getRepo({
-            full_name: "fennifith/fennifith.github.io"
-        })).to.be.ok;
-    });
-});
-
 describe("getRepoLinks() GitHub link finder (./github.js)", (strings) => {
     it("should generate basic links without failure", async () => {
         expect(await _github.getLinks({
