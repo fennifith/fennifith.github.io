@@ -72,22 +72,22 @@ Side-note: if your keystore is a `.keystore` file, it shouldn't make a differenc
 
 #### Doing It Yourself
 
-Pick a key and a password. They shouldn't be excessively long, but not tiny either. Do not use special characters. In this example, I will use "php" as the key and "aaaaa" as the password.
+Pick a relatively secure password. It shouldn't be excessively long, but not tiny either. Do not use special characters. In this example, I will use "aaaaa" - you might want to pick something a little more complex.
 
-Add them to Travis CI as environment variables. You can do this by going to your project page in Travis, clicking on "More Options > Settings", then scrolling down to "Environment Variables". I will name mine "enc_keystore_key" and "enc_keystore_pass", respectively.
+Add them to Travis CI as environment variables. You can do this by going to your project page in Travis, clicking on "More Options > Settings", then scrolling down to "Environment Variables". I will name mine "enc_keystore_pass".
 
 Now, time to encrypt the file. Run this command in the terminal:
 
 ```bash
-openssl aes-256-cbc -K "php" -iv "aaaaa" -in key.jks -out key.jks.enc
+openssl aes-256-cbc -k "aaaaa" -in key.jks -out key.jks.enc
 ```
 
-Now, you will want to add a line to decrypt the file in `before_install` of your `.travis.yml`. You should not pass your key/password here, as this file will be pushed to git, and that would be bad. Instead, we will reference the environment variables.
+Now, you will want to add a line to decrypt the file in `before_install` of your `.travis.yml`. You should not pass your password here, as this file will be pushed to git, and that would be bad. Instead, we will reference the environment variables.
 
 ```yml
 before_install:
   - ...
-  - openssl aes-256-cbc -K $enc_keystore_key -iv $enc_keystore_pass -in key.jks.enc -out key.jks -d
+  - openssl aes-256-cbc -k $enc_keystore_pass -in key.jks.enc -out key.jks -d
 ```
 
 That's it! Push your changes to `.travis.yml` as well as `key.jks.enc`, and Jekyll should build your project.
