@@ -74,6 +74,9 @@
 			<img class="link__img" src="/images/ic/git.png">
 			<span class="link__title">{{ page.git }}</span>
 		</a>
+		<a class="github-button" href="https://github.com/{{ page.repo }}/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch {{ page.repo }} on GitHub">Watch</a>&nbsp;
+		<a class="github-button" href="https://github.com/{{ page.repo }}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ page.repo }} on GitHub">Star</a>&nbsp;
+		<a class="github-button" href="https://github.com/{{ page.repo }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ page.repo }} on GitHub">Fork</a>
 		<div id="content" class="markdown">
 			{{ content }}
 		</div>
@@ -82,5 +85,7 @@
 	
 	{% include snackbar.html %}
 	{% include footer.html %}
+
+	{% include githubbuttonjs.html %}
 </body>
 </html>
