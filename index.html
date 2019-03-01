@@ -201,9 +201,10 @@ profile: true
 
 <div class="h-card vcard" style="display: none;">
     <img class="u-photo photo" src="{{ site.icon }}">
-    <span class="p-name fn">James Fenn</span>
-    <a class="u-url u-uid url uid" href="{{ site.domainurl }}/">https://jfenn.me/</a>
-    <a class="u-email email" href="mailto:me@jfenn.me">me@jfenn.me</a>
+    <span class="p-name fn">{{ site.author }}</span>
+    <span class="p-note note">{{ site.bio }}</span>
+    <a class="u-url u-uid url uid" href="{{ site.domainurl }}/">{{ site.domainurl }}/</a>
+    <a class="u-email email" href="mailto:{{ site.email }}">{{ site.email }}</a>
     (<a class="p-org h-card org" href="https://doubledotlabs.github.io/">Double Dot Labs</a>)
 </div>
 
