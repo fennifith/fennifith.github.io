@@ -4,6 +4,8 @@ type: "android-app"
 title: "Status"
 description: "A no-root status bar replacement for Android."
 icon: "https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png"
+googleplay: "https://play.google.com/store/apps/details?id=com.james.status"
+package: "com.james.status"
 repo: "fennifith/Status"
 git: "git://github.com/fennifith/Status.git"
 links: 
@@ -37,7 +39,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-02-10T07:28:45Z"
+pushed: "2019-03-01T14:11:17Z"
 ---
 
 > **A message from the idiot that wrote this program:**
@@ -57,6 +59,7 @@ Status is a status bar replacement that draws an overlay on top of the system-ge
 [![Build Status](https://travis-ci.com/fennifith/Status.svg)](https://travis-ci.com/fennifith/Status)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4f0694753964424b82ccb3544d24df2a)](https://www.codacy.com/app/fennifith/Status?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Status&amp;utm_campaign=Badge_Grade)
 [![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.gg/ugwZR7V)
+[![Liberapay](https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay)](https://liberapay.com/fennifith/donate)
 
 Special thanks to the contributors that have helped to design the app, fix issues, and translate it to different languages:
 

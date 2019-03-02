@@ -21,9 +21,10 @@ contributors:
     url: "https://github.com/fennifith"
 languages: 
   - "JavaScript"
+  - "Shell"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-02-13T20:09:24Z"
+pushed: "2019-03-02T03:47:07Z"
 ---
 
 The `discord-github-thing-doer` is a WIP Discord bot that does github-related things. It is primarily for personal use, but I'm open-sourcing it because... why not. You can see it in action in the Discord server below.

@@ -4,6 +4,8 @@ type: "android-app"
 title: "Metronome Android"
 description: "A lightweight, well designed metronome app for Android."
 icon: "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+googleplay: "https://play.google.com/store/apps/details?id=james.metronome"
+package: "james.metronome"
 repo: "fennifith/Metronome-Android"
 git: "git://github.com/fennifith/Metronome-Android.git"
 links: 
@@ -37,11 +39,33 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-01-08T16:27:35Z"
+pushed: "2019-03-01T16:38:25Z"
 ---
 
 Metronome is a lightweight, well designed metronome app for Android focused on offering a consistent and usable design without limiting functionality.
 
+[![Build Status](https://travis-ci.com/fennifith/Metronome-Android.svg?branch=master)](https://travis-ci.com/fennifith/Metronome-Android)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.gg/kgqJ5hM)
+[![Liberapay](https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay)](https://liberapay.com/fennifith/donate)
+
+Special thanks to [Kevin Aguilar](https://twitter.com/kevttob) for designing [this app's beautiful icon](https://dribbble.com/shots/5643017-Metronome-Updated-Icon).
+
+## Screenshots
+
 | Home   | About  | Themes |
 |--------|--------|--------|
-|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/main.png?raw=true)|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/about.png?raw=true)|![img](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/theme.png?raw=true)|
+| ![home page](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/main.png?raw=true) | ![about screen](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/about.png?raw=true) | ![theming options](https://github.com/fennifith/Metronome-Android/blob/master/./.github/images/theme.png?raw=true) |
+
+## Installation
+
+The app is published on Google Play:
+
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+    alt="Get it on Google Play"
+    height="80">](https://play.google.com/store/apps/details?id=james.metronome)
+
+Alternatively, you can download the latest APK from [the GitHub releases](https://github.com/fennifith/Metronome-Android/blob/master/../../releases/).
+
+## Contributing & Build Instructions
+
+Instructions for contributing to this project and building it locally can be found [here](https://github.com/fennifith/Metronome-Android/blob/master/./.github/CONTRIBUTING.md).
