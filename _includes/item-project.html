@@ -1,0 +1,8 @@
+<a class="item item--box" href="{{ site.url }}{{ include.project.url }}">
+    <img class="lozad item--box__img{% unless include.project.icon %} link__img{% endunless %}"
+        src="/images/ic/code.svg"
+        data-src="{% if include.project.icon %}{{ include.project.icon }}{% else %}/images/ic/code.svg{% endif %}"
+        alt="Project icon">
+    <span class="item__title">{{ include.project.title }}</span>
+    {{ include.project.description }}
+</a>

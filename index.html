@@ -29,24 +29,59 @@ profile: true
 </nav>
 <main id="main" style="display: none;">
 	<div page="home">
-		<h1>Hi,</h1>
-		<h2 id="person">I'm a person.</h2>
+		<h1>It's me.</h1>
 		<p>
 			I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
 			I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
 			and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
 			is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
-			pull requests on all of my projects unless stated otherwise. My resume can be downloaded <a href="/resume.pdf">here</a>.
+			pull requests in all of my projects unless stated otherwise.
 		</p>
-		<p>You can see all of my latest blog posts <a href="/?blog">here</a>.</p>
-		<p>You can also find a few pictures that I have taken, published under the Creative Commons License, <a href="/photos/">here</a>.</p>
-		<h2>Find me in places.</h2>
-		{% for link in site.links %}
-		{% if link.verb %}<a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.title }})</small><br>{% endif %} 
-		{% endfor %}
-		<h2>See my work.</h2>
 		<p>
-			You can find most of my projects <a href="/?projects">here</a> on this site, but I have also worked on a few for some organizations:
+		    The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
+		    portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
+		</p>
+		<p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
+		
+		<h2>Latest blog post</h2>
+		{% assign blog = site.blogs | last %}
+		{% include item-blog.html blog=blog %}
+		<a class="link" href="/?blog">
+		    <i class="link__img material-icons">arrow_forward</i>
+		    <span class="link__title">All Blog Posts</span>
+		</a>
+		
+		<h2>Recent projects</h2>
+		<div class="layout--grid">
+		    {% assign projects = site.projects | sort: 'pushed' | reverse %}
+		    {% for index in (1..4) %}
+		    {% assign project = projects[index] %}
+		    {% include item-project.html project=project %}
+		    {% endfor %}
+		</div><br>
+		<a class="link" href="/?projects">
+		    <i class="link__img material-icons">arrow_forward</i>
+		    <span class="link__title">All Projects</span>
+		</a>
+		
+		<h2>Find me in places</h2>
+		<p>
+		    Here is a list of the majority of my accounts on social media and the like. More information, along with relevant links and other ways to contact me, can be found
+		    <a href="/existence/">here</a>.
+		</p>
+		<div class="layout--grid">
+		    {% for link in site.links %}
+		    {% if link.verb and link.readable %}
+		    <div class="item">
+		        <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
+		    </div>
+		    {% endif %} 
+		    {% endfor %}
+		</div>
+		
+		<h2>More of my work</h2>
+		<p>
+			In addition to the <a href="/?projects">projects I've published</a> here, I have also worked on a few for some organizations:
 		</p>
 		<div id="organizationlist" class="layout--grid">
 			{% for org in site.orgs %}
@@ -57,8 +92,9 @@ profile: true
 			</a>
 			{% endfor %}
 		</div>
-		<br>
-		<i id="pun"></i>
+		
+		<h2>A bad pun</h2>
+		<p><i id="pun"></i></p>
 	</div>
 	<div page="blog">
 		<p class="markdown">
@@ -68,34 +104,11 @@ profile: true
 		<h2>The Blogs</h2>
 		<p>
 			{% for blog in site.blogs reversed %}
-			<a class="item item--box" href="{{ blog.url }}">
-				<span class="item__title">{{ blog.title }}</span>
-				<small>{{ blog.date | date: "%B %e %Y" }}</small>
-				<br>
-				{{ blog.description }}
-			</a>
+			{% include item-blog.html blog=blog %}
 			{% endfor %}
 		</p>
 	</div>
 	<div id="projects" page="projects">
-		<filter id="projectsFilter" tabindex="0">
-			<div class="title">
-				<input id="projectsFilterText" type="text" placeholder="Filter..."></input>
-				<i class="material-icons --clickable">expand_more</i>
-			</div>
-			<div id="projectCheckBoxes" class="content">
-				{% assign types = site.types | sort: "order" %}
-				{% for type in types %}
-				<div class="fitem">
-					<input id="c{{ type.tag }}" type="checkbox" checked></input>
-					<label for="c{{ type.tag }}"></label>
-					<span>{{ type.title }}</span>
-					<i class="material-icons --focusable --clickable" onclick="setPageElement('{{ type.tag }}')">find_in_page</i>
-				</div>
-				{% endfor %}
-			</div>
-		</filter>
-		<br>
 		<div id="projectsCategories" class="categories">
 			{% assign types = site.types | sort: "order" %}
 			{% for type in types %}
@@ -104,11 +117,7 @@ profile: true
 				<div id="{{ type.tag }}list" class="layout--grid">
 					{% assign projects = site.projects | where: 'type', type.tag %}
 					{% for project in projects %}
-					<a class="item item--box" href="{{ project.url }}">
-						<img class="lozad item--box__img{% unless project.icon %} link__img{% endunless %}" src="/images/ic/code.svg" data-src="{% if project.icon %}{{ project.icon }}{% else %}/images/ic/code.svg{% endif %}" alt="Project icon">
-						<span class="item__title">{{ project.title }}</span>
-						{{ project.description }}
-					</a>
+					{% include item-project.html project=project %}
 					{% endfor %}
 				</div>
 			</div>
@@ -236,6 +245,8 @@ profile: true
 
 		document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
 	}
+
+	horriblePun();
 	
 	var projectsElement = document.getElementById("projects");
 	var projectsFilterElement = document.getElementById("projectsFilter");
