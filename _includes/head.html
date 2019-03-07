@@ -77,3 +77,7 @@
 <meta name="og:description" content="{{ description }}">
 <meta name="og:locale" content="en_US">
 <meta name="og:site_name" content="{{ site.name }}">
+
+{% if page.redirect %}
+<meta http-equiv="refresh" content="0; URL='{{ page.redirect }}'" />
+{% endif %}
