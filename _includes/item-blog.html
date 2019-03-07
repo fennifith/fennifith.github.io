@@ -1,4 +1,4 @@
-<a class="item item--box" href="{{ site.url }}{{ include.blog.url }}">
+<a class="item item--box" href="{% if include.blog.redirect %}{{ include.blog.redirect }}{% else %}{{ site.url }}{{ include.blog.url }}{% endif %}">
     <span class="item__title">{% if include.blog.redirect %}[Redirect] {% endif %}{{ include.blog.title }}</span>
     <small>{{ blog.date | date: "%B %e %Y" }}</small>
     <br>
