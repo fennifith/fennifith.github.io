@@ -13,6 +13,7 @@ permalink: /existence/
         of my projects, I would prefer that you create an issue in the project's GitHub repository (as it will save me time), but feel
         free to contact me for any reason.
     </p>
+    
     <h2>Links</h2>
     <div class="layout--grid">
         {% for link in site.links %}
@@ -25,5 +26,16 @@ permalink: /existence/
         </a>
         {% endif %}
         {% endfor %}
+    </div>
+    
+    <h2>Organizations</h2>
+    <div class="layout--grid">
+		{% for org in site.orgs %}
+		<a class="item item--box" href="{{ org.link }}">
+			<img class="img--round item--box__img" src="{{ org.avatar }}" alt="Organization logo">
+			<span class="item__title">{{ org.title }}</span>
+			{{ org.description }}
+		</a>
+    	{% endfor %}
     </div>
 </main>

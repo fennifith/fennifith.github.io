@@ -48,7 +48,7 @@ profile: true
 		{% include item-blog.html blog=blog %}
 		<a class="link" href="/?blog">
 		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">All Blog Posts</span>
+		    <span class="link__title">More blog posts...</span>
 		</a>
 		
 		<h2>Recent projects</h2>
@@ -61,14 +61,10 @@ profile: true
 		</div><br>
 		<a class="link" href="/?projects">
 		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">All Projects</span>
+		    <span class="link__title">More projects...</span>
 		</a>
 		
 		<h2>Find me in places</h2>
-		<p>
-		    Here is a list of the majority of my accounts on social media and the like. More information, along with relevant links and other ways to contact me, can be found
-		    <a href="/existence/">here</a>.
-		</p>
 		<div class="layout--grid">
 		    {% for link in site.links %}
 		    {% if link.verb and link.readable %}
@@ -77,20 +73,6 @@ profile: true
 		    </div>
 		    {% endif %} 
 		    {% endfor %}
-		</div>
-		
-		<h2>More of my work</h2>
-		<p>
-			In addition to the <a href="/?projects">projects I've published</a> here, I have also worked on a few for some organizations:
-		</p>
-		<div id="organizationlist" class="layout--grid">
-			{% for org in site.orgs %}
-			<a class="item item--box" href="{{ org.link }}">
-				<img class="img--round item--box__img" src="{{ org.avatar }}" alt="Organization logo">
-				<span class="item__title">{{ org.title }}</span>
-				{{ org.description }}
-			</a>
-			{% endfor %}
 		</div>
 		
 		<h2>A bad pun</h2>
