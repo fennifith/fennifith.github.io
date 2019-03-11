@@ -25,7 +25,7 @@ article: true
 	  {% endfor %}
 	  {% endif %}
 	  {% if page.project %}
-	  {% assign project = site.projects | where: "title", page.project | first %}
+	  {% assign project = site.projects | where: "repo", page.project | first %}
 	  <a class="link" href="{{ project.url }}">
 	  	<img class="link__img" src="/images/ic/link.svg">
 	  	<span class="link__title">{{ project.title }}</span>

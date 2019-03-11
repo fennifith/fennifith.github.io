@@ -2,7 +2,7 @@
 layout: blog
 title: CSS Submodules
 description: "How I organize my site's CSS and why."
-project: styles
+project: "fennifith/styles"
 links:
   - name: Block Element Modifier
     url: http://getbem.com/naming/

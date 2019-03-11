@@ -2,12 +2,10 @@
 layout: blog
 title: Client-Side JavaScript
 description: "Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time."
+project: "fennifith/fennifith.github.io"
 links:
   - name: Website
     url: /
-  - name: GitHub
-    url: https://jfenn.me/redirects/?t=github&d=${}.github.io
-    icon: https://github.com/favicon.ico
 ---
 
 My main project today has been rewriting most of my personal site in Jekyll and making a script using the GitHub API to update the relevant collections & push to git instead of making the site use the API to fetch data in client-side js like it was before.
