@@ -29,21 +29,26 @@ profile: true
 </nav>
 <main id="main" style="display: none;">
 	<div page="home">
-		<h1>It's me.</h1>
-		<p>
-			I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
-			I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
-			and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
-			is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
-			pull requests in all of my projects unless stated otherwise.
-		</p>
-		<p>
-		    The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
-		    portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
-		</p>
-		<p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
+	    <div style="display: flex;">
+	        <img class="img--profile --desktop-large" style="height: 200px; margin-right: 75px; margin-top: 4em;" src="{{ site.icon }}">
+	        <div class="markdown">
+		        <h1>It's me.</h1>
+		        <p>
+			        I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
+			        I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
+			        and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
+			        is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
+			        pull requests in all of my projects unless stated otherwise.
+		        </p>
+		        <p>
+		            The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
+		            portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
+		        </p>
+		        <p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
+		    </div>
+		</div>
 		
-		<h2>Latest blog post</h2>
+		<br><h2 style="clear: both;">Latest blog post</h2>
 		{% assign blog = site.blogs | last %}
 		{% include item-blog.html blog=blog %}
 		<a class="link" href="/?blog">
@@ -51,7 +56,7 @@ profile: true
 		    <span class="link__title">More blog posts...</span>
 		</a>
 		
-		<h2>Recent projects</h2>
+		<br><h2>Recent projects</h2>
 		<div class="layout--grid">
 		    {% assign projects = site.projects | sort: 'pushed' | reverse %}
 		    {% for index in (1..4) %}
@@ -64,7 +69,7 @@ profile: true
 		    <span class="link__title">More projects...</span>
 		</a>
 		
-		<h2>Find me in places</h2>
+		<br><h2>Find me in places</h2>
 		<div class="layout--grid">
 		    {% for link in site.links %}
 		    {% if link.verb and link.readable %}
@@ -75,7 +80,7 @@ profile: true
 		    {% endfor %}
 		</div>
 		
-		<h2>A bad pun</h2>
+		<br><h2>A bad pun</h2>
 		<p><i id="pun"></i></p>
 	</div>
 	<div page="blog">
