@@ -7,30 +7,38 @@
 		<span>Dark Theme</span>
 	</div>
 	<script type="text/javascript">
-		const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
-		_darkThemeCheckBoxElement.addEventListener("change", function() {
-			if (_darkThemeCheckBoxElement.checked) {
-				document.body.className = "--theme-dark";
-				document.querySelector("meta[name='theme-color']").setAttribute("content", "#212121");
-			} else {
-				document.body.className = "";
-				document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
-			}
-		
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+	        document.body.className = isDark ? "--theme-dark" : "";
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
 			if (localStorage) {
-				if (_darkThemeCheckBoxElement.checked)
+				if (isDark)
 					localStorage.setItem("darkTheme", ".");
 				else localStorage.removeItem("darkTheme");
 			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
 		});
 
-		if (localStorage && localStorage.getItem("darkTheme")) {
-			_darkThemeCheckBoxElement.checked = true;
-			document.body.className = "--theme-dark";
-			document.querySelector("meta[name='theme-color']").setAttribute("content", "#212121");
-		} else {
-			document.querySelector("meta[name='theme-color']").setAttribute("content", "#FFFFFF");
-		}
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
 	</script>
 	
 	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>

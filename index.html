@@ -195,6 +195,33 @@ profile: true
 	</div>
 </main>
 
+<iframe id="background" tabindex="-1" class="iframe--background" style="display: none;"></iframe>
+<script type="text/javascript">
+    const _backgroundElement = document.getElementById("background");
+    var _backgroundDark = false;
+    
+    function backgroundDarkTheme(isDark) {
+        console.log("called: ", isDark, _backgroundDark);
+        if (isDark != _backgroundDark) {
+            _backgroundElement.style.display = "none";
+            _backgroundDark = isDark;
+        
+            if (isDark)
+                _backgroundElement.src = "//jfenn.me/P5Samples/cellular/?background=151515&cell=303030";
+            else _backgroundElement.src = "//jfenn.me/P5Samples/cellular/?background=FFFFFF&cell=E0E0E0";
+        }
+    }
+
+    window.addEventListener("load", function() {
+        _backgroundElement.addEventListener("load", function() {
+            console.log("loaded: ", _backgroundDark);
+            _backgroundElement.style.display = null;
+        });
+
+        addDarkThemeListener(backgroundDarkTheme);
+    });
+</script>
+
 <div class="h-card vcard" style="display: none;">
     <img class="u-photo photo" src="{{ site.icon }}">
     <span class="p-name fn">{{ site.author }}</span>
@@ -234,68 +261,4 @@ profile: true
 	}
 
 	horriblePun();
-	
-	var projectsElement = document.getElementById("projects");
-	var projectsFilterElement = document.getElementById("projectsFilter");
-	var projectsFilterTextElement = document.getElementById("projectsFilterText");
-	var projectsCategoriesElement = document.getElementById("projectsCategories");
-	var projectsCheckBoxElements = [];
-	for (var i = 0; i < projectsCategoriesElement.childNodes.length; i++) {
-		if (projectsCategoriesElement.childNodes[i].id)
-			projectsCheckBoxElements.push(document.getElementById("c" + projectsCategoriesElement.childNodes[i].id));
-	}
-
-	projectsFilterTextElement.addEventListener("keyup", function() {
-		var categories = projectsCategoriesElement.children;
-		for (var i = 0; i < categories.length; i++) {
-			var projects = categories[i].children[categories[i].children.length - 1];
-			if (projects)
-				projects = projects.children;
-			else continue;
-			
-			for (var i2 = 0; i2 < projects.length; i2++) {
-				if (projects[i2].style && (projectsFilterTextElement.value.length < 1 || projects[i2].innerText.toLowerCase().indexOf(projectsFilterTextElement.value.toLowerCase()) >= 0))
-					projects[i2].style.display = null;
-				else if (projects[i2].style)
-					projects[i2].style.display = "none";
-			}
-		}
-	});
-
-	for (var i = 0; i < projectsCheckBoxElements.length; i++) {
-		const index = i;
-		projectsCheckBoxElements[i].addEventListener("click", function() {
-			projectsCategoriesElement.children[index].style.display = projectsCheckBoxElements[index].checked == true ? null : "none";
-		});
-	}
-
-
-
-
-	var labelElements = document.getElementsByTagName("label");
-	var checkedCounter = 0;
-	
-	for (var i = 0; i < labelElements.length; i++) {
-		const labelElement = labelElements[i];
-		if (labelElement.getAttribute && labelElement.hasAttribute("for")) {
-			const inputElement = document.getElementById(labelElement.getAttribute("for"));
-			if (inputElement.getAttribute && inputElement.getAttribute("type") == "checkbox") {
-				inputElement.addEventListener("click", function() {
-					const img = new Image();
-					img.id = "img" + checkedCounter;
-					img.onload = function() {
-						labelElement.style.backgroundImage = "url(" + img.src + ")";
-					};
-
-					labelElement.style.backgroundImage = "url(/images/ic-checkbox-" + (!inputElement.checked ? "check" : "uncheck") + "ed.svg)";
-					img.src = "/images/anim-checkbox-" + (inputElement.checked ? "check" : "uncheck") + ".svg?count=" + checkedCounter;
-					checkedCounter++;
-				});
-			}
-		}
-	}
-
-	window.onscroll = function() {
-		document.activeElement.blur();	
-	};
 </script>
