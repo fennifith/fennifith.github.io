@@ -27,7 +27,7 @@ languages:
   - "HTML"
 isDocs: "false"
 isWiki: "false"
-pushed: "2018-10-17T18:20:58Z"
+pushed: "2019-03-12T18:57:33Z"
 ---
 
 Stuff I made messing around with [p5js](https://p5js.org/) in my free time.
@@ -38,3 +38,4 @@ Projects:
 - [Paint](https://jfenn.me/P5Samples/paint/)
 - [Slinky](https://jfenn.me/P5Samples/slinky/)
 - [Lines](https://jfenn.me/P5Samples/lines/)
+- [Cellular Automata (Conway's Game of Life)](https://jfenn.me/P5Samples/cellular/)
