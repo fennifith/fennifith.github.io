@@ -2,7 +2,7 @@
 layout: "project"
 type: "undefined"
 title: "Discord Github Thing Doer"
-description: "A Discord bot that does github-related things. WIP."
+description: "A Discord bot that automates github-related tasks for my server."
 repo: "fennifith/discord-github-thing-doer"
 git: "git://github.com/fennifith/discord-github-thing-doer.git"
 links: 
@@ -15,6 +15,9 @@ links:
   - name: "Apache License 2.0"
     url: "https://choosealicense.com/licenses/apache-2.0/"
     icon: "/images/ic/copyright.svg"
+  - name: "Website"
+    url: "https://discord.jfenn.me/"
+    icon: "https://jfenn.me/images/favicon-32.ico"
 contributors: 
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
@@ -24,7 +27,7 @@ languages:
   - "Shell"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-03-02T03:47:07Z"
+pushed: "2019-03-12T23:52:59Z"
 ---
 
 The `discord-github-thing-doer` is a WIP Discord bot that does github-related things. It is primarily for personal use, but I'm open-sourcing it because... why not. You can see it in action in the Discord server below.
