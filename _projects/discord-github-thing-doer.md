@@ -3,6 +3,7 @@ layout: "project"
 type: "undefined"
 title: "Discord Github Thing Doer"
 description: "A Discord bot that automates github-related tasks for my server."
+icon: "https://raw.githubusercontent.com/fennifith/discord-github-thing-doer/master/.github/logo-circle.png"
 repo: "fennifith/discord-github-thing-doer"
 git: "git://github.com/fennifith/discord-github-thing-doer.git"
 links: 
@@ -27,7 +28,7 @@ languages:
   - "Shell"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-03-12T23:52:59Z"
+pushed: "2019-03-15T19:10:47Z"
 ---
 
 The `discord-github-thing-doer` is a WIP Discord bot that does github-related things. It is primarily for personal use, but I'm open-sourcing it because... why not. You can see it in action in the Discord server below.
