@@ -6,6 +6,17 @@ description: "Writer of bad puns and slightly better software. This website cont
 icon: "/images/me.jpg"
 image: "/images/headers/snowytrees.jpg"
 
+contact:
+  - name: "Discord"
+    icon: "group"
+    url: "https://discord.jfenn.me/"
+  - name: "Telegram"
+    icon: "chat"
+    url: "https://t.me/joinchat/JV--FRZrSf-NJqeE0OGKXg"
+  - name: "Matrix"
+    icon: "chat"
+    url: "https://matrix.to/#/!apQumaWwHIRDmTIYAr:matrix.org"
+
 url: "https://jfenn.me"
 domainurl: "https://jfenn.me"
 baseurl: "/"

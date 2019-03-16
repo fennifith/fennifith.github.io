@@ -8,13 +8,14 @@ layout: null
 		<title>{{ site.name }}</title>
 		<description>James Fenn's personal blog of things.</description>
 		<link>{{ site.url }}</link>
-		{% for blog in site.blogs %}
+		{% for blog in site.blogs reversed %}
 		<item>
 			<title>{{ blog.title | xml_escape }}</title>
-			<description>{{ blog.content | xml_escape }}</description>
+			<description>{{ blog.description }}</description>
 			<pubDate>{{ blog.date | date_to_xmlschema }}</pubDate>
-			<link>{{ blog.id | prepend: site.url }}</link>
-			<guid isPermaLink="true">{{ blog.id | prepend: site.url }}</guid>
+			{% if blog.redirect %}<link>{{ blog.redirect }}</link>
+			<guid isPermaLink="true">{{ blog.redirect }}</guid>{% else %}<link>{{ blog.url | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ blog.url | prepend: site.url }}</guid>{% endif %}
 		</item>
 		{% endfor %}
 	</channel>
