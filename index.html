@@ -6,84 +6,29 @@ profile: true
 ---
 
 <nav class="nav">
-	<button page="home" class="nav__item">
+	<a class="nav__item" href="#home" selected>
 		<i class="nav__item__icon material-icons">home</i>
 		<span class="nav__item__title">Home</span>
-	</button>
-	<button page="blog" class="nav__item">
+	</a>
+	<a class="nav__item" href="#blog">
 		<i class="nav__item__icon material-icons">notes</i>
 		<span class="nav__item__title">Blog</span>
-	</button>
-	<button page="projects" class="nav__item">
+	</a>
+	<a class="nav__item" href="#projects">
 		<i class="nav__item__icon material-icons">code</i>
 		<span class="nav__item__title">Projects</span>
-	</button>
-	<button page="community" class="nav__item">
+	</a>
+	<a class="nav__item" href="#community">
 		<i class="nav__item__icon material-icons">people</i>
 		<span class="nav__item__title">Community</span>
-	</button>
-	<button page="about" class="nav__item">
+	</a>
+	<a class="nav__item" href="#about">
 		<i class="nav__item__icon material-icons">info</i>
 		<span class="nav__item__title">About</span>
-	</button>
+	</a>
 </nav>
-<main id="main" style="display: none;">
-	<div page="home">
-	    <div style="display: flex;">
-	        <img class="img--profile --desktop-large" style="height: 200px; margin-right: 75px; margin-top: 4em;" src="{{ site.icon }}">
-	        <div class="markdown">
-		        <h1>It's me.</h1>
-		        <p>
-			        I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
-			        I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
-			        and <a href="javascript:setPage('projects', 'websites');">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
-			        is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
-			        pull requests in all of my projects unless stated otherwise.
-		        </p>
-		        <p>
-		            The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
-		            portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
-		        </p>
-		        <p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
-		    </div>
-		</div>
-		
-		<br><h2 style="clear: both;">Latest blog post</h2>
-		{% assign blog = site.blogs | last %}
-		{% include item-blog.html blog=blog %}
-		<a class="link" href="/?blog">
-		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">More blog posts...</span>
-		</a>
-		
-		<br><h2>Recent projects</h2>
-		<div class="layout--grid">
-		    {% assign projects = site.projects | sort: 'pushed' | reverse %}
-		    {% for index in (1..4) %}
-		    {% assign project = projects[index] %}
-		    {% include item-project.html project=project %}
-		    {% endfor %}
-		</div><br>
-		<a class="link" href="/?projects">
-		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">More projects...</span>
-		</a>
-		
-		<br><h2>Find me in places</h2>
-		<div class="layout--grid">
-		    {% for link in site.links %}
-		    {% if link.verb and link.readable %}
-		    <div class="item">
-		        <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
-		    </div>
-		    {% endif %} 
-		    {% endfor %}
-		</div>
-		
-		<br><h2>A bad pun</h2>
-		<p><i id="pun"></i></p>
-	</div>
-	<div page="blog">
+<main id="main" class="tabs">
+	<div id="blog">
 		<p class="markdown">
 			These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post often,
 			as it takes quite a while to write these posts, but you can subscribe for updates through <a href="http://feeds.feedburner.com/fennifith">Feedburner</a>.
@@ -95,7 +40,7 @@ profile: true
 			{% endfor %}
 		</p>
 	</div>
-	<div id="projects" page="projects">
+	<div id="projects">
 		<div id="projectsCategories" class="categories">
 			{% assign types = site.types | sort: "order" %}
 			{% for type in types %}
@@ -111,7 +56,7 @@ profile: true
 			{% endfor %}
 		</div>
 	</div>
-	<div page="community">
+	<div id="community">
 		<div class="markdown">
 			<h2>Open Source</h2>
 			<p>
@@ -151,7 +96,7 @@ profile: true
 			{% endfor %}
 		</div>
 	</div>
-	<div page="about" class="markdown">
+	<div id="about" class="markdown">
 		<h2>Me, myself, and I</h2>
 		<p>
 			I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
@@ -195,6 +140,61 @@ profile: true
 			free time.
 		</p>
 	</div>
+	<div id="home">
+	    <div style="display: flex;">
+	        <img class="img--profile --desktop-large" style="height: 200px; margin-right: 75px; margin-top: 4em;" src="{{ site.icon }}">
+	        <div class="markdown">
+		        <h1>It's me.</h1>
+		        <p>
+			        I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
+			        I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
+			        and <a href="#projects">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
+			        is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
+			        pull requests in all of my projects unless stated otherwise.
+		        </p>
+		        <p>
+		            The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
+		            portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
+		        </p>
+		        <p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
+		    </div>
+		</div>
+		
+		<br><h2 style="clear: both;">Latest blog post</h2>
+		{% assign blog = site.blogs | last %}
+		{% include item-blog.html blog=blog %}
+		<a class="link" href="#blog">
+		    <i class="link__img material-icons">arrow_forward</i>
+		    <span class="link__title">More blog posts...</span>
+		</a>
+		
+		<br><h2>Recent projects</h2>
+		<div class="layout--grid">
+		    {% assign projects = site.projects | sort: 'pushed' | reverse %}
+		    {% for index in (1..4) %}
+		    {% assign project = projects[index] %}
+		    {% include item-project.html project=project %}
+		    {% endfor %}
+		</div><br>
+		<a class="link" href="#projects">
+		    <i class="link__img material-icons">arrow_forward</i>
+		    <span class="link__title">More projects...</span>
+		</a>
+		
+		<br><h2>Find me in places</h2>
+		<div class="layout--grid">
+		    {% for link in site.links %}
+		    {% if link.verb and link.readable %}
+		    <div class="item">
+		        <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
+		    </div>
+		    {% endif %} 
+		    {% endfor %}
+		</div>
+		
+		<br><h2>A bad pun</h2>
+		<p><i id="pun">Please enable JavaScript in your browser.</i></p>
+	</div>
 </main>
 
 <iframe id="background" tabindex="-1" class="iframe--background" style="display: none;"></iframe>
@@ -230,7 +230,7 @@ profile: true
     <span class="p-note note">{{ site.bio }}</span>
     <a class="u-url u-uid url uid" href="{{ site.domainurl }}/">{{ site.domainurl }}/</a>
     <a class="u-email email" href="mailto:{{ site.email }}">{{ site.email }}</a>
-    (<a class="p-org h-card org" href="https://doubledotlabs.github.io/">Double Dot Labs</a>)
+    (<a class="p-org h-card org" href="https://doubledot.dev/">Double Dot Labs</a>)
 </div>
 
 {% include navjs.html %}

@@ -1,71 +1,46 @@
 <script type="text/javascript">
-var shouldIgnoreState = false;
-var mainElement = document.getElementsByTagName("main")[0];
-var navElements = document.getElementsByTagName("nav")[0].childNodes;
+if (location.search.length > 1)
+    location.href = "./#" + location.search.substring(1);
 
-function setPage(page, element) {
-	if (!shouldIgnoreState)
-		window.history.replaceState(null, null, "?" + page);
+var _navElements = document.querySelectorAll(".nav > .nav__item");
+var _pageElements = document.querySelectorAll(".tabs > div");
 
-	for (var i = 0; i < navElements.length; i++) {
-		if (navElements[i].getAttribute) {
-			if (navElements[i].getAttribute("page") == page)
-				navElements[i].setAttribute("selected", true);
-			else navElements[i].removeAttribute("selected");			
-		}
-	}
-	
-	for (var i = 0; i < mainElement.childNodes.length; i++) {
-		if (mainElement.childNodes[i].getAttribute || mainElement.childNodes[i].id) {
-			if (mainElement.childNodes[i].id == page || (mainElement.childNodes[i].getAttribute && mainElement.childNodes[i].getAttribute("page") == page)) 
-				mainElement.childNodes[i].style.display = "block";
-			else mainElement.childNodes[i].style.display = "none";
-		}
-	}
+function onPage(page) {
+    var element;
+    while (element = document.querySelector(".nav > .nav__item[selected]"))
+        element.removeAttribute("selected");
 
-	if (element)
-		setPageElement(element);
+    element = document.querySelector(".nav > .nav__item[href=\"#" + page + "\"]");
+    element.setAttribute("selected", true);
 
-	mainElement.style.display = null;
-}
-
-function setPageElement(elementId) {
-	var element = document.getElementById(elementId);
-  	if (element) {
-   		element.scrollIntoView();
-	
-   	 	var page = getPage();
-   		if (page.split('/').length > 1)
-   	 		page = page.split('/')[0];
-
-   	 	if (!shouldIgnoreState)
-   			window.history.replaceState(null, null, "?" + page + "/" + elementId);
-   	}
-}
-
-function getPage() {
-	if (window.location.search)
-		return window.location.search.replace("?", "");
-	else return "home";
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 function createPageTrigger(element) {
-	element.addEventListener("click", function() {
-		var page = element.getAttribute("url");
-		if (page) {
-			location.href = page;
-		} else {
-			page = element.getAttribute("page");
-			if (page)
-				setPage(page);
-		}				
-	});	
+	element.addEventListener("click", function(e) {
+	    e.preventDefault();
+	    history.pushState({}, "", element.href);
+	    history.pushState({}, "", element.href);
+	    history.back();
+
+	    onPage(element.href.split('#')[1]);
+	});
 }
 
-for (var i = 0; i < navElements.length; i++) {
-	if (navElements[i].getAttribute) 
-	    createPageTrigger(navElements[i]);
+for (var i = 0; i < _navElements.length; i++) {
+	if (_navElements[i].href) 
+	    createPageTrigger(_navElements[i]);
 }
 
-setPage(getPage());
+window.onhashchange = function() {
+    if (location.hash.length > 1)
+        onPage(location.hash.substring(1));
+};
+
+window.addEventListener("hashchange", window.onhashchange);
+window.onhashchange();
+
+window.onload = window.onhashchange;
+window.addEventListener("load", window.onload);
 </script>
