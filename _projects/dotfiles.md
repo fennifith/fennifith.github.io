@@ -17,11 +17,12 @@ contributors:
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
 languages: 
+  - "TeX"
   - "Shell"
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-03-02T22:24:23Z"
+pushed: "2019-03-17T19:10:19Z"
 ---
 
 These are my dotfiles. You may look, but please do not touch. They bite.
