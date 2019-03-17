@@ -8,13 +8,13 @@ layout: null
 		<title>{{ site.name }}</title>
 		<description>James Fenn's project list.</description>
 		<link>{{ site.url }}</link>
-		{% for project in site.projects %}
+		{% for project in site.projects reversed %}
 		<item>
 			<title>{{ project.title | xml_escape }}</title>
-			<description>{{ project.content | xml_escape }}</description>
+			<description>{{ project.description | xml_escape }}</description>
 			<pubDate>{{ project.date | date_to_xmlschema }}</pubDate>
-			<link>{{ project.id | prepend: site.url }}</link>
-			<guid isPermaLink="true">{{ project.id | prepend: site.url }}</guid>
+			<link>{{ project.url | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ project.url | prepend: site.url }}</guid>
 		</item>
 		{% endfor %}
 	</channel>

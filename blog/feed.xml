@@ -11,7 +11,7 @@ layout: null
 		{% for blog in site.blogs reversed %}
 		<item>
 			<title>{{ blog.title | xml_escape }}</title>
-			<description>{{ blog.description }}</description>
+			<description>{{ blog.description | xml_escape }}</description>
 			<pubDate>{{ blog.date | date_to_xmlschema }}</pubDate>
 			{% if blog.redirect %}<link>{{ blog.redirect }}</link>
 			<guid isPermaLink="true">{{ blog.redirect }}</guid>{% else %}<link>{{ blog.url | prepend: site.url }}</link>
