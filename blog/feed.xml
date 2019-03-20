@@ -6,7 +6,7 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>{{ site.name }}</title>
-		<description>James Fenn's personal blog of things.</description>
+		<description>{{ site.description }}</description>
 		<link>{{ site.url }}</link>
 		{% for blog in site.blogs reversed %}
 		<item>
