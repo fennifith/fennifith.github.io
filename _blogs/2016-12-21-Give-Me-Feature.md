@@ -5,6 +5,9 @@ description: "The Person Behind the Screen has feelings too. And they hurt."
 links:
   - name: "Google+ Post"
     url: "https://plus.google.com/+FranciscoFranco1990/posts/J52DQsgBwuu"
+tags:
+  - android
+  - meta
 ---
 
 A while ago I came across [this post](https://plus.google.com/+FranciscoFranco1990/posts/J52DQsgBwuu) by Francisco Franco. Since the post and many of its comments had some pretty valid points in them, I decided to organize it a bit and publish an article about it.

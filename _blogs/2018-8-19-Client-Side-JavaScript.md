@@ -6,6 +6,9 @@ project: "fennifith/fennifith.github.io"
 links:
   - name: Website
     url: /
+tags:
+  - web
+  - javascript
 ---
 
 My main project today has been rewriting most of my personal site in Jekyll and making a script using the GitHub API to update the relevant collections & push to git instead of making the site use the API to fetch data in client-side js like it was before.

@@ -3,6 +3,9 @@ layout: blog
 title: Attribouter
 description: "A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects."
 project: "fennifith/Attribouter"
+tags:
+  - android
+  - java
 ---
 
 A few months ago, I got tired of building about screens into all of my projects. I like building projects, and I find it very rewarding when others contribute to them and find them useful, but when the amount of work I force myself to do in order to give credit to the people that have helped me is greater than the work they have done to help me in the first place, it gets a little annoying.

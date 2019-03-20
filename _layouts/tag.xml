@@ -1,0 +1,25 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ site.name }} - {{ page.title }}</title>
+        <description>{{ site.description }}</description>
+        <link>{{ site.url }}</link>
+        {% assign blogs = site.blogs | sort: 'date' | reverse %}
+        {% for blog in blogs %}
+        {% if blog.tags contains page.tag %}
+        <item>
+            <title>{{ blog.title | xml_escape }}</title>
+			<description>{{ blog.description | xml_escape }}</description>
+			<pubDate>{{ blog.date | date_to_xmlschema }}</pubDate>
+			{% if blog.redirect %}<link>{{ blog.redirect }}</link>
+			<guid isPermaLink="true">{{ blog.redirect }}</guid>{% else %}<link>{{ blog.url | prepend: site.url }}</link>
+			<guid isPermaLink="true">{{ blog.url | prepend: site.url }}</guid>{% endif %}
+        </item>
+        {% endif %}
+        {% endfor %}
+    </channel>
+</rss>

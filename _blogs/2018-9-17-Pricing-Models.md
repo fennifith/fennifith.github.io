@@ -3,6 +3,9 @@ layout: blog
 title: Pricing Models
 description: "TL;DR - Don't work for free."
 project: "fennifith/Status"
+tags:
+  - android
+  - meta
 ---
 
 I can remember the first time that I started working on Status. It was summer break in 2016, and I was at a relative's house in the UK. I came across [Material Status Bar](https://play.google.com/store/apps/details?id=com.treydev.msb), but couldn't quite get it to do what I wanted on my device. I tried messaging the developer, and while they are very nice, they were a little busy when I first asked for help and didn't get back to me. After doing a little research on how MSB did its thing, I decided to try messing around with making another version myself. Thus, on July 5, 2016, Status was born.

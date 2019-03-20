@@ -64,6 +64,13 @@ article: true
   	      <br>
 	      <span style="font-size: 0.6em;">Written on {{ page.date | date: "%B %e, %Y" }}</span>
         </h1>
+        <small>
+            Tags:
+            {% for tag in page.tags %}
+            {% assign item = site.tags | where: "tag", tag | first %}
+            <a href="{{ site.url }}/blog/#{{ item.tag }}">#{{ item.title }}</a>&nbsp;
+            {% endfor %}
+        </small>
 
         <div class="entry markdown">
           {% if page.redirect %}

@@ -36,6 +36,8 @@ collections:
     blogs:
         output: true
         permalink: /blog/:year-:month-:day-:title/
+    tags:
+        output: true
 
 exclude:
   - Gemfile
