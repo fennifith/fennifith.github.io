@@ -48,7 +48,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-03-03T20:48:33Z"
+pushed: "2019-03-21T04:31:05Z"
 ---
 
 Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use.
