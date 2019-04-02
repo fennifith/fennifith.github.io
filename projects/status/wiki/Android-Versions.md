@@ -18,6 +18,13 @@ situations such as the screenshot below:
 
 ![A picture of the status bar, in which the system icons are drawn on top of Status's content, creating an unusable mess.](https://user-images.githubusercontent.com/13000407/55281014-628ea180-5304-11e9-9a3d-79e3eeb084a9.png)
 
+It may be possible to add Android O compatibility to Status by disabling the
+icon features by default and optionally granting Status permission through ADB
+to disable _most_ of the system icons, allowing Status to display its own
+"underneath" without interfering. However, combined with the much stricter
+background restrictions and Play Store requirements, this is more work than
+I am willing to undertake at the moment.
+
 ## Android Marshmallow (6.0+)
 
 Android Marshmallow introduced some more severe background limits, and may kill
