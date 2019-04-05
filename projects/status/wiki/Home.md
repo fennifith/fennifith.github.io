@@ -3,6 +3,7 @@ layout: "wiki"
 title: "Home"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 ---
 

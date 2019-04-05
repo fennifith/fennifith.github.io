@@ -55,7 +55,7 @@ when we are _sure_ that the two notifications are, er, the same.
 
 ## [getIcon](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/NotificationData.java#L237)
 
-**Type:** `public` `Bitmap`
+**Type:** `@Nullable` `public` `Bitmap`
 
 Get an icon bitmap with a specified height. If the current 
 bitmap matches the height, great! if not, it's scaled to 
@@ -80,7 +80,7 @@ as "cache").
 
 
 
-## [getIcon](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/NotificationData.java#L257)
+## [getIcon](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/NotificationData.java#L258)
 
 **Type:** `@Nullable` `public` `Bitmap`
 

@@ -3,6 +3,7 @@ layout: "wiki"
 title: "Android Versions"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 ---
 

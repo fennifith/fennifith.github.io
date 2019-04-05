@@ -3,6 +3,7 @@ layout: "wiki"
 title: "Status Wiki"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 project: "status"
 ---

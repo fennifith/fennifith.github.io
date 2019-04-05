@@ -21,8 +21,8 @@ links:
   - name: "Google Play"
     url: "https://play.google.com/store/apps/details?id=com.james.status"
     icon: "/images/ic/play-store.svg"
-  - name: "Status.apk (v3.8-beta6 unstable)"
-    url: "https://github.com/fennifith/Status/releases/download/v3.8-beta6/Status.apk"
+  - name: "app-oss-release.apk (3.8-beta7 stable)"
+    url: "https://github.com/fennifith/Status/releases/download/3.8-beta7/app-oss-release.apk"
     icon: "/images/ic/download.svg"
 contributors: 
   - login: "fennifith"
@@ -36,10 +36,11 @@ contributors:
     url: "https://github.com/opnay"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 isDocs: "true"
 isWiki: "true"
-pushed: "2019-04-04T17:29:55Z"
+pushed: "2019-04-05T18:44:10Z"
 ---
 
 > **A message from the idiot that wrote this program:**

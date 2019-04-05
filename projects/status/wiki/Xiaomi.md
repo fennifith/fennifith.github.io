@@ -3,6 +3,7 @@ layout: "wiki"
 title: "Xiaomi"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 ---
 

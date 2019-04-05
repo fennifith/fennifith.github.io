@@ -315,7 +315,49 @@ some of which are icon-specific.
 
 
 
-## [needsDraw](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L449)
+## [setIconColor](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L416)
+
+**Type:** `public` `void`
+
+Sets the icon color manually. 
+
+
+
+
+
+|Parameter Name|Description|
+|-----|-----|
+|iconColor|the color to use to draw the icon  |
+
+
+
+
+
+
+
+
+## [setTextColor](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L429)
+
+**Type:** `public` `void`
+
+Sets the text color manually. 
+
+
+
+
+
+|Parameter Name|Description|
+|-----|-----|
+|textColor|the color to use to draw the text  |
+
+
+
+
+
+
+
+
+## [needsDraw](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L475)
 
 **Type:** `public` `boolean`
 
@@ -335,7 +377,7 @@ Determine whether the icon needs to have another frame drawn.
 
 
 
-## [updateAnimatedValues](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L469)
+## [updateAnimatedValues](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L495)
 
 **Type:** `public` `void`
 
@@ -353,7 +395,7 @@ time.
 
 
 
-## [draw](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L501)
+## [draw](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L527)
 
 **Type:** `public` `void`
 
@@ -376,7 +418,7 @@ Draws the icon on a canvas.
 
 
 
-## [getWidth](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L543)
+## [getWidth](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L569)
 
 **Type:** `public` `int`
 
@@ -403,7 +445,7 @@ first.
 
 
 
-## [getPreferences](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L579)
+## [getPreferences](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L605)
 
 **Type:** `public` `List<BasePreferenceData>`
 
@@ -424,7 +466,7 @@ in the user-facing settings UI.
 
 
 
-## [getIconStyleSize](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L940)
+## [getIconStyleSize](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L867)
 
 **Type:** `public` `int`
 
@@ -444,7 +486,7 @@ Get the amount of icons that each "icon style" should contain.
 
 
 
-## [String](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L950)
+## [String](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L877)
 
 **Type:** `public`
 
@@ -465,7 +507,7 @@ styles.
 
 
 
-## [getIconStyles](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L961)
+## [getIconStyles](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L888)
 
 **Type:** `public` `List<IconStyleData>`
 
@@ -485,7 +527,7 @@ Get a list of all of the available icon styles for the icon.
 
 
 
-## [addIconStyle](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L980)
+## [addIconStyle](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L907)
 
 **Type:** `public` `final` `void`
 
@@ -507,7 +549,7 @@ verifies the size of the style, then writes it to the icon's preferences.
 
 
 
-## [removeIconStyle](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L1000)
+## [removeIconStyle](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L927)
 
 **Type:** `public` `final` `void`
 
@@ -528,7 +570,7 @@ Remove an icon style from the styles that can be used by the element.
 
 
 
-## [String](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L1012)
+## [String](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L939)
 
 **Type:** `public`
 

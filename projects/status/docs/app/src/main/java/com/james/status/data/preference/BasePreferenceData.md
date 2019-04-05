@@ -4,7 +4,7 @@ title: BasePreferenceData Documentation
 ---
 #### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [com](./../../../../index) > [james](./../../../index) > [status](./../../index) > [data](./../index) > [preference](./index) > **BasePreferenceData.java**
 
-## [withVisibility](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L56)
+## [withVisibility](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L55)
 
 **Type:** `public` `BasePreferenceData`
 
@@ -29,7 +29,7 @@ be visible in the settings or not.
 
 
 
-## [isVisible](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L70)
+## [isVisible](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L69)
 
 **Type:** `public` `boolean`
 
@@ -49,7 +49,7 @@ Determine whether the preference should be visible.
 
 
 
-## [getVisibilityDependent](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L82)
+## [getVisibilityDependent](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L81)
 
 **Type:** `@Nullable` `public` `PreferenceData`
 
@@ -73,7 +73,7 @@ null. It might return null anyway, who knows.
 
 
 
-## [withNullable](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L96)
+## [withNullable](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L95)
 
 **Type:** `public` `BasePreferenceData`
 
@@ -99,7 +99,7 @@ returning the default value.
 
 
 
-## [withNullValue](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L114)
+## [withNullValue](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L113)
 
 **Type:** `public` `BasePreferenceData`
 
@@ -125,7 +125,7 @@ Ex: the height of an object, or "0" to disable the object entirely.
 
 
 
-## [isNullable](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L128)
+## [isNullable](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L127)
 
 **Type:** `public` `boolean`
 
@@ -145,7 +145,7 @@ Determine whether the preference can contain a null value.
 
 
 
-## [getNullValue](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L137)
+## [getNullValue](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L136)
 
 **Type:** `@Nullable` `public` `T`
 
@@ -166,7 +166,7 @@ has not been set, this just returns null. Fair enough.
 
 
 
-## [getContext](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L149)
+## [getContext](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L148)
 
 **Type:** `public` `Context`
 
@@ -186,7 +186,7 @@ Get the current application context.
 
 
 
-## [getIdentifier](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L158)
+## [getIdentifier](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L157)
 
 **Type:** `public` `Identifier<T>`
 
@@ -210,7 +210,7 @@ got around to it.
 
 
 
-## [onPreferenceChange](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L225)
+## [onPreferenceChange](https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L221)
 
 **Type:** `public` `void`
 

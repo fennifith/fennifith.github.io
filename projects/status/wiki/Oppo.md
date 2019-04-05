@@ -3,6 +3,7 @@ layout: "wiki"
 title: "Oppo"
 languages: 
   - "Java"
+  - "Kotlin"
   - "Shell"
 ---
 
