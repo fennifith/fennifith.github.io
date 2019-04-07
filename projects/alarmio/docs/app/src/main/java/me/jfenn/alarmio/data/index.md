@@ -7,4 +7,3 @@ title: Documentation Pages
 - [AlarmData](AlarmData)
 - [SoundData](SoundData)
 - [TimerData](TimerData)
-- [preference / ListPreferenceData](preference/ListPreferenceData)
