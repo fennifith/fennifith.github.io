@@ -3,7 +3,8 @@
   "author": "James Fenn <18jafenn90@gmail.com> (https://jfenn.me/)",
   "license": "Apache-2.0",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node update.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

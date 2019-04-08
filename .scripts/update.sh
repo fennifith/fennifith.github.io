@@ -8,12 +8,12 @@ then
 	export GITHUB_TOKEN=$(cat ~/keys/github)
 fi
 
+make clean
 jekyll build
 
 cd _site/.scripts
-rm -rf node_modules && npm install
-npm test
-node update.js
+npm install
+npm test && npm start
 
 rm -rf ../../projects/*/wiki/.temp ../../projects/*/docs/.temp
 

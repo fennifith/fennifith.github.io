@@ -10,6 +10,12 @@ const _types = [
 	{% endfor %}
 ];
 
+const _languages = {
+    "Java": true,
+    "Kotlin": true,
+    "Javascript": true
+};
+
 const _path = require("path");
 const _fs = require('fs');
 const _request = require('./request.js')(process.env.GITHUB_TOKEN);
@@ -25,7 +31,7 @@ const _github = require('./github.js');
  * were successfully created, false if not.
  */
 function getRepoDocs(repo) {
-	if (repo.language == "Java" && !repo.fork) {
+    if (_languages[repo.language]) {
 		let docsDir = _path.resolve("../../projects/" + repo.name.toLowerCase() + "/docs");
 		if (!_fs.existsSync(docsDir)) {
 			if (!_fs.existsSync(_path.resolve("../../projects/" + repo.name.toLowerCase())))
@@ -39,8 +45,8 @@ function getRepoDocs(repo) {
 
 		_clone("https://github.com/" + repo.full_name, docsDir + "/.temp");
 		let files = _javadoc.generateMarkdownFiles(docsDir + "/.temp", docsDir, {
-			reg: repo.language == "Java" ? /.*(\.java)$/ : /.*(\.js)$/,
 			breadcrumbs: true,
+			reg: /.*(\.java|\.kt|\.js)$/,
 			index: "index.md",
 			template: "../../.scripts/.docs.template.md",
 			indexTemplate: "../../.scripts/.docs-index.template.md",
