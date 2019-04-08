@@ -1,6 +1,10 @@
-<a class="item item--box" href="{% if include.blog.redirect %}{{ include.blog.redirect }}{% else %}{{ site.url }}{{ include.blog.url }}{% endif %}">
-    <span class="item__title">{{ include.blog.title }}{% if include.blog.redirect %}{% assign domain = include.blog.redirect | split: '/' %} | {{ domain[2] }}{% endif %}</span>
-    <small>{{ blog.date | date: "%B %e %Y" }}</small>
+{% assign url = include.blog.url %}
+{% if include.blog.redirect %}{% assign url = include.blog.redirect %}{% endif %}
+{% assign title = include.blog.title %}
+{% if include.blog.redirect %}{% assign domain = include.blog.redirect | split: '/' %}{% assign title = title | append: ' | ' | append: domain[2] %}{% endif %}
+<div class="h-entry item item--box" onclick="location.href = '{{ url }}';">
+    <a class="p-name u-url item__title" href="{{ url }}">{{ title }}</a>
+    <small class="dt-published dt-updated">{{ blog.date | date: "%B %e %Y" }}</small>
     <br>
-    {{ blog.description }}
-</a>
+    <span class="p-summary">{{ blog.description }}</span>
+</div>

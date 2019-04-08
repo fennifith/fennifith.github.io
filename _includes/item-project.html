@@ -1,8 +1,12 @@
-<a class="item item--box" href="{{ site.url }}{{ include.project.url }}">
+{% assign url = site.url | append: include.project.url %}
+{% assign title = include.project.title %}
+{% assign image = site.url | append: '/images/ic/code.svg' %}
+{% if include.project.icon %}{% assign image = include.project.icon %}{% endif %}
+<div class="h-entry item item--box" onclick="location.href = '{{ url }}';">
     <img class="lozad item--box__img{% unless include.project.icon %} link__img{% endunless %}"
         src="/images/ic/code.svg"
-        data-src="{% if include.project.icon %}{{ include.project.icon }}{% else %}/images/ic/code.svg{% endif %}"
+        data-src="{{ image }}"
         alt="Project icon">
-    <span class="item__title">{{ include.project.title }}</span>
-    {{ include.project.description }}
-</a>
+    <a class="p-name u-url item__title" href="{{ url }}">{{ title }}</a>
+    <span class="p-summary">{{ include.project.description }}</span>
+</div>

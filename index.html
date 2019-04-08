@@ -6,195 +6,195 @@ profile: true
 ---
 
 <nav class="nav">
-	<a class="nav__item" href="#home" selected>
-		<i class="nav__item__icon material-icons">home</i>
-		<span class="nav__item__title">Home</span>
-	</a>
-	<a class="nav__item" href="#blog">
-		<i class="nav__item__icon material-icons">notes</i>
-		<span class="nav__item__title">Blog</span>
-	</a>
-	<a class="nav__item" href="#projects">
-		<i class="nav__item__icon material-icons">code</i>
-		<span class="nav__item__title">Projects</span>
-	</a>
-	<a class="nav__item" href="#community">
-		<i class="nav__item__icon material-icons">people</i>
-		<span class="nav__item__title">Community</span>
-	</a>
-	<a class="nav__item" href="#about">
-		<i class="nav__item__icon material-icons">info</i>
-		<span class="nav__item__title">About</span>
-	</a>
+    <a class="nav__item" href="#home" selected>
+        <i class="nav__item__icon material-icons">home</i>
+        <span class="nav__item__title">Home</span>
+    </a>
+    <a class="nav__item" href="#blog">
+        <i class="nav__item__icon material-icons">notes</i>
+        <span class="nav__item__title">Blog</span>
+    </a>
+    <a class="nav__item" href="#projects">
+        <i class="nav__item__icon material-icons">code</i>
+        <span class="nav__item__title">Projects</span>
+    </a>
+    <a class="nav__item" href="#community">
+        <i class="nav__item__icon material-icons">people</i>
+        <span class="nav__item__title">Community</span>
+    </a>
+    <a class="nav__item" href="#about">
+        <i class="nav__item__icon material-icons">info</i>
+        <span class="nav__item__title">About</span>
+    </a>
 </nav>
 <main id="main" class="tabs">
-	<div id="blog">
-		<p class="markdown">
-			These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post often,
-			as it takes quite a while to write these posts, but you can subscribe for updates through <a href="http://feeds.feedburner.com/fennifith">Feedburner</a>.
-		</p>
-		<h2>The Blogs</h2>
-		<p>
-			{% for blog in site.blogs reversed %}
-			{% include item-blog.html blog=blog %}
-			{% endfor %}
-		</p>
-	</div>
-	<div id="projects">
-		<div id="projectsCategories" class="categories">
-			{% assign types = site.types | sort: "order" %}
-			{% for type in types %}
-			<div id="{{ type.tag }}">
-				<h2>{{ type.title }}</h2>
-				<div id="{{ type.tag }}list" class="layout--grid">
-					{% assign projects = site.projects | where: 'type', type.tag %}
-					{% for project in projects %}
-					{% include item-project.html project=project %}
-					{% endfor %}
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-	<div id="community">
-		<div class="markdown">
-			<h2>Open Source</h2>
-			<p>
-				I have a strong distaste for projects that purposefully attempt to hide the way that they function from their users.
-				There are many reasons to justify this distaste, but things such as <a href="https://en.wikipedia.org/wiki/Dark_pattern">
-				Dark Patterns</a>, <a href="https://cryptojackingtest.com/">Cryptojacking</a>, or even old-school 
-				<a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a> stand out as the most offensive. To oppose this,
-				I strive to make all of my projects accessible to the public so that it is possible for anyone to not only see how they 
-				are built, but also contribute to their development and benefit from their existence in other ways than just using the 
-				product. Nearly every one of my projects is published under some form of <a href="https://opensource.org/licenses">Open 
-				Source license</a>, and I try to accept every pull request that is created (or at least provide some helpful criticism 
-				so that not all effort is wasted if it is not merged).
-			</p>
-			<p>
-				If you have a question about any of my projects, posts, or... really anything, I can be contacted through many of the
-				"places" listed in <a href="/?home">/home</a>, emailed at <a href="mailto:me@jfenn.me">me@jfenn.me</a>, or cord...ed (?)
-				in the Discord server below. For convenience, one of the channels in the server is mirrored to
-				<a href="https://matrix.to/#/!apQumaWwHIRDmTIYAr:matrix.org">matrix.org</a> and
-				<a href="https://t.me/joinchat/JV--FRZrSf-NJqeE0OGKXg">Telegram</a>.
-			</p>
-			<iframe class="lozad" data-src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="450" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
-			<h2>The Community</h2>
-			<p>
-				While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
-				have helped me to solve problems and learn new things along the way.
-				<br><br>
-				If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
-			</p>
-		</div>
-		<div class="layout--grid">
-			{% for person in site.people %}
-			<a class="item item--box" href="{{ person.link }}">
-				<img class="lozad img--round item--box__img" src="/images/ic/person.svg" data-src="{{ person.avatar }}" class="round" alt="Profile picture">
-				<span class="item__title">{{ person.title }}</span>
-				{{ person.description }}
-			</a>
-			{% endfor %}
-		</div>
-	</div>
-	<div id="about" class="markdown">
-		<h2>Me, myself, and I</h2>
-		<p>
-			I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
-			the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
-			how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
-			because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
-			to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be further from the truth.
-			Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
-			form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
-			I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
-			instructions when you first start programming is that there are no problems. Since you're following instructions that have already been
-			tried and tested, you know that everything will work properly. There is no design process - testing, problem solving, and finding solutions
-			are all skipped over. So while I did know the basics of python in middle school, I didn't make anything with it. It seemed pointless to me.
-		</p>
-		<p>
-			I got my first Android device (The Great Samsung Galaxy S2) when I was 13, and started making my first app on it
-			a little over a year later. Because I was a lazy idiot, my first few projects consisted entirely of a WebView linked to a
-			Google Sites page, but I quickly realized the limitations of this method. During the summer break of 2015, I spent hours every day
-			scouring <a href="https://stackoverflow.com">Stack Overflow</a> for examples of how make an android app perform various tasks.
-			This was especially difficult as I had no prior knowledge of the Java language and I'm pretty sure that I didn't even know I was
-			writing Java for the first couple months. My first project was a basic app that took a paragraph as input, and make it 'bigger'
-			by replacing words with longer phrases and/or doubling the amount of spaces between words and sentences in the document. It wasn't
-			long after I finished this that I got my Google Play account and started working on a new app to display a collection of wallpapers
-			made by people I had met on Google Plus.
-		</p>
-		<p>
-			That app has since been unpublished because it was a complete abomination with the worst code style I have ever seen in my life,
-			and is currently collecting dust at the bottom of my GitHub profile. While making it, however, I managed to improve the app's UX
-			a great deal and learnt a lot about consumer-focused design, making the app's functionality both easy for new users to understand
-			and fast enough for existing users to navigate without feeling like they're wasting time.
-		</p>
-		<br>
-		<p>
-			Well, that's about all I can think of for an informal description of myself. Ever since I learnt to make Android apps, I've been
-			bouncing around between lots of different types of projects. Some are intended for regular consumers, some for people obsessed
-			with customization, and even a few for other developers like me.
-		</p>
-		<p>
-			I am currently in my freshman year of college at the University of Pittsburgh trying to figure out what on earth I want to do with
-			my life. That said, I'm still hopelessly addicted to programming, and will keep making anything and everything I can think of in my 
-			free time.
-		</p>
-	</div>
-	<div id="home">
-	    <div style="display: flex;">
-	        <img class="img--profile --desktop-large" style="height: 200px; margin-right: 75px; margin-top: 4em;" src="{{ site.icon }}">
-	        <div class="markdown">
-		        <h1>It's me.</h1>
-		        <p>
-			        I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
-			        I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
-			        and <a href="#projects">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
-			        is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
-			        pull requests in all of my projects unless stated otherwise.
-		        </p>
-		        <p>
-		            The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
-		            portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
-		        </p>
-		        <p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
-		    </div>
-		</div>
-		
-		<br><h2 style="clear: both;">Latest blog post</h2>
-		{% assign blog = site.blogs | last %}
-		{% include item-blog.html blog=blog %}
-		<a class="link" href="#blog">
-		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">More blog posts...</span>
-		</a>
-		
-		<br><h2>Recent projects</h2>
-		<div class="layout--grid">
-		    {% assign projects = site.projects | sort: 'pushed' | reverse %}
-		    {% for index in (1..4) %}
-		    {% assign project = projects[index] %}
-		    {% include item-project.html project=project %}
-		    {% endfor %}
-		</div><br>
-		<a class="link" href="#projects">
-		    <i class="link__img material-icons">arrow_forward</i>
-		    <span class="link__title">More projects...</span>
-		</a>
-		
-		<br><h2>Find me in places</h2>
-		<div class="layout--grid">
-		    {% for link in site.links %}
-		    {% if link.verb and link.readable %}
-		    <div class="item">
-		        <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
-		    </div>
-		    {% endif %} 
-		    {% endfor %}
-		</div>
-		
-		<br><h2>A bad pun</h2>
-		<p><i id="pun">Please enable JavaScript in your browser.</i></p>
-	</div>
+    <div id="blog" class="h-feed">
+        <p class="markdown">
+            These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post often,
+            as it takes quite a while to write these posts, but you can subscribe for updates through <a href="http://feeds.feedburner.com/fennifith">Feedburner</a>.
+        </p>
+        <h2 class="p-name">The Blogs</h2>
+        <p>
+            {% for blog in site.blogs reversed %}
+            {% include item-blog.html blog=blog %}
+            {% endfor %}
+        </p>
+    </div>
+    <div id="projects">
+        <div id="projectsCategories" class="categories">
+            {% assign types = site.types | sort: "order" %}
+            {% for type in types %}
+            <div id="{{ type.tag }}" class="h-feed">
+                <h2 class="p-name">{{ type.title }}</h2>
+                <div id="{{ type.tag }}list" class="layout--grid">
+                    {% assign projects = site.projects | where: 'type', type.tag %}
+                    {% for project in projects %}
+                    {% include item-project.html project=project %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="community">
+        <div class="markdown">
+            <h2>Open Source</h2>
+            <p>
+                I have a strong distaste for projects that purposefully attempt to hide the way that they function from their users.
+                There are many reasons to justify this distaste, but things such as <a href="https://en.wikipedia.org/wiki/Dark_pattern">
+                Dark Patterns</a>, <a href="https://cryptojackingtest.com/">Cryptojacking</a>, or even old-school 
+                <a href="https://en.wikipedia.org/wiki/Keystroke_logging">keyloggers</a> stand out as the most offensive. To oppose this,
+                I strive to make all of my projects accessible to the public so that it is possible for anyone to not only see how they 
+                are built, but also contribute to their development and benefit from their existence in other ways than just using the 
+                product. Nearly every one of my projects is published under some form of <a href="https://opensource.org/licenses">Open 
+                Source license</a>, and I try to accept every pull request that is created (or at least provide some helpful criticism 
+                so that not all effort is wasted if it is not merged).
+            </p>
+            <p>
+                If you have a question about any of my projects, posts, or... really anything, I can be contacted through many of the
+                "places" listed in <a href="/?home">/home</a>, emailed at <a href="mailto:me@jfenn.me">me@jfenn.me</a>, or cord...ed (?)
+                in the Discord server below. For convenience, one of the channels in the server is mirrored to
+                <a href="https://matrix.to/#/!apQumaWwHIRDmTIYAr:matrix.org">matrix.org</a> and
+                <a href="https://t.me/joinchat/JV--FRZrSf-NJqeE0OGKXg">Telegram</a>.
+            </p>
+            <iframe class="lozad" data-src="https://discordapp.com/widget?id=514625116706177035&theme=dark" width="350" height="450" style="width: 100%; max-width: 350px;" allowtransparency="true" frameborder="0"></iframe>
+            <h2>The Community</h2>
+            <p>
+                While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
+                have helped me to solve problems and learn new things along the way.
+                <br><br>
+                If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
+            </p>
+        </div>
+        <div class="layout--grid">
+            {% for person in site.people %}
+            <a class="item item--box" href="{{ person.link }}">
+                <img class="lozad img--round item--box__img" src="/images/ic/person.svg" data-src="{{ person.avatar }}" class="round" alt="Profile picture">
+                <span class="item__title">{{ person.title }}</span>
+                {{ person.description }}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    <div id="about" class="markdown">
+        <h2>Me, myself, and I</h2>
+        <p>
+            I have always been interested in technology for as long as I can remember. I still have vague memories of watching videos of
+            the humanoid <a href="http://asimo.honda.com/">Honda ASIMO</a> robot in awe, back when I was in elementary school, wondering
+            how it worked. I tried to attend a few classes on "coding", but I didn't gain as much from them as I would have liked, mainly
+            because... I can't think of any other way to say this... they were boring. So many programs exist to try and teach middle schools
+            to use scratch or python, claiming that "coding is easy!", and "anyone can write code!", but they couldn't be further from the truth.
+            Following instructions to make a program that says "Hello World" is easy, but it doesn't teach you anything and doesn't provide any
+            form of an interesting result. Now, I'm not saying that all programming classes are fundamentally flawed - there are quite a few that
+            I have since attended that were quite informative - but nothing like that was available to me at the time. The problem with following
+            instructions when you first start programming is that there are no problems. Since you're following instructions that have already been
+            tried and tested, you know that everything will work properly. There is no design process - testing, problem solving, and finding solutions
+            are all skipped over. So while I did know the basics of python in middle school, I didn't make anything with it. It seemed pointless to me.
+        </p>
+        <p>
+            I got my first Android device (The Great Samsung Galaxy S2) when I was 13, and started making my first app on it
+            a little over a year later. Because I was a lazy idiot, my first few projects consisted entirely of a WebView linked to a
+            Google Sites page, but I quickly realized the limitations of this method. During the summer break of 2015, I spent hours every day
+            scouring <a href="https://stackoverflow.com">Stack Overflow</a> for examples of how make an android app perform various tasks.
+            This was especially difficult as I had no prior knowledge of the Java language and I'm pretty sure that I didn't even know I was
+            writing Java for the first couple months. My first project was a basic app that took a paragraph as input, and make it 'bigger'
+            by replacing words with longer phrases and/or doubling the amount of spaces between words and sentences in the document. It wasn't
+            long after I finished this that I got my Google Play account and started working on a new app to display a collection of wallpapers
+            made by people I had met on Google Plus.
+        </p>
+        <p>
+            That app has since been unpublished because it was a complete abomination with the worst code style I have ever seen in my life,
+            and is currently collecting dust at the bottom of my GitHub profile. While making it, however, I managed to improve the app's UX
+            a great deal and learnt a lot about consumer-focused design, making the app's functionality both easy for new users to understand
+            and fast enough for existing users to navigate without feeling like they're wasting time.
+        </p>
+        <br>
+        <p>
+            Well, that's about all I can think of for an informal description of myself. Ever since I learnt to make Android apps, I've been
+            bouncing around between lots of different types of projects. Some are intended for regular consumers, some for people obsessed
+            with customization, and even a few for other developers like me.
+        </p>
+        <p>
+            I am currently in my freshman year of college at the University of Pittsburgh trying to figure out what on earth I want to do with
+            my life. That said, I'm still hopelessly addicted to programming, and will keep making anything and everything I can think of in my 
+            free time.
+        </p>
+    </div>
+    <div id="home">
+        <div style="display: flex;">
+            <img class="img--profile --desktop-large" style="height: 200px; margin-right: 75px; margin-top: 4em;" src="{{ site.icon }}">
+            <div class="markdown">
+                <h1>It's me.</h1>
+                <p>
+                    I am currently in my freshman year of college at the <a href="https://www.pitt.edu">University of Pittsburgh</a>, where I plan to study computer science. In my free time, 
+                    I mostly make <a href="https://play.google.com/store/apps/dev?id=5937321955284727208">Android stuff</a>
+                    and <a href="#projects">websites</a>, but also have a bit of interest in graphic design. Nearly everything that I make 
+                    is open source under some form of license (my preference is the <a href="https://choosealicense.com/licenses/apache-2.0/">Apache 2.0</a>), and I usually accept 
+                    pull requests in all of my projects unless stated otherwise.
+                </p>
+                <p>
+                    The main purpose of this site is to document the work that I have done on my projects in order to make them more accessible to the public. It also serves as a basic
+                    portfolio - if you are interested in hiring me, you can find <a href="/resume.pdf">my resume</a> here, along with a few ways to <a href="/existence/">contact me</a>.
+                </p>
+                <p>I have also published <a href="/photos/">some of my photography</a> here, under the Creative Commons license.</p>
+            </div>
+        </div>
+        
+        <br><h2 style="clear: both;">Latest blog post</h2>
+        {% assign blog = site.blogs | last %}
+        {% include item-blog.html blog=blog %}
+        <a class="link" href="#blog">
+            <i class="link__img material-icons">arrow_forward</i>
+            <span class="link__title">More blog posts...</span>
+        </a>
+        
+        <br><h2>Recent projects</h2>
+        <div class="layout--grid">
+            {% assign projects = site.projects | sort: 'pushed' | reverse %}
+            {% for index in (1..4) %}
+            {% assign project = projects[index] %}
+            {% include item-project.html project=project %}
+            {% endfor %}
+        </div><br>
+        <a class="link" href="#projects">
+            <i class="link__img material-icons">arrow_forward</i>
+            <span class="link__title">More projects...</span>
+        </a>
+        
+        <br><h2>Find me in places</h2>
+        <div class="layout--grid">
+            {% for link in site.links %}
+            {% if link.verb and link.readable %}
+            <div class="item">
+                <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
+            </div>
+            {% endif %} 
+            {% endfor %}
+        </div>
+        
+        <br><h2>A bad pun</h2>
+        <p><i id="pun">Please enable JavaScript in your browser.</i></p>
+    </div>
 </main>
 
 <iframe id="background" tabindex="-1" class="iframe--background" style="display: none;"></iframe>
@@ -237,30 +237,30 @@ profile: true
 {% include lazyjs.html %}
 
 <script type="text/javascript">	
-	function horriblePun() {
-		var hellos = [
-			'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
-			'I\'d tell you a chemistry joke but I know I wouldn\'t get a reaction.',
-			'Yesterday I accidentally swallowed some food coloring. The doctor says I\'m OK, but I feel like I died a little inside.',
-			'Have you ever tried to eat a clock? It\'s very time consuming.',
-			'I used to be a banker but I lost interest.',
-			'I relish the fact that you\'ve mustard the strength to ketchup to me.',
-			'I once heard a joke about amnesia, but I forgot how it goes.',
-			'I used to have a fear of hurdles, but I got over it.',
-			'Don\'t trust people that do acupuncture, they\'re back stabbers.',
-			'I used to be addicted to soap, but I\'m clean now.',
-			'When a clock is hungry it goes back four seconds.',
-			'The magician got so mad he pulled his hare out.',
-			'I took a picture of a field of wheat, it was grainy.',
-			'My tailor is happy to make a pair of pants for me, or at least sew it seams.',
-			'I was struggling to figure out how lightning works then it struck me.',
-			'My grade in Marine Biology is below sea-level.',
-			'I don\'t think I need a spine. It\'s holding me back.',
-			'What sound does a bouncing plane make? Boeing boeing boeing.'
-		];
+    function horriblePun() {
+        var hellos = [
+            'Did you hear about the guy whose whole left side was cut off? He\'s all right now.',
+            'I\'d tell you a chemistry joke but I know I wouldn\'t get a reaction.',
+            'Yesterday I accidentally swallowed some food coloring. The doctor says I\'m OK, but I feel like I died a little inside.',
+            'Have you ever tried to eat a clock? It\'s very time consuming.',
+            'I used to be a banker but I lost interest.',
+            'I relish the fact that you\'ve mustard the strength to ketchup to me.',
+            'I once heard a joke about amnesia, but I forgot how it goes.',
+            'I used to have a fear of hurdles, but I got over it.',
+            'Don\'t trust people that do acupuncture, they\'re back stabbers.',
+            'I used to be addicted to soap, but I\'m clean now.',
+            'When a clock is hungry it goes back four seconds.',
+            'The magician got so mad he pulled his hare out.',
+            'I took a picture of a field of wheat, it was grainy.',
+            'My tailor is happy to make a pair of pants for me, or at least sew it seams.',
+            'I was struggling to figure out how lightning works then it struck me.',
+            'My grade in Marine Biology is below sea-level.',
+            'I don\'t think I need a spine. It\'s holding me back.',
+            'What sound does a bouncing plane make? Boeing boeing boeing.'
+        ];
 
-		document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
-	}
+        document.getElementById('pun').innerHTML = hellos[Math.floor(Math.random() * hellos.length)];
+    }
 
-	horriblePun();
+    horriblePun();
 </script>

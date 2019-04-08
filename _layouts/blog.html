@@ -6,50 +6,48 @@ article: true
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}'s Blog</title>
-
     {% include head.html %}
   </head>
   <body>
-
     <sidebar class="sidebar">
       {% if page.links or page.project %}
       <h2>Referenced</h2>
       {% if page.links %}
       {% for link in page.links %}
-	  <a class="link" href="{{ link.url }}">
-	    <object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
-	      <img class="link__img" src="/images/ic/link.svg">
-	    </object>
-	    <span class="link__title">{{ link.name }}</span>
-	  </a>
-	  {% endfor %}
-	  {% endif %}
-	  {% if page.project %}
-	  {% assign project = site.projects | where: "repo", page.project | first %}
-	  <a class="link" href="{{ project.url }}">
-	  	<img class="link__img" src="/images/ic/link.svg">
-	  	<span class="link__title">{{ project.title }}</span>
-	  </a>
-	  <h2>Links</h2>
-	  {% for link in project.links %}
-	  <a class="link" href="{{ link.url }}">
-	    <object class="link__img" data="{{ link.icon }}" type="image/png">
-	      <img class="link__img" src="/images/ic/link.svg">
-	    </object>
-	    <span class="link__title">{{ link.name }}</span>
-	  </a>
-	  {% endfor %}
-	  <h2>Contributors</h2>
-	  {% for contributor in project.contributors %}
-	  <a class="link" href="{{ contributor.url }}">
-	  	<object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
-	  	  <img class="link__img--round" src="/images/ic/person.svg">
-	  	</object>
-	  	<span class="link__title">{{ contributor.login }}</span>
-	  </a>
-	  {% endfor %}
-	  {% endif %}
-	  {% endif %}
+      <a class="link" href="{{ link.url }}">
+        <object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
+          <img class="link__img" src="/images/ic/link.svg">
+        </object>
+        <span class="link__title">{{ link.name }}</span>
+      </a>
+      {% endfor %}
+      {% endif %}
+      {% if page.project %}
+      {% assign project = site.projects | where: "repo", page.project | first %}
+      <a class="link" href="{{ project.url }}">
+          <img class="link__img" src="/images/ic/link.svg">
+          <span class="link__title">{{ project.title }}</span>
+      </a>
+      <h2>Links</h2>
+      {% for link in project.links %}
+      <a class="link" href="{{ link.url }}">
+        <object class="link__img" data="{{ link.icon }}" type="image/png">
+          <img class="link__img" src="/images/ic/link.svg">
+        </object>
+        <span class="link__title">{{ link.name }}</span>
+      </a>
+      {% endfor %}
+      <h2>Contributors</h2>
+      {% for contributor in project.contributors %}
+      <a class="link" href="{{ contributor.url }}">
+          <object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
+            <img class="link__img--round" src="/images/ic/person.svg">
+          </object>
+          <span class="link__title">{{ contributor.login }}</span>
+      </a>
+      {% endfor %}
+      {% endif %}
+      {% endif %}
     </sidebar>
 
     <main id="main" role="main">
@@ -58,21 +56,24 @@ article: true
         <span class="link__title">All Blogs</span>
       </a>
       <br>
-      <article class="post">
+      <article class="h-entry post">
         <h1>
-          {{ page.title }}
-  	      <br>
-	      <span style="font-size: 0.6em;">Written on {{ page.date | date: "%B %e, %Y" }}</span>
+          <span class="p-name">{{ page.title }}</span>
+            <br>
+          <span style="font-size: 0.6em;">
+            Written on <time class="dt-published dt-updated" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time>
+            by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
+          </span>
         </h1>
         <small>
             Tags:
             {% for tag in page.tags %}
             {% assign item = site.tags | where: "tag", tag | first %}
-            <a href="{{ site.url }}/blog/#{{ item.tag }}">#{{ item.title }}</a>&nbsp;
+            <a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ item.tag }}">#{{ item.title }}</a>&nbsp;
             {% endfor %}
         </small>
 
-        <div class="entry markdown">
+        <div class="e-content entry markdown">
           {% if page.redirect %}
           Redirecting to <a href="{{ page.redirect }}">{{ page.redirect }}</a>.
           <script type="text/javascript">
@@ -84,18 +85,18 @@ article: true
         </div>
       </article>
       <div>
-      	{% if page.previous.url %}
-      	<a class="link" style="display: inline-flex;" href="{{ page.previous.url }}">
-      		<i class="link__img material-icons">arrow_back</i>
-      		<span class="link__title">Previous</span>
-      	</a>
-      	{% endif %}
-      	{% if page.next.url %}
-      	<a class="link" style="float: right;" href="{{ page.next.url }}">
-      		<span class="link__title">Next</span>
-      		<i class="link__img material-icons">arrow_forward</i>
-      	</a>
-      	{% endif %}
+          {% if page.previous.url %}
+          <a class="link" style="display: inline-flex;" href="{{ page.previous.url }}">
+              <i class="link__img material-icons">arrow_back</i>
+              <span class="link__title">Previous</span>
+          </a>
+          {% endif %}
+          {% if page.next.url %}
+          <a class="link" style="float: right;" href="{{ page.next.url }}">
+              <span class="link__title">Next</span>
+              <i class="link__img material-icons">arrow_forward</i>
+          </a>
+          {% endif %}
       </div>
     </main>
 
