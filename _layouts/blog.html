@@ -61,7 +61,9 @@ article: true
           <span class="p-name">{{ page.title }}</span>
             <br>
           <span style="font-size: 0.6em;">
-            Written on <time class="dt-published dt-updated" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time>
+            Written on
+            <a class="u-url" href="{% if page.redirect %}{{ page.redirect }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+            <time class="dt-published dt-updated" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
             by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
           </span>
         </h1>
@@ -69,7 +71,7 @@ article: true
             Tags:
             {% for tag in page.tags %}
             {% assign item = site.tags | where: "tag", tag | first %}
-            <a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ item.tag }}">#{{ item.title }}</a>&nbsp;
+            #<a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ item.tag }}">{{ item.title }}</a>&nbsp;
             {% endfor %}
         </small>
 

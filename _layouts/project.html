@@ -2,97 +2,102 @@
 
 <html lang="en">
 <head>
-	{% include head.html %}
-	{% if page.languages %}
-		{% include head-highlightjs.html languages=page.languages %}
-	{% endif %}
+    {% include head.html %}
+    {% if page.languages %}
+        {% include head-highlightjs.html languages=page.languages %}
+    {% endif %}
 </head>
 <body>
 
-	<sidebar class="sidebar">
-		<h2>Links</h2>
-		{% for link in page.links %}
-		<a class="link" href="{{ link.url }}">
-			<object class="link__img" data="{{ link.icon }}" type="image/png">
-				<img class="link__img" src="/images/ic/link.svg">
-			</object>
-			<span class="link__title">{{ link.name }}</span>
-		</a>
-		{% endfor %}
-		<h2>Contributors</h2>
-		{% for contributor in page.contributors %}
-		<a class="link" href="{{ contributor.url }}">
-			<object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
-				<img class="link__img--round" src="/images/ic/person.svg">
-			</object>
-			<span class="link__title">{{ contributor.login }}</span>
-		</a>
-		{% endfor %}
-		{% assign blogs = site.blogs | where: "project", page.title %}
-		{% if blogs.size > 0 %}		
-		<h2>Posts</h2>
-		{% for blog in blogs reversed %}
-		<a class="item" href="{{ site.url }}{{ blog.url }}">
-			<span class="item__title">{{ blog.title }}</span>
-			{{ blog.date | date: "%B %e, %Y" }}
-		</a>
-		{% endfor %}
-		{% endif %}
-		<h2>Contact</h2>
-		{% for contact in site.contact %}
-		<a class="link" href="{{ contact.url }}">
-		    <i class="link__img material-icons">{{ contact.icon }}</i>
-		    <span class="link__title">{{ contact.name }}</span>
-		</a>
-		{% endfor %}
-	</sidebar>
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        {% for link in page.links %}
+        <a class="link" href="{{ link.url }}">
+            <object class="link__img" data="{{ link.icon }}" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">{{ link.name }}</span>
+        </a>
+        {% endfor %}
+        <h2>Contributors</h2>
+        {% for contributor in page.contributors %}
+        <a class="link" href="{{ contributor.url }}">
+            <object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">{{ contributor.login }}</span>
+        </a>
+        {% endfor %}
+        {% assign blogs = site.blogs | where: "project", page.title %}
+        {% if blogs.size > 0 %}		
+        <h2>Posts</h2>
+        {% for blog in blogs reversed %}
+        <a class="item" href="{{ site.url }}{{ blog.url }}">
+            <span class="item__title">{{ blog.title }}</span>
+            {{ blog.date | date: "%B %e, %Y" }}
+        </a>
+        {% endfor %}
+        {% endif %}
+        <h2>Contact</h2>
+        {% for contact in site.contact %}
+        <a class="link" href="{{ contact.url }}">
+            <i class="link__img material-icons">{{ contact.icon }}</i>
+            <span class="link__title">{{ contact.name }}</span>
+        </a>
+        {% endfor %}
+    </sidebar>
 
-	<main>
-		<a class="link" href="/#projects">
-			<img class="link__img" src="/images/ic/back.svg">
-			<span class="link__title">All Projects</span>
-		</a>
-		<br>
+    <main>
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
 
-		{% if page.isWiki == "true" or page.isDocs == "true" %}
-		<nav class="nav">
-			<button class="nav__item" selected>
-				<i class="nav__item__icon material-icons">info</i>
-				<span class="nav__item__title">About</span>
-			</button>
-			{% if page.isWiki == "true" %}
-			<button class="nav__item" onclick="location.href='wiki/';">
-				<i class="nav__item__icon material-icons">assignment</i>
-				<span class="nav__item__title">Wiki</span>
-			</button>
-			{% endif %}
-			{% if page.isDocs == "true" %}
-			<button class="nav__item" onclick="location.href='docs/';">
-				<i class="nav__item__icon material-icons">list_alt</i>
-				<span class="nav__item__title">Docs</span>
-			</button>
-			{% endif %}
-		</nav>
-		<br>
-		{% endif %}
-	
-		<h1>{{ page.title }}</h1>
-		<a class="link" href="{{ page.git }}">
-			<img class="link__img" src="/images/ic/git.png">
-			<span class="link__title">{{ page.git }}</span>
-		</a>
-		<a class="github-button" href="https://github.com/{{ page.repo }}/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch {{ page.repo }} on GitHub">Watch</a>&nbsp;
-		<a class="github-button" href="https://github.com/{{ page.repo }}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ page.repo }} on GitHub">Star</a>&nbsp;
-		<a class="github-button" href="https://github.com/{{ page.repo }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ page.repo }} on GitHub">Fork</a>
-		<div id="content" class="markdown">
-			{{ content }}
-		</div>
-		<h4>Last updated: {{ page.pushed }}</h4>
-	</main>
-	
-	{% include snackbar.html %}
-	{% include footer.html %}
+        {% if page.isWiki == "true" or page.isDocs == "true" %}
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            {% if page.isWiki == "true" %}
+            <button class="nav__item" onclick="location.href='wiki/';">
+                <i class="nav__item__icon material-icons">assignment</i>
+                <span class="nav__item__title">Wiki</span>
+            </button>
+            {% endif %}
+            {% if page.isDocs == "true" %}
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            {% endif %}
+        </nav>
+        <br>
+        {% endif %}
 
-	{% include githubbuttonjs.html %}
+        <div class="h-entry">
+            <h1 class="p-name">{{ page.title }}</h1>
+            <a class="link" href="{{ page.git }}">
+                <img class="link__img" src="/images/ic/git.png">
+                <span class="link__title">{{ page.git }}</span>
+            </a>
+            <a class="github-button" href="https://github.com/{{ page.repo }}/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch {{ page.repo }} on GitHub">Watch</a>&nbsp;
+            <a class="github-button" href="https://github.com/{{ page.repo }}" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star {{ page.repo }} on GitHub">Star</a>&nbsp;
+            <a class="github-button" href="https://github.com/{{ page.repo }}/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork {{ page.repo }} on GitHub">Fork</a>
+            <div id="content" class="e-content markdown">
+                {{ content }}
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="{{ site.url }}{{ page.url }}">
+                <time class="dt-published dt-updated" datetime="{{ page.pushed }}">{{ page.pushed | date: "%B %e, %Y" }}</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    {% include snackbar.html %}
+    {% include footer.html %}
+
+    {% include githubbuttonjs.html %}
 </body>
 </html>
