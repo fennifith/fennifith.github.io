@@ -28,7 +28,7 @@
             <span class="link__title">{{ contributor.login }}</span>
         </a>
         {% endfor %}
-        {% assign blogs = site.blogs | where: "project", page.title %}
+        {% assign blogs = site.posts | where: "project", page.title %}
         {% if blogs.size > 0 %}		
         <h2>Posts</h2>
         {% for blog in blogs reversed %}

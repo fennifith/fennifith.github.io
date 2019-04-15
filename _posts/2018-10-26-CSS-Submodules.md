@@ -15,6 +15,8 @@ links:
     icon: https://github.com/favicon.ico
 tags:
   - web
+categories:
+  - blog
 ---
 
 One of my tasks this week has been reorganizing my website's CSS styles in order to make them easier for me to both use and maintain. It isn't like I have a ton of styles for my site - most of it is fairly text-based - but I have noticed it growing, and "debugging" style-related problems was becoming a pain.

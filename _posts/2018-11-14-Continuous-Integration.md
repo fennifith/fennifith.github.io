@@ -7,4 +7,6 @@ redirect: "https://doubledot.dev/blog/2018-11-14-Continuous-Integration/"
 tags:
   - android
   - ci
+categories:
+  - blog
 ---

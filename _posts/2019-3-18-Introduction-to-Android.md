@@ -5,4 +5,6 @@ description: "A basic overview of the main components of an Android app and how 
 redirect: "https://doubledot.dev/blog/2019-03-18-Introduction-to-Android/"
 tags:
   - android
+categories:
+  - blog
 ---

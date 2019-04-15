@@ -8,6 +8,8 @@ links:
 tags:
   - android
   - meta
+categories:
+  - blog
 ---
 
 A while ago I came across [this post](https://plus.google.com/+FranciscoFranco1990/posts/J52DQsgBwuu) by Francisco Franco. Since the post and many of its comments had some pretty valid points in them, I decided to organize it a bit and publish an article about it.

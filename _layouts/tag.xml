@@ -8,7 +8,7 @@ layout: null
         <title>{{ site.name }} - {{ page.title }}</title>
         <description>{{ site.description }}</description>
         <link>{{ site.url }}</link>
-        {% assign blogs = site.blogs | sort: 'date' | reverse %}
+        {% assign blogs = site.posts | sort: 'date' %}
         {% for blog in blogs %}
         {% if blog.tags contains page.tag %}
         <item>

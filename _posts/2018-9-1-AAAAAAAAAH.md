@@ -5,6 +5,8 @@ description: "A small command-line utility I wrote with Go that I had a lot of f
 project: "fennifith/AAH"
 tags:
   - linux
+categories:
+  - blog
 ---
 
 It has been a little over a year since I left Windows altogether and started using Linux on all of my machines. In that time, I have learnt many uses of the Linux console, and forgotten just as many helpful commands and arguments. As I continued to use the Linux terminal, I quickly found myself browsing stack exchange and scouring man-pages 3-4 times a day, taking up a noticeable amount of my development time. Originally, as seen in one of the early commits to my [dotfiles](/redirects/?t=github&d=dotfiles) repository, I started to write a "help" file containing some of the more common commands that I could grep to quickly find the command/syntax for what I wanted to do, but I found myself wanting a little more functionality from it. Typing out "cat ~/help" and "grep drive mount" every time I wanted to mount a drive seemed unnecessary, and I began to want the ability to "stack" certain commands to avoid accidentally grep-ing lines from the wrong category (a note about "connecting to network drives" under "drive" would be unnecessarily returned when I was trying to connect to a network, for example).

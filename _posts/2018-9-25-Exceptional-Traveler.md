@@ -5,6 +5,8 @@ description: "I explain how and why (sort of) I wrote an implementation of the T
 project: "fennifith/ExceptionalTraveler"
 tags:
   - java
+categories:
+  - blog
 ---
 
 Some time ago, I read [an article](https://medium.com/pointer-io/exceptional-programming-62ea8150f61f) by Chet Haase on the topic of a new style of programming called "Exceptional Programming". In this style, programs are written in a way that handles all possible errors that could be thrown; your programming is Exceptional, after all. It shouldn't fail because of an uncaught ClassCastException and such. And when you cannot beat the enemy, you must become it.

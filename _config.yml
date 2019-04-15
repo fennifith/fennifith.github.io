@@ -33,9 +33,9 @@ collections:
     projects:
         output: true
         permalink: /projects/:title/
-    blogs:
+    posts:
         output: true
-        permalink: /blog/:year-:month-:day-:title/
+        permalink: /:categories/:year-:month-:day-:title/
     tags:
         output: true
 

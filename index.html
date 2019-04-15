@@ -35,7 +35,7 @@ profile: true
         </p>
         <h2 class="p-name">The Blogs</h2>
         <p>
-            {% for blog in site.blogs reversed %}
+            {% for blog in site.posts %}
             {% include item-blog.html blog=blog %}
             {% endfor %}
         </p>
@@ -166,7 +166,7 @@ profile: true
         </div>
         
         <br><h2 style="clear: both;">Latest blog post</h2>
-        {% assign blog = site.blogs | last %}
+        {% assign blog = site.posts | first %}
         {% include item-blog.html blog=blog %}
         <a class="link" href="#blog">
             <i class="link__img material-icons">arrow_forward</i>

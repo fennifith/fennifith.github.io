@@ -3,7 +3,7 @@ layout: page
 ---
 
 <div class="tabs">
-    {% assign blogs = site.blogs | sort: 'date' | reverse %}
+    {% assign blogs = site.posts | sort: 'date' %}
     {% for tag in site.tags %}
     <div id="{{ tag.tag }}">
         <h2>{{ tag.title }}</h2>

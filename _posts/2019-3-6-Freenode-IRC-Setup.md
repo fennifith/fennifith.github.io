@@ -5,4 +5,6 @@ description: "Basic (but detailed) instructions for setting up a Freenode IRC ac
 redirect: "https://doubledot.dev/blog/2019-03-06-Freenode-IRC-Setup/"
 tags:
   - linux
+categories:
+  - blog
 ---
