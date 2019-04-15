@@ -6,6 +6,43 @@ links:
   - name: The Repair Association
     url: https://repair.org/
     icon: https://repair.org/favicon.ico
+sources:
+  - id: Sorrel
+    name: "Everything You Need to Know about the New Files App on IOS 11"
+    author: "Charlie Sorrel"
+    url: https://www.cultofmac.com/485980/everything-you-need-to-know-about-new-files-app-ios-11/
+  - id: Khan
+    name: "The Apple Store Guide to Insanely Great Customer Service"
+    author: "Humayun Khan"
+    url: https://www.shopify.com/retail/119535811-the-apple-store-guide-to-insanely-great-customer-service
+  - id: Anonymous
+    name: "Confessions of an Apple Store Employee"
+    author: "Anonymous"
+    url: https://www.popularmechanics.com/technology/gadgets/a6520/confessions-of-an-apple-store-employee/
+  - id: Gault
+    name: "DHS Seized Aftermarket Apple Laptop Batteries From Independent Repair Expert Louis Rossman"
+    author: "Matthew Gault and Jason Koebler"
+    url: https://motherboard.vice.com/en_us/article/a3ppvj/dhs-seized-aftermarket-apple-laptop-batteries-from-independent-repair-expert-louis-rossman
+  - id: Apple
+    name: "Authorized Service Provider Program"
+    author: "Apple"
+    url: https://support.apple.com/en-lamr/aasp-program
+  - id: Rossignol
+    name: "Popular YouTuber Says Apple Won't Fix His IMac Pro Damaged While Disassembled"
+    author: "Joe Rossignol"
+    url: https://www.macrumors.com/2018/04/18/linus-tech-tips-imac-pro-repair-video/
+  - id: O-Camb
+    name: "Apple's Secret Repair Kill Switch Hasn't Been Activated - Yet"
+    author: "Adam O'Camb"
+    url: https://ifixit.org/blog/11673/t2-mac-repairs-test/
+  - id: Campbell
+    name: "Apple Lobbies against 'Right to Repair' Proposal in Nebraska"
+    author: "Mikey Campbell"
+    url: https://appleinsider.com/articles/17/03/09/apple-lobbies-against-right-to-repair-proposal-in-nebraska
+  - id: Shprintsen
+    name: "Apple accused of overpricing, restricting device repairs"
+    author: "Alex Shprintsen"
+    url: https://www.cbc.ca/news/thenational/complete-control-apple-accused-of-overpricing-restricting-device-repairs-1.4859099
 categories:
   - papers
 ---
@@ -36,7 +73,7 @@ workings of the device. Even using Apple’s software, certain information is hi
 iPhone, there is no element of the “file system” made visible to the user; the iOS operating system
 as a whole is opaque as to where any information is stored. Users are given a basic file manager (the
 “Files” app, in iOS 11), but this does not show what information is really there – it only displays
-information synced to the user’s iCloud account, not what is physically stored on the device [(1)][Sorrel].
+information synced to the user’s iCloud account, not what is physically stored on the device [(1)](#Sorrel).
 When backing up the data on an iPhone, there is no indication of where the backup is located or how
 to move or transfer it, it just exists. If the iPhone is dropped in a puddle and will not turn on,
 then all of that data is gone. When this happens, the customer can only take their phone to Apple’s
@@ -48,12 +85,12 @@ iCloud is now gone. This is the image that Apple has created for their customers
 The people working at the “Genius Bar” are not really geniuses; they are just told to speak
 according to Apple’s “Genius Training Student Workbook”. According to Jay Elliot, who has authored
 two books about Apple, “you've got to be totally wedded to the culture. You've got to love the product
-and what it is. They love the product” [(2)][Khan]. Employees are treated as if they are a part of a cult,
+and what it is. They love the product” [(2)](#Khan). Employees are treated as if they are a part of a cult,
 forced to involve themselves in product launches, integrating their souls with Apple, and lying to
 customers about how their devices work. According to a former employee, “We usually have to tell them
 that if they unlock their iPhone, it won't work. That it's going to be like a $700 paperweight, and
 that the antenna will fry itself on T-Mobile. Of course, that's not true, but that's what we tell them”
-[(3)][Anonymous]. Apple’s foundation is built on lies, which are propogated by users that believe in
+[(3)](#Anonymous). Apple’s foundation is built on lies, which are propogated by users that believe in
 their vision, thinking that the Geniuses at Apple know exactly what they are doing, that users are
 always in the wrong, and that the products they sell are the perfect image of technological innovation.
 
@@ -75,7 +112,7 @@ says, “There has to be a line where putting your logo somewhere no longer mean
 at the border'”. Louis Rossmann is not the only person experiencing these problems, either. Jessa Jones,
 another independent repair professional, had a shipment of iPhone screens seized in the same year.
 According to Rossman, “the difference between counterfeiting and refurbishing is going to be the next
-big battle” between the independent repair profession and Apple [(4)][Gault].
+big battle” between the independent repair profession and Apple [(4)](#Gault).
 
 ### Apple Authorized Service Providers and the Broken iMac Pro
 
@@ -87,7 +124,7 @@ order a part from Apple, they are held to strict standards about how they use it
 Apple device and cannot be sold separately to a customer or they might lose their certification. Not
 only does the business need to provide Apple with complete and accurate information of their sales and
 financial records, but all of their technicians need to be certified as well, through Apple’s own
-training program and classes – which, of course, are not free [(5)][Apple]. There is more than just one
+training program and classes – which, of course, are not free [(5)](#Apple). There is more than just one
 certification, though – Apple has an individual certification for each of their devices, and AASPs
 cannot sell a repair for a device unless they have a technician that is certified (through Apple’s
 program) to repair it. The impact that all of these requirements have on the customer was brought to
@@ -96,7 +133,7 @@ trying to fix a broken iMac Pro. Because they took the device apart and broke it
 willing to pay to have it repaired, but the Apple Store refused to do so. When contacting a local AASP,
 Sebastian found out that they were able to order the parts, but could not approve the sale because they
 did not have the Apple Pro certification – which, according to several AASP employees, did not actually
-exist yet [(6)][Rossignol]. Because Apple is so restrictive about who can repair their devices, they
+exist yet [(6)](#Rossignol). Because Apple is so restrictive about who can repair their devices, they
 should be held to a standard that they are able to fix the products that they sell – similar to buying a
 car, it should be possible to repair even if it is broken immediately after its release. The problem is
 that human mistakes are frequent, and consumers have no way to get their $5000 metallic obelisk to
@@ -113,9 +150,9 @@ Apple’s new T2 chip will require a specific configuration suite in order to co
 that is only available to authorized and Apple-certified “professionals”. After replacing a part, the
 configuration suite connects to Apple’s server to perform performance and compatibility checks for new
 parts. As described by Apple, “Without this software, an internet connection, and approval from Apple’s
-servers, the repair is considered incomplete and the computer is rendered inoperable” [(7)][O-Camb].
+servers, the repair is considered incomplete and the computer is rendered inoperable” [(7)](#O-Camb).
 This functionality effectively prevents any significant repairs by consumers to their own devices, let
-alone giving "unauthorized" repair centers great reason to worry about their future profit. (expand...)
+alone giving "unauthorized" repair centers great reason to worry about their future profit.
 
 ## Nebraska Legislation Bill 67
 
@@ -127,33 +164,22 @@ bad actors” if the bill were passed. According to them, the legislation could 
 unsavory characters “hardware-level access to Apple products”. However, it is important to recognize
 the bias that Apple has to make these claims; supporters of the bill have asserted that many of the
 companies opposing the bill “are only interested in holding sway over the lucrative repair industry”,
-and that opening up the market would “present consumers with more choices” [(8)][Campbell]. This argument
-has a great amount of relevance for users living in rural areas, as companies often position their repair
-centers in major cities and areas with a large population. (expand...)
+and that opening up the market would instead “present consumers with more choices” [(8)](#Campbell). The
+tech industry's stance on this is clear, though, as shown by Apple and other companies' strong stance
+against this legislation. This argument has a great amount of relevance for users living in rural areas,
+as companies often position their repair centers in major cities and areas with a large population.
+Currently, 17 states - including Nebraska - have introduced legislation that would force companies like
+Apple to provide repair manuals and spare parts to third parties. It is worth noticing that if even one
+of these states passes the bill, its impact would span far outside that, as it is likely that companies
+will not want to operate differently in a specific state. Quoting the NY State Assembly Majority Leader
+Joe Morelle, "[...] that could actually pass Right to Repair for the world, because manufactures aren't
+going to provide products differently to people in one jurisdiction. They want to simplify their
+operations" [(9)](#Shprintsen).
 
-# Sources
+## Conclusion
 
-#### 1. [Sorrel, Charlie. “Everything You Need to Know about the New Files App on IOS 11.” Cult of Mac, Cultomedia, 22 Sept. 2017][Sorrel]
-[Sorrel]: https://cultofmac.com/485980/everything-you-need-to-know-about-new-files-app-ios-11/
-
-#### 2. [Khan, Humayun. “The Apple Store Guide to Insanely Great Customer Service.” Shopify Blogs, Shopify, 28 Apr. 2016][Khan]
-[Khan]: https://shopify.com/retail/119535811-the-apple-store-guide-to-insanely-great-customer-service
-
-#### 3. [Anonymous. “Confessions of an Apple Store Employee.” Popular Mechanics, Hearst Magazine Media, 27 Nov. 2017][Anonymous]
-[Anonymous]: https://popularmechanics.com/technology/gadgets/a6520/confessions-of-an-apple-store-employee/
-
-#### 4. [Gault, Matthew, and Jason Koebler. “DHS Seized Aftermarket Apple Laptop Batteries From Independent Repair Expert Louis Rossman.” Motherboard, VICE, 19 Oct. 2018][Gault]
-[Gault]: https://motherboard.vice.com/en_us/article/a3ppvj/dhs-seized-aftermarket-apple-laptop-batteries-from-independent-repair-expert-louis-rossman
-
-#### 5. [“Apple.” Official Apple Support, Apple Inc., 6 Sept. 2018][Apple]
-[Apple]: https://support.apple.com/en-lamr/aasp-program
-
-#### 6. [Rossignol, Joe. “Popular YouTuber Says Apple Won't Fix His IMac Pro Damaged While Disassembled.” MacRumors, MacRumors.com, 18 Apr. 2018][Rossignol]
-[Rossignol]: https://www.macrumors.com/2018/04/18/linus-tech-tips-imac-pro-repair-video/
-
-#### 7. [O'Camb, Adam. “Apple's Secret Repair Kill Switch Hasn't Been Activated-Yet.” IFixit Blog, IFixit, 5 Oct. 2018][O-Camb]
-[O-Camb]: https://ifixit.org/blog/11673/t2-mac-repairs-test/
-
-#### 8. [Campbell, Mikey. “Apple Lobbies against 'Right to Repair' Proposal in Nebraska.” AppleInsider, Quiller Media, Inc., 10 Mar. 2017][Campbell]
-[Campbell]: https://appleinsider.com/articles/17/03/09/apple-lobbies-against-right-to-repair-proposal-in-nebraska
-
+As shown by the variety of points and arguments that have been provided in this paper, "Right to Repair"
+is an issue of drastic importance today. As the owner of a maintainable product that is built from the
+same parts used in thousands of other devices, consumers should not be prevented from performing their
+own repairs and taking their devices apart. There are many situations where someone may want to do this,
+including 
