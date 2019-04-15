@@ -71,6 +71,9 @@ these products.
 
 ## The Apple Store
 
+![A Los Angeles Apple Store, bleak and metallic, with an ominous illuminated Apple logo in the center.](/images/papers/apple-store-la.jpg)
+_Image: [https://commons.wikimedia.org/wiki/File:Apple_Store_LA.jpg](https://commons.wikimedia.org/wiki/File:Apple_Store_LA.jpg)_
+
 To the unknowing customer, Apple’s stores have a very shiny appeal. Not only their physical
 appearance, but the entire brand comes with a sense of cleanliness and perfect simplicity. Their
 logo embodies this aspect of their design, often printed on a blank white box that their products
