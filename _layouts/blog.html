@@ -67,6 +67,7 @@ article: true
             by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
           </span>
         </h1>
+        {% if page.tags %}
         <small>
             Tags:
             {% for tag in page.tags %}
@@ -74,6 +75,7 @@ article: true
             #<a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ item.tag }}">{{ item.title }}</a>&nbsp;
             {% endfor %}
         </small>
+        {% endif %}
 
         <div class="e-content entry markdown">
           {% if page.redirect %}
