@@ -3,9 +3,17 @@ layout: blog
 title: Right to Repair
 description: "A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience."
 links:
-  - name: The Repair Association
+  - name: "The Repair Association"
     url: https://repair.org/
     icon: https://repair.org/favicon.ico
+  - name: "iFixit Repair Movement"
+    url: https://ifixit.org/right/
+    icon: https://ifixit.org/favicon.ico
+  - name: "Electronic Frontier Foundation - Right to Repair"
+    url: https://www.eff.org/issues/right-to-repair
+    icon: https://www.eff.org/favicon.ico
+  - name: "Wikipedia - Electronics right to repair"
+    url: https://en.wikipedia.org/wiki/Electronics_right_to_repair
 sources:
   - id: Sorrel
     name: "Everything You Need to Know about the New Files App on IOS 11"
@@ -52,7 +60,7 @@ and devices in modern society. Large corporations like Apple have formed an excl
 for consumers in which people are prevented from repairing their own devices, and are instead
 belittled for their so-called misuse of a product. As a result of this, customers and third-party
 repair stores are made to feel at the mercy of a large and monopolous company that is more able to
-perform the repair. These points do have opposing arguments: Apple has strongly affirmed that their
+perform the repair. This argument does have opposition: Apple has strongly affirmed that their
 restrictions on consumer and third-party repairs are solely for the safety of the user and to prevent
 illegitimate clones of the devices from appearing in the market, and supporters have argued that they
 hold no liability for ensuring that devices are repaired. However, these points do not justify the
@@ -81,18 +89,20 @@ nearest “Genius Bar”, where it is obviously repaired by the all-knowing Geni
 belittled for their silly mistake of breaking the phone – obviously unrelated to any possible
 design flaw that it might have – and is then told to buy a new one. They are told that a small
 amount of water damage cannot be repaired, and that all of their data that is not backed up to the
-iCloud is now gone. This is the image that Apple has created for their customers, and it is false.
-The people working at the “Genius Bar” are not really geniuses; they are just told to speak
-according to Apple’s “Genius Training Student Workbook”. According to Jay Elliot, who has authored
-two books about Apple, “you've got to be totally wedded to the culture. You've got to love the product
-and what it is. They love the product” [(2)](#Khan). Employees are treated as if they are a part of a cult,
-forced to involve themselves in product launches, integrating their souls with Apple, and lying to
-customers about how their devices work. According to a former employee, “We usually have to tell them
-that if they unlock their iPhone, it won't work. That it's going to be like a $700 paperweight, and
-that the antenna will fry itself on T-Mobile. Of course, that's not true, but that's what we tell them”
-[(3)](#Anonymous). Apple’s foundation is built on lies, which are propogated by users that believe in
-their vision, thinking that the Geniuses at Apple know exactly what they are doing, that users are
-always in the wrong, and that the products they sell are the perfect image of technological innovation.
+iCloud is now gone.
+
+This is the image that Apple has created for their customers, and it is false. The people working at
+the “Genius Bar” are not really geniuses; they are just told to speak according to Apple’s “Genius
+Training Student Workbook”. According to Jay Elliot, who has authored two books about Apple, “you've
+got to be totally wedded to the culture. You've got to love the product and what it is. They love the
+product” [(2)](#Khan). Employees are treated as if they are a part of a cult, forced to involve
+themselves in product launches, integrating their souls with Apple, and lying to customers about how
+their devices work. According to a former employee, “We usually have to tell them that if they unlock
+their iPhone, it won't work. That it's going to be like a $700 paperweight, and that the antenna will
+fry itself on T-Mobile. Of course, that's not true, but that's what we tell them” [(3)](#Anonymous).
+Apple’s foundation is built on lies, which are propogated by users that believe in their vision,
+thinking that the Geniuses at Apple know exactly what they are doing, that users are always in the
+wrong, and that the products they sell are the perfect image of technological innovation.
 
 ### Louis Rossman and the Counterfeit Batteries
 
@@ -163,14 +173,15 @@ in Nebraska in 2017, Apple representative Steve Kester warned that the state wou
 bad actors” if the bill were passed. According to them, the legislation could provide hackers and other
 unsavory characters “hardware-level access to Apple products”. However, it is important to recognize
 the bias that Apple has to make these claims; supporters of the bill have asserted that many of the
-companies opposing the bill “are only interested in holding sway over the lucrative repair industry”,
-and that opening up the market would instead “present consumers with more choices” [(8)](#Campbell). The
-tech industry's stance on this is clear, though, as shown by Apple and other companies' strong stance
-against this legislation. This argument has a great amount of relevance for users living in rural areas,
+companies opposing it “are only interested in holding sway over the lucrative repair industry”, and
+that opening up the market would instead “present consumers with more choices” [(8)](#Campbell). The
+tech industry's stance on this is clear, though, as shown by Apple and other companies' strong arguments
+against this legislation. Right to Repair has a great amount of relevance for users living in rural areas,
 as companies often position their repair centers in major cities and areas with a large population.
-Currently, 17 states - including Nebraska - have introduced legislation that would force companies like
+As long as companies like Apple restrict the places that people are allowed to go to repairs, this issue
+will continue. Currently, 17 states - including Nebraska - have introduced legislation that would force
 Apple to provide repair manuals and spare parts to third parties. It is worth noticing that if even one
-of these states passes the bill, its impact would span far outside that, as it is likely that companies
+of these states passes the bill, its impact would span far outside that, as it is likely that large companies
 will not want to operate differently in a specific state. Quoting the NY State Assembly Majority Leader
 Joe Morelle, "[...] that could actually pass Right to Repair for the world, because manufactures aren't
 going to provide products differently to people in one jurisdiction. They want to simplify their
