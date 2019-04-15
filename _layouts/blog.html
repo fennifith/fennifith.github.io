@@ -90,12 +90,15 @@ article: true
 
         {% if page.sources and page.sources.size > 0 %}
         <div>
-            {% for source in page.sources %}
-            <div id="{{ source.id }}">
-                <span><b>"{{ source.name }}"</b>, by {{ source.author }}</span>
-                <a href="{{ source.url }}">{{ source.url }}</a>
-            </div>
-            {% endfor %}
+            <h1>Source Citations</h1>
+            <ol>
+                {% for source in page.sources %}
+                <li id="{{ source.id }}" style="margin-bottom: 1em;">
+                    <span><b>"{{ source.name }}"</b>, by {{ source.author }}</span><br>
+                    <small><a href="{{ source.url }}">{{ source.url }}</a></small>
+                </li>
+                {% endfor %}
+            </ol>
         </div>
         {% endif %}
       </article>
