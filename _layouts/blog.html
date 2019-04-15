@@ -67,7 +67,7 @@ article: true
             by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
           </span>
         </h1>
-        {% if page.tags %}
+        {% if page.tags.size > 0 %}
         <small>
             Tags:
             {% for tag in page.tags %}
@@ -87,6 +87,17 @@ article: true
           {{ content }}
           {% endif %}
         </div>
+
+        {% if page.sources and page.sources.size > 0 %}
+        <div>
+            {% for source in page.sources %}
+            <div id="{{ source.id }}">
+                <span><b>"{{ source.name }}"</b>, by {{ source.author }}</span>
+                <a href="{{ source.url }}">{{ source.url }}</a>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
       </article>
       <div>
           {% if page.previous.url %}
