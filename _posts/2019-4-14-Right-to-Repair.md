@@ -178,8 +178,15 @@ operations" [(9)](#Shprintsen).
 
 ## Conclusion
 
-As shown by the variety of points and arguments that have been provided in this paper, "Right to Repair"
+The variety of points and arguments that have been provided in this paper show that "Right to Repair"
 is an issue of drastic importance today. As the owner of a maintainable product that is built from the
 same parts used in thousands of other devices, consumers should not be prevented from performing their
 own repairs and taking their devices apart. There are many situations where someone may want to do this,
-including 
+and it is often the case that users are unable to have their devices serviced by someone that is
+authorized to do so. While the stance of this article is clear, it should be noted that "Right to Repair"
+extends far beyond the situations that this paper has discussed. The legislation being proposed affects
+a vast area of products including any electronics with embedded software - home appliances, medical
+devices, and heavy machinery are some notable examples. The discourse surrounding this movement could
+have vast effects on how customers are able to interact with companies worldwide.
+
+For more information about the Right to Repair movement, see [repair.org](https://repair.org/).
