@@ -30,7 +30,7 @@ languages:
   - "Ruby"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-04-19T17:38:07Z"
+pushed: "2019-04-28T03:20:07Z"
 ---
 
 The aim of this project is to create an application that can recursively write and "accompany" existing music or melodies in real-time. Hosted at [jfenn.me/cellularmusic](https://jfenn.me/cellularmusic/).
