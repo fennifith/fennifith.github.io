@@ -59,13 +59,20 @@ article: true
       <article class="h-entry post">
         <h1>
           <span class="p-name">{{ page.title }}</span>
-            <br>
+          <br>
           <span style="font-size: 0.6em;">
             Written on
             <a class="u-url" href="{% if page.redirect %}{{ page.redirect }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
-            <time class="dt-published dt-updated" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
+            <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
             by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
           </span>
+          {% if page.last_updated_at %}
+          <br>
+          <span style="font-size: 0.6em;">
+            Last updated on
+            <time class="dt-updated" datetime="{{ page.last_updated_at }}">{{ page.last_updated_at | date: "%B %e, %Y" }}</time>.
+          </span>
+          {% endif %}
         </h1>
         {% if page.tags.size > 0 %}
         <small>

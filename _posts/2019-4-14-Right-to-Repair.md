@@ -2,6 +2,8 @@
 layout: blog
 title: Right to Repair
 description: "A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience."
+date: 2019-04-14
+last_updated_at: 2019-05-12
 links:
   - name: "The Repair Association"
     url: https://repair.org/
@@ -60,7 +62,7 @@ and devices in modern society. Large corporations like Apple have formed an excl
 for consumers in which people are prevented from repairing their own devices, and are instead
 belittled for their so-called misuse of a product. As a result of this, customers and third-party
 repair stores are made to feel at the mercy of a large and monopolous company that is more able to
-perform the repair. This argument does have opposition: Apple has strongly affirmed that their
+perform repairs. This argument does have opposition: Apple has strongly affirmed that their
 restrictions on consumer and third-party repairs are solely for the safety of the user and to prevent
 illegitimate clones of the devices from appearing in the market, and supporters have argued that they
 hold no liability for ensuring that devices are repaired. However, these points do not justify the
@@ -87,25 +89,26 @@ as a whole is opaque as to where any information is stored. Users are given a ba
 information synced to the user’s iCloud account, not what is physically stored on the device [(1)](#Sorrel).
 When backing up the data on an iPhone, there is no indication of where the backup is located or how
 to move or transfer it, it just exists. If the iPhone is dropped in a puddle and will not turn on,
-then all of that data is gone. When this happens, the customer can only take their phone to Apple’s
-nearest “Genius Bar”, where it is obviously repaired by the all-knowing Geniuses. The customer is
-belittled for their silly mistake of breaking the phone – obviously unrelated to any possible
-design flaw that it might have – and is then told to buy a new one. They are told that a small
+then, according to Apple, all of that data is gone. When this happens, the customer can only take
+their phone to Apple’s nearest “Genius Bar”, where it is obviously repaired by the all-knowing Geniuses.
+The customer is belittled for their silly mistake of breaking the phone – obviously unrelated to any
+possible design flaw that it might have – and is then told to buy a new one. They are told that a small
 amount of water damage cannot be repaired, and that all of their data that is not backed up to the
 iCloud is now gone.
 
-This is the image that Apple has created for their customers, and it is false. The people working at
+This is the face that Apple shows their customers, and many people have expressed concern that it is
+false. As the influential YouTuber Louis Rossman recurrently says, the people working at
 the “Genius Bar” are not really geniuses; they are just told to speak according to Apple’s “Genius
 Training Student Workbook”. According to Jay Elliot, who has authored two books about Apple, “you've
 got to be totally wedded to the culture. You've got to love the product and what it is. They love the
-product” [(2)](#Khan). Employees are treated as if they are a part of a cult, forced to involve
-themselves in product launches, integrating their souls with Apple, and lying to customers about how
-their devices work. According to a former employee, “We usually have to tell them that if they unlock
+product” [(2)](#Khan). A former Apple Store employee has said that they are treated as if they are a
+part of a cult, forced to involve themselves in product launches, integrating their souls with Apple,
+and lying to customers about how their devices work. “We usually have to tell them that if they unlock
 their iPhone, it won't work. That it's going to be like a $700 paperweight, and that the antenna will
 fry itself on T-Mobile. Of course, that's not true, but that's what we tell them” [(3)](#Anonymous).
-Apple’s foundation is built on lies, which are propogated by users that believe in their vision,
-thinking that the Geniuses at Apple know exactly what they are doing, that users are always in the
-wrong, and that the products they sell are the perfect image of technological innovation.
+This elitist view is propogated by users that believe in Apple's vision, thinking that the "Geniuses"
+at Apple know exactly what they are doing, that users are always in the wrong, and that the products
+they sell are the perfect image of technological innovation.
 
 ### Louis Rossman and the Counterfeit Batteries
 
