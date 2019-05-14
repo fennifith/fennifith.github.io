@@ -1,6 +1,6 @@
 ---
 title: "Erik Boesen"
-description: "GMHS '19, Yale '23. President & Programming Captain of @frc1418. Summer Research Intern at MIT Marine Autonomy Lab."
+description: "GMHS '19, Yale '23. Former President @frc1418."
 avatar: "https://avatars1.githubusercontent.com/u/5923662?v=4"
 link: "https://github.com/ErikBoesen"
 ---
