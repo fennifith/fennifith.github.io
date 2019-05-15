@@ -11,6 +11,7 @@ title: Documentation Pages
 		- [AlarmData](alarmio/data/AlarmData)
 		- [SoundData](alarmio/data/SoundData)
 		- [TimerData](alarmio/data/TimerData)
+		- [preference / ListPreferenceData](alarmio/data/preference/ListPreferenceData)
 	- [fragments / HomeFragment](alarmio/fragments/HomeFragment)
 	- [interfaces / Subscribblable](alarmio/interfaces/Subscribblable)
 	- [services /](alarmio/services)

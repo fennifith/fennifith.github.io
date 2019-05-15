@@ -11,6 +11,7 @@ title: Documentation Pages
 		- [AlarmData](java/me/jfenn/alarmio/data/AlarmData)
 		- [SoundData](java/me/jfenn/alarmio/data/SoundData)
 		- [TimerData](java/me/jfenn/alarmio/data/TimerData)
+		- [preference / ListPreferenceData](java/me/jfenn/alarmio/data/preference/ListPreferenceData)
 	- [fragments / HomeFragment](java/me/jfenn/alarmio/fragments/HomeFragment)
 	- [interfaces / Subscribblable](java/me/jfenn/alarmio/interfaces/Subscribblable)
 	- [services /](java/me/jfenn/alarmio/services)

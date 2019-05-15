@@ -2,11 +2,11 @@
 layout: docs
 title: ListPreferenceData Documentation
 ---
-#### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [me](./../../../../index) > [jfenn](./../../../index) > [alarmio](./../../index) > [data](./../index) > [preference](./index) > **ListPreferenceData.java**
+#### [.](./../../../../../../../../../index) > [app](./../../../../../../../../index) > [src](./../../../../../../../index) > [main](./../../../../../../index) > [java](./../../../../../index) > [me](./../../../../index) > [jfenn](./../../../index) > [alarmio](./../../index) > [data](./../index) > [preference](./index) > **ListPreferenceData.kt**
 
-## [addItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.java#L79)
+## [addItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.kt#L55)
 
-**Type:** `public` `final` `void`
+**Type:** `fun`
 
 adds an item to the end of the list 
 
@@ -26,9 +26,9 @@ adds an item to the end of the list
 
 
 
-## [removeItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.java#L95)
+## [removeItem](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.kt#L66)
 
-**Type:** `public` `final` `void`
+**Type:** `fun`
 
 Removes the last item in the list 
 
