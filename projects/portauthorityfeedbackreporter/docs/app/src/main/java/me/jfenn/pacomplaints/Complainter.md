@@ -4,7 +4,7 @@ title: Complainter Documentation
 ---
 #### [.](./../../../../../../../index) > [app](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [pacomplaints](./index) > **Complainter.java**
 
-## [getHtml](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L46)
+## [getHtml](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L44)
 
 **Type:** `public` `void`
 
@@ -24,7 +24,7 @@ Get all HTML content inside the <body> element of the WebView, formatted as JSON
 
 
 
-## [getHtmlContent](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L54)
+## [getHtmlContent](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L52)
 
 **Type:** `public` `void`
 
@@ -45,7 +45,7 @@ Gets all HTML content inside an element, formatted as JSON
 
 
 
-## [getHtmlContentByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L63)
+## [getHtmlContentByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L61)
 
 **Type:** `public` `void`
 
@@ -67,7 +67,7 @@ Gets all HTML content inside an element, formatted as JSON
 
 
 
-## [setAttribute](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L77)
+## [setAttribute](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L75)
 
 **Type:** `public` `void`
 
@@ -89,7 +89,7 @@ Sets an attribute of an element in the WebView
 
 
 
-## [setAttributeByName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L91)
+## [setAttributeByName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L89)
 
 **Type:** `public` `void`
 
@@ -112,7 +112,7 @@ Sets an attribute of an element in the WebView
 
 
 
-## [setAttributeByTagName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L106)
+## [setAttributeByTagName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L104)
 
 **Type:** `public` `void`
 
@@ -135,7 +135,7 @@ Sets an attribute of an element in the WebView
 
 
 
-## [getAttribute](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L121)
+## [getAttribute](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L119)
 
 **Type:** `public` `void`
 
@@ -157,7 +157,7 @@ Gets an attribute of an element in the WebView, formatted as JSON
 
 
 
-## [getAttributeByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L131)
+## [getAttributeByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L129)
 
 **Type:** `public` `void`
 
@@ -181,7 +181,7 @@ Gets an attribute of an element in the WebView, formatted as JSON
 
 
 
-## [callFunction](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L143)
+## [callFunction](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L141)
 
 **Type:** `public` `void`
 
@@ -202,7 +202,7 @@ Calls a function inside the WebView
 
 
 
-## [callFunction](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L152)
+## [callFunction](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L150)
 
 **Type:** `public` `void`
 
@@ -224,7 +224,7 @@ Calls a function of an element inside the WebView
 
 
 
-## [callFunctionByName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L162)
+## [callFunctionByName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L160)
 
 **Type:** `public` `void`
 
@@ -247,7 +247,7 @@ Calls a function of an element inside the WebView
 
 
 
-## [callFunctionByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L173)
+## [callFunctionByClassName](https://github.com/fennifith/PortAuthorityFeedbackReporter/blob/master/app/src/main/java/me/jfenn/pacomplaints/Complainter.java#L171)
 
 **Type:** `public` `void`
 

@@ -19,8 +19,8 @@ links:
   - name: "Google Play"
     url: "https://play.google.com/store/apps/details?id=me.jfenn.pacomplaints"
     icon: "/images/ic/play-store.svg"
-  - name: "PortAuthorityComplainter.apk (v1.1 stable)"
-    url: "https://github.com/fennifith/PortAuthorityFeedbackReporter/releases/download/v1.1/PortAuthorityComplainter.apk"
+  - name: "PortAuthorityFeedbackReporter.apk (v1.2 stable)"
+    url: "https://github.com/fennifith/PortAuthorityFeedbackReporter/releases/download/v1.2/PortAuthorityFeedbackReporter.apk"
     icon: "/images/ic/download.svg"
 contributors: 
   - login: "fennifith"
@@ -35,7 +35,7 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-05-23T01:26:03Z"
+pushed: "2019-06-01T18:07:19Z"
 ---
 
 The Port Authority Feedback Reporter is a small application to make it easier for bus riders in Pittsburgh, PA to report incedents on the Port Authority bus system (such as missing / damaged bike racks - the main reason for creating this app). It works by scraping & injecting javascript into [this page](http://www.portauthority.org/paac/apps/webcomments/pgcomment.asp?t=con), and is designed to make it easier to report issues on mobile devices by using larger and more significant touch targets, auto-filling the date and time, and remembering the name, email, and phone number fields so that the user has less actions to perform in order to submit feedback.
