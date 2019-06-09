@@ -21,7 +21,7 @@ links:
   - name: "Google Play"
     url: "https://play.google.com/store/apps/details?id=com.james.status"
     icon: "/images/ic/play-store.svg"
-  - name: "app-oss-release.apk (3.8-beta7 stable)"
+  - name: "app-oss-release.apk (3.8-beta7 unstable)"
     url: "https://github.com/fennifith/Status/releases/download/3.8-beta7/app-oss-release.apk"
     icon: "/images/ic/download.svg"
 contributors: 
@@ -40,7 +40,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "true"
-pushed: "2019-05-15T16:59:29Z"
+pushed: "2019-06-08T02:42:19Z"
 ---
 
 > **A message from the idiot that wrote this program:**
