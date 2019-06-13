@@ -45,7 +45,7 @@ Let me break down some of their claims...
 ### "An independent study affirms Aptoide's content is the safest"
 
 [The study they reference](https://dl.acm.org/citation.cfm?id=3121267) is actually paywalled. Thanks for that. I was
-able to obtain a copy through my university, and it is possible to acquire it from other sources.
+able to obtain a copy through my university, though, and it is possible to acquire it from other sources.
 
 I believe that the part of the study they got this information from was on page 3, a graph that lists 27 different
 app stores ranked by the percentage of malware that [VirusTotal](https://www.virustotal.com/), a popular malware
