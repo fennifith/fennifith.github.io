@@ -20,10 +20,8 @@ languages:
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-06-20T02:37:59Z"
+pushed: "2019-06-21T18:00:46Z"
 ---
-
-# Music Automata API
 
 The goal of this project is to create an API that can be used to schedule and
 organize automated music generation using [ReactiveX](http://reactivex.io/)
@@ -43,14 +41,12 @@ Together, the blocks build a sort of tree structure along which notes are
 passed. For example, consider a set of blocks that are organized like below:
 
 ```nohighlight
-
        [keyboard]
         /      \
     [piano]  [arpeggiator]
                  \
                 [synth]
-
-```nohighlight
+```
 
 Here, all notes are created from keyboard input. They are then passed directly
 to the blocks "piano" and "arpeggiator". The "piano" block simply plays the
