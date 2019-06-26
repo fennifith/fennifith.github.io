@@ -13,9 +13,6 @@ contact:
   - name: "Telegram"
     icon: "chat"
     url: "https://t.me/joinchat/JV--FRZrSf-NJqeE0OGKXg"
-  - name: "Matrix"
-    icon: "chat"
-    url: "https://matrix.to/#/!apQumaWwHIRDmTIYAr:matrix.org"
 
 url: "https://jfenn.me"
 domainurl: "https://jfenn.me"
@@ -36,6 +33,9 @@ collections:
     posts:
         output: true
         permalink: /:categories/:year-:month-:day-:title/
+    categories:
+        output: true
+        permalink: /:slug/
     tags:
         output: true
 
