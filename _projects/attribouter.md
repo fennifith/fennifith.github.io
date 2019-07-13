@@ -38,7 +38,7 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "true"
-pushed: "2019-07-10T20:28:45Z"
+pushed: "2019-07-13T14:04:56Z"
 title-buttons: 
   - "[![](https://jitpack.io/v/me.jfenn/Attribouter.svg)](https://jitpack.io/#me.jfenn/Attribouter)"
   - "[![Build Status](https://travis-ci.com/fennifith/Attribouter.svg)](https://travis-ci.com/fennifith/Attribouter)"

@@ -35,10 +35,10 @@ As stated in their documentation, both the [`AppWedge`](AppWedge) and the [`Cont
 <about>
 
   <me.jfenn.attribouter.wedges.AppWedge
-    repo="TheAndroidMaster/Pasta-for-Spotify" />
+    repo="fennifith/Pasta-for-Spotify" />
     
   <me.jfenn.attribouter.wedges.ContributorsWedge
-    repo="TheAndroidMaster/Pasta-for-Spotify" />
+    repo="fennifith/Pasta-for-Spotify" />
     
   <me.jfenn.attribouter.wedges.LicensesWedge/>
   
@@ -98,15 +98,15 @@ Actually, there is one extra step - if you do not define the `login` attribute o
 <about>
 
   <me.jfenn.attribouter.wedges.AppWedge
-    repo="TheAndroidMaster/Pasta-for-Spotify"
+    repo="fennifith/Pasta-for-Spotify"
     description="A material design Spotify client for Android"
     websiteUrl="https://jfenn.me/apps/pasta/" />
     
   <me.jfenn.attribouter.wedges.ContributorsWedge
-    repo="TheAndroidMaster/Pasta-for-Spotify" >
+    repo="fennifith/Pasta-for-Spotify" >
   
     <me.jfenn.attribouter.wedges.ContributorWedge
-      login="TheAndroidMaster"
+      login="fennifith"
       name="James Fenn"
       avatar="https://avatars3.githubusercontent.com/u/13000407"
       task="Developer"
