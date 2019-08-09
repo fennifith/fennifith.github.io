@@ -82,18 +82,13 @@ profile: true
             <p>
                 While I have come far since I first started, I did not gain this much knowledge by myself; many people, one way or another,
                 have helped me to solve problems and learn new things along the way.
-                <br><br>
-                If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!
             </p>
-        </div>
-        <div class="layout--grid">
-            {% for person in site.people %}
-            <a class="item item--box" href="{{ person.link }}">
-                <img class="lozad img--round item--box__img" src="/images/ic/person.svg" data-src="{{ person.avatar }}" class="round" alt="Profile picture">
-                <span class="item__title">{{ person.title }}</span>
-                {{ person.description }}
-            </a>
-            {% endfor %}
+            <p>If you find my projects interesting and want to see more, it is definitely worth the time to check out some of their work!</p>
+            <p>
+                {% for person in site.people %}
+                <a href="{{ person.link }}">{{ person.link | split: '//' | last }}</a>{% unless forloop.last %} &bull; {% endunless %}
+                {% endfor %}
+            </p>
         </div>
     </div>
     <div id="about" class="markdown">

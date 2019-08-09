@@ -247,7 +247,7 @@ async function main() {
                 title: person.name ? person.name : person.login,
                 description: person.bio && person.bio.trim().length > 0 ? person.bio.trim().replace(/(\n)/g, " ").replace(/(\:)/g, "&#58;") : "This is a person.",
                 avatar: person.avatar_url,
-                link: person.html_url
+                link: person.blog ? person.blog : person.html_url
             }) + "\n---\n");
 
         console.log("Fetched person " + person.login);
