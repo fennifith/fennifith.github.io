@@ -1,4 +1,0 @@
-[submodule "css"]
-	path = css
-	url = https://github.com/TheAndroidMaster/styles
-	branch = css

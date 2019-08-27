@@ -1,17 +1,16 @@
+.PHONY: start build install clean
 
 start:
-	open http://localhost:4000/
-	bundle exec jekyll serve --config _config.yml,_config-dev.yml
+	npx @11ty/eleventy --serve
 
 build:
-	bundle exec jekyll build --config _config.yml,_config-dev.yml
+	npx @11ty/eleventy
 
-install:
-	git submodule init
-	git submodule update
-	bundle install
-	( cd .scripts && npm install )
+install: package-lock.json
+
+package-lock.json: package.json
+	npm install
 
 clean:
-	bundle exec jekyll clean
-	( cd .scripts && rm -rf ./node_modules )
+	rm -rf node_modules/
+	rm -r _site/

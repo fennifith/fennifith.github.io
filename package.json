@@ -1,0 +1,23 @@
+{
+  "name": "fennifith.github.io",
+  "version": "1.0.0",
+  "description": "This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](./scripts/update.js) and [a shell script](./scripts/update.sh) that may be used to update it periodically.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fennifith:0324fa882bd28462fddf35ad29d9e2afce1cf638@github.com/fennifith/fennifith.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fennifith/fennifith.github.io/issues"
+  },
+  "homepage": "https://github.com/fennifith/fennifith.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.3"
+  }
+}
