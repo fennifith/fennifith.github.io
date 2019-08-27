@@ -1,0 +1,114 @@
+---
+layout: default
+article: true
+---
+
+    <sidebar class="sidebar">
+      {% if page.links or page.project %}
+      <h2>Referenced</h2>
+      {% if page.links %}
+      {% for link in page.links %}
+      <a class="link" href="{{ link.url }}">
+        <object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
+          <img class="link__img" src="/images/ic/link.svg">
+        </object>
+        <span class="link__title">{{ link.name }}</span>
+      </a>
+      {% endfor %}
+      {% endif %}
+      {% if page.project %}
+      {% assign project = collections.projects | where: "repo", page.project | first %}
+      <a class="link" href="{{ project.url }}">
+          <img class="link__img" src="/images/ic/link.svg">
+          <span class="link__title">{{ project.title }}</span>
+      </a>
+      <h2>Links</h2>
+      {% for link in project.links %}
+      <a class="link" href="{{ link.url }}">
+        <object class="link__img" data="{{ link.icon }}" type="image/png">
+          <img class="link__img" src="/images/ic/link.svg">
+        </object>
+        <span class="link__title">{{ link.name }}</span>
+      </a>
+      {% endfor %}
+      <h2>Contributors</h2>
+      {% for contributor in project.contributors %}
+      <a class="link" href="{{ contributor.url }}">
+          <object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
+            <img class="link__img--round" src="/images/ic/person.svg">
+          </object>
+          <span class="link__title">{{ contributor.login }}</span>
+      </a>
+      {% endfor %}
+      {% endif %}
+      {% endif %}
+    </sidebar>
+
+    <main id="main" role="main">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post">
+        <h1>
+          <span class="p-name">{{ title }}</span>
+          <br>
+          <span style="font-size: 0.6em;">
+            Written on
+            <a class="u-url" href="{{ url }}">
+            <time class="dt-published" datetime="{{ date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
+            by <a class="p-author h-card" href="{{ '/' | url }}">{{ site.name }}</a>.
+          </span>
+          {% if page.last_updated_at %}
+          <br>
+          <span style="font-size: 0.6em;">
+            Last updated on
+            <time class="dt-updated" datetime="{{ last_updated_at }}">{{ last_updated_at | date: "%B %e, %Y" }}</time>.
+          </span>
+          {% endif %}
+        </h1>
+        {% if tags.size > 0 %}
+        <small>
+            Tags:
+            {% for tag in tags %}
+            #<a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ tag }}">{{ tag | makeUppercase }}</a>&nbsp;
+            {% endfor %}
+        </small>
+        {% endif %}
+
+        <div class="e-content entry markdown">
+          {{ content | safe }}
+        </div>
+
+        {% if sources and sources.size > 0 %}
+        <div>
+            <h1>Source Citations</h1>
+            <ol>
+                {% for source in sources %}
+                <li id="{{ source.id }}" style="margin-bottom: 1em;">
+                    <span><b>"{{ source.name }}"</b>, by {{ source.author }}</span><br>
+                    <small><a href="{{ source.url }}">{{ source.url }}</a></small>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+        {% endif %}
+      </article>
+      <div>
+          {% if previous.url %}
+          <a class="link" style="display: inline-flex;" href="{{ previous.url }}">
+              <i class="link__img material-icons">arrow_back</i>
+              <span class="link__title">Previous</span>
+          </a>
+          {% endif %}
+          {% if next.url %}
+          <a class="link" style="float: right;" href="{{ next.url }}">
+              <span class="link__title">Next</span>
+              <i class="link__img material-icons">arrow_forward</i>
+          </a>
+          {% endif %}
+      </div>
+    </main>
+
+    {% include footer.html %}

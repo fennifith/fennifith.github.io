@@ -1,6 +1,3 @@
 User-agent: *
 Disallow: 
-Disallow: /links/*
-Disallow: /redirects/*
-Disallow: /about/*
 Sitemap: https://jfenn.me/sitemap.xml

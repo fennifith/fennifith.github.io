@@ -1,0 +1,79 @@
+<meta charset="utf-8">
+
+{% set description = description or meta.description %}
+{% set icon = icon or meta.icon | url %}
+{% set image = image or meta.image | url %}
+
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ meta.author }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>{{ title or meta.name }}</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="{{ meta.name }}">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="{{ meta.description }}">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="{{ meta.name }}">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="//fonts.googleapis.com/css?family=Miriam+Libre" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+{% if googleplay %}
+<meta name="twitter:card" content="app">
+<meta name="twitter:app:name:googleplay" content="{{ title }}">
+<meta name="twitter:app:id:googleplay" content="{{ package }}">
+<meta name="twitter:app:url:googleplay" content="{{ googleplay }}">
+{% elsif banner %}
+<meta name="twitter:card" content="summary_large_image">
+{% else %}
+<meta name="twitter:card" content="summary">
+{% endif %}
+
+{% set twitterLink = collections.links | where: "title", "twitter" | first %}
+{% if twitterLink %}
+<meta name="twitter:creator" content="@{{ twitterLink.name }}">
+<meta name="twitter:site" content="@{{ twitterLink.name }}">
+{% endif %}
+
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ icon }}">
+
+<meta name="og:title" content="{{ title }}">
+{% if layout.article or page.article %}
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="{{ page.date }}">
+<meta name="article:author" content="{{ site.author }}">
+{% elsif layout.profile or page.profile %}
+<meta name="og:type" content="profile">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+{% else %}
+<meta name="og:type" content="website">
+{% endif %}
+<meta name="og:image" content="{{ image }}">
+<meta name="og:url" content="{{ url }}">
+<meta name="og:description" content="{{ description }}">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="{{ meta.name }}">
+
+{% if redirect %}
+<meta http-equiv="refresh" content="0; URL='{{ redirect }}'" />
+{% endif %}
