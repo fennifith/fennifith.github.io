@@ -23,6 +23,8 @@ $RECYCLE.BIN/
 
 # Project/build files
 node_modules/
-package-lock.json
+package-install.lock
 .sass-cache/
+.idea/
+.vscode/
 _site/

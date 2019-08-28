@@ -1,15 +1,16 @@
 .PHONY: start build install clean
 
-start:
+start: install
 	npx @11ty/eleventy --serve
 
-build:
+build: install
 	npx @11ty/eleventy
 
-install: package-lock.json
+install: package-install.lock
 
-package-lock.json: package.json
+package-install.lock: package.json
 	npm install
+	touch package-install.lock
 
 clean:
 	rm -rf node_modules/
