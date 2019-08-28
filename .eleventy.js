@@ -7,8 +7,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(require("@11ty/eleventy-plugin-syntaxhighlight"));
   eleventyConfig.setDataDeepMerge(true);
 
-  eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
-  eleventyConfig.addLayoutAlias("redirect", "layouts/redirect.njk");
+  eleventyConfig.addLayoutAlias("default", "layouts/default.liquid");
+  eleventyConfig.addLayoutAlias("post", "layouts/post.liquid");
+  eleventyConfig.addLayoutAlias("redirect", "layouts/redirect.liquid");
 
   eleventyConfig.addPassthroughCopy("css");
 
@@ -51,8 +52,8 @@ module.exports = function(eleventyConfig) {
     pathPrefix: "/",
 
     markdownTemplateEngine: "liquid",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk",
+    htmlTemplateEngine: "liquid",
+    dataTemplateEngine: "liquid",
     passthroughFileCopy: true,
     dir: {
       input: ".",

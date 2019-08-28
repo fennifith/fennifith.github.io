@@ -6,6 +6,7 @@ links:
   - name: "Google+ Post"
     url: "https://plus.google.com/+FranciscoFranco1990/posts/J52DQsgBwuu"
 tags:
+  - post
   - android
   - meta
 categories:

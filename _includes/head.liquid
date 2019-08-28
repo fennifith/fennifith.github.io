@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 
-{% set description = description or meta.description %}
-{% set icon = icon or meta.icon | url %}
-{% set image = image or meta.image | url %}
+{% assign description = description or meta.description %}
+{% assign icon = icon or meta.icon | url %}
+{% assign image = image or meta.image | url %}
 
 <meta name="description" content="{{ description }}">
 <meta name="author" content="{{ meta.author }}">
@@ -45,10 +45,10 @@
 <meta name="twitter:card" content="summary">
 {% endif %}
 
-{% set twitterLink = collections.links | where: "title", "twitter" | first %}
+{% assign twitterLink = 'fennifith' %}
 {% if twitterLink %}
-<meta name="twitter:creator" content="@{{ twitterLink.name }}">
-<meta name="twitter:site" content="@{{ twitterLink.name }}">
+<meta name="twitter:creator" content="@{{ twitterLink }}">
+<meta name="twitter:site" content="@{{ twitterLink }}">
 {% endif %}
 
 <meta name="twitter:title" content="{{ title }}">
@@ -56,11 +56,11 @@
 <meta name="twitter:image" content="{{ icon }}">
 
 <meta name="og:title" content="{{ title }}">
-{% if layout.article or page.article %}
+{% if article %}
 <meta name="og:type" content="article">
 <meta name="article:published_time" content="{{ page.date }}">
 <meta name="article:author" content="{{ site.author }}">
-{% elsif layout.profile or page.profile %}
+{% elsif profile %}
 <meta name="og:type" content="profile">
 <meta name="profile:first_name" content="James">
 <meta name="profile:last_name" content="Fenn">
