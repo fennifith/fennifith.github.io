@@ -1,0 +1,184 @@
+---
+layout: "project"
+type: "undefined"
+title: "Declarativ"
+description: "A declarative HTML rendering library that is definitely not JSX."
+repo: "fennifith/declarativ"
+git: "git://github.com/fennifith/declarativ.git"
+links: 
+  - name: "GitHub"
+    url: "https://github.com/fennifith/declarativ"
+    icon: "https://github.com/favicon.ico"
+  - name: "Issues"
+    url: "https://github.com/fennifith/declarativ/issues"
+    icon: "/images/ic/bug.svg"
+  - name: "Mozilla Public License 2.0"
+    url: "https://choosealicense.com/licenses/mpl-2.0/"
+    icon: "/images/ic/copyright.svg"
+  - name: "npm"
+    url: "https://www.npmjs.com/package/declarativ"
+    icon: "https://www.npmjs.com/favicon.ico"
+  - name: "declarativ.js (0.0.4 unstable)"
+    url: "https://github.com/fennifith/declarativ/releases/download/0.0.4/declarativ.js"
+    icon: "/images/ic/download.svg"
+contributors: 
+  - login: "fennifith"
+    avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
+    url: "https://github.com/fennifith"
+languages: 
+  - "JavaScript"
+  - "Makefile"
+  - "HCL"
+isDocs: "false"
+isWiki: "false"
+pushed: "2019-09-05T21:13:36Z"
+---
+
+"Declarativ" is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's [JSX](https://reactjs.org/docs/introducing-jsx.html). Okay, it kind of is, but whatever, it's still cool.
+
+Declarativ allows you to write a document tree using a series of nested function calls, much like how Declarative UI works inside [Flutter](https://flutter.dev/docs/get-started/flutter-for/declarative#how-to-change-ui-in-a-declarative-framework) or in [Jetpack Compose](https://developer.android.com/jetpack/compose). Here's an example:
+
+```js
+container(
+  jumbotron(
+    h1("This is a big header."),
+    button("Do something").on("click", () => alert("Hello!")),
+    p($.get("https://loripsum.net/api/plaintext"))
+  )
+)
+```
+
+## Installation
+
+**Note:** although this library can and does use it, it _does not_ depend on jQuery. It will behave the same regardless of whether it is passed an unwrapped HTMLElement or a jQuery class. This is because of _perplexed kittens_ and [_fairy dust_](./src/util/dom-wrapper.js).
+
+#### Script Tag
+
+```html
+<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.4/dist/declarativ.js"></script>
+```
+
+(the module will be included in the global scope as the `declarativ` variable)
+
+#### NPM/Webpack
+
+```sh
+npm install declarativ
+```
+
+#### From Source
+
+```sh
+git clone https://github.com/fennifith/declarativ.git
+cd declarativ && make install
+```
+
+## Usage
+
+Most component trees can be built using the standard functions defined in `declarativ.elements`. I often shorten this to `el` when using more than one or two of them, which makes it a bit easier to work with. Here's an example:
+
+```js
+const el = declarativ.elements;
+
+let components = el.div(
+  el.h1("This is a big header."),
+  el.p(
+    "Here, have a bit of text",
+    el.a("and a link").attr("href", "https://example.com/"),
+    "."
+  )
+);
+```
+
+After defining your component tree, it can be placed on the DOM by either calling the `render` or `renderElement` functions. Calling `render` simply returns the rendered jQuery element, but `renderElement` accepts a second "element" argument which the rendered content will be placed inside.
+
+```js
+declarativ.renderElement($("#content"), components).then(() => {
+    console.log("Elements rendered!");
+});
+```
+
+Working examples can be found in the [examples](https://github.com/fennifith/declarativ/blob/master/../../tree/master/examples/) folder.
+
+### Promises
+
+Promises can be mixed in or bound to components to pass data to them, and the component will wait for them to resolve before rendering. Because inner components depend on their parent nodes to render, higher components will render first, and only the bound component and inner nodes will wait for the Promise.
+
+```js
+el.div(
+  el.p("This will render first."),
+  el.p(new Promise((resolve) => {
+    setTimeout(() => resolve("This will render second."), 1000);
+  })),
+  el.p(
+    new Promise((resolve) => {
+      setTimeout(() => resolve("This will render last..."), 2000);
+    }),
+    " but not this!"
+  )
+)
+```
+
+### Handling Data
+
+Nodes can exist in various forms inside of a component. In the last example, I specified a Promise and a string as the contents of a paragraph element. However, not all of the promises you use will return a string. Often times, you will handle data structures that need to be bound to multiple elements. This is where the `.bind()` function comes in useful.
+
+```js
+el.div(
+  el.p("This will render first"),
+  el.div(
+    el.p((data) => data.first),
+    el.p((data) => data.second)
+  ).bind(Promise.resolve({
+    first: "This is a string.",
+    second: "This is another string."
+  }))
+)
+```
+
+Okay, a lot is happening here. I'll slow down and explain.
+
+The `bind` function allows you to specify a set of data to be passed to other parts of a component - and extends upon the types of nodes that can be placed inside it. Because the paragraph elements inside the div are not bound to any data, they inherit the Promise that is bound to their parent. The nodes inside of the paragraph elements are then specified as a function of the resolved data, returning the text to render.
+
+A more complex data binding situation based off the GitHub API can be found in [examples/binding.html](./examples/binding.html).
+
+### Templates
+
+Templating functionality is crucial for projects that involve a large number of elements or repeat a common set of element structures in multiple places. There are a few different ways to create them:
+
+#### Functions
+
+The easiest is to just create a function that returns another component, like so:
+
+```js
+function myComponent(title, description) {
+  return el.div(
+    el.h3(title),
+    el.p(description)
+  );
+}
+```
+
+Because you're just passing the arguments directly into the structure, this allows you to pass your function a string, another component, a function(data), or a Promise, and have it resolve during the render.
+
+#### Wrapped Components
+
+If you want to make a component that just slightly extends upon an existing instance of one, it can be wrapped in a function that will act like other components during use. This isn't useful very often, as any child components will be lost in the process, but it is useful if you just want to add a class name or attribute to a component without defining a structure.
+
+```js
+const myComponent = declarativ.wrapCompose(
+  el.div().className("fancypants")
+);
+``` 
+
+#### Custom Elements
+
+This is possibly the least useful kind of template, but I'll leave it here anyway. Most elements are specified inside `declarativ.elements`, but in the event that you want to use one that isn't, you can create an element template by calling `declarativ.compose()` with a template function.
+
+By "template function", it must be a function that accepts a string and returns that string inside of the element's HTML tag. For example, here I implement the deprecated `<center>` tag.
+
+```js
+const myComponent = declarativ.compose((inner) => `<center>${inner}</center>`);
+```
+
+Working examples of all of these templates can be found in [examples/templates.html](./examples/templates.html). 
