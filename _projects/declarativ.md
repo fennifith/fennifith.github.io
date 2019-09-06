@@ -18,8 +18,8 @@ links:
   - name: "npm"
     url: "https://www.npmjs.com/package/declarativ"
     icon: "https://www.npmjs.com/favicon.ico"
-  - name: "declarativ.js (0.0.4 unstable)"
-    url: "https://github.com/fennifith/declarativ/releases/download/0.0.4/declarativ.js"
+  - name: "declarativ.js (0.0.7 stable)"
+    url: "https://github.com/fennifith/declarativ/releases/download/0.0.7/declarativ.js"
     icon: "/images/ic/download.svg"
 contributors: 
   - login: "fennifith"
@@ -28,10 +28,9 @@ contributors:
 languages: 
   - "JavaScript"
   - "Makefile"
-  - "HCL"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-05T21:13:36Z"
+pushed: "2019-09-06T21:10:10Z"
 ---
 
 "Declarativ" is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's [JSX](https://reactjs.org/docs/introducing-jsx.html). Okay, it kind of is, but whatever, it's still cool.
@@ -55,7 +54,7 @@ container(
 #### Script Tag
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.4/dist/declarativ.js"></script>
+<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.7/dist/declarativ.js"></script>
 ```
 
 (the module will be included in the global scope as the `declarativ` variable)
@@ -75,16 +74,16 @@ cd declarativ && make install
 
 ## Usage
 
-Most component trees can be built using the standard functions defined in `declarativ.elements`. I often shorten this to `el` when using more than one or two of them, which makes it a bit easier to work with. Here's an example:
+Most component trees can be built using the standard functions defined in `declarativ.elements`. I often use [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to move them to the current scope when using more than one or two of them, which makes it a bit easier to work with. Here's an example:
 
 ```js
-const el = declarativ.elements;
+const { div, h1, p, a } = declarativ.elements;
 
-let components = el.div(
-  el.h1("This is a big header."),
-  el.p(
+let components = div(
+  h1("This is a big header."),
+  p(
     "Here, have a bit of text",
-    el.a("and a link").attr("href", "https://example.com/"),
+    a("and a link").attr("href", "https://example.com/"),
     "."
   )
 );
@@ -105,12 +104,12 @@ Working examples can be found in the [examples](https://github.com/fennifith/dec
 Promises can be mixed in or bound to components to pass data to them, and the component will wait for them to resolve before rendering. Because inner components depend on their parent nodes to render, higher components will render first, and only the bound component and inner nodes will wait for the Promise.
 
 ```js
-el.div(
-  el.p("This will render first."),
-  el.p(new Promise((resolve) => {
+div(
+  p("This will render first."),
+  p(new Promise((resolve) => {
     setTimeout(() => resolve("This will render second."), 1000);
   })),
-  el.p(
+  p(
     new Promise((resolve) => {
       setTimeout(() => resolve("This will render last..."), 2000);
     }),
@@ -124,11 +123,11 @@ el.div(
 Nodes can exist in various forms inside of a component. In the last example, I specified a Promise and a string as the contents of a paragraph element. However, not all of the promises you use will return a string. Often times, you will handle data structures that need to be bound to multiple elements. This is where the `.bind()` function comes in useful.
 
 ```js
-el.div(
-  el.p("This will render first"),
-  el.div(
-    el.p((data) => data.first),
-    el.p((data) => data.second)
+div(
+  p("This will render first"),
+  div(
+    p((data) => data.first),
+    p((data) => data.second)
   ).bind(Promise.resolve({
     first: "This is a string.",
     second: "This is another string."
@@ -152,9 +151,9 @@ The easiest is to just create a function that returns another component, like so
 
 ```js
 function myComponent(title, description) {
-  return el.div(
-    el.h3(title),
-    el.p(description)
+  return div(
+    h3(title),
+    p(description)
   );
 }
 ```
@@ -167,7 +166,7 @@ If you want to make a component that just slightly extends upon an existing inst
 
 ```js
 const myComponent = declarativ.wrapCompose(
-  el.div().className("fancypants")
+  div().className("fancypants")
 );
 ``` 
 
