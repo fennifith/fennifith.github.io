@@ -18,8 +18,8 @@ links:
   - name: "npm"
     url: "https://www.npmjs.com/package/declarativ"
     icon: "https://www.npmjs.com/favicon.ico"
-  - name: "declarativ.js (0.0.7 stable)"
-    url: "https://github.com/fennifith/declarativ/releases/download/0.0.7/declarativ.js"
+  - name: "declarativ.js (0.0.8 stable)"
+    url: "https://github.com/fennifith/declarativ/releases/download/0.0.8/declarativ.js"
     icon: "/images/ic/download.svg"
 contributors: 
   - login: "fennifith"
@@ -30,7 +30,7 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-06T21:10:10Z"
+pushed: "2019-09-06T21:37:19Z"
 ---
 
 "Declarativ" is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's [JSX](https://reactjs.org/docs/introducing-jsx.html). Okay, it kind of is, but whatever, it's still cool.
@@ -54,7 +54,7 @@ container(
 #### Script Tag
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.7/dist/declarativ.js"></script>
+<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.8/dist/declarativ.js"></script>
 ```
 
 (the module will be included in the global scope as the `declarativ` variable)
