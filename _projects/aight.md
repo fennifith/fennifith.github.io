@@ -24,10 +24,11 @@ contributors:
     url: "https://github.com/theonesean"
 languages: 
   - "D"
+  - "Shell"
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-08T02:55:22Z"
+pushed: "2019-09-09T13:09:05Z"
 ---
 
 # AIGHT
@@ -70,6 +71,16 @@ command=open https://youtu.be/dQw4w9WgXcQ
 
 Here is a list of all implemented providers and their configuration values:
 
+#### GitHub Issues
+
+```ini
+[github]
+githubApiToken=<a GitHub API token>
+githubRepo=<the repository to fetch>
+```
+
+If the provider is matched by a remote URL of a GitHub repository (using `matchRemote`), the `githubRepo` value will default to its repository name if it is unset.
+
 #### Trello
 
 See [trello.com/app-key](https://trello.com/app-key) to obtain an API key / token for this program to use.
@@ -94,4 +105,4 @@ command=cat ./TODO.md
 
 * Integration with GitHub Projects
 * Ability to filter cards by tag / status
-
+* Allow multiple providers to match the same repo
