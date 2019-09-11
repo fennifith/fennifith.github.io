@@ -28,7 +28,7 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-09T13:09:05Z"
+pushed: "2019-09-11T20:45:14Z"
 ---
 
 # AIGHT
@@ -55,8 +55,8 @@ borderCharHorizontal=-
 borderCharVertical=|
 
 [defaults]
-trelloApiKey=<a Trello API developer key>
-trelloApiToken=<your Trello token>
+trelloApiKey=a Trello API developer key
+trelloApiToken=your Trello token
 ```
 
 ### Task Providers
@@ -75,11 +75,22 @@ Here is a list of all implemented providers and their configuration values:
 
 ```ini
 [github]
-githubApiToken=<a GitHub API token>
-githubRepo=<the repository to fetch>
+githubApiToken=a GitHub API token
+githubRepo=the repository to fetch (optional, defaults to matched remote URL)
 ```
 
 If the provider is matched by a remote URL of a GitHub repository (using `matchRemote`), the `githubRepo` value will default to its repository name if it is unset.
+
+#### GitHub Projects
+
+**Note:** because of various limitations, the GitHub Projects implementation is currently _very slow_. The API is also a developer preview, so it will likely change at some point in the future.
+
+```ini
+[github-projects]
+githubApiToken=a GitHub API token
+githubRepo=the repository to fetch (optional, defaults to matched remote URL)
+githubProjectId=the project ID (optional, defaults to first project available)
+```
 
 #### Trello
 
@@ -87,9 +98,9 @@ See [trello.com/app-key](https://trello.com/app-key) to obtain an API key / toke
 
 ```ini
 [trello]
-trelloApiKey=<a Trello API developer key>
-trelloApiToken=<your Trello token>
-trelloBoardId=<the board to display>
+trelloApiKey=a Trello API developer key
+trelloApiToken=your Trello token
+trelloBoardId=the board to display
 ```
 
 #### Shell Script
