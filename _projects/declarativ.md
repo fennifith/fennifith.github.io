@@ -15,9 +15,9 @@ links:
   - name: "Mozilla Public License 2.0"
     url: "https://choosealicense.com/licenses/mpl-2.0/"
     icon: "/images/ic/copyright.svg"
-  - name: "npm"
-    url: "https://www.npmjs.com/package/declarativ"
-    icon: "https://www.npmjs.com/favicon.ico"
+  - name: "Declarativ"
+    url: "https://declarativ.js.org/"
+    icon: "https://declarativ.js.org/favicon.ico"
   - name: "declarativ.js (0.0.8 stable)"
     url: "https://github.com/fennifith/declarativ/releases/download/0.0.8/declarativ.js"
     icon: "/images/ic/download.svg"
@@ -30,7 +30,7 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-06T21:37:19Z"
+pushed: "2019-09-13T19:51:06Z"
 ---
 
 "Declarativ" is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's [JSX](https://reactjs.org/docs/introducing-jsx.html). Okay, it kind of is, but whatever, it's still cool.
@@ -97,7 +97,7 @@ declarativ.renderElement($("#content"), components).then(() => {
 });
 ```
 
-Working examples can be found in the [examples](https://github.com/fennifith/declarativ/blob/master/../../tree/master/examples/) folder.
+Working examples can be found in the [examples](https://github.com/fennifith/declarativ/blob/master/../../tree/master/docs/examples/) folder.
 
 ### Promises
 
@@ -139,7 +139,7 @@ Okay, a lot is happening here. I'll slow down and explain.
 
 The `bind` function allows you to specify a set of data to be passed to other parts of a component - and extends upon the types of nodes that can be placed inside it. Because the paragraph elements inside the div are not bound to any data, they inherit the Promise that is bound to their parent. The nodes inside of the paragraph elements are then specified as a function of the resolved data, returning the text to render.
 
-A more complex data binding situation based off the GitHub API can be found in [examples/binding.html](./examples/binding.html).
+A more complex data binding situation based off the GitHub API can be found in [examples/binding.html](./docs/examples/binding.html).
 
 ### Templates
 
@@ -180,4 +180,4 @@ By "template function", it must be a function that accepts a string and returns 
 const myComponent = declarativ.compose((inner) => `<center>${inner}</center>`);
 ```
 
-Working examples of all of these templates can be found in [examples/templates.html](./examples/templates.html). 
+Working examples of all of these templates can be found in [examples/templates.html](./docs/examples/templates.html). 
