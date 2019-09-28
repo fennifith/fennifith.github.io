@@ -52,7 +52,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-08-10T02:34:15Z"
+pushed: "2019-09-28T19:14:28Z"
 title-buttons: 
   - "[![Build Status](https://travis-ci.com/fennifith/Alarmio.svg?branch=master)](https://travis-ci.com/fennifith/Alarmio)"
   - "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e214b14f27464ce39a24539fc0ca27a5)](https://www.codacy.com/app/fennifith/Alarmio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Alarmio&amp;utm_campaign=Badge_Grade)"

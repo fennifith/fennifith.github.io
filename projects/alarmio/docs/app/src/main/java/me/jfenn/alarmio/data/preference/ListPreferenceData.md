@@ -47,3 +47,20 @@ Removes the last item in the list
 
 
 
+# [ViewHolder](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.kt#L79)
+
+**Type:** `class`
+
+Holds child views of the current item. 
+
+
+
+
+
+
+
+
+
+
+
+
