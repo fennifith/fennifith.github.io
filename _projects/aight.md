@@ -1,16 +1,16 @@
 ---
 layout: "project"
 type: "undefined"
-title: "theonesean/AIGHT"
-description: "AIGHT is a command-line tool for getting todo tasks quickly."
-repo: "fennifith/AIGHT"
-git: "git://github.com/fennifith/AIGHT.git"
+title: "theonesean/aight"
+description: "aight is a command-line tool for getting todo tasks quickly."
+repo: "fennifith/aight"
+git: "git://github.com/fennifith/aight.git"
 links: 
   - name: "GitHub"
-    url: "https://github.com/fennifith/AIGHT"
+    url: "https://github.com/fennifith/aight"
     icon: "https://github.com/favicon.ico"
   - name: "Issues"
-    url: "https://github.com/fennifith/AIGHT/issues"
+    url: "https://github.com/fennifith/aight/issues"
     icon: "/images/ic/bug.svg"
   - name: "GNU General Public License v3.0"
     url: "https://choosealicense.com/licenses/gpl-3.0/"
@@ -28,7 +28,7 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-09-13T22:23:20Z"
+pushed: "2019-09-30T14:53:54Z"
 ---
 
 # AIGHT
@@ -38,7 +38,7 @@ AIGHT is a command-line tool for getting todo tasks quickly.
 ## Building
 
 ```bash
-git clone https://github.com/theonesean/AIGHT.git
+git clone https://github.com/theonesean/aight.git
 make && make install
 ```
 
@@ -58,6 +58,12 @@ borderCharVertical=|
 trelloApiKey=a Trello API developer key
 trelloApiToken=your Trello token
 ```
+
+### Display Modes
+
+By default, `aight` will attempt to display multiple task lists (for example, multiple lists within a single Trello board) in ASCII table format, using the `listWidth` and `borderChar` settings and your terminal window width. If you would prefer to have multiple lists displayed one after the other, set `displayMode=list`.
+
+**Note:** While in `displayMode=list`, by default, tasks in a list will not respect `listWidth`. To force a width in list mode, set `listModePreserveWidth=true`.
 
 ### Task Providers
 
