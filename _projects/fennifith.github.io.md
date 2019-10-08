@@ -25,6 +25,9 @@ contributors:
   - login: "crutchcorn"
     avatar: "https://avatars0.githubusercontent.com/u/9100169?v=4"
     url: "https://github.com/crutchcorn"
+  - login: "dependabot[bot]"
+    avatar: "https://avatars0.githubusercontent.com/in/29110?v=4"
+    url: "https://github.com/apps/dependabot"
   - login: "jacksonhvisuals"
     avatar: "https://avatars0.githubusercontent.com/u/29767267?v=4"
     url: "https://github.com/jacksonhvisuals"
@@ -40,7 +43,7 @@ languages:
   - "Ruby"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-10-06T22:07:10Z"
+pushed: "2019-10-06T22:12:13Z"
 ---
 
 This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.js) and [a shell script](https://github.com/fennifith/fennifith.github.io/blob/master/./scripts/update.sh) that may be used to update it periodically.
