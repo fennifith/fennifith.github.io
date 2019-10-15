@@ -22,7 +22,7 @@ alarms currently stored in the application.
 
 
 
-## [getTimer](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L380)
+## [getTimer](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L369)
 
 **Type:** `private` `fun`
 
@@ -41,7 +41,7 @@ is no timer to be bound.
 
 
 
-## [getAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L391)
+## [getAlarm](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L380)
 
 **Type:** `private` `fun`
 
@@ -60,7 +60,7 @@ there is no alarm to be bound.
 
 
 
-# [TimerViewHolder](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L405)
+# [TimerViewHolder](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L394)
 
 **Type:** `class`
 
@@ -77,7 +77,7 @@ ViewHolder for timer items.
 
 
 
-# [AlarmViewHolder](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L424)
+# [AlarmViewHolder](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.kt#L413)
 
 **Type:** `class`
 

@@ -4,7 +4,7 @@ title: SoundData Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [alarmio](./../index) > [data](./index) > **SoundData.java**
 
-## [play](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L42)
+## [play](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L51)
 
 **Type:** `public` `void`
 
@@ -27,7 +27,7 @@ until it is stopped or cancelled.
 
 
 
-## [stop](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L68)
+## [stop](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L78)
 
 **Type:** `public` `void`
 
@@ -50,7 +50,7 @@ regardless of whether this sound is in fact the currently playing stream or not.
 
 
 
-## [preview](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L81)
+## [preview](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L91)
 
 **Type:** `public` `void`
 
@@ -71,7 +71,7 @@ Preview the sound on the "media" volume channel.
 
 
 
-## [isPlaying](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L105)
+## [isPlaying](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L116)
 
 **Type:** `public` `boolean`
 
@@ -95,7 +95,7 @@ Decide whether the sound is currently playing or not.
 
 
 
-## [toString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L117)
+## [toString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L128)
 
 **Type:** `@Override` `public` `String`
 
@@ -116,7 +116,7 @@ SoundDate class.
 
 
 
-## [fromString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L128)
+## [fromString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L139)
 
 **Type:** `@Nullable` `public` `static` `SoundData`
 
@@ -141,7 +141,7 @@ Construct a new instance of SoundData from an identifier string which was
 
 
 
-## [equals](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L146)
+## [equals](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L158)
 
 **Type:** `@Override` `public` `boolean`
 
