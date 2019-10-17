@@ -30,8 +30,15 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-10-08T02:41:26Z"
+pushed: "2019-10-16T13:58:03Z"
+title-buttons: 
+  - "[![Build Status](https://github.com/fennifith/declarativ/workflows/NodeJS%20Package/badge.svg)](https://github.com/fennifith/declarativ/actions)"
+  - "[![NPM Package](https://img.shields.io/npm/v/declarativ?color=red&logo=npm)](https://www.npmjs.com/package/declarativ)"
+  - "[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.jfenn.me/)"
+  - "[![Liberapay](https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay)](https://jfenn.me/links/liberapay)"
 ---
+
+
 
 "Declarativ" is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's [JSX](https://reactjs.org/docs/introducing-jsx.html). Okay, it kind of is, but whatever, it's still cool.
 
