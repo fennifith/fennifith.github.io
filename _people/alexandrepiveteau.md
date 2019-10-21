@@ -1,6 +1,6 @@
 ---
 title: "Alexandre Piveteau"
-description: "Student in CS @ETHZ.  Working on sync at @culturedcode."
+description: "I study Computer Science, and do some consulting for @culturedcode. Previously at @milkinteractive."
 avatar: "https://avatars2.githubusercontent.com/u/6318990?v=4"
 link: "https://linkedin.com/in/alexandrepiveteau"
 ---
