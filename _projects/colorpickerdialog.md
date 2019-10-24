@@ -25,6 +25,9 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
+  - login: "TheAndroidMaster"
+    avatar: "https://avatars1.githubusercontent.com/u/44251925?v=4"
+    url: "https://github.com/TheAndroidMaster"
   - login: "jahirfiquitiva"
     avatar: "https://avatars0.githubusercontent.com/u/10360816?v=4"
     url: "https://github.com/jahirfiquitiva"
@@ -33,7 +36,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-02-08T00:32:50Z"
+pushed: "2019-10-24T01:13:50Z"
 ---
 
 ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.
