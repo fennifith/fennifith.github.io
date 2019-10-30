@@ -20,12 +20,38 @@ languages:
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2019-10-29T21:16:19Z"
+pushed: "2019-10-30T16:38:16Z"
 ---
 
 The goal of this project is to create an API that can be used to schedule and
 organize automated music generation using [ReactiveX](http://reactivex.io/)
 and the observable pattern.
+
+## Inspiration
+
+This was mainly inspired by the work of [Lars Dietrich](https://www.youtube.com/channel/UCznARY34-PH2Yv4jFxj3SUA).
+I can only speculate as to how it was put together, but (with the exception of
+[Titan](https://www.youtube.com/watch?v=t3zha5WAY3w)) a large amount of it does
+appear to be scripted, and most of the work seems to have been put into the
+visualization rather than automating the music itself. Which is perfectly fine.
+
+[65 Days of Static](https://decompositiontheory.info/) is also doing work that
+is perhaps closer to what this project hopes to accomplish.
+[This video](https://www.youtube.com/watch?v=oW_lK9yWsCA) shows a lot of what
+they have achieved, and [many](https://twitter.com/65dos/status/1115956359470690305)
+[of](https://twitter.com/65dos/status/1115258013059821570)
+[their](https://twitter.com/65dos/status/1115583157913493504)
+[tweets](https://twitter.com/65dos/status/1114917016438226945)
+show this in practical use.
+
+Some of the actual music generation strategies are based on
+[this article](https://web.archive.org/web/20160312060120/http://www.ibm.com/developerworks/library/j-camusic/index.html)
+by Paul D. Reiners about the relationship between cellular automata and music.
+Huge thanks to the [Wayback Machine](https://archive.org/) for keeping copies of
+these things so that they aren't completely lost to the void when
+[IBM redesigns their developer site and removes a bunch of useful information](https://twitter.com/fennifith/status/1118354510643191808).
+
+## Design
 
 To gain some insight into how this can be used, think of music generation as a
 series of mutations upon an existing set of data. For example, a random integer
@@ -65,8 +91,8 @@ let synth = new Block()
 let arpeggiator = new Block()
     .on('note', (note) => {
         arpeggiator.forward(note);
-        arpeggiator.forward(Object.assign(note, { midi: note.midi + 4 }));
-        arpeggiator.forward(Object.assign(note, { midi: note.midi + 7 }));
+        arpeggiator.forward(note.mutate({ midi: note.midi + 4 }));
+        arpeggiator.forward(note.mutate({ midi: note.midi + 7 }));
     })
     .to(synth);
 
