@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Ethical Source - flawed and effective
+title: "Ethical Source and Subjectivity"
 description: "A mini-summary / explanation of some criticisms of the Ethical Source Movement."
 date: "2019-10-30"
 links:
