@@ -333,8 +333,9 @@ flipped the tables, so instead of Twitter being forced into adopting an existing
 community-managed standard, they want to _design their own_ and force the rest
 of the community to adopt that instead. The assumption made by most of the
 community about why Twitter is doing this is because they've seen some sort of
-value in it that they're missing out on, and they don't want the creation of
-these tools and services to fall out of their grasp.
+value in it that they're missing out on (_cough cough advertising industry_),
+and they don't want the creation of these tools and services to fall out of
+their grasp.
 
 > [...] This is not an announcement of reinventing the wheel. This is announcing
 > the building of a protocol that Twitter gets to control, like Google controls
