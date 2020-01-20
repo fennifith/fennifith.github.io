@@ -67,7 +67,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-12-31T19:30:52Z"
+pushed: "2020-01-16T09:16:02Z"
 title-buttons: 
   - "[![Build Status](https://github.com/fennifith/Alarmio/workflows/Gradle%20Build/badge.svg)](https://github.com/fennifith/Alarmio/actions)"
   - "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e214b14f27464ce39a24539fc0ca27a5)](https://www.codacy.com/app/fennifith/Alarmio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Alarmio&amp;utm_campaign=Badge_Grade)"
