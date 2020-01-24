@@ -42,6 +42,10 @@ sources:
     name: "Hikvision Markets Uyghur Ethnicity Analytics, Now Covers Up"
     author: "Charles Rollet"
     url: https://ipvm.com/reports/hikvision-uyghur
+  - id: Selbst
+    name: "The Intuitive Appeal of Explainable Machines"
+    author: Andrew D. Selbst and Solon Barocas
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126971
   - id: Smith
     name: "The Intelligence Is Artificial. The Bias Isn't"
     author: "Nareissa Smith"
@@ -134,7 +138,7 @@ card system launched in August 2019, has been the subject of a wide amount of
 discourse after many discovered seemingly sexist determinations of credit limits
 given to them [(2)](#Hansson). Facial recognition programs have failed to
 recognize people with darker skin tones, and word embedding technologies have
-shown bias towards European names [(9)](#Smith). Meanwhile, surveillance
+shown bias towards European names [(10)](#Smith). Meanwhile, surveillance
 companies in China are using AI to create "Uyghur analytics", an example of
 racial profiling that specifically targets a minority group with the intent of
 persecution [(8)](#Rollet). However, these are not problems that can be
@@ -150,7 +154,7 @@ general lack of diversity in the workforce. Nareissa Smith, a journalist with
 experience in law and technology, shares these concerns: "it's unsurprising that
 companies staffed primarily by white men would fail to recognize the ways that
 their software cause problems for women, people of color, and other groups"
-[(9)](#Smith). Excluding certain groups from the development process of these
+[(10)](#Smith). Excluding certain groups from the development process of these
 technologies, whether intentional or not, has clear effects on the industry. The
 institutional bias that still governs much of society is not exclusive to
 software, and companies need to have a better representation of these groups.
@@ -161,7 +165,7 @@ Recently, US lawmakers have introduced the Algorithmic Accountability Act, a
 bill that would require companies to audit large-scale automated systems for
 potential bias. The current legislation only directs companies to find a
 solution, but it marks a notable start to enforcing that technology must remain
-accountable in today's world [(9)](#Smith). Regulating the influence of this
+accountable in today's world [(10)](#Smith). Regulating the influence of this
 software is important because of its ability to facilitate discrimination at a
 large scale, and a clear review of this technology should be mandatory to
 prevent carelessness and protect human rights in an industry where they are
@@ -177,7 +181,7 @@ algorithms could be "far removed from what humans actually desire from an
 explanation" [(6)](#Kumar). Machine learning models can be both inscrutable and
 non-intuitive, making it difficult to determine if a decision was justified from
 a legal or ethical standpoint, and legislating to solve this issue might not
-necessarily improve that aspect.
+necessarily improve that aspect [(9)](#Selbst).
 
 ## Conclusion
 
