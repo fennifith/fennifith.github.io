@@ -2,9 +2,11 @@
 layout: blog
 title: Ethics of Artificial Intelligence
 description: An overview of the discourse surrounding "ethical AI" and its use in the Big Tech industry.
-date: 2019-10-18
-last_updated_at: 2019-10-18
+date: 2020-01-24
+last_updated_at: 2019-01-24
 links:
+  - name: Algorithmic Accountability Act of 2019
+    url: https://www.congress.gov/bill/116th-congress/house-bill/2231/text
   - name: Responsible Data Movement
     url: https://responsibledata.io/
 sources:
