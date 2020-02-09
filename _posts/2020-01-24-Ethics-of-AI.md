@@ -54,20 +54,20 @@ categories:
   - papers
 ---
 
-The field of "artificial intelligence" is gaining increasingly noticeable
-relevance in the software industry. Frequently used in headlines and marketing,
-"AI" is widely regarded as an inaccurate buzzword, especially due to the many
-abstract and vague arguments derived from its prevalence in science fiction. The
-cultural definition is often confused with its technical meaning: "a system's
-ability to correctly interpret external data, to learn from such data, and to
-use those learnings to achieve specific goals and tasks through flexible
-adaptation" [(5)](#Kaplan). Meanwhile, the seemingly invasive approach of this
-technology to take over more parts of human life has brought many ethical
-concerns to light. Critics argue that the spread of artificial intelligence
-poses risks to human dignity, accountability, transparency, and algorithmic
-bias. As this technology spreads, it is important to ensure that its decisions
-can be justified when being applied to the large scales afforded by modern
-computing.
+<span class="text__attention">The field of "artificial intelligence"</span> is
+gaining increasingly noticeable relevance in the software industry. Frequently
+used in headlines and marketing, "AI" is widely regarded as an inaccurate
+buzzword, especially due to the many abstract and vague arguments derived from
+its prevalence in science fiction. The cultural definition is often confused
+with its technical meaning: "a system's ability to correctly interpret external
+data, to learn from such data, and to use those learnings to achieve specific
+goals and tasks through flexible adaptation" [(5)](#Kaplan). Meanwhile, the
+seemingly invasive approach of this technology to take over more parts of human
+life has brought many ethical concerns to light. Critics argue that the spread
+of artificial intelligence poses risks to human dignity, accountability,
+transparency, and algorithmic bias. As this technology spreads, it is important
+to ensure that its decisions can be justified when being applied to the large
+scales afforded by modern computing.
 
 The main defining feature in what is recognized as "artificial intelligence" is
 how it makes decisions. Most traditional computer programs, regardless of scale,

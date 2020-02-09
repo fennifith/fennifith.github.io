@@ -9,19 +9,9 @@ article: true
     {% include head.html %}
   </head>
   <body>
+	{% if page.project %}
     <sidebar class="sidebar">
-      {% if page.links or page.project %}
       <h2>Referenced</h2>
-      {% if page.links %}
-      {% for link in page.links %}
-      <a class="link" href="{{ link.url }}">
-        <object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
-          <img class="link__img" src="/images/ic/link.svg">
-        </object>
-        <span class="link__title">{{ link.name }}</span>
-      </a>
-      {% endfor %}
-      {% endif %}
       {% if page.project %}
       {% assign project = site.projects | where: "repo", page.project | first %}
       <a class="link" href="{{ project.url }}">
@@ -47,8 +37,8 @@ article: true
       </a>
       {% endfor %}
       {% endif %}
-      {% endif %}
-    </sidebar>
+	</sidebar>
+	{% endif %}
 
     <main id="main" role="main">
       <a class="link" href="/#blog">
@@ -56,33 +46,28 @@ article: true
         <span class="link__title">All Blogs</span>
       </a>
       <br>
-      <article class="h-entry post">
-        <h1>
-          <span class="p-name">{{ page.title }}</span>
-          <br>
-          <span style="font-size: 0.6em;">
-            Written on
-            <a class="u-url" href="{% if page.redirect %}{{ page.redirect }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
-            <time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
-            by <a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a>.
-          </span>
-          {% if page.last_updated_at %}
-          <br>
-          <span style="font-size: 0.6em;">
-            Last updated on
-            <time class="dt-updated" datetime="{{ page.last_updated_at }}">{{ page.last_updated_at | date: "%B %e, %Y" }}</time>.
-          </span>
-          {% endif %}
-        </h1>
-        {% if page.tags.size > 0 %}
-        <small>
-            Tags:
-            {% for tag in page.tags %}
-            {% assign item = site.tags | where: "tag", tag | first %}
-            #<a rel="tag" class="p-category" href="{{ site.url }}/blog/#{{ item.tag }}">{{ item.title }}</a>&nbsp;
-            {% endfor %}
-        </small>
-        {% endif %}
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">{{ page.title }}</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="{{ site.url }}">{{ site.name }}</a> | 
+			<a class="u-url" href="{% if page.redirect %}{{ page.redirect }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
+			<time class="dt-published" datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time></a>
+		</p>
+
+		<p>
+		{% if page.links %}
+      	{% for link in page.links %}
+      	<a class="link link__chip" href="{{ link.url }}">
+        	<object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">{{ link.name }}</span>
+      	</a>
+      	{% endfor %}
+		{% endif %}
+		</p>
+		
+		<br>
 
         <div class="e-content entry markdown">
           {% if page.redirect %}

@@ -22,8 +22,9 @@ categories:
   - blog
 ---
 
-The influence of ethics and moral views in open source software has recently
-seen somewhat of an increase in relevance and discussion. Many people
+<span class="text__attention">The influence of ethics</span> and moral views in
+open source software has recently seen somewhat of an increase in relevance and
+discussion. Many people
 [have tried to argue](https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/30656)
 that technology as a neutral tool that can/should be used by anyone regardless
 of their political relevance. However, some members of the community argue that

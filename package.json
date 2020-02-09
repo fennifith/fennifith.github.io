@@ -1,0 +1,22 @@
+{
+  "name": "jfenn.me",
+  "version": "1.0.0",
+  "description": "This is a website that displays all of my current projects and applications. As [client-side JavaScript is bad](https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/), it is now written mostly in [Jekyll](https://jekyllrb.com/). It does not update its content automatically, but there is [this Node.js script](./scripts/update.js) and [a shell script](./scripts/update.sh) that may be used to update it periodically.",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fennifith/fennifith.github.io.git"
+  },
+  "author": "James Fenn <18jafenn90@gmail.com> (https://jfenn.me/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/fennifith/fennifith.github.io/issues"
+  },
+  "homepage": "https://github.com/fennifith/fennifith.github.io#readme",
+  "dependencies": {
+    "@doubledotlabs/dot.css": "0.0.1"
+  }
+}

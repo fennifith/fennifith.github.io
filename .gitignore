@@ -62,3 +62,11 @@ $RECYCLE.BIN/
 # images
 *.png
 *.ico
+
+Gemfile.lock
+package-install.lock
+node_modules/
+.idea/
+.vscode/
+.sass-cache/
+_site/

@@ -22,13 +22,14 @@ categories:
   - blog
 ---
 
-The Fediverse is best explained as an interconnected web of services that
-communicate with each other with a shared protocol. Imagine that you had an
-account on one social website from which you could send, receive, and reply to
-posts from people that use different websites with a different interface and
-behavior. This is a vague explanation of how federation works that skips over a
-lot of the technical details, but think of replying to a blog post from your
-Instagram account, or seeing your friends Instagram posts in your Twitter feed.
+<span class="text__attention">The Fediverse</span> is best explained as an
+interconnected web of services that communicate with each other with a shared
+protocol. Imagine that you had an account on one social website from which you
+could send, receive, and reply to posts from people that use different websites
+with a different interface and behavior. This is a vague explanation of how
+federation works that skips over a lot of the technical details, but think of
+replying to a blog post from your Instagram account, or seeing your friends'
+Facebook posts in your Twitter feed.
 
 This interoperability of common actions such as "likes", "replies", and
 "follows" is what unifies the majority of federated social networks; nobody

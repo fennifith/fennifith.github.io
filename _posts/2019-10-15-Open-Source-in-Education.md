@@ -50,16 +50,16 @@ categories:
   - papers
 ---
 
-The free software movement is well known in computer science for its belief in
-open or visible software as a crucial right. The movement heavily opposes common
-practices such as Digital Restrictions Management (DRM), which place
-restrictions on users' ability to control the software that they use
-[(2)](#Farough). This is particularly relevant in the context of higher
-education, where many publishers employ DRM to place important papers and
-resources behind a paywall. Publishing companies charge for access to certain
-resources, which has been shown to poorly reflect how much a paper is actually
-valued, having a measurable effect on researchers often stymied by paywalls
-[(3)](#Gershenson). Many software tools that are necessary to complete
+<span class="text__attention">The free software movement</span> is well known in
+computer science for its belief in open or visible software as a crucial right.
+The movement heavily opposes common practices such as Digital Restrictions
+Management (DRM), which place restrictions on users' ability to control the
+software that they use [(2)](#Farough). This is particularly relevant in the
+context of higher education, where many publishers employ DRM to place important
+papers and resources behind a paywall. Publishing companies charge for access to
+certain resources, which has been shown to poorly reflect how much a paper is
+actually valued, having a measurable effect on researchers often stymied by
+paywalls [(3)](#Gershenson). Many software tools that are necessary to complete
 coursework also contain such DRM, meaning that they cannot be used outside of
 the licensed environment provided by the institution they are sold to. The
 validity of free software as a solution is often debated, as many argue that
