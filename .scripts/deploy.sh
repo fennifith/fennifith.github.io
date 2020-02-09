@@ -9,7 +9,7 @@ then
 	git fetch --unshallow || true
 	git checkout deploy
 	git add projects _projects _people _orgs
-	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
+	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER [ci skip]" || true
 	git remote set-url origin https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io.git/
 	git push origin deploy
 
