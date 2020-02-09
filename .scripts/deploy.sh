@@ -7,17 +7,17 @@ then
 	git config --global user.email "travis@travis-ci.com"
 
 	git fetch --unshallow || true
-	git checkout master
+	git checkout deploy
 	git add projects _projects _people _orgs
 	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
 	git remote set-url origin https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io.git/
-	git push origin master
+	git push origin deploy
 
 	rm .gitignore
 	git add _site/
 	git commit -m "Auto-deploy (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
-	git subtree split --prefix _site -b gh-pages
-	git push -f origin gh-pages:gh-pages
+	git subtree split --prefix _site -b master
+	git push -f origin master:master
 fi
 
 exit 0
