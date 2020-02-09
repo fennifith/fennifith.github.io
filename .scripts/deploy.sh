@@ -13,9 +13,11 @@ then
 	git remote set-url origin https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io.git/
 	git push origin master
 
-	git add -f _site/
+	rm .gitignore
+	git add _site/
 	git commit -m "Auto-deploy (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
-	git subtree push --prefix _site origin gh-pages
+	git subtree split --prefix dist -b gh-pages
+	git push -f origin gh-pages:gh-pages
 fi
 
 exit 0
