@@ -42,9 +42,6 @@ collections:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
   - node_modules
   - package-install.lock
   - package-lock.json
