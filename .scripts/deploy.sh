@@ -16,7 +16,7 @@ then
 	rm .gitignore
 	git add _site/
 	git commit -m "Auto-deploy (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
-	git subtree split --prefix dist -b gh-pages
+	git subtree split --prefix _site -b gh-pages
 	git push -f origin gh-pages:gh-pages
 fi
 
