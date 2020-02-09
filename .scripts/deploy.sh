@@ -12,6 +12,10 @@ then
 	git commit -m "Auto-commit (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
 	git remote set-url origin https://fennifith:${GITHUB_TOKEN}@github.com/fennifith/fennifith.github.io.git/
 	git push origin master
+
+	git add -f _site/
+	git commit -m "Auto-deploy (Travis) $TRAVIS_BUILD_NUMBER [ci skip]"
+	git subtree push --prefix _site origin gh-pages
 fi
 
 exit 0
