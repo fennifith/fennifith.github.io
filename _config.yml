@@ -45,6 +45,10 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - node_modules
+  - package-install.lock
+  - package-lock.json
+  - package.json
 
 include:
   - .scripts
