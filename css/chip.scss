@@ -1,0 +1,14 @@
+.link__chip {
+	display: inline-flex;
+	background-color: #E0E0E0;
+	background-color: var(--normal-background-darker);
+	border-radius: 1em;
+	padding: 0 1em;
+	margin-right: 0.5em;
+	box-shadow: 0 0.1em 0.3em rgba(0,0,0,.3);
+}
+
+.link__chip * {
+	color: #424242;
+	color: var(--normal-color);
+}

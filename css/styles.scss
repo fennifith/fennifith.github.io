@@ -1,0 +1,58 @@
+---
+---
+
+$font-heading: 'Miriam Libre', serif !default;
+$font-body: 'Miriam Libre', sans-serif !default;
+
+$theme: (
+	"normal-color": #424242,
+	"normal-color-text": #616161,
+	"normal-color-focus": #000000,
+	"normal-color-focusable": #808080,
+	"normal-background": #FFFFFF,
+	"normal-background-dark": #F5F5F5,
+	"normal-background-darker": #E0E0E0,
+	"normal-overlay": rgba(255, 255, 255, 0.7),
+	"normal-outline": #BDBDBD,
+	"normal-outline-dark": #000000,
+	"normal-focus": rgba(0, 0, 0, 0.1),
+	"normal-focus-light": rgba(0, 0, 0, 0.03),
+	"accent-color": #0091EA,
+	"accent-color-text": #0067A4,
+	"accent-background": #0091EA,
+	"accent-background-light": rgba(0, 72, 117, 0.1),
+	"accent-outline": #0091EA,
+	"accent-outline-fade": rgba(0, 72, 117, 0.3),
+	"accent-outline-fade2": rgba(0, 72, 117, 0.5),
+	"accent-inverse": #FFFFFF,
+	"attr-filter-color": contrast(0) brightness(0)
+);
+
+$theme-dark: (
+	"normal-color": #F5F5F5,
+	"normal-color-text": #BDBDBD,
+	"normal-color-focus": #FFFFFF,
+	"normal-color-focusable": #A8A8A8,
+	"normal-background": #151515,
+	"normal-background-dark": #202020,
+	"normal-background-darker": #252525,
+	"normal-overlay": rgba(0, 0, 0, 0.7),
+	"normal-outline": #424242,
+	"normal-outline-dark": #FFFFFF,
+	"normal-focus": rgba(255, 255, 255, 0.1),
+	"normal-focus-light": rgba(255, 255, 255, 0.03),
+	"accent-color": #09A3FF,
+	"accent-color-text": #58BDF9,
+	"accent-background": #2FA4E9,
+	"accent-background-light": rgba(0, 72, 117, 0.3),
+	"accent-outline": #09A3FF,
+	"accent-outline-fade": rgba(0, 72, 117, 0.3),
+	"accent-outline-fade2": rgba(0, 72, 117, 0.5),
+	"accent-inverse": #000000,
+	"attr-filter-color": contrast(0) brightness(2)
+
+);
+
+@import "../node_modules/@doubledotlabs/dot.css/styles.scss";
+@import "text.scss";
+@import "chip.scss";
