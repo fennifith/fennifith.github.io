@@ -9,6 +9,7 @@ then
 fi
 
 make clean
+npm install
 jekyll build
 
 cd _site/.scripts
