@@ -57,7 +57,7 @@ article: true
 		<p>
 		{% if page.links %}
       	{% for link in page.links %}
-      	<a class="link link__chip" href="{{ link.url }}">
+      	<a class="link link--chip" href="{{ link.url }}">
         	<object class="link__img" data="{% if link.icon %}{{ link.icon }}{% else %}undefined{% endif %}" type="image/png">
           		<img class="link__img" src="/images/ic/link.svg">
         	</object>
