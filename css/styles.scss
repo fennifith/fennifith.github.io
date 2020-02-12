@@ -1,7 +1,7 @@
 ---
 ---
 
-$font-heading: 'Miriam Libre', serif !default;
+$font-heading: 'Vollkorn', serif !default;
 $font-body: 'Miriam Libre', sans-serif !default;
 
 $theme: (
@@ -55,3 +55,7 @@ $theme-dark: (
 
 @import "../node_modules/@doubledotlabs/dot.css/styles.scss";
 @import "text.scss";
+
+h1, h2, h3, h4, h5, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a {
+	letter-spacing: .02em;
+}

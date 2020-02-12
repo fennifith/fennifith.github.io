@@ -6,12 +6,15 @@
 
 
 .text__meta {
-	font-size: 0.9em;
+	font-size: 0.8em;
 	margin-top: 0;
 }
 
 .text__meta * {
 	text-decoration: none !important;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: .05em;
 	color: inherit !important;
 }
 
