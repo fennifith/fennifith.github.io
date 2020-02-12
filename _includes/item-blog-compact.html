@@ -1,0 +1,7 @@
+{% assign url = include.blog.url %}
+{% if include.blog.redirect %}{% assign url = include.blog.redirect %}{% endif %}
+{% assign title = include.blog.title %}
+{% if include.blog.redirect %}{% assign domain = include.blog.redirect | split: '/' %}{% assign title = title | append: ' | ' | append: domain[2] %}{% endif %}
+<a class="h-entry link" href="{{ url }}">
+	<span class="link__title"><code class="dt-published dt-updated">{{ blog.date | date: "%m-%d-%y" }}</code> &nbsp; {{ title }}</span>
+</a>

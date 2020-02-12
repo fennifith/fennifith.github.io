@@ -33,10 +33,16 @@ profile: true
             These are my blogs. I usually talk about why I make certain projects, what they are supposed to do, and how they supposedly accomplish it. I do not post often,
             as it takes quite a while to write these posts, but you can subscribe for updates through <a href="http://feeds.feedburner.com/fennifith">Feedburner</a>.
         </p>
-        <h2 class="p-name">The Blogs</h2>
+        <h1 class="p-name">The Blogs</h2>
         <p>
-            {% for blog in site.posts %}
-            {% include item-blog.html blog=blog %}
+			{% assign year = "" %}
+			{% for blog in site.posts %}
+			{% assign year2 = blog.date | date: "%Y" %}
+			{% if year != year2 %}
+			{% assign year = year2 %}
+			<h2>{{ year }}</h2>
+			{% endif %}
+            {% include item-blog-compact.html blog=blog %}
             {% endfor %}
         </p>
     </div>
