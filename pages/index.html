@@ -183,12 +183,10 @@ profile: true
         </a>
         
         <br><h2>Find me in places</h2>
-        <div class="layout--grid">
+        <div>
             {% for link in site.links %}
             {% if link.verb and link.readable %}
-            <div class="item">
-                <a rel="me" href="{{ link.link }}">I {{ link.verb }}.</a>&nbsp;<small>({{ link.readable }})</small>
-            </div>
+            <a rel="me" href="{{ link.link }}" style="white-space: nowrap;">{{ link.readable }}</a>{% unless forloop.last %} &middot;{% endunless %}
             {% endif %} 
             {% endfor %}
         </div>
