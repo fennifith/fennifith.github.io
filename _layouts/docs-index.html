@@ -6,7 +6,7 @@
 	<link href="/css/files.css" rel="stylesheet">
 </head>
 <body>
-	<main>
+	<main class="container">
 		{% assign parts = page.url | split: '/' %}
 		<a class="link" href="{% for i in (4..parts.size) %}../{% endfor %}">
 			<img class="link__img" src="/images/ic/back.svg">

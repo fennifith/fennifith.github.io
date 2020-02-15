@@ -9,38 +9,7 @@ article: true
     {% include head.html %}
   </head>
   <body>
-	{% if page.project %}
-    <sidebar class="sidebar">
-      <h2>Referenced</h2>
-      {% if page.project %}
-      {% assign project = site.projects | where: "repo", page.project | first %}
-      <a class="link" href="{{ project.url }}">
-          <img class="link__img" src="/images/ic/link.svg">
-          <span class="link__title">{{ project.title }}</span>
-      </a>
-      <h2>Links</h2>
-      {% for link in project.links %}
-      <a class="link" href="{{ link.url }}">
-        <object class="link__img" data="{{ link.icon }}" type="image/png">
-          <img class="link__img" src="/images/ic/link.svg">
-        </object>
-        <span class="link__title">{{ link.name }}</span>
-      </a>
-      {% endfor %}
-      <h2>Contributors</h2>
-      {% for contributor in project.contributors %}
-      <a class="link" href="{{ contributor.url }}">
-          <object class="link__img--round" data="{{ contributor.avatar }}" type="image/png">
-            <img class="link__img--round" src="/images/ic/person.svg">
-          </object>
-          <span class="link__title">{{ contributor.login }}</span>
-      </a>
-      {% endfor %}
-      {% endif %}
-	</sidebar>
-	{% endif %}
-
-    <main id="main" role="main">
+    <main id="main" role="main" class="container">
       <a class="link" href="/#blog">
         <img class="link__img" src="/images/ic/back.svg">
         <span class="link__title">All Blogs</span>
@@ -94,20 +63,6 @@ article: true
         </div>
         {% endif %}
       </article>
-      <div>
-          {% if page.previous.url %}
-          <a class="link" style="display: inline-flex;" href="{{ page.previous.url }}">
-              <i class="link__img material-icons">arrow_back</i>
-              <span class="link__title">Previous</span>
-          </a>
-          {% endif %}
-          {% if page.next.url %}
-          <a class="link" style="float: right;" href="{{ page.next.url }}">
-              <span class="link__title">Next</span>
-              <i class="link__img material-icons">arrow_forward</i>
-          </a>
-          {% endif %}
-      </div>
     </main>
 
     {% include footer.html %}

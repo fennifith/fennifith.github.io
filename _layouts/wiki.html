@@ -5,12 +5,12 @@
 	{% include head.html %}
 	{% include head-highlightjs.html languages=page.languages %}
 </head>
-<body>
+<body class="sidebar__container">
 	<sidebar class="sidebar">
 		{% capture sidebar_include %}{% include_relative _Sidebar.md %}{% endcapture %}
 		{{ sidebar_include | markdownify }}
 	</sidebar>
-	<main>
+	<main class="container">
 		{% if page.project %}
 		<a class="link" href="../">
 			<img class="link__img" src="/images/ic/back.svg">

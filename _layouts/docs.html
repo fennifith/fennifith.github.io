@@ -4,13 +4,13 @@
 <head>
 	{% include head.html %}
 </head>
-<body>
+<body class="sidebar__container">
 	<sidebar class="sidebar">
 	    <h2>Adjacent Files</h2>
 		{% capture sidebar_include %}{% include_relative index.md %}{% endcapture %}
 		{{ sidebar_include | newline_to_br | split: '<br />' | shift | shift | shift | shift | shift | join: '' | markdownify }}
 	</sidebar>
-	<main>
+	<main class="container">
 		{% assign parts = page.url | split: '/' %}
 		<a class="link" href="{% for i in (5..parts.size) %}../{% endfor %}">
 			<img class="link__img" src="/images/ic/back.svg">

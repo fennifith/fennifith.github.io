@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer container" style="padding-bottom: 96px;">
 	<hr>
 
 	<div style="display: inline-block; float: right;">
@@ -14,7 +14,14 @@
 	    function setDarkTheme(isDark) {
 	        _darkTheme = isDark;
 	        _darkThemeCheckBoxElement.checked = isDark;
-	        document.body.className = isDark ? "--theme-dark" : "";
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
 	        let color = isDark ? "#212121" : "#FFFFFF";
 	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
 
