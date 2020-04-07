@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "License Wedge"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 The `LicenseWedge` is intended to display information about libraries used by your project. Simply displaying this wedge does not guarantee that you are following all of the conditions of the project's license, but it is a good start.
@@ -13,7 +15,7 @@ If only the `repo` attribute is specified, this wedge can fetch all of its neces
 
 ```xml
 <me.jfenn.attribouter.wedges.LicenseWedge
-        repo="TheAndroidMaster/Attribouter"
+        repo="fennifith/Attribouter"
         description="I'm pickle riiiiiiiiiiiiiiiiiiiiiiiiick!"
         website="https://jfenn.me/about/?Attribouter"
         license="apache-2.0"

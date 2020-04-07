@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "Overriding Resources and Providing Translations"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 ## Problem

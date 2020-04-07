@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "Custom Themes"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 ## Activity / Dialog Themes

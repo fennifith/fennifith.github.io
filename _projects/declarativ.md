@@ -25,12 +25,15 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
+  - login: "dependabot[bot]"
+    avatar: "https://avatars0.githubusercontent.com/in/29110?v=4"
+    url: "https://github.com/apps/dependabot"
 languages: 
   - "JavaScript"
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2020-01-25T19:54:25Z"
+pushed: "2020-04-05T01:48:55Z"
 title-buttons: 
   - "[![Build Status](https://github.com/fennifith/declarativ/workflows/NodeJS%20Package/badge.svg)](https://github.com/fennifith/declarativ/actions)"
   - "[![NPM Package](https://img.shields.io/npm/v/declarativ?color=red&logo=npm)](https://www.npmjs.com/package/declarativ)"

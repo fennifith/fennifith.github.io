@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "Attribouter Wiki"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 project: "attribouter"
 ---
 

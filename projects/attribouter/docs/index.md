@@ -2,6 +2,6 @@
 layout: docs-index
 title: Documentation Pages
 ---
-- [attribouter / src / main / java / me / jfenn / attribouter /](attribouter/src/main/java/me/jfenn/attribouter)
-	- [data / github / GitHubData](attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData)
-	- [wedges / link / LinkWedge](attribouter/src/main/java/me/jfenn/attribouter/wedges/link/LinkWedge)
+- [attribouter / src / main / java / me / jfenn / attribouter / wedges /](attribouter/src/main/java/me/jfenn/attribouter/wedges)
+	- [LinkWedge](attribouter/src/main/java/me/jfenn/attribouter/wedges/LinkWedge)
+	- [Wedge](attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge)

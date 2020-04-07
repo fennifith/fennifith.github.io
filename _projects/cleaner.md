@@ -26,6 +26,9 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
+  - login: "TheAndroidMaster"
+    avatar: "https://avatars1.githubusercontent.com/u/44251925?v=4"
+    url: "https://github.com/TheAndroidMaster"
 screenshots: 
   - "https://raw.githubusercontent.com/fennifith/Cleaner/master/.github/images/clean.png"
   - "https://raw.githubusercontent.com/fennifith/Cleaner/master/.github/images/info.png"
@@ -34,14 +37,14 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-01-09T18:35:37Z"
+pushed: "2020-03-02T16:22:54Z"
 ---
 
 Storage Cleaner is the only space saving app that actually does its job! :D
 
 Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
-[![Discord](https://img.shields.io/discord/514625116706177035.svg)](https://discord.gg/wDDPK22)
+[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.jfenn.me/)
 
 ## Screenshots
 
@@ -51,7 +54,7 @@ Okay yeah, it's a joke. It uninstalls itself. It still works though.
 
 ## What is the point?
 
-Android has existed for a long time. There have been good phones and bad phones, with good software and bad software. Eventually someone somewhere decided that it would be a good idea to make an app that helps your phone run faster by stopping all unnecessary processes and cleaning all unneeded cache files. Whether this was necessary at the time is debatable, but their app gained a massive amount of popularity extremely quickly. If a user didn't like the performance of their Android phone, they could download this app and 'make it faster' again. Over time, a few large companies started to realize that this idea could be monetized. They essentially decided to profit off the failure of Android. Blind users wanting to make their phones run as fast as possible would download their apps and get bombarded with advertisments, questionable privacy policies, and possibly even harmful malware.
+Android has existed for a long time. There have been good phones and bad phones, with good software and bad software. Eventually someone somewhere decided that it would be a good idea to make an app that helps your phone run faster by stopping all unnecessary processes and cleaning all unneeded cache files. Whether this was necessary at the time is debatable, but these types of apps gained a massive amount of popularity extremely quickly. If a user didn't like the performance of their Android phone, they could download this app and 'make it faster' again. Over time, a few large companies started to realize that this idea could be monetized. They essentially decided to profit off the failure of Android. Ignorant users wanting to make their phones run as fast as possible would download these apps and get bombarded with advertisments, questionable privacy policies, and possibly even harmful malware.
 
 Fast forward to today. With the release of recent versions of Android such as Marshmallow or Nougat, battery draining apps are now uncommon, low storage space is rare, and frame skips are almost unheard of. With software this optimized, deleted cache files will only need to be recreated. Stopped processes will only be started again a few minutes later. The only thing an app can do to improve performance is to shut itself down when the user leaves, and only start running again when absolutely necessary. However, people still download battery savers that don't save battery life. People keep using space savers that don't save them storage space.
 

@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "Translator Wedge"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 The `TranslatorWedge` displays information about a translator in an only slightly more concise layout than the [`ContributorWedge`](ContributorWedge).
@@ -11,7 +13,7 @@ The `TranslatorWedge` displays information about a translator in an only slightl
 
 ```xml
 <me.jfenn.attribouter.wedges.TranslatorWedge
-        login="TheAndroidMaster"
+        login="fennifith"
         name="James Fenn"
         avatar="https://avatars3.githubusercontent.com/u/13000407"
         locales="en,fr"

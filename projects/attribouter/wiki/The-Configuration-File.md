@@ -2,25 +2,27 @@
 layout: "wiki"
 title: "The Configuration File"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 The great File of Configuration is truly a mighty hurdle to overcome when implementing this library. It contains many confusing and difficult concepts such as "tags" and "attributes". However, when it comes down to it, it is really just a weird form of layout file that specifies the information to display instead of how to display it.
  
 For no specific reason, each configuration file must have an `<about>` tag as its root element. Inside of that tag, any amount of children can be defined in any order. When the about screen is opened, these tags will be parsed and their corresponding objects will be created, much like inflating a layout file. The objects are then added to a list to be displayed in a RecyclerView. In order to simplify things, these tags, their corresponding objects, and the views created for them in the RecyclerView will be referred to as "wedges".
 
-Because wedge classes are instantiated from the configruation file, the wedge's tag in the file must be the class name of the wedge that should be instantiated, including the package name. This is the same as adding a custom view to a layout file.
+Because wedge classes are instantiated from the configuration file, the wedge's tag in the file must be the class name of the wedge that should be instantiated (optionally including the package name, if using a custom wedge - similarly to how Views are added to a layout file).
 
 With this information, we can now create a simple configuration file using the [`App`](AppWedge), [`Contributors`](ContributorsWedge), and [`Licenses`](LicensesWedge) wedges as follows.
 
 ```xml
 <about>
 
-  <me.jfenn.attribouter.wedges.AppWedge/>
+  <AppWedge/>
   
-  <me.jfenn.attribouter.wedges.ContributorsWedge/>
+  <ContributorsWedge/>
   
-  <me.jfenn.attribouter.wedges.LicensesWedge/>
+  <LicensesWedge/>
   
 </about>
 ```
@@ -34,13 +36,13 @@ As stated in their documentation, both the [`AppWedge`](AppWedge) and the [`Cont
 ```xml
 <about>
 
-  <me.jfenn.attribouter.wedges.AppWedge
+  <AppWedge
     repo="fennifith/Pasta-for-Spotify" />
     
-  <me.jfenn.attribouter.wedges.ContributorsWedge
+  <ContributorsWedge
     repo="fennifith/Pasta-for-Spotify" />
     
-  <me.jfenn.attribouter.wedges.LicensesWedge/>
+  <LicensesWedge/>
   
 </about>
 ```
@@ -54,13 +56,14 @@ If your project does not have a GitHub repository or you want some information t
 ```xml
 <about>
 
-  <me.jfenn.attribouter.wedges.AppWedge
+  <AppWedge
+    title="Pasta for Spotify"
     description="A material design Spotify client for Android"
     websiteUrl="https://jfenn.me/apps/pasta/" />
     
-  <me.jfenn.attribouter.wedges.ContributorsWedge>
+  <ContributorsWedge>
   
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       name="James Fenn"
       avatar="https://avatars3.githubusercontent.com/u/13000407"
       task="Developer"
@@ -68,22 +71,22 @@ If your project does not have a GitHub repository or you want some information t
       blog="https://jfenn.me/"
       email="me@jfenn.me" />
       
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       name="Jan-Lukas Else"
       avatar="https://avatars3.githubusercontent.com/u/8822316"
       task="Contributor"
       blog="https://about.jlelse.de" />
       
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       name="Alexandre Piveteau"
       avatar="https://avatars1.githubusercontent.com/u/6318990"
       task="Contributor"
       bio="Student in Computer Science @ETHZ. Consulting @ Taktil GmbH"
       blog="https://alexandrepiveteau.ch" />
   
-  </me.jfenn.attribouter.wedges.ContributorsWedge>
+  </ContributorsWedge>
     
-  <me.jfenn.attribouter.wedges.LicensesWedge/>
+  <LicensesWedge/>
   
 </about>
 ```
@@ -97,15 +100,16 @@ Actually, there is one extra step - if you do not define the `login` attribute o
 ```xml
 <about>
 
-  <me.jfenn.attribouter.wedges.AppWedge
+  <AppWedge
     repo="fennifith/Pasta-for-Spotify"
+    title="Pasta for Spotify"
     description="A material design Spotify client for Android"
     websiteUrl="https://jfenn.me/apps/pasta/" />
     
-  <me.jfenn.attribouter.wedges.ContributorsWedge
+  <ContributorsWedge
     repo="fennifith/Pasta-for-Spotify" >
   
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       login="fennifith"
       name="James Fenn"
       avatar="https://avatars3.githubusercontent.com/u/13000407"
@@ -114,14 +118,14 @@ Actually, there is one extra step - if you do not define the `login` attribute o
       blog="https://jfenn.me/"
       email="me@jfenn.me" />
       
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       login="jlelse"
       name="Jan-Lukas Else"
       avatar="https://avatars3.githubusercontent.com/u/8822316"
       task="Contributor"
       blog="https://about.jlelse.de" />
       
-    <me.jfenn.attribouter.wedges.ContributorWedge
+    <ContributorWedge
       login="alexandrepiveteau"
       name="Alexandre Piveteau"
       avatar="https://avatars1.githubusercontent.com/u/6318990"
@@ -129,9 +133,9 @@ Actually, there is one extra step - if you do not define the `login` attribute o
       bio="Student in Computer Science @ETHZ. Consulting @ Taktil GmbH"
       blog="https://alexandrepiveteau.ch" />
   
-  </me.jfenn.attribouter.wedges.ContributorsWedge>
+  </ContributorsWedge>
     
-  <me.jfenn.attribouter.wedges.LicensesWedge/>
+  <LicensesWedge/>
   
 </about>
 ```

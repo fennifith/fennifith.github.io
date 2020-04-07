@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "App Wedge"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 The `AppWedge` displays the app icon, name, version, and links to the project sites in a centered layout. By default, the icon and app name are fetched from your app's `AndroidManifest.xml`, and all other information is fetched from the GitHub API if the `repo` attribute has been specified.
@@ -11,8 +13,9 @@ The `AppWedge` displays the app icon, name, version, and links to the project si
 
 ```xml
 <me.jfenn.attribouter.wedges.AppWedge
-    repo="TheAndroidMaster/Attribouter"
+    repo="fennifith/Attribouter"
     icon="@mipmap/ic_launcher"
+    title="Attribouter"
     description="Attribouter is a library that does things."
     websiteUrl="https://jfenn.me/Attribouter/" />
 ```
@@ -23,6 +26,7 @@ The `AppWedge` displays the app icon, name, version, and links to the project si
 |-----|-----|-----|
 |repo|String (name/repository)|The github repository to fetch data from.|
 |icon|String (URL) / Drawable Resource|The app icon to display.|
+|title|String|The app title to show (defaults to the application label if unspecified).|
 |description|String / String Resource|A short description of the app/project.|
 |playStoreUrl|String / String Resource (URL)|The URL of the app on the Play Store (generated from the package name by default).|
 |websiteUrl|String / String Resource (URL)| The website of the project.|

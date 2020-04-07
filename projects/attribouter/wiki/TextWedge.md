@@ -2,7 +2,9 @@
 layout: "wiki"
 title: "Text Wedge"
 languages: 
+  - "Kotlin"
   - "Java"
+  - "Shell"
 ---
 
 A `TextWedge` is a block of text. Fairly simple.

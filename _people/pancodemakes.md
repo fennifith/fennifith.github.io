@@ -1,6 +1,6 @@
 ---
 title: "Marlon Jones"
-description: "Artist/Programmer, UAB Art and CS Student.  I like to combine art and code together to make cool things.   Dribbble & Artstation&#58; pancodemakes"
+description: "Black artist and programmer from Alabama that drinks way too much coffee | UAB Art Student | Loves combining art with code!"
 avatar: "https://avatars2.githubusercontent.com/u/6100387?v=4"
 link: "https://twitter.com/pancodemakes"
 ---
