@@ -49,6 +49,7 @@ exclude:
 
 include:
   - .scripts
+  - .travis.yml
 
 sass:
     sass_dir: ./css
