@@ -14,6 +14,7 @@ title: Documentation Pages
 		- [TimerData](src/main/java/me/jfenn/alarmio/data/TimerData)
 		- [preference /](src/main/java/me/jfenn/alarmio/data/preference)
 			- [AboutPreferenceData](src/main/java/me/jfenn/alarmio/data/preference/AboutPreferenceData)
+			- [AlertWindowPreferenceData](src/main/java/me/jfenn/alarmio/data/preference/AlertWindowPreferenceData)
 			- [BasePreferenceData](src/main/java/me/jfenn/alarmio/data/preference/BasePreferenceData)
 			- [BatteryOptimizationPreferenceData](src/main/java/me/jfenn/alarmio/data/preference/BatteryOptimizationPreferenceData)
 			- [BooleanPreferenceData](src/main/java/me/jfenn/alarmio/data/preference/BooleanPreferenceData)

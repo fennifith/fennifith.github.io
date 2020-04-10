@@ -95,7 +95,49 @@ Decide whether the sound is currently playing or not.
 
 
 
-## [toString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L128)
+## [setVolume](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L128)
+
+**Type:** `public` `void`
+
+Sets the player volume to the given float. 
+
+
+
+
+
+|Parameter Name|Description|
+|-----|-----|
+|alarmio|The active Application instance.|
+|volume|The volume between 0 and 1  |
+
+
+
+
+
+
+
+
+## [isSetVolumeSupported](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L145)
+
+**Type:** `public` `boolean`
+
+Is the setVolume method supported on this version of Android 
+
+
+
+
+
+
+**Returned Value:** true if supported  
+
+
+
+
+
+
+
+
+## [toString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L154)
 
 **Type:** `@Override` `public` `String`
 
@@ -116,7 +158,7 @@ SoundDate class.
 
 
 
-## [fromString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L139)
+## [fromString](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L165)
 
 **Type:** `@Nullable` `public` `static` `SoundData`
 
@@ -141,7 +183,7 @@ Construct a new instance of SoundData from an identifier string which was
 
 
 
-## [equals](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L158)
+## [equals](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/SoundData.java#L184)
 
 **Type:** `@Override` `public` `boolean`
 

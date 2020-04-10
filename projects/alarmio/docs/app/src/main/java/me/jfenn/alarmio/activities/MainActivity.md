@@ -4,7 +4,7 @@ title: MainActivity Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [alarmio](./../index) > [activities](./index) > **MainActivity.java**
 
-## [createFragmentFor](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/activities/MainActivity.java#L94)
+## [createFragmentFor](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/activities/MainActivity.java#L111)
 
 **Type:** `@Nullable` `private` `BaseFragment`
 
@@ -29,7 +29,7 @@ the passed intent.
 
 
 
-## [isActionableIntent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/activities/MainActivity.java#L141)
+## [isActionableIntent](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/activities/MainActivity.java#L158)
 
 **Type:** `private` `boolean`
 

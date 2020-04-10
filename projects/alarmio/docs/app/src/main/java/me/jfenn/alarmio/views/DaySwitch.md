@@ -4,7 +4,7 @@ title: DaySwitch Documentation
 ---
 #### [.](./../../../../../../../../index) > [app](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [alarmio](./../index) > [views](./index) > **DaySwitch.kt**
 
-## [setText](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L81)
+## [setText](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L78)
 
 **Type:** `fun`
 
@@ -22,7 +22,7 @@ in the switch.
 
 
 
-## [OnCheckedChangeListener](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L156)
+## [OnCheckedChangeListener](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L161)
 
 **Type:** `interface`
 
@@ -40,7 +40,7 @@ of the view is modified.
 
 
 
-## [onCheckedChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L162)
+## [onCheckedChanged](https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.kt#L167)
 
 **Type:** `fun`
 

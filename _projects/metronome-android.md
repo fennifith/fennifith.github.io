@@ -31,6 +31,9 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
+  - login: "TheAndroidMaster"
+    avatar: "https://avatars1.githubusercontent.com/u/44251925?v=4"
+    url: "https://github.com/TheAndroidMaster"
 screenshots: 
   - "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/.github/images/main.png"
   - "https://raw.githubusercontent.com/fennifith/Metronome-Android/master/.github/images/about.png"
@@ -39,7 +42,7 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2019-04-18T18:33:10Z"
+pushed: "2020-04-09T18:54:25Z"
 ---
 
 Metronome is a lightweight, well designed metronome app for Android focused on offering a consistent and usable design without limiting functionality.

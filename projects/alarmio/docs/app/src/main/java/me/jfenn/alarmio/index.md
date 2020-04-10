@@ -13,6 +13,7 @@ title: Documentation Pages
 	- [TimerData](data/TimerData)
 	- [preference /](data/preference)
 		- [AboutPreferenceData](data/preference/AboutPreferenceData)
+		- [AlertWindowPreferenceData](data/preference/AlertWindowPreferenceData)
 		- [BasePreferenceData](data/preference/BasePreferenceData)
 		- [BatteryOptimizationPreferenceData](data/preference/BatteryOptimizationPreferenceData)
 		- [BooleanPreferenceData](data/preference/BooleanPreferenceData)

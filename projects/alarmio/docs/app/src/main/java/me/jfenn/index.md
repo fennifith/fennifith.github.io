@@ -14,6 +14,7 @@ title: Documentation Pages
 		- [TimerData](alarmio/data/TimerData)
 		- [preference /](alarmio/data/preference)
 			- [AboutPreferenceData](alarmio/data/preference/AboutPreferenceData)
+			- [AlertWindowPreferenceData](alarmio/data/preference/AlertWindowPreferenceData)
 			- [BasePreferenceData](alarmio/data/preference/BasePreferenceData)
 			- [BatteryOptimizationPreferenceData](alarmio/data/preference/BatteryOptimizationPreferenceData)
 			- [BooleanPreferenceData](alarmio/data/preference/BooleanPreferenceData)

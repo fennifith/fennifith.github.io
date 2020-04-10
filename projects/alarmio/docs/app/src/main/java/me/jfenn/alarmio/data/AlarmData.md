@@ -119,7 +119,7 @@ Sets the user-defined "name" of the alarm.
 
 **Type:** `public` `void`
 
-Change the scheduled alarm time, 
+Change the scheduled alarm time. 
 
 
 
