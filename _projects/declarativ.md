@@ -25,15 +25,12 @@ contributors:
   - login: "fennifith"
     avatar: "https://avatars1.githubusercontent.com/u/13000407?v=4"
     url: "https://github.com/fennifith"
-  - login: "dependabot[bot]"
-    avatar: "https://avatars0.githubusercontent.com/in/29110?v=4"
-    url: "https://github.com/apps/dependabot"
 languages: 
   - "JavaScript"
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2020-04-05T01:48:55Z"
+pushed: "2020-04-15T01:14:41Z"
 title-buttons: 
   - "[![Build Status](https://github.com/fennifith/declarativ/workflows/NodeJS%20Package/badge.svg)](https://github.com/fennifith/declarativ/actions)"
   - "[![NPM Package](https://img.shields.io/npm/v/declarativ?color=red&logo=npm)](https://www.npmjs.com/package/declarativ)"
@@ -64,7 +61,7 @@ container(
 #### Script Tag
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/declarativ@0.0.8/dist/declarativ.js"></script>
+<script type="text/javascript" src="https://unpkg.com/declarativ@0.1.4/dist/declarativ.js"></script>
 ```
 
 (the module will be included in the global scope as the `declarativ` variable)
@@ -99,10 +96,10 @@ let components = div(
 );
 ```
 
-After defining your component tree, it can be placed on the DOM by either calling the `render` or `renderElement` functions. Calling `render` simply returns the rendered jQuery element, but `renderElement` accepts a second "element" argument which the rendered content will be placed inside.
+After defining your component tree, it can be placed on the DOM by either calling the `render` or `renderString` functions. Calling `render` will place them inside whatever element you pass as its argument, while `renderString` simply returns their HTML representation.
 
 ```js
-declarativ.renderElement($("#content"), components).then(() => {
+components.render($("#content")).then(() => {
     console.log("Elements rendered!");
 });
 ```
