@@ -26,7 +26,7 @@ languages:
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2018-11-15T04:55:30Z"
+pushed: "2020-04-22T19:09:37Z"
 ---
 
 Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an [API](https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md) and [CLI](https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md). If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.
