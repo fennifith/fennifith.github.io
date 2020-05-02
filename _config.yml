@@ -12,7 +12,10 @@ contact:
     url: "https://discord.jfenn.me/"
   - name: "Telegram"
     icon: "chat"
-    url: "https://t.me/joinchat/JV--FRZrSf-NJqeE0OGKXg"
+    url: "/links/telegram"
+  - name: "E-mail"
+    icon: "email"
+    url: "mailto:me@jfenn.me"
 
 url: "https://jfenn.me"
 domainurl: "https://jfenn.me"
