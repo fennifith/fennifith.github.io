@@ -76,7 +76,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2020-04-30T03:02:23Z"
+pushed: "2020-05-02T21:29:53Z"
 title-buttons: 
   - "[![Build Status](https://github.com/fennifith/Alarmio/workflows/Gradle%20Build/badge.svg)](https://github.com/fennifith/Alarmio/actions)"
   - "[![Discord](https://img.shields.io/discord/514625116706177035.svg?logo=discord&colorB=7289da)](https://discord.jfenn.me/)"
