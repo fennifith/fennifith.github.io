@@ -33,7 +33,7 @@ As a result, there are two approaches to including these icons in your website. 
 
 ...or you can use the `<object>` tag to include it as an external resouce - allowing you to keep the scripts & styles separate from the rest of the page.
 
-For simplicity (and a bit of organization), I'm going to use the latter - but if you're using some type of static site generator or web framework, it's entirely feasible to forego the `<object>` element and define these inline with your page for a bit of a performance benefit (I haven't actually measured how this affects its performance, but I imagine the impact is similar to using an `<iframe>`).
+For simplicity (and a bit of organization), I'm going to use the latter - but if you're using some type of static site generator or web framework, it's entirely feasible to forego the `<object>` element and define these inline with your page for a bit of a performance benefit (although, I haven't actually measured how this affects its performance). This would also make it work without JavaScript, using a `:hover` selector instead of listening to the `mouseover` events. Either way, both accomplish the same goal - it's just down to a subtle performance/compatibility impact versus how you organize your code.
 
 ## Reorganizing the Path Data
 
