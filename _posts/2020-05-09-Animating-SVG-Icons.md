@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "Animating SVG Icons on the Web"
-description: "A small breakdown of the process I used to add motion to some of the glyphs in a web project."
+description: "A small breakdown of the process I used to create a couple interactive icons for a web project."
 date: "2020-05-09"
 links:
   - name: "Shape Shifter"
