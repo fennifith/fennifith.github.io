@@ -19,8 +19,10 @@ categories:
   - blog
 ---
 
+<span class="text__notice">Aptoide seems to have taken down the webpage that this post disputes - I've updated the link to open a copy stored on archive.org.</span>
+
 <span class="text__attention">About a week ago,</span> Aptoide created the website
-["GooglePlayFair.com"](https://googleplayfair.com) as part of what
+["GooglePlayFair.com"](http://web.archive.org/web/20190605045259/https://googleplayfair.com/) as part of what
 [several news outlets](https://techcrunch.com/2019/06/04/aptoide-a-play-store-rival-cries-antitrust-foul-over-google-hiding-its-app/)
 are calling a public campaign against Google's allegedly "anti-competitive behavior". Upon my initial skim through
 the site, I was in favor of Aptoide's argument against the monopolistic practices that they describe. To be fair,

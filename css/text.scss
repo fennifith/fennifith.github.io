@@ -22,3 +22,14 @@
 	font-size: 2em;
 	line-height: 1em;
 }
+
+.text__notice {
+	display: block;
+	padding: 1em 1.25em;
+	margin-bottom: 1.5em;
+	background-color: rgba(43, 81, 105, 0.1);
+	background-color: var(--accent-background-light);
+	border: 1px solid #BDBDBD;
+	border: 1px solid var(--normal-outline);
+	border-radius: .25rem;
+}

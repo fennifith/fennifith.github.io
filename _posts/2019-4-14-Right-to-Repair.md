@@ -57,6 +57,8 @@ categories:
   - papers
 ---
 
+<span class="text__notice">I originally wrote this post as a class assignment, and while I believe the information here is accurate, I have some qualms about the ideas it presents - mainly that it focuses largely on Apple, while in actuality, Right to Repair is about a whole lot more. I plan to expand on this in a future post, covering its implications in more detail.</span>
+
 The consumer’s “right to repair” is becoming an increasingly relevant issue with technical products
 and devices in modern society. Large corporations like Apple have formed an exclusionary environment
 for consumers in which people are prevented from repairing their own devices, and are instead

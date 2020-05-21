@@ -22,6 +22,8 @@ categories:
   - blog
 ---
 
+<span class="text__notice">Many of the criticisms I made in this post have since been addressed - see the <a href="https://ethicalsource.dev/definition/">Ethical Source Definition</a> for updated information about the movement.</span>
+
 <span class="text__attention">The influence of ethics</span> and moral views in
 open source software has recently seen somewhat of an increase in relevance and
 discussion. Many people
