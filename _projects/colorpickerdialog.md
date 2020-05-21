@@ -36,7 +36,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "false"
-pushed: "2020-04-15T21:59:54Z"
+pushed: "2020-05-13T23:50:07Z"
 title-buttons: 
   - "[![JitPack](https://jitpack.io/v/me.jfenn/ColorPickerDialog.svg)](https://jitpack.io/#me.jfenn/ColorPickerDialog)"
   - "![Gradle Build](https://github.com/fennifith/ColorPickerDialog/workflows/Gradle%20Build/badge.svg)"
