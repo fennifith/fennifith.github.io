@@ -6,6 +6,8 @@
 	{% include head-highlightjs.html languages=page.languages %}
 </head>
 <body class="sidebar__container">
+	{% include banner.html %}
+
 	<sidebar class="sidebar">
 		{% capture sidebar_include %}{% include_relative _Sidebar.md %}{% endcapture %}
 		{{ sidebar_include | markdownify }}

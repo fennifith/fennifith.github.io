@@ -5,6 +5,8 @@
 	{% include head.html %}
 </head>
 <body class="sidebar__container">
+	{% include banner.html %}
+
 	<sidebar class="sidebar">
 	    <h2>Adjacent Files</h2>
 		{% capture sidebar_include %}{% include_relative index.md %}{% endcapture %}
