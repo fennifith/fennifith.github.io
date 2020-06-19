@@ -1,4 +1,9 @@
 <script type="text/javascript">
+// prevent install prompt display
+window.addEventListener('beforeinstallprompt', function(e) {
+	return e.preventDefault();
+});
+
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js', {scope: '/'})
         .then(function() {
