@@ -30,7 +30,7 @@ languages:
   - "Makefile"
 isDocs: "false"
 isWiki: "false"
-pushed: "2020-04-30T11:38:36Z"
+pushed: "2020-06-18T21:39:09Z"
 title-buttons: 
   - "[![Build Status](https://github.com/fennifith/declarativ/workflows/NodeJS%20Package/badge.svg)](https://github.com/fennifith/declarativ/actions)"
   - "[![NPM Package](https://img.shields.io/npm/v/declarativ?color=red&logo=npm)](https://www.npmjs.com/package/declarativ)"
