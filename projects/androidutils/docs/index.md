@@ -3,7 +3,6 @@ layout: docs-index
 title: Documentation Pages
 ---
 - [androidutils / src / main / java / me / jfenn / androidutils /](androidutils/src/main/java/me/jfenn/androidutils)
-	- [AlphaColorDrawable](androidutils/src/main/java/me/jfenn/androidutils/AlphaColorDrawable)
 	- [ColorUtils](androidutils/src/main/java/me/jfenn/androidutils/ColorUtils)
 	- [DimenUtils](androidutils/src/main/java/me/jfenn/androidutils/DimenUtils)
 	- [ImageUtils](androidutils/src/main/java/me/jfenn/androidutils/ImageUtils)

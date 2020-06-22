@@ -5,7 +5,6 @@ title: Documentation Pages
 #### [.](./../../index) > [androidutils](./../index) > [src](./index) > **/**
 
 - [main / java / me / jfenn / androidutils /](main/java/me/jfenn/androidutils)
-	- [AlphaColorDrawable](main/java/me/jfenn/androidutils/AlphaColorDrawable)
 	- [ColorUtils](main/java/me/jfenn/androidutils/ColorUtils)
 	- [DimenUtils](main/java/me/jfenn/androidutils/DimenUtils)
 	- [ImageUtils](main/java/me/jfenn/androidutils/ImageUtils)

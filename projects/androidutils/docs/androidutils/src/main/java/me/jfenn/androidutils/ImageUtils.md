@@ -2,11 +2,11 @@
 layout: docs
 title: ImageUtils Documentation
 ---
-#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **ImageUtils.java**
+#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **ImageUtils.kt**
 
-## [drawableToBitmap](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ImageUtils.java#L13)
+## [Drawable.toBitmap](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ImageUtils.kt#L9)
 
-**Type:** `public` `static` `Bitmap`
+**Type:** `fun`
 
 Converts drawables to bitmaps. 
 
@@ -14,12 +14,8 @@ Converts drawables to bitmaps.
 
 
 
-|Parameter Name|Description|
-|-----|-----|
-|drawable|A drawable.|
 
-
-**Returned Value:**  A bitmap.  
+**Returned Value:** A bitmap representing the drawable asset. 
 
 
 

@@ -2,38 +2,51 @@
 layout: docs
 title: ColorUtils Documentation
 ---
-#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **ColorUtils.java**
+#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **ColorUtils.kt**
 
-## [isColorDark](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.java#L10)
+## [Int.isColorDark](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.kt#L55)
 
-**Type:** `public` `static` `boolean`
+**Type:** `fun`
 
-Determine if a color is dark or not, using some magic numbers. 
-
-
-
-
-
-|Parameter Name|Description|
-|-----|-----|
-|color|A color int to determine the luminance of.|
-
-
-**Returned Value:**  True if the color should be considered "light".  
+Determine if a color is readable on a light background, using some magic numbers. 
 
 
 
 
 
-**Reference:** [this confusing wikipedia article](https://en.wikipedia.org/wiki/Luma_%28video%29) 
+
+**Returned Value:** True if the color should be considered "dark". 
 
 
 
 
 
-## [getColorDarkness](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.java#L22)
 
-**Type:** `private` `static` `double`
+
+
+## [Int.isColorLight](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.kt#L64)
+
+**Type:** `fun`
+
+Negation of Int.isColorDark() 
+
+
+
+
+
+
+**Returned Value:** True if the color should be considered "light". 
+
+
+
+
+
+
+
+
+## [getColorDarkness](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.kt#L73)
+
+**Type:** `private` `fun`
 
 Determine the darkness of a color, using some magic numbers. 
 
@@ -46,36 +59,25 @@ Determine the darkness of a color, using some magic numbers.
 |color|A color int to determine the luminance of.|
 
 
-**Returned Value:**  The darkness of the color; a double between 0 and 1.  
+**Returned Value:**  The darkness of the color; a double between 0 and 1. 
 
 
 
 
 
-**Reference:** [this confusing wikipedia article](https://en.wikipedia.org/wiki/Luma_%28video%29) 
+
+
+
+## [Window.autoSystemUiColors](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.kt#L90)
+
+**Type:** `fun`
+
+Set light status/navigation bar window flags automatically. 
+Falls back to Color.BLACK on lower SDK versions. 
 
 
 
 
-
-## [withBackground](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/ColorUtils.java#L36)
-
-**Type:** `@ColorInt` `public` `static` `int`
-
-Calculates an opaque color that is equivalent to a translucent color drawn on top of 
-another. 
-
-
-
-
-
-|Parameter Name|Description|
-|-----|-----|
-|color|The (transparent) color to be drawn on top.|
-|background|The (opaque) color to be drawn on top of.|
-
-
-**Returned Value:**  The opaque equivalent of the two colors.  
 
 
 

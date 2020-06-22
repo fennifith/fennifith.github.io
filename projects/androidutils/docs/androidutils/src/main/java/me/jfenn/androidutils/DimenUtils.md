@@ -2,11 +2,11 @@
 layout: docs
 title: DimenUtils Documentation
 ---
-#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **DimenUtils.java**
+#### [.](./../../../../../../../index) > [androidutils](./../../../../../../index) > [src](./../../../../../index) > [main](./../../../../index) > [java](./../../../index) > [me](./../../index) > [jfenn](./../index) > [androidutils](./index) > **DimenUtils.kt**
 
-## [getStatusBarHeight](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L9)
+## [Context.getStatusBarHeight](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L7)
 
-**Type:** `public` `static` `int`
+**Type:** `fun`
 
 Returns the height of the device's status bar, in px. 
 
@@ -19,7 +19,7 @@ Returns the height of the device's status bar, in px.
 |context|An active context instance.|
 
 
-**Returned Value:**  The height of the status bar, in pixels.  
+**Returned Value:**  The height of the status bar, in pixels. 
 
 
 
@@ -28,9 +28,9 @@ Returns the height of the device's status bar, in px.
 
 
 
-## [getNavigationBarHeight](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L21)
+## [Context.getNavigationBarHeight](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L18)
 
-**Type:** `public` `static` `int`
+**Type:** `fun`
 
 Returns the height of the device's navigation bar, in px. 
 
@@ -43,7 +43,7 @@ Returns the height of the device's navigation bar, in px.
 |context|An active context instance.|
 
 
-**Returned Value:**  The height of the navigation bar, in pixels.  
+**Returned Value:**  The height of the navigation bar, in pixels. 
 
 
 
@@ -52,9 +52,9 @@ Returns the height of the device's navigation bar, in px.
 
 
 
-## [dpToPx](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L33)
+## [dpToPx](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L29)
 
-**Type:** `public` `static` `int`
+**Type:** `fun`
 
 Converts dp units to pixels. 
 
@@ -67,7 +67,7 @@ Converts dp units to pixels.
 |dp|A distance measurement, in dp.|
 
 
-**Returned Value:**  The value of the provided dp units, in pixels.  
+**Returned Value:**  The value of the provided dp units, in pixels. 
 
 
 
@@ -76,9 +76,9 @@ Converts dp units to pixels.
 
 
 
-## [pxToDp](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L43)
+## [pxToDp](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L39)
 
-**Type:** `public` `static` `float`
+**Type:** `fun`
 
 Converts pixels to dp. 
 
@@ -91,7 +91,7 @@ Converts pixels to dp.
 |pixels|A distance measurement, in pixels.|
 
 
-**Returned Value:**  The value of the provided pixel units, in dp.  
+**Returned Value:**  The value of the provided pixel units, in dp. 
 
 
 
@@ -100,9 +100,9 @@ Converts pixels to dp.
 
 
 
-## [spToPx](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L53)
+## [spToPx](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L49)
 
-**Type:** `public` `static` `int`
+**Type:** `fun`
 
 Converts sp to pixels. 
 
@@ -115,7 +115,7 @@ Converts sp to pixels.
 |sp|A distance measurement, in sp.|
 
 
-**Returned Value:**  The value of the provided sp units, in pixels.  
+**Returned Value:**  The value of the provided sp units, in pixels. 
 
 
 
@@ -124,9 +124,9 @@ Converts sp to pixels.
 
 
 
-## [pxToSp](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.java#L63)
+## [pxToSp](https://github.com/fennifith/AndroidUtils/blob/master/androidutils/src/main/java/me/jfenn/androidutils/DimenUtils.kt#L59)
 
-**Type:** `public` `static` `float`
+**Type:** `fun`
 
 Converts pixels to sp. 
 
@@ -139,7 +139,7 @@ Converts pixels to sp.
 |pixels|A distance measurement, in pixels.|
 
 
-**Returned Value:**  The value of the provided pixel units, in sp.  
+**Returned Value:**  The value of the provided pixel units, in sp. 
 
 
 

@@ -24,9 +24,10 @@ contributors:
     url: "https://github.com/fennifith"
 languages: 
   - "Java"
+  - "Kotlin"
 isDocs: "true"
 isWiki: "false"
-pushed: "2018-11-13T16:52:09Z"
+pushed: "2020-06-22T14:54:25Z"
 ---
 
 AndroidUtils is a collection of util classes that I use in basically every project - I might as well give them their own module. This is more for personal use (I don't expect most people to use this as a dependency in their own projects, other than stealing a snippet or two), but feel free to add your own contributions as you wish.
@@ -51,7 +52,7 @@ allprojects {
 To add the dependency, copy this line into your app module's build.gradle file.
 
 ```gradle
-implementation 'me.jfenn:AndroidUtils:0.0.1'
+implementation 'me.jfenn:AndroidUtils:0.0.2'
 ```
 
 ### Methods
