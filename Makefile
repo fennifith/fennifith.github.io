@@ -8,8 +8,11 @@ serve: install
 build: install
 	bundle exec jekyll build --config _config.yml,_config-dev.yml
 
-install: package-install.lock Gemfile.lock
-	( cd .scripts && npm install )
+install: .scripts/package-install.lock package-install.lock Gemfile.lock
+
+.scripts/package-install.lock: .scripts/package.json
+	( cd .scripts && npm install; cd .. )
+	touch .scripts/package-install.lock
 
 package-install.lock: package.json
 	npm install
@@ -23,4 +26,4 @@ clean:
 	rm -f Gemfile.lock package-install.lock
 	rm -rf node_modules/
 	rm -rf _site/
-	( cd .scripts && rm -rf ./node_modules )
+	( cd .scripts && rm -rf node_modules/ && rm -f package-install.lock )

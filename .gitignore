@@ -69,4 +69,5 @@ node_modules/
 .idea/
 .vscode/
 .sass-cache/
+.jekyll-cache/
 _site/

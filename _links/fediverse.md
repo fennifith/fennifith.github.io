@@ -2,7 +2,7 @@
 layout: redirect
 title: fediverse
 readable: Fediverse
-link: https://social.horrific.dev/james
-name: "james@social.horrific.dev"
+link: https://is.a.horrific.dev/@james
+name: "james@is.a.horrific.dev"
 verb: federate
 ---
