@@ -40,7 +40,7 @@ languages:
   - "Shell"
 isDocs: "true"
 isWiki: "true"
-pushed: "2020-06-22T17:19:34Z"
+pushed: "2020-06-24T18:33:50Z"
 title-buttons: 
   - "[![](https://jitpack.io/v/me.jfenn/Attribouter.svg)](https://jitpack.io/#me.jfenn/Attribouter)"
   - "[![Build Status](https://github.com/fennifith/Attribouter/workflows/Gradle%20Build/badge.svg)](https://github.com/fennifith/Alarmio/actions)"
