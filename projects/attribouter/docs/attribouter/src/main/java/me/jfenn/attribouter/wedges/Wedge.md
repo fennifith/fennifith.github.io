@@ -4,7 +4,7 @@ title: Wedge Documentation
 ---
 #### [.](./../../../../../../../../index) > [attribouter](./../../../../../../../index) > [src](./../../../../../../index) > [main](./../../../../../index) > [java](./../../../../index) > [me](./../../../index) > [jfenn](./../../index) > [attribouter](./../index) > [wedges](./index) > **Wedge.kt**
 
-## [merge](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L32)
+## [merge](https://github.com/fennifith/Attribouter/blob/main/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L32)
 
 **Type:** `fun`
 
@@ -23,7 +23,7 @@ Used to handle duplicate links or contributors, based on `.equals()`
 
 
 
-## [onItemChanged](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L59)
+## [onItemChanged](https://github.com/fennifith/Attribouter/blob/main/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L59)
 
 **Type:** `override` `fun`
 
@@ -43,7 +43,7 @@ causing the entire view to be re-bound.
 
 
 
-## [notifyItemChanged](https://github.com/fennifith/Attribouter/blob/master/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L71)
+## [notifyItemChanged](https://github.com/fennifith/Attribouter/blob/main/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.kt#L71)
 
 **Type:** `internal` `fun`
 
