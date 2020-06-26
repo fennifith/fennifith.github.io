@@ -179,7 +179,7 @@ async function main() {
                 })(),
                 title: repo.fork && repo.parent ? repo.parent.full_name : _strings.titleize(repo.name),
                 description: repo.description ? _strings.safestrize(repo.description) : null,
-                icon: repo.meta && repo.meta.icon ? "https://raw.githubusercontent.com/" + repo.full_name + "/master/" + repo.meta.icon : null,
+                icon: repo.meta && repo.meta.icon ? "https://raw.githubusercontent.com/" + repo.full_name + "/" + (repo.default_branch || "master") + "/" + repo.meta.icon : null,
                 googleplay: repo.meta && repo.meta.googleplay ? repo.meta.googleplay : null,
                 package: repo.meta && repo.meta.package ? repo.meta.package : null,
                 repo: repo.full_name,
