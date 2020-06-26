@@ -7,17 +7,17 @@ languages:
   - "Shell"
 ---
 
-The `LicenseWedge` is intended to display information about libraries used by your project. Simply displaying this wedge does not guarantee that you are following all of the conditions of the project's license, but it is a good start.
+The `LicenseWedge` is intended to display information about libraries used by your project. Simply displaying this wedge does not guarantee that you are following all of the conditions of the project's license, but it will satisfy the conditions of many of the popular ones.
 
-If only the `repo` attribute is specified, this wedge can fetch all of its necessary information from the GitHub API, however it is a good idea to include all of the information in the configuration file as well, so that it is still displayed if the user is offline or there is an issue with the GitHub API.
+If only the `repo` attribute is specified, this wedge can fetch all of its necessary information from the GitHub API, however it is a good idea to include all of the information in the configuration file as well, so that it is still displayed if the user is offline or there is an issue with the API.
 
 ## Example
 
 ```xml
 <me.jfenn.attribouter.wedges.LicenseWedge
-        repo="fennifith/Attribouter"
+        repo="github:fennifith/Attribouter"
         description="I'm pickle riiiiiiiiiiiiiiiiiiiiiiiiick!"
-        website="https://jfenn.me/about/?Attribouter"
+        websiteUrl="https://jfenn.me/projects/attribouter"
         license="apache-2.0"
         licenseName="Apache License 2.0"
         licenseBody="@string/license_body_apache2"
@@ -28,10 +28,11 @@ If only the `repo` attribute is specified, this wedge can fetch all of its neces
 
 |Attribute|Type|Description|
 |-----|-----|-----|
-|repo|String (name/repository)|The GitHub repository to fetch the license's information from.|
-|title|String / String Resource|The name of the project (will be generated from the repository name if not present, ex: "TheAndroidMaster/ColorPickerDialog" -> "Color Picker Dialog").|
+|repo|String (name/repository)|The repository URI to fetch the license's information from.|
+|repoUrl|String (url)|The URL of the repository - defaults to whatever is inferred from or provided by the repository API.|
+|title|String / String Resource|The name of the project (will be generated from the repository name if not present, ex: "fennifith/ColorPickerDialog" would become "Color Picker Dialog").|
 |description|String / String Resource|A description of what the project contains.|
-|website|String / String Resource|A URL of the website for the project.|
+|websiteUrl|String|A URL of the website for the project.|
 |license|String|The "key" of the license the project is under. This will cause Attribouter to fetch information from the [GitHub Licenses API](https://developer.github.com/v3/licenses/).|
 |licenseName|String / String Resource|The name of the license.|
 |licenseBody|String / String Resource|The content of the license.|
@@ -43,6 +44,6 @@ The links that are automatically created by this wedge are as follows. See [`Lin
 
 |ID|Description|Required Attributes|
 |-----|-----|-----|
-|github|The github repo of the project.|`repo`|
-|website|The project's website.|`website` or `repo` (if the project has a website defined on their GitHub repo)|
-|license|Information about the license that the project is under.|`license`, `licenseUrl`, or `repo` (if the repo's license is supported by the GitHub API)|
+|git|The github repo of the project.|`repo` or `repoUrl`|
+|website|The project's website.|`websiteUrl` or `repo` (if the project has a website defined on their repo)|
+|license|Information about the license that the project is using.|`license`, `licenseUrl`, or `repo` (if the repo's license is supported by the API)|
