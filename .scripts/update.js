@@ -50,7 +50,7 @@ function getRepoDocs(repo) {
             index: "index.md",
             template: "../../.scripts/.docs.template.md",
             indexTemplate: "../../.scripts/.docs-index.template.md",
-            sourcePrefix: "https://github.com/" + repo.full_name + "/blob/master"
+            sourcePrefix: "https://github.com/" + repo.full_name + "/blob/" + (repo.default_branch || "master")
         });
 
         console.log("Generated project docs " + repo.full_name);
@@ -203,7 +203,7 @@ async function main() {
                         let screenshots = [];
 
                         for (let i in repo.meta.screenshots) {
-                            screenshots.push("https://raw.githubusercontent.com/" + repo.full_name + "/master/" + repo.meta.screenshots[i]);
+                            screenshots.push("https://raw.githubusercontent.com/" + repo.full_name + "/" + (repo.default_branch || "master") + "/" + repo.meta.screenshots[i]);
                         }
 
                         return screenshots;
@@ -217,9 +217,9 @@ async function main() {
 
             console.log("Fetched project " + repo.full_name);
 
-            let readme = await _request.text("https://raw.githubusercontent.com/" + repos[i].full_name + "/master/README.md");
+            let readme = await _request.text("https://raw.githubusercontent.com/" + repos[i].full_name + "/" + (repo.default_branch || "master") + "/README.md");
             if (readme) {
-                readme = readme.replace(/\[([A-Za-z0-9.`'" ]*)\]\((\.[A-Za-z0-9\/\-\.\?\=]*)\)/g, "[$1](" + repos[i].html_url + "/blob/master/$2)");
+                readme = readme.replace(/\[([A-Za-z0-9.`'" ]*)\]\((\.[A-Za-z0-9\/\-\.\?\=]*)\)/g, "[$1](" + repos[i].html_url + "/blob/" + (repo.default_branch || "master") + "/$2)");
 
                 let headReg = /\n={3,}/.exec(readme);
                 if (headReg) {
