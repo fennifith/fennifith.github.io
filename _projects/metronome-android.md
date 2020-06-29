@@ -42,7 +42,7 @@ languages:
   - "Java"
 isDocs: "true"
 isWiki: "false"
-pushed: "2020-06-28T02:06:08Z"
+pushed: "2020-06-29T02:34:42Z"
 ---
 
 Metronome is a lightweight, well designed metronome app for Android focused on offering a consistent and usable design without limiting functionality.
