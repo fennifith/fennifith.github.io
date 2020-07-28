@@ -28,7 +28,7 @@ languages:
   - "Shell"
 isDocs: "false"
 isWiki: "false"
-pushed: "2020-07-16T09:56:31Z"
+pushed: "2020-07-27T15:54:36Z"
 ---
 
 This website is a collection of a few of the pictures that I have taken over the past few years. All images are published under the [Creative Commons Attribution Share Alike 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/) license. In other words, they can be used for (mostly) whatever you want, provided you give me credit and don't try to claim ownership of them.
