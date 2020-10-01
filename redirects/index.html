@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Redirecting to...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<p id="container"></p>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript">
+			var links = {
+				
+				
+				bintray: {
+					"name": "18jafenn90",
+					"url": "https://bintray.com/18jafenn90"
+				},
+				
+				fediverse: {
+					"name": "james@is.a.horrific.dev",
+					"url": "https://is.a.horrific.dev/@james"
+				},
+				
+				git: {
+					"name": "james",
+					"url": "https://code.horrific.dev/james"
+				},
+				
+				github: {
+					"name": "fennifith",
+					"url": "https://github.com/fennifith"
+				},
+				
+				github2: {
+					"name": "idiotfenn",
+					"url": "https://github.com/idiotfenn"
+				},
+				
+				googleplay: {
+					
+					"url": "https://play.google.com/store/apps/dev?id=5937321955284727208"
+				},
+				
+				instagram: {
+					"name": "fennifith",
+					"url": "https://www.instagram.com/fennifith"
+				},
+				
+				keybase: {
+					"name": "jafenn",
+					"url": "https://keybase.io/jafenn"
+				},
+				
+				liberapay: {
+					"name": "fennifith",
+					"url": "https://liberapay.com/fennifith/"
+				},
+				
+				linkedin: {
+					
+					"url": "https://www.linkedin.com/in/james-fenn-3390b8167/"
+				},
+				
+				mastodon: {
+					
+					"url": "https://social.horrific.dev/james"
+				},
+				
+				paypal: {
+					"name": "fennifith",
+					"url": "https://paypal.me/fennifith"
+				},
+				
+				reddit: {
+					"name": "Fennifith",
+					"url": "https://www.reddit.com/u/Fennifith"
+				},
+				
+				stackoverflow: {
+					
+					"url": "https://stackoverflow.com/users/4955981/"
+				},
+				
+				telegram: {
+					"name": "fennifith",
+					"url": "https://t.me/fennifith"
+				},
+				
+				twitch: {
+					"name": "fennifith",
+					"url": "https://twitch.tv/fennifith"
+				},
+				
+				twitter: {
+					"name": "fennifith",
+					"url": "https://twitter.com/fennifith"
+				},
+				 
+			};
+		
+			var array = window.location.search.substring(1).split("&");
+			var args = {};
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].indexOf("=") >= 0) {
+					var argArray = array[i].split("=");
+					args[argArray[0]] = argArray[1];
+				} else args[array[i]] = true;
+			}
+			
+			if (links[args.t]) {
+				var url = links[args.t].url + (args.d != null ? "/" + StringUtil.format(args.d, links[args.t].name) : "");
+				document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+				window.location = url;
+			} else location.href="/404.html";
+		</script>
+	</body>
+</html>

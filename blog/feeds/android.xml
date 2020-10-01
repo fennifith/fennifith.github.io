@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - Android</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        
+        
+        <item>
+            <title>Attribouter</title>
+			<description>A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.</description>
+			<pubDate>2018-08-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-17-Attribouter/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-17-Attribouter/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Pricing Models</title>
+			<description>TL;DR - Don't work for free.</description>
+			<pubDate>2018-09-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-17-Pricing-Models/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-17-Pricing-Models/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Continuous Integration with Travis CI for Android</title>
+			<description>An in-depth tutorial explaining how to set up Travis CI to deploy signed builds to Google Play. Among other things.</description>
+			<pubDate>2018-11-14T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/travis-ci-for-android/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/travis-ci-for-android/</guid>
+        </item>
+        
+        
+        
+        
+        
+        <item>
+            <title>Introduction to Android: Contexts, Intents, and the Activity lifecycle</title>
+			<description>A basic overview of the main components of an Android app and how they interact with each other and the Android system.</description>
+			<pubDate>2019-03-18T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/introduction-to-android-framework/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/introduction-to-android-framework/</guid>
+        </item>
+        
+        
+        
+        
+        
+        <item>
+            <title>Thoughts About Aptoide's 'Play Fair' Campaign</title>
+			<description>Sharing my opinions about Aptoide's 'play fair' campaign and some of the claims made in their argument.</description>
+			<pubDate>2019-06-13T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

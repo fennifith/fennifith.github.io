@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - JavaScript</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Client-Side JavaScript</title>
+			<description>Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.</description>
+			<pubDate>2018-08-19T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>JavaScript: Productivity over Proof</title>
+			<description>In the vast majority everyday software, nobody writes a mathematical proof of every piece of functionality. Dynamically typed languages exist for a reason, and this is not it.</description>
+			<pubDate>2019-08-02T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Client-Side JavaScript – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Client-Side JavaScript</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Client-Side JavaScript">
+<meta name="twitter:description" content="Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Client-Side JavaScript">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2018-08-19 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/">
+<meta name="og:description" content="Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">Client-Side JavaScript</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/">
+			<time class="dt-published" datetime="2018-08-19 00:00:00 +0000">August 19, 2018</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="/">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Website</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>My main project today has been rewriting most of my personal site in Jekyll and making a script using the GitHub API to update the relevant collections &amp; push to git instead of making the site use the API to fetch data in client-side js like it was before.</p>
+
+<h2 id="qa">Q/A</h2>
+
+<h3 id="why-was-i-using-the-github-api-client-side">Why was I using the GitHub API client-side?</h3>
+
+<p>I have a lot of projects. I wanted to have a portfolio site, but writing the entire thing myself and manually updating it each time I started a new one would have been a nightmare. Since I was (and still am) using GitHub pages, I obviously couldn’t have it fetch this information on the server, so the only obvious choice was to do it on the client instead.</p>
+
+<h3 id="why-was-this-bad">Why was this bad?</h3>
+
+<p>Here are a few reasons.</p>
+
+<ul>
+  <li>after the page loads, it has to make another request, making the user wait longer</li>
+  <li>information won’t show up in link previews / scrapers / search results</li>
+  <li>authenticated requests cannot be made as that would require giving the client the auth key to make them with</li>
+  <li>GitHub’s request limit could easily be passed by simple browsing, causing data to stop loading</li>
+  <li>the site would use up the user’s unauthenticated requests, which they might find useful (testing/debugging)</li>
+  <li>browser compatibility, while not bad, is… not perfect, either</li>
+</ul>
+
+<h2 id="crappy-hackery">Crappy Hackery</h2>
+
+<p>So, I rewrote my site to use Jekyll and do away with all of the client-side JavaScript. Up until this point I’d added test files to all of the collections (“/_types” for types of projects, and “/_projects” for the actual projects) while I was writing my fancy <a href="https://jekyllrb.com/docs/templates/">liquid extensions</a>.</p>
+
+<p>The plan was that I was going to make a script to get repository info and create the files in “/_projects”. I decided that since the GitHub API uses JSON, it would be easiest to write the data-fetching script in NodeJS. While I was at it, I’d also write a basic shell script for the purpose of deleting all the previous files, running the NodeJS script to create new ones, and pushing the result to GitHub all in one command. This ended up being a little more complicated, though, as you will soon find out.</p>
+
+<p>To organize the projects into sections as you see on the <a href="https://jfenn.me/?projects">projects</a> page, I was planning on adding what GitHub calls “topics”  to each of my repositories that would be defined in the “/_types” collection, along with the type names and order. The <a href="https://developer.github.com/v3/repos/#list-all-topics-for-a-repository">API endpoint</a> to fetch a repo’s types was in beta, but all it would need to work is an extra header. I’d then add a “type” attribute to each of the “/_projects” and have Jekyll use that to decide which section it belongs in. However, when I was writing the script, I discovered a flaw in this plan: if I have an array of multiple topics for a repository, how do I know which one should be set as the “type” attribute? I could hardcode an array of the possible types in the script, but that would be a pain if I wanted to change them later. I could scan through each file in the /_topics folder and attempt to parse its front matter, but that could break easily. Or…</p>
+
+<p><strong>I could add a front matter to the .js file and run Jekyll locally to create a hardcoded array for me before running the script.</strong></p>
+
+<p>With a little help from <a href="https://github.com/heinrichreimer">Heinrich Reimer</a> to get the commas to go in the right places (as well as some rubber duck debugging when I had apparently forgotten how to assign a value to a variable), I was able to get <a href="/redirects/?t=github&amp;d=${}.github.io/blob/3cb10b7b4ecc49262bad306cfc11196897cbc615/scripts/update.js">this</a> to work pretty nicely. However, this made things a little confusing for the shell script I was planning to make. Instead of just running the js script, I would have to run “jekyll serve” in a separate process, locate the script in the output files, reinstall its dependencies (they refused to behave otherwise, and would throw errors), THEN run the script, and finally kill the jekyll process so that I don’t have an endless instance of Jekyll running on my laptop until I reboot. After all that, my once simple 3-line shell script ended up being a little closer to <a href="/redirects/?t=github&amp;d=${}.github.io/blob/3cb10b7b4ecc49262bad306cfc11196897cbc615/scripts/update.sh">this</a>.</p>
+
+<p>Aaaaaand that’s what I did today. I’ve finished messing around with it. The changes are live now. I won’t steal your unauthenticated requests anymore. Bye.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

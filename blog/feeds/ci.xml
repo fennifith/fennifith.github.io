@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - CI</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Continuous Integration with Travis CI for Android</title>
+			<description>An in-depth tutorial explaining how to set up Travis CI to deploy signed builds to Google Play. Among other things.</description>
+			<pubDate>2018-11-14T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/travis-ci-for-android/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/travis-ci-for-android/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

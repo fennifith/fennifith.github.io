@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - Linux</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>AAAAAAAAAAAAAAAAAAAAAAAHHH</title>
+			<description>A small command-line utility I wrote with Go that I had a lot of fun with.</description>
+			<pubDate>2018-09-01T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Joining Freenode IRC: A Guide</title>
+			<description>Basic (but detailed) instructions for setting up a Freenode IRC account through various clients.</description>
+			<pubDate>2019-03-06T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/joining-freenode-irc/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/joining-freenode-irc/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

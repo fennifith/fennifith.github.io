@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>IconStyleData Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="IconStyleData Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="IconStyleData Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/docs/app/src/main/java/com/james/status/data/IconStyleData.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="AppPreferenceData">AppPreferenceData</a></li>
+  <li><a href="IconStyleData">IconStyleData</a></li>
+  <li><a href="NotificationData">NotificationData</a></li>
+  <li><a href="icon/IconData">icon / IconData</a></li>
+  <li><a href="preference">preference /</a>
+    <ul>
+      <li><a href="preference/AppNotificationsPreferenceData">AppNotificationsPreferenceData</a></li>
+      <li><a href="preference/BasePreferenceData">BasePreferenceData</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--app--src--main--java--com--james--status--data--iconstyledatajava"><a href="./../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../index">app</a> &gt; <a href="./../../../../../../index">src</a> &gt; <a href="./../../../../../index">main</a> &gt; <a href="./../../../../index">java</a> &gt; <a href="./../../../index">com</a> &gt; <a href="./../../index">james</a> &gt; <a href="./../index">status</a> &gt; <a href="./index">data</a> &gt; <strong>IconStyleData.java</strong></h4>
+
+<h2 id="getsize"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L75">getSize</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">int</code></p>
+
+<p>Get the amount of icons in the style.</p>
+
+<p><strong>Returned Value:</strong> An integer representing the amount of icons in the style.</p>
+
+<h2 id="getdrawable"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L86">getDrawable</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Drawable</code></p>
+
+<p>Get a drawable of the style at a particular index.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>The current application context.</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>The index to obtain.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> A created Drawable, or null if something has gone horribly wrong.</p>
+
+<h2 id="getbitmap"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L122">getBitmap</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Bitmap</code></p>
+
+<p>Get a bitmap from the style at a particular index. This will 
+also cache the created bitmaps to increase performance of future 
+calls.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>The current application context.</td>
+    </tr>
+    <tr>
+      <td>value</td>
+      <td>The index to obtain.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> A created bitmap, or null if something has gone horribly wrong.</p>
+
+<h2 id="writetosharedpreferences"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L146">writeToSharedPreferences</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Write the icon style to a SharedPreferences instance.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>editor</td>
+      <td>A SharedPreferences instance.</td>
+    </tr>
+    <tr>
+      <td>prefix</td>
+      <td>The preferences prefix.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fromsharedpreferences"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L161">fromSharedPreferences</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code> <code class="language-plaintext highlighter-rouge">IconStyleData</code></p>
+
+<p>Instantiate an IconStyleData from an index in SharedPreferences, based on a name.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>prefs</td>
+      <td>A SharedPreferences instance.</td>
+    </tr>
+    <tr>
+      <td>prefix</td>
+      <td>The preferences prefix.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>The name of the style.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> The created IconStyleData, or null if not found.</p>
+
+<h2 id="fromresource"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/IconStyleData.java#L209">fromResource</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code> <code class="language-plaintext highlighter-rouge">IconStyleData</code></p>
+
+<p>Instantiate an icon style from the app resources using a set of strings. 
+If a resource is not found, this will return null. This is particularly 
+useful for adding styles that may not necessarily be included in the 
+published source code of the application; resources that may be under 
+a different license will only be used if they are available.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The user-facing name of the style.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>The type of icons the style uses, e.g. vector assets.</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>The current application context.</td>
+    </tr>
+    <tr>
+      <td>resourceNames</td>
+      <td>The names of the resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> The created IconStyleData, or null.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Mdjavadoc</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Mdjavadoc">
+<meta name="twitter:description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Mdjavadoc">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/mdjavadoc/">
+<meta name="og:description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/mdjavadoc">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/mdjavadoc/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/mit/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">MIT License</span>
+        </a>
+        
+        <a class="link" href="https://www.npmjs.com/package/mdjavadoc">
+            <object class="link__img" data="https://www.npmjs.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">npm</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p>Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an <a href="https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md">API</a> and <a href="https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md">CLI</a>. If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>These are generic installation instructions that are fairly similar for both the API and CLI.</p>
+
+<h3 id="npm">NPM</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install</span> <span class="nt">-g</span> mdjavadoc
+</code></pre></div></div>
+
+<h3 id="from-source">From Source</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/TheAndroidMaster/mdjavadoc
+<span class="nb">cd </span>mdjavadoc/cli
+npm <span class="nb">install
+sudo </span>npm <span class="nb">link</span>
+</code></pre></div></div>
+
+<p>For specific usage instructions, see the README for the <a href="https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md">API</a> or <a href="https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md">CLI</a> components.</p>
+
+<h2 id="functionality">Functionality</h2>
+
+<p>The program works by searching a set of files for <a href="https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">javadoc comments</a>, parsing them into a data structure containing the description, tags, and metadata, and then outputting that data into a set of markdown files. For example, a file containing a javadoc comment like the one below would yield the following structure and output…</p>
+
+<h5 id="javadoc">Javadoc</h5>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * This is a method which does a thing with something and stuff.
+ * 
+ * @param something		This is something.
+ * @param stuff			This is a bunch of stuff.
+ * @return			A thing.
+ */</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="nc">Object</span> <span class="nf">doTheThing</span><span class="o">(</span><span class="kt">int</span> <span class="n">something</span><span class="o">,</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">stuff</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h5 id="data">Data</h5>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">doTheThing</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">This is a method which does a thing with something and stuff.</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">type</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">public</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">static</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">void</span><span class="dl">"</span><span class="p">],</span>
+    <span class="na">source</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/package/structure/ClassName.java#L2</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">param</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@param something</span><span class="se">\t</span><span class="s2">This is something.</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">template</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Parameter Name</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Description</span><span class="dl">"</span><span class="p">],</span>
+        <span class="na">values</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">something</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">This is something.</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@param stuff</span><span class="se">\t\t</span><span class="s2">This is a bunch of stuff.</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">template</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Parameter Name</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Description</span><span class="dl">"</span><span class="p">],</span>
+        <span class="na">values</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">stuff</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">This is a bunch of stuff.</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="na">return</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">content</span><span class="p">:</span> <span class="dl">"</span><span class="s2">@return</span><span class="se">\t\t</span><span class="s2">A thing.</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">template</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Returned Value</span><span class="dl">"</span><span class="p">],</span>
+        <span class="na">values</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">A thing.</span><span class="dl">"</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h5 id="markdown">Markdown</h5>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## [doTheThing](../blob/master/package/structure/ClassName.java#L2)</span>
+
+<span class="gs">**Type:**</span> <span class="sb">`public`</span> <span class="sb">`static`</span> <span class="sb">`void`</span>
+
+This is a method which does a thing with something and stuff.
+
+|Parameter Name|Description|
+|-----|-----|
+|something|This is something.|
+|stuff|This is a bunch of stuff.|
+
+<span class="gs">**Returned Value:**</span> A thing.
+</code></pre></div></div>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are accepted. See this project’s <a href="https://github.com/fennifith/mdjavadoc/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a> for instructions on how to contribute to this project.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/mdjavadoc/">
+                <time class="dt-published dt-updated" datetime="2020-04-22T19:09:37Z">April 22, 2020</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

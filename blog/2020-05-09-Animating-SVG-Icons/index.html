@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animating SVG Icons on the Web – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A small breakdown of the process I used to create a couple interactive icons for a web project.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Animating SVG Icons on the Web</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Animating SVG Icons on the Web">
+<meta name="twitter:description" content="A small breakdown of the process I used to create a couple interactive icons for a web project.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Animating SVG Icons on the Web">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2020-05-09 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/">
+<meta name="og:description" content="A small breakdown of the process I used to create a couple interactive icons for a web project.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">Animating SVG Icons on the Web</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/">
+			<time class="dt-published" datetime="2020-05-09 00:00:00 +0000">May  9, 2020</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="https://github.com/alexjlockwood/ShapeShifter">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Shape Shifter</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://mavo.io/demos/svgpath/">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">SVG Path Builder</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://material.io/resources/icons/">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Material Icons</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>One of the projects I was working on last year was in need of some more refined interaction &amp; UI polish - so I thought I’d try to animate some of the icons I’d been using. I often use Google’s <a href="https://material.io/resources/icons/">Material Design icons</a>, which are published under the Apache 2.0 license. However, these are only static images by default - in Android development, it’s easy to use a tool like <a href="https://github.com/alexjlockwood/ShapeShifter">alexjlockwood/ShapeShifter</a> to design an animation and import it into Android Studio as an <code class="language-plaintext highlighter-rouge">AnimatedVectorDrawable</code>, but the web doesn’t have this sort of tooling… or does it?</p>
+
+<p>The thing about SVG images on the web is that they’re actually parsed with support for the same browser APIs that are used to process a webpage - so, for example, mixing an SVG with CSS properties is totally valid. The only drawback is that this <em>won’t</em> work if it’s included in an <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tag, as many browsers will only render it as a static image.</p>
+
+<p>As a result, there are two approaches to including these icons in your website. You can either directly include the SVG tag inside the element you want it to appear in…</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button&gt;</span>
+  <span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewBox=</span><span class="s">"0 0 24 24"</span> <span class="na">version=</span><span class="s">"1.1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>…or you can use the <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code> tag to include it as an external resouce - allowing you to keep the scripts &amp; styles separate from the rest of the page.</p>
+
+<p>For simplicity (and a bit of organization), I’m going to use the latter - but if you’re using some type of static site generator or web framework, it’s entirely feasible to forego the <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code> element and define these inline with your page for a bit of a performance benefit (although, I haven’t actually measured how this affects its performance). This would also make it work without JavaScript, using a <code class="language-plaintext highlighter-rouge">:hover</code> selector instead of listening to the <code class="language-plaintext highlighter-rouge">mouseover</code> events. Either way, both accomplish the same goal - it’s just down to a subtle performance/compatibility impact versus how you organize your code.</p>
+
+<h2 id="reorganizing-the-path-data">Reorganizing the Path Data</h2>
+
+<p>Let’s take a look at the icon I used in the code snippet above - this is the “launch” icon from Google’s <a href="https://github.com/google/material-design-icons">material icons</a> repo. The SVG contains two path elements: one rectangle with <code class="language-plaintext highlighter-rouge">fill="none"</code> that defines the boundaries of the svg (probably for browser compatibility), and one with a much longer path string that defines the actual shape of the icon.</p>
+
+<p>Looking at the shape of the icon, it actually contains two distinct components - an arrow, and a surrounding box/border. With some understanding of SVG paths, we can actually split this icon into two separate path elements. The “path” is really just a list of actions and coordinates - the first letter, <code class="language-plaintext highlighter-rouge">M</code>, is an action that “moves” to a set of coordinates to start a path, and the <code class="language-plaintext highlighter-rouge">z</code> action “closes” the path (or draws a line back to the first set of coordinates). Since our path contains two of these segments, it won’t have any effect on the rendered icon to split them into individual tags.</p>
+
+<p>While we’re at it, I’m going to define a “group” tag to contain them, and add <code class="language-plaintext highlighter-rouge">id</code> attributes so we can reference them with CSS selectors later on.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewBox=</span><span class="s">"0 0 24 24"</span> <span class="na">version=</span><span class="s">"1.1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">"launch-icon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"box"</span> <span class="na">d=</span><span class="s">"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"arrow"</span> <span class="na">d=</span><span class="s">"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<h2 id="defining-css-states">Defining CSS States</h2>
+
+<p>According to <a href="https://www.w3.org/TR/SVG/styling.html">w3c</a>, SVG 2 supports an inline <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag that can contain our CSS. However, to ensure backwards compatibility with prior versions, it’s best to surround the CSS styles in a <code class="language-plaintext highlighter-rouge">&lt;![CDATA[]]&gt;</code> tag (this way, any older browsers won’t try to parse its content).</p>
+
+<p>To create our “animation”, I’m going to use the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition"><code class="language-plaintext highlighter-rouge">transition</code></a> property - which simply animates the value of whatever it specifies. The animated state will be dependent on a “selected” property on the <code class="language-plaintext highlighter-rouge">&lt;g&gt;</code> element (for now, I’ll just add this property to the tag so we can see what it looks like).</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewBox=</span><span class="s">"0 0 24 24"</span> <span class="na">version=</span><span class="s">"1.1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span><span class="o">&lt;![</span><span class="nt">CDATA</span><span class="o">[</span>
+    <span class="nf">#box</span><span class="o">,</span> <span class="nf">#arrow</span> <span class="p">{</span>
+      <span class="nl">transition</span><span class="p">:</span> <span class="n">transform</span> <span class="m">.25s</span><span class="p">,</span> <span class="n">opacity</span> <span class="m">.25s</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nf">#launch-icon</span><span class="o">[</span><span class="nt">selected</span><span class="o">]</span> <span class="nf">#box</span> <span class="p">{</span>
+      <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.5</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nf">#launch-icon</span><span class="o">[</span><span class="nt">selected</span><span class="o">]</span> <span class="nf">#arrow</span> <span class="p">{</span>
+      <span class="nl">transform</span><span class="p">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">2px</span><span class="p">,</span> <span class="m">-2px</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="o">]]&gt;</span><span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">"launch-icon"</span> <span class="na">selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"box"</span> <span class="na">d=</span><span class="s">"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"arrow"</span> <span class="na">d=</span><span class="s">"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>With this SVG, you <em>should</em> be able to see the arrow move up and to the right, with the surrounding box faded out a little. If this doesn’t work, check that the <code class="language-plaintext highlighter-rouge">selected</code> attribute is properly applied to the <code class="language-plaintext highlighter-rouge">&lt;g&gt;</code> tag in your developer tools menu - and make sure the id and attribute names match.</p>
+
+<p>We should now have a working animation that will change based on our <code class="language-plaintext highlighter-rouge">selected</code> attribute - try running <code class="language-plaintext highlighter-rouge">document.getElementById("launch-icon").setAttribute("selected", true);</code> and <code class="language-plaintext highlighter-rouge">document.getElementById("launch-icon").removeAttribute("selected");</code> in your console, and you’ll see it transition between the two states.</p>
+
+<h2 id="detecting-the-hover-state">Detecting the Hover State</h2>
+
+<p>Now that we’ve finished animating the actual SVG, the hard part is over - we just need to define our HTML element and detect its hover state to switch between the two states.</p>
+
+<p>I’ve saved my SVG at <code class="language-plaintext highlighter-rouge">ic_launch.svg</code>, so - in the same folder - I’m going to create an <code class="language-plaintext highlighter-rouge">index.html</code> with the following content…</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>SVG Icon Fun<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"launch-button"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;object</span> <span class="na">id=</span><span class="s">"launch-object"</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span> <span class="na">data=</span><span class="s">"./ic_launch.svg"</span><span class="nt">&gt;&lt;/object&gt;</span>
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="c1">// JavaScript here...</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Having defined our elements, we’re going to listen to the <code class="language-plaintext highlighter-rouge">mouseover</code> and <code class="language-plaintext highlighter-rouge">mouseout</code> events of the <code class="language-plaintext highlighter-rouge">#launch-button</code> element to determine when to animate the icon.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">_buttonElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">launch-button</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">_objectElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">launch-object</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">_buttonElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">mouseover</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="c1">// TODO: add the "selected" attribute</span>
+<span class="p">});</span>
+
+<span class="nx">_buttonElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">mouseout</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="c1">// TODO: remove the "selected" attribute</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Now that we’re listening to our mouse events on the button, we need a way to actually change the <code class="language-plaintext highlighter-rouge">selected</code> attribute inside the SVG. Because we’re using the <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code> tag, that can’t be done directly, as the elements actually exist in a different “place” and can’t be referenced from our page. However, we <em>can</em> use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent"><code class="language-plaintext highlighter-rouge">dispatchEvent</code></a> function with a <a href="https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent"><code class="language-plaintext highlighter-rouge">CustomEvent</code></a> object to communicate with it instead.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">_buttonElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">launch-button</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">_objectElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">launch-object</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="nx">_buttonElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">mouseover</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="nx">_objectElement</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">CustomEvent</span><span class="p">(</span><span class="dl">"</span><span class="s2">ic-launch-hover</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">detail</span><span class="p">:</span> <span class="kc">true</span> <span class="p">}));</span>
+<span class="p">});</span>
+
+<span class="nx">_buttonElement</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">mouseout</span><span class="dl">"</span><span class="p">,</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+	<span class="nx">_objectElement</span><span class="p">.</span><span class="nx">contentWindow</span><span class="p">.</span><span class="nx">dispatchEvent</span><span class="p">(</span><span class="k">new</span> <span class="nx">CustomEvent</span><span class="p">(</span><span class="dl">"</span><span class="s2">ic-launch-hover</span><span class="dl">"</span><span class="p">,</span> <span class="p">{</span> <span class="na">detail</span><span class="p">:</span> <span class="kc">false</span> <span class="p">}));</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Inside our SVG, we need to add a script tag that will listen for this event and change the <code class="language-plaintext highlighter-rouge">selected</code> attribute for us - this works similarly to adding the <code class="language-plaintext highlighter-rouge">&lt;style&gt;</code> tag with the <code class="language-plaintext highlighter-rouge">&lt;![CDATA[]]&gt;</code> section (older browsers will just ignore its contents), except it needs to be commented out with JavaScript comments as well…</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span> <span class="na">width=</span><span class="s">"24"</span> <span class="na">height=</span><span class="s">"24"</span> <span class="na">viewBox=</span><span class="s">"0 0 24 24"</span> <span class="na">version=</span><span class="s">"1.1"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span><span class="o">&lt;![</span><span class="nt">CDATA</span><span class="o">[</span>
+    <span class="nf">#box</span><span class="o">,</span> <span class="nf">#arrow</span> <span class="p">{</span>
+      <span class="nl">transition</span><span class="p">:</span> <span class="n">transform</span> <span class="m">.25s</span><span class="p">,</span> <span class="n">opacity</span> <span class="m">.25s</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nf">#launch-icon</span><span class="o">[</span><span class="nt">selected</span><span class="o">]</span> <span class="nf">#box</span> <span class="p">{</span>
+      <span class="nl">opacity</span><span class="p">:</span> <span class="m">0.5</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nf">#launch-icon</span><span class="o">[</span><span class="nt">selected</span><span class="o">]</span> <span class="nf">#arrow</span> <span class="p">{</span>
+      <span class="nl">transform</span><span class="p">:</span> <span class="n">translate</span><span class="p">(</span><span class="m">2px</span><span class="p">,</span> <span class="m">-2px</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="o">]]&gt;</span><span class="nt">&lt;/style&gt;</span>
+  <span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"M0 0h24v24H0z"</span> <span class="na">fill=</span><span class="s">"none"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">"launch-icon"</span> <span class="na">selected=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"box"</span> <span class="na">d=</span><span class="s">"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;path</span> <span class="na">id=</span><span class="s">"arrow"</span> <span class="na">d=</span><span class="s">"M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+  <span class="nt">&lt;script&gt;</span><span class="cm">/* &lt;![CDATA[ */</span>
+    <span class="kd">const</span> <span class="nx">_iconElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">launch-icon</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">ic-launch-hover</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">)</span>
+        <span class="nx">_iconElement</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">selected</span><span class="dl">"</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+      <span class="k">else</span> <span class="nx">_iconElement</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">selected</span><span class="dl">"</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="cm">/* ]]&gt; */</span><span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>Finally, opening our page in the browser, we should now have a nice little animated SVG icon on our button. Ahh… very satisfying.</p>
+
+<p><img src="/images/blogs/animsvg-icon.gif" alt="A screen recording of the button being animated repeatedly." /></p>
+
+<p>There are definitely limits to what can be done with CSS properties on details as fine as parts of an icon - but I’ve managed to pull off some fairly complicated animations with this already, so I encourage messing around with this to see what it can do.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

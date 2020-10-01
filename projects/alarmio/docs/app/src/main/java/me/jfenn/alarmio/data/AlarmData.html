@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AlarmData Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AlarmData Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AlarmData Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/AlarmData.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="AlarmData">AlarmData</a></li>
+  <li><a href="SoundData">SoundData</a></li>
+  <li><a href="TimerData">TimerData</a></li>
+  <li><a href="preference">preference /</a>
+    <ul>
+      <li><a href="preference/AboutPreferenceData">AboutPreferenceData</a></li>
+      <li><a href="preference/AlertWindowPreferenceData">AlertWindowPreferenceData</a></li>
+      <li><a href="preference/BasePreferenceData">BasePreferenceData</a></li>
+      <li><a href="preference/BatteryOptimizationPreferenceData">BatteryOptimizationPreferenceData</a></li>
+      <li><a href="preference/BooleanPreferenceData">BooleanPreferenceData</a></li>
+      <li><a href="preference/CustomPreferenceData">CustomPreferenceData</a></li>
+      <li><a href="preference/ImageFilePreferenceData">ImageFilePreferenceData</a></li>
+      <li><a href="preference/ListPreferenceData">ListPreferenceData</a></li>
+      <li><a href="preference/RingtonePreferenceData">RingtonePreferenceData</a></li>
+      <li><a href="preference/SpinnerPreferenceData">SpinnerPreferenceData</a></li>
+      <li><a href="preference/ThemePreferenceData">ThemePreferenceData</a></li>
+      <li><a href="preference/TimePreferenceData">TimePreferenceData</a></li>
+      <li><a href="preference/TimeZonesPreferenceData">TimeZonesPreferenceData</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--app--src--main--java--me--jfenn--alarmio--data--alarmdatajava"><a href="./../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../index">app</a> &gt; <a href="./../../../../../../index">src</a> &gt; <a href="./../../../../../index">main</a> &gt; <a href="./../../../../index">java</a> &gt; <a href="./../../../index">me</a> &gt; <a href="./../../index">jfenn</a> &gt; <a href="./../index">alarmio</a> &gt; <a href="./index">data</a> &gt; <strong>AlarmData.java</strong></h4>
+
+<h2 id="onidchanged"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L49">onIdChanged</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Moves this AlarmData’s preferences to another “id”.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>The new id to be assigned</td>
+    </tr>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="onremoved"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L71">onRemoved</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Removes this AlarmData’s preferences.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getname"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L89">getName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Returns the user-defined “name” of the alarm, defaulting to 
+“Alarm (1..)” if unset.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  The alarm name, as a string.</p>
+
+<h2 id="isrepeat"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L102">isRepeat</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns whether the alarm should repeat on a set interval 
+or not.</p>
+
+<p><strong>Returned Value:</strong>  If repeat is enabled for this alarm.</p>
+
+<h2 id="setname"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L117">setName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the user-defined “name” of the alarm.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>name</td>
+      <td>The new name to be set.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="settime"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L128">setTime</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Change the scheduled alarm time.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>manager</td>
+      <td>An AlarmManager to schedule the alarm on.</td>
+    </tr>
+    <tr>
+      <td>timeMillis</td>
+      <td>The UNIX time (in milliseconds) that the alarm should ring at. This is independent to days; if the time correlates to 9:30 on a Tuesday when the alarm should only repeat on Wednesdays and Thursdays, then the alarm will next ring at 9:30 on Wednesday.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setenabled"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L145">setEnabled</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Set whether the alarm is enabled.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>manager</td>
+      <td>An AlarmManager to schedule the alarm on.</td>
+    </tr>
+    <tr>
+      <td>isEnabled</td>
+      <td>Whether the alarm is enabled.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setdays"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L160">setDays</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the days of the week that the alarm should ring on. If 
+no days are specified, the alarm will act as a one-time alert 
+and will not repeat.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>days</td>
+      <td>A boolean array, with a length of 7 (seven days of the week) specifying whether repeat is enabled for that day.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setvibrate"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L177">setVibrate</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Set whether the alarm should vibrate.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>isVibrate</td>
+      <td>Whether the alarm should vibrate.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hassound"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L188">hasSound</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Return whether the alarm has a sound or not.</p>
+
+<p><strong>Returned Value:</strong>  A boolean defining whether a sound has been set for the alarm.</p>
+
+<h2 id="getsound"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L198">getSound</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">SoundData</code></p>
+
+<p>Get the <a href="./SoundData">SoundData</a> sound specified for the alarm.</p>
+
+<p><strong>Returned Value:</strong>  An instance of SoundData describing the sound that the alarm should make (or null).</p>
+
+<h2 id="setsound"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L210">setSound</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Set the sound that the alarm should make.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>sound</td>
+      <td>A <a href="./SoundData">SoundData</a> defining the sound that the alarm should make.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getnext"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L222">getNext</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Calendar</code></p>
+
+<p>Get the next time that the alarm should wring.</p>
+
+<p><strong>Returned Value:</strong>  A Calendar object defining the next time that the alarm should ring at.</p>
+
+<p><strong>Reference:</strong>  <a href="https://developer.android.com/reference/java/util/Calendar">java.util.Calendar Documentation</a></p>
+
+<h2 id="set"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L260">set</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Date</code></p>
+
+<p>Set the next time for the alarm to ring.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>manager</td>
+      <td>The AlarmManager to schedule the alarm on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  The next <a href="https://developer.android.com/reference/java/util/Date">Date</a> at which the alarm will ring.</p>
+
+<h2 id="setalarm"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L274">setAlarm</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Schedule a time for the alarm to ring at.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>manager</td>
+      <td>The AlarmManager to schedule the alarm on.</td>
+    </tr>
+    <tr>
+      <td>timeMillis</td>
+      <td>A UNIX timestamp specifying the next time for the alarm to ring.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cancel"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L308">cancel</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Cancel the next time for the alarm to ring.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+    <tr>
+      <td>manager</td>
+      <td>The AlarmManager that the alarm was scheduled on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getintent"><a href="https://github.com/fennifith/Alarmio/blob/master/app/src/main/java/me/jfenn/alarmio/data/AlarmData.java#L324">getIntent</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">PendingIntent</code></p>
+
+<p>The intent to fire when the alarm should ring.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>An active context instance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  A PendingIntent that will open the alert screen.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

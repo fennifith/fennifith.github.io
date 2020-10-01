@@ -1,0 +1,35 @@
+.text__title {
+	font-size: 2em;
+	font-weight: bolder;
+	margin-bottom: 0;
+}
+
+
+.text__meta {
+	font-size: 0.8em;
+	margin-top: 0;
+}
+
+.text__meta * {
+	text-decoration: none !important;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: .05em;
+	color: inherit !important;
+}
+
+.text__attention {
+	font-size: 2em;
+	line-height: 1em;
+}
+
+.text__notice {
+	display: block;
+	padding: 1em 1.25em;
+	margin-bottom: 1.5em;
+	background-color: rgba(43, 81, 105, 0.1);
+	background-color: var(--accent-background-light);
+	border: 1px solid #BDBDBD;
+	border: 1px solid var(--normal-outline);
+	border-radius: .25rem;
+}

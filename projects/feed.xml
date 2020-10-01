@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>James Fenn</title>
+		<description>James Fenn's project list.</description>
+		<link>https://jfenn.me</link>
+		
+		<item>
+			<title>Wear Locker</title>
+			<description>A basic lock screen that prevents accidental touches on Android Wear 2.0.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/wearlocker/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/wearlocker/</guid>
+		</item>
+		
+		<item>
+			<title>Wear Color Picker</title>
+			<description>A lightweight color picker library for Android Wear.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/wearcolorpicker/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/wearcolorpicker/</guid>
+		</item>
+		
+		<item>
+			<title>ValCanBuild/TravisAndroidExample</title>
+			<description>Example of distributing an Android app to GitHub / Play Store releases.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/travisandroidexample/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/travisandroidexample/</guid>
+		</item>
+		
+		<item>
+			<title>Time Date Picker</title>
+			<description>A simple Android library containing several time/date pickers and dialogs.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/timedatepicker/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/timedatepicker/</guid>
+		</item>
+		
+		<item>
+			<title>Sunrise Sunset View</title>
+			<description>A lightweight Android view used for displaying and/or editing sunrise and sunset times.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/sunrisesunsetview/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/sunrisesunsetview/</guid>
+		</item>
+		
+		<item>
+			<title>Styles</title>
+			<description>A collection of all my CSS styles, organized and documented.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/styles/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/styles/</guid>
+		</item>
+		
+		<item>
+			<title>codekidX/storage-chooser</title>
+			<description>Lets user choose between internal or external storage with just few lines of code.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/storage-chooser/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/storage-chooser/</guid>
+		</item>
+		
+		<item>
+			<title>drozdzynski/Steppers</title>
+			<description>Steppers view library for Android, based on Google Material design guidelines</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/steppers/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/steppers/</guid>
+		</item>
+		
+		<item>
+			<title>Status</title>
+			<description>A no-root status bar replacement for Android.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/status/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/status/</guid>
+		</item>
+		
+		<item>
+			<title>Slide Action View</title>
+			<description>An Android view which provides a nice slide-to-left/right interaction.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/slideactionview/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/slideactionview/</guid>
+		</item>
+		
+		<item>
+			<title>Signal Strengths</title>
+			<description>A library and sample application with the purpose of getting an accurate signal strength on different Android phones.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/signalstrengths/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/signalstrengths/</guid>
+		</item>
+		
+		<item>
+			<title>Scrurl</title>
+			<description>Scrolling urls, a.k.a. the second worst website I've ever made.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/scrurl/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/scrurl/</guid>
+		</item>
+		
+		<item>
+			<title>Screenshot Maker</title>
+			<description>A small java applet to generate uniform Play Store screenshots with titles and descriptions.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/screenshotmaker/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/screenshotmaker/</guid>
+		</item>
+		
+		<item>
+			<title>Robotics</title>
+			<description>Documentation of stuff done in my robotics class.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/robotics/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/robotics/</guid>
+		</item>
+		
+		<item>
+			<title>rectangle-dbmi/Realtime-Port-Authority</title>
+			<description>Realtime transit tracker of Pittsburgh's Port Authority buses using the realtime PAT API using Google Maps to Display the Maps</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/realtime-port-authority/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/realtime-port-authority/</guid>
+		</item>
+		
+		<item>
+			<title>wyager/MicroMechBoard</title>
+			<description>An attempt at making an affordable, DIY scientific calculator that offers better performance and more productivity than the current standard.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/raspi-calcuberry/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/raspi-calcuberry/</guid>
+		</item>
+		
+		<item>
+			<title>Radial Layout</title>
+			<description>A scrollable-ish view that arranges images in circles extending from the center of the screen.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/radiallayout/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/radiallayout/</guid>
+		</item>
+		
+		<item>
+			<title>jacksonhvisuals/quicksilver</title>
+			<description>A free, (mostly) material-design template for the web</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/quicksilver/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/quicksilver/</guid>
+		</item>
+		
+		<item>
+			<title>Port Authority Feedback Reporter</title>
+			<description>A small application to make it easier for riders to report issues to the Pittsburgh Port Authority bus system.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/portauthorityfeedbackreporter/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/portauthorityfeedbackreporter/</guid>
+		</item>
+		
+		<item>
+			<title>Pixularautomaton</title>
+			<description>A basic cellular automaton that makes pretty animations from images.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/pixularautomaton/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/pixularautomaton/</guid>
+		</item>
+		
+		<item>
+			<title>Photos</title>
+			<description>A collection of my photography, published under the Creative Commons License.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/photos/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/photos/</guid>
+		</item>
+		
+		<item>
+			<title>Pasta for Spotify</title>
+			<description>A material design Spotify client for Android</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/pasta-for-spotify/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/pasta-for-spotify/</guid>
+		</item>
+		
+		<item>
+			<title>Paper Tales</title>
+			<description>A modified version of Fornax that gets its content from Wordpress articles.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/paper-tales/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/paper-tales/</guid>
+		</item>
+		
+		<item>
+			<title>Palette Getter</title>
+			<description>A library that can get the color scheme of any app.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/palettegetter/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/palettegetter/</guid>
+		</item>
+		
+		<item>
+			<title>P5Samples</title>
+			<description>Stuff I made messing around with p5js in my free time.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/p5samples/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/p5samples/</guid>
+		</item>
+		
+		<item>
+			<title>Music</title>
+			<description>A collection of my piano compositions and other music-related projects.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/music/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/music/</guid>
+		</item>
+		
+		<item>
+			<title>Music Automata api</title>
+			<description>An Rx-based interface for programming musical automata in JavaScript. (WIP)</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/music-automata-api/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/music-automata-api/</guid>
+		</item>
+		
+		<item>
+			<title>Monochrome</title>
+			<description>A monochromatic pixelated adventure game.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/monochrome/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/monochrome/</guid>
+		</item>
+		
+		<item>
+			<title>Monkey Tester</title>
+			<description>Determines whether a user is a monkey, a goat, or both, based on values obtained from android's ActivityManager and UserManager.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/monkeytester/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/monkeytester/</guid>
+		</item>
+		
+		<item>
+			<title>Metronome Android</title>
+			<description>A lightweight, well designed metronome app for Android.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/metronome-android/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/metronome-android/</guid>
+		</item>
+		
+		<item>
+			<title>Media Notification</title>
+			<description>Slightly unstable attempt to replace all media notifications with Android O styled copies.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/medianotification/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/medianotification/</guid>
+		</item>
+		
+		<item>
+			<title>Mdjavadoc</title>
+			<description>A script that generates markdown javadocs for use in Jekyll and GitHub Pages.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/mdjavadoc/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/mdjavadoc/</guid>
+		</item>
+		
+		<item>
+			<title>rgocal/Material_PopUp_Menu</title>
+			<description>A nostalgic dialog action menu from Android 2.3 re-invented for Material Design</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/material_popup_menu/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/material_popup_menu/</guid>
+		</item>
+		
+		<item>
+			<title>JarrettBillingsley/MARS_Assembler</title>
+			<description>Fork of Jarrett's &quot;MARS&quot; mirror adding theming options and my own personal tweaks.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/mars_assembler/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/mars_assembler/</guid>
+		</item>
+		
+		<item>
+			<title>Markdown To Jupyter</title>
+			<description>NodeJS script to execute &amp; convert code blocks in markdown files to a JupyterLab Notebook.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/markdowntojupyter/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/markdowntojupyter/</guid>
+		</item>
+		
+		<item>
+			<title>korlibs/korlibs.soywiz.com</title>
+			<description>Korlibs Documentation Website</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/korlibs.soywiz.com/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/korlibs.soywiz.com/</guid>
+		</item>
+		
+		<item>
+			<title>Hack NA Notes</title>
+			<description>A small sample project created for a workshop at HackNA.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/hackna-notes/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/hackna-notes/</guid>
+		</item>
+		
+		<item>
+			<title>HenrikJoreteg/github-secret-keeper</title>
+			<description>Microservice to enable GitHub login for multiple server-less applications.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/github-secret-keeper/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/github-secret-keeper/</guid>
+		</item>
+		
+		<item>
+			<title>msasikanth/Frames</title>
+			<description>A full-of-features, easy-to-customize, free and open source, light-weight, Material Design dashboard library to create Android Wallpapers apps with almost-null effort.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/frames/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/frames/</guid>
+		</item>
+		
+		<item>
+			<title>romannurik/FORMWatchFace</title>
+			<description>A fork of Roman Nurik's FORM watch face that adds extra features for Android Wear 2.0.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/formwatchface/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/formwatchface/</guid>
+		</item>
+		
+		<item>
+			<title>Fennifith.github.io</title>
+			<description>My personal website.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/fennifith.github.io/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/fennifith.github.io/</guid>
+		</item>
+		
+		<item>
+			<title>Feedage</title>
+			<description>A basic &quot;news reader&quot; that sorts posts from various RSS feeds into categories.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/feedage/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/feedage/</guid>
+		</item>
+		
+		<item>
+			<title>k0shk0sh/FastHub</title>
+			<description>FastHub the ultimate GitHub client for Android.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/fasthub/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/fasthub/</guid>
+		</item>
+		
+		<item>
+			<title>Exceptional Traveler</title>
+			<description>An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/exceptionaltraveler/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/exceptionaltraveler/</guid>
+		</item>
+		
+		<item>
+			<title>Dotfiles</title>
+			<description>My &quot;generic Linux distro&quot; dotfiles. Used to sync stuff between laptops and not much else.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/dotfiles/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/dotfiles/</guid>
+		</item>
+		
+		<item>
+			<title>Discord Github Thing Doer</title>
+			<description>A Discord bot that automates github-related tasks for my server.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/discord-github-thing-doer/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/discord-github-thing-doer/</guid>
+		</item>
+		
+		<item>
+			<title>Declarativ</title>
+			<description>A declarative HTML rendering library that is definitely not JSX.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/declarativ/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/declarativ/</guid>
+		</item>
+		
+		<item>
+			<title>Cronhub Monitor</title>
+			<description>A native CronHub notification client for Android.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/cronhub-monitor/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/cronhub-monitor/</guid>
+		</item>
+		
+		<item>
+			<title>Crasher</title>
+			<description>An easy to use crash reporting library for Android.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/crasher/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/crasher/</guid>
+		</item>
+		
+		<item>
+			<title>Color Picker Dialog</title>
+			<description>A simple dialog making it quick and easy to add color picking functionality to any app.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/colorpickerdialog/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/colorpickerdialog/</guid>
+		</item>
+		
+		<item>
+			<title>Cleaner</title>
+			<description>The only storage saving app that actually works! &amp;#58;D</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/cleaner/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/cleaner/</guid>
+		</item>
+		
+		<item>
+			<title>Cellularmusic</title>
+			<description>A &quot;cellular automaton&quot; based music generation tool, written with p5js.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/cellularmusic/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/cellularmusic/</guid>
+		</item>
+		
+		<item>
+			<title>Bugiver</title>
+			<description>A small website that gives you an issue to fix when there is nothing to do.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/bugiver/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/bugiver/</guid>
+		</item>
+		
+		<item>
+			<title>Technologx/BlueRain</title>
+			<description>A widget dashboard to make your life easier!</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/bluerain/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/bluerain/</guid>
+		</item>
+		
+		<item>
+			<title>Bagels</title>
+			<description>A live wallpaper that blurs the screen after a period of time without any actions.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/bagels/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/bagels/</guid>
+		</item>
+		
+		<item>
+			<title>Attribouter</title>
+			<description>A lightweight &quot;about screen&quot; library to allow quick but customizable attribution in Android apps.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/attribouter/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/attribouter/</guid>
+		</item>
+		
+		<item>
+			<title>Asteroid</title>
+			<description>A simple Android game based on avoiding incoming asteroids</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/asteroid/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/asteroid/</guid>
+		</item>
+		
+		<item>
+			<title>Asciimg</title>
+			<description>A command line tool to display images in ASCII.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/asciimg/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/asciimg/</guid>
+		</item>
+		
+		<item>
+			<title>crazeeadil/artme</title>
+			<description>ArtMe - A wallpaper app.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/artme/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/artme/</guid>
+		</item>
+		
+		<item>
+			<title>AP Reader</title>
+			<description>A small app that displays Android Police articles without waiting for the website to load.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/apreader/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/apreader/</guid>
+		</item>
+		
+		<item>
+			<title>Android Utils</title>
+			<description>A bunch of util classes that I use in almost every project I write.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/androidutils/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/androidutils/</guid>
+		</item>
+		
+		<item>
+			<title>heinrichreimer/android-issue-reporter</title>
+			<description>A powerful and simple library to open issues on GitHub directly from your app. </description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/android-issue-reporter/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/android-issue-reporter/</guid>
+		</item>
+		
+		<item>
+			<title>Alarmio</title>
+			<description>A simple alarm clock focused on design, readability, and internet radio.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/alarmio/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/alarmio/</guid>
+		</item>
+		
+		<item>
+			<title>theonesean/aight</title>
+			<description>aight is a command-line tool for getting todo tasks quickly.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/aight/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/aight/</guid>
+		</item>
+		
+		<item>
+			<title>Adaptive Icon View</title>
+			<description>A library to allow easy implementation of pre-Oreo adaptive icon support in Android launchers.</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/adaptiveiconview/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/adaptiveiconview/</guid>
+		</item>
+		
+		<item>
+			<title>ercsoftware11/AbsolutelyWalls</title>
+			<description>Absolutely Wallpapers community app</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/absolutelywalls/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/absolutelywalls/</guid>
+		</item>
+		
+		<item>
+			<title>AAH</title>
+			<description>A basic cmdline program for Linux to help me do basic things I should already know. Ex&amp;#58; &quot;AAH drive mount&quot;</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/aah/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/aah/</guid>
+		</item>
+		
+		<item>
+			<title>jacksonhvisuals/5217-web</title>
+			<description>5217 - Web</description>
+			<pubDate>2020-10-01T03:28:50+00:00</pubDate>
+			<link>https://jfenn.me/projects/5217-web/</link>
+			<guid isPermaLink="true">https://jfenn.me/projects/5217-web/</guid>
+		</item>
+		
+	</channel>
+</rss>

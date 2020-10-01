@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AppPreferenceData Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AppPreferenceData Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AppPreferenceData Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/docs/app/src/main/java/com/james/status/data/AppPreferenceData.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="AppPreferenceData">AppPreferenceData</a></li>
+  <li><a href="IconStyleData">IconStyleData</a></li>
+  <li><a href="NotificationData">NotificationData</a></li>
+  <li><a href="icon/IconData">icon / IconData</a></li>
+  <li><a href="preference">preference /</a>
+    <ul>
+      <li><a href="preference/AppNotificationsPreferenceData">AppNotificationsPreferenceData</a></li>
+      <li><a href="preference/BasePreferenceData">BasePreferenceData</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--app--src--main--java--com--james--status--data--apppreferencedatajava"><a href="./../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../index">app</a> &gt; <a href="./../../../../../../index">src</a> &gt; <a href="./../../../../../index">main</a> &gt; <a href="./../../../../index">java</a> &gt; <a href="./../../../index">com</a> &gt; <a href="./../../index">james</a> &gt; <a href="./../index">status</a> &gt; <a href="./index">data</a> &gt; <strong>AppPreferenceData.java</strong></h4>
+
+<h2 id="getcomponentname"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L47">getComponentName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Obtain the component name of the preference; “package.name/package.name.Component” if 
+the preference is for a specific activity, just “package.name” if not.</p>
+
+<p><strong>Returned Value:</strong> A string containing the entire component name of the app.</p>
+
+<h2 id="getpackagename"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L58">getPackageName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Obtain the package name of the preference.</p>
+
+<p><strong>Returned Value:</strong> A string containing the package name of the app.</p>
+
+<h2 id="getname"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L67">getName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Get the component name of the preference. If the preference is not an activity, 
+this will be null.</p>
+
+<p><strong>Returned Value:</strong> A string containing the component name of the app.</p>
+
+<h2 id="getactivities"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L81">getActivities</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">List&lt;AppPreferenceData&gt;</code></p>
+
+<p>Get all of the activities declared by the application. If the preference is not an 
+application, this will be null.</p>
+
+<p><strong>Returned Value:</strong> A list of data classes representing activities declared by the application.</p>
+
+<h2 id="getactivityname"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L93">getActivityName</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Get the name of the activity. If the preference is not an activity, this will be null.</p>
+
+<p><strong>Returned Value:</strong> The name of the activity.</p>
+
+<h2 id="isactivity"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L106">isActivity</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the preference is for an activity.</p>
+
+<p><strong>Returned Value:</strong> True if the preference is for a specific activity.</p>
+
+<h2 id="getlabel"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/AppPreferenceData.java#L115">getLabel</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Obtain the label of the activity / application.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>The current app context.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> The string label declared by the application or component that this preference is for.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

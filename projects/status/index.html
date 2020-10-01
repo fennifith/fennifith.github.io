@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A no-root status bar replacement for Android.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Status</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="app">
+<meta name="twitter:app:name:googleplay" content="Status">
+<meta name="twitter:app:id:googleplay" content="com.james.status">
+<meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=com.james.status">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Status">
+<meta name="twitter:description" content="A no-root status bar replacement for Android.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+
+<meta name="og:title" content="Status">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/">
+<meta name="og:description" content="A no-root status bar replacement for Android.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/kotlin.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/shell.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/Status">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Status/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://play.google.com/store/apps/details?id=com.james.status">
+            <object class="link__img" data="/images/ic/play-store.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Google Play</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Status/releases/download/3.8-beta7/app-oss-release.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">app-oss-release.apk (3.8-beta7 unstable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Technologx">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/17693282?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Technologx</span>
+        </a>
+        
+        <a class="link" href="https://github.com/opnay">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/1689721?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">opnay</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            <button class="nav__item" onclick="location.href='wiki/';">
+                <i class="nav__item__icon material-icons">assignment</i>
+                <span class="nav__item__title">Wiki</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <blockquote>
+  <p><strong>A message from the idiot that wrote this program:</strong></p>
+
+  <p>Status has not been abandoned, but is now incompatible with a growing range of
+devices due to a variety of problems detailed in
+<a href="https://jfenn.me/redirects/?t=github&amp;d=Status/issues/87">issue #87</a>.
+Unfortunately, there is nothing that I or any other developer can do to
+prevent this. If the Play Store says that your device is incompatible, then
+there is nothing that I can do to help you other than point you to one of the
+links below about why it will not function.</p>
+
+  <p>https://www.androidpolice.com/2017/04/10/android-o-feature-spotlight-apps-can-no-longer-draw-top-system-ui/
+https://www.xda-developers.com/android-o-is-breaking-apps-that-overlay-on-top-of-the-status-bar/
+https://issuetracker.google.com/issues/36574245</p>
+
+  <p>Status will continue to receive support for devices below Android Oreo for as
+long as it remains in the interest of the community.</p>
+</blockquote>
+
+<h2 id="about">About</h2>
+
+<p>Status is a status bar replacement that draws an overlay on top of the
+system-generated status bar. This means that the actual status bar is only
+hidden under the replacement; touch gestures are not overridden, and the
+standard notification panel is still shown. It needs a lot of permissions in
+order to obtain the information needed to display in the status bar. These are
+listed below.</p>
+
+<p><a href="https://travis-ci.com/fennifith/Status"><img src="https://travis-ci.com/fennifith/Status.svg" alt="Build Status" /></a>
+<a href="https://www.codacy.com/app/fennifith/Status?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Status&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/4f0694753964424b82ccb3544d24df2a" alt="Codacy Badge" /></a>
+<a href="https://discord.gg/ugwZR7V"><img src="https://img.shields.io/discord/514625116706177035.svg?logo=discord&amp;colorB=7289da" alt="Discord" /></a>
+<a href="https://liberapay.com/fennifith/donate"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay" alt="Liberapay" /></a></p>
+
+<p>Special thanks to the contributors that have helped to design the app, fix
+ssues, and translate it to different languages:</p>
+
+<ul>
+  <li><a href="https://twitter.com/MAKTHG">Anas Khan</a>: designed the app icon &amp; helped with UI</li>
+  <li><a href="https://dribbble.com/zavukodlak">Vukašin Anđelković</a>: made a couple status bar icons</li>
+  <li><a href="https://technologx.com/">Ghost Ninja</a>: also made some status bar icons</li>
+  <li><a href="https://github.com/Ryo567">Eugenio Martinez Seguin</a>: Spanish translations</li>
+  <li><a href="https://github.com/opnay">Kim Inseop</a>: Korean translations</li>
+  <li>Majida Whale: Chinese translations</li>
+  <li><a href="https://github.com/Alsidi-Group">Marwan ALsidi</a>: Arabic translations</li>
+</ul>
+
+<p>Also, credit to some of Status’s other icon sources:</p>
+
+<ul>
+  <li><a href="https://material.io/tools/icons/">Google Design</a></li>
+  <li><a href="https://materialdesignicons.com/">materialdesignicons.com</a></li>
+  <li><a href="https://icons8.com/icons">Icons8</a></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>The app is available from both Google Play and F-Droid. However, because of
+Google Play’s policies regarding certain app permissions and battery
+optimization, some features may not be included in the Google Play version of
+the app.</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.james.status"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="80" /></a>
+<a href="https://f-droid.org/en/packages/com.james.status/"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80" /></a></p>
+
+<p>Alternatively, you can download the latest APK from
+<a href="https://github.com/fennifith/Status/blob/master/../../releases/">the GitHub releases</a>.</p>
+
+<h2 id="permissions">Permissions</h2>
+
+<ul>
+  <li>Accessibility Service: used to attempt to get the status bar color of the current app if the ‘status bar coloring’ preference is enabled.</li>
+  <li>Notification Access: used to get the icons of the current notifications.</li>
+  <li>System Alert Window, System Overlay Window: used to draw the status bar above all other apps.</li>
+  <li>Battery Stats: used to find if the battery is charging and what percent it is at.</li>
+  <li>Network State, Phone State: gets the type and connection of the phone network, and if airplane mode is enabled.</li>
+  <li>Wifi State: finds if wifi is enabled and how good the connection is.</li>
+  <li>Bluetooth: find if bluetooth is enabled &amp; connected or not.</li>
+  <li>Location Services: finds if GPS is enabled.</li>
+  <li>Alarm: find if an alarm is set.</li>
+  <li>External Storage: backup/restore all settings from a file.</li>
+</ul>
+
+<h2 id="contributing">Contributing</h2>
+
+<h3 id="issues">Issues</h3>
+
+<p>Okay, there aren’t really any guidelines over issue formatting provided that
+you don’t create issues that already exist and test the app thoroughly before
+creating an issue (ex: try clearing the app data).</p>
+
+<h3 id="pull-requests">Pull Requests</h3>
+
+<p>Contributions are accepted. See <a href="https://github.com/fennifith/Status/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a>
+for more information.</p>
+
+<h3 id="icons">Icons</h3>
+
+<p>There used to be a list of all the possible icon formats here to use as a
+reference, but I stopped updating it and it’s pretty useless now. If you want
+to make status bar icons to add to this app, either <a href="mailto:contact@jfenn.me">contact me</a>
+or look in the repository for the existing icon files.</p>
+
+<h2 id="license">License</h2>
+
+<p>Unless otherwise stated, all code in this repository is published under the
+Apache 2.0 License as stated below.</p>
+
+<p>Some notable exceptions are:</p>
+<ul>
+  <li>Files in <a href="./app/src/main/res-google">app/src/main/res-google</a> are published under a different license; see the <code class="language-plaintext highlighter-rouge">LICENSE</code> file included in that directory.</li>
+  <li>Files in <a href="./app/src/main/res-icons8">app/src/main/res-icons8</a> are published under a different license; see the <code class="language-plaintext highlighter-rouge">LICENSE</code> file included in that directory.</li>
+  <li>Files in <a href="./app/src/main/res-materialdesignicons">app/src/main/res-materialdesignicons</a> are published under a different license; see the <code class="language-plaintext highlighter-rouge">LICENSE</code> file included in that directory.</li>
+  <li>Files contained in the subdirectories of <a href="./app/src/main/assets">app/src/main/assets</a> are published under their own licenses; see the <code class="language-plaintext highlighter-rouge">LICENSE</code> file included in their respective directories.</li>
+</ul>
+
+<pre><code class="language-nohighlight">Copyright 2019 James Fenn
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/status/">
+                <time class="dt-published dt-updated" datetime="2019-06-08T02:42:19Z">June  8, 2019</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

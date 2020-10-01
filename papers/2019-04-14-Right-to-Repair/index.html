@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Right to Repair – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Right to Repair</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Right to Repair">
+<meta name="twitter:description" content="A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Right to Repair">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2019-04-14 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/papers/2019-04-14-Right-to-Repair/">
+<meta name="og:description" content="A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">Right to Repair</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/papers/2019-04-14-Right-to-Repair/">
+			<time class="dt-published" datetime="2019-04-14 00:00:00 +0000">April 14, 2019</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="https://repair.org/">
+        	<object class="link__img" data="https://repair.org/favicon.ico" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">The Repair Association</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://ifixit.org/right/">
+        	<object class="link__img" data="https://ifixit.org/favicon.ico" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">iFixit Repair Movement</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://www.eff.org/issues/right-to-repair">
+        	<object class="link__img" data="https://www.eff.org/favicon.ico" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Electronic Frontier Foundation - Right to Repair</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://en.wikipedia.org/wiki/Electronics_right_to_repair">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Wikipedia - Electronics right to repair</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p><span class="text__notice">I originally wrote this post as a class assignment, and while I believe the information here is accurate, I have some qualms about the ideas it presents - mainly that it focuses largely on Apple, while in actuality, Right to Repair is about a whole lot more. I plan to expand on this in a future post, covering its implications in more detail.</span></p>
+
+<p>The consumer’s “right to repair” is becoming an increasingly relevant issue with technical products
+and devices in modern society. Large corporations like Apple have formed an exclusionary environment
+for consumers in which people are prevented from repairing their own devices, and are instead
+belittled for their so-called misuse of a product. As a result of this, customers and third-party
+repair stores are made to feel at the mercy of a large and monopolous company that is more able to
+perform repairs. This argument does have opposition: Apple has strongly affirmed that their
+restrictions on consumer and third-party repairs are solely for the safety of the user and to prevent
+illegitimate clones of the devices from appearing in the market, and supporters have argued that they
+hold no liability for ensuring that devices are repaired. However, these points do not justify the
+misleading behavior that Apple has used and the lies that their support staff have told to customers.
+This paper aims to provide a clear view of both sides of this debate, and assert the ways in which
+the “right to repair” can ensure the freedom of the consumer and benefit the communities surrounding
+these products.</p>
+
+<h2 id="the-apple-store">The Apple Store</h2>
+
+<p><img src="/images/papers/apple-store-la.jpg" alt="A Los Angeles Apple Store, bleak and metallic, with an ominous illuminated Apple logo in the center." />
+<em>Image: <a href="https://commons.wikimedia.org/wiki/File:Apple_Store_LA.jpg">https://commons.wikimedia.org/wiki/File:Apple_Store_LA.jpg</a></em></p>
+
+<p>To the unknowing customer, Apple’s stores have a very shiny appeal. Not only their physical
+appearance, but the entire brand comes with a sense of cleanliness and perfect simplicity. Their
+logo embodies this aspect of their design, often printed on a blank white box that their products
+are shipped in, along with the product name as the only other information provided on the front panel.
+The devices themselves are also designed in this manner. Most are formed from a single block of
+aluminium, presenting a clean and unblemished surface to the user, and hiding all of the inner
+workings of the device. Even using Apple’s software, certain information is hidden from you. On the
+iPhone, there is no element of the “file system” made visible to the user; the iOS operating system
+as a whole is opaque as to where any information is stored. Users are given a basic file manager (the
+“Files” app, in iOS 11), but this does not show what information is really there – it only displays
+information synced to the user’s iCloud account, not what is physically stored on the device <a href="#Sorrel">(1)</a>.
+When backing up the data on an iPhone, there is no indication of where the backup is located or how
+to move or transfer it, it just exists. If the iPhone is dropped in a puddle and will not turn on,
+then, according to Apple, all of that data is gone. When this happens, the customer can only take
+their phone to Apple’s nearest “Genius Bar”, where it is obviously repaired by the all-knowing Geniuses.
+The customer is belittled for their silly mistake of breaking the phone – obviously unrelated to any
+possible design flaw that it might have – and is then told to buy a new one. They are told that a small
+amount of water damage cannot be repaired, and that all of their data that is not backed up to the
+iCloud is now gone.</p>
+
+<p>This is the face that Apple shows their customers, and many people have expressed concern that it is
+false. As the influential YouTuber Louis Rossman recurrently says, the people working at
+the “Genius Bar” are not really geniuses; they are just told to speak according to Apple’s “Genius
+Training Student Workbook”. According to Jay Elliot, who has authored two books about Apple, “you’ve
+got to be totally wedded to the culture. You’ve got to love the product and what it is. They love the
+product” <a href="#Khan">(2)</a>. A former Apple Store employee has said that they are treated as if they are a
+part of a cult, forced to involve themselves in product launches, integrating their souls with Apple,
+and lying to customers about how their devices work. “We usually have to tell them that if they unlock
+their iPhone, it won’t work. That it’s going to be like a $700 paperweight, and that the antenna will
+fry itself on T-Mobile. Of course, that’s not true, but that’s what we tell them” <a href="#Anonymous">(3)</a>.
+This elitist view is propogated by users that believe in Apple’s vision, thinking that the “Geniuses”
+at Apple know exactly what they are doing, that users are always in the wrong, and that the products
+they sell are the perfect image of technological innovation.</p>
+
+<h3 id="louis-rossman-and-the-counterfeit-batteries">Louis Rossman and the Counterfeit Batteries</h3>
+
+<p>One person who has argued extensively against Apple’s exclusionary behavior is Louis Rossmann, an
+influential YouTuber and the owner of a small store in New York City that specializes in MacBook repair.
+As an independent repair shop that is not a part of of Apple’s “Authorized Service Provider” program,
+Rossmann is classified by Apple as “unauthorized” to repair their products and has few viable methods of
+obtaining the components necessary to fix them, short of buying broken devices and salvaging them for
+working parts. However, this does not always work for parts such as batteries, which can deteriorate
+and become less effective with age. Last year, Rossmann ordered a shipment of laptop batteries from
+China for a computer that Apple no longer services. When it reached the United States, however, the
+package was seized by the Customs and Border Protection (CPB) as an illegal and counterfeit product.
+Apple claims that the computer which they no longer service is a “vintage” product, which makes
+illegitimate parts such as the ones that Rossmann ordered illegal under US law – specifically, the CPB
+took issue with Apple’s logo being used on the batteries, and not the batteries themselves. As Rossmann
+says, “There has to be a line where putting your logo somewhere no longer means ‘this can be confiscated
+at the border’”. Louis Rossmann is not the only person experiencing these problems, either. Jessa Jones,
+another independent repair professional, had a shipment of iPhone screens seized in the same year.
+According to Rossman, “the difference between counterfeiting and refurbishing is going to be the next
+big battle” between the independent repair profession and Apple <a href="#Gault">(4)</a>.</p>
+
+<h3 id="apple-authorized-service-providers-and-the-broken-imac-pro">Apple Authorized Service Providers and the Broken iMac Pro</h3>
+
+<p>For repair stores to qualify as one of Apple’s Authorized Service Providers (AASPs), they must meet a
+plethora of requirements for how they deal with customers. One of these requirements is that they must
+buy the parts for a repair directly from Apple, leaving them with a questionable profit margin and
+unable to compete with other stores in regards to how much their repairs cost. In addition, when they
+order a part from Apple, they are held to strict standards about how they use it – it must go into an
+Apple device and cannot be sold separately to a customer or they might lose their certification. Not
+only does the business need to provide Apple with complete and accurate information of their sales and
+financial records, but all of their technicians need to be certified as well, through Apple’s own
+training program and classes – which, of course, are not free <a href="#Apple">(5)</a>. There is more than just one
+certification, though – Apple has an individual certification for each of their devices, and AASPs
+cannot sell a repair for a device unless they have a technician that is certified (through Apple’s
+program) to repair it. The impact that all of these requirements have on the customer was brought to
+fruition when Linus Sebastian, of the YouTube channel “Linus Tech Tips”, detailed their experience
+trying to fix a broken iMac Pro. Because they took the device apart and broke it themselves, they were
+willing to pay to have it repaired, but the Apple Store refused to do so. When contacting a local AASP,
+Sebastian found out that they were able to order the parts, but could not approve the sale because they
+did not have the Apple Pro certification – which, according to several AASP employees, did not actually
+exist yet <a href="#Rossignol">(6)</a>. Because Apple is so restrictive about who can repair their devices, they
+should be held to a standard that they are able to fix the products that they sell – similar to buying a
+car, it should be possible to repair even if it is broken immediately after its release. The problem is
+that human mistakes are frequent, and consumers have no way to get their $5000 metallic obelisk to
+function again if they end up breaking it, short of buying a new one. Apple’s unwillingness to support
+their own devices shows an obvious lack of care for their end users, and is one of the main reasons
+that “right to repair” is such an important issue today.</p>
+
+<h3 id="future-worries-the-t2-chip-causes-yet-more-problems">Future Worries: The T2 Chip Causes Yet More Problems</h3>
+
+<p>In a blog post by iFixit, a company that offers tools and repair guides with a clear focus on enabling
+people to understand and repair their electronic devices by themselves, Adam O’Camb details a difference
+in new versions of Apple’s products which ensure that this issue will only get worse. According to O’Camb,
+Apple’s new T2 chip will require a specific configuration suite in order to complete repairs – a software
+that is only available to authorized and Apple-certified “professionals”. After replacing a part, the
+configuration suite connects to Apple’s server to perform performance and compatibility checks for new
+parts. As described by Apple, “Without this software, an internet connection, and approval from Apple’s
+servers, the repair is considered incomplete and the computer is rendered inoperable” <a href="#O-Camb">(7)</a>.
+This functionality effectively prevents any significant repairs by consumers to their own devices, let
+alone giving “unauthorized” repair centers great reason to worry about their future profit.</p>
+
+<h2 id="nebraska-legislation-bill-67">Nebraska Legislation Bill 67</h2>
+
+<p>The opposing arguments to these problems all seem to state in some form that Apple’s restrictions aiming
+to prevent people from repairing their own devices do so righteously – that people are protected from
+messing around for their own and others safety. When Apple lobbied against a “right to repair” proposal
+in Nebraska in 2017, Apple representative Steve Kester warned that the state would become “a Mecca for
+bad actors” if the bill were passed. According to them, the legislation could provide hackers and other
+unsavory characters “hardware-level access to Apple products”. However, it is important to recognize
+the bias that Apple has to make these claims; supporters of the bill have asserted that many of the
+companies opposing it “are only interested in holding sway over the lucrative repair industry”, and
+that opening up the market would instead “present consumers with more choices” <a href="#Campbell">(8)</a>. The
+tech industry’s stance on this is clear, though, as shown by Apple and other companies’ strong arguments
+against this legislation. Right to Repair has a great amount of relevance for users living in rural areas,
+as companies often position their repair centers in major cities and areas with a large population.
+As long as companies like Apple restrict the places that people are allowed to go to repairs, this issue
+will continue. Currently, 17 states - including Nebraska - have introduced legislation that would force
+Apple to provide repair manuals and spare parts to third parties. It is worth noticing that if even one
+of these states passes the bill, its impact would span far outside that, as it is likely that large companies
+will not want to operate differently in a specific state. Quoting the NY State Assembly Majority Leader
+Joe Morelle, “[…] that could actually pass Right to Repair for the world, because manufactures aren’t
+going to provide products differently to people in one jurisdiction. They want to simplify their
+operations” <a href="#Shprintsen">(9)</a>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>The variety of points and arguments that have been provided in this paper show that “Right to Repair”
+is an issue of drastic importance today. As the owner of a maintainable product that is built from the
+same parts used in thousands of other devices, consumers should not be prevented from performing their
+own repairs and taking their devices apart. There are many situations where someone may want to do this,
+and it is often the case that users are unable to have their devices serviced by someone that is
+authorized to do so. While the stance of this article is clear, it should be noted that “Right to Repair”
+extends far beyond the situations that this paper has discussed. The legislation being proposed affects
+a vast area of products including any electronics with embedded software - home appliances, medical
+devices, and heavy machinery are some notable examples. The discourse surrounding this movement could
+have vast effects on how customers are able to interact with companies worldwide.</p>
+
+<p>For more information about the Right to Repair movement, see <a href="https://repair.org/">repair.org</a>.</p>
+
+          
+        </div>
+
+        
+        <div>
+            <h1>Source Citations</h1>
+            <ol>
+                
+                <li id="Sorrel" style="margin-bottom: 1em;">
+                    <span><b>"Everything You Need to Know about the New Files App on IOS 11"</b>, by Charlie Sorrel</span><br>
+                    <small><a href="https://www.cultofmac.com/485980/everything-you-need-to-know-about-new-files-app-ios-11/">https://www.cultofmac.com/485980/everything-you-need-to-know-about-new-files-app-ios-11/</a></small>
+                </li>
+                
+                <li id="Khan" style="margin-bottom: 1em;">
+                    <span><b>"The Apple Store Guide to Insanely Great Customer Service"</b>, by Humayun Khan</span><br>
+                    <small><a href="https://www.shopify.com/retail/119535811-the-apple-store-guide-to-insanely-great-customer-service">https://www.shopify.com/retail/119535811-the-apple-store-guide-to-insanely-great-customer-service</a></small>
+                </li>
+                
+                <li id="Anonymous" style="margin-bottom: 1em;">
+                    <span><b>"Confessions of an Apple Store Employee"</b>, by Anonymous</span><br>
+                    <small><a href="https://www.popularmechanics.com/technology/gadgets/a6520/confessions-of-an-apple-store-employee/">https://www.popularmechanics.com/technology/gadgets/a6520/confessions-of-an-apple-store-employee/</a></small>
+                </li>
+                
+                <li id="Gault" style="margin-bottom: 1em;">
+                    <span><b>"DHS Seized Aftermarket Apple Laptop Batteries From Independent Repair Expert Louis Rossman"</b>, by Matthew Gault and Jason Koebler</span><br>
+                    <small><a href="https://motherboard.vice.com/en_us/article/a3ppvj/dhs-seized-aftermarket-apple-laptop-batteries-from-independent-repair-expert-louis-rossman">https://motherboard.vice.com/en_us/article/a3ppvj/dhs-seized-aftermarket-apple-laptop-batteries-from-independent-repair-expert-louis-rossman</a></small>
+                </li>
+                
+                <li id="Apple" style="margin-bottom: 1em;">
+                    <span><b>"Authorized Service Provider Program"</b>, by Apple</span><br>
+                    <small><a href="https://support.apple.com/en-lamr/aasp-program">https://support.apple.com/en-lamr/aasp-program</a></small>
+                </li>
+                
+                <li id="Rossignol" style="margin-bottom: 1em;">
+                    <span><b>"Popular YouTuber Says Apple Won't Fix His IMac Pro Damaged While Disassembled"</b>, by Joe Rossignol</span><br>
+                    <small><a href="https://www.macrumors.com/2018/04/18/linus-tech-tips-imac-pro-repair-video/">https://www.macrumors.com/2018/04/18/linus-tech-tips-imac-pro-repair-video/</a></small>
+                </li>
+                
+                <li id="O-Camb" style="margin-bottom: 1em;">
+                    <span><b>"Apple's Secret Repair Kill Switch Hasn't Been Activated - Yet"</b>, by Adam O'Camb</span><br>
+                    <small><a href="https://ifixit.org/blog/11673/t2-mac-repairs-test/">https://ifixit.org/blog/11673/t2-mac-repairs-test/</a></small>
+                </li>
+                
+                <li id="Campbell" style="margin-bottom: 1em;">
+                    <span><b>"Apple Lobbies against 'Right to Repair' Proposal in Nebraska"</b>, by Mikey Campbell</span><br>
+                    <small><a href="https://appleinsider.com/articles/17/03/09/apple-lobbies-against-right-to-repair-proposal-in-nebraska">https://appleinsider.com/articles/17/03/09/apple-lobbies-against-right-to-repair-proposal-in-nebraska</a></small>
+                </li>
+                
+                <li id="Shprintsen" style="margin-bottom: 1em;">
+                    <span><b>"Apple accused of overpricing, restricting device repairs"</b>, by Alex Shprintsen</span><br>
+                    <small><a href="https://www.cbc.ca/news/thenational/complete-control-apple-accused-of-overpricing-restricting-device-repairs-1.4859099">https://www.cbc.ca/news/thenational/complete-control-apple-accused-of-overpricing-restricting-device-repairs-1.4859099</a></small>
+                </li>
+                
+            </ol>
+        </div>
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

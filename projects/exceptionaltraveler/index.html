@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Exceptional Traveler</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Exceptional Traveler">
+<meta name="twitter:description" content="An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Exceptional Traveler">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/exceptionaltraveler/">
+<meta name="og:description" content="An implementation of the Traveling Salesperson Problem using the fundamentals of Exceptional Programming.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/ExceptionalTraveler">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/ExceptionalTraveler/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/mit/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">MIT License</span>
+        </a>
+        
+        <a class="link" href="https://medium.com/pointer-io/exceptional-programming-62ea8150f61f">
+            <object class="link__img" data="https://medium.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Exceptional Programming – Pointer IO – Medium</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <blockquote>
+  <p>My programming is always Exceptional.</p>
+</blockquote>
+
+<p>This program is a joke. It is not serious. Please do not take this program seriously. It is not a good demonstration of my programming skills. Do not use this program as reference material. Please don’t use this program to educate yourself or others on Java programming. Avoid looking at this program for extended amounts of time. If you experience dizziness or a loss of balance while viewing this program, stop staring at it in awe and seek medical help immediately. If you feel the effects of depression or anxiety after becoming aware of this program’s existence, please see a qualified counselor for assistance.</p>
+
+<p>The idea for this program was taken from Chet Haase’s article for Pointer IO on <a href="https://medium.com/pointer-io/exceptional-programming-62ea8150f61f">Exceptional Programming</a>, which describes a programming style using just try/catch blocks and exceptions as the only control structure.</p>
+
+<p>This specific program takes a set of coordinates as input and uses a basic double neighbor heuristic to find the (probably) shortest (ish) possible path that crosses all of the points. It also keeps track of the total distance that has been covered, and outputs it with all of the points at the end of the program.</p>
+
+<h2 id="setup">Setup</h2>
+
+<p>Obviously, this is a Java program. In order to run this program, download the source code and run the following commands:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac Main.java
+java Main
+</code></pre></div></div>
+
+<p>The program will then prompt you to input coordinates, after which it will pass the coordinates to <code class="language-plaintext highlighter-rouge">TravelingSalesPerson.java</code>, which will calculate and output the resulting order.</p>
+
+<h2 id="guidelines">Guidelines</h2>
+
+<p>The article is a little vague about the requirements for a program to be “Exceptional”, but a code snippet from the article establishes a few guidelines, from which I have made up some more specific rules for this program.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+    <span class="n">someMethod</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">NormalException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="n">anotherMethod</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">NormalException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">yetAnotherMethod</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">NormalException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">NormalException</span><span class="o">(</span><span class="s">"Everything's fine"</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">NormalException</span><span class="o">(</span><span class="s">"Everything's fine"</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The basic rules stated in the article were as follows:</p>
+
+<ul>
+  <li>Each statement must be in its own “try” block.</li>
+  <li>No other control structures may be used (although not specifically stated, this would include <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else</code>, <code class="language-plaintext highlighter-rouge">while</code>, <code class="language-plaintext highlighter-rouge">for</code>, and even <code class="language-plaintext highlighter-rouge">return</code>).</li>
+  <li>Every statement must throw an exception in order to progress further in the program.</li>
+  <li>The details must wait for the final release</li>
+</ul>
+
+<h3 id="inferences">Inferences</h3>
+
+<p>As it has been over a year since the article was written and there have been no updates (this is to be expected, given that the article was written almost entirely as a joke), this snippet was likely only provided to illustrate how ridiculous the idea of actually writing a program using this stupid and inefficient style would be. That said, there are some useful bits of knowledge that can be extracted from it.</p>
+
+<ul>
+  <li>While methods can be called, no method may return a value.</li>
+  <li>Despite relying partially on the “chronological control structure” (see <a href="#chronological-order">this</a>), <code class="language-plaintext highlighter-rouge">finally</code> blocks are allowed.</li>
+  <li>The only things allowed directly inside of a <code class="language-plaintext highlighter-rouge">catch</code> or <code class="language-plaintext highlighter-rouge">finally</code> block are:
+    <ul>
+      <li>Another try/catch(/finally) block.</li>
+      <li>A <code class="language-plaintext highlighter-rouge">throw</code> statement.</li>
+    </ul>
+  </li>
+  <li>As exceptions must be thrown in each statement, it is impossible to instantiate an object (without throwing an exception in its constructor).
+    <ul>
+      <li>The Reflection APIs might bypass this rule, but in my opinion are not worth the effort.</li>
+    </ul>
+  </li>
+  <li>The only way a value can be returned is by modifying a variable with a scope larger than that of the current function, and throwing an exception (that is not caught within the function) to signify its “end”.</li>
+</ul>
+
+<h3 id="modifications">Modifications</h3>
+
+<p>Now, as I was writing the program, these rules turned out to be unexpectedly strict, and were especially annoying when working with the standard Java APIs such as <code class="language-plaintext highlighter-rouge">List</code> or <code class="language-plaintext highlighter-rouge">Scanner</code>. As such, I made a few modifications/exceptions (ha) to these rules.</p>
+
+<ul>
+  <li>Variable declarations do not count as statements (it shouldn’t matter, as long as they only define the scope of a variable)</li>
+  <li>Methods in Java APIs are not subject to these rules (and therefore can return values)</li>
+  <li>Even if a specific statement does not throw an exception, the try/catch(/finally) block that it is in MUST throw one eventually.</li>
+</ul>
+
+<h3 id="explanations">Explanations</h3>
+
+<h4 id="chronological-order">Chronological Order</h4>
+
+<p>As programs by definition are meant to run in chronological order, I had a bit of an internal debate as to whether multiple consecutive statements should be allowed - and if not, does the restriction include the <code class="language-plaintext highlighter-rouge">finally</code> block? Eventually, I decided on “no”, but decided to allow the <code class="language-plaintext highlighter-rouge">finally</code> block on one condition:</p>
+
+<ul>
+  <li>if a <code class="language-plaintext highlighter-rouge">finally</code> block is used, an exception must be thrown in the try/catch/finally block that it is a part of.</li>
+</ul>
+
+<p>This allows one specific functionality which is necessary in order to make use of the standard Java APIs: throwing an exception even if one is not thrown by a statement (or throwing a different one if it is).</p>
+
+<h4 id="statements-without-exceptions">Statements Without Exceptions</h4>
+
+<p>If a statement does not always throw an exception, it is fairly easy to modify a try/catch block so that it does:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+    <span class="n">willNotThrowAnException</span><span class="o">();</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="n">e</span><span class="o">;</span> <span class="c1">// this does not do anything</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">ArbitraryException</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>There. Now the method <code class="language-plaintext highlighter-rouge">willNotThrowAnException()</code> will always throw an <code class="language-plaintext highlighter-rouge">ArbitraryException</code> when it is run, right? However… what if you want a different result in the event that an exception <em>is</em> thrown by the method? If <code class="language-plaintext highlighter-rouge">willNotThrowAnException()</code> throws an exception in this snippet, then even though it gets passed to the <code class="language-plaintext highlighter-rouge">catch</code> block (which throws it again), the <code class="language-plaintext highlighter-rouge">finally</code> block is still run before the original exception is thrown, effectively overwriting it with the <code class="language-plaintext highlighter-rouge">ArbitraryException</code> either way. In order to combat this, I racked my brain and actually took advantage of this overwriting behavior to come up with this uselessly complex snippet:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nf">ExceptionNotThrownException</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">throw</span> <span class="n">e</span><span class="o">;</span>
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">mightThrowAnException</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">ExceptionThrownException</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ExceptionThrownException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// an exception has been thrown</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">ExceptionNotThrownException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// an exception has not been thrown</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Yep, this is definitely complicated and stupid. Just what I needed! Now, if <code class="language-plaintext highlighter-rouge">mightThrowAnException()</code> throws an exception, it will overwrite the <code class="language-plaintext highlighter-rouge">ExceptionNotThrownException</code> being thrown in the original <code class="language-plaintext highlighter-rouge">try</code> block and replace it with its own <code class="language-plaintext highlighter-rouge">ExceptionThrownException</code>, altering the flow of the program.</p>
+
+<h4 id="assertions">Assertions</h4>
+
+<p>As the primary joy that comes from Exceptional Programming is coming up with a way to throw an exception in a specific situation, I also added my own rule regarding the use of assertions:</p>
+
+<ul>
+  <li>One can not assert.</li>
+</ul>
+
+<p>Another possible argument for this is that assertions are intended mainly for use as tests and should not show up in the code of an actual application.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Please do not contribute to this project, it is horrific enough already. However, if you would like to contribute, you can see <a href="https://github.com/fennifith/ExceptionalTraveler/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a> for more information.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/exceptionaltraveler/">
+                <time class="dt-published dt-updated" datetime="2019-01-14T02:33:03Z">January 14, 2019</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

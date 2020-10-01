@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>IconData Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="IconData Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="IconData Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/docs/app/src/main/java/com/james/status/data/icon/IconData.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="IconData">IconData</a></li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--app--src--main--java--com--james--status--data--icon--icondatajava"><a href="./../../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../../index">app</a> &gt; <a href="./../../../../../../../index">src</a> &gt; <a href="./../../../../../../index">main</a> &gt; <a href="./../../../../../index">java</a> &gt; <a href="./../../../../index">com</a> &gt; <a href="./../../../index">james</a> &gt; <a href="./../../index">status</a> &gt; <a href="./../index">data</a> &gt; <a href="./index">icon</a> &gt; <strong>IconData.java</strong></h4>
+
+<h2 id="init"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L129">init</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">protected</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Initialize all of the settings / variables of the icon to their 
+preference values. If it’s the first init, this will also set up 
+the animated attributes; if not, it will simply update them to match 
+their ‘default’ values.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>isFirstInit</td>
+      <td>Whether this is the first initialization of the icon (this method may be called externally to update values on a preference change without restarting Status’s entire service).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="onmessage"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L242">onMessage</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called when a message is sent to the icon from an external 
+service. This is mainly used for the NotificationIconData, so 
+that the NotificationService can send it information without 
+calling a static method or holding a direct reference to it.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>message</td>
+      <td>The message that was sent.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="requestredraw"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L254">requestReDraw</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">final</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called to request that the icon be drawn again; indicates that 
+an attribute of the icon has changed that the user should be 
+made aware of.</p>
+
+<h2 id="isvisible"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L264">isVisible</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">final</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Evaluates whether the icon should be visible on the screen.</p>
+
+<p><strong>Returned Value:</strong> True if the icon should be drawn.</p>
+
+<h2 id="isdefaultvisible"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L273">isDefaultVisible</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the icon should be visible by default.</p>
+
+<p><strong>Returned Value:</strong> True if the icon should be visible by default.</p>
+
+<h2 id="canhazicon"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L283">canHazIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the element has the ability to draw an icon 
+(the Data icon, for example, is only text and will never contain 
+an icon).</p>
+
+<p><strong>Returned Value:</strong> True if the element can draw an icon.</p>
+
+<h2 id="hasicon"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L295">hasIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the element should have an icon, given its current 
+state and preferences.</p>
+
+<p><strong>Returned Value:</strong> True if the element should have an icon.</p>
+
+<h2 id="canhaztext"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L305">canHazText</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the element has the ability to draw text data 
+(the NFC icon, for example, is only an indicator and can never 
+contain any text).</p>
+
+<p><strong>Returned Value:</strong> True if the element can draw text.</p>
+
+<h2 id="hastext"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L317">hasText</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the element should have any text, given its current 
+state and preferences.</p>
+
+<p><strong>Returned Value:</strong> True if the element should have text.</p>
+
+<h2 id="string"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L327">String</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<p>Get an array of the app permissions required for the icon to function (if any). 
+Returns an empty array by default.</p>
+
+<p><strong>Returned Value:</strong> A String[] of the permissions required by the icon.</p>
+
+<h2 id="getreceiver"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L337">getReceiver</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Get the BroadcastReceiver tied to the icon.</p>
+
+<p><strong>Returned Value:</strong> The BroadcastReceiver instance tied to the icon.</p>
+
+<h2 id="getintentfilter"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L346">getIntentFilter</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">IntentFilter</code></p>
+
+<p>Get the IntentFilter that the icon receives updates from.</p>
+
+<p><strong>Returned Value:</strong> An IntentFilter that the icon receives updates from.</p>
+
+<h2 id="register"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L355">register</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Register the icon to listen for updates. <code class="language-plaintext highlighter-rouge">requestRedraw()</code> can be called after this.</p>
+
+<h2 id="unregister"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L364">unregister</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Unregister the icon so that it no longer receives any updates. <code class="language-plaintext highlighter-rouge">requestRedraw()</code> should no longer 
+be called after this.</p>
+
+<h2 id="setbackgroundcolor"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L396">setBackgroundColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Determines the color of the icon based on various settings, 
+some of which are icon-specific.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>color</td>
+      <td>the color to be drawn behind the icon</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="seticoncolor"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L416">setIconColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the icon color manually.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iconColor</td>
+      <td>the color to use to draw the icon</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="settextcolor"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L429">setTextColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the text color manually.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>textColor</td>
+      <td>the color to use to draw the text</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="needsdraw"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L475">needsDraw</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determine whether the icon needs to have another frame drawn.</p>
+
+<p><strong>Returned Value:</strong> True if the icon should be re-drawn for the next frame.</p>
+
+<h2 id="updateanimatedvalues"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L495">updateAnimatedValues</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Update the animated attributes of the icon to match the current system 
+time.</p>
+
+<h2 id="draw"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L527">draw</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Draws the icon on a canvas.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>canvas</td>
+      <td>the canvas to draw on</td>
+    </tr>
+    <tr>
+      <td>x</td>
+      <td>the x position (LTR px) to start drawing the icon at</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>the available width for the icon to be drawn within</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getwidth"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L569">getWidth</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">int</code></p>
+
+<p>Returns the estimated width (px) of the icon, or -1 
+if the icon needs to know the available space 
+first.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>height</td>
+      <td>the height (px) to scale the icon to</td>
+    </tr>
+    <tr>
+      <td>available</td>
+      <td>the available width for the icon, or -1 if not yet calculated</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the estimated width (px) of the icon</p>
+
+<h2 id="getpreferences"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L605">getPreferences</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">List&lt;BasePreferenceData&gt;</code></p>
+
+<p>Obtain a list of all of the “preferences” that can be used to modify the icon 
+in the user-facing settings UI.</p>
+
+<p><strong>Returned Value:</strong> A list of the preferences that can be used to modify the icon.</p>
+
+<h2 id="geticonstylesize"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L867">getIconStyleSize</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">int</code></p>
+
+<p>Get the amount of icons that each “icon style” should contain.</p>
+
+<p><strong>Returned Value:</strong> An integer signifying the amount of icons that each style should contain.</p>
+
+<h2 id="string-1"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L877">String</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<p>Obtain an array containing user-facing “names” of each icon in the 
+styles.</p>
+
+<p><strong>Returned Value:</strong> An array containing user-facing “names” of each icon in the style.</p>
+
+<h2 id="geticonstyles"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L888">getIconStyles</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">List&lt;IconStyleData&gt;</code></p>
+
+<p>Get a list of all of the available icon styles for the icon.</p>
+
+<p><strong>Returned Value:</strong> A list of all of the available icon styles for the icon.</p>
+
+<h2 id="addiconstyle"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L907">addIconStyle</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">final</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Add a new icon style to the styles that can be used by the element. This 
+verifies the size of the style, then writes it to the icon’s preferences.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>style</td>
+      <td>The new icon style to be added to the list of styles used by the element.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="removeiconstyle"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L927">removeIconStyle</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">final</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Remove an icon style from the styles that can be used by the element.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>style</td>
+      <td>The style to be removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="string-2"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/icon/IconData.java#L939">String</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<p>Get a list of the arguments that can be used to identify the icon in 
+SharedPreferences.</p>
+
+<p><strong>Returned Value:</strong> A String[] of the arguments that can be used to identify the icon in SharedPreferences.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A powerful and simple library to open issues on GitHub directly from your app. ">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>heinrichreimer/android-issue-reporter</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="heinrichreimer/android-issue-reporter">
+<meta name="twitter:description" content="A powerful and simple library to open issues on GitHub directly from your app. ">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="heinrichreimer/android-issue-reporter">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/android-issue-reporter/">
+<meta name="og:description" content="A powerful and simple library to open issues on GitHub directly from your app. ">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/android-issue-reporter">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/android-issue-reporter/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/mit/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">MIT License</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/heinrichreimer">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/5065698?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">heinrichreimer</span>
+        </a>
+        
+        <a class="link" href="https://github.com/paolorotolo">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/5623301?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">paolorotolo</span>
+        </a>
+        
+        <a class="link" href="https://github.com/rosenpin">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/5289630?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">rosenpin</span>
+        </a>
+        
+        <a class="link" href="https://github.com/pinpong">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/1012532?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">pinpong</span>
+        </a>
+        
+        <a class="link" href="https://github.com/rotolonico">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/8409175?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">rotolonico</span>
+        </a>
+        
+        <a class="link" href="https://github.com/aminecmi">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/510304?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">aminecmi</span>
+        </a>
+        
+        <a class="link" href="https://github.com/kabouzeid">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/7303830?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">kabouzeid</span>
+        </a>
+        
+        <a class="link" href="https://github.com/patrick91">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/667029?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">patrick91</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/RiccardoBusetti">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/15819674?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">RiccardoBusetti</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p><img src="http://i.imgur.com/CoPArlm.png" alt="Icon" /></p>
+
+<h1 id="android-issue-reporter">android-issue-reporter</h1>
+
+<p><a href="http://android-arsenal.com/details/1/3413"><img src="https://img.shields.io/badge/Android%20Arsenal-android--issue--reporter-brightgreen.svg?style=flat&amp;v=2" alt="Android Arsenal" /></a>
+<a href="https://jitpack.io/#com.heinrichreimersoftware/android-issue-reporter"><img src="https://jitpack.io/v/com.heinrichreimersoftware/android-issue-reporter.svg" alt="JitPack" /></a>
+<a href="https://travis-ci.org/heinrichreimer/android-issue-reporter"><img src="https://travis-ci.org/heinrichreimer/android-issue-reporter.svg?branch=master" alt="Build Status" /></a>
+<a href="https://github.com/heinrichreimer/android-issue-reporter/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/heinrichreimer/android-issue-reporter.svg" alt="License" /></a></p>
+
+<p>Based on <a href="https://github.com/PaoloRotolo">Paolo Rotolo</a>’s <a href="https://github.com/PaoloRotolo/GittyReporter">Gitty Reporter</a></p>
+
+<p>Is your Inbox full of bug reports and requests from your users?</p>
+
+<p><em>android-issue-reporter</em> is a new material designed library to report issues from your app directly to GitHub, even without an account.</p>
+
+<h2 id="demo">Demo</h2>
+<p>A demo app is available on Google Play:</p>
+
+<p><a href="https://play.google.com/store/apps/details?id=com.heinrichreimersoftware.androidissuereporter.example">
+	<img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="60" />
+</a></p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="http://i.imgur.com/ADkPQMo.png" alt="material-drawer" /></th>
+      <th style="text-align: center"><img src="http://i.imgur.com/fcFmJ5E.png" alt="material-drawer" /></th>
+      <th style="text-align: center"><img src="http://i.imgur.com/dJYonBW.png" alt="material-drawer" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">GitHub bot</td>
+      <td style="text-align: center">Include device info</td>
+      <td style="text-align: center">Demo</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dependency">Dependency</h2>
+
+<p><em>android-issue-reporter</em> is available on <a href="https://jitpack.io/#com.heinrichreimersoftware/android-issue-reporter"><strong>jitpack.io</strong></a></p>
+
+<p><strong>Gradle dependency:</strong></p>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">repositories</span> <span class="o">{</span>
+    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">'https://jitpack.io'</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="s1">'com.heinrichreimersoftware:android-issue-reporter:1.3.1'</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Get the latest dependency at <a href="https://jitpack.io/#com.heinrichreimersoftware/android-issue-reporter">jitpack.io</a>.</p>
+
+<h2 id="how-to-use-with-issuereporterlauncher">How to use (with <code class="language-plaintext highlighter-rouge">IssueReporterLauncher</code>)</h2>
+<p>Just start the issue reporter directly from your activity using the launcher builder:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">IssueReporterLauncher</span><span class="o">.</span><span class="na">forTarget</span><span class="o">(</span><span class="s">"HeinrichReimer"</span><span class="o">,</span> <span class="s">"android-issue-reporter"</span><span class="o">)</span>
+        <span class="c1">// [Recommended] Theme to use for the reporter. </span>
+        <span class="c1">// (See #theming for further information.)</span>
+        <span class="o">.</span><span class="na">theme</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">Theme_App_Dark</span><span class="o">)</span>
+        <span class="c1">// [Optional] Auth token to open issues if users don't have a GitHub account</span>
+        <span class="c1">// You can register a bot account on GitHub and copy ist OAuth2 token here.</span>
+        <span class="c1">// (See #how-to-create-a-bot-key for further information.)</span>
+        <span class="o">.</span><span class="na">guestToken</span><span class="o">(</span><span class="s">"28f479f73db97d912611b27579aad7a76ad2baf5"</span><span class="o">)</span>
+        <span class="c1">// [Optional] Force users to enter an email adress when the report is sent using</span>
+        <span class="c1">// the guest token.</span>
+        <span class="o">.</span><span class="na">guestEmailRequired</span><span class="o">(</span><span class="kc">true</span><span class="o">)</span>
+        <span class="c1">// [Optional] Set a minimum character limit for the description to filter out</span>
+        <span class="c1">// empty reports.</span>
+        <span class="o">.</span><span class="na">minDescriptionLength</span><span class="o">(</span><span class="mi">20</span><span class="o">)</span>
+        <span class="c1">// [Optional] Include other relevant info in the bug report (like custom variables)</span>
+        <span class="o">.</span><span class="na">putExtraInfo</span><span class="o">(</span><span class="s">"Test 1"</span><span class="o">,</span> <span class="s">"Example string"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">putExtraInfo</span><span class="o">(</span><span class="s">"Test 2"</span><span class="o">,</span> <span class="kc">true</span><span class="o">)</span>
+        <span class="c1">// [Optional] Disable back arrow in toolbar</span>
+        <span class="o">.</span><span class="na">homeAsUpEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h2 id="how-to-use-extending-issuereporteractivity">How to use (extending <code class="language-plaintext highlighter-rouge">IssueReporterActivity</code>)</h2>
+<p>Just create a new <code class="language-plaintext highlighter-rouge">Activity</code> that extends <code class="language-plaintext highlighter-rouge">IssueReporterActivity</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleReporterActivity</span> <span class="kd">extends</span> <span class="nc">IssueReporterActivity</span> <span class="o">{</span>
+    <span class="c1">// Where should the issues go?</span>
+    <span class="c1">// (http://github.com/username/repository)</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="nc">GithubTarget</span> <span class="nf">getTarget</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">GithubTarget</span><span class="o">(</span><span class="s">"username"</span><span class="o">,</span> <span class="s">"repository"</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// [Optional] Auth token to open issues if users don't have a GitHub account</span>
+        <span class="c1">// You can register a bot account on GitHub and copy ist OAuth2 token here.</span>
+        <span class="c1">// (See #how-to-create-a-bot-key for further information.)</span>
+        <span class="n">setGuestToken</span><span class="o">(</span><span class="s">"28f479f73db97d912611b27579aad7a76ad2baf5"</span><span class="o">)</span>
+        
+        <span class="c1">// [Optional] Force users to enter an email adress when the report is sent using</span>
+        <span class="c1">// the guest token.</span>
+        <span class="n">setGuestEmailRequired</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        
+        <span class="c1">// [Optional] Set a minimum character limit for the description to filter out</span>
+        <span class="c1">// empty reports.</span>
+        <span class="n">setMinimumDescriptionLength</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// [Optional] Include other relevant info in the bug report (like custom variables)</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSaveExtraInfo</span><span class="o">(</span><span class="nc">ExtraInfo</span> <span class="n">extraInfo</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">extraInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Test 1"</span><span class="o">,</span> <span class="s">"Example string"</span><span class="o">);</span>
+        <span class="n">extraInfo</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Test 2"</span><span class="o">,</span> <span class="kc">true</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="theming">Theming</h2>
+<p>Create a theme extending <code class="language-plaintext highlighter-rouge">Theme.IssueReporter</code> theme and set it to the launcher using <code class="language-plaintext highlighter-rouge">IssueReporterLauncher.theme(@StyleRes int theme)</code> or declare it in <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> if you have extended <code class="language-plaintext highlighter-rouge">IssueReporterActivity</code>:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"Theme.App.Light"</span> <span class="na">parent=</span><span class="s">"Theme.IssueReporter"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"colorPrimary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/item&gt;</span><span class="c">&lt;!-- required --&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"colorPrimaryDark"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/item&gt;</span><span class="c">&lt;!-- required --&gt;</span>
+    <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"colorAccent"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/item&gt;</span><span class="c">&lt;!-- required --&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">Theme.IssueReporter.Light</code> or <code class="language-plaintext highlighter-rouge">Theme.IssueReporter.Light.DarkActionBar</code> as replacement if you want a light theme.</p>
+
+<h2 id="how-to-create-a-bot-key">How to create a bot key</h2>
+
+<ol>
+  <li>
+    <p>Create a new GitHub account.<br />
+<em>(You have to use a unique email address.)</em></p>
+  </li>
+  <li>
+    <p>Go to https://github.com/settings/tokens and create a new token using <kbd>Generate new token</kbd>.<br />
+<em>(You only need to give the bot the <code class="language-plaintext highlighter-rouge">public_repo</code> permission.)</em></p>
+  </li>
+  <li>
+    <p>Copy the OAuth access token you get at the end of the setup.</p>
+  </li>
+  <li>
+    <p>Override <code class="language-plaintext highlighter-rouge">getGuestToken()</code> in your reporter activity like this:</p>
+
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Override</span>
+<span class="kd">public</span> <span class="nc">String</span> <span class="nf">getGuestToken</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"&lt;your token here&gt;"</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="limitations">Limitations</h2>
+<ul>
+  <li>You can’t use two factor authentication.</li>
+</ul>
+
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/android-issue-reporter/">
+                <time class="dt-published dt-updated" datetime="2018-10-23T15:29:12Z">October 23, 2018</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

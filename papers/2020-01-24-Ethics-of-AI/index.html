@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ethics of Artificial Intelligence – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An overview of the discourse surrounding &quot;ethical AI&quot; and its use in the Big Tech industry.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Ethics of Artificial Intelligence</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Ethics of Artificial Intelligence">
+<meta name="twitter:description" content="An overview of the discourse surrounding &quot;ethical AI&quot; and its use in the Big Tech industry.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Ethics of Artificial Intelligence">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2020-01-24 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/papers/2020-01-24-Ethics-of-AI/">
+<meta name="og:description" content="An overview of the discourse surrounding &quot;ethical AI&quot; and its use in the Big Tech industry.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">Ethics of Artificial Intelligence</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/papers/2020-01-24-Ethics-of-AI/">
+			<time class="dt-published" datetime="2020-01-24 00:00:00 +0000">January 24, 2020</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="https://www.congress.gov/bill/116th-congress/house-bill/2231/text">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Algorithmic Accountability Act of 2019</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://responsibledata.io/">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Responsible Data Movement</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p><span class="text__attention">The field of “artificial intelligence”</span> is
+gaining increasingly noticeable relevance in the software industry. Frequently
+used in headlines and marketing, “AI” is widely regarded as an inaccurate
+buzzword, especially due to the many abstract and vague arguments derived from
+its prevalence in science fiction. The cultural definition is often confused
+with its technical meaning: “a system’s ability to correctly interpret external
+data, to learn from such data, and to use those learnings to achieve specific
+goals and tasks through flexible adaptation” <a href="#Kaplan">(5)</a>. Meanwhile, the
+seemingly invasive approach of this technology to take over more parts of human
+life has brought many ethical concerns to light. Critics argue that the spread
+of artificial intelligence poses risks to human dignity, accountability,
+transparency, and algorithmic bias. As this technology spreads, it is important
+to ensure that its decisions can be justified when being applied to the large
+scales afforded by modern computing.</p>
+
+<p>The main defining feature in what is recognized as “artificial intelligence” is
+how it makes decisions. Most traditional computer programs, regardless of scale,
+are only capable of doing exactly what their users tell them to do. Conditions
+must be strictly defined, and all output is traceable; any responsibility for
+the program lies with its creator, since all behavior is explicitly specified.
+AI programs, on the other hand, have the capability to learn and inference from
+vast quantities of data in order to determine the best action to take. A naive
+approach to creating an AI might involve the construction of a large decision
+tree that updates on each execution, correcting itself and effectively learning
+from its mistakes. Practical applications of this often require huge amounts of
+data collection and processing power. As a result, tracing the specific cause of
+an output is difficult if not impossible to achieve given the amount of
+information used in this process.</p>
+
+<h2 id="background-of-practical-use">Background of Practical Use</h2>
+
+<p>In recent years, the dependence on AI in widely used systems has vastly
+increased as a result of new innovation and a realization of useful
+applications. It has seen a wide range of uses, including interactive video
+games, automotive systems, and social moderation. This presence has provided a
+noticeable boost to the “data economy”, creating an incentive for companies to
+collect more information about their customers to benefit their business
+<a href="#Helbing">(3)</a>. Sidewalk Labs, a Google-affiliated company focused on urban
+infrastructure, is a prime example of the influence that this data can have. In
+2017, Sidewalk Labs entered negotiations with a Canadian government agency,
+Waterfront Toronto, to redevelop a part of the city’s waterfront area as a
+testbed for emerging technologies. The initiative claims to target issues such
+as the sustainability, accessibility, and prosperity of urban communities while
+improving the quality of life for all <a href="#Sidewalk">(4)</a>. A planning document
+created by the company prior to this arrangement involved the use of tax and
+financing authority, local policing powers, location tracking, and an absurd
+amount of individual data collection from inhabitants <a href="#Cardoso">(1)</a>. This data
+would be used to project accountability and reward good behavior, involving the
+establishment of a social credit system and becoming integrated with the economy
+in the area. The idea would effectively call for a complete algorithmic
+governance with no visible human involvement; a dystopian sci-fi writer’s dream.</p>
+
+<p>Sidewalk Labs is still operating today, although its plans have been
+significantly reformed following heavy criticism. Shoshana Zuboff, the author of
+The Age Of Surveillance Capitalism, denounced the initiative as a “for-profit
+China” that would “use digital infrastructure to modify and direct social and
+political behavior”. Other critics have cited privacy concerns and worries that
+the proposal grants too much governing power for a vaguely defined purpose. This
+is largely representative of the general discourse around artificial
+intelligence, plagued with issues of transparency and accountability that are
+largely ignored by its users. The most significant problems of AI are not
+technical or philosophical, but fundamental in how it is used in the real world.
+As the scale and influence of technology increases, so does the threat it
+presents. Companies grow, technology becomes more relevant - “the trend goes
+from programming computers to programming people” <a href="#Helbing">(3)</a>.</p>
+
+<h2 id="issues-and-discourse">Issues and Discourse</h2>
+
+<p>A computer - even an AI - cannot understand purpose, and only does exactly what
+its implementation tells it to. If this implementation is vague or obscured,
+lacking accountability or understanding, it just opens the door to
+vulnerabilities and failures in society. Artificial intelligence is only a means
+to an end, and even when it is used within its definition, it is just one
+component of the systems that are built around it. Replacing jobs and
+undermining human dignity is not something that is specific to artificially
+intelligent systems, but the furthered demand and influence of technology as a
+whole. The implementers of these systems need to have an understanding of the
+problems caused by disregarding ethical context.</p>
+
+<p>Examples of racial and sexist bias in AI are plentiful. The Apple Card, a credit
+card system launched in August 2019, has been the subject of a wide amount of
+discourse after many discovered seemingly sexist determinations of credit limits
+given to them <a href="#Hansson">(2)</a>. Facial recognition programs have failed to
+recognize people with darker skin tones, and word embedding technologies have
+shown bias towards European names <a href="#Smith">(10)</a>. Meanwhile, surveillance
+companies in China are using AI to create “Uyghur analytics”, an example of
+racial profiling that specifically targets a minority group with the intent of
+persecution <a href="#Rollet">(8)</a>. However, these are not problems that can be
+prevented with a better algorithm or more experience, nor can they be solved by
+theorizing about a future utopia in which technology rules us all. These are
+social and political issues that affect how any technology is built and used
+today. It is the decisions about the design and use of this software that are
+made by its creators, either without enough consideration or with the wrong
+consideration, that have led to this injustice.</p>
+
+<p>Many experts in the field believe that a lot of these problems are caused by a
+general lack of diversity in the workforce. Nareissa Smith, a journalist with
+experience in law and technology, shares these concerns: “it’s unsurprising that
+companies staffed primarily by white men would fail to recognize the ways that
+their software cause problems for women, people of color, and other groups”
+<a href="#Smith">(10)</a>. Excluding certain groups from the development process of these
+technologies, whether intentional or not, has clear effects on the industry. The
+institutional bias that still governs much of society is not exclusive to
+software, and companies need to have a better representation of these groups.</p>
+
+<h2 id="evaluation">Evaluation</h2>
+
+<p>Recently, US lawmakers have introduced the Algorithmic Accountability Act, a
+bill that would require companies to audit large-scale automated systems for
+potential bias. The current legislation only directs companies to find a
+solution, but it marks a notable start to enforcing that technology must remain
+accountable in today’s world <a href="#Smith">(10)</a>. Regulating the influence of this
+software is important because of its ability to facilitate discrimination at a
+large scale, and a clear review of this technology should be mandatory to
+prevent carelessness and protect human rights in an industry where they are
+often ignored.</p>
+
+<p>Many supporters of the bill also call for “explainable AI”, the idea that
+algorithms should always present justification for their decisions. This offers
+significant potential to increase the transparency of these systems, improving
+both understanding and trust. However, some worry that this concept could be
+misconstrued. Lizzie Kumar, a data scientist and graduate student at the
+University of Utah, explains that the justifications provided by these
+algorithms could be “far removed from what humans actually desire from an
+explanation” <a href="#Kumar">(6)</a>. Machine learning models can be both inscrutable and
+non-intuitive, making it difficult to determine if a decision was justified from
+a legal or ethical standpoint, and legislating to solve this issue might not
+necessarily improve that aspect <a href="#Selbst">(9)</a>.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>With the many ways that technology is becoming more integrated in everyday life,
+an understanding of the ways that it can affect its users is crucial in
+establishing a clear standard for its use. In the large automated systems that
+are enabled by AI, the injustices of discrimination and bias are easier to hide
+and have the potential for a much larger effect on humanity. Allowing companies
+to create opaque and unaudited systems with no human oversight is a significant
+cause for concern, and their increasing influence presents a considerable risk.
+However, it is important to consider cases where the technology is not the main
+culprit, and acknowledge the external factors that influence its use. While AI
+has the potential to provide clear and unbiased results, the biased and
+political motivation behind it is what shapes how it interacts with the real
+world.</p>
+
+          
+        </div>
+
+        
+        <div>
+            <h1>Source Citations</h1>
+            <ol>
+                
+                <li id="Cardoso" style="margin-bottom: 1em;">
+                    <span><b>"Sidewalk Labs Document Reveals Company's Early Vision for Data Collection, Tax Powers, Criminal Justice"</b>, by Tom Cardoso and Josh O'Kane</span><br>
+                    <small><a href="https://www.theglobeandmail.com/business/article-sidewalk-labs-document-reveals-companys-early-plans-for-data/">https://www.theglobeandmail.com/business/article-sidewalk-labs-document-reveals-companys-early-plans-for-data/</a></small>
+                </li>
+                
+                <li id="Hansson" style="margin-bottom: 1em;">
+                    <span><b>"About the Apple Card"</b>, by Jamie Heinemeier Hansson</span><br>
+                    <small><a href="https://dhh.dk/2019/about-the-apple-card.html">https://dhh.dk/2019/about-the-apple-card.html</a></small>
+                </li>
+                
+                <li id="Helbing" style="margin-bottom: 1em;">
+                    <span><b>"Will Democracy Survive Big Data and Artificial Intelligence?"</b>, by Dirk Helbing, Bruno S. Frey, Gerd Gigerenzer, Ernst Hafen, Michael Hagner, Yvonne Hofstetter, Jeroen van den Hoven, Roberto V. Zicari, Andrej Zwitter</span><br>
+                    <small><a href="https://doi.org/10.1007/978-3-319-90869-4_7">https://doi.org/10.1007/978-3-319-90869-4_7</a></small>
+                </li>
+                
+                <li id="Sidewalk" style="margin-bottom: 1em;">
+                    <span><b>"Introduction to the IDEA District"</b>, by Sidewalk Toronto</span><br>
+                    <small><a href="https://www.sidewalktoronto.ca/plans/introduction-to-the-idea-district/">https://www.sidewalktoronto.ca/plans/introduction-to-the-idea-district/</a></small>
+                </li>
+                
+                <li id="Kaplan" style="margin-bottom: 1em;">
+                    <span><b>"Siri, Siri, in My Hand: Who's the Fairest in the Land? On the Interpretations, Illustrations, and Implications of Artificial Intelligence"</b>, by Andreas Kaplan and Michael Haenlein</span><br>
+                    <small><a href="https://doi.org/10.1016/j.bushor.2018.08.004">https://doi.org/10.1016/j.bushor.2018.08.004</a></small>
+                </li>
+                
+                <li id="Kumar" style="margin-bottom: 1em;">
+                    <span><b>"Please Read These If You're "Doing" "Explainable" "AI""</b>, by Lizzie Kumar</span><br>
+                    <small><a href="https://iekumar.com/2019/11/06/please-read-these-if-youre-doing-explainable-ai/">https://iekumar.com/2019/11/06/please-read-these-if-youre-doing-explainable-ai/</a></small>
+                </li>
+                
+                <li id="McLeod" style="margin-bottom: 1em;">
+                    <span><b>"Sidewalk Labs Digital Update Brings New Details, but Many Questions Remain"</b>, by James McLeod</span><br>
+                    <small><a href="https://business.financialpost.com/technology/sidewalk-labs-digital-update-brings-new-details-but-many-questions-remain">https://business.financialpost.com/technology/sidewalk-labs-digital-update-brings-new-details-but-many-questions-remain</a></small>
+                </li>
+                
+                <li id="Rollet" style="margin-bottom: 1em;">
+                    <span><b>"Hikvision Markets Uyghur Ethnicity Analytics, Now Covers Up"</b>, by Charles Rollet</span><br>
+                    <small><a href="https://ipvm.com/reports/hikvision-uyghur">https://ipvm.com/reports/hikvision-uyghur</a></small>
+                </li>
+                
+                <li id="Selbst" style="margin-bottom: 1em;">
+                    <span><b>"The Intuitive Appeal of Explainable Machines"</b>, by Andrew D. Selbst and Solon Barocas</span><br>
+                    <small><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126971">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126971</a></small>
+                </li>
+                
+                <li id="Smith" style="margin-bottom: 1em;">
+                    <span><b>"The Intelligence Is Artificial. The Bias Isn't"</b>, by Nareissa Smith</span><br>
+                    <small><a href="http://www.lawandai.com/2019/05/28/the-intelligence-is-artificial-the-bias-isnt/">http://www.lawandai.com/2019/05/28/the-intelligence-is-artificial-the-bias-isnt/</a></small>
+                </li>
+                
+            </ol>
+        </div>
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>
