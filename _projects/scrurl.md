@@ -27,7 +27,7 @@ languages:
   - "JavaScript"
 isDocs: "false"
 isWiki: "false"
-pushed: "2018-09-21T02:42:29Z"
+pushed: "2020-10-01T19:08:58Z"
 ---
 
 Probably one of the worst things I've ever used my free time for, [this](https://jfenn.me/Scrurl/) is a script that displays scrolling text in the address bar. It is almost entirely useless. Please do not use it for anything. That said, if you want to make it any worse than it already is, please feel free to make a PR.
