@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>BaseRadialItem Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="BaseRadialItem Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="BaseRadialItem Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/radiallayout/docs/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="BaseRadialItem">BaseRadialItem</a></li>
+  <li><a href="CenteredRadialItem">CenteredRadialItem</a></li>
+  <li><a href="RadialItem">RadialItem</a></li>
+  <li><a href="RadialLayoutView">RadialLayoutView</a></li>
+  <li><a href="utils">utils /</a>
+    <ul>
+      <li><a href="utils/ConversionUtils">ConversionUtils</a></li>
+      <li><a href="utils/ImageUtils">ImageUtils</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--library--src--main--java--me--jfenn--radiallayout--baseradialitemjava"><a href="./../../../../../../../index">.</a> &gt; <a href="./../../../../../../index">library</a> &gt; <a href="./../../../../../index">src</a> &gt; <a href="./../../../../index">main</a> &gt; <a href="./../../../index">java</a> &gt; <a href="./../../index">me</a> &gt; <a href="./../index">jfenn</a> &gt; <a href="./index">radiallayout</a> &gt; <strong>BaseRadialItem.java</strong></h4>
+
+<h1 id="baseradialitem"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L12">BaseRadialItem</a></h1>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">abstract</code> <code class="language-plaintext highlighter-rouge">class</code></p>
+
+<p>A view container specifying info such as the size to scale the image 
+relative to the rest of the items and the distance that the view should be 
+from the center of the layout.</p>
+
+<h2 id="baseradialitem-1"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L44">BaseRadialItem</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<p>Creates a new container specifying info such as the size to scale the image 
+relative to the rest of the content and the distance the item should be 
+from the center.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>id</td>
+      <td>some arbitrary identifier</td>
+    </tr>
+    <tr>
+      <td>image</td>
+      <td>the bitmap to be displayed</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>the size to scale the image relative to other items</td>
+    </tr>
+    <tr>
+      <td>distance</td>
+      <td>the distance from the center to position the image at relative to other items</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="copy"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L74">copy</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">abstract</code> <code class="language-plaintext highlighter-rouge">BaseRadialItem</code></p>
+
+<p>Creates a copy of the BaseRadialItem by calling the constructor with itself as an argument.</p>
+
+<p><strong>Returned Value:</strong> a new instance of the BaseRadialItem with the same construction parameters</p>
+
+<h2 id="setradius"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L93">setRadius</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">abstract</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the radius of this BaseRadialItem and creates a new scaled bitmap if the current one does not match 
+the required dimensions.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>radius</td>
+      <td>the required radius of the circle</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getcircleimage"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L109">getCircleImage</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">abstract</code> <code class="language-plaintext highlighter-rouge">Bitmap</code></p>
+
+<p>Creates a new circular bitmap if the current one does not match the required dimensions, and returns it.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the current radial layout</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> a circular image bitmap</p>
+
+<h2 id="getmatrix"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L117">getMatrix</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">Matrix</code></p>
+
+<p>Creates a Matrix to scale the image to the correct dimensions on a Canvas.</p>
+
+<h2 id="needsframe"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L140">needsFrame</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Determines whether calling nextFrame() will result in any different values or not.</p>
+
+<p><strong>Returned Value:</strong> whether calling nextFrame() will result in any different values</p>
+
+<h2 id="nextframe"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L152">nextFrame</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Updates values to display the next frame of the item.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the view that the item is to be displayed in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="animateto"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L172">animateTo</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Animates this BaseRadialItem to the dimensions and position of the parameter.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>item</td>
+      <td>the item to animate to the position of</td>
+    </tr>
+    <tr>
+      <td>layout</td>
+      <td>the layout to be animated in</td>
+    </tr>
+    <tr>
+      <td>shadowRadius</td>
+      <td>the radius (in dp) of the shadow to be drawn</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="clickdown"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L198">clickDown</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Creates a bouncy scale animation intended for touch feedback.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the view that the item is to be displayed in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="clickup"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L210">clickUp</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Creates a bouncy scale animation intended for touch feedback.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the view that the item is to be displayed in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="clickback"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L222">clickBack</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Creates a bouncy scale animation intended for touch feedback.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the view that the item is to be displayed in</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="removefrom"><a href="https://github.com/fennifith/RadialLayout/blob/master/library/src/main/java/me/jfenn/radiallayout/BaseRadialItem.java#L235">removeFrom</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Removes the item from the layout.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>layout</td>
+      <td>the layout to be removed from</td>
+    </tr>
+  </tbody>
+</table>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

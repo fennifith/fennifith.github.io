@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AAAAAAAAAAAAAAAAAAAAAAAHHH – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AAAAAAAAAAAAAAAAAAAAAAAHHH</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AAAAAAAAAAAAAAAAAAAAAAAHHH">
+<meta name="twitter:description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AAAAAAAAAAAAAAAAAAAAAAAHHH">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2018-09-01 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/">
+<meta name="og:description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">AAAAAAAAAAAAAAAAAAAAAAAHHH</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/">
+			<time class="dt-published" datetime="2018-09-01 00:00:00 +0000">September  1, 2018</time></a>
+		</p>
+
+		<p>
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>It has been a little over a year since I left Windows altogether and started using Linux on all of my machines. In that time, I have learnt many uses of the Linux console, and forgotten just as many helpful commands and arguments. As I continued to use the Linux terminal, I quickly found myself browsing stack exchange and scouring man-pages 3-4 times a day, taking up a noticeable amount of my development time. Originally, as seen in one of the early commits to my <a href="/redirects/?t=github&amp;d=dotfiles">dotfiles</a> repository, I started to write a “help” file containing some of the more common commands that I could grep to quickly find the command/syntax for what I wanted to do, but I found myself wanting a little more functionality from it. Typing out “cat ~/help” and “grep drive mount” every time I wanted to mount a drive seemed unnecessary, and I began to want the ability to “stack” certain commands to avoid accidentally grep-ing lines from the wrong category (a note about “connecting to network drives” under “drive” would be unnecessarily returned when I was trying to connect to a network, for example).</p>
+
+<p>To solve this, well, what else could I have done but start a new project? Nothing could stop me now. I created another repository to add to my existing 70-some open-source projects without even flinching. As for my choice of language, this time I decided to go with <a href="https://golang.org/">Go</a> rather than sticking with <a href="https://npmjs.com/">NodeJS</a> which I used to make my previous small <a href="/projects/asciimg">console</a> <a href="/projects/passerator">programs</a>. I had seen Go used for a couple other projects that I liked and was getting curious about it, so this was a good opportunity to try it out.</p>
+
+<p>I found a very nice, well written <a href="https://medium.freecodecamp.org/writing-command-line-applications-in-go-2bc8c0ace79d">article</a> detailing how to set up a go development environment and start writing a basic program with it. Granted, it is two years old, but its instructions still hold up fairly well, as do its points about the benefits of using Go over another language. One thing I especially liked about it was the comparitively small amount of dependencies that Go uses, which is a weak point of NodeJS. It is also nice that when installing a dependency, Go actually downloads its source code directly to its “environment” (a folder that all of the Go projects are stored in) and builds it from source with the program that you write, making it fairly easy to eliminate any vulnerabilities from the software that is built with it. If that is considered a problem for this use case I do not know, but the sense of security is still very nice to have.</p>
+
+<p>The program that I ended up writing was appropriately dubbed “AAH”, or the “Annoyingly Advanced Helper”. Its source of information is two YAML-formatted configuration files: one stored in the “.config” directory that is automatically downloaded from the GitHub repository when the program is first run, and another stored directly in the home directory that can be created and edited by the user. In the program, the values from these two files are merged together, with the file in the home dir taking precedence. The file from the GitHub repository only contains information about general commands that work across most Linux distributions and don’t change much based on user preference, while the file that the user can create in their home dir is intended for commands specific to them and the Linux distribution that they use.</p>
+
+<p>When AAH is run with arguments, it reads the files for corresponding sets of nested keys. For example, if the arguments provided were “something stuff yes”, it would first look for the key “something”, then look inside it for the key “stuff”, and finally output the value of “yes”. If “yes” doesn’t exist, it will output the entire tree under “something stuff” - the same would happen if “stuff” and/or “something” were not present in either of the files. However, it isn’t always necessary to type out the entire key for a value. If “something” is the only key that starts with “some”, then passing “some stuff yes” would have the exact same result as typing out the whole key. This makes it significantly faster to find common information such as commands under the “network” key; instead of typing out “AAH network connect”, all that is necessary is “AAH net con”.</p>
+
+<p>On a side note, I also used a similar method of matching the start of the string when implementing the standard “–help” and “–version” arguments. As usual, “-h” and “–help” work, and so do “-v” and “–version”. However, “–v” and “-version” are also accepted without error, as is “-ver” and pretty much anything in-between. This isn’t exactly a design flaw since there is no way that one of these arguments could be confused with a key in one of the YAML files because of the starting “-“, but I would certainly like to see someone’s reaction if they were to mistype “–hel” expecting an error, then get the same output.</p>
+
+<p>Overall, considering that I have only spent a little over a day on this project, I am happy with the result. It fulfills its purpose nicely, and is quite good at doing it. You can find the project’s source code and installation instructions <a href="/projects/aah">here</a>.</p>
+
+<p>Also, shout out to <a href="https://github.com/codekidX">Ashish Shekar</a> for spotting my mistake building the binaries to publish on GitHub, which was creating <a href="/redirects/?t=github&amp;d=AAH/issues/7">a SIGSEGV</a> when the program tried to download a copy of the YAML file from GitHub.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

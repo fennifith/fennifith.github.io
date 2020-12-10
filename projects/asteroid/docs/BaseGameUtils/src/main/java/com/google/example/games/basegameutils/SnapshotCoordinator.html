@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>SnapshotCoordinator Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="SnapshotCoordinator Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="SnapshotCoordinator Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/asteroid/docs/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="BaseGameActivity">BaseGameActivity</a></li>
+  <li><a href="BaseGameUtils">BaseGameUtils</a></li>
+  <li><a href="GameHelper">GameHelper</a></li>
+  <li><a href="GameHelperUtils">GameHelperUtils</a></li>
+  <li><a href="SnapshotCoordinator">SnapshotCoordinator</a></li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--basegameutils--src--main--java--com--google--example--games--basegameutils--snapshotcoordinatorjava"><a href="./../../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../../index">BaseGameUtils</a> &gt; <a href="./../../../../../../../index">src</a> &gt; <a href="./../../../../../../index">main</a> &gt; <a href="./../../../../../index">java</a> &gt; <a href="./../../../../index">com</a> &gt; <a href="./../../../index">google</a> &gt; <a href="./../../index">example</a> &gt; <a href="./../index">games</a> &gt; <a href="./index">basegameutils</a> &gt; <strong>SnapshotCoordinator.java</strong></h4>
+
+<h1 id="snapshots"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L45">Snapshots</a></h1>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">class</code> <code class="language-plaintext highlighter-rouge">SnapshotCoordinator</code> <code class="language-plaintext highlighter-rouge">implements</code></p>
+
+<p>The SnapshotCoordinator is used to overcome some dangerous behavior when using Saved Game API 
+(aka Snapshots). The problem is caused by the not having way to prevent having the same file 
+opened multiple overlapping times. Also there is no way to stop the incorrect reusing of 
+the Snapshot contained in the OpenSnapshotResult object. It should be used once to write or be 
+closed. Multiple commits using the same snapshot will result in unrecoverable conflicts.</p>
+<p />
+
+<p>This class is used to encapsulate the access to the Snapshots API and enforce these semantics of 
+exclusive file access and one-time committing of metadata.</p>
+<p />
+
+<p>How to use this class</p>
+<p />
+
+<p>This class can be used as a drop-in replacement for Games.Snapshots. If the usage of the API 
+is inconsistent with enforced rules (any file can be open only once before closing it, and 
+snapshot data can only be committed once per open), then an IllegalStateException is thrown.</p>
+<p />
+
+<p>NOTE:The one exception to the drop-in replacement is that each call that returns a 
+PendingResult, that PendingResult MUST be processed by setting the ResultCallback 
+or bycalling await(). 
+This is important to make sure the open/closed book-keeping is accurate.</p>
+<p />
+
+<p>To make it easier to use Snapshots correctly, you should call SnapshotCoordinator.waitForClosed() 
+to obtain a PendingResult which will be resolved when the file is ready to be opened again.</p>
+
+<h2 id="getinstance"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L75">getInstance</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code> <code class="language-plaintext highlighter-rouge">SnapshotCoordinator</code></p>
+
+<p>Singleton for coordinating the Snapshots API. This is important since 
+we need to coordinate all operations through the same instance in order to 
+detect usages that would cause data corruption.</p>
+
+<p><strong>Returned Value:</strong> the singleton</p>
+
+<h2 id="isalreadyopen"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L95">isAlreadyOpen</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">synchronized</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns true if the named file is already opened. This is a synchronized 
+operation since it is highly likely that multiple threads are involved via AsyncTasks.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the filename to check</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> true if opened.</p>
+
+<h2 id="isalreadyclosing"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L106">isAlreadyClosing</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">synchronized</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns true if the named file is in the process of closing. This is a synchronized 
+operation since it is highly likely that multiple threads are involved via AsyncTasks.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the filename to check</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> true if closing.</p>
+
+<h2 id="setisclosing"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L117">setIsClosing</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">synchronized</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Records the fact that the named file is closing (which also includes committing the data). 
+This is a synchronized operation since it is highly likely that multiple threads 
+are involved via AsyncTasks.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the filename of interest.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setclosed"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L128">setClosed</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">synchronized</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Records the fact that the named file is closed. 
+This is a synchronized operation since it is highly likely that multiple threads 
+are involved via AsyncTasks.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the filename of interest.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setisopening"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L143">setIsOpening</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">synchronized</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Records the fact that the named file is opening. 
+This is a synchronized operation since it is highly likely that multiple threads 
+are involved via AsyncTasks.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the filename of interest.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="waitforclosed"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L155">waitForClosed</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">PendingResult&lt;Result&gt;</code></p>
+
+<p>Blocking wait for the given file to be closed. Returns immediately if the 
+file is not open.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>filename</td>
+      <td>- the file name in question.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="resultlistener"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L422">ResultListener</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">interface</code></p>
+
+<p>Interface to be triggered when a PendingResult is completed.</p>
+
+<h1 id="pendingresulthttpsgithubcomfennifithasteroidblobmasterbasegameutilssrcmainjavacomgoogleexamplegamesbasegameutilssnapshotcoordinatorjaval429">[PendingResult<T>](https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L429)</T></h1>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">private</code> <code class="language-plaintext highlighter-rouge">class</code> <code class="language-plaintext highlighter-rouge">CoordinatedPendingResult&lt;T</code> <code class="language-plaintext highlighter-rouge">extends</code> <code class="language-plaintext highlighter-rouge">Result&gt;</code> <code class="language-plaintext highlighter-rouge">extends</code></p>
+
+<p>Wrapper of PendingResult so the coordinator class is notified when an operation completes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><T></T></td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="doinbackground"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L554">doInBackground</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Override</code> <code class="language-plaintext highlighter-rouge">protected</code> <code class="language-plaintext highlighter-rouge">Void</code></p>
+
+<p>Override this method to perform a computation on a background thread. The 
+specified parameters are the parameters passed to 
+by the caller of this task.</p>
+<p />
+
+<p>This method can call to publish updates 
+on the UI thread.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>params</td>
+      <td>The parameters of the task.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> A result, defined by the subclass of this task.</p>
+
+<p><strong>Reference:</strong> #onPreExecute()</p>
+
+<p>#onPostExecute</p>
+
+<p>#publishProgress</p>
+
+<h2 id="doinbackground-1"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/SnapshotCoordinator.java#L591">doInBackground</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Override</code> <code class="language-plaintext highlighter-rouge">protected</code> <code class="language-plaintext highlighter-rouge">Void</code></p>
+
+<p>Override this method to perform a computation on a background thread. The 
+specified parameters are the parameters passed to 
+by the caller of this task.</p>
+<p />
+
+<p>This method can call to publish updates 
+on the UI thread.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>params</td>
+      <td>The parameters of the task.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> A result, defined by the subclass of this task.</p>
+
+<p><strong>Reference:</strong> #onPreExecute()</p>
+
+<p>#onPostExecute</p>
+
+<p>#publishProgress</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

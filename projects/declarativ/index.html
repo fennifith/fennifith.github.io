@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Declarativ</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Declarativ">
+<meta name="twitter:description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Declarativ">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/declarativ/">
+<meta name="og:description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/typescript.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/makefile.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/declarativ">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/declarativ/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/mpl-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Mozilla Public License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://declarativ.js.org/">
+            <object class="link__img" data="https://declarativ.js.org/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Declarativ</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/declarativ/releases/download/0.0.8/declarativ.js">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">declarativ.js (0.0.8 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+            <p><a href="https://github.com/fennifith/declarativ/actions"><img src="https://github.com/fennifith/declarativ/workflows/NodeJS%20Package/badge.svg" alt="Build Status" /></a></p>
+
+            
+            <p><a href="https://www.npmjs.com/package/declarativ"><img src="https://img.shields.io/npm/v/declarativ?color=red&amp;logo=npm" alt="NPM Package" /></a></p>
+
+            
+            <p><a href="https://discord.jfenn.me/"><img src="https://img.shields.io/discord/514625116706177035.svg?logo=discord&amp;colorB=7289da" alt="Discord" /></a></p>
+
+            
+            <p><a href="https://jfenn.me/links/liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay" alt="Liberapay" /></a></p>
+
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+			<h1 class="p-name">Declarativ</h1>
+            <a class="link --desktop" href="git://github.com/fennifith/declarativ.git">
+                <img class="link__img" src="/images/ic/git.png">
+                <span class="link__title">git://github.com/fennifith/declarativ.git</span>
+            </a>
+            <a class="github-button" href="https://github.com/fennifith/declarativ/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch fennifith/declarativ on GitHub">Watch</a>&nbsp;
+            <a class="github-button" href="https://github.com/fennifith/declarativ" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fennifith/declarativ on GitHub">Star</a>&nbsp;
+			<a class="github-button" href="https://github.com/fennifith/declarativ/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork fennifith/declarativ on GitHub">Fork</a>
+			
+            <div id="content" class="e-content markdown">
+                <p>“Declarativ” is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn’t my own reinvention of React’s <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>. Okay, it kind of is, but whatever, it’s still cool.</p>
+
+<p>Declarativ allows you to write a document tree using a series of nested function calls, much like how Declarative UI works inside <a href="https://flutter.dev/docs/get-started/flutter-for/declarative#how-to-change-ui-in-a-declarative-framework">Flutter</a> or in <a href="https://developer.android.com/jetpack/compose">Jetpack Compose</a>. Here’s an example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">container</span><span class="p">(</span>
+  <span class="nx">jumbotron</span><span class="p">(</span>
+    <span class="nx">h1</span><span class="p">(</span><span class="dl">"</span><span class="s2">This is a big header.</span><span class="dl">"</span><span class="p">),</span>
+    <span class="nx">button</span><span class="p">(</span><span class="dl">"</span><span class="s2">Do something</span><span class="dl">"</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="dl">"</span><span class="s2">click</span><span class="dl">"</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello!</span><span class="dl">"</span><span class="p">)),</span>
+    <span class="nx">p</span><span class="p">(</span><span class="nx">$</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://loripsum.net/api/plaintext</span><span class="dl">"</span><span class="p">))</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<h4 id="script-tag">Script Tag</h4>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://unpkg.com/declarativ@0.1.7/dist/declarativ.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>(the module will be included in the global scope as the <code class="language-plaintext highlighter-rouge">declarativ</code> variable)</p>
+
+<h4 id="npmwebpack">NPM/Webpack</h4>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>declarativ
+</code></pre></div></div>
+
+<h4 id="from-source">From Source</h4>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/fennifith/declarativ.git
+<span class="nb">cd </span>declarativ <span class="o">&amp;&amp;</span> make <span class="nb">install</span>
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Most component trees can be built using the standard functions defined in <code class="language-plaintext highlighter-rouge">declarativ.el</code>. I often use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring assignment</a> to move them to the current scope when using more than one or two of them, which makes it a bit easier to work with (provided you don’t use any variables that conflict with the element names). Here’s an example:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">{</span> <span class="nx">div</span><span class="p">,</span> <span class="nx">h1</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="nx">a</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">declarativ</span><span class="p">.</span><span class="nx">el</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">components</span> <span class="o">=</span> <span class="nx">div</span><span class="p">(</span>
+  <span class="nx">h1</span><span class="p">(</span><span class="dl">"</span><span class="s2">This is a big header.</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">p</span><span class="p">(</span>
+    <span class="dl">"</span><span class="s2">Here, have a bit of text</span><span class="dl">"</span><span class="p">,</span>
+    <span class="nx">a</span><span class="p">(</span><span class="dl">"</span><span class="s2">and a link</span><span class="dl">"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="dl">"</span><span class="s2">href</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">https://example.com/</span><span class="dl">"</span><span class="p">),</span>
+    <span class="dl">"</span><span class="s2">.</span><span class="dl">"</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>After defining your component tree, it can be placed on the DOM by either calling the <code class="language-plaintext highlighter-rouge">render</code> or <code class="language-plaintext highlighter-rouge">renderString</code> functions. Calling <code class="language-plaintext highlighter-rouge">render</code> will place them inside whatever element (or selector) you pass as its argument, while <code class="language-plaintext highlighter-rouge">renderString</code> simply returns their HTML representation.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">components</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="dl">"</span><span class="s2">#content</span><span class="dl">"</span><span class="p">).</span><span class="nx">then</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Elements rendered!</span><span class="dl">"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Working examples can be found in the <a href="https://github.com/fennifith/declarativ/blob/master/../../tree/master/docs/examples/">examples</a> folder.</p>
+
+<h3 id="promises--asynchronicity">Promises &amp; Asynchronicity</h3>
+
+<p>Promises can be mixed in with components, and declarativ will wait for them to resolve before processing the result.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">p</span><span class="p">(</span>
+  <span class="dl">"</span><span class="s2">Everything in this example </span><span class="dl">"</span><span class="p">,</span>
+  <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="dl">"</span><span class="s2">will all render </span><span class="dl">"</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">}),</span>
+  <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="dl">"</span><span class="s2">at the exact same </span><span class="dl">"</span><span class="p">),</span> <span class="mi">2000</span><span class="p">);</span>
+  <span class="p">}),</span>
+  <span class="dl">"</span><span class="s2">time!</span><span class="dl">"</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>This happens a bit differently when using the <code class="language-plaintext highlighter-rouge">.bind</code> method; components that are unbound will render first, and any children within a bound component will wait for its promise to resolve before being processed.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">div</span><span class="p">(</span>
+  <span class="nx">p</span><span class="p">(</span><span class="dl">"</span><span class="s2">This will render first.</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">p</span><span class="p">(</span><span class="dl">"</span><span class="s2">This will render second.</span><span class="dl">"</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">);</span>
+  <span class="p">})),</span>
+  <span class="nx">p</span><span class="p">(</span><span class="dl">"</span><span class="s2">This will render last.</span><span class="dl">"</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">(</span><span class="dl">"</span><span class="s2">at the exact same</span><span class="dl">"</span><span class="p">),</span> <span class="mi">2000</span><span class="p">);</span>
+  <span class="p">}))</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="handling-data">Handling Data</h3>
+
+<p>Nodes can exist in various forms inside of a component. In the last example, I specified a Promise and a string as the contents of a paragraph element. However, not all of the promises you use will return a string. Often times, you will handle data structures that need to be bound to multiple elements. This is where the <code class="language-plaintext highlighter-rouge">.bind()</code> function comes in useful.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">div</span><span class="p">(</span>
+  <span class="nx">p</span><span class="p">(</span><span class="dl">"</span><span class="s2">This will render first</span><span class="dl">"</span><span class="p">),</span>
+  <span class="nx">div</span><span class="p">(</span>
+    <span class="nx">p</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">first</span><span class="p">),</span>
+    <span class="nx">p</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">second</span><span class="p">)</span>
+  <span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">({</span>
+    <span class="na">first</span><span class="p">:</span> <span class="dl">"</span><span class="s2">This is a string.</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">second</span><span class="p">:</span> <span class="dl">"</span><span class="s2">This is another string.</span><span class="dl">"</span>
+  <span class="p">}))</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Okay, a lot is happening here. I’ll slow down and explain.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">bind</code> function <em>also</em> allows you to specify a set of data to be passed to other parts of a component - and extends upon the types of nodes that can be placed inside it. Because the paragraph elements inside the div are not bound to any data, they inherit the Promise that is bound to their parent. The nodes inside of the paragraph elements are then specified as a function of the resolved data, returning the text to render.</p>
+
+<p>A more complex data binding situation based off the GitHub API can be found in <a href="./docs/examples/binding.html">examples/binding.html</a>.</p>
+
+<h3 id="templates">Templates</h3>
+
+<p>Templating functionality is crucial for projects that involve a large number of elements or repeat a common set of element structures in multiple places. There are a few different ways to create them:</p>
+
+<h4 id="functions">Functions</h4>
+
+<p>The easiest is to just create a function that returns another component, like so:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myComponent</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="nx">description</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">div</span><span class="p">(</span>
+    <span class="nx">h3</span><span class="p">(</span><span class="nx">title</span><span class="p">),</span>
+    <span class="nx">p</span><span class="p">(</span><span class="nx">description</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Because you’re just passing the arguments directly into the structure, this allows you to pass your function a string, another component, a function(data), or a Promise, and have it resolve during the render.</p>
+
+<h4 id="wrapped-components">Wrapped Components</h4>
+
+<p>If you want to make a component that just slightly extends upon an existing instance of one, it can be wrapped in a function that will act like other components during use. This isn’t useful very often, as any child components will be lost in the process, but it is useful if you just want to add a class name or attribute to a component without defining a structure.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myComponent</span> <span class="o">=</span> <span class="nx">declarativ</span><span class="p">.</span><span class="nx">wrapCompose</span><span class="p">(</span>
+  <span class="nx">div</span><span class="p">().</span><span class="nx">className</span><span class="p">(</span><span class="dl">"</span><span class="s2">fancypants</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h4 id="custom-elements">Custom Elements</h4>
+
+<p>This is possibly the least useful kind of template, but I’ll leave it here anyway. Most elements are specified inside <code class="language-plaintext highlighter-rouge">declarativ.elements</code>, but in the event that you want to use one that isn’t, you can create an element template by calling <code class="language-plaintext highlighter-rouge">declarativ.compose()</code> with a template function.</p>
+
+<p>By “template function”, it must be a function that accepts a string and returns that string inside of the element’s HTML tag. For example, here I implement the deprecated <code class="language-plaintext highlighter-rouge">&lt;center&gt;</code> tag.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">myComponent</span> <span class="o">=</span> <span class="nx">declarativ</span><span class="p">.</span><span class="nx">compose</span><span class="p">((</span><span class="nx">inner</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`&lt;center&gt;</span><span class="p">${</span><span class="nx">inner</span><span class="p">}</span><span class="s2">&lt;/center&gt;`</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Working examples of all of these templates can be found in <a href="./docs/examples/templates.html">examples/templates.html</a>.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/declarativ/">
+                <time class="dt-published dt-updated" datetime="2020-08-12T16:50:04Z">August 12, 2020</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

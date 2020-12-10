@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A simple alarm clock focused on design, readability, and internet radio.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Alarmio</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="app">
+<meta name="twitter:app:name:googleplay" content="Alarmio">
+<meta name="twitter:app:id:googleplay" content="me.jfenn.alarmio">
+<meta name="twitter:app:url:googleplay" content="https://play.google.com/store/apps/details?id=me.jfenn.alarmio">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Alarmio">
+<meta name="twitter:description" content="A simple alarm clock focused on design, readability, and internet radio.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fennifith/Alarmio/master/app/src/main/ic_launcher-web.png">
+
+<meta name="og:title" content="Alarmio">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/alarmio/">
+<meta name="og:description" content="A simple alarm clock focused on design, readability, and internet radio.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/kotlin.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/shell.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/Alarmio">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Alarmio/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://play.google.com/store/apps/details?id=me.jfenn.alarmio">
+            <object class="link__img" data="/images/ic/play-store.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Google Play</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Alarmio/releases/download/1.0.5/alarmio.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">alarmio.apk (1.0.5 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/ikanakova">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/38765251?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">ikanakova</span>
+        </a>
+        
+        <a class="link" href="https://github.com/quipri">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/16847937?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">quipri</span>
+        </a>
+        
+        <a class="link" href="https://github.com/ajayyy">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/12688112?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">ajayyy</span>
+        </a>
+        
+        <a class="link" href="https://github.com/raboof">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/131856?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">raboof</span>
+        </a>
+        
+        <a class="link" href="https://github.com/yzqzss">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/30341059?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">yzqzss</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Suburbanno">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13632826?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Suburbanno</span>
+        </a>
+        
+        <a class="link" href="https://github.com/meskobalazs">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/9340769?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">meskobalazs</span>
+        </a>
+        
+        <a class="link" href="https://github.com/FriederZi">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/29213511?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">FriederZi</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Larnicone">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/30233897?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Larnicone</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Poussinou">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/19646549?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Poussinou</span>
+        </a>
+        
+        <a class="link" href="https://github.com/theonesean">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/5413368?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">theonesean</span>
+        </a>
+        
+        <a class="link" href="https://github.com/pablomeza10">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/30333908?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">pablomeza10</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+            <p><a href="https://github.com/fennifith/Alarmio/actions"><img src="https://github.com/fennifith/Alarmio/workflows/Gradle%20Build/badge.svg" alt="Build Status" /></a></p>
+
+            
+            <p><a href="https://discord.jfenn.me/"><img src="https://img.shields.io/discord/514625116706177035.svg?logo=discord&amp;colorB=7289da" alt="Discord" /></a></p>
+
+            
+            <p><a href="https://jfenn.me/links/liberapay"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay" alt="Liberapay" /></a></p>
+
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+			<h1 class="p-name">Alarmio</h1>
+            <a class="link --desktop" href="git://github.com/fennifith/Alarmio.git">
+                <img class="link__img" src="/images/ic/git.png">
+                <span class="link__title">git://github.com/fennifith/Alarmio.git</span>
+            </a>
+            <a class="github-button" href="https://github.com/fennifith/Alarmio/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch fennifith/Alarmio on GitHub">Watch</a>&nbsp;
+            <a class="github-button" href="https://github.com/fennifith/Alarmio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fennifith/Alarmio on GitHub">Star</a>&nbsp;
+			<a class="github-button" href="https://github.com/fennifith/Alarmio/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork fennifith/Alarmio on GitHub">Fork</a>
+			
+            <div id="content" class="e-content markdown">
+                <p>Alarmio is a simple alarm clock that implements many useful features while following regular design standards to ensure that it is quick and intuitive to use.</p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Home</th>
+      <th>Alarms</th>
+      <th>Timers</th>
+      <th>Themes</th>
+      <th>Ringing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/fennifith/Alarmio/blob/master/./.github/images/home.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/Alarmio/blob/master/./.github/images/alarms.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/Alarmio/blob/master/./.github/images/timers.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/Alarmio/blob/master/./.github/images/themes.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/Alarmio/blob/master/./.github/images/alert.gif?raw=true" alt="img" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="installation">Installation</h2>
+
+<p><a href="https://f-droid.org/packages/me.jfenn.alarmio/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80" /></a>
+<a href="https://play.google.com/store/apps/details?id=me.jfenn.alarmio"><img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" alt="Get it on Google Play" height="80" /></a></p>
+
+<p>Alternatively, you can download the latest APK from <a href="https://github.com/fennifith/Alarmio/blob/master/../../releases/">the GitHub releases</a>.</p>
+
+<h3 id="pricing">Pricing</h3>
+
+<p>Alarmio is, of course, completely free to download and use from either the GitHub Releases, F-Droid, or my website. However, it is approximately US$1.99 to install it through Google Play. Why is this?</p>
+
+<p>Essentially, when you pay the $1.99 to download the app from the Play Store, you are not paying for the right to use the app. That model <a href="https://updato.com/android-apps/cracked-android-apps-avoid-get-paid-apps-free">has been broken for a long time</a> - even properly obfuscated applications are often trivial to “crack” through many tools available today, and it is no longer viable to ensure that every customer downloads your app through the Play Store and nothing else. Rather, what you are paying for is “support” - replies to your reviews, quicker responses when you send me an email, and the effort of dealing with Google Play as a method of distribution (<a href="https://www.reddit.com/r/androiddev/comments/9n88wv/the_future_of_android_development/">it’s a bit of a pain sometimes</a>).</p>
+
+<h3 id="permissions">Permissions</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SET_ALARM</code>, <code class="language-plaintext highlighter-rouge">VIBRATE</code>, <code class="language-plaintext highlighter-rouge">WAKE_LOCK</code>: uh, this should be obvious</li>
+  <li><code class="language-plaintext highlighter-rouge">ACCESS_COARSE_LOCATION</code>: determining automatic sunrise/sunset times for “scheduled” light/dark themes</li>
+  <li><code class="language-plaintext highlighter-rouge">INTERNET</code>: obtaining a set of sunrise/sunset times (location data is not shared outside of the device), as well as fetching graphical assets and some of the information in the about page</li>
+  <li><code class="language-plaintext highlighter-rouge">RECEIVE_BOOT_COMPLETED</code>: re-schedule alarms on startup</li>
+  <li><code class="language-plaintext highlighter-rouge">READ_EXTERNAL_STORAGE</code>: used to set custom background / header images in the settings</li>
+  <li><code class="language-plaintext highlighter-rouge">FOREGROUND_SERVICE</code>: used to notify you to sleep - see the “Sleep Reminder” option in the settings</li>
+  <li><code class="language-plaintext highlighter-rouge">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: see <a href="https://dontkillmyapp.com/">dontkillmyapp.com</a></li>
+</ul>
+
+<h2 id="how-to-contribute">How to Contribute</h2>
+
+<p>Alarmio is written by users - everyone working on this project (including myself) is motivated entirely by their own needs and ideals. There is no professional support line to handle complaints or paid development team to fix bugs. Anyone that volunteers their time and expertise to improve this app does so without any obligation or commitment to the users of this software.</p>
+
+<p>As a contributor, you are highly valued - any contribution, no matter how small, misled, or incorrectly formatted, is welcome. We’d much prefer to work together and resolve an issue than turn any genuine effort away. <strong>If you need help with this process, have any questions or confusion, or want to get feedback before a contribution, please don’t hesitate to get in touch.</strong> (either <a href="https://discord.jfenn.me/">discord</a> or <a href="mailto:dev@jfenn.me">email</a> work fine)</p>
+
+<h3 id="example-contributions">Example contributions</h3>
+
+<ul>
+  <li><strong>Development:</strong> Developers can help Alarmio by <a href="https://github.com/fennifith/Alarmio/issues">fixing bugs</a>, implementing features, or helping to debug &amp; research new issues. I’m hoping to write a complete guide to this process in the future - for now, please refer to <a href="https://github.com/fennifith/Alarmio/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a>.</li>
+  <li><strong>Design:</strong> Alarmio should be intuitive and accessible to a wide variety of users - suggestions to improve certain interfaces are always welcome. This includes compatibility with screen readers, problems with contrast / color blindness, and the sizing/positioning of touch targets in the app - many of which are shamefully untested in Alarmio’s present state.</li>
+  <li><strong>Helping users:</strong> Often times, issues are created that go untouched for a couple days due to various factors, when they could be resolved immediately. Responding to obvious questions and identifying duplicate issues can be immensely helpful in reducing the workload on other maintainers and developers.</li>
+  <li><strong>Filing issues:</strong> Accurately reporting bugs and edge cases you experience can drastically reduce the amount of work we need to do to identify a problem. Providing relevant info - the name &amp; manufacturer of your device, its Android version, the version of Alarmio the bug was encountered in, and a thorough description of how to reproduce it - helps others to understand what the issue is and how it could be solved. If you want to go the extra mile, screen recordings and logcat info are often immensely helpful. Please be sure to check that there isn’t already an open issue describing your problem, though!</li>
+  <li><strong>Localization:</strong> If Alarmio doesn’t have support for your fluent language(s), please consider translating it! Most in-app text is stored in <a href="https://github.com/fennifith/Alarmio/blob/master/./app/src/main/res/values/strings.xml">strings.xml</a> - this file should be copied to <code class="language-plaintext highlighter-rouge">../values-{lang}/strings.xml</code> when translated. (this is an absurdly concise explanation - if this isn’t clear, simply sending us translations in a new issue or email is perfectly fine!)</li>
+  <li><strong>Documentation:</strong> Writing guides and explanations of how Alarmio works, how to use it, and how to contribute to it, can go a long way to ensuring its usefulness and stability in the future. Whether this involves an update to the README, a tutorial for users and contributors, or adding Javadocs &amp; comments to undocumented functions in the app - anything is valid!</li>
+</ul>
+
+<h3 id="other-ways-to-support-alarmio">Other ways to support Alarmio</h3>
+
+<p>Not everyone has the time or technical knowledge to help out with many of the above - we understand that. With this in mind, here are a few other ways to help us out that don’t require as much time or dedication.</p>
+
+<ul>
+  <li><strong>Advertising:</strong> Spread the word! If you like what we’re doing here, getting more people involved is the best way to help improve it. Suggestions include: posting on social media… writing a blog post… yeah, right, you get the idea.</li>
+  <li><strong>Donations:</strong> I’ve invested a lot of time into this app - as have many of its contributors. Many of us have paying jobs, difficult classes, or otherwise important life occurrences that prevent us from putting all our time into software. Supporting us helps to fund the time we spend building an open source alarm clock when we could be doing… literally anything else :)</li>
+  <li><strong>Politics:</strong> Yep, you’re reading this right. Free software is, in fact, a very political thing - and I’d like to think we’re taking the right approach to it. If you’re in a position to do so, I recommend supporting FOSS applications and services over their proprietary counterparts. In addition, similar movements that support user freedom - many supported by the <a href="https://sfconservancy.org/">SFC</a> or <a href="https://www.eff.org/">EFF</a>, as well as <a href="https://repair.org">Right to Repair</a> - would benefit from increased awareness and advocacy.</li>
+</ul>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>I’d like to give a huuuuuge thanks to all of Alarmio’s <a href="https://github.com/fennifith/Alarmio/graphs/contributors">contributors</a>, the developers that write the software we depend on, and the users that support our goal. Also, props to the <a href="https://f-droid.org/en/about/">F-Droid team</a> for maintaining the free software repository that distributes our app and many others like it.</p>
+
+<p>I’ve received a lot of thanks from various people for the time I’ve put into this, and that thought helps me get up in the morning. If someone fixes a bug you encountered, helps you out in an issue, or implements a feature you enjoy, please consider sending them a tip or a thank-you note to let them know that you appreciate their time :)</p>
+
+<p><em>Contributors: feel free to create a PR to add/edit your listing here, as well as in the app (<a href="https://github.com/fennifith/Alarmio/blob/master/./app/src/main/res/xml/attribouter.xml">attribouter.xml</a>).</em></p>
+
+<h3 id="contributors">Contributors</h3>
+
+<ul>
+  <li><a href="https://github.com/fennifith">@fennifith</a> (me) - <a href="http://jfenn.me/links/liberapay">liberapay</a>, <a href="http://jfenn.me/links/paypal">paypal</a></li>
+  <li><a href="https://github.com/quipri">@quipri</a></li>
+  <li><a href="https://github.com/ajayyy">@ajayyy</a> - <a href="https://ajay.app/">website</a></li>
+  <li><a href="https://github.com/raboof">@raboof</a> - <a href="https://arnout.engelen.eu/">website</a></li>
+</ul>
+
+<h3 id="translators">Translators</h3>
+
+<ul>
+  <li><a href="https://github.com/yzqzss">@yzqzss</a> (Chinese)</li>
+  <li><a href="https://github.com/meskobalazs">@meskobalazs</a> (Hungarian)</li>
+  <li><a href="https://github.com/ikanakova">@ikanakova</a> (Czech, Portuguese)</li>
+  <li><a href="https://github.com/Larnicone">@Larnicone</a> (French)</li>
+  <li><a href="https://github.com/FriederZi">@FriederZi</a> (German)</li>
+  <li><a href="https://github.com/pablomeza10">@pablomeza10</a> (Spanish)</li>
+  <li><a href="https://github.com/Suburbanno">@Suburbanno</a> (Portuguese)</li>
+</ul>
+
+<h2 id="related-work">Related Work</h2>
+
+<ul>
+  <li><a href="https://github.com/ajayyy">@ajayyy</a> is maintaining a fork of Alarmio that forces you to dismiss the alarm from another device: <a href="https://github.com/ajayyy/AlarmioRemote/">AlarmioRemote</a></li>
+</ul>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/alarmio/">
+                <time class="dt-published dt-updated" datetime="2020-07-23T21:48:31Z">July 23, 2020</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

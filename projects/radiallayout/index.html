@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A scrollable-ish view that arranges images in circles extending from the center of the screen.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Radial Layout</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Radial Layout">
+<meta name="twitter:description" content="A scrollable-ish view that arranges images in circles extending from the center of the screen.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Radial Layout">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/radiallayout/">
+<meta name="og:description" content="A scrollable-ish view that arranges images in circles extending from the center of the screen.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/RadialLayout">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/RadialLayout/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://bintray.com/18jafenn90/maven/radiallayout">
+            <object class="link__img" data="/images/ic/launch.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Bintray</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/RadialLayout/releases/download/v0.0.1/RadialLayout.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">RadialLayout.apk (v0.0.1 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p>RadialLayout is a scrollable-ish view that arranges images in circles extending from the center of the screen that was originally made for <a href="https://lemonade.social">Lemonade</a>. For demonstration and experimentation, an apk of the sample project can be downloaded <a href="https://github.com/fennifith/RadialLayout/blob/master/../../releases">here</a>.</p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>With Shadows</th>
+      <th>Without Shadows</th>
+      <th>GIF (pronounced “jeff”)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/fennifith/RadialLayout/blob/master/./images/shadows.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/RadialLayout/blob/master/./images/noshadows.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/RadialLayout/blob/master/./images/jeff.gif?raw=true" alt="img" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="installation">Installation</h3>
+
+<p>The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your app’s build.gradle file.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'me.jfenn:radiallayout:0.0.1'</span>
+</code></pre></div></div>
+
+<h3 id="layout">Layout</h3>
+
+<p>You can add the view into any layout like this:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;me.jfenn.radiallayout.RadialLayoutView</span>
+    <span class="na">android:id=</span><span class="s">"@+id/radialLayout"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"match_parent"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>There are not currently any XML attributes that can be used configure the view because of the way that this project is designed. Feel free to create an issue if there are any that you want. I can’t think of any.</p>
+
+<h3 id="items">Items</h3>
+
+<p>There are three methods to modify the items of the view: <code class="language-plaintext highlighter-rouge">setCenterItem</code>, <code class="language-plaintext highlighter-rouge">setItems</code>, and <code class="language-plaintext highlighter-rouge">updateItems</code>.</p>
+
+<h4 id="setting-the-center-item">Setting the Center Item</h4>
+
+<p>This method accepts a <code class="language-plaintext highlighter-rouge">CenteredRadialItem</code>. This class does not properly implement of the functionality of the <code class="language-plaintext highlighter-rouge">BaseRadialItem</code> subclass, and as such should not be passed to <code class="language-plaintext highlighter-rouge">setItems</code> or <code class="language-plaintext highlighter-rouge">updateItems</code>. It can be constructed and applied to the view as follows:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CenterItem</span> <span class="n">item</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CenteredRadialItem</span><span class="o">(</span>
+    <span class="n">bitmap</span><span class="o">,</span> <span class="c1">// the image to display - will be resized to fit inside the item appropriately</span>
+    <span class="mi">72</span>      <span class="c1">// the diameter of the center item, in dp</span>
+<span class="o">);</span>
+
+<span class="c1">// (optional), draws an outline around the item</span>
+<span class="n">item</span><span class="o">.</span><span class="na">setOutline</span><span class="o">(</span>
+    <span class="mi">3</span><span class="o">,</span>          <span class="c1">// the thickness (dp) of the outline</span>
+    <span class="mi">4</span><span class="o">,</span>          <span class="c1">// the distance (dp) between the edge of the image and the outline</span>
+    <span class="nc">Color</span><span class="o">.</span><span class="na">BLACK</span> <span class="c1">// the color of the outline</span>
+<span class="o">);</span>
+
+<span class="n">radialLayout</span><span class="o">.</span><span class="na">setCenterItem</span><span class="o">(</span><span class="n">item</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>This method can be called at any time, and will not affect any of the functionality of the rest of the class.</p>
+
+<h4 id="setting--updating-radial-items">Setting / Updating Radial Items</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">setItems</code> and <code class="language-plaintext highlighter-rouge">updateItems</code> methods set and update the items in the view, respectively. While <code class="language-plaintext highlighter-rouge">setItems</code> replaces the entire list of items with a new one, <code class="language-plaintext highlighter-rouge">updateItems</code> will attempt to “morph” the current list into a new one, and will try to preserve the radius and reuse bitmaps from items that are present in both lists. <code class="language-plaintext highlighter-rouge">updateItems</code> should only be called after <code class="language-plaintext highlighter-rouge">setItems</code>.</p>
+
+<p>Both <code class="language-plaintext highlighter-rouge">setItems</code> and <code class="language-plaintext highlighter-rouge">updateItems</code> accept a list of <code class="language-plaintext highlighter-rouge">BaseRadialItem</code>s and is intended to change the entire set of items to a new list. This list can contain classes other than <code class="language-plaintext highlighter-rouge">RadialItem</code> (for example, your own custom subclasses that draw their items differently), but it should not contain any <code class="language-plaintext highlighter-rouge">CenteredRadialItem</code> classes as stated above. RadialItems can be constructed as follows:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">RadialItem</span> <span class="n">item</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RadialItem</span><span class="o">(</span>
+    <span class="s">"item-5"</span><span class="o">,</span>   <span class="c1">// The id of the item, used for comparisons when updateItems is called</span>
+    <span class="n">image</span><span class="o">,</span>      <span class="c1">// the image to display - will be resized to fit inside the item appropriately</span>
+    <span class="mi">1</span><span class="o">,</span>          <span class="c1">// the size of the item, relative to other items in the view</span>
+    <span class="mi">5</span>           <span class="c1">// the distance of the item from the center, relative to other items in the view</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>Both of the methods return a <code class="language-plaintext highlighter-rouge">RadialLayoutView.Builder</code> that allows you to specify certain parameters as follows:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radialLayout</span><span class="o">.</span><span class="na">setItems</span><span class="o">(</span><span class="n">items</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">withItemRadius</span><span class="o">(</span><span class="mi">36</span><span class="o">)</span>           <span class="c1">// the average radius of the views, in dp, +/- the variation (next line)</span>
+  <span class="o">.</span><span class="na">withItemRadiusVariation</span><span class="o">(</span><span class="mi">6</span><span class="o">)</span>   <span class="c1">// how much (in dp) the radius of the views should vary according to the 'size' attribute of the items</span>
+  <span class="o">.</span><span class="na">withItemSeparation</span><span class="o">(</span><span class="mi">8</span><span class="o">)</span>        <span class="c1">// the minimum distance between items in the view, in dp</span>
+  <span class="o">.</span><span class="na">withShadowRadius</span><span class="o">(</span><span class="mi">4</span><span class="o">)</span>          <span class="c1">// the radius of the shadow to draw behind the view (dp)</span>
+  <span class="o">.</span><span class="na">withShadowOffset</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span>          <span class="c1">// the vertical offset of the shadow (dp)</span>
+  <span class="o">.</span><span class="na">apply</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The items in the view will not be applied instantly, as their positions are calculated in a background thread. To be notified when they are applied, you can pass a <code class="language-plaintext highlighter-rouge">RadialLayout.Builder.OnAppliedListener</code> to the <code class="language-plaintext highlighter-rouge">apply()</code> method, or call <code class="language-plaintext highlighter-rouge">applySynchronous()</code> in a background thread of your own.</p>
+
+<p>Keep in mind that when a shadow radius and offset are specified, performance of the view will drop significantly for no apparent reason. I have not found a solution to this. See issue <a href="../../issues/1">#1</a>.</p>
+
+<h3 id="configuration">Configuration</h3>
+
+<h4 id="listening-for-click-events">Listening for Click Events</h4>
+
+<p>This is pretty straightforward.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radialLayout</span><span class="o">.</span><span class="na">setOnItemClickListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">RadialLayoutView</span><span class="o">.</span><span class="na">OnItemClickListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onItemClick</span><span class="o">(</span>
+            <span class="nc">RadialLayoutView</span> <span class="n">layout</span><span class="o">,</span>    <span class="c1">// the layout that the click event is from</span>
+            <span class="nc">BaseRadialItem</span> <span class="n">item</span><span class="o">,</span>        <span class="c1">// the item that was clicked</span>
+            <span class="kt">int</span> <span class="n">index</span>                   <span class="c1">// the index of the item that was clicked in the array</span>
+    <span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// do something</span>
+        
+        <span class="c1">// perhaps the easiest way to detect which item corresponds to what is by using the id argument</span>
+        <span class="c1">// in the constructor for something other than making sure the lists are merged properly?</span>
+        
+        <span class="c1">// hint: item.getId();</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+
+<span class="c1">// and, for the center item...</span>
+
+<span class="n">radialLayout</span><span class="o">.</span><span class="na">setOnCenterClickListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">RadialLayoutView</span><span class="o">.</span><span class="na">OnCenterClickListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCenterClick</span><span class="o">(</span><span class="nc">RadialLayoutView</span> <span class="n">layout</span> <span class="cm">/* the layout that the click event is from */</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// do something</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</code></pre></div></div>
+
+<h4 id="paint">Paint</h4>
+
+<p>If for some reason you feel like it, there are also two methods in RadialLayoutView that return the paint used for shadows and images that you can use to modify… things.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Paint</span> <span class="n">imagePaint</span> <span class="o">=</span> <span class="n">radialLayout</span><span class="o">.</span><span class="na">getPaint</span><span class="o">();</span>
+<span class="nc">Paint</span> <span class="n">shadowPaint</span> <span class="o">=</span> <span class="n">radialLayout</span><span class="o">.</span><span class="na">getShadowPaint</span><span class="o">();</span>
+</code></pre></div></div>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/radiallayout/">
+                <time class="dt-published dt-updated" datetime="2018-10-19T00:41:10Z">October 19, 2018</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

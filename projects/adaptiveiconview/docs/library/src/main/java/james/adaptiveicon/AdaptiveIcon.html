@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AdaptiveIcon Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AdaptiveIcon Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AdaptiveIcon Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/adaptiveiconview/docs/library/src/main/java/james/adaptiveicon/AdaptiveIcon.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="AdaptiveIcon">AdaptiveIcon</a></li>
+  <li><a href="AdaptiveIconView">AdaptiveIconView</a></li>
+  <li><a href="utils">utils /</a>
+    <ul>
+      <li><a href="utils/ConversionUtils">ConversionUtils</a></li>
+      <li><a href="utils/ImageUtils">ImageUtils</a></li>
+      <li><a href="utils/PathUtils">PathUtils</a></li>
+      <li><a href="utils/ResourceUtils">ResourceUtils</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--library--src--main--java--james--adaptiveicon--adaptiveiconjava"><a href="./../../../../../../index">.</a> &gt; <a href="./../../../../../index">library</a> &gt; <a href="./../../../../index">src</a> &gt; <a href="./../../../index">main</a> &gt; <a href="./../../index">java</a> &gt; <a href="./../index">james</a> &gt; <a href="./index">adaptiveicon</a> &gt; <strong>AdaptiveIcon.java</strong></h4>
+
+<h2 id="adaptiveicon"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L40">AdaptiveIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fgDrawable</td>
+      <td>the foreground drawable</td>
+    </tr>
+    <tr>
+      <td>bgDrawable</td>
+      <td>the background drawable, or null if the foreground drawable should not be clipped</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>the scale to apply to the clipped drawables (assuming that bgDrawable is not null)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="adaptiveicon-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L51">AdaptiveIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fgBitmap</td>
+      <td>the foreground bitmap</td>
+    </tr>
+    <tr>
+      <td>bgBitmap</td>
+      <td>the background bitmap, or null if the foreground bitmap should not be clipped</td>
+    </tr>
+    <tr>
+      <td>scale</td>
+      <td>the scale to apply to the clipped bitmaps (assuming that bgBitmap is not null)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getfgdrawable"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L62">getFgDrawable</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Drawable</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>an active context</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the foreground drawable of the icon</p>
+
+<h2 id="getbgdrawable"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L72">getBgDrawable</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Drawable</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>an active context</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the background drawable of the icon, or null if the foreground should not be clipped</p>
+
+<h2 id="getfgbitmap"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L83">getFgBitmap</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Bitmap</code></p>
+
+<p><strong>Returned Value:</strong> the foreground bitmap of the icon</p>
+
+<h2 id="getbgbitmap"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L92">getBgBitmap</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Bitmap</code></p>
+
+<p><strong>Returned Value:</strong> the background bitmap of the icon, or null if the foreground should not be clipped</p>
+
+<h2 id="recycle"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L106">recycle</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Recycles the bitmaps used in this icon</p>
+
+<h2 id="with"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L121">with</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Loader</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>the active context for the loader to use</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the loader, for method chaining</p>
+
+<h2 id="fallback"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L130">fallback</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Loader</code></p>
+
+<p>Sets a fallback for the loader to use if an adaptive icon 
+cannot be obtained.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fallback</td>
+      <td>the fallback to use</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the loader, for method chaining</p>
+
+<h2 id="load"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L142">load</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">AdaptiveIcon</code></p>
+
+<p>Loads an adaptive icon.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>info</td>
+      <td>the app to load the icon for</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the adaptive icon, or null if it cannot be obtained</p>
+
+<h2 id="loadasync"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L280">loadAsync</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Thread</code></p>
+
+<p>Crappy async implementation</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>info</td>
+      <td>the app to load the icon for</td>
+    </tr>
+    <tr>
+      <td>callback</td>
+      <td>an interface to pass the adaptive icon to, or null if it cannot be obtained</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the started thread</p>
+
+<h2 id="withbackgroundcolor"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L313">withBackgroundColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">RoundIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>backgroundColor</td>
+      <td>the color of the background, as a color int</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current RoundIconFallback, for method chaining</p>
+
+<h2 id="withbackground"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L322">withBackground</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">RoundIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>background</td>
+      <td>the drawable to use as the background, or null to find a color automatically</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current RoundIconFallback, for method chaining</p>
+
+<h2 id="withscale"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L331">withScale</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">RoundIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scale</td>
+      <td>the scale of the legacy icon, preferably between 1 and 2, but other values greater than 0 work also</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current RoundIconFallback, for method chaining</p>
+
+<h2 id="shouldremoveshadow"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L340">shouldRemoveShadow</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">RoundIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>removeShadow</td>
+      <td>whether the shadow (or any other transparent parts) should be removed from the icon</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current RoundIconFallback, for method chaining</p>
+
+<h2 id="withbackgroundcolor-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L433">withBackgroundColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">LegacyIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>backgroundColor</td>
+      <td>the color of the background, as a color int</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current LegacyIconFallback, for method chaining</p>
+
+<h2 id="withbackground-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L442">withBackground</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">LegacyIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>background</td>
+      <td>the drawable to use as the background, or null to find a color automatically</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current LegacyIconFallback, for method chaining</p>
+
+<h2 id="shouldclip"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L451">shouldClip</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">LegacyIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>shouldClip</td>
+      <td>whether legacy icons should be clipped by the adaptive icon shape, or null to determine this automatically</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current LegacyIconFallback, for method chaining</p>
+
+<h2 id="withscale-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L460">withScale</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">LegacyIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>scale</td>
+      <td>the scale of the legacy icon, preferably between 1 and 2, but other values greater than 0 work also</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current LegacyIconFallback, for method chaining</p>
+
+<h2 id="shouldremoveshadow-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L469">shouldRemoveShadow</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">LegacyIconFallback</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>removeShadow</td>
+      <td>whether the shadow (or any other transparent parts) should be removed from the icon</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current LegacyIconFallback, for method chaining</p>
+
+<h2 id="withfallback"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L511">withFallback</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">final</code> <code class="language-plaintext highlighter-rouge">Fallback</code></p>
+
+<p>This method sets a fallback for this fallback to use if it 
+fails to obtain an acceptable AdaptiveIcon.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fallback</td>
+      <td>the fallback to use if this one fails</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the current Fallback, for method chaining</p>
+
+<h2 id="load-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIcon.java#L527">load</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">abstract</code> <code class="language-plaintext highlighter-rouge">AdaptiveIcon</code></p>
+
+<p>Loads the adaptive icon for this fallback, or null if it cannot 
+be obtained by this fallback or the fallback specified by the 
+‘withFallback’ function.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>context</td>
+      <td>the active context</td>
+    </tr>
+    <tr>
+      <td>info</td>
+      <td>the application to get the icon from</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong> the adaptive icon for this fallback, or null if it cannot be obtained</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

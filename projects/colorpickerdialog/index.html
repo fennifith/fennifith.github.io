@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Color Picker Dialog</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Color Picker Dialog">
+<meta name="twitter:description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Color Picker Dialog">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/colorpickerdialog/">
+<meta name="og:description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/shell.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/ColorPickerDialog">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/ColorPickerDialog/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://jitpack.io/#me.jfenn/ColorPickerDialog">
+            <object class="link__img" data="/images/ic/launch.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">JitPack</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/ColorPickerDialog/releases/download/0.2.0/app-debug.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">app-debug.apk (0.2.0 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/TheAndroidMaster">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/44251925?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">TheAndroidMaster</span>
+        </a>
+        
+        <a class="link" href="https://github.com/jahirfiquitiva">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/10360816?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">jahirfiquitiva</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+            <p><a href="https://jitpack.io/#me.jfenn/ColorPickerDialog"><img src="https://jitpack.io/v/me.jfenn/ColorPickerDialog.svg" alt="JitPack" /></a></p>
+
+            
+            <p><img src="https://github.com/fennifith/ColorPickerDialog/workflows/Gradle%20Build/badge.svg" alt="Gradle Build" /></p>
+
+            
+            <p><a href="https://discord.jfenn.me/"><img src="https://img.shields.io/discord/514625116706177035.svg?logo=discord&amp;colorB=7289da" alt="Discord" /></a></p>
+
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+			<h1 class="p-name">Color Picker Dialog</h1>
+            <a class="link --desktop" href="git://github.com/fennifith/ColorPickerDialog.git">
+                <img class="link__img" src="/images/ic/git.png">
+                <span class="link__title">git://github.com/fennifith/ColorPickerDialog.git</span>
+            </a>
+            <a class="github-button" href="https://github.com/fennifith/ColorPickerDialog/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch fennifith/ColorPickerDialog on GitHub">Watch</a>&nbsp;
+            <a class="github-button" href="https://github.com/fennifith/ColorPickerDialog" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star fennifith/ColorPickerDialog on GitHub">Star</a>&nbsp;
+			<a class="github-button" href="https://github.com/fennifith/ColorPickerDialog/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork fennifith/ColorPickerDialog on GitHub">Fork</a>
+			
+            <div id="content" class="e-content markdown">
+                <p>ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.</p>
+
+<p>For testing and experimentation purposes, a sample apk can be downloaded <a href="https://jfenn.me/projects/colorpickerdialog">here</a>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>RGB(A) Picker</th>
+      <th>HSV Picker</th>
+      <th>Preset Picker</th>
+      <th>Image Picker (Tab)</th>
+      <th>Image Picker (Images)</th>
+      <th>Dark Theme</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/rgba.png?raw=true" alt="Screenshot" /></td>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/hsv.png?raw=true" alt="Screenshot" /></td>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/presets.png?raw=true" alt="Screenshot" /></td>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/images.png?raw=true" alt="Screenshot" /></td>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/image.png?raw=true" alt="Screenshot" /></td>
+      <td><img src="https://github.com/fennifith/ColorPickerDialog/blob/master/./.github/images/darktheme.png?raw=true" alt="Screenshot" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>This project is published on <a href="https://jitpack.io">JitPack</a>, which you can add to your project by copying the following to your root build.gradle at the end of “repositories”.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">allprojects</span> <span class="o">{</span>
+  <span class="k">repositories</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">'https://jitpack.io'</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>To add the dependency, copy this line into your app module’s build.gradle file.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'me.jfenn.ColorPickerDialog:base:0.2.1'</span>
+</code></pre></div></div>
+
+<h3 id="creating-a-dialog">Creating a Dialog</h3>
+
+<p>The basic requirements for the dialog are a default color and a listener, and though none of them <em>have</em> to be specified, it is usually a good idea. You can create a simple dialog fragment using the snippet below:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">ColorPickerDialog</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">withColor</span><span class="o">(</span><span class="n">color</span><span class="o">)</span> <span class="c1">// the default / initial color</span>
+  <span class="o">.</span><span class="na">withListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">OnColorPickedListener</span><span class="o">&lt;</span><span class="nc">ColorPickerDialog</span><span class="o">&gt;()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onColorPicked</span><span class="o">(</span><span class="nd">@Nullable</span> <span class="nc">ColorPickerDialog</span> <span class="n">dialog</span><span class="o">,</span> <span class="kt">int</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// a color has been picked; use it</span>
+    <span class="o">}</span>
+  <span class="o">})</span>
+  <span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getSupportFragmentManager</span><span class="o">(),</span> <span class="s">"colorPicker"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Alternatively, if you are creating the dialog from a fragment, you should use <code class="language-plaintext highlighter-rouge">getChildFragmentManager()</code> instead of <code class="language-plaintext highlighter-rouge">getSupportFragmentManager()</code>.</p>
+
+<h3 id="alpha">Alpha</h3>
+
+<p>You can call <code class="language-plaintext highlighter-rouge">.withAlpha(boolean)</code> to specify whether you want the color’s alpha channel to be configurable by the user (if not, all output colors will be fully opaque). This option is enabled by default. A somewhat unnecessary example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">ColorPickerDialog</span><span class="o">(</span><span class="k">this</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">withAlphaEnabled</span><span class="o">(</span><span class="kc">false</span><span class="o">)</span> <span class="c1">// disable the alpha channel</span>
+  <span class="o">.</span><span class="na">withListener</span><span class="o">(...)</span>
+  <span class="o">.</span><span class="na">show</span><span class="o">();</span>
+</code></pre></div></div>
+
+<h3 id="alternative-pickers">Alternative Pickers</h3>
+
+<p>By default, the dialog gives the user three ways to enter a color; they can use RGB sliders, HSV sliders, or enter the hex value into the text box at the top.</p>
+
+<p>There are also some alternative pickers that can be enabled to serve a few different purposes.</p>
+
+<h4 id="presets">Presets</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">.withPresets()</code> method will enable the “preset” color picker, which simply displays a grid of preset colors for the user to choose from. These colors can be configured by passing them (either as an array or varargs) to the <code class="language-plaintext highlighter-rouge">.withPresets()</code> method, like below:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">ColorPickerDialog</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">withPresets</span><span class="o">(</span><span class="nc">Color</span><span class="o">.</span><span class="na">RED</span><span class="o">,</span> <span class="nc">Color</span><span class="o">.</span><span class="na">GREEN</span><span class="o">,</span> <span class="nc">Color</span><span class="o">.</span><span class="na">BLUE</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withListener</span><span class="o">(...)</span>
+    <span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getSupportFragmentManager</span><span class="o">(),</span> <span class="s">"colorPicker"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h4 id="images">Images</h4>
+
+<p>There is an optional dependency that adds image picking functionality to the color picker; the user can select an image and then select a color from the image they have chosen.</p>
+
+<p>To enable it, add the following to your <code class="language-plaintext highlighter-rouge">build.gradle</code> file along with the dependency from before:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="err">'</span><span class="n">me</span><span class="o">.</span><span class="na">jfenn</span><span class="o">.</span><span class="na">ColorPickerDialog</span><span class="o">:</span><span class="nl">imagepicker:</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">1</span><span class="err">'</span>
+</code></pre></div></div>
+
+<p>Next, you will need to declare the following permissions in your <code class="language-plaintext highlighter-rouge">AndroidManifest.xml</code> (the library does not do it for you).</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.READ_EXTERNAL_STORAGE"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">"android.permission.WRITE_EXTERNAL_STORAGE"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>Now you should be able to add an image picker to your dialog by calling <code class="language-plaintext highlighter-rouge">.withPicker(ImagePickerView.class)</code> like below:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">ColorPickerDialog</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">withPicker</span><span class="o">(</span><span class="nc">ImagePickerView</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withListener</span><span class="o">(...)</span>
+    <span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getSupportFragmentManager</span><span class="o">(),</span> <span class="s">"colorPicker"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<h3 id="theming">Theming</h3>
+
+<p>You can theme this dialog by passing your custom theme to <code class="language-plaintext highlighter-rouge">.withTheme(int)</code>. Support for full “runtime” theming may come later, but now is not later, so you can’t do that yet. Here’s an example of a <code class="language-plaintext highlighter-rouge">ColorPickerDialog</code> with a basic dark theme, demonstrating some of the options that you can specify.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">ColorPickerDialog</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">withTheme</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">style</span><span class="o">.</span><span class="na">ColorPickerDialog_Dark</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">show</span><span class="o">(</span><span class="n">getSupportFragmentManager</span><span class="o">(),</span> <span class="s">"colorPicker"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style</span> <span class="na">name=</span><span class="s">"ColorPickerDialog.Dark"</span> <span class="na">parent=</span><span class="s">"Theme.AppCompat.Dialog"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"redColor"</span><span class="nt">&gt;</span>#FF5252<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"greenColor"</span><span class="nt">&gt;</span>#FF5252<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"blueColor"</span><span class="nt">&gt;</span>#536DFE<span class="nt">&lt;/item&gt;</span>
+  <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">"neutralColor"</span><span class="nt">&gt;</span>#FFFFFF<span class="nt">&lt;/item&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">redColor</code>, <code class="language-plaintext highlighter-rouge">greenColor</code>, and <code class="language-plaintext highlighter-rouge">blueColor</code> attributes affect the RGB sliders, and the <code class="language-plaintext highlighter-rouge">neutralColor</code> attribute changes the “neutral” colors of the others, including the alpha slider and the handles of the sliders in the HSL picker.</p>
+
+<h4 id="rounded-corners">Rounded Corners</h4>
+
+<p>The dialog also supports custom values for the rounded corners, which you can specify by calling <code class="language-plaintext highlighter-rouge">.withCornerRadius(float)</code> with the dp measurement of the corner radius, or <code class="language-plaintext highlighter-rouge">.withCornerRadiusPx(int)</code> with a pixel measurement.</p>
+
+<h2 id="other-documentation">Other Documentation</h2>
+
+<p>Not only am I lazy, I also miss things, so this page may not describe every feature that this library is capable of. However, the majority of this library’s documentation is actually written as javadocs within the source code. You can find the generated documentation pages for it <a href="https://jfenn.me/projects/colorpickerdialog/docs/">here</a>.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/colorpickerdialog/">
+                <time class="dt-published dt-updated" datetime="2020-05-13T23:50:07Z">May 13, 2020</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

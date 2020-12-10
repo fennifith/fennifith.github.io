@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>PickerDialog Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="PickerDialog Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="PickerDialog Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="ColorPickerDialog">ColorPickerDialog</a></li>
+  <li><a href="PickerDialog">PickerDialog</a></li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--base--src--main--java--me--jfenn--colorpickerdialog--dialogs--pickerdialogjava"><a href="./../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../index">base</a> &gt; <a href="./../../../../../../index">src</a> &gt; <a href="./../../../../../index">main</a> &gt; <a href="./../../../../index">java</a> &gt; <a href="./../../../index">me</a> &gt; <a href="./../../index">jfenn</a> &gt; <a href="./../index">colorpickerdialog</a> &gt; <a href="./index">dialogs</a> &gt; <strong>PickerDialog.java</strong></h4>
+
+<h2 id="withretaininstance"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L110">withRetainInstance</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Set whether the dialog should retain its current instance.</p>
+
+<p>Defaults to true. If this is true, the dialog will be dismissed on 
+an orientation / config change - if not, it will be automatically 
+recreated by the system. The current color, pickers, and theme 
+options will be retained, but you will need to reconnect to this 
+fragment to re-apply an <code class="language-plaintext highlighter-rouge">OnColorPickedListener</code>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>shouldRetainInstance</td>
+      <td>Whether the dialog should retain its current instance.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="withlistener"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L129">withListener</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify a listener to receive updates when a new color is selected.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>listener</td>
+      <td>The listener to receive updates.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="withcolor"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L140">withColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify an initial color for the picker to use.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>color</td>
+      <td>The initial color int.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="getcolor"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L156">getColor</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@ColorInt</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">int</code></p>
+
+<p>Get the current color int selected by the picker.</p>
+
+<p><strong>Returned Value:</strong>  The current color of the picker.</p>
+
+<h2 id="withtitle"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L166">withTitle</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify a title for the dialog. Passing “null” will set the dialog to 
+its default title.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>title</td>
+      <td>The (string) title of the dialog.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="gettitle"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L178">getTitle</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Nullable</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Get the current title of the dialog; “null” if there is not one set.</p>
+
+<p><strong>Returned Value:</strong>  The title of the dialog.</p>
+
+<h2 id="withtheme"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L188">withTheme</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify a theme/style of the dialog. Defaults to @style/ColorPickerDialog</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>style</td>
+      <td>The style for the dialog to use.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="withcornerradius"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L199">withCornerRadius</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify the corner radius for the dialog to use, in dp.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cornerRadius</td>
+      <td>The corner radius of the dialog, in dp.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="withcornerradiuspx"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L210">withCornerRadiusPx</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Specify the corner radius for the dialog to use, in px.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cornerRadiusPx</td>
+      <td>The corner radius of the dialog, in px.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+<h2 id="getcornerradius"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L221">getCornerRadius</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">float</code></p>
+
+<p>Get the currently applied corner radius, in dp.</p>
+
+<p><strong>Returned Value:</strong>  The corner radius, in dp.</p>
+
+<h2 id="getcornerradiuspx"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L230">getCornerRadiusPx</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">int</code></p>
+
+<p>Get the currently applied corner radius, in px.</p>
+
+<p><strong>Returned Value:</strong>  The corner radius, in px.</p>
+
+<h2 id="withpickertheme"><a href="https://github.com/fennifith/ColorPickerDialog/blob/master/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.java#L266">withPickerTheme</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">T</code></p>
+
+<p>Initialize theme-related variables from a provided PickerTheme 
+interface. Coincidentally, this class also implements that 
+interface.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>theme</td>
+      <td>The theme to initialize values from.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Returned Value:</strong>  “This” dialog instance, for method chaining.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

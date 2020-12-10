@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AIGHT: a Low-effort Productivity Tool – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="AIGHT is a command-line tool for getting todo tasks quickly.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AIGHT: a Low-effort Productivity Tool</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AIGHT: a Low-effort Productivity Tool">
+<meta name="twitter:description" content="AIGHT is a command-line tool for getting todo tasks quickly.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AIGHT: a Low-effort Productivity Tool">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2020-02-27 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2020-02-27-AIGHT/">
+<meta name="og:description" content="AIGHT is a command-line tool for getting todo tasks quickly.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">AIGHT: a Low-effort Productivity Tool</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2020-02-27-AIGHT/">
+			<time class="dt-published" datetime="2020-02-27 00:00:00 +0000">February 27, 2020</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="https://code.horrific.dev/spb/aight">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">AIGHT</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://dlang.org/">
+        	<object class="link__img" data="undefined" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">dlang.org</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>Recently, I’ve taken a bit of time off from my Android projects to try out a few
+different languages and styles of development, and this one in particular is a
+tool that I’ve co-authored with <a href="https://www.spb.li/">Sean Bailey</a>. Since it’s
+approaching a semi-stable stage of development, I thought I’d make a short post
+to highlight its functionality and our reasons for writing it.</p>
+
+<p>The idea originated from Sean - they often perform an arbitrary action in their
+terminal between tasks or when they’ve run out of ideas: they type the word
+<code class="language-plaintext highlighter-rouge">aight</code>. Of course, this doesn’t have any particular use; it just prints “bash:
+aight: command not found” on the screen, but it functions as a transition
+between different items and tasks that they need to accomplish. Sean had the
+idea to write <a href="https://code.horrific.dev/spb/aight/src/commit/c6fab72a6019fc1ea2ef0219c793950cf74ab69a/AIGHT.sh">a bash script</a>
+that would print out their tasks from Trello each time they type this, to
+instead show them what they need to do next and hopefully improve their
+productivity.</p>
+
+<p>I jumped on board with this pretty easily; I was looking for an excuse to try
+out <a href="https://dlang.org/">dlang</a> in a larger project, and this sounded like a
+good excuse to do so - there’s a lot of potential functionality to expand upon,
+such as displaying different tasks in a different directory, or adding support
+for different task or todo-like services. It also gave me the opportunity to
+work on something with other people - we are now a group of three people
+collaborating on one project. It’s incredibly helpful and satisfying to be able
+to discuss features and implementation with others, have meaningful code
+reviews, and learn from each other as we approach a problem.</p>
+
+<p><img src="/images/blogs/aight-terminal.png" alt="A terminal screen with AIGHT displaying a list of all the annoying bugs I need to fix." /></p>
+
+<h2 id="structure">Structure</h2>
+
+<p>This might be the first program I’ve written where I’m still satisfied with the
+structure of the program a month after writing it, if that says anything.
+However, the actual vocabulary used in the codebase is… confusing, at best.
+Most of the core functionality is defined in “providers”, which are essentially
+different implementations of the functionality for accessing and modifying the
+tasks that can be provided by a service. There’s one provider implementation for
+Trello, one for GitHub issues, one for GitLab, etc…</p>
+
+<p>The program starts by searching through an INI-like
+<a href="https://code.horrific.dev/spb/aight#user-content-configuration">configuration file</a>, in
+which a “group” (the syntax starting from the provider <code class="language-plaintext highlighter-rouge">[name]</code> in brackets
+until the next empty line) represents a “rule” for a provider, or a particular
+situation in which a provider should be used. These rules will be read in order
+until the conditions of the rule are met; namely, the current directory and the
+current git repo can be set as requirements for a rule to be used. If a rule is
+valid, the program will instantiate its provider with the provided parameters in
+the rule and perform the action it was started for.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[trello]</span>
+<span class="py">matchRemote</span><span class="p">=</span><span class="s">git@github.com:fennifith/*</span>
+<span class="py">trelloApiKey</span><span class="p">=</span><span class="s">yeet</span>
+<span class="py">trelloApiToken</span><span class="p">=</span><span class="s">yeet</span>
+<span class="py">trelloBoardId</span><span class="p">=</span><span class="s">yeet</span>
+</code></pre></div></div>
+
+<p>This terminology is not particularly user-friendly and could use some
+improvement as the project grows; knowing what someone is referencing when they
+say “provider” or “service” or “rule”, and that they’re all distinct things, is
+a bit of an issue for a user that shouldn’t need to know about the program’s
+internal functionality.</p>
+
+<h2 id="interface">Interface</h2>
+
+<p>The simplest interaction with the CLI is simply running <code class="language-plaintext highlighter-rouge">aight</code> as a command -
+using whatever provider is specified in your configuration, it will output a
+table or list of the “tasks” it finds. The list also contains an ID number for
+each task which can be used to reference it in other commands - for example, to
+get more information about task #3: <code class="language-plaintext highlighter-rouge">aight show 3</code>.</p>
+
+<p>To view a list of the rules in the configuration file (helpful for debugging or
+verifying conditions), <code class="language-plaintext highlighter-rouge">aight list-providers</code> will display all active &amp; inactive
+provider rules.</p>
+
+<p>There are also various other commands being planned, such as
+<a href="https://code.horrific.dev/spb/aight/issues/4"><code class="language-plaintext highlighter-rouge">aight yeet</code></a> (to mark a task as
+“done” / remove it from the list) and
+<a href="https://code.horrific.dev/spb/aight/issues/19"><code class="language-plaintext highlighter-rouge">aight stonks</code></a> (to show
+statistics about previously closed tasks).</p>
+
+<h2 id="d-language">D Language</h2>
+
+<p>D-lang was definitely a good choice for this project - it’s almost like a middle
+ground between C and NodeJS, where it can interact with system libraries and
+functionality at a pretty low level but still have useful tooling and
+quality-of-life features similar to node: a package manager for libraries, good
+documentation, easy integration with CI &amp; unit testing…</p>
+
+<p>Their website also has a lot of well-written tutorials that make it much easier
+to get started with as a newcomer, and there’s a good collection of libraries
+built for it (along with the existing C/C++ libraries it can bind to).</p>
+
+<h2 id="aight-install">“aight install”</h2>
+
+<p>Currently, <code class="language-plaintext highlighter-rouge">aight</code> is only available to install by compiling directly from the
+<a href="https://code.horrific.dev/spb/aight">source code</a> - but we have plans to
+distribute it through other package repositories like Homebrew and Arch Linux’s
+AUR. I’ll update this blog when that happens.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="FastHub the ultimate GitHub client for Android.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>k0shk0sh/FastHub</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="k0shk0sh/FastHub">
+<meta name="twitter:description" content="FastHub the ultimate GitHub client for Android.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="k0shk0sh/FastHub">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/fasthub/">
+<meta name="og:description" content="FastHub the ultimate GitHub client for Android.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/kotlin.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/css.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/html.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/c#.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/FastHub">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/FastHub/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/gpl-3.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GNU General Public License v3.0</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/k0shk0sh">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/960767?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">k0shk0sh</span>
+        </a>
+        
+        <a class="link" href="https://github.com/JediBurrell">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/9306469?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">JediBurrell</span>
+        </a>
+        
+        <a class="link" href="https://github.com/dedepete">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/1936922?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">dedepete</span>
+        </a>
+        
+        <a class="link" href="https://github.com/yakov116">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/16872793?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">yakov116</span>
+        </a>
+        
+        <a class="link" href="https://github.com/thermatk">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/2287483?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">thermatk</span>
+        </a>
+        
+        <a class="link" href="https://github.com/failex234">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/17270162?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">failex234</span>
+        </a>
+        
+        <a class="link" href="https://github.com/kutsan">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/10108377?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">kutsan</span>
+        </a>
+        
+        <a class="link" href="https://github.com/aadithyabk">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/6628680?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">aadithyabk</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Dreamersoul">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/6298868?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Dreamersoul</span>
+        </a>
+        
+        <a class="link" href="https://github.com/ALiangLiang">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/6974496?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">ALiangLiang</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Rainer-Lang">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/9607880?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Rainer-Lang</span>
+        </a>
+        
+        <a class="link" href="https://github.com/caiorrs">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/7864506?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">caiorrs</span>
+        </a>
+        
+        <a class="link" href="https://github.com/vvb2060">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/26996262?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">vvb2060</span>
+        </a>
+        
+        <a class="link" href="https://github.com/heinrichreimer">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/5065698?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">heinrichreimer</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Rintan">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/12230083?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Rintan</span>
+        </a>
+        
+        <a class="link" href="https://github.com/dikiaap">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/8542502?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">dikiaap</span>
+        </a>
+        
+        <a class="link" href="https://github.com/eygraber">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/1100381?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">eygraber</span>
+        </a>
+        
+        <a class="link" href="https://github.com/maple3142">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/9370547?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">maple3142</span>
+        </a>
+        
+        <a class="link" href="https://github.com/jonathan-caryl">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/2290987?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">jonathan-caryl</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Raffaele74">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/24221053?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Raffaele74</span>
+        </a>
+        
+        <a class="link" href="https://github.com/alorma">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/887462?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">alorma</span>
+        </a>
+        
+        <a class="link" href="https://github.com/mistermantas">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/11616378?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">mistermantas</span>
+        </a>
+        
+        <a class="link" href="https://github.com/daniel-stoneuk">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/15860949?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">daniel-stoneuk</span>
+        </a>
+        
+        <a class="link" href="https://github.com/arkon">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/4098258?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">arkon</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/chamini2">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/2745502?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">chamini2</span>
+        </a>
+        
+        <a class="link" href="https://github.com/aadibajpai">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/27063113?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">aadibajpai</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Dimitrees">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/15691073?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Dimitrees</span>
+        </a>
+        
+        <a class="link" href="https://github.com/Jawnnypoo">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/1459320?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">Jawnnypoo</span>
+        </a>
+        
+        <a class="link" href="https://github.com/lucasvalenteds">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/10524730?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">lucasvalenteds</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p><a href="https://travis-ci.org/k0shk0sh/FastHub"><img src="https://travis-ci.org/k0shk0sh/FastHub.svg?branch=master" alt="Build Status" /></a> <a href="https://ci.appveyor.com/project/k0shk0sh/fasthub"><img src="https://ci.appveyor.com/api/projects/status/2yhxx7hu6hju24bk?svg=true" alt="Build status" /></a>
+<a href="https://github.com/k0shk0sh/FastHub/releases/latest"><img src="https://img.shields.io/github/release/k0shk0sh/FastHub.svg" alt="Releases" /></a> <a href="https://discord.gg/V6afZWf"><img src="https://img.shields.io/badge/chat-discord-7289DA.svg" alt="Discord" /></a></p>
+
+<p><img src="/.github/assets/feature_graphic.png?raw=true" alt="Logo" title="Logo" /></p>
+
+<h1 id="fasthub">FastHub</h1>
+
+<p>Yet another <strong>open-source</strong> GitHub client app but unlike any other app, FastHub was built from scratch.<br />
+<!--
+[<img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="80">](https://f-droid.org/repository/browse/?fdid=com.fastaccess.github)
+-->
+<a href="https://play.google.com/store/apps/details?id=com.fastaccess.github"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Download from Google Play" height="80" /></a>
+<a href="https://github.com/k0shk0sh/FastHub/releases/latest"><img src=".github/assets/direct-apk-download.png" alt="Direct apk download" height="80" /></a></p>
+
+<h4 id="snapshots--test-builds">Snapshots / Test builds</h4>
+
+<p>We have configured snapshots of FastHub, which can be downloaded from <a href="https://ci.appveyor.com/project/k0shk0sh/fasthub/build/artifacts">AppVeyor CI</a>.</p>
+
+<h1 id="features">Features</h1>
+<ul>
+  <li><strong>App</strong>
+    <ul>
+      <li>Three login types (Basic Auth), (Access Token) or via (OAuth)</li>
+      <li>Multiple Accounts</li>
+      <li>Enterprise Accounts</li>
+      <li>Themes mode</li>
+      <li>Offline-mode</li>
+      <li>Markdown and code highlighting support</li>
+      <li>Notifications overview and “Mark all as read”</li>
+      <li>Search users/orgs, repos, issues/prs &amp; code.</li>
+      <li>Pinned Repos</li>
+      <li>Trending</li>
+      <li>Wiki</li>
+    </ul>
+  </li>
+  <li><strong>Repositories</strong>
+    <ul>
+      <li>Browse &amp; Read Wiki</li>
+      <li>Search Repos</li>
+      <li>Browse and search Repos</li>
+      <li>See your public, private and forked Repos</li>
+      <li>Filter Branches and Commits</li>
+      <li>Watch, star and fork Repos</li>
+      <li>Download releases, files and branches</li>
+    </ul>
+  </li>
+  <li><strong>Issues and Pull Requests</strong>
+    <ul>
+      <li>Search Issues/PRs</li>
+      <li>Filter Issues/PRs</li>
+      <li>Long click to peak Issues/PRs &amp; add comments otg.</li>
+      <li>Open/close Issues/PRs</li>
+      <li>Comment on Issues/PRs</li>
+      <li>Manage Issue/PR comments</li>
+      <li>React to comments with reactions</li>
+      <li>Edit Issues/PRs</li>
+      <li>Lock/unlock conversation in Issues/PRs</li>
+      <li>Assign people and add Labels and Milestones to Issues/PRs</li>
+      <li>Manage Milestones</li>
+      <li>Merge PRs</li>
+      <li>PRs reviews (reply, react with emojies, delete &amp; edit comment)</li>
+      <li>PRs request review changes/approve &amp; comment.</li>
+      <li>PRs statuses</li>
+    </ul>
+  </li>
+  <li><strong>Commits and Gists</strong>
+    <ul>
+      <li>Search Code/Gists</li>
+      <li>View Gists and their files</li>
+      <li>Comment on Commits/Gists</li>
+      <li>Manage Commit/Gist comments</li>
+      <li>Create/Delete Gists</li>
+      <li>React to Commit comments with reactions</li>
+      <li>Comment on line number in Files/Code changes.</li>
+    </ul>
+  </li>
+  <li><strong>Orgs</strong>
+    <ul>
+      <li>Overview</li>
+      <li>Feeds</li>
+      <li>Teams &amp; Teams repos</li>
+      <li>Repos</li>
+    </ul>
+  </li>
+  <li><strong>Users</strong>
+    <ul>
+      <li>Follow/Unfollow users</li>
+      <li>View user feeds</li>
+      <li>Contribution graph.</li>
+      <li>Search Users, Repos, Issues,Pull Requests and Code</li>
+    </ul>
+  </li>
+  <li><em><strong>Much more…</strong></em>
+    <ul>
+      <li><em>FastHub is actively developed. More features will come!</em></li>
+    </ul>
+  </li>
+</ul>
+
+<p><del>&gt; <strong>FastHub</strong> contain Ads, which are disabled by default. You could enable them if you’d like to support the development.</del><br />
+<em>Ads currently not available.</em></p>
+
+<h2 id="specs--open-source-libraries">Specs / Open-source libraries:</h2>
+
+<ul>
+  <li>Minimum <strong>SDK 21</strong>, <em>but AppCompat is used all the way ;-)</em></li>
+  <li><strong>Kotlin</strong> all new modules starting from 2.5.3 will be written in <strong>#Kotlin</strong>.</li>
+  <li><strong>MVP</strong>-architecture: <a href="https://github.com/grandcentrix/ThirtyInch"><strong>ThirtyInch</strong></a> because its ThirtyInch.</li>
+  <li><a href="https://github.com/ReactiveX/RxJava"><strong>RxJava2</strong></a> &amp; <a href="https://github.com/ReactiveX/RxAndroid"><strong>RxAndroid</strong></a> for Retrofit &amp; background threads</li>
+  <li><a href="https://github.com/square/retrofit"><strong>Retrofit</strong></a> for constructing the REST API</li>
+  <li><a href="https://github.com/requery/requery/"><strong>Requery</strong></a> for offline-mode</li>
+  <li><a href="https://github.com/aNNiMON/Lightweight-Stream-API"><strong>Stream API</strong></a> for dealing with <code class="language-plaintext highlighter-rouge">Collections</code></li>
+  <li><a href="https://github.com/JakeWharton/butterknife"><strong>ButterKnife</strong></a> for view binding</li>
+  <li><a href="https://github.com/evernote/android-state"><strong>Android State</strong></a> for saving instance states</li>
+  <li><a href="https://projectlombok.github.io"><strong>Lombok</strong></a> for getters and setters</li>
+  <li><a href="https://github.com/sephiroth74/Material-BottomNavigation"><strong>Material-BottomNavigation</strong></a> for <code class="language-plaintext highlighter-rouge">BottomBar</code> tabs</li>
+  <li><a href="https://github.com/bumptech/glide"><strong>Glide</strong></a> for loading images</li>
+  <li><a href="https://github.com/atlassian/commonmark-java"><strong>commonmark</strong></a> for <em>Markdown</em> conversion to html</li>
+  <li><a href="https://github.com/GrenderG/Toasty"><strong>Toasty</strong></a> for displaying error/success messages</li>
+  <li><a href="https://github.com/gavinliu/ShapedImageView"><strong>ShapedImageView</strong></a> for round avatars</li>
+  <li><a href="https://github.com/daniel-stoneuk/material-about-library"><strong>Material-About-Library</strong></a> for the about screen</li>
+  <li><strong>Fabric</strong> analytics &amp; crash reporting.</li>
+  <li><strong>Android Support Libraries</strong>, the almighty ;-)</li>
+</ul>
+
+<h2 id="contribution">Contribution</h2>
+
+<p>You love FastHub? You want new features or bug fixes?<br />
+Please <strong>contribute</strong> to the  project either by <a href="https://github.com/k0shk0sh/FastHub/compare"><em>creating a PR</em></a> or <a href="https://github.com/k0shk0sh/FastHub/issues/new"><em>submitting an issue</em></a> on GitHub.<br />
+Read the <a href=".github/CONTRIBUTING.md"><strong>contribution guide</strong></a> for more detailed information.</p>
+
+<h2 id="language-contributors">Language Contributors</h2>
+
+<details>
+       <summary>Thanks for those who contributed to FastHub by adding their language</summary>
+           <p>- Chinese (Simplified) [@Devifish](https://github.com/Devifish)</p>
+           <p>- Chinese (Traditional) [@maple3142](https://github.com/maple3142)</p>
+           <p>- German [@failex234](https://github.com/failex234)</p>
+           <p>- Indonesian [@dikiaap](https://github.com/dikiaap)</p>
+           <p>- Italian [@Raffaele74](https://github.com/Raffaele74)</p>
+           <p>- Japanese [@Rintan](https://github.com/Rintan)</p>
+           <p>- Lithuanian [@mistermantas](https://github.com/mistermantas)</p>
+           <p>- Russian [@dedepete](https://github.com/dedepete)</p>
+           <p>- Turkish [@kutsan](https://github.com/kutsan)</p>
+           <p>- Portuguese [@caiorrs](https://github.com/caiorrs)</p>
+           <p>- Czech [@hejsekvojtech](https://github.com/hejsekvojtech)</p>
+           <p>- Spanish [@alete89](https://github.com/alete89)</p>
+</details>
+
+<h2 id="faq">FAQ</h2>
+
+<details>
+  <summary>Why can't I see my <b>Organizations</b> either <i>Private</i> or <i>Public</i> ones?</summary>
+  <p>Open up https://github.com/settings/applications and look for FastHub, open it then scroll to Organization access and click on Grant Button, 
+  alternatively login via <b>Access Token</b> which will ease this setup.</p>
+</details>
+
+<details>
+  <summary>I tried to login via Access Token &amp; OTP but it does not work?</summary>
+  <p>You can't login via Access Token &amp; OTP all together due to the lifetime of the OTP code, you'll be required to login in every few seconds.</p>
+</details>
+
+<details>
+  <summary>Why my Private Repo Wiki does not show up?</summary>
+  <p>It's due to FastHub scraping GitHub Wiki page &amp; Private Repos require session token that FastHub doesn't have.</p>
+</details>
+
+<details>
+  <summary>I login with Enterprise account but can't interact with anything other than my Enterprise GitHub</summary>
+  <p>Well, logically, you can't access anything else other than your Enterprise, but FastHub made that possible but can't do much about it, 
+  in most cases since your login credential doesn't exists in GitHub server. But in <b>few</b> 
+  cases your GitHub account Oauth token will do the trick.</p>
+  
+</details>
+
+<h2 id="license">License</h2>
+
+<blockquote>
+  <p>Copyright (C) 2017 Kosh.<br />
+Licensed under the <a href="https://www.gnu.org/licenses/gpl.html">GPL-3.0</a> license.<br />
+(See the <a href="https://github.com/k0shk0sh/FastHub/blob/master/LICENSE">LICENSE</a> file for the whole license text.)</p>
+</blockquote>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Feeds</th>
+      <th style="text-align: center">Drawer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/.github/assets/first.png?raw=true" alt="First" /></td>
+      <td style="text-align: center"><img src="/.github/assets/sec.png?raw=true" alt="Sec" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Repo</th>
+      <th style="text-align: center">Profile</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="/.github/assets/third.png?raw=true" alt="Third" /></td>
+      <td style="text-align: center"><img src="/.github/assets/fourth.png?raw=true" alt="Fourth" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fasthub-logo">FastHub Logo</h2>
+
+<p><strong>FastHub</strong> logo is designed by <strong>Cookicons</strong>.<br />
+<a href="https://plus.google.com/+CookiconsDesign">Google+</a> | <a href="https://twitter.com/mcookie">Twitter</a><br />
+Designer website <a href="https://cookicons.co/">Cookicons</a>.</p>
+
+<p><strong>OLD FastHub</strong> logo is designed by <strong>Kevin Aguilar</strong>.<br />
+<a href="https://plus.google.com/+KevinAguilarC">Google+</a> | <a href="https://twitter.com/kevttob">Twitter</a><br />
+Designer at <a href="https://www.221pixels.com/">221 Pixels</a>.<br />
+Laus Deo Semper</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/fasthub/">
+                <time class="dt-published dt-updated" datetime="2017-08-16T18:27:02Z">August 16, 2017</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

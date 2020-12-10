@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A simple Android library containing several time/date pickers and dialogs.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Time Date Picker</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Time Date Picker">
+<meta name="twitter:description" content="A simple Android library containing several time/date pickers and dialogs.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Time Date Picker">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/timedatepicker/">
+<meta name="og:description" content="A simple Android library containing several time/date pickers and dialogs.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/TimeDatePicker">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/TimeDatePicker/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://jitpack.io/#me.jfenn/TimeDatePicker">
+            <object class="link__img" data="/images/ic/launch.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">JitPack</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/TimeDatePicker/releases/download/0.0.6/TimeDatePicker.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">TimeDatePicker.apk (0.0.6 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p>TimeDatePicker is a simple Android library containing several configurable time/date picker views and dialogs.</p>
+
+<p><a href="https://jitpack.io/#me.jfenn/TimeDatePicker"><img src="https://jitpack.io/v/me.jfenn/TimeDatePicker.svg" alt="" /></a>
+<a href="https://travis-ci.com/fennifith/TimeDatePicker"><img src="https://travis-ci.com/fennifith/TimeDatePicker.svg" alt="Build Status" /></a>
+<a href="https://discord.gg/8q8GQF2"><img src="https://img.shields.io/discord/514625116706177035.svg" alt="Discord" /></a></p>
+
+<p>This library was mainly created as a result of problems I ran into setting the colors/themes for Android’s default time/date pickers to use. It will also try to combat some of the lack of intuitiveness created by the circular time picker (numbers immediately changing from hours to minutes after selection is nowhere near obvious to new users) while maintaining compatibility back to Android 4.0.3 (ICS).</p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Time Picker (12h)</th>
+      <th>Time Picker (24h)</th>
+      <th>Date Picker</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/fennifith/TimeDatePicker/blob/master/./.github/images/time-12h.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/TimeDatePicker/blob/master/./.github/images/time-24h.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/TimeDatePicker/blob/master/./.github/images/date.png?raw=true" alt="img" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>An APK of the sample app can be downloaded <a href="/../../releases">here</a>.</p>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>This project is published on <a href="https://jitpack.io">JitPack</a>, which you can add to your project by copying the following to your root build.gradle file.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">allprojects</span> <span class="o">{</span>
+  <span class="k">repositories</span> <span class="o">{</span>
+    <span class="o">...</span>
+    <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">'https://jitpack.io'</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>To add the dependency, copy this line into your app module’s build.gradle:</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="s1">'me.jfenn:TimeDatePicker:0.0.6'</span>
+</code></pre></div></div>
+
+<h3 id="doing-stuff">Doing Stuff</h3>
+
+<p>Proper documentation/instructions will be added later.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/timedatepicker/">
+                <time class="dt-published dt-updated" datetime="2019-01-16T20:06:55Z">January 16, 2019</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

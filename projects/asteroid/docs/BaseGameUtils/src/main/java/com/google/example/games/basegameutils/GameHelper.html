@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>GameHelper Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="GameHelper Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="GameHelper Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/asteroid/docs/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="BaseGameActivity">BaseGameActivity</a></li>
+  <li><a href="BaseGameUtils">BaseGameUtils</a></li>
+  <li><a href="GameHelper">GameHelper</a></li>
+  <li><a href="GameHelperUtils">GameHelperUtils</a></li>
+  <li><a href="SnapshotCoordinator">SnapshotCoordinator</a></li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--basegameutils--src--main--java--com--google--example--games--basegameutils--gamehelperjava"><a href="./../../../../../../../../../index">.</a> &gt; <a href="./../../../../../../../../index">BaseGameUtils</a> &gt; <a href="./../../../../../../../index">src</a> &gt; <a href="./../../../../../../index">main</a> &gt; <a href="./../../../../../index">java</a> &gt; <a href="./../../../../index">com</a> &gt; <a href="./../../../index">google</a> &gt; <a href="./../../index">example</a> &gt; <a href="./../index">games</a> &gt; <a href="./index">basegameutils</a> &gt; <strong>GameHelper.java</strong></h4>
+
+<h2 id="gamehelperlistener"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L54">GameHelperListener</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">interface</code></p>
+
+<p>Listener for sign-in success or failure events.</p>
+
+<h2 id="onsigninfailed"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L58">onSignInFailed</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called when sign-in fails. As a result, a “Sign-In” button can be 
+shown to the user; when that button is clicked, call</p>
+
+<p>to this method mean an 
+error; it may be a result 
+of the fact that automatic 
+sign-in could not proceed 
+because user interaction 
+was required (consent 
+dialogs). So 
+implementations of this 
+method should NOT display 
+an error message unless a 
+call to @link{GamesHelper# 
+hasSignInError} indicates 
+that an error indeed 
+occurred.</p>
+
+<h2 id="onsigninsucceeded"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L80">onSignInSucceeded</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called when sign-in succeeds.</p>
+
+<h2 id="mactivity"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L99">mActivity</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">AppCompatActivity</code></p>
+
+<p>The Activity we are bound to. We need to keep a reference to the Activity 
+because some games methods require an Activity (a Context won’t do). We 
+are careful not to leak these references: we release them on onStop().</p>
+
+<h2 id="gamehelper"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L191">GameHelper</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code></p>
+
+<p>Construct a GameHelper object, initially tied to the given Activity. 
+After constructing this object, call @link{setup} from the onCreate() 
+method of your Activity.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>clientsToUse</td>
+      <td>the API clients to use (a combination of the CLIENT_flags, or CLIENT_ALL to mean all clients).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setmaxautosigninattempts"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L206">setMaxAutoSignInAttempts</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the maximum number of automatic sign-in attempts to be made on 
+application startup. This maximum is over the lifetime of the application 
+(it is stored in a SharedPreferences file). So, for example, if you 
+specify 2, then it means that the user will be prompted to sign in on app 
+startup the first time and, if they cancel, a second time the next time 
+the app starts, and, if they cancel that one, never again. Set to 0 if 
+you do not want the user to be prompted to sign in on application 
+startup.</p>
+
+<h2 id="setgamesapioptions"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L240">setGamesApiOptions</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the options to pass when setting up the Games API. Call before 
+setup().</p>
+
+<h2 id="setplusapioptions"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L249">setPlusApiOptions</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the options to pass when setting up the Plus API. Call before 
+setup().</p>
+
+<h2 id="createapiclientbuilder"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L258">createApiClientBuilder</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">GoogleApiClient.Builder</code></p>
+
+<p>Creates a GoogleApiClient.Builder for use with @link{#setup}. Normally, 
+you do not have to do this; use this method only if you need to make 
+nonstandard setup (e.g. adding extra scopes for other APIs) on the 
+GoogleApiClient.Builder before calling @link{#setup}.</p>
+
+<h2 id="setup"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L294">setup</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Performs setup on this GameHelper object. Call this from the onCreate() 
+method of your Activity. This will create the clients and do a few other 
+initialization tasks. Next, call @link{#onStart} from the onStart() 
+method of your Activity.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>listener</td>
+      <td>The listener to be notified of sign-in events.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getapiclient"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L321">getApiClient</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">GoogleApiClient</code></p>
+
+<p>Returns the GoogleApiClient object. In order to call this method, you 
+must have called @link{setup}.</p>
+
+<h2 id="issignedin"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L333">isSignedIn</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns whether or not the user is signed in.</p>
+
+<h2 id="isconnecting"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L340">isConnecting</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns whether or not we are currently connecting</p>
+
+<h2 id="hassigninerror"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L347">hasSignInError</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">boolean</code></p>
+
+<p>Returns whether or not there was a (non-recoverable) error during the 
+sign-in process.</p>
+
+<h2 id="getsigninerror"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L355">getSignInError</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">SignInFailureReason</code></p>
+
+<p>Returns the error that happened during the sign-in process, null if no 
+error occurred.</p>
+
+<h2 id="onstart"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L368">onStart</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Call this method from your Activity’s onStart().</p>
+
+<h2 id="onstop"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L394">onStop</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Call this method from your Activity’s onStop().</p>
+
+<h2 id="getinvitationid"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L413">getInvitationId</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">String</code></p>
+
+<p>Returns the invitation ID received through an invitation notification. 
+This should be called from your GameHelperListener’s</p>
+
+<p>invitation available. In that 
+case, accept the invitation.</p>
+
+<p><strong>Returned Value:</strong> The id of the invitation, or null if none was received.</p>
+
+<h2 id="getinvitation"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L431">getInvitation</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Invitation</code></p>
+
+<p>Returns the invitation received through an invitation notification. This 
+should be called from your GameHelperListener’s</p>
+
+<p>invitation available. In that 
+case, accept the invitation.</p>
+
+<p><strong>Returned Value:</strong> The invitation, or null if none was received.</p>
+
+<h2 id="getturnbasedmatch"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L473">getTurnBasedMatch</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">TurnBasedMatch</code></p>
+
+<p>Returns the tbmp match received through an invitation notification. This 
+should be called from your GameHelperListener’s</p>
+
+<p>match available.</p>
+
+<p><strong>Returned Value:</strong> The match, or null if none was received.</p>
+
+<h2 id="getrequests"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L490">getRequests</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">ArrayList&lt;GameRequest&gt;</code></p>
+
+<p>Returns the requests received through the onConnected bundle. This should 
+be called from your GameHelperListener’s</p>
+
+<p>incoming requests that must be 
+handled.</p>
+
+<p><strong>Returned Value:</strong> The requests, or null if none were received.</p>
+
+<h2 id="enabledebuglog"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L508">enableDebugLog</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Enables debug logging</p>
+
+<h2 id="signout"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L525">signOut</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sign out and disconnect from the APIs.</p>
+
+<h2 id="onactivityresult"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L556">onActivityResult</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Handle activity result. Call this method from your Activity’s 
+onActivityResult callback. If the activity result pertains to the sign-in 
+process, processes it appropriately.</p>
+
+<h2 id="beginuserinitiatedsignin"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L632">beginUserInitiatedSignIn</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Starts a user-initiated sign-in flow. This should be called when the user 
+clicks on a “Sign In” button. As a result, authentication/consent dialogs 
+may show up. At the end of the process, the GameHelperListener’s 
+onSignInSucceeded() or onSignInFailed() methods will be called.</p>
+
+<h2 id="reconnectclient"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L694">reconnectClient</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Disconnects the API client, then connects again.</p>
+
+<h2 id="onconnected"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L708">onConnected</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Override</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called when we successfully obtain a connection to a client.</p>
+
+<h2 id="onconnectionfailed"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L785">onConnectionFailed</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Override</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Handles a connection failure.</p>
+
+<h2 id="resolveconnectionresult"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L843">resolveConnectionResult</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Attempts to resolve a connection failure. This will usually involve 
+starting a UI flow that lets the user give the appropriate consents 
+necessary for sign-in to work.</p>
+
+<h2 id="giveup"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L896">giveUp</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Give up on signing in due to an error. Shows the appropriate error 
+message to the user, using a standard error dialog as appropriate to the 
+cause of the error. That dialog will indicate to the user how the problem 
+can be solved (for example, re-enable Google Play Services, upgrade to a 
+new version, etc).</p>
+
+<h2 id="onconnectionsuspended"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L918">onConnectionSuspended</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">@Override</code> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Called when we are disconnected from the Google API client.</p>
+
+<h2 id="showfailuredialog"><a href="https://github.com/fennifith/Asteroid/blob/master/BaseGameUtils/src/main/java/com/google/example/games/basegameutils/GameHelper.java#L945">showFailureDialog</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Shows an error dialog that’s appropriate for the failure reason.</p>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

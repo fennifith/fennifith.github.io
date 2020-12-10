@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A nostalgic dialog action menu from Android 2.3 re-invented for Material Design">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>rgocal/Material_PopUp_Menu</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="rgocal/Material_PopUp_Menu">
+<meta name="twitter:description" content="A nostalgic dialog action menu from Android 2.3 re-invented for Material Design">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="rgocal/Material_PopUp_Menu">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/material_popup_menu/">
+<meta name="og:description" content="A nostalgic dialog action menu from Android 2.3 re-invented for Material Design">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/Material_PopUp_Menu">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Material_PopUp_Menu/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/rgocal">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/2482221?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">rgocal</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <h1 id="material_popup_menu">Material_PopUp_Menu</h1>
+<p>A nostalgic dialog action menu from Android 2.3 re-invented for Material Design. This popup menu was originally used in ADW Launcher from CM7. I wanted something nostalgic to return in Sapphyx Launcher and came up with this rather simple library that can be used for a number of things. Very useful in listview or recyclerview long click popups. I am seeking some help from material design devs to make it look even more cleaner. If you want to contribute, theirs a todo list at the bottom! Material Popup was originally built for my Launcher Project Sapphyx but alot of my users liked the idea of it returning, So I extracted it as a library. Enjoy!</p>
+
+<p>Preview Image
+https://www.instagram.com/p/BqbFtOLAUOT/?utm_source=ig_web_copy_link</p>
+
+<p>#Getting Setup!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+</code></pre></div></div>
+
+  	dependencies {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>		implementation 'com.github.rgocal:Material_PopUp_Menu:v1.10.2'
+}
+</code></pre></div></div>
+
+<p>#Add Color Strings (optional)</p>
+
+<p>add these color strings to your project only if you plan to set the colors to the popup via xml and not via code
+  <!--The body color is the top and bottom headers and the arrow color -->
+    <color name="popup_body_color">@android:color/holo_blue_dark</color>
+    <!--The scrim color is the scrollbar color if enabled -->
+    <color name="popup_scrim_color">@android:color/holo_blue_dark</color>
+    <!--The scroll color is the background menu color -->
+    <color name="popup_scroll_color">@android:color/holo_blue_dark</color>
+    <!--The track color is the menu left and right dividers, set to the same color as the scroll color to disable -->
+    <color name="popup_track_color">@android:color/holo_blue_dark</color></p>
+
+<p>#Keeping It Simple</p>
+
+<p>Add some Action Items you will want in your menu. Each action requires an ID, a Title, and a Resource. The ID represents the position of the item. You can set boolean toggles to these IDs to programically hide them if you wish to add customization to your menu.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final ActionItem dummyOne = new ActionItem(1, "Dummy 1", getResources().getDrawable(R.drawable.ic_settings));
+    final ActionItem dummyTwo = new ActionItem(2, "Dummy 2", getResources().getDrawable(R.drawable.ic_settings));
+    final ActionItem dummyThree = new ActionItem(3, "Dummy 3", getResources().getDrawable(R.drawable.ic_settings));
+</code></pre></div></div>
+
+<p>Make them Stick or UnSticky. Making them Sticky means after clicking the option, the menu is still popped up. If they are UnSticky, The menu will dismiss after the item has been clicked.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dummyOne.setSticky(true);
+    dummyTwo.setSticky(true);
+    dummyThree.setSticky(false);
+</code></pre></div></div>
+
+<p>Initialize the Popup Menu</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>final PopUpMenu mQuickAction = new PopUpMenu(context);
+</code></pre></div></div>
+
+<p>Modify the Menu to your liking. Set animate track to true if you would like to see it bounce into place. Set light theme to true if you want light icons vs dark icons. Set scrollbar enabled if you want to see a scrollbar in the menu since its a horizontal menu. Anim Style has 4 variations, check out the source code of the library to decide what you want or set it to 4 for the sysytem to decide on its own. Set titles to true if you want your items to have titles under their icons. Set tracks to true if you wish to have a container track interface. Enable Menu Title or Menu SubTitle if you’d like your menu to have Titles. The subTitle can be set to have a click listener as well! Do not exceed the menu legth with your Strings or your menu’s margin position will be off.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    mQuickAction.mAnimateTrack(true);
+    mQuickAction.setLightTheme(true);
+    mQuickAction.setScrollBar(false);
+    mQuickAction.setAnimStyle(4);
+    mQuickAction.setHasTitles(true);
+mQuickAction.setEnableTracks(true);
+
+    mQuickAction.hasSubTitle(true);
+    String menuTitle = "Menu Title";
+    mQuickAction.setMenuTitle(menuTitle);
+
+    mQuickAction.hasSubTitle(true);
+    String menuSubTitle = "Menu SubTitle";
+    mQuickAction.setSubMenuTitle(menuSubTitle);
+    mQuickAction.setSubTitleOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(MainActivity.this, "This is pretty cool", Toast.LENGTH_SHORT).show();
+        }
+    });
+</code></pre></div></div>
+
+<p>Programically set colors to views. Scroll color is the background menu color. Track colors are divider colors on Start and End. Body color is the frame and arrow of the menu.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mQuickAction.setScrollColor(R.color.orange);
+    mQuickAction.setTrackColor(R.color.orange);
+    mQuickAction.setBodyColor(R.color.orange);
+</code></pre></div></div>
+
+<p>Add your items your created up top to your menu. This is where you can set boolean if statements to the IDs if you want to toggle them in your menu for customization.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mQuickAction.addActionItem(dummyOne);
+    mQuickAction.addActionItem(dummyTwo);
+    mQuickAction.addActionItem(dummyThree);
+</code></pre></div></div>
+
+<p>Set a click listener for each item.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mQuickAction.setOnActionItemClickListener(new PopUpMenu.OnActionItemClickListener() {
+        @Override
+        public void onItemClick(PopUpMenu source, int pos, int actionId) {
+            if (actionId == 1) {
+                Toast.makeText(context, messageOne, Toast.LENGTH_SHORT).show();
+            }
+            if (actionId == 2) {
+                Toast.makeText(context, messageTwo, Toast.LENGTH_SHORT).show();
+
+            }
+            if (actionId == 3) {
+                Toast.makeText(context, messageThree, Toast.LENGTH_SHORT).show();
+            }
+        }
+    });
+</code></pre></div></div>
+
+<p>Want a dimiss listener for whatever reason?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mQuickAction.setOnDismissListener(new PopUpMenu.OnDismissListener() {
+        @Override
+        public void onDismiss() {
+            Toast.makeText(getBaseContext(), "Dismissed!", Toast.LENGTH_SHORT).show();
+        }
+    });
+</code></pre></div></div>
+
+<p>Popup Menu Shouldn’t be used in all menu cases. The most helpfull cases are on listviews or individual menu cases on recyclerview items. Popup Menu was originally used in ADW Launcher to supply menu actions to app shortcuts, now we have shortcut popups bubbles from Pixel Launcher. Let’s not let a good menu die off. Let it live and be used. If it works, don’t mess with it.</p>
+
+<p>#ToDo List</p>
+<ul>
+  <li>Badge Support for Action Items</li>
+  <li>Vertical Orientation mode?</li>
+</ul>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/material_popup_menu/">
+                <time class="dt-published dt-updated" datetime="2019-02-13T19:11:14Z">February 13, 2019</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

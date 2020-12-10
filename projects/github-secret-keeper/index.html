@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Microservice to enable GitHub login for multiple server-less applications.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>HenrikJoreteg/github-secret-keeper</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="HenrikJoreteg/github-secret-keeper">
+<meta name="twitter:description" content="Microservice to enable GitHub login for multiple server-less applications.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="HenrikJoreteg/github-secret-keeper">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/github-secret-keeper/">
+<meta name="og:description" content="Microservice to enable GitHub login for multiple server-less applications.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/github-secret-keeper">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/github-secret-keeper/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/HenrikJoreteg">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/67925?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">HenrikJoreteg</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <h1 id="github-secret-keeper">github-secret-keeper</h1>
+
+<p>A microservice written in node.js for enabling static, server-less applications to log in using GitHub. Unlike existing alternatives, it works for as many different client IDs as you’d like. This lets you run a single microservice that knows <em>all</em> your client secrets rather than one for each app or service.</p>
+
+<h2 id="why">Why?</h2>
+
+<p>In order to let users log into our application with GitHub, we can use the GitHub OAuth system for web apps. For this we register our app with GitHub.com and they give us a <em>Client ID</em> and <em>Client Secret</em>. The ID is public, the secret is supposed to be… wait for it… a secret!</p>
+
+<p>I like to build clientside JS apps as <a href="https://blog.andyet.com/2015/05/18/lazymorphic-apps-bringing-back-static-web">completely static files</a>. Which means we don’t have a server somewhere, where we can keep and use that client secret. We don’t just want to put it in our static JS, because… well, then it’s no longer secret.</p>
+
+<p>If you read the <a href="https://developer.github.com/v3/oauth/#web-application-flow">GitHub OAuth Docs</a> you notice that at step #2, we have to make a <code class="language-plaintext highlighter-rouge">POST</code> request to GitHub that includes the secret. So what do we do?</p>
+
+<p>To solve this, we can run a little simple server (perhaps on a small free/cheap Heroku server) that does <em>just that part</em>: It knows your secret.</p>
+
+<p>But additionally, it’s common to register an app for each environment you need to test in. So, for a single app you may actually register two or three apps with github. One while developing locally, one for staging, one for production each with their own ID and secret and now, its own secret-keeping service.</p>
+
+<p>To deal with this, and to embrace the whole microservices idea, we could instead create a single service that knows about all client IDs and secrets. That’s what this is. Then, whenver we want to add another app, we just add a config item in heroku (or whever) and restart the service.</p>
+
+<p>It’s intended to be a simple, consistent, minimalist JSON API that lets you pass a client ID and “code” as per GitHub docs,</p>
+
+<h2 id="features">Features</h2>
+
+<ol>
+  <li>Provides a single CORS-enabled endpoint you can hit with AJAX that makes the GitHub request, including the secret, and returns the result.</li>
+  <li>Written in node.js using <a href="http://hapijs.com/">hapi</a></li>
+  <li>descriptive, consistent JSON responses with proper status codes</li>
+  <li>all but successful requests will have <code class="language-plaintext highlighter-rouge">4xx</code> status codes and JSON responses are generated with <a href="https://github.com/hapijs/boom">boom</a> for predictable structure.</li>
+</ol>
+
+<h2 id="how-it-works">How it works</h2>
+
+<ol>
+  <li>Your client IDs are simply environment variables <strong>whose value is the corresponding client secret</strong> (this plays nicely with services like Heroku)</li>
+  <li>You make an ajax request that looks as follows (using jquery for brevity):</li>
+</ol>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://secret-keeper.yourdomain.com/YOUR_CLIENT_ID/YOUR_CODE</span><span class="dl">'</span><span class="p">)</span>
+	<span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+	<span class="p">})</span>
+	<span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">failed</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
+	<span class="p">})</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<p>So, the URL should be as follows:</p>
+
+<pre><code class="language-nohighlight">https://yourhost.com/{ YOUR CLIENT ID }/{ YOUR CODE }
+</code></pre>
+
+<p>You can optionally also include <code class="language-plaintext highlighter-rouge">state</code>, <code class="language-plaintext highlighter-rouge">redirect_uri</code>, <code class="language-plaintext highlighter-rouge">domain</code> as a query paramaters.</p>
+
+<pre><code class="language-nohighlight">?state=&amp;redirect_uri=
+</code></pre>
+
+<p>If included, <code class="language-plaintext highlighter-rouge">state</code> and <code class="language-plaintext highlighter-rouge">redirect_uri</code> simply get passed through to GitHub, <code class="language-plaintext highlighter-rouge">domain</code> is <code class="language-plaintext highlighter-rouge">github.com</code> by default but can be changed via query param make it possible to use this with GitHub Enterprise.</p>
+
+<h2 id="setting-it-up-on-heroku">Setting it up on Heroku</h2>
+
+<ol>
+  <li>Make sure you have a heroku account and are logged in.</li>
+  <li>click this button: <a href="https://heroku.com/deploy"><img src="https://www.herokucdn.com/deploy/button.png" alt="Deploy" /></a> and follow instructions</li>
+  <li>Enter your client IDs/secrets as config variables in Heroku:</li>
+</ol>
+
+<p><img src="https://cldup.com/j8rcEzo5M6-1200x1200.png" alt="Heroku config variables screenshot" /></p>
+
+<h2 id="running-it-yourself">Running it yourself</h2>
+
+<p>You can either set env variables in the command when you run the node server:</p>
+
+<pre><code class="language-nohighlight">port=5000 YOUR_CLIENT_ID=CORRESPONDING_SECRET node server.js
+</code></pre>
+
+<p>Since that can be a bit messy you can also just put your client ID/secrets into <code class="language-plaintext highlighter-rouge">env.json</code>. Anything you put here will simply be added as environment variables.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+	</span><span class="nl">"YOUR CLIENT ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR CLIENT SECRET"</span><span class="p">,</span><span class="w">
+	</span><span class="nl">"YOUR OTHER CLIENT ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YOUR OTHER CLIENT SECRET"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The only other thing that’s configurable with environment variables is the PORT.</p>
+
+<h2 id="credits">credits</h2>
+
+<p>Created by <a href="http://twitter.com/henrikjoreteg">@HenrikJoreteg</a>. Inspired by <a href="https://github.com/prose/gatekeeper">gatekeeper</a>.</p>
+
+<h2 id="license">license</h2>
+
+<p><a href="http://mit.joreteg.com/">MIT</a></p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/github-secret-keeper/">
+                <time class="dt-published dt-updated" datetime="2018-12-06T00:24:32Z">December  6, 2018</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

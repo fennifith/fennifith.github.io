@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An easy to use crash reporting library for Android.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Crasher</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Crasher">
+<meta name="twitter:description" content="An easy to use crash reporting library for Android.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Crasher">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/crasher/">
+<meta name="og:description" content="An easy to use crash reporting library for Android.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/java.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/Crasher">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Crasher/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/apache-2.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Apache License 2.0</span>
+        </a>
+        
+        <a class="link" href="https://bintray.com/18jafenn90/maven/crasher/">
+            <object class="link__img" data="/images/ic/launch.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Bintray</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Crasher/releases/download/0.0.2/Crasher.apk">
+            <object class="link__img" data="/images/ic/download.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Crasher.apk (0.0.2 stable)</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+        <nav class="nav">
+            <button class="nav__item" selected>
+                <i class="nav__item__icon material-icons">info</i>
+                <span class="nav__item__title">About</span>
+            </button>
+            
+            
+            <button class="nav__item" onclick="location.href='docs/';">
+                <i class="nav__item__icon material-icons">list_alt</i>
+                <span class="nav__item__title">Docs</span>
+            </button>
+            
+        </nav>
+        <br>
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <p>Crasher is a library built to allow users to easily send stack traces and useful device info to developers without the use of third party services. For demonstration purposes, sample APKs can be downloaded <a href="https://github.com/TheAndroidMaster/Crasher/releases">here</a>.</p>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Main Screen</th>
+      <th>Somewhat Unnecessary Proof of StackOverflow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://github.com/fennifith/Crasher/blob/master/./.github/images/main.png?raw=true" alt="img" /></td>
+      <td><img src="https://github.com/fennifith/Crasher/blob/master/./.github/images/stackoverflow.png?raw=true" alt="img" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="setup">Setup</h3>
+
+<p>The Gradle dependency is available through jCenter, which is used by default in Android Studio. To add the dependency to your project, copy this line into the dependencies section of your build.gradle file.</p>
+
+<div class="language-gradle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">compile</span> <span class="s1">'me.jfenn:crasher:0.0.2'</span>
+</code></pre></div></div>
+
+<h3 id="setting-the-exception-handler">Setting the Exception Handler</h3>
+
+<p>Creating a <code class="language-plaintext highlighter-rouge">new Crasher(context)</code> will automatically set Crasher as the default exception handler in the current thread. This will need to be done in every thread that your application uses, or every thread that you want Crasher to intercept exceptions from.</p>
+
+<p><strong>Note: doing this will prevent the Play Store’s crash reporting from working, as Crasher will intercept all exceptions and the “this application has stopped working!” dialog will not be shown as a result.</strong>
+You can use the method <code class="language-plaintext highlighter-rouge">CrashUtils.isInstalledFromPlayStore(context)</code> (or simply <code class="language-plaintext highlighter-rouge">BuildConfig.DEBUG</code> to check if it’s a debug build) to prevent this.</p>
+
+<p>It is recommended to store one instance of <code class="language-plaintext highlighter-rouge">Crasher</code> in your app’s <a href="https://developer.android.com/reference/android/app/Application.html"><code class="language-plaintext highlighter-rouge">Application</code></a> class, and simply pass that to <code class="language-plaintext highlighter-rouge">Thread.setDefaultUncaughtExceptionHandler(crasher)</code> in each new thread that you create. If you do not engage in the fine art of multithreading, then you do not need to worry about this, and only need to create one <code class="language-plaintext highlighter-rouge">Crasher</code>, either in the <code class="language-plaintext highlighter-rouge">onCreate</code> method of your <code class="language-plaintext highlighter-rouge">Application</code> class, or the <code class="language-plaintext highlighter-rouge">onCreate</code> of the first <code class="language-plaintext highlighter-rouge">Activity</code> that is opened by your app.</p>
+
+<h3 id="options">Options</h3>
+
+<h4 id="app-name">App Name</h4>
+<p>Crasher uses <code class="language-plaintext highlighter-rouge">R.string.app_name</code> as the name of the application to display in the toolbar. The default value of this is “Crasher”, but can easily be changed by setting the <code class="language-plaintext highlighter-rouge">app_name</code> string resource in your strings.xml file.</p>
+
+<h4 id="email">Email</h4>
+<p>To specify an email for the user to optionally send crash reports to, simply call <code class="language-plaintext highlighter-rouge">crasher.setEmail(email)</code> and pass the desired email as a string, or pass <code class="language-plaintext highlighter-rouge">null</code> to remove the button (this will be obsolete in most cases, since it is not displayed by default unless an email is passed).</p>
+
+<h4 id="primary-color">Primary Color</h4>
+<p>By default, Crasher will use <code class="language-plaintext highlighter-rouge">#F5F5F5</code> as its primary color, which can be overriden by either creating the <code class="language-plaintext highlighter-rouge">colorPrimary</code> resource in your application or calling <code class="language-plaintext highlighter-rouge">crasher.setColor(color)</code> on the <code class="language-plaintext highlighter-rouge">Crasher</code> object.</p>
+
+<h4 id="stack-overflow">Stack Overflow</h4>
+<p>Crasher can also optionally open the search results of the exception message on stackoverflow when the app crashes. This may be somewhat annoying during “regular use”, as it would take much more time to solve common errors that most developers know on sight (missing a declaration in the manifest, for example), and is really just here for show. You can enable it for debug builds of the application only by calling <code class="language-plaintext highlighter-rouge">crasher.setStackoverflowEnabled(true)</code>, or for all builds by calling <code class="language-plaintext highlighter-rouge">crasher.setForceStackOverflow(true)</code> (I’m not sure what I was thinking when I decided on the capitalization for those two methods, but I can’t be bothered to fix it right now so they’ll probably stay for a while).</p>
+
+<h4 id="enablingdisabling-crasher-after-setting-the-exception-handler-this-is-a-really-long-title-help">Enabling/Disabling Crasher After Setting The Exception Handler This Is A Really Long Title Help</h4>
+<p>Call <code class="language-plaintext highlighter-rouge">crasher.setCrashActivityEnabled(isCrashThingyEnabled)</code>. Pretty self-explanatory.</p>
+
+<h4 id="other-stuff">Other Stuff</h4>
+<p>You can override any string resource the app uses by specifying it in your own strings.xml file (if you want to make your own translations, for example). The strings used by Crasher are as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource Name</th>
+      <th>Value</th>
+      <th>Used For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>app_name</td>
+      <td>Crasher</td>
+      <td>The app’s name in the action bar title/other random strings</td>
+    </tr>
+    <tr>
+      <td>title_crasher_crashed</td>
+      <td>%1$s Crashed</td>
+      <td>The action bar title, with String.format</td>
+    </tr>
+    <tr>
+      <td>title_crasher_exception</td>
+      <td>%1$s in %2$s</td>
+      <td>Used for the email subject, like “NullPointerException in My App”</td>
+    </tr>
+    <tr>
+      <td>msg_crasher_crashed</td>
+      <td>Unfortunately, %1$s has stopped working. You can report this as a bug using the buttons below, or you can try to fix it yourself. When reporting the bug, please include as much detail as possible to help fix the issue as quickly as possible. Please note that your device info, such as the manufacturer and model number, may be included in the bug report.</td>
+      <td>The message displayed to the user when a crash occurs</td>
+    </tr>
+    <tr>
+      <td>title_crasher_copy</td>
+      <td>Copy</td>
+      <td>Text of the button to copy the stack trace to the clipboard</td>
+    </tr>
+    <tr>
+      <td>title_crasher_share</td>
+      <td>Share</td>
+      <td>Text of the button to bring up the share menu with the stack trace</td>
+    </tr>
+    <tr>
+      <td>title_crasher_email</td>
+      <td>Email</td>
+      <td>Text of the button to share the stack trace and device info through an email</td>
+    </tr>
+    <tr>
+      <td>title_crasher_send_email</td>
+      <td>Send Email</td>
+      <td>The title of the share menu that will appear if the user has more than one email app to choose from</td>
+    </tr>
+    <tr>
+      <td>title_crasher_stack_trace</td>
+      <td>Stack Trace</td>
+      <td>The title of the button to show/hide the stack trace</td>
+    </tr>
+  </tbody>
+</table>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/crasher/">
+                <time class="dt-published dt-updated" datetime="2018-11-13T20:58:42Z">November 13, 2018</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

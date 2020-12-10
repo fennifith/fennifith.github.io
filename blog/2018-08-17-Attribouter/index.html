@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attribouter – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>Attribouter</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="Attribouter">
+<meta name="twitter:description" content="A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="Attribouter">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2018-08-17 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2018-08-17-Attribouter/">
+<meta name="og:description" content="A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">Attribouter</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2018-08-17-Attribouter/">
+			<time class="dt-published" datetime="2018-08-17 00:00:00 +0000">August 17, 2018</time></a>
+		</p>
+
+		<p>
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>A few months ago, I got tired of building about screens into all of my projects. I like building projects, and I find it very rewarding when others contribute to them and find them useful, but when the amount of work I force myself to do in order to give credit to the people that have helped me is greater than the work they have done to help me in the first place, it gets a little annoying.</p>
+
+<h2 id="prologue">Prologue</h2>
+
+<p>I had found two potential solutions to this problem: the <a href="https://github.com/mikepenz/AboutLibraries">About Libraries</a> library by Mike Penz, and <a href="https://github.com/daniel-stoneuk/material-about-library">Material About Library</a> by Daniel Stone, however neither really gave me what I was looking for.</p>
+
+<h4 id="about-libraries">About Libraries</h4>
+
+<p>About Libraries is visibly aging and has a bit of an imperfect design by today’s standards, not to mention that it only solves half of my problem - while it gives credit to the libraries I’m using perfectly well, it doesn’t help with other contributors or translators, which kind of misses the point.</p>
+
+<h4 id="material-about-library">Material About Library</h4>
+
+<p>Material About Library has quite a bit more functionality, and is much newer. It has a fairly modular design where the about screen consists of multiple “cards”, each with a title and a set of actions that a user can perform. Its API is quite simple and easy to get your head around quickly, and allows you to do pretty much anything short of adding your own custom views to the layout. However, as I was implementing it, I realized that the amount that I would have to write to add or remove a contributor was still around 3/4 of what I would be doing without the library. Additionally, if the project grew any larger than a few contributors and translators, I would have to make my own dialog to list them or the about screen would become cluttered and unusable, at which point I might as well just make my own.</p>
+
+<p>It was then that I had a thought: all of my projects are hosted on GitHub, so why don’t I just make an about screen using GitHub’s API that fetches all of my project’s contributors? Then I don’t have to modify the about screen at all - I don’t even have to update the app for them to appear. I could configure it so that I only have to specify the repository for my project and the repositories of the licenses it uses, and I would never have to touch it again.</p>
+
+<p>…and so began my quest to build a better about screen.</p>
+
+<h2 id="items">Items</h2>
+
+<p>From the start, I decided that using an XML configuration file would be my best option. While configuring all of the sections of the screen in Java, similarly to Material About Library, would allow more functionality, an XML file would require less typing and let me order the sections in the way I want them to be displayed, like a layout file does. I would create a RecyclerView in a fragment that is created inside of an activity, then parse the XML file to add items to its adapter.</p>
+
+<p>This required creating some type of data class. I decided that, for the sake of modularity, I would create an abstract base class that allows me to specify the layout file, create the ViewHolder, and bind the views within the data classes that are passed to the adapter. Because of the idiot that is me, I gave the base class the ambiguous name of <code class="language-plaintext highlighter-rouge">InfoData</code>, naming all of the data classes things like <code class="language-plaintext highlighter-rouge">ContributorsInfoData</code> or <code class="language-plaintext highlighter-rouge">LicensesInfoData</code>. This was not okay, but it worked.</p>
+
+<h2 id="information">Information</h2>
+
+<p>Instead of parsing the entire XML file then passing the information to the data classes, I decided to parse only enough to decide which data class to create, then pass the parser to their constructors, as the data that needs to be obtained will differ in each class.</p>
+
+<p>As well as the repository names for obtaining contributor and library information, I ended up creating attributes in the XML file to define just about all of the information it can obtain from GitHub in order to allow things like adding contributors that aren’t listed on GitHub or giving credit to libraries that are hosted somewhere else - GitLab, for example. They would also be used if the network requests to GitHub didn’t go through. When the information from GitHub was returned, all duplicate information from the XML file would be overwritten.</p>
+
+<h2 id="requests">Requests</h2>
+
+<p>At first, I wasn’t quite sure how I was going to handle network transactions with the GitHub API. I knew that the information would have to start and end in the <code class="language-plaintext highlighter-rouge">InfoData</code> classes, and that I would have to notify the RecyclerView of the changes once they had been made, but I didn’t know where I was going to make the actual request. I considered placing the methods to perform the request in the <code class="language-plaintext highlighter-rouge">InfoData</code> base class, but that seemed crude - it would clutter a class intended for a different purpose, and there would be no way to prevent duplicate requests from being created if two classes want information from the same endpoint.</p>
+
+<p>I ended up creating a separate set of classes for API requests - a superclass that accepts a URL and contains methods for creating the request (as well as listener interfaces/methods for when it is completed), and several subclasses which, because of <a href="https://github.com/google/gson">GSON</a> and its beautiful reflection, only need to define fields with the same name as the data provided by the API in order for them to be instantiated (<a href="/redirects/?t=github&amp;d=Attribouter/blob/28aaca214fefc7b4716107375834aa7195b019b8/attribouter/src/main/java/me/jfenn/attribouter/data/github/LicenseData.java">example</a>). I did have to make some small changes to the implementation of GSON to get it to work, including creating a subclass that was amusingly titled <a href="https://github.com/TheAndroidMaster/Attribouter/blob/28aaca214fefc7b4716107375834aa7195b019b8/attribouter/src/main/java/me/jfenn/attribouter/data/github/GitHubData.java#L139"><code class="language-plaintext highlighter-rouge">MootInstanceCreator</code></a>, but this was fairly trivial.</p>
+
+<p>These ‘request’ classes are created by the InfoDatas when they want to get information. They then pass it to a method defined in their superclass: <a href="/redirects/?t=github&amp;d=TheAndroidMaster/Attribouter/blob/28aaca214fefc7b4716107375834aa7195b019b8/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.java#L99">addRequest()</a>, which adds the request to a list stored in the InfoData then passes it through an interface to <a href="/redirects/?t=github&amp;d=Attribouter/blob/28aaca214fefc7b4716107375834aa7195b019b8/attribouter/src/main/java/me/jfenn/attribouter/fragments/AboutFragment.java#L172">the fragment</a>. The fragment then compares the request to a list of requests that have already been started, combining the listeners of similar requests to prevent duplicates. When the request is complete, all of its listeners are called, passing the information back to the InfoData(s) that made the request and finally returning to the fragment once more, where it determines which InfoData made the request and what position it holds in the RecyclerView so that it can be notified of any changes.</p>
+
+<h2 id="finale">Finale</h2>
+
+<p>Overall, this library has been very fun to make, and has become far better organized than I thought it would be. In the latest version, I have renamed the “InfoData” classes to “Wedges” and modified the format of the XML file to specify the full class name of the “Wedge” class they create, but the general structure of the project has otherwise remained unchanged. For one of my projects to be this successful at accomplishing its task is rare, so I am very proud of my beautiful child. If you haven’t already, you can check it and its beautiful documentation out <a href="/redirects/?t=github&amp;d=Attribouter">here</a>.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

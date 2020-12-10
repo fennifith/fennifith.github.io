@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>AdaptiveIconView Documentation</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="AdaptiveIconView Documentation">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="AdaptiveIconView Documentation">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/adaptiveiconview/docs/library/src/main/java/james/adaptiveicon/AdaptiveIconView.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+	<sidebar class="sidebar">
+	    <h2>Adjacent Files</h2>
+		
+		
+<ul>
+  <li><a href="AdaptiveIcon">AdaptiveIcon</a></li>
+  <li><a href="AdaptiveIconView">AdaptiveIconView</a></li>
+  <li><a href="utils">utils /</a>
+    <ul>
+      <li><a href="utils/ConversionUtils">ConversionUtils</a></li>
+      <li><a href="utils/ImageUtils">ImageUtils</a></li>
+      <li><a href="utils/PathUtils">PathUtils</a></li>
+      <li><a href="utils/ResourceUtils">ResourceUtils</a></li>
+    </ul>
+  </li>
+</ul>
+
+	</sidebar>
+	<main class="container">
+		
+		<a class="link" href="../../../../../../../">
+			<img class="link__img" src="/images/ic/back.svg">
+			<span class="link__title">Project Info</span>
+		</a>
+
+		<div class="markdown">
+			<h4 id="--library--src--main--java--james--adaptiveicon--adaptiveiconviewjava"><a href="./../../../../../../index">.</a> &gt; <a href="./../../../../../index">library</a> &gt; <a href="./../../../../index">src</a> &gt; <a href="./../../../index">main</a> &gt; <a href="./../../index">java</a> &gt; <a href="./../index">james</a> &gt; <a href="./index">adaptiveicon</a> &gt; <strong>AdaptiveIconView.java</strong></h4>
+
+<h2 id="seticon"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L66">setIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets the icon for this view to use. It must contain a foreground image, 
+but the background image is optional - without it, the foreground image 
+will not be clipped and any scaling will not be applied.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>icon</td>
+      <td>the icon for this view to use</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="geticon"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L80">getIcon</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">AdaptiveIcon</code></p>
+
+<p>Returns the current AdaptiveIcon.</p>
+
+<p><strong>Returned Value:</strong> the current AdaptiveIcon</p>
+
+<h2 id="setpath"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L89">setPath</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets a custom path for this view to use, providing that its AdaptiveIcon has 
+a background image</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>size</td>
+      <td>the bounds of the path, used to scale it to fit the size of the view</td>
+    </tr>
+    <tr>
+      <td>path</td>
+      <td>the custom path</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setpath-1"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L103">setPath</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets a path for this view to use from one of the presets.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pathType</td>
+      <td>must be either PATH_CIRCLE, PATH_SQUIRCLE, PATH_ROUNDED_SQUARE, PATH_SQUARE, or PATH_TEARDROP</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setpath-2"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L137">setPath</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Sets a custom path from string data.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pathData</td>
+      <td>the path data string to use</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="getpath"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L147">getPath</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">Path</code></p>
+
+<p>Returns the current path this view is using.</p>
+
+<p><strong>Returned Value:</strong> the current path this view is using</p>
+
+<h2 id="setoffset"><a href="https://github.com/fennifith/AdaptiveIconView/blob/master/library/src/main/java/james/adaptiveicon/AdaptiveIconView.java#L156">setOffset</a></h2>
+
+<p><strong>Type:</strong> <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">void</code></p>
+
+<p>Call this method to offset the icon for animating icon movements</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>offsetX</td>
+      <td>the amount to move the icon (reversed) horizontally, between 0 and 1</td>
+    </tr>
+    <tr>
+      <td>offsetY</td>
+      <td>the amount to move the icon (reversed) vertically, between 0 and 1</td>
+    </tr>
+  </tbody>
+</table>
+
+
+		</div>
+	</main>
+
+	<footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+</body>
+</html>
+	

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+		if (location.search) {
+			while (location.search.includes("/"))
+				location.search = location.search.split("/")[1];
+			
+			window.location = "/projects/" + location.search.substring(1).toLowerCase();
+		} else window.location = "/404.html";
+		</script>
+	</body>
+</html>

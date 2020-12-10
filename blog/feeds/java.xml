@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - Java</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        
+        
+        <item>
+            <title>Attribouter</title>
+			<description>A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.</description>
+			<pubDate>2018-08-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-17-Attribouter/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-17-Attribouter/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Exceptional Traveler</title>
+			<description>I explain how and why (sort of) I wrote an implementation of the Traveling Salesperson Problem using Exceptional Programming standards.</description>
+			<pubDate>2018-09-25T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

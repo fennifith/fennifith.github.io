@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An attempt at making an affordable, DIY scientific calculator that offers better performance and more productivity than the current standard.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>wyager/MicroMechBoard</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="wyager/MicroMechBoard">
+<meta name="twitter:description" content="An attempt at making an affordable, DIY scientific calculator that offers better performance and more productivity than the current standard.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="wyager/MicroMechBoard">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/raspi-calcuberry/">
+<meta name="og:description" content="An attempt at making an affordable, DIY scientific calculator that offers better performance and more productivity than the current standard.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/c.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/c++.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/makefile.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/Raspi-Calcuberry">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/Raspi-Calcuberry/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/wyager">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/780134?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">wyager</span>
+        </a>
+        
+        <a class="link" href="https://github.com/CaitSith2">
+            <object class="link__img--round" data="https://avatars0.githubusercontent.com/u/79097?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">CaitSith2</span>
+        </a>
+        
+        <a class="link" href="https://github.com/spatil47">
+            <object class="link__img--round" data="https://avatars3.githubusercontent.com/u/8443096?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">spatil47</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <h1 id="the-scientific-raspbian-calcuberry-pi">The Scientific Raspbian Calcuberry Pi</h1>
+
+<p>This project is an attempt at making an affordable, DIY scientific calculator that
+offers better performance and results in more productivity than the (IMO) overpriced
+TI calculators that many students are forced to use.</p>
+
+<p>The main components of this repository are listed below:</p>
+
+<h2 id="parts-incomplete">Parts (incomplete)</h2>
+
+<ul>
+  <li>Raspberry Pi model B</li>
+  <li>2.8” 320x240 touchscreen display</li>
+  <li>10,000 mAh battery</li>
+  <li>Keyboard PCB</li>
+  <li>Kailh Burnt Orange box switches</li>
+  <li>PBT key caps</li>
+  <li>Teensy 2.0 microcontroller</li>
+  <li>3 150 Ohm resistors</li>
+  <li>2 5000 Ohm resistors</li>
+  <li>screws/threaded cylinders</li>
+  <li>2 small USB -&gt; micro cables</li>
+  <li>1 nice toggle switch</li>
+</ul>
+
+<h2 id="assembly">Assembly</h2>
+
+<p>This project has not been completed yet, and parts of it are still being designed, but the
+assembly will mainly consist of screws, threaded cylinders, and a somewhat complex 3d printed
+case with a sliding panel for “maintenance”.</p>
+
+<h2 id="keyboard">Keyboard</h2>
+
+<h3 id="design">Design</h3>
+
+<p>The keyboard for this project is based on <a href="https://github.com/wyager/MicroMechBoard">Will Yager’s custom mechanical keyboard</a>
+project (<a href="http://yager.io/keyboard/keyboard.html">blog post</a>) for a full split keyboard with
+two halves. We will only use one half per calculator, which is close to the ideal size for a scientific
+calculator.</p>
+
+<h3 id="firmware">Firmware</h3>
+
+<p>Incomplete, but will be made for a Teensy 2.0, the same as the original project by Will Yager.</p>
+
+<h3 id="key-bindings">Key Bindings</h3>
+
+<p>As stated, the project is not complete, so these plans may change. A regular scientific calculator
+has 50 keys, however this one will have 33, so we will need to make a few compromises. The “2nd”,
+“Alpha”, and “Power” keys will be mapped to the three backlit keys on the keyboard and will light up
+when active, however the “power” button will actually put the device to sleep (and light up when in
+sleep mode - there will be a physical switch to turn it completely off and on). To save room, the
+letter keys will still be accessible in alpha mode, but will consist of a T9 layout on the number
+keys, not across the entire board like is common for most TI-86 calculators.</p>
+
+<h2 id="software">Software</h2>
+
+<p>As of now, I am not sure what software I plan on using, but I will attempt to make the keyboard
+settings work universally - and not for any specific piece of software - as much as possible
+(for example, the sin/cos/tan buttons will print out the characters “sin(“, but not the end
+parentheses, as some software will insert them automatically.</p>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/raspi-calcuberry/">
+                <time class="dt-published dt-updated" datetime="2018-02-13T14:52:50Z">February 13, 2018</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

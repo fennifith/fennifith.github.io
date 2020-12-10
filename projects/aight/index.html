@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="aight is a command-line tool for getting todo tasks quickly.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>theonesean/aight</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="theonesean/aight">
+<meta name="twitter:description" content="aight is a command-line tool for getting todo tasks quickly.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="theonesean/aight">
+
+<meta name="og:type" content="website">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/aight/">
+<meta name="og:description" content="aight is a command-line tool for getting todo tasks quickly.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+    
+        <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/atelier-cave-dark.min.css" rel="stylesheet">
+<link href="/css/highlight.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/d.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/shell.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/makefile.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+    
+</head>
+<body class="sidebar__container">
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <sidebar class="sidebar">
+        <h2>Links</h2>
+        
+        <a class="link" href="https://github.com/fennifith/aight">
+            <object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GitHub</span>
+        </a>
+        
+        <a class="link" href="https://github.com/fennifith/aight/issues">
+            <object class="link__img" data="/images/ic/bug.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">Issues</span>
+        </a>
+        
+        <a class="link" href="https://choosealicense.com/licenses/gpl-3.0/">
+            <object class="link__img" data="/images/ic/copyright.svg" type="image/png">
+                <img class="link__img" src="/images/ic/link.svg">
+            </object>
+            <span class="link__title">GNU General Public License v3.0</span>
+        </a>
+        
+        <h2>Contributors</h2>
+        
+        <a class="link" href="https://github.com/fennifith">
+            <object class="link__img--round" data="https://avatars1.githubusercontent.com/u/13000407?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">fennifith</span>
+        </a>
+        
+        <a class="link" href="https://github.com/theonesean">
+            <object class="link__img--round" data="https://avatars2.githubusercontent.com/u/5413368?v=4" type="image/png">
+                <img class="link__img--round" src="/images/ic/person.svg">
+            </object>
+            <span class="link__title">theonesean</span>
+        </a>
+        
+        
+        
+        <h2>Contact</h2>
+        
+        <a class="link" href="https://discord.jfenn.me/">
+            <i class="link__img material-icons">group</i>
+            <span class="link__title">Discord</span>
+        </a>
+        
+        <a class="link" href="/links/telegram">
+            <i class="link__img material-icons">chat</i>
+            <span class="link__title">Telegram</span>
+        </a>
+        
+        <a class="link" href="mailto:me@jfenn.me">
+            <i class="link__img material-icons">email</i>
+            <span class="link__title">E-mail</span>
+        </a>
+        
+        <br><br>
+        <div class="--desktop">
+            
+        </div>
+    </sidebar>
+
+    <main class="container">
+        <a class="link" href="/#projects">
+            <img class="link__img" src="/images/ic/back.svg">
+            <span class="link__title">All Projects</span>
+        </a>
+        <br>
+
+        
+
+        <div class="h-entry">
+			
+            <div id="content" class="e-content markdown">
+                <h1 id="aight">AIGHT</h1>
+
+<p>AIGHT is a command-line tool for getting todo tasks quickly.</p>
+
+<h2 id="building">Building</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/theonesean/aight.git
+make <span class="o">&amp;&amp;</span> make <span class="nb">install</span>
+</code></pre></div></div>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>The program looks for its config file in <code class="language-plaintext highlighter-rouge">~/.aight.conf</code>, <code class="language-plaintext highlighter-rouge">~/.config/aight.conf</code>, and <code class="language-plaintext highlighter-rouge">/etc/aight.conf</code>, in that order. It uses an <a href="https://github.com/FreeSlave/inilike">INI-like</a> format, with each group representing a different project/task implementation (Trello, GitHub Projects, etc…).</p>
+
+<p>There are two “predefined” groups that can only exist once. These should appear at the start of your file. <code class="language-plaintext highlighter-rouge">[settings]</code> refers to global settings that affect the entire program, such as the table width or separation characters. The <code class="language-plaintext highlighter-rouge">[defaults]</code> group specifies default values for all of the groups that follow it. For instance, if you are defining many Trello configurations for the same account, you may not want to repeat the API key/token each time.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[settings]</span>
+<span class="py">listWidth</span><span class="p">=</span><span class="s">40</span>
+<span class="py">borderCharHorizontal</span><span class="p">=</span><span class="s">-</span>
+<span class="py">borderCharVertical</span><span class="p">=</span><span class="s">|</span>
+
+<span class="nn">[defaults]</span>
+<span class="py">trelloApiKey</span><span class="p">=</span><span class="s">a Trello API developer key</span>
+<span class="py">trelloApiToken</span><span class="p">=</span><span class="s">your Trello token</span>
+</code></pre></div></div>
+
+<h3 id="display-modes">Display Modes</h3>
+
+<p>By default, <code class="language-plaintext highlighter-rouge">aight</code> will attempt to display multiple task lists (for example, multiple lists within a single Trello board) in ASCII table format, using the <code class="language-plaintext highlighter-rouge">listWidth</code> and <code class="language-plaintext highlighter-rouge">borderChar</code> settings and your terminal window width. If you would prefer to have multiple lists displayed one after the other, set <code class="language-plaintext highlighter-rouge">displayMode=list</code>.</p>
+
+<p><strong>Note:</strong> While in <code class="language-plaintext highlighter-rouge">displayMode=list</code>, by default, tasks in a list will not respect <code class="language-plaintext highlighter-rouge">listWidth</code>. To force a width in list mode, set <code class="language-plaintext highlighter-rouge">listModePreserveWidth=true</code>.</p>
+
+<h3 id="task-providers">Task Providers</h3>
+
+<p>Task providers are triggered based on a set of conditional attributes such as <code class="language-plaintext highlighter-rouge">matchDir</code> (to match the current working directory) or <code class="language-plaintext highlighter-rouge">matchRemote</code> (to match the upstream git URL). The first group to match the current conditions will be executed, and all others will be ignored. As an example, here is a group that will open a URL whenever <code class="language-plaintext highlighter-rouge">aight</code> is used in one of my repositories:</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[exec]</span>
+<span class="py">matchRemote</span><span class="p">=</span><span class="s">git@github.com:theonesean/*</span>
+<span class="py">command</span><span class="p">=</span><span class="s">open https://youtu.be/dQw4w9WgXcQ</span>
+</code></pre></div></div>
+
+<p>Here is a list of all implemented providers and their configuration values:</p>
+
+<h4 id="github-issues">GitHub Issues</h4>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[github]</span>
+<span class="py">githubApiToken</span><span class="p">=</span><span class="s">a GitHub API token</span>
+<span class="py">githubRepo</span><span class="p">=</span><span class="s">the repository to fetch (optional, defaults to matched remote URL)</span>
+</code></pre></div></div>
+
+<p>If the provider is matched by a remote URL of a GitHub repository (using <code class="language-plaintext highlighter-rouge">matchRemote</code>), the <code class="language-plaintext highlighter-rouge">githubRepo</code> value will default to its repository name if it is unset.</p>
+
+<h4 id="github-projects">GitHub Projects</h4>
+
+<p><strong>Note:</strong> because of various limitations, the GitHub Projects implementation is currently <em>very slow</em>. The API is also a developer preview, so it will likely change at some point in the future.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[github-projects]</span>
+<span class="py">githubApiToken</span><span class="p">=</span><span class="s">a GitHub API token</span>
+<span class="py">githubRepo</span><span class="p">=</span><span class="s">the repository to fetch (optional, defaults to matched remote URL)</span>
+<span class="py">githubProjectId</span><span class="p">=</span><span class="s">the project ID (optional, defaults to first project available)</span>
+</code></pre></div></div>
+
+<h4 id="trello">Trello</h4>
+
+<p>See <a href="https://trello.com/app-key">trello.com/app-key</a> to obtain an API key / token for this program to use.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[trello]</span>
+<span class="py">trelloApiKey</span><span class="p">=</span><span class="s">a Trello API developer key</span>
+<span class="py">trelloApiToken</span><span class="p">=</span><span class="s">your Trello token</span>
+<span class="py">trelloBoardId</span><span class="p">=</span><span class="s">the board to display</span>
+</code></pre></div></div>
+
+<h4 id="shell-script">Shell Script</h4>
+
+<p>This just executes the given command.</p>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[exec]</span>
+<span class="py">command</span><span class="p">=</span><span class="s">cat ./TODO.md</span>
+</code></pre></div></div>
+
+<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>Integration with GitHub Projects</li>
+  <li>Ability to filter cards by tag / status</li>
+  <li>Allow multiple providers to match the same repo</li>
+</ul>
+
+            </div>
+            <h4>
+                Last updated: <a class="u-url" href="https://jfenn.me/projects/aight/">
+                <time class="dt-published dt-updated" datetime="2019-09-30T14:53:54Z">September 30, 2019</time></a>
+            </h4>
+        </div>
+    </main>
+    
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>

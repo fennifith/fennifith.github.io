@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>James Fenn</title>
+		<description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+		<link>https://jfenn.me</link>
+		
+		<item>
+			<title>Animating SVG Icons on the Web</title>
+			<description>A small breakdown of the process I used to create a couple interactive icons for a web project.</description>
+			<pubDate>2020-05-09T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</guid>
+		</item>
+		
+		<item>
+			<title>AIGHT: a Low-effort Productivity Tool</title>
+			<description>AIGHT is a command-line tool for getting todo tasks quickly.</description>
+			<pubDate>2020-02-27T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2020-02-27-AIGHT/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2020-02-27-AIGHT/</guid>
+		</item>
+		
+		<item>
+			<title>Ethics of Artificial Intelligence</title>
+			<description>An overview of the discourse surrounding &quot;ethical AI&quot; and its use in the Big Tech industry.</description>
+			<pubDate>2020-01-24T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/papers/2020-01-24-Ethics-of-AI/</link>
+			<guid isPermaLink="true">https://jfenn.me/papers/2020-01-24-Ethics-of-AI/</guid>
+		</item>
+		
+		<item>
+			<title>Federated Social Networks</title>
+			<description>Explaining what the fediverse is, how to join it, and why.</description>
+			<pubDate>2019-12-15T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</guid>
+		</item>
+		
+		<item>
+			<title>Ethical Source and Subjectivity</title>
+			<description>A mini-summary / explanation of some criticisms of the Ethical Source Movement.</description>
+			<pubDate>2019-10-30T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-10-30-Ethical-Source/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-10-30-Ethical-Source/</guid>
+		</item>
+		
+		<item>
+			<title>Free Software and RMS</title>
+			<description>A summary of my thoughts on the relationship between Richard Stallman and the Free Software Movement.</description>
+			<pubDate>2019-10-28T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</guid>
+		</item>
+		
+		<item>
+			<title>Open Source in Education</title>
+			<description>A discussion of the open source model as a solution to many issues in higher education.</description>
+			<pubDate>2019-10-15T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/papers/2019-10-15-Open-Source-in-Education/</link>
+			<guid isPermaLink="true">https://jfenn.me/papers/2019-10-15-Open-Source-in-Education/</guid>
+		</item>
+		
+		<item>
+			<title>JavaScript: Productivity over Proof</title>
+			<description>In the vast majority everyday software, nobody writes a mathematical proof of every piece of functionality. Dynamically typed languages exist for a reason, and this is not it.</description>
+			<pubDate>2019-08-02T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</guid>
+		</item>
+		
+		<item>
+			<title>Thoughts About Aptoide's 'Play Fair' Campaign</title>
+			<description>Sharing my opinions about Aptoide's 'play fair' campaign and some of the claims made in their argument.</description>
+			<pubDate>2019-06-13T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</guid>
+		</item>
+		
+		<item>
+			<title>Right to Repair</title>
+			<description>A summary of the main points surrounding the debate over Right to Repair and an argument in favour of it, with a focus on Apple devices and customer experience.</description>
+			<pubDate>2019-04-14T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/papers/2019-04-14-Right-to-Repair/</link>
+			<guid isPermaLink="true">https://jfenn.me/papers/2019-04-14-Right-to-Repair/</guid>
+		</item>
+		
+		<item>
+			<title>Introduction to Android: Contexts, Intents, and the Activity lifecycle</title>
+			<description>A basic overview of the main components of an Android app and how they interact with each other and the Android system.</description>
+			<pubDate>2019-03-18T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/introduction-to-android-framework/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/introduction-to-android-framework/</guid>
+		</item>
+		
+		<item>
+			<title>Joining Freenode IRC: A Guide</title>
+			<description>Basic (but detailed) instructions for setting up a Freenode IRC account through various clients.</description>
+			<pubDate>2019-03-06T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/joining-freenode-irc/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/joining-freenode-irc/</guid>
+		</item>
+		
+		<item>
+			<title>Continuous Integration with Travis CI for Android</title>
+			<description>An in-depth tutorial explaining how to set up Travis CI to deploy signed builds to Google Play. Among other things.</description>
+			<pubDate>2018-11-14T00:00:00+00:00</pubDate>
+			<link>https://unicorn-utterances.com/posts/travis-ci-for-android/</link>
+			<guid isPermaLink="true">https://unicorn-utterances.com/posts/travis-ci-for-android/</guid>
+		</item>
+		
+		<item>
+			<title>CSS Submodules</title>
+			<description>How I organize my site's CSS and why.</description>
+			<pubDate>2018-10-26T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-10-26-CSS-Submodules/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-10-26-CSS-Submodules/</guid>
+		</item>
+		
+		<item>
+			<title>Exceptional Traveler</title>
+			<description>I explain how and why (sort of) I wrote an implementation of the Traveling Salesperson Problem using Exceptional Programming standards.</description>
+			<pubDate>2018-09-25T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</guid>
+		</item>
+		
+		<item>
+			<title>Pricing Models</title>
+			<description>TL;DR - Don't work for free.</description>
+			<pubDate>2018-09-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-17-Pricing-Models/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-17-Pricing-Models/</guid>
+		</item>
+		
+		<item>
+			<title>AAAAAAAAAAAAAAAAAAAAAAAHHH</title>
+			<description>A small command-line utility I wrote with Go that I had a lot of fun with.</description>
+			<pubDate>2018-09-01T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</guid>
+		</item>
+		
+		<item>
+			<title>Client-Side JavaScript</title>
+			<description>Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.</description>
+			<pubDate>2018-08-19T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</guid>
+		</item>
+		
+		<item>
+			<title>Attribouter</title>
+			<description>A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.</description>
+			<pubDate>2018-08-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-17-Attribouter/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-17-Attribouter/</guid>
+		</item>
+		
+		<item>
+			<title>Hello World</title>
+			<description>I made a blog.</description>
+			<pubDate>2018-07-28T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-07-28-Hello-World/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-07-28-Hello-World/</guid>
+		</item>
+		
+	</channel>
+</rss>

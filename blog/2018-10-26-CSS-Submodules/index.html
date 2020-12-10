@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Submodules – James Fenn's Blog</title>
+    <meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="How I organize my site's CSS and why.">
+<meta name="author" content="James Fenn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="generator" content="James Fenn">
+<title>CSS Submodules</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="icon" sizes="16x16" href="/favicon.ico">
+<link rel="icon" sizes="24x24" href="/images/favicon-24.ico">
+<link rel="icon" sizes="32x32" href="/images/favicon-32.ico">
+<link rel="icon" sizes="48x48" href="/images/favicon-48.ico">
+<link rel="icon" sizes="64x64" href="/images/favicon-64.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+<link rel="apple-touch-icon-precomposed" href="/images/favicon-152.png">
+
+<link href="https://fonts.googleapis.com/css?family=Miriam+Libre|Roboto|Vollkorn" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="twitter:title" content="CSS Submodules">
+<meta name="twitter:description" content="How I organize my site's CSS and why.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+
+<meta name="og:title" content="CSS Submodules">
+
+<meta name="og:type" content="article">
+<meta name="article:published_time" content="2018-10-26 00:00:00 +0000">
+<meta name="article:author" content="James Fenn">
+
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2018-10-26-CSS-Submodules/">
+<meta name="og:description" content="How I organize my site's CSS and why.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+
+
+  </head>
+  <body>
+	<black-lives></black-lives><br>
+<script src="https://unpkg.com/i-stand/black-lives.js" type="module"></script>
+
+
+    <main id="main" role="main" class="container">
+      <a class="link" href="/#blog">
+        <img class="link__img" src="/images/ic/back.svg">
+        <span class="link__title">All Blogs</span>
+      </a>
+      <br>
+      <article class="h-entry post" style="max-width: 1000px;">
+		<h1 class="text__title p-name">CSS Submodules</h1>
+		<p class="text__meta">
+			<a class="p-author h-card" href="https://jfenn.me">James Fenn</a> | 
+			<a class="u-url" href="https://jfenn.me/blog/2018-10-26-CSS-Submodules/">
+			<time class="dt-published" datetime="2018-10-26 00:00:00 +0000">October 26, 2018</time></a>
+		</p>
+
+		<p>
+		
+      	
+      	<a class="link link--chip" href="http://getbem.com/naming/">
+        	<object class="link__img" data="http://getbem.com/assets/favicon.png" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Block Element Modifier</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">
+        	<object class="link__img" data="https://git-scm.com/favicon.ico" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Git Submodules</span>
+      	</a>
+      	
+      	<a class="link link--chip" href="https://blog.github.com/2016-02-01-working-with-submodules/">
+        	<object class="link__img" data="https://github.com/favicon.ico" type="image/png">
+          		<img class="link__img" src="/images/ic/link.svg">
+        	</object>
+        	<span class="link__title">Submodules with GitHub</span>
+      	</a>
+      	
+		
+		</p>
+		
+		<br>
+
+        <div class="e-content entry markdown">
+          
+          <p>One of my tasks this week has been reorganizing my website’s CSS styles in order to make them easier for me to both use and maintain. It isn’t like I have a ton of styles for my site - most of it is fairly text-based - but I have noticed it growing, and “debugging” style-related problems was becoming a pain.</p>
+
+<p>The first thing that I decided to do in order to fix this was (as suggested by <a href="https://github.com/jacksonhvisuals">Jackson Hayes</a>) to implement a class naming convention called <a href="http://getbem.com/naming/">Block Element Modifier</a>. Essentially, this splits class names into three parts, a block, an element, and (obviously) a <a href="https://en.wikipedia.org/wiki/Meringue">meringue</a>. N-no wait, a modifier. That’s it.</p>
+
+<p>Under the BEM, a styled “block”, say, named “circle”, would simply be given the class name <code class="language-plaintext highlighter-rouge">circle</code>. But let’s say you want to make a smaller version of that circle that is less prominent - that would be named <code class="language-plaintext highlighter-rouge">circle--smaller</code>, a <strong>modification</strong> of <code class="language-plaintext highlighter-rouge">circle</code>. Inside of the small circle, say you have an icon. Any styles applied to that icon would then be given the name <code class="language-plaintext highlighter-rouge">circle__icon</code>, or <code class="language-plaintext highlighter-rouge">circle--smaller__icon</code> if that icon is in a <code class="language-plaintext highlighter-rouge">circle--smaller</code>. The icon is an <strong>element</strong> of the circle.</p>
+
+<p>Now, when actually writing and applying these styles, <code class="language-plaintext highlighter-rouge">circle--smaller</code>, a modification of <code class="language-plaintext highlighter-rouge">circle</code>, wouldn’t contain all of the styles that <code class="language-plaintext highlighter-rouge">circle</code> has as well as its own; you would actually have to write <code class="language-plaintext highlighter-rouge">&lt;element class="circle circle--smaller"&gt;</code> in order to achieve the desired effect. However, as I soon discovered, it isn’t easy to write these styles in a way that prevents them from being reused in multiple places. Let’s say that I have two blocks, a <code class="language-plaintext highlighter-rouge">link</code> and an <code class="language-plaintext highlighter-rouge">item</code>. These both have different styles, and their child elements look and behave completely differently, but they have one thing in common: they both occasionally need to contain a moderately styled image. The images are different sizes, but apart from that the styles should be exactly the same. Now, I could make <code class="language-plaintext highlighter-rouge">img</code> a block of its own, but how would I apply the change in size? <code class="language-plaintext highlighter-rouge">img--smaller</code>? That seems odd, especially when the image is essentially an <strong>element</strong> of the <code class="language-plaintext highlighter-rouge">link</code> or <code class="language-plaintext highlighter-rouge">item</code> that contains it. If I only use <code class="language-plaintext highlighter-rouge">link__img</code> and <code class="language-plaintext highlighter-rouge">item__img</code>, though, quite a bit of CSS is being duplicated, meaning that if I want to change the image’s appearance later on I’ll have twice as many lines to modify. In the end, I decided to kind of mush these two ideas together, writing a somewhat unsatisfactory <code class="language-plaintext highlighter-rouge">&lt;img class="img link__img"&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;img class="img item__img"&gt;</code> instead. I am still not sure that this is the best way for it to be handled, but I do not have any better ideas, so I am leaving it as-is for now.</p>
+
+<p>After re-naming nearly all of my CSS styles, I realized something: I can’t possibly push this to my site right now. I haven’t modified the HTML to use the new class names yet! Even once I finish working on the main repository, there are projects like <a href="https://jfenn.me/projects/bugiver">Bugiver</a> and <a href="https://jfenn.me/projects/photos">Photos</a> that would also break; I’d have to update them as well. “Huh”, I thought. “I wonder if there is any way that I could use multiple versions of my CSS at once, without duplicating code, so that I can gradually move my projects over without breaking anything…” And then I remembered: I had been wanting to try using <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Submodules</a> for a while, couldn’t I use that? <em>I could, I would, and I did.</em> Essentially, all of my website-containing repositories now have a submodule, like a smaller cloned-repository-in-a-repository, inside of them which references a specific commit to pull files from. This requires me to specifically change the commit that the submodule points to for each project when I want to update it; simply changing the CSS will no longer break anything until I tell my projects to use it.</p>
+
+<p>After all this, I was ready to have a cup of tea and be done for the night, but no. That was not enough to satisfy me. I needed to do <strong>MORE</strong>. So, in order to organize the one giant CSS file containing all of my styles a little better, I used <a href="https://sass-lang.com/">Sassy CSS</a> to split it into individual files by block, with one <code class="language-plaintext highlighter-rouge">styles.scss</code> file containing references to all of them so that they are all combined when the page is built.</p>
+
+<p>Finally, I decided to admire my hard work by (somewhat badly) documenting the styles that I have spent so long staring at with <a href="/styles/">jfenn.me/styles</a>, complete with vague descriptions, HTML examples, and links to the source of the CSS styles that apply to each element.</p>
+
+          
+        </div>
+
+        
+      </article>
+    </main>
+
+    <footer class="footer container" style="padding-bottom: 96px;">
+	<hr>
+
+	<div style="display: inline-block; float: right;">
+		<input id="darkThemeCheckBox" type="checkbox">
+		<label for="darkThemeCheckBox"></label>
+		<span>Dark Theme</span>
+	</div>
+	<script type="text/javascript">
+	    const _darkThemeCheckBoxElement = document.getElementById("darkThemeCheckBox");
+	    const _darkThemeListeners = [];
+	    var _darkTheme = false;
+	    
+	    function setDarkTheme(isDark) {
+	        _darkTheme = isDark;
+	        _darkThemeCheckBoxElement.checked = isDark;
+			if (isDark) {
+				document.body.classList.remove("--theme-light");
+				document.body.classList.add("--theme-dark");
+			} else {
+				document.body.classList.remove("--theme-dark");
+				document.body.classList.add("--theme-light");
+			}
+			
+	        let color = isDark ? "#212121" : "#FFFFFF";
+	        document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+
+			if (localStorage) {
+				if (isDark)
+					localStorage.setItem("darkTheme", ".");
+				else localStorage.removeItem("darkTheme");
+			}
+
+			for (let i in _darkThemeListeners) {
+			    _darkThemeListeners[i](isDark);
+			}
+	    }
+
+	    function addDarkThemeListener(listener) {
+	        _darkThemeListeners.push(listener);
+	        listener(_darkTheme);
+	    }
+	    
+		_darkThemeCheckBoxElement.addEventListener("change", function() {
+			setDarkTheme(_darkThemeCheckBoxElement.checked);
+		});
+
+		setDarkTheme(localStorage && localStorage.getItem("darkTheme"));
+	</script>
+	
+	<a class="footer__link" href="/redirects/?t=github&d=${}.github.io" target="_blank">Website Source Code</a>
+	<br>
+	<a class="footer__link" href="/policies/?web" target="_blank">Privacy Policy</a>
+	<br>
+	<a class="footer__link" href="/licenses" target="_blank">Open Source Licenses</a>
+</footer>
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+-->
+  </body>
+</html>

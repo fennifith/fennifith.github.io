@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - Web Development</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        <item>
+            <title>Hello World</title>
+			<description>I made a blog.</description>
+			<pubDate>2018-07-28T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-07-28-Hello-World/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-07-28-Hello-World/</guid>
+        </item>
+        
+        
+        
+        
+        
+        <item>
+            <title>Client-Side JavaScript</title>
+			<description>Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn't really work all of the time.</description>
+			<pubDate>2018-08-19T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>CSS Submodules</title>
+			<description>How I organize my site's CSS and why.</description>
+			<pubDate>2018-10-26T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-10-26-CSS-Submodules/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-10-26-CSS-Submodules/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </channel>
+</rss>

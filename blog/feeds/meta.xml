@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>James Fenn - Meta</title>
+        <description>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</description>
+        <link>https://jfenn.me</link>
+        
+        
+        
+        <item>
+            <title>Hello World</title>
+			<description>I made a blog.</description>
+			<pubDate>2018-07-28T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-07-28-Hello-World/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-07-28-Hello-World/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Pricing Models</title>
+			<description>TL;DR - Don't work for free.</description>
+			<pubDate>2018-09-17T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2018-09-17-Pricing-Models/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2018-09-17-Pricing-Models/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Thoughts About Aptoide's 'Play Fair' Campaign</title>
+			<description>Sharing my opinions about Aptoide's 'play fair' campaign and some of the claims made in their argument.</description>
+			<pubDate>2019-06-13T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-06-13-Aptoide-Play-Fair-Response/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Free Software and RMS</title>
+			<description>A summary of my thoughts on the relationship between Richard Stallman and the Free Software Movement.</description>
+			<pubDate>2019-10-28T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</guid>
+        </item>
+        
+        
+        
+        <item>
+            <title>Ethical Source and Subjectivity</title>
+			<description>A mini-summary / explanation of some criticisms of the Ethical Source Movement.</description>
+			<pubDate>2019-10-30T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-10-30-Ethical-Source/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-10-30-Ethical-Source/</guid>
+        </item>
+        
+        
+        
+        <item>
+            <title>Federated Social Networks</title>
+			<description>Explaining what the fediverse is, how to join it, and why.</description>
+			<pubDate>2019-12-15T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</guid>
+        </item>
+        
+        
+        
+        
+        
+        
+        
+        <item>
+            <title>Animating SVG Icons on the Web</title>
+			<description>A small breakdown of the process I used to create a couple interactive icons for a web project.</description>
+			<pubDate>2020-05-09T00:00:00+00:00</pubDate>
+			<link>https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</link>
+			<guid isPermaLink="true">https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</guid>
+        </item>
+        
+        
+    </channel>
+</rss>
