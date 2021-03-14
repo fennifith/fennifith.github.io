@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>ColorPickerDialog | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ColorPickerDialog | James Fenn">
+<meta name="twitter:description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="ColorPickerDialog | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/colorpickerdialog/">
+<meta name="og:description" content="A simple dialog making it quick and easy to add color picking functionality to any app.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">ColorPickerDialog</h1>
+		<p class="mt-0 text-light-2">A simple dialog making it quick and easy to add color picking functionality to any app.</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/ColorPickerDialog">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/ColorPickerDialog/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+		<a class="link link-chip mt-2" href="https://jitpack.io/#me.jfenn/ColorPickerDialog">
+			
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Website</span>
+			
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://github.com/fennifith/ColorPickerDialog">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://github.com/fennifith/ColorPickerDialog">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<p>ColorPickerDialog is a simple dialog making it quick and easy to add a color picker functionality to any app.</p>
+<p>For testing and experimentation purposes, a sample apk can be downloaded <a href="https://jfenn.me/projects/colorpickerdialog">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th>RGB(A) Picker</th>
+<th>HSV Picker</th>
+<th>Preset Picker</th>
+<th>Image Picker (Tab)</th>
+<th>Image Picker (Images)</th>
+<th>Dark Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/rgba.png?raw=true" alt="Screenshot"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/hsv.png?raw=true" alt="Screenshot"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/presets.png?raw=true" alt="Screenshot"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/images.png?raw=true" alt="Screenshot"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/image.png?raw=true" alt="Screenshot"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/ColorPickerDialog/master/./.github/images/darktheme.png?raw=true" alt="Screenshot"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="usage">Usage</h2>
+<h3 id="setup">Setup</h3>
+<p>This project is published on <a href="https://jitpack.io">JitPack</a>, which you can add to your project by copying the following to your root build.gradle at the end of &quot;repositories&quot;.</p>
+<pre class="language-gradle"><code class="language-gradle">allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+</code></pre>
+<p>To add the dependency, copy this line into your app module's build.gradle file.</p>
+<pre class="language-gradle"><code class="language-gradle">implementation 'me.jfenn.ColorPickerDialog:base:0.2.1'
+</code></pre>
+<h3 id="creating-a-dialog">Creating a Dialog</h3>
+<p>The basic requirements for the dialog are a default color and a listener, and though none of them <em>have</em> to be specified, it is usually a good idea. You can create a simple dialog fragment using the snippet below:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">ColorPickerDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">withColor</span><span class="token punctuation">(</span>color<span class="token punctuation">)</span> <span class="token comment">// the default / initial color</span>
+  <span class="token punctuation">.</span><span class="token function">withListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">OnColorPickedListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">ColorPickerDialog</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onColorPicked</span><span class="token punctuation">(</span><span class="token annotation punctuation">@Nullable</span> <span class="token class-name">ColorPickerDialog</span> dialog<span class="token punctuation">,</span> <span class="token keyword">int</span> color<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// a color has been picked; use it</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"colorPicker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Alternatively, if you are creating the dialog from a fragment, you should use <code>getChildFragmentManager()</code> instead of <code>getSupportFragmentManager()</code>.</p>
+<h3 id="alpha">Alpha</h3>
+<p>You can call <code>.withAlpha(boolean)</code> to specify whether you want the color's alpha channel to be configurable by the user (if not, all output colors will be fully opaque). This option is enabled by default. A somewhat unnecessary example:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">ColorPickerDialog</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">withAlphaEnabled</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token comment">// disable the alpha channel</span>
+  <span class="token punctuation">.</span><span class="token function">withListener</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="alternative-pickers">Alternative Pickers</h3>
+<p>By default, the dialog gives the user three ways to enter a color; they can use RGB sliders, HSV sliders, or enter the hex value into the text box at the top.</p>
+<p>There are also some alternative pickers that can be enabled to serve a few different purposes.</p>
+<h4 id="presets">Presets</h4>
+<p>The <code>.withPresets()</code> method will enable the &quot;preset&quot; color picker, which simply displays a grid of preset colors for the user to choose from. These colors can be configured by passing them (either as an array or varargs) to the <code>.withPresets()</code> method, like below:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">ColorPickerDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withPresets</span><span class="token punctuation">(</span><span class="token class-name">Color</span><span class="token punctuation">.</span>RED<span class="token punctuation">,</span> <span class="token class-name">Color</span><span class="token punctuation">.</span>GREEN<span class="token punctuation">,</span> <span class="token class-name">Color</span><span class="token punctuation">.</span>BLUE<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withListener</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"colorPicker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="images">Images</h4>
+<p>There is an optional dependency that adds image picking functionality to the color picker; the user can select an image and then select a color from the image they have chosen.</p>
+<p>To enable it, add the following to your <code>build.gradle</code> file along with the dependency from before:</p>
+<pre class="language-java"><code class="language-java">implementation <span class="token string">'me.jfenn.ColorPickerDialog:imagepicker:0.2.1'</span>
+</code></pre>
+<p>Next, you will need to declare the following permissions in your <code>AndroidManifest.xml</code> (the library does not do it for you).</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.READ_EXTERNAL_STORAGE<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>uses-permission</span> <span class="token attr-name"><span class="token namespace">android:</span>name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>android.permission.WRITE_EXTERNAL_STORAGE<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+</code></pre>
+<p>Now you should be able to add an image picker to your dialog by calling <code>.withPicker(ImagePickerView.class)</code> like below:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">ColorPickerDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withPicker</span><span class="token punctuation">(</span><span class="token class-name">ImagePickerView</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withListener</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"colorPicker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="theming">Theming</h3>
+<p>You can theme this dialog by passing your custom theme to <code>.withTheme(int)</code>. Support for full &quot;runtime&quot; theming may come later, but now is not later, so you can't do that yet. Here's an example of a <code>ColorPickerDialog</code> with a basic dark theme, demonstrating some of the options that you can specify.</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">new</span> <span class="token class-name">ColorPickerDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">withTheme</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span><span class="token class-name">ColorPickerDialog_Dark</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token function">getSupportFragmentManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"colorPicker"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ColorPickerDialog.Dark<span class="token punctuation">"</span></span> <span class="token attr-name">parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Theme.AppCompat.Dialog<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>redColor<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#FF5252<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>greenColor<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#FF5252<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>blueColor<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#536DFE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>item</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>neutralColor<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>#FFFFFF<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>The <code>redColor</code>, <code>greenColor</code>, and <code>blueColor</code> attributes affect the RGB sliders, and the <code>neutralColor</code> attribute changes the &quot;neutral&quot; colors of the others, including the alpha slider and the handles of the sliders in the HSL picker.</p>
+<h4 id="rounded-corners">Rounded Corners</h4>
+<p>The dialog also supports custom values for the rounded corners, which you can specify by calling <code>.withCornerRadius(float)</code> with the dp measurement of the corner radius, or <code>.withCornerRadiusPx(int)</code> with a pixel measurement.</p>
+<h2 id="other-documentation">Other Documentation</h2>
+<p>Not only am I lazy, I also miss things, so this page may not describe every feature that this library is capable of. However, the majority of this library's documentation is actually written as javadocs within the source code. You can find the generated documentation pages for it <a href="https://jfenn.me/projects/colorpickerdialog/docs/">here</a>.</p>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>

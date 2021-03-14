@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Status Docs | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Status Docs | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Status Docs | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/docs/app/src/main/java/com/james/status/data/preference/BasePreferenceData.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/status/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Status</span>
+		</a>
+		<a class="link mr-0" href="/projects/status/docs/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Docs</span>
+		</a>
+		
+		
+		<a class="link" href="/projects/status/docs/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">BasePreferenceData</span>
+		</a>
+		
+	</div>
+</div>
+
+<div class="container text mt-3 mb-5">
+	<h2 id="withvisibility"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L55">withVisibility</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>BasePreferenceData</code></p>
+<p>Specifies an interface to use to determine whether the preference should
+be visible in the settings or not.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>visibility</td>
+<td>An interface invoked to determine whether the preference should be visible under a set of conditions.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned Value:</strong> &quot;this&quot;, for method chaining.</p>
+<h2 id="isvisible"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L69">isVisible</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>boolean</code></p>
+<p>Determine whether the preference should be visible.</p>
+<p><strong>Returned Value:</strong> True if the preference is visible in the settings.</p>
+<h2 id="getvisibilitydependent"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L81">getVisibilityDependent</a></h2>
+<p><strong>Type:</strong> <code>@Nullable</code> <code>public</code> <code>PreferenceData</code></p>
+<p>Obtain the &quot;preference&quot; that this setting is dependent on, assuming that
+this preference's visibility is based on the value of another setting.</p>
+<p>If this preference doesn't have a &quot;visibility&quot; interface, this will return
+null. It might return null anyway, who knows.</p>
+<p><strong>Returned Value:</strong> A PreferenceData that this setting is dependent on. Or null.</p>
+<h2 id="withnullable"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L95">withNullable</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>BasePreferenceData</code></p>
+<p>Set whether this preference could use &quot;null&quot; as a value. In other words, if
+a nonexistent preference should be interpreted differently from simply
+returning the default value.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isNullable</td>
+<td>Whether the preference's value can be null.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned Value:</strong>  &quot;this&quot;, for method chaining.</p>
+<h2 id="withnullvalue"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L113">withNullValue</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>BasePreferenceData</code></p>
+<p>Set a value of the preference that is equivalent to &quot;null&quot;. For example,
+an invalid integer value may be treated separately from the actual preference.
+Ex: the height of an object, or &quot;0&quot; to disable the object entirely.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nullValue</td>
+<td>The value that should be treated as &quot;null&quot;.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returned Value:</strong>  &quot;this&quot;, for method chaining.</p>
+<h2 id="isnullable"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L127">isNullable</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>boolean</code></p>
+<p>Determine whether the preference can contain a null value.</p>
+<p><strong>Returned Value:</strong> True if the preference can contain a null value.</p>
+<h2 id="getnullvalue"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L136">getNullValue</a></h2>
+<p><strong>Type:</strong> <code>@Nullable</code> <code>public</code> <code>T</code></p>
+<p>Obtain the value of the preference to be interpreted as &quot;null&quot;. If a value
+has not been set, this just returns null. Fair enough.</p>
+<p><strong>Returned Value:</strong> The value of the preference to be interpreted as &quot;null&quot; Might just be null.</p>
+<h2 id="getcontext"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L148">getContext</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>Context</code></p>
+<p>Get the current application context.</p>
+<p><strong>Returned Value:</strong> The current application context.</p>
+<h2 id="getidentifier"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L157">getIdentifier</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>Identifier&lt;T&gt;</code></p>
+<p>Get the identifier of the preference. I'm not sure why this
+is a separate class, it's mostly for search indexing and stuff.
+I think I was intending to separate it from the PreferenceData
+classes to index things other than settings as well, but never
+got around to it.</p>
+<p><strong>Returned Value:</strong> A redundant Identifier class containing... an identifier.</p>
+<h2 id="onpreferencechange"><a href="https://github.com/fennifith/Status/blob/master/app/src/main/java/com/james/status/data/preference/BasePreferenceData.java#L221">onPreferenceChange</a></h2>
+<p><strong>Type:</strong> <code>public</code> <code>void</code></p>
+<p>Notify all observers that the preference has been changed.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>preference</td>
+<td>The new value of the preference.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

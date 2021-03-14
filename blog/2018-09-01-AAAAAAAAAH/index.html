@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>AAAAAAAAAAAAAAAAAAAAAAAHHH | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AAAAAAAAAAAAAAAAAAAAAAAHHH | James Fenn">
+<meta name="twitter:description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="AAAAAAAAAAAAAAAAAAAAAAAHHH | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/">
+<meta name="og:description" content="A small command-line utility I wrote with Go that I had a lot of fun with.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-light border-bottom py-4">
+	<div class="container">
+		<h1 class="mb-0">AAAAAAAAAAAAAAAAAAAAAAAHHH</h1>
+		<p class="text-meta text-tertiary-3 mb-3">
+			<a class="p-author h-card" href="">James Fenn</a> |
+			<a class="u-url" href="">
+			<time class="dt-published" datetime="2018-09-01">September 01, 2018</time></a>
+		</p>
+
+		
+	</div>
+</div>
+
+<article class="container mt-3 mb-5">
+	<div class="text">
+		<p>It has been a little over a year since I left Windows altogether and started using Linux on all of my machines. In that time, I have learnt many uses of the Linux console, and forgotten just as many helpful commands and arguments. As I continued to use the Linux terminal, I quickly found myself browsing stack exchange and scouring man-pages 3-4 times a day, taking up a noticeable amount of my development time. Originally, as seen in one of the early commits to my <a href="/redirects/?t=github&amp;d=dotfiles">dotfiles</a> repository, I started to write a &quot;help&quot; file containing some of the more common commands that I could grep to quickly find the command/syntax for what I wanted to do, but I found myself wanting a little more functionality from it. Typing out &quot;cat ~/help&quot; and &quot;grep drive mount&quot; every time I wanted to mount a drive seemed unnecessary, and I began to want the ability to &quot;stack&quot; certain commands to avoid accidentally grep-ing lines from the wrong category (a note about &quot;connecting to network drives&quot; under &quot;drive&quot; would be unnecessarily returned when I was trying to connect to a network, for example).</p>
+<p>To solve this, well, what else could I have done but start a new project? Nothing could stop me now. I created another repository to add to my existing 70-some open-source projects without even flinching. As for my choice of language, this time I decided to go with <a href="https://golang.org/">Go</a> rather than sticking with <a href="https://npmjs.com/">NodeJS</a> which I used to make my previous small <a href="/projects/asciimg">console</a> <a href="/projects/passerator">programs</a>. I had seen Go used for a couple other projects that I liked and was getting curious about it, so this was a good opportunity to try it out.</p>
+<p>I found a very nice, well written <a href="https://medium.freecodecamp.org/writing-command-line-applications-in-go-2bc8c0ace79d">article</a> detailing how to set up a go development environment and start writing a basic program with it. Granted, it is two years old, but its instructions still hold up fairly well, as do its points about the benefits of using Go over another language. One thing I especially liked about it was the comparitively small amount of dependencies that Go uses, which is a weak point of NodeJS. It is also nice that when installing a dependency, Go actually downloads its source code directly to its &quot;environment&quot; (a folder that all of the Go projects are stored in) and builds it from source with the program that you write, making it fairly easy to eliminate any vulnerabilities from the software that is built with it. If that is considered a problem for this use case I do not know, but the sense of security is still very nice to have.</p>
+<p>The program that I ended up writing was appropriately dubbed &quot;AAH&quot;, or the &quot;Annoyingly Advanced Helper&quot;. Its source of information is two YAML-formatted configuration files: one stored in the &quot;.config&quot; directory that is automatically downloaded from the GitHub repository when the program is first run, and another stored directly in the home directory that can be created and edited by the user. In the program, the values from these two files are merged together, with the file in the home dir taking precedence. The file from the GitHub repository only contains information about general commands that work across most Linux distributions and don't change much based on user preference, while the file that the user can create in their home dir is intended for commands specific to them and the Linux distribution that they use.</p>
+<p>When AAH is run with arguments, it reads the files for corresponding sets of nested keys. For example, if the arguments provided were &quot;something stuff yes&quot;, it would first look for the key &quot;something&quot;, then look inside it for the key &quot;stuff&quot;, and finally output the value of &quot;yes&quot;. If &quot;yes&quot; doesn't exist, it will output the entire tree under &quot;something stuff&quot; - the same would happen if &quot;stuff&quot; and/or &quot;something&quot; were not present in either of the files. However, it isn't always necessary to type out the entire key for a value. If &quot;something&quot; is the only key that starts with &quot;some&quot;, then passing &quot;some stuff yes&quot; would have the exact same result as typing out the whole key. This makes it significantly faster to find common information such as commands under the &quot;network&quot; key; instead of typing out &quot;AAH network connect&quot;, all that is necessary is &quot;AAH net con&quot;.</p>
+<p>On a side note, I also used a similar method of matching the start of the string when implementing the standard &quot;--help&quot; and &quot;--version&quot; arguments. As usual, &quot;-h&quot; and &quot;--help&quot; work, and so do &quot;-v&quot; and &quot;--version&quot;. However, &quot;--v&quot; and &quot;-version&quot; are also accepted without error, as is &quot;-ver&quot; and pretty much anything in-between. This isn't exactly a design flaw since there is no way that one of these arguments could be confused with a key in one of the YAML files because of the starting &quot;-&quot;, but I would certainly like to see someone's reaction if they were to mistype &quot;--hel&quot; expecting an error, then get the same output.</p>
+<p>Overall, considering that I have only spent a little over a day on this project, I am happy with the result. It fulfills its purpose nicely, and is quite good at doing it. You can find the project's source code and installation instructions <a href="/projects/aah">here</a>.</p>
+<p>Also, shout out to <a href="https://github.com/codekidX">Ashish Shekar</a> for spotting my mistake building the binaries to publish on GitHub, which was creating <a href="/redirects/?t=github&amp;d=AAH/issues/7">a SIGSEGV</a> when the program tried to download a copy of the YAML file from GitHub.</p>
+
+	</div>
+</article>
+
+
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

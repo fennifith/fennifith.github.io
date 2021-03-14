@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter Wiki | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter Wiki | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter Wiki | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/wiki/Fetching-CrowdIn-Translations.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/attribouter/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Attribouter</span>
+		</a>
+		<a class="link" href="/projects/attribouter/wiki/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Wiki</span>
+		</a>
+	</div>
+</div>
+
+<div class="container mt-3 mb-5">
+	
+	<h1>Fetching CrowdIn Translations</h1>
+	
+
+	<div class="text">
+		<p>As stated in <a href="https://jfenn.me/redirects/?t=github&amp;d=Attribouter/issues/23">issue #23</a>, no kind of &quot;proper&quot; support for CrowdIn will be added to Attribouter for a while because <a href="https://support.crowdin.com/api/api-integration-setup/">their API does not look very fun</a>. However, <a href="https://github.com/deletescape">@deletescape</a> has written <a href="https://github.com/deletescape/dscripts/blob/8b261226deda604df7405708e6e7ae67b6d2e480/gettranslators.py">a python script</a> (below, slightly modified to update the syntax) that uses their API to fetch translators and output them to a file in the correct syntax, which you may find useful for handling large amounts of translators.</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> pycountry
+<span class="token keyword">import</span> csv
+<span class="token keyword">import</span> codecs
+<span class="token keyword">import</span> os
+<span class="token keyword">from</span> config <span class="token keyword">import</span> CONFIG
+
+project <span class="token operator">=</span> CONFIG<span class="token punctuation">[</span><span class="token string">'CROWDIN'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'PROJECT_NAME'</span><span class="token punctuation">]</span>
+projectkey <span class="token operator">=</span> CONFIG<span class="token punctuation">[</span><span class="token string">'CROWDIN'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'PROJECT_KEY'</span><span class="token punctuation">]</span>
+
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>
+    <span class="token string-interpolation"><span class="token string">f'https://api.crowdin.com/api/project/</span><span class="token interpolation"><span class="token punctuation">{</span>project<span class="token punctuation">}</span></span><span class="token string">/reports/top-members/export?json&amp;key=</span><span class="token interpolation"><span class="token punctuation">{</span>projectkey<span class="token punctuation">}</span></span><span class="token string">&amp;format=csv'</span></span><span class="token punctuation">)</span>
+
+filehash <span class="token operator">=</span> r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'hash'</span><span class="token punctuation">]</span>
+
+r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>
+    <span class="token string-interpolation"><span class="token string">f'https://api.crowdin.com/api/project/</span><span class="token interpolation"><span class="token punctuation">{</span>project<span class="token punctuation">}</span></span><span class="token string">/reports/top-members/download?key=</span><span class="token interpolation"><span class="token punctuation">{</span>projectkey<span class="token punctuation">}</span></span><span class="token string">&amp;hash=</span><span class="token interpolation"><span class="token punctuation">{</span>filehash<span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token string">'tmp'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span><span class="token string">'tmp'</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> codecs<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'tmp/</span><span class="token interpolation"><span class="token punctuation">{</span>filehash<span class="token punctuation">}</span></span><span class="token string">.csv'</span></span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+
+translators <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+csv<span class="token punctuation">.</span>register_dialect<span class="token punctuation">(</span><span class="token string">'comma'</span><span class="token punctuation">,</span> delimiter<span class="token operator">=</span><span class="token string">','</span><span class="token punctuation">,</span> quoting<span class="token operator">=</span>csv<span class="token punctuation">.</span>QUOTE_MINIMAL<span class="token punctuation">)</span>
+<span class="token keyword">with</span> codecs<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'tmp/</span><span class="token interpolation"><span class="token punctuation">{</span>filehash<span class="token punctuation">}</span></span><span class="token string">.csv'</span></span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> csvfile<span class="token punctuation">:</span>
+    reader <span class="token operator">=</span> csv<span class="token punctuation">.</span>DictReader<span class="token punctuation">(</span>csvfile<span class="token punctuation">,</span> dialect<span class="token operator">=</span><span class="token string">'comma'</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> row <span class="token keyword">in</span> reader<span class="token punctuation">:</span>
+        translators<span class="token punctuation">.</span>append<span class="token punctuation">(</span>
+            <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> row<span class="token punctuation">[</span><span class="token string">'Name'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'languages'</span><span class="token punctuation">:</span> row<span class="token punctuation">[</span><span class="token string">'Languages'</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+xml <span class="token operator">=</span> <span class="token string">''</span>
+<span class="token keyword">for</span> translator <span class="token keyword">in</span> translators<span class="token punctuation">:</span>
+    languages <span class="token operator">=</span> <span class="token string">''</span>
+    counter <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> lang <span class="token keyword">in</span> translator<span class="token punctuation">[</span><span class="token string">'languages'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'; '</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> counter <span class="token operator">>=</span> <span class="token number">5</span><span class="token punctuation">:</span>
+            <span class="token keyword">break</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            languages <span class="token operator">+=</span> pycountry<span class="token punctuation">.</span>languages<span class="token punctuation">.</span>get<span class="token punctuation">(</span>name<span class="token operator">=</span>lang<span class="token punctuation">)</span><span class="token punctuation">.</span>alpha_2
+            languages <span class="token operator">+=</span> <span class="token string">','</span>
+            counter <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> lang <span class="token operator">==</span> <span class="token string">'Portuguese, Brazilian'</span><span class="token punctuation">:</span>
+                languages <span class="token operator">+=</span> <span class="token string">'pt,'</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">==</span> <span class="token string">'Chinese Simplified'</span><span class="token punctuation">:</span>
+                languages <span class="token operator">+=</span> <span class="token string">'zh,'</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">==</span> <span class="token string">'Chinese Traditional'</span><span class="token punctuation">:</span>
+                languages <span class="token operator">+=</span> <span class="token string">'zh,'</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">==</span> <span class="token string">'Greek'</span><span class="token punctuation">:</span>
+                languages <span class="token operator">+=</span> <span class="token string">'el,'</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">==</span> <span class="token string">'Serbian (Cyrillic)'</span><span class="token punctuation">:</span>
+                languages <span class="token operator">+=</span> <span class="token string">'sr,'</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">==</span> <span class="token string">'Pirate English'</span><span class="token punctuation">:</span>
+                <span class="token keyword">pass</span>
+            <span class="token keyword">elif</span> lang <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Unknown language: "</span><span class="token interpolation"><span class="token punctuation">{</span>lang<span class="token punctuation">}</span></span><span class="token string">"'</span></span><span class="token punctuation">)</span>
+    languages <span class="token operator">=</span> languages<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+    name <span class="token operator">=</span> translator<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">if</span> languages <span class="token operator">==</span> <span class="token string">""</span><span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>
+
+    xml <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f'''&lt;TranslatorWedge
+avatar="https://i2.wp.com/crowdin.com/images/user-picture.png"
+name="</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">"
+locales="</span><span class="token interpolation"><span class="token punctuation">{</span>languages<span class="token punctuation">}</span></span><span class="token string">" />
+'''</span></span>
+
+<span class="token keyword">with</span> codecs<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'translators.xml'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>xml<span class="token punctuation">)</span>
+</code></pre>
+
+	</div>
+	
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

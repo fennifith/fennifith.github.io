@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Declarativ | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Declarativ | James Fenn">
+<meta name="twitter:description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Declarativ | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/declarativ/">
+<meta name="og:description" content="A declarative HTML rendering library that is definitely not JSX.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">Declarativ</h1>
+		<p class="mt-0 text-light-2">A declarative HTML rendering library that is definitely not JSX.</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/declarativ">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/declarativ/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+		<a class="link link-chip mt-2" href="https://declarativ.js.org/">
+			
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Website</span>
+			
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://github.com/fennifith/declarativ">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://github.com/fennifith/declarativ">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<p>&quot;Declarativ&quot; is a lightweight and asynchronous HTML templating library for JavaScript. It definitely isn't my own reinvention of React's <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a>. Okay, it kind of is, but whatever, it's still cool.</p>
+<p>Declarativ allows you to write a document tree using a series of nested function calls, much like how Declarative UI works inside <a href="https://flutter.dev/docs/get-started/flutter-for/declarative#how-to-change-ui-in-a-declarative-framework">Flutter</a> or in <a href="https://developer.android.com/jetpack/compose">Jetpack Compose</a>. Here's an example:</p>
+<pre class="language-js"><code class="language-js"><span class="token function">container</span><span class="token punctuation">(</span>
+  <span class="token function">jumbotron</span><span class="token punctuation">(</span>
+    <span class="token function">h1</span><span class="token punctuation">(</span><span class="token string">"This is a big header."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">button</span><span class="token punctuation">(</span><span class="token string">"Do something"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">p</span><span class="token punctuation">(</span>$<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"https://loripsum.net/api/plaintext"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="installation">Installation</h2>
+<h4 id="script-tag">Script Tag</h4>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/declarativ@0.1.7/dist/declarativ.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>(the module will be included in the global scope as the <code>declarativ</code> variable)</p>
+<h4 id="npm%2Fwebpack">NPM/Webpack</h4>
+<pre class="language-sh"><code class="language-sh">npm install declarativ
+</code></pre>
+<h4 id="from-source">From Source</h4>
+<pre class="language-sh"><code class="language-sh">git clone https://github.com/fennifith/declarativ.git
+cd declarativ &amp;&amp; make install
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Most component trees can be built using the standard functions defined in <code>declarativ.el</code>. I often use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">destructuring assignment</a> to move them to the current scope when using more than one or two of them, which makes it a bit easier to work with (provided you don't use any variables that conflict with the element names). Here's an example:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">{</span> div<span class="token punctuation">,</span> h1<span class="token punctuation">,</span> p<span class="token punctuation">,</span> a <span class="token punctuation">}</span> <span class="token operator">=</span> declarativ<span class="token punctuation">.</span>el<span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> components <span class="token operator">=</span> <span class="token function">div</span><span class="token punctuation">(</span>
+  <span class="token function">h1</span><span class="token punctuation">(</span><span class="token string">"This is a big header."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">p</span><span class="token punctuation">(</span>
+    <span class="token string">"Here, have a bit of text"</span><span class="token punctuation">,</span>
+    <span class="token function">a</span><span class="token punctuation">(</span><span class="token string">"and a link"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token string">"https://example.com/"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">"."</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>After defining your component tree, it can be placed on the DOM by either calling the <code>render</code> or <code>renderString</code> functions. Calling <code>render</code> will place them inside whatever element (or selector) you pass as its argument, while <code>renderString</code> simply returns their HTML representation.</p>
+<pre class="language-js"><code class="language-js">components<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token string">"#content"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Elements rendered!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Working examples can be found in the <a href="https://github.com/fennifith/declarativ/blob/master/../../tree/master/docs/examples/">examples</a> folder.</p>
+<h3 id="promises-%26-asynchronicity">Promises &amp; Asynchronicity</h3>
+<p>Promises can be mixed in with components, and declarativ will wait for them to resolve before processing the result.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">p</span><span class="token punctuation">(</span>
+  <span class="token string">"Everything in this example "</span><span class="token punctuation">,</span>
+  <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"will all render "</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"at the exact same "</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token string">"time!"</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>This happens a bit differently when using the <code>.bind</code> method; components that are unbound will render first, and any children within a bound component will wait for its promise to resolve before being processed.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">div</span><span class="token punctuation">(</span>
+  <span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"This will render first."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"This will render second."</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"This will render last."</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">"at the exact same"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="handling-data">Handling Data</h3>
+<p>Nodes can exist in various forms inside of a component. In the last example, I specified a Promise and a string as the contents of a paragraph element. However, not all of the promises you use will return a string. Often times, you will handle data structures that need to be bound to multiple elements. This is where the <code>.bind()</code> function comes in useful.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">div</span><span class="token punctuation">(</span>
+  <span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"This will render first"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">div</span><span class="token punctuation">(</span>
+    <span class="token function">p</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> data<span class="token punctuation">.</span>first<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">p</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token operator">=></span> data<span class="token punctuation">.</span>second<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    first<span class="token operator">:</span> <span class="token string">"This is a string."</span><span class="token punctuation">,</span>
+    second<span class="token operator">:</span> <span class="token string">"This is another string."</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>Okay, a lot is happening here. I'll slow down and explain.</p>
+<p>The <code>bind</code> function <em>also</em> allows you to specify a set of data to be passed to other parts of a component - and extends upon the types of nodes that can be placed inside it. Because the paragraph elements inside the div are not bound to any data, they inherit the Promise that is bound to their parent. The nodes inside of the paragraph elements are then specified as a function of the resolved data, returning the text to render.</p>
+<p>A more complex data binding situation based off the GitHub API can be found in <a href="https://github.com/fennifith/declarativ/blob/master/./docs/examples/binding.html">examples/binding.html</a>.</p>
+<h3 id="templates">Templates</h3>
+<p>Templating functionality is crucial for projects that involve a large number of elements or repeat a common set of element structures in multiple places. There are a few different ways to create them:</p>
+<h4 id="functions">Functions</h4>
+<p>The easiest is to just create a function that returns another component, like so:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">myComponent</span><span class="token punctuation">(</span><span class="token parameter">title<span class="token punctuation">,</span> description</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">div</span><span class="token punctuation">(</span>
+    <span class="token function">h3</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">p</span><span class="token punctuation">(</span>description<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Because you're just passing the arguments directly into the structure, this allows you to pass your function a string, another component, a function(data), or a Promise, and have it resolve during the render.</p>
+<h4 id="wrapped-components">Wrapped Components</h4>
+<p>If you want to make a component that just slightly extends upon an existing instance of one, it can be wrapped in a function that will act like other components during use. This isn't useful very often, as any child components will be lost in the process, but it is useful if you just want to add a class name or attribute to a component without defining a structure.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> myComponent <span class="token operator">=</span> declarativ<span class="token punctuation">.</span><span class="token function">wrapCompose</span><span class="token punctuation">(</span>
+  <span class="token function">div</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">className</span><span class="token punctuation">(</span><span class="token string">"fancypants"</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="custom-elements">Custom Elements</h4>
+<p>This is possibly the least useful kind of template, but I'll leave it here anyway. Most elements are specified inside <code>declarativ.elements</code>, but in the event that you want to use one that isn't, you can create an element template by calling <code>declarativ.compose()</code> with a template function.</p>
+<p>By &quot;template function&quot;, it must be a function that accepts a string and returns that string inside of the element's HTML tag. For example, here I implement the deprecated <code>&lt;center&gt;</code> tag.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> myComponent <span class="token operator">=</span> declarativ<span class="token punctuation">.</span><span class="token function">compose</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">inner</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;center></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>inner<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/center></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Working examples of all of these templates can be found in <a href="https://github.com/fennifith/declarativ/blob/master/./docs/examples/templates.html">examples/templates.html</a>.</p>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>

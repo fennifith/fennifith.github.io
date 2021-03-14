@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter Wiki | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter Wiki | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter Wiki | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/wiki/ContributorWedge.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/attribouter/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Attribouter</span>
+		</a>
+		<a class="link" href="/projects/attribouter/wiki/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Wiki</span>
+		</a>
+	</div>
+</div>
+
+<div class="container mt-3 mb-5">
+	
+	<h1>ContributorWedge</h1>
+	
+
+	<div class="text">
+		<p>The <code>ContributorWedge</code> displays a set of information about a person in a small layout. If the <code>bio</code> attribute is defined, a dialog will appear upon interaction displaying more information, such as... um... their biography... and links. If it is not defined, it will open the highest priority <a href="LinkWedge.html"><code>LinkWedge</code></a> child instead.</p>
+<h2 id="example">Example</h2>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>me.jfenn.attribouter.wedges.ContributorWedge</span>
+    <span class="token attr-name">login</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>github:fennifith<span class="token punctuation">"</span></span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>James Fenn<span class="token punctuation">"</span></span>
+    <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars3.githubusercontent.com/u/13000407<span class="token punctuation">"</span></span>
+    <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Developer<span class="token punctuation">"</span></span>
+    <span class="token attr-name">bio</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>It me.<span class="token punctuation">"</span></span>
+    <span class="token attr-name">websiteUrl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/<span class="token punctuation">"</span></span>
+    <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dev@jfenn.me<span class="token punctuation">"</span></span>
+    <span class="token attr-name">position</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>login</td>
+<td>String</td>
+<td>The git username/login URI of the contributor (especially useful for overriding specific attributes of certain contributors.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String / String Resource</td>
+<td>The name of the contributor.</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>String (URL) / Drawable Resource</td>
+<td>The &quot;profile picture&quot; of the contributor.</td>
+</tr>
+<tr>
+<td>task</td>
+<td>String / String Resource</td>
+<td>A short phrase describing the contributor's role in the project (&quot;Icon Designer&quot;, &quot;Founder&quot;, etc).</td>
+</tr>
+<tr>
+<td>bio</td>
+<td>String / String Resource</td>
+<td>The biography of the contributor.</td>
+</tr>
+<tr>
+<td>websiteUrl</td>
+<td>String</td>
+<td>The contributor's website.</td>
+</tr>
+<tr>
+<td>email</td>
+<td>String / String Resource</td>
+<td>The email of the contributor.</td>
+</tr>
+<tr>
+<td>position</td>
+<td>Integer</td>
+<td>If this attribute is given to three contributors with values between 1 and 3 (one each), they will be displayed in a row at the top of the list (1 in the middle, slightly bigger, 2 on the left, 3 on the right).</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Boolean</td>
+<td>Whether to remove the contributor from the list. This is only really useful if you want to remove certain contributors that are fetched from the API. Default value is 'false', obviously.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-generated-links">Auto-generated Links</h2>
+<p>The links that are automatically created by this wedge are as follows. See <a href="LinkWedge.html"><code>LinkWedge</code></a> for more information.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Description</th>
+<th>Required Attributes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git</td>
+<td>The git profile of the contributor.</td>
+<td><code>login</code> or <code>profileUrl</code></td>
+</tr>
+<tr>
+<td>website</td>
+<td>The website of the contributor.</td>
+<td><code>websiteUrl</code> or <code>login</code> (if the user has a blog defined on their git profile)</td>
+</tr>
+<tr>
+<td>email</td>
+<td>The email of the contributor.</td>
+<td><code>email</code> or <code>login</code> (if the user has a public email on their git profile)</td>
+</tr>
+</tbody>
+</table>
+
+	</div>
+	
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

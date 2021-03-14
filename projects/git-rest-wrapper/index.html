@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A "universal" / normalized API wrapper for git hosting services.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Git-REST API Wrapper | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git-REST API Wrapper | James Fenn">
+<meta name="twitter:description" content="A "universal" / normalized API wrapper for git hosting services.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Git-REST API Wrapper | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/git-rest-wrapper/">
+<meta name="og:description" content="A "universal" / normalized API wrapper for git hosting services.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">Git-REST API Wrapper</h1>
+		<p class="mt-0 text-light-2">A "universal" / normalized API wrapper for git hosting services.</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://code.horrific.dev/james/git-rest-wrapper">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://code.horrific.dev/james/git-rest-wrapper/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="text text-center">
+	<i class="material-icons" style="font-size: 100px;">devices</i>
+	<h3 class="mb-0">Multi-platform support</h3>
+	<p class="mt-0">Written in Kotlin, the library has seamless compatibility with JavaScript, NodeJS, JVM, and Android platforms. </p>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-8 order-lg-2">
+
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span>
+	<span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"User Human"</span><span class="token punctuation">,</span>
+	<span class="token property">"url"</span><span class="token operator">:</span> <span class="token string">"https://code.horrific.dev/user"</span><span class="token punctuation">,</span>
+	<span class="token property">"avatarUrl"</span><span class="token operator">:</span> <span class="token string">"https://example.com/photo.png"</span><span class="token punctuation">,</span>
+	<span class="token property">"websiteUrl"</span><span class="token operator">:</span> <span class="token string">"https://example.com"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+	</div>
+	<div class="col-12 col-lg-4 py-3 align-self-center text-center text-lg-left">
+		<h3>Consistent data representation</h3>
+		<p>Information from multiple git hosting providers is standardized as a single, consistent data model.</p>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-4 order-lg-2 text-center">
+		<i class="material-icons" style="font-size: 100px;">offline_bolt</i>
+	</div>
+	<div class="col-12 col-lg-8 py-3 text-center text-lg-left">
+		<h3>Built-in caching &amp; fallback behavior</h3>
+		<p>Provides extensible in-memory and "disk" / localStorage-based caching implementations.</p>
+	</div>
+</div>
+
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://code.horrific.dev/james/git-rest-wrapper">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://code.horrific.dev/james/git-rest-wrapper">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<p>This is a cross-platform API wrapper for GitHub, GitLab, and Gitea, in an attempt to normalize their API endpoints and promote interoperability. It is being written in <a href="https://kotlinlang.org/docs/reference/multiplatform.html">Kotlin Multiplatform</a> with <a href="https://ktor.io/">ktor</a>, and aims to target the JVM, Android, JS, and native platforms - in other words, (almost) everything that ktor supports.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="javascript">JavaScript</h3>
+<p>JavaScript projects can use the library through either the <a href="https://www.npmjs.com/package/git-rest-wrapper">NPM package</a> or by using a compiled bundle hosted on the <a href="https://unpkg.com/browse/git-rest-wrapper/bundle/">UNPKG CDN</a>.</p>
+<h4 id="npm-module">NPM Module</h4>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> git-rest-wrapper
+</code></pre>
+<h4 id="bundled-js">Bundled JS</h4>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/git-rest-wrapper/bundle/gitrest.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<h3 id="gradle-%2F-java">Gradle / Java</h3>
+<p>The <code>:gitrest</code> module is published on <a href="https://jitpack.io/">JitPack</a>, which you can add to your project by copying the following to your root build.gradle at the end of &quot;repositories&quot;.</p>
+<pre class="language-groovy"><code class="language-groovy">allprojects <span class="token punctuation">{</span>
+  repositories <span class="token punctuation">{</span>
+    <span class="token punctuation">...</span>
+    maven <span class="token punctuation">{</span> url <span class="token string">'https://jitpack.io'</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To add the dependency to a module, copy this line into your app's build.gradle file.</p>
+<pre class="language-groovy"><code class="language-groovy">implementation <span class="token string gstring">"dev.horrific.code.james.git-rest-wrapper:gitrest-jvm:<span class="token expression"><span class="token punctuation">$</span>gitrest_version</span>"</span>
+</code></pre>
+<p>The Android dependency can be imported similarly, using the root <code>gitrest</code> dependency instead of <code>gitrest-jvm</code>; gradle should identify &amp; download the <code>gitrest-android</code> variant automatically.</p>
+<pre class="language-groovy"><code class="language-groovy">implementation <span class="token string gstring">"dev.horrific.code.james.git-rest-wrapper:gitrest:<span class="token expression"><span class="token punctuation">$</span>gitrest_version</span>"</span>
+</code></pre>
+<h4 id="note%3A-fixing-duplicate-meta-inf-files">Note: fixing duplicate META-INF files</h4>
+<p>Kotlin Multiplatform has a weird issue with dependency management that I haven't quite worked out; (#5)[https://code.horrific.dev/james/git-rest-wrapper/issues/5] documents some of my encounters with it. Hopefully you won't encounter this problem at all, but if you do, it should be enough to just add the following to your Android modules:</p>
+<pre class="language-groovy"><code class="language-groovy">android <span class="token punctuation">{</span>
+    <span class="token punctuation">...</span>
+    packagingOptions <span class="token punctuation">{</span>
+        merge <span class="token string">'META-INF/*.kotlin_module'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>For any similar errors, adding a line to either <code>merge</code> or <code>exclude 'META-INF/&lt;file&gt;'</code> should do the trick.</p>
+<h2 id="usage">Usage</h2>
+<h3 id="javascript-2">JavaScript</h3>
+<p>After installing the module through NPM, the API wrapper can be used as detailed in the code snippet below.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> gitrest <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'git-rest-wrapper'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">gitrest<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+provider<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span><span class="token string">"fennifith"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The bundled JS file works the same as the NPM module - except the <code>gitrest</code> object will be available in the global scope.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> provider <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">gitrest<span class="token punctuation">.</span>Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+provider<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span><span class="token string">"fennifith"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">user</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="kotlin">Kotlin</h3>
+<p>In Kotlin, you'll need to import <code>me.jfenn.gitrest.gitrest</code> and instantiate it as follows (adding or removing providers as you see fit).</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> client <span class="token operator">=</span> gitrest <span class="token punctuation">{</span>
+    providers <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span>GithubProvider<span class="token punctuation">,</span> GitlabProvider<span class="token punctuation">,</span> GiteaProvider<span class="token punctuation">)</span>
+    cache <span class="token operator">=</span> <span class="token function">MemoryCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>You can optionally add API keys per-domain to any of these providers by using the <code>tokens</code> Map as follows:</p>
+<pre class="language-kotlin"><code class="language-kotlin">GiteaProvider<span class="token punctuation">.</span><span class="token function">apply</span> <span class="token punctuation">{</span>
+    tokens<span class="token punctuation">[</span><span class="token string">"code.horrific.dev"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"abcxyz"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Endpoints can then be accessed using <a href="https://kotlinlang.org/docs/reference/coroutines-overview.html">Kotlin Coroutines</a>...</p>
+<pre class="language-kotlin"><code class="language-kotlin">GlobalScope<span class="token punctuation">.</span><span class="token function">launch</span> <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> repo <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">getRepo</span><span class="token punctuation">(</span><span class="token string">"gitea@code.horrific.dev:james/git-rest-wrapper"</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>repo<span class="token operator">?</span><span class="token punctuation">.</span>description<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="example-projects">Example Projects</h3>
+<ul>
+<li><a href="./example-kotlinbrowser">Kotlin/JS - Browser</a></li>
+<li><a href="https://code.horrific.dev/james/git-rest-wrapper/src/branch/main/./example-nodejs">NodeJS</a></li>
+<li><a href="./example-js">JS (Bundle) - Browser</a></li>
+<li><a href="https://code.horrific.dev/james/git-rest-wrapper/src/branch/main/./example-jvm">JVM</a></li>
+<li><a href="https://code.horrific.dev/james/git-rest-wrapper/src/branch/main/./example-android">Android</a></li>
+</ul>
+<h2 id="development">Development</h2>
+<p>The project uses Gradle builds for... err... most things. <code>./gradlew :{module}:test</code> and <code>./gradle :{module}:run</code> are fairly universal.</p>
+<p>The <code>:gitrest:jsBrowserTest</code> task seems to fail sporadically trying to parse... <code>/etc/fonts/fonts.conf</code>? Well, it spits out a lot of logs about it, then fails to actually run any of its tests, so it's not doing very much. It's excluded by default from most gradle tasks.</p>
+<h3 id="specification">Specification</h3>
+<h4 id="uri-scheme">URI Scheme</h4>
+<p>The library relies on its own identifier format similar to the URI syntax used in SSH - each identifier should be structured as <code>provider@hostname:id</code>.</p>
+<ul>
+<li><code>provider</code> represents the implementation that should be used for the endpoint, e.g. <code>gitlab</code> or <code>gitea</code>. If omitted, the wrapper will query various endpoints in an attempt to determine the correct implementation before making the request.</li>
+<li><code>hostname</code> represents the host/domain of the server that should be queried. If omitted, the implementation is left to the provider - <code>github:fennifith/Attribouter</code> will default to <code>github.com</code>, for example.</li>
+<li><code>id</code> represents the resource identifier of the item being fetched, specific to the endpoint used.</li>
+</ul>
+<p>The <code>provider</code> and <code>hostname</code> values are optional when they can be supplemented by the values in the <a href="https://code.horrific.dev/james/git-rest-wrapper/src/branch/main/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/util/DefaultProviders.kt"><code>DEFAULT_PROVIDERS</code></a> array. This is also used to &quot;correct&quot; hostnames in cases where the API is served from a different domain than the one provided - for example, <code>github@github.com:some/repo</code> will resolve to <code>github@api.github.com:some/repo</code>. For compatibility reasons, <code>github@anything.can.go.here.github.com:some/repo</code> will exhibit the same behavior.</p>
+<h4 id="endpoints">Endpoints</h4>
+<ul>
+<li><code>getUser(login)</code>: <code>login</code> is the username of the requested user.</li>
+<li><code>getRepo(repo)</code>: <code>repo</code> is the repository &quot;path&quot;, i.e. <code>{user}/{repo}</code> - <code>james/git-rest-wrapper</code>, for example.</li>
+<li><code>getRepoContributors(repo)</code>: <code>repo</code> is the repository &quot;path&quot;, same as <code>getRepo</code></li>
+<li><code>getLicense(key)</code>: <code>key</code> is a short license identifier - refer to <a href="https://spdx.org/licenses/">SPDX</a> for a complete list (dependent on the server's implementation)</li>
+</ul>
+<h4 id="models">Models</h4>
+<p>Not all data is complete for every provider/context. For example, Gitea doesn't provide any license information in their Repository model - so that data will obviously be missing.</p>
+<p>Each data model contains <code>id</code>, <code>context</code>, and <code>provider</code> values with respect to the corresponding portions of the URI.</p>
+<ul>
+<li><code>User</code>
+<ul>
+<li><code>id</code>: The username.</li>
+<li><code>name</code>: The full name of the user (defaults to <code>login</code> if unspecified).</li>
+<li><code>url</code>: The webpage / user-facing link to the user's profile.</li>
+<li><code>avatarUrl</code>: A link to the user's avatar / profile picture.</li>
+<li><code>websiteUrl</code>: The user's website / blog / external profile link.</li>
+<li><code>email</code>: The user's public email address.</li>
+<li><code>bio</code>: The user bio.</li>
+</ul>
+</li>
+<li><code>Repo</code>
+<ul>
+<li><code>id</code>: The repository slug identifier, i.e. <code>james/git-rest-wrapper</code></li>
+<li><code>description</code>: The repository/project description.</li>
+<li><code>url</code>: The webpage / user-facing repository link.</li>
+<li><code>websiteUrl</code>: The project website or homepage.</li>
+<li><code>gitUrlHttp</code>: HTTP url for <code>git clone</code></li>
+<li><code>gitUrlSsh</code>: SSH uri for <code>git clone</code></li>
+<li><code>license</code>: Repository <code>License</code> object - may be incomplete/missing, depending on implementation.</li>
+<li><code>defaultBranch</code>: The default branch of the repository.</li>
+<li><code>getRawFileUrl(branchName, filePath)</code>: endpoint used to access a raw file in the repository</li>
+</ul>
+</li>
+<li><code>License</code>
+<ul>
+<li><code>id</code>: The license identifier/key, according to SPDX</li>
+<li><code>name</code>: A full user-facing license name (defaults to <code>key</code> if unspecified)</li>
+<li><code>description</code>: A short summary / description of the license.</li>
+<li><code>body</code>: The full license text.</li>
+<li><code>infoUrl</code>: A user-facing link to license info (ex: <a href="https://choosealicense.com/licenses/mpl-2.0/">choosealicense.com/licenses/mpl-2.0</a>)</li>
+<li><code>permissions</code>: An array of license &quot;permissions&quot;, ex. <code>[&quot;commercial-use&quot;, &quot;distribution&quot;, &quot;modification&quot;]</code></li>
+<li><code>conditions</code>: An array of license &quot;conditions&quot;, ex. <code>[&quot;disclose-source&quot;, &quot;same-license&quot;]</code></li>
+<li><code>limitations</code>: An array of license &quot;limitations&quot;, ex. <code>[&quot;liability&quot;, &quot;warranty&quot;]</code></li>
+</ul>
+</li>
+</ul>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>

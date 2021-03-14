@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter Wiki | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter Wiki | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter Wiki | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/wiki/Extending-a-Wedge.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/attribouter/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Attribouter</span>
+		</a>
+		<a class="link" href="/projects/attribouter/wiki/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Wiki</span>
+		</a>
+	</div>
+</div>
+
+<div class="container mt-3 mb-5">
+	
+	<h1>Extending a Wedge</h1>
+	
+
+	<div class="text">
+		<p>Since the wedges used in the layout file are referenced by their corresponding class name, you may have guessed that it is possible to create your own wedge similarly to how one would create a custom view. You would be correct in that assumption. That said, because there are so many different use cases for this, I'm not going to provide a full &quot;tutorial&quot;, but rather explain the basics of how wedges can be created.</p>
+<h2 id="creating-the-class">Creating the Class</h2>
+<p>The absolute minimum requirements for a wedge class are that they must extend <code>me.jfenn.attribouter.wedges.Wedge</code> and have a public constructor that accepts an <code>android.content.res.XmlResourceParser</code>. However, there are several additional suggestions that can affect... things... if they are not followed:</p>
+<ul>
+<li>Because wedges are added to a <code>RecyclerView</code>, they can have a subclass extending <code>me.jfenn.attribouter.wedges.Wedge$ViewHolder</code>, though this is not required. This class can be defined as a generic type of the <code>Wedge</code> class that your wedge class is extending, if that makes any sense (I don't know what I'm saying, just look at the example below and you'll see what I mean).</li>
+<li>Inside the constructor, you must call <code>super()</code> with the resource of the layout file that you want your wedge to use.</li>
+<li>You can then use the instance of <code>XmlResourceParser</code> to collect any XML arguments you want.</li>
+<li>After this, your constructor should end with a call to <code>addChildren(XmlResourceParser)</code>, which will parse and add any child wedges to a list that you can access (if your element has child wedges and there is not a call to this method in your constructor, it is very likely that you will encounter several issues as a result).</li>
+</ul>
+<p>Here is a basic example of what has been described so far:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyWedge</span> <span class="token keyword">extends</span> <span class="token class-name">Wedge</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyWedge</span><span class="token punctuation">.</span><span class="token class-name">MyViewHolder</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+  
+  <span class="token keyword">public</span> <span class="token class-name">MyWedge</span><span class="token punctuation">(</span><span class="token class-name">XmlResourceParser</span> parser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>my_wedge_layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//get attributes</span>
+    <span class="token function">addChildren</span><span class="token punctuation">(</span>parser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">//other methods</span>
+  
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">MyViewHolder</span> <span class="token keyword">extends</span> <span class="token class-name">ViewHolder</span> <span class="token punctuation">{</span>
+  
+    <span class="token keyword">public</span> <span class="token class-name">MyViewHolder</span><span class="token punctuation">(</span><span class="token class-name">View</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="implementing-methods">Implementing Methods</h2>
+<p>There are also several abstract methods in <code>Wedge</code> that must be defined. Rather than explain all of them, I will simply implement them all in the above example along with comments explaining what should happen where.</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyWedge</span> <span class="token keyword">extends</span> <span class="token class-name">Wedge</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyWedge</span><span class="token punctuation">.</span><span class="token class-name">MyViewHolder</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+  <span class="token comment">//define information in your Wedge class</span>
+  
+  <span class="token keyword">public</span> <span class="token class-name">MyWedge</span><span class="token punctuation">(</span><span class="token class-name">XmlResourceParser</span> parser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>my_wedge_layout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">//instantiate attributes</span>
+    <span class="token function">addChildren</span><span class="token punctuation">(</span>parser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token class-name">MyViewHolder</span> <span class="token function">getViewHolder</span><span class="token punctuation">(</span><span class="token class-name">View</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//"v" is the inflated layout file that you passed the resource of in your call to super()</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyViewHolder</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//yep, that's all you really need</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bind</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">MyViewHolder</span> viewHolder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//here you bind the data in your wedge class to the views in the MyViewHolder instance</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">MyViewHolder</span> <span class="token keyword">extends</span> <span class="token class-name">ViewHolder</span> <span class="token punctuation">{</span>
+  
+    <span class="token comment">//define views in your layout</span>
+  
+    <span class="token keyword">public</span> <span class="token class-name">MyViewHolder</span><span class="token punctuation">(</span><span class="token class-name">View</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">//instantiate views - "view = v.findViewById(...);"</span>
+    <span class="token punctuation">}</span>
+  
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="github-requests">GitHub Requests</h2>
+<p>If you wish to make a request to the GitHub API from your wedge, simply call <code>addRequest(GitHubData)</code> with an instance of one of the <a href="https://jfenn.me/redirects/?t=github&amp;d=Attribouter/tree/91ff71a11338cc501c332b82ba8ddd6fa042bd24/attribouter/src/main/java/me/jfenn/attribouter/data/github">classes extending GitHubData</a>, or you can create your own. Thanks to <a href="https://github.com/google/gson">GSON</a>'s magic, this is ridiculously simple, and if you've gotten this far you can probably figure it out yourself just by looking at the source code.</p>
+<p>After calling <code>addRequest()</code> with an instance of <code>GitHubData</code>, Attribouter will obtain and parse the data itself (as well as caching, combining duplicate requests, and other complicated things), and will pass it back to the <code>onInit(GitHubData)</code> method - which you should probably extend - of your wedge class, where you can modify any of your wedge's data with the information you have obtained. Once <code>onInit</code> has been called, Attribouter will notify the RecyclerView of a change to your wedge, and you wedge's <code>bind()</code> method will be called shortly afterwards.</p>
+<p>As an example, here is a wedge based on the previous examples that initially displays my name in a TextView as &quot;James Fern&quot;, then makes a request to GitHub, correcting it to &quot;James Fenn&quot;:</p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyWedge</span> <span class="token keyword">extends</span> <span class="token class-name">Wedge</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MyWedge</span><span class="token punctuation">.</span><span class="token class-name">MyViewHolder</span><span class="token punctuation">></span></span> <span class="token punctuation">{</span>
+
+ <span class="token keyword">private</span> <span class="token class-name">String</span> myName<span class="token punctuation">;</span>
+ 
+ <span class="token keyword">public</span> <span class="token class-name">MyWedge</span><span class="token punctuation">(</span><span class="token class-name">XmlResourceParser</span> parser<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token class-name">R</span><span class="token punctuation">.</span>layout<span class="token punctuation">.</span>this_is_a_textview<span class="token punctuation">)</span><span class="token punctuation">;</span>
+   
+   myName <span class="token operator">=</span> <span class="token string">"James Fern"</span><span class="token punctuation">;</span>
+   <span class="token function">addRequest</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UserData</span><span class="token punctuation">(</span><span class="token string">"TheAndroidMaster"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   
+   <span class="token function">addChildren</span><span class="token punctuation">(</span>parser<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+ <span class="token annotation punctuation">@Override</span>
+ <span class="token keyword">public</span> <span class="token class-name">MyViewHolder</span> <span class="token function">getViewHolder</span><span class="token punctuation">(</span><span class="token class-name">View</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">MyViewHolder</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+ <span class="token annotation punctuation">@Override</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bind</span><span class="token punctuation">(</span><span class="token class-name">Context</span> context<span class="token punctuation">,</span> <span class="token class-name">MyViewHolder</span> viewHolder<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   viewHolder<span class="token punctuation">.</span>textView<span class="token punctuation">.</span><span class="token function">setText</span><span class="token punctuation">(</span>myName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ 
+ <span class="token annotation punctuation">@Override</span>
+ <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onInit</span><span class="token punctuation">(</span><span class="token class-name">GitHubData</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>data <span class="token keyword">instanceof</span> <span class="token class-name">UserData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token class-name">UserData</span> user <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">UserData</span><span class="token punctuation">)</span> data<span class="token punctuation">;</span>
+     myName <span class="token operator">=</span> user<span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ 
+ <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">class</span> <span class="token class-name">MyViewHolder</span> <span class="token keyword">extends</span> <span class="token class-name">ViewHolder</span> <span class="token punctuation">{</span>
+ 
+   <span class="token class-name">TextView</span> textView<span class="token punctuation">;</span>
+ 
+   <span class="token keyword">public</span> <span class="token class-name">MyViewHolder</span><span class="token punctuation">(</span><span class="token class-name">View</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">super</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     textView <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">TextView</span><span class="token punctuation">)</span> v<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ 
+ <span class="token punctuation">}</span>
+ 
+<span class="token punctuation">}</span>
+</code></pre>
+
+	</div>
+	
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

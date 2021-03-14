@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="An explanation of the development process behind a MIDI library using the Kotlin Flow API.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Audio Automation: using Java's MIDI APIs with Kotlin Flow | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Audio Automation: using Java's MIDI APIs with Kotlin Flow | James Fenn">
+<meta name="twitter:description" content="An explanation of the development process behind a MIDI library using the Kotlin Flow API.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Audio Automation: using Java's MIDI APIs with Kotlin Flow | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2021-01-31-Audio-Automation/">
+<meta name="og:description" content="An explanation of the development process behind a MIDI library using the Kotlin Flow API.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-light border-bottom py-4">
+	<div class="container">
+		<h1 class="mb-0">Audio Automation: using Java's MIDI APIs with Kotlin Flow</h1>
+		<p class="text-meta text-tertiary-3 mb-3">
+			<a class="p-author h-card" href="">James Fenn</a> |
+			<a class="u-url" href="">
+			<time class="dt-published" datetime="2021-01-31">January 31, 2021</time></a>
+		</p>
+
+		
+		<a class="link link-chip mb-2" href="https://kotlinlang.org/docs/reference/coroutines/flow.html">
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Kotlin Flow Documentation</span>
+		</a>
+		
+		<a class="link link-chip mb-2" href="https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MidiSystem.html">
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Java MIDI APIs</span>
+		</a>
+		
+		<a class="link link-chip mb-2" href="https://code.horrific.dev/james/audio-automation">
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Source Code</span>
+		</a>
+		
+	</div>
+</div>
+
+<article class="container mt-3 mb-5">
+	<div class="text">
+		<p>Last year, I had the opportunity to take a course on Programming Environments in Music focused on the <a href="https://cycling74.com/products/max-features">Max/MSP software</a>. It involved a wide variety of topics around the software and aspects of computer music in general, such as MIDI sequencing, manipulating sound samples, and creating our own waveforms. I also learnt a lot about the various control flows &amp; structures in Max/MSP, which led me to revisit an earlier attempt at developing my own music programming API.</p>
+<p>Firstly, I had a distinct need to write this software in Kotlin. I am most comfortable with this language, and its <a href="https://kotlinlang.org/docs/reference/multiplatform.html">multiplatform</a> functionality would allow me to make use of it in websites, desktop programs, and Android applications. This is also why most existing solutions are inadequate; while I am certainly reinventing a few wheels here, the benefit is that its APIs can be used directly in other Kotlin applications to integrate with other variables - no experience needed.</p>
+<h2 id="using-kotlin-flows">Using Kotlin Flows</h2>
+<p>In order to translate source events such as &quot;a metronome tick&quot; into a set of notes, I needed a way to construct the path of that data through my program. In Max/MSP, this path is visualized as a stream of events that gets transformed as it passes through different &quot;objects&quot; in its patcher interface. For my attempt to be effective, I would need a way to rapidly iterate upon these paths in a similar fashion.</p>
+<p><img src="/images/blogs/audio-maxmsp.png" alt="The Max/MSP patcher interface, a handful of objects connected with spaghetti wires in-between."></p>
+<p>My understanding of reactive programming and event streams is fairly limited, so I wasn't entirely sure what I was getting into with Kotlin Flow. In fact, it took me a while to decide if Flow was an API that I even wanted to use. Kotlin has <a href="https://kotlinlang.org/docs/reference/sequences.html">a few</a> <a href="https://kotlinlang.org/docs/reference/coroutines/channels.html">other mechanisms</a> that provide similar interactions in slightly different ways, not to mention the existence of more widely used third-party libraries such as <a href="https://github.com/ReactiveX/RxJava">RxJava</a>.</p>
+<p>What eventually made up my mind was the relative simplicity of Kotlin Flow, despite the complex functionality it provides; the ability for a transform function to <a href="https://kotlinlang.org/docs/reference/coroutines/flow.html#transform-operator">emit multiple events</a> from a single source value is particularly useful.</p>
+<pre class="language-kt"><code class="language-kt"><span class="token function">metronome</span><span class="token punctuation">(</span><span class="token number">500</span><span class="token punctuation">.</span>ms<span class="token punctuation">)</span><span class="token punctuation">.</span>onTick<span class="token punctuation">.</span><span class="token function">transform</span> <span class="token punctuation">{</span>
+	<span class="token function">emit</span><span class="token punctuation">(</span><span class="token function">Note</span><span class="token punctuation">(</span><span class="token string">"3A"</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">.</span>ms<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token function">emit</span><span class="token punctuation">(</span><span class="token function">Note</span><span class="token punctuation">(</span><span class="token string">"3C"</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">.</span>ms<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">playOn</span><span class="token punctuation">(</span>piano<span class="token punctuation">)</span>
+</code></pre>
+<p>However, Flows differ quite significantly from how one might expect them to function; instead of providing access to an existing data stream, Flows are only started <em>upon collection of the resulting data.</em> This is referred to in the documentation as being a <a href="https://kotlinlang.org/docs/reference/coroutines/flow.html#flows-are-cold">&quot;cold&quot; stream</a>. Creating a <code>metronome(500)</code> in my program does nothing until its eventual output - the <code>piano</code> implementation - invokes it.</p>
+<p>This means that certain situations - like having a metronome invoke a function that starts another metronome - can be somewhat complex. However, I have yet to come across a situation that cannot be implemented in a single path from the metronome to an instrument.</p>
+<h2 id="java-midi-apis">Java MIDI APIs</h2>
+<p>Java actually contains a <a href="https://docs.oracle.com/javase/8/docs/api/javax/sound/midi/MidiSystem.html">MIDI interface</a> in its standard library, so connecting this library to a MIDI synthesizer was probably the easiest part of this whole process. The <a href="https://en.wikipedia.org/wiki/General_MIDI">General MIDI</a> specification explains how the 16 available MIDI channels (and their 128 program numbers) are expected to function. I decided to leave this largely up to the user, with one channel + program per &quot;instrument&quot; class.</p>
+<p>With this established, implementing the MIDI API was as simple as connecting the <code>noteOn</code> and <code>noteOff</code> functions to the expected start/stop times of each note object that is provided. I added some functionality to prevent it from breaking in situations where the same note is sent twice (two overlapping notes should stop when the last one ends), but this was rarely an issue.</p>
+<h2 id="solving-latency-issues">Solving Latency Issues</h2>
+<p>When I ran my first program with this library, it seemed a bit unstable - the timing was inconsistent, and some notes played faster than others - which wasn't a great experience after spending an entire day building it. While my metronome was working correctly, it seems that Flows (or Java in general) are not as precise with their timing. Some flows were taking 100ms or more to process an event, which had drastic consequences the music my program was playing.</p>
+<p>I decided that the easiest way to solve this would be to attach a specific timestamp to each event - a <code>metronome(500)</code> would send <code>startTime + [0, 500, 1000, 1500, ...]</code> and so on. However, this presented the challenge of how to send multiple values through the path of a single Flow. Since flows only support one data type, I needed to either create a wrapper object for every value they use, or write my own implementation; I ended up doing a bit of both.</p>
+<p>My <code>metronome</code> function now uses a <code>TimedFlow&lt;T&gt;</code> (where <code>T</code> is the actual data type being sent by the flow), which internally references a <code>Flow&lt;TimedInfo&lt;T&gt;&gt;</code>. The <code>TimedInfo</code> class both contains the event value and its timestamp. I also wrote a custom <code>.transform</code> implementation for <code>TimedFlow</code>, which contains an <code>emit(value: T, delay: Long)</code> function (allowing flows to change the timestamp of their events).</p>
+<p>Before these events are sent to each instrument, a slight delay is added as &quot;buffer time&quot; to prevent the inconsistencies I was experiencing.</p>
+<p>This is far from an optimal solution; I would like to entirely hide the timing info while allowing direct use of all the Flow functions. This could be done by having my <code>TimedFlow</code> implement the <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/">Flow interface</a> to provide access to all of its extension functions. However - as noted in the documentation - this interface is <em>not stable for inheritance</em>, so this is not a practical workaround as of yet.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I'm still working on building more features into this library as I write more programs with it - and I'm open to any suggestions for improving it further! I would like to integrate it with different types of instruments (such as custom wave generators), and figuring out how to &quot;ramp&quot; certain variables (e.g. volume or pitch) through the Flow interface could be an interesting challenge.</p>
+<p>If you're interested, the source code for this library is available <a href="https://code.horrific.dev/james/audio-automation">here</a> - and I've even provided an <a href="https://code.horrific.dev/james/audio-automation/src/branch/main/example/src/RandomPitchStrings.kt">example program</a> that demonstrates a lot of its current functionality.</p>
+
+	</div>
+</article>
+
+
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

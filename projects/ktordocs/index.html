@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Automated API documentation for Ktor/JVM servers">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Ktor-Docs | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ktor-Docs | James Fenn">
+<meta name="twitter:description" content="Automated API documentation for Ktor/JVM servers">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Ktor-Docs | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/ktordocs/">
+<meta name="og:description" content="Automated API documentation for Ktor/JVM servers">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">Ktor-Docs</h1>
+		<p class="mt-0 text-light-2">Automated API documentation for Ktor/JVM servers</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://code.horrific.dev/james/ktordocs">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://code.horrific.dev/james/ktordocs/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="text text-center">
+	<img class="mt-3" style="width: 700px;" src="https://code.horrific.dev/james/ktordocs/raw/branch/main/.meta/images/exampleEndpoint.png">
+	<h3 class="mb-0">Automated Documentation</h3>
+	<p class="mt-0">Provide comprehensive API documentation with minimal effort!</p>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-8 order-lg-2">
+
+<pre class="language-kt"><code class="language-kt"><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/api/v1/example"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    docs <span class="token punctuation">{</span>
+        title <span class="token operator">=</span> <span class="token string">"Hello World"</span>
+        desc <span class="token operator">=</span> <span class="token string">"Says hello to the world."</span>
+    <span class="token punctuation">}</span>
+
+    call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+	</div>
+	<div class="col-12 col-lg-4 py-3 align-self-center text-center text-lg-left">
+		<h3>Minimal API</h3>
+		<p>Inline documentation helps to explain your code and ensure consistency with the implementation.</p>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-4 order-lg-2 align-self-center text-center">
+		<img class="mt-3 m-lg-3" style="width: 150px;" src="/images/ic/markdown-mark.svg">
+	</div>
+	<div class="col-12 col-lg-8 py-3 align-self-center text-center text-lg-left">
+		<h3>Markdown Support</h3>
+		<p>Uses the <a href="https://github.com/commonmark/commonmark-java">commonmark-java</a> implementation to render any markdown syntax.</p>
+	</div>
+</div>
+
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://code.horrific.dev/james/ktordocs">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://code.horrific.dev/james/ktordocs">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<p>This library automatically generates REST API documentation for Ktor/JVM projects and hosts it under a specified URL.</p>
+<h2 id="screenshots">Screenshots</h2>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Auth Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://code.horrific.dev/james/ktordocs/raw/branch/main/./.meta/images/exampleEndpoint.png" alt="img"></td>
+<td><img src="https://code.horrific.dev/james/ktordocs/raw/branch/main/.meta/images/exampleAuthModal.png" alt="img"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation">Installation</h2>
+<p>The <code>:docs</code> module is published on <a href="https://jitpack.io/">JitPack</a>, which you can add to your project by copying the following to your root build.gradle at the end of &quot;repositories&quot;.</p>
+<pre class="language-groovy"><code class="language-groovy">allprojects <span class="token punctuation">{</span>
+  repositories <span class="token punctuation">{</span>
+    <span class="token punctuation">...</span>
+    maven <span class="token punctuation">{</span> url <span class="token string">'https://jitpack.io'</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>To add the dependency to a module, copy this line into your program's build.gradle file.</p>
+<pre class="language-groovy"><code class="language-groovy">implementation <span class="token string gstring">"dev.horrific.code.james:ktordocs:<span class="token expression"><span class="token punctuation">$</span>ktordocs_version</span>"</span>
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>First, you must install the ktor feature - replacing the default configuration with your project's values.</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token function">install</span><span class="token punctuation">(</span>RestDocsFeature<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    baseUrl <span class="token operator">=</span> <span class="token string">"https://example.com"</span>
+    title <span class="token operator">=</span> <span class="token string">"Example API"</span>
+    desc <span class="token operator">=</span> <span class="token string">"Basic documentation generated for testing &amp; demo purposes."</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Documentation can then be specified in any endpoint/request handler by invoking the <code>docs()</code> function at the start of its callback. (this function will not do anything during normal requests, and should not have any effect on performance)</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/api/v1/example"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    docs <span class="token punctuation">{</span>
+        title <span class="token operator">=</span> <span class="token string">"Hello World"</span>
+        desc <span class="token operator">=</span> <span class="token string">"Says hello to the world."</span>
+    <span class="token punctuation">}</span>
+
+    call<span class="token punctuation">.</span><span class="token function">respondText</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Finally, choose a location to host the documentation at using <code>restDocumentation(path)</code></p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token function">route</span><span class="token punctuation">(</span><span class="token string">"/api"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">restDocumentation</span><span class="token punctuation">(</span><span class="token string">"/docs"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="endpoint-parameters">Endpoint Parameters</h3>
+<p>The library will automatically generate a list of URL parameters by parsing the endpoint URL - however, more information can be specified using the <code>param(...)</code> function...</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/api/user/{username}"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    docs <span class="token punctuation">{</span>
+        <span class="token function">param</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// a URL property</span>
+            type <span class="token operator">=</span> <span class="token string">"SHA1 hash"</span>
+            desc <span class="token operator">=</span> <span class="token string">"A unique identifier of a user."</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">param</span><span class="token punctuation">(</span><span class="token string">"fetchAll"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// a query parameter (/?fetchAll=true)</span>
+            type <span class="token operator">=</span> <span class="token string">"boolean"</span>
+            desc <span class="token operator">=</span> <span class="token string">"Whether to fetch all user information from external sources."</span>
+            location <span class="token operator">=</span> ParameterInfo<span class="token punctuation">.</span>In<span class="token punctuation">.</span>Query
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="endpoint-responses">Endpoint Responses</h3>
+<p>Some endpoints may return different information depending on the response status - such as an error handler or authentication state. This can be specified using the <code>responds()</code> function.</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/api/user/{username}"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    docs <span class="token punctuation">{</span>
+        responds <span class="token punctuation">{</span> <span class="token comment">// default response behavior (200 OK)</span>
+            desc <span class="token operator">=</span> <span class="token string">"If the user has been found."</span>
+
+            <span class="token comment">// this is a handy function to set the `example` property</span>
+            <span class="token comment">// if your response uses a JSON serializer</span>
+            <span class="token function">exampleJson</span><span class="token punctuation">(</span>UserInfo<span class="token operator">::</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">responds</span><span class="token punctuation">(</span>HttpStatusCode<span class="token punctuation">.</span>NotFound<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            desc <span class="token operator">=</span> <span class="token string">"If the user doesn't exist."</span>
+            example <span class="token operator">=</span> <span class="token raw-string string">"""{ "message": "Unable to locate the requested user." }"""</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="links">Links</h3>
+<p>Endpoints can reference URL links as supporting material, which are provided in a list on the documentation page.</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"/api/user/{username}"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    docs <span class="token punctuation">{</span>
+        <span class="token function">reference</span><span class="token punctuation">(</span><span class="token string">"https://example.com"</span><span class="token punctuation">)</span>
+        <span class="token function">reference</span><span class="token punctuation">(</span><span class="token string">"https://example.com"</span><span class="token punctuation">,</span> <span class="token string">"Example Link"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="development">Development</h2>
+<p>The project uses Gradle builds for... err... most things. <code>./gradlew :{module}:test</code> and <code>./gradle :{module}:run</code> are fairly universal.</p>
+<h2 id="license">License</h2>
+<pre class="language-text"><code class="language-text">Copyright (c) 2020 James Fenn
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+</code></pre>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>

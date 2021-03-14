@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter Wiki | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter Wiki | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter Wiki | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/wiki/LinkWedge.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/attribouter/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Attribouter</span>
+		</a>
+		<a class="link" href="/projects/attribouter/wiki/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Wiki</span>
+		</a>
+	</div>
+</div>
+
+<div class="container mt-3 mb-5">
+	
+	<h1>LinkWedge</h1>
+	
+
+	<div class="text">
+		<p>Link tags can exist as children of the <a href="AppWedge.html">App</a>, <a href="ContributorWedge.html">Contributor</a>, and <a href="LicenseWedge.html">License</a> wedges. They can also be added as children of the root tag, though that is not their intended use. A few links are generated automatically by these wedges, such as links to the github profile of contributors for which the <code>login</code> attribute has been specified, and so on. These auto-generated links are specified in the wedges' individual documentation pages.</p>
+<p>If you wish to remove an auto-generated link, you can simply define a <code>LinkWedge</code> with the same <code>id</code> and the <code>hidden</code> attribute. However, if you want to modify another value of an auto-generated link, such as the title or icon, you may need to specify that you want to override consecutive merges as well so that it is not overwritten if the wedge receives more information from the GitHub API. See <a href="Overriding-Resources-and-Providing-Translations.html">&quot;Overriding Resources and Providing Translations&quot;</a> for more information on overriding merges.</p>
+<p>By default, <code>AppWedge</code> links are displayed below the app description, <code>ContributorWedge</code> links are displayed in a dialog (that only appears if the contributor has a <code>bio</code>), and <code>LicenseWedge</code> links are displayed below the description.</p>
+<h2 id="example">Example</h2>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>me.jfenn.attribouter.wedges.LinkWedge</span>
+    <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Documentation<span class="token punctuation">"</span></span>
+    <span class="token attr-name">url</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/Attribouter/<span class="token punctuation">"</span></span>
+    <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>@drawable/ic_book<span class="token punctuation">"</span></span>
+    <span class="token attr-name">priority</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>7<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<h2 id="attributes">Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>String</td>
+<td>The id of the link, to prevent duplicate links from being created.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String / String Resource</td>
+<td>The name/title of the link.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>String</td>
+<td>The url of the link.</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>String (URL) / Drawable Resource</td>
+<td>The icon to display next to the link.</td>
+</tr>
+<tr>
+<td>priority</td>
+<td>Integer</td>
+<td>Defines how the links should be sorted - the highest priority appears first in the list, and/or is opened when the whole item is clicked.</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Boolean</td>
+<td>Whether to hide the link. This is useful for removing automatically generated links that you do not want to display (example: removing the 'playStore' link generated by <code>&lt;appInfo&gt;</code> using the package name if your app is not published on the play store).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subwedges">Subwedges</h2>
+<p>The <code>LinkWedge</code> also has various &quot;sub-wedges&quot; that extend its functionality for various situations, such as sending an email, displaying license information, or opening the app's play store page without defining its package name.</p>
+<h3 id="email">Email</h3>
+<p>The <code>EmailLinkWedge</code> accepts only two attributes: <code>priority</code> (inherited from <code>LinkWedge</code>) and <code>email</code>.</p>
+<h4 id="example-2">Example</h4>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>me.jfenn.attribouter.wedges.EmailLinkWedge</span>
+    <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>dev@jfenn.me<span class="token punctuation">"</span></span>
+    <span class="token attr-name">priority</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>6<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<h3 id="license">License</h3>
+<p>Unfinished.</p>
+<h3 id="play-store">Play Store</h3>
+<p>The <code>PlayStoreLinkWedge</code> accepts one attribute (<code>priority</code>) and determines the package name at runtime to open its play store page.</p>
+<h4 id="example-3">Example</h4>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>me.jfenn.attribouter.wedges.PlayStoreLinkWedge</span>
+    <span class="token attr-name">priority</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+
+	</div>
+	
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

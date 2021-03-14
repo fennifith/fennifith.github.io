@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter Wiki | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter Wiki | James Fenn">
+<meta name="twitter:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter Wiki | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/wiki/The-Configuration-File.html">
+<meta name="og:description" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+
+<div class="bg-dark">
+	<div class="container my-3">
+		
+		<a class="link mr-0" href="/projects/">
+			<span class="link-title">Projects</span>
+		</a>
+		<a class="link mr-0" href="/projects/attribouter/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Attribouter</span>
+		</a>
+		<a class="link" href="/projects/attribouter/wiki/">
+			<i class="link-img material-icons">chevron_right</i>
+			<span class="link-title">Wiki</span>
+		</a>
+	</div>
+</div>
+
+<div class="container mt-3 mb-5">
+	
+	<h1>The Configuration File</h1>
+	
+
+	<div class="text">
+		<p>The great File of Configuration is truly a mighty hurdle to overcome when implementing this library. It contains many confusing and difficult concepts such as &quot;tags&quot; and &quot;attributes&quot;. However, when it comes down to it, it is really just a weird form of layout file that specifies the information to display instead of how to display it.</p>
+<p>For no specific reason, each configuration file must have an <code>&lt;about&gt;</code> tag as its root element. Inside of that tag, any amount of children can be defined in any order. When the about screen is opened, these tags will be parsed and their corresponding objects will be created, much like inflating a layout file. The objects are then added to a list to be displayed in a RecyclerView. In order to simplify things, these tags, their corresponding objects, and the views created for them in the RecyclerView will be referred to as &quot;wedges&quot;.</p>
+<p>Because wedge classes are instantiated from the configuration file, the wedge's tag in the file must be the class name of the wedge that should be instantiated (optionally including the package name, if using a custom wedge - similarly to how Views are added to a layout file).</p>
+<p>With this information, we can now create a simple configuration file using the <a href="AppWedge.html"><code>App</code></a>, <a href="ContributorsWedge.html"><code>Contributors</code></a>, and <a href="LicensesWedge.html"><code>Licenses</code></a> wedges as follows.</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>about</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppWedge</span><span class="token punctuation">/></span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorsWedge</span><span class="token punctuation">/></span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LicensesWedge</span><span class="token punctuation">/></span></span>
+  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>about</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>This will create a screen that displays information about your app, followed by its contributors and finally the open source licenses that you have used. However, the only information that is currently displayed is what Attribouter knows how to find by itself; the <code>AppWedge</code> displays your app's icon, name, and a link to rate your app on the Play Store, the <code>ContributorsWedge</code> displays the people that have contributed to Attribouter, and the <code>LicensesWedge</code> displays the licenses that Attribouter uses. In order to add information to these wedges, you can use one of the following options:</p>
+<h2 id="option-1%3A-the-github-api">Option 1: The GitHub API</h2>
+<p>As stated in their documentation, both the <a href="AppWedge.html"><code>AppWedge</code></a> and the <a href="ContributorsWedge.html"><code>ContributorsWedge</code></a> have an attribute titled <code>repo</code> that accepts the full name of a GitHub repository. Let's say that the repository for your app is <a href="https://github.com/fennifith/Pasta-for-Spotify">fennifith/Pasta-for-Spotify</a>. In that case, you can modify the file as follows:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>about</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppWedge</span>
+    <span class="token attr-name">repo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fennifith/Pasta-for-Spotify<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorsWedge</span>
+    <span class="token attr-name">repo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fennifith/Pasta-for-Spotify<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LicensesWedge</span><span class="token punctuation">/></span></span>
+  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>about</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>The <code>AppWedge</code> now displays the repository's description, a link to the Pasta-for-Spotify repository on GitHub, and a link to the project's homepage (<a href="https://jfenn.me/apps/pasta/">https://jfenn.me/apps/pasta</a>), and the <code>ContributorsWedge</code> includes all of <a href="https://github.com/fennifith/Pasta-for-Spotify/graphs/contributors">the people that have contributed to it</a>.</p>
+<h2 id="option-2%3A-attributes-and-children">Option 2: Attributes and Children</h2>
+<p>If your project does not have a GitHub repository or you want some information to be available without an internet connection, you should define that information in the configuration file. Using the documentation pages for <code>AppWedge</code> and <code>ContributorsWedge</code>, the equivalent of Option 1 (without the GitHub link in the <code>AppWedge</code>) would be as follows:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>about</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppWedge</span>
+    <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Pasta for Spotify<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A material design Spotify client for Android<span class="token punctuation">"</span></span>
+    <span class="token attr-name">websiteUrl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/apps/pasta/<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorsWedge</span><span class="token punctuation">></span></span>
+  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>James Fenn<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars3.githubusercontent.com/u/13000407<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Developer<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/<span class="token punctuation">"</span></span>
+      <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me@jfenn.me<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Jan-Lukas Else<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars3.githubusercontent.com/u/8822316<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contributor<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://about.jlelse.de<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Alexandre Piveteau<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars1.githubusercontent.com/u/6318990<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contributor<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://alexandrepiveteau.ch<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ContributorsWedge</span><span class="token punctuation">></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LicensesWedge</span><span class="token punctuation">/></span></span>
+  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>about</span><span class="token punctuation">></span></span>
+</code></pre>
+<h2 id="option-3%3A-both">Option 3: Both</h2>
+<blockquote>
+<p>&quot;This should be fairly easy. All that you need to do is combine the two previous options, right?&quot;</p>
+</blockquote>
+<p>Actually, there is one extra step - if you do not define the <code>login</code> attribute on all of the <a href="ContributorWedge.html"><code>ContributorWedge</code></a>s, you will end up with two sets of contributors - one from the configuration file and one from the GitHub API. Similar attributes are used to merge duplicate wedges like <a href="LinkWedge.html"><code>LinkWedge</code></a>s and <a href="LicenseWedge.html"><code>LicenseWedge</code></a>s, so you should check out <a href="Overriding-Resources-and-Providing-Translations.html">&quot;Overriding Resources and Providing Translations&quot;</a> if the results of this option confuse you. When you are done, the end result should look something like this:</p>
+<pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>about</span><span class="token punctuation">></span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>AppWedge</span>
+    <span class="token attr-name">repo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fennifith/Pasta-for-Spotify<span class="token punctuation">"</span></span>
+    <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Pasta for Spotify<span class="token punctuation">"</span></span>
+    <span class="token attr-name">description</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A material design Spotify client for Android<span class="token punctuation">"</span></span>
+    <span class="token attr-name">websiteUrl</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/apps/pasta/<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorsWedge</span>
+    <span class="token attr-name">repo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fennifith/Pasta-for-Spotify<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>
+  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">login</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fennifith<span class="token punctuation">"</span></span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>James Fenn<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars3.githubusercontent.com/u/13000407<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Developer<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://jfenn.me/<span class="token punctuation">"</span></span>
+      <span class="token attr-name">email</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me@jfenn.me<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">login</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jlelse<span class="token punctuation">"</span></span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Jan-Lukas Else<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars3.githubusercontent.com/u/8822316<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contributor<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://about.jlelse.de<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+      
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ContributorWedge</span>
+      <span class="token attr-name">login</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>alexandrepiveteau<span class="token punctuation">"</span></span>
+      <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Alexandre Piveteau<span class="token punctuation">"</span></span>
+      <span class="token attr-name">avatar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://avatars1.githubusercontent.com/u/6318990<span class="token punctuation">"</span></span>
+      <span class="token attr-name">task</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Contributor<span class="token punctuation">"</span></span>
+      <span class="token attr-name">blog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://alexandrepiveteau.ch<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ContributorsWedge</span><span class="token punctuation">></span></span>
+    
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>LicensesWedge</span><span class="token punctuation">/></span></span>
+  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>about</span><span class="token punctuation">></span></span>
+</code></pre>
+
+	</div>
+	
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+
+	<script type="text/javascript">
+		// prevent install prompt display
+		window.addEventListener('beforeinstallprompt', function(e) {
+			return e.preventDefault();
+		});
+
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/sw.js', {scope: '/'})
+				.then(function() {
+					console.log("Service Worker Registered");
+				});
+		}
+	</script>
+</body>
+</html>

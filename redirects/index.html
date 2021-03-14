@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Redirecting to...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<p id="container"></p>
+		<script type="text/javascript" src="/js/utils.js"></script>
+		<script type="text/javascript">
+			var links = {"twitter":"https://twitter.com/fennifith","fediverse":"https://is.a.horrific.dev/@james","twitch":"https://twitch.tv/fennifith","keybase":"https://keybase.io/jafenn","googleplay":"https://play.google.com/store/apps/dev?id=5937321955284727208","telegram":"https://t.me/fennifith","linkedin":"https://www.linkedin.com/in/james-fenn-3390b8167/","github":"https://github.com/fennifith","git":"https://code.horrific.dev/james","bintray":"https://bintray.com/18jafenn90","liberapay":"https://liberapay.com/fennifith/","paypal":"https://paypal.me/fennifith"};
+
+			var array = window.location.search.substring(1).split("&");
+			var args = {};
+			for (var i = 0; i < array.length; i++) {
+				if (array[i].indexOf("=") >= 0) {
+					var argArray = array[i].split("=");
+					args[argArray[0]] = argArray[1];
+				} else args[array[i]] = true;
+			}
+
+			if (links[args.t]) {
+				var url = links[args.t] + "/" + decodeURIComponent(args.d || "").replace('${}', 'fennifith');
+				document.getElementById("container").innerHTML = "Redirecting to... <a href=\"" + url + "\">" + url + "</a>"
+				window.location = url;
+			} else location.href="/404.html";
+		</script>
+	</body>
+</html>

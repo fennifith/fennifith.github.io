@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<url>
+		<loc>/blog/2018-07-28-Hello-World/</loc>
+		<lastmod>2018-07-28T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-08-17-Attribouter/</loc>
+		<lastmod>2018-08-17T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-08-19-Client-Side-JavaScript/</loc>
+		<lastmod>2018-08-19T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-09-01-AAAAAAAAAH/</loc>
+		<lastmod>2018-09-01T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-09-25-Exceptional-Traveler/</loc>
+		<lastmod>2018-09-25T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-10-26-CSS-Submodules/</loc>
+		<lastmod>2018-10-26T04:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2018-11-14-Continuous-Integration/</loc>
+		<lastmod>2018-11-14T05:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-03-06-Freenode-IRC-Setup/</loc>
+		<lastmod>2019-03-06T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-03-18-Introduction-to-Android/</loc>
+		<lastmod>2019-03-18T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-04-14-Right-to-Repair/</loc>
+		<lastmod>2019-04-14T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-06-13-Aptoide-Play-Fair-Response/</loc>
+		<lastmod>2019-06-13T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-08-02-JavaScript-Proofs/</loc>
+		<lastmod>2019-08-02T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-10-15-Open-Source-in-Education/</loc>
+		<lastmod>2019-10-15T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-10-28-Free-Software-RMS/</loc>
+		<lastmod>2019-10-28T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-10-30-Ethical-Source/</loc>
+		<lastmod>2019-10-30T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2019-12-15-Federated-Social-Networks/</loc>
+		<lastmod>2019-12-15T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2020-01-24-Ethics-of-AI/</loc>
+		<lastmod>2020-01-24T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2020-05-09-Animating-SVG-Icons/</loc>
+		<lastmod>2020-05-09T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/</loc>
+		<lastmod>2020-07-26T19:48:01.918Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/</loc>
+		<lastmod>2020-07-30T18:03:56.044Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/</loc>
+		<lastmod>2020-07-30T18:53:09.110Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/AppWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/ContributorWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/ContributorsWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/Custom-Themes.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/Extending-a-Wedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/Fetching-CrowdIn-Translations.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/LicenseWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/LicensesWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/LinkWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/Overriding-Resources-and-Providing-Translations.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/TextWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/The-Configuration-File.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/TranslatorWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/TranslatorsWedge.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/_Footer.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/wiki/_Sidebar.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/Android-Versions.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/Oppo.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/Xiaomi.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/_Footer.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/wiki/_Sidebar.html</loc>
+		<lastmod>2020-07-31T16:51:50.296Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/community/</loc>
+		<lastmod>2020-08-01T16:19:31.989Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/now/</loc>
+		<lastmod>2020-08-01T16:19:43.056Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/contact/</loc>
+		<lastmod>2020-12-08T17:36:54.292Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/</loc>
+		<lastmod>2020-12-09T20:17:32.320Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/</loc>
+		<lastmod>2020-12-09T21:59:41.683Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/</loc>
+		<lastmod>2020-12-09T22:31:36.802Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/</loc>
+		<lastmod>2020-12-09T23:43:46.548Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/</loc>
+		<lastmod>2020-12-09T23:44:05.598Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dot.css/</loc>
+		<lastmod>2020-12-09T23:44:42.135Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/declarativ/</loc>
+		<lastmod>2020-12-09T23:45:04.329Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/exceptionaltraveler/</loc>
+		<lastmod>2020-12-09T23:45:19.235Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/scrurl/</loc>
+		<lastmod>2020-12-09T23:45:35.992Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/crasher/</loc>
+		<lastmod>2020-12-09T23:47:06.972Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/</loc>
+		<lastmod>2020-12-09T23:47:35.942Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/</loc>
+		<lastmod>2020-12-09T23:47:54.903Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/policies/</loc>
+		<lastmod>2020-12-10T01:52:43.050Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/404.html</loc>
+		<lastmod>2020-12-11T20:08:12.455Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/RestDocsFeature.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/interface/HasParams.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/interface/HasReferences.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/interface/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/model/EndpointInfo.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/model/ResponseInfo.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/docs/src/me/jfenn/ktordocs/model/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/ktordocs/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/exceptionaltraveler/docs/TravelingSalesPerson.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/exceptionaltraveler/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/mdjavadoc/docs/api/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/mdjavadoc/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/androidTest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/androidTest/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/androidTest/java/james/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/androidTest/java/james/metronome/ExampleInstrumentedTest.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/androidTest/java/james/metronome/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/test/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/test/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/test/java/james/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/test/java/james/metronome/ExampleUnitTest.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/app/src/test/java/james/metronome/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/metronome/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/jfenn/attribouter/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/jfenn/attribouter/wedges/LinkWedge.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/jfenn/attribouter/wedges/Wedge.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/jfenn/attribouter/wedges/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/attribouter/src/main/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/attribouter/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/java/me/jfenn/gitwrappersample/ExampleInstrumentedTest.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/java/me/jfenn/gitwrappersample/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/androidTest/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/java/me/jfenn/gitwrappersample/ExampleUnitTest.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/java/me/jfenn/gitwrappersample/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/example-android/src/test/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/jfenn/gitrest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/jfenn/gitrest/service/DiskCache.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/jfenn/gitrest/service/MemoryCache.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/jfenn/gitrest/service/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/androidMain/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/model/ProviderString.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/model/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/util/DefaultProviders.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/util/Serialization.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/gitrest/util/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/commonMain/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/Client.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/jfenn/gitrest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/jfenn/gitrest/service/DiskCache.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/jfenn/gitrest/service/MemoryCache.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/jfenn/gitrest/service/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jsMain/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/me/jfenn/gitrest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/me/jfenn/gitrest/service/MemoryCache.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/me/jfenn/gitrest/service/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/gitrest/src/jvmMain/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/git-rest-wrapper/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/extensions/Color.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/extensions/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/graphics/Canvas.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/graphics/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/spatial/SpatialMap.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/spatial/SpatialMapChunked.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/spatial/SpatialMapFast.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/spatial/SpatialObject.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/spatial/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/Area.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/ListArea.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/RadiusArea.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/RectArea.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/StaticArea.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/area/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/iterator/AreaIterator.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/core/vector/iterator/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/dungeon/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonMain/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/me/jfenn/dungeon/core/ExampleUnitTest.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/me/jfenn/dungeon/core/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/me/jfenn/dungeon/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/commonTest/kotlin/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/dungeon/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/adapters/ColorPickerPagerAdapter.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/adapters/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/ColorPickerDialog.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/PickerDialog.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/dialogs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/utils/DelayedInstantiation.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/utils/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/ColorView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/RenderableView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/SelectableCircleColorView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/color/SmoothColorView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/color/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/picker/PickerView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/colorpickerdialog/views/picker/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/base/src/main/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/dialogs/ImageColorPickerDialog.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/dialogs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/views/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/views/picker/ImageColorPickerView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/colorpickerdialog/views/picker/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/imagepicker/src/main/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/colorpickerdialog/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/AppPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/IconStyleData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/NotificationData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/icon/IconData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/icon/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/preference/AppNotificationsPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/preference/BasePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/data/preference/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/services/StatusServiceImpl.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/services/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/utils/ColorUtils.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/utils/StaticUtils.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/utils/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/views/StatusView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/com/james/status/views/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/app/src/main/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/status/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/Alarmio.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/activities/MainActivity.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/activities/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/adapters/AlarmsAdapter.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/adapters/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/AlarmData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/SoundData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/TimerData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/AboutPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/AlertWindowPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/BasePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/BatteryOptimizationPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/BooleanPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/CustomPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/ImageFilePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/ListPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/RingtonePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/SpinnerPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/ThemePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/TimePreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/TimeZonesPreferenceData.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/data/preference/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/fragments/HomeFragment.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/fragments/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/interfaces/Subscribblable.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/interfaces/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/services/SleepReminderService.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/services/StopwatchService.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/services/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/utils/DebugUtils.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/utils/FormatUtils.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/utils/ImageUtils.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/utils/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/AestheticCheckBoxView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/AestheticSlideActionView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/AestheticSunriseView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/AestheticSwitchView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/DaySwitch.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/PageIndicatorView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/ProgressLineView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/ProgressTextView.html</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/alarmio/views/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/app/src/main/java/me/jfenn/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/alarmio/docs/</loc>
+		<lastmod>2020-12-11T23:45:23.276Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/dungeongl/</loc>
+		<lastmod>2020-12-12T01:14:50.927Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/projects/pasta-for-spotify/</loc>
+		<lastmod>2020-12-12T01:15:11.011Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+	<url>
+		<loc>/blog/2021-01-31-Audio-Automation/</loc>
+		<lastmod>2021-01-31T00:00:00.000Z</lastmod>
+		<changefreq>monthly</changefreq>
+	</url>
+	
+</urlset>

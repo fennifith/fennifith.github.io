@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A no-root status bar replacement for Android.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Status | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Status | James Fenn">
+<meta name="twitter:description" content="A no-root status bar replacement for Android.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fennifith/Status/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_web.png">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Status | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/status/">
+<meta name="og:description" content="A no-root status bar replacement for Android.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">Status</h1>
+		<p class="mt-0 text-light-2">A no-root status bar replacement for Android.</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/Status">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/Status/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+		<a class="link link-chip mt-2" href="https://play.google.com/store/apps/details?id=com.james.status">
+			
+			<img class="link-img" src="https://jfenn.me/images/ic/play-store.svg"/>
+			<span class="link-title">Google Play</span>
+			
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bg-lighter py-4">
+	<div class="container pb-2">
+		<div class="row">
+			<div class="col-12 col-md-auto align-self-center text-center">
+				<i class="material-icons" style="font-size: 100px;">book</i>
+			</div>
+			<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+				<h5 class="mb-2">Looking for documentation?</h5>
+				<p class="mt-0 mb-4">Find helpful information about this project - tutorials, guides, and more!</p>
+				<a class="btn btn-primary" href="./wiki/">Read the Wiki <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="bg-danger-5 py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-auto align-self-center text-center">
+				<i class="material-icons text-danger" style="font-size: 100px;">error_outline</i>
+			</div>
+			<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+				<h5 class="text-tertiary-1">This project is deprecated!</h5>
+				<p>Pull requests may still be accepted, but I am no longer actively maintaining it and proper functionality is not guaranteed.</p>
+				<p>If you would like to fork this project and continue development, please <a href="/contact/">contact me</a> so I can link to your fork from this page.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://github.com/fennifith/Status">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://github.com/fennifith/Status">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<blockquote>
+<p><strong>A message from the idiot that wrote this program:</strong></p>
+<p>Status has not been abandoned, but is now incompatible with a growing range of
+devices due to a variety of problems detailed in
+<a href="https://jfenn.me/redirects/?t=github&amp;d=Status/issues/87">issue #87</a>.
+Unfortunately, there is nothing that I or any other developer can do to
+prevent this. If the Play Store says that your device is incompatible, then
+there is nothing that I can do to help you other than point you to one of the
+links below about why it will not function.</p>
+<p>https://www.androidpolice.com/2017/04/10/android-o-feature-spotlight-apps-can-no-longer-draw-top-system-ui/
+https://www.xda-developers.com/android-o-is-breaking-apps-that-overlay-on-top-of-the-status-bar/
+https://issuetracker.google.com/issues/36574245</p>
+<p>Status will continue to receive support for devices below Android Oreo for as
+long as it remains in the interest of the community.</p>
+</blockquote>
+<h2 id="about">About</h2>
+<p>Status is a status bar replacement that draws an overlay on top of the
+system-generated status bar. This means that the actual status bar is only
+hidden under the replacement; touch gestures are not overridden, and the
+standard notification panel is still shown. It needs a lot of permissions in
+order to obtain the information needed to display in the status bar. These are
+listed below.</p>
+<p><a href="https://travis-ci.com/fennifith/Status"><img src="https://travis-ci.com/fennifith/Status.svg" alt="Build Status"></a>
+<a href="https://www.codacy.com/app/fennifith/Status?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fennifith/Status&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/4f0694753964424b82ccb3544d24df2a" alt="Codacy Badge"></a>
+<a href="https://discord.gg/ugwZR7V"><img src="https://img.shields.io/discord/514625116706177035.svg?logo=discord&amp;colorB=7289da" alt="Discord"></a>
+<a href="https://liberapay.com/fennifith/donate"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?logo=liberapay" alt="Liberapay"></a></p>
+<p>Special thanks to the contributors that have helped to design the app, fix
+ssues, and translate it to different languages:</p>
+<ul>
+<li><a href="https://twitter.com/MAKTHG">Anas Khan</a>: designed the app icon &amp; helped with UI</li>
+<li><a href="https://dribbble.com/zavukodlak">Vukašin Anđelković</a>: made a couple status bar icons</li>
+<li><a href="https://technologx.com/">Ghost Ninja</a>: also made some status bar icons</li>
+<li><a href="https://github.com/Ryo567">Eugenio Martinez Seguin</a>: Spanish translations</li>
+<li><a href="https://github.com/opnay">Kim Inseop</a>: Korean translations</li>
+<li>Majida Whale: Chinese translations</li>
+<li><a href="https://github.com/Alsidi-Group">Marwan ALsidi</a>: Arabic translations</li>
+</ul>
+<p>Also, credit to some of Status's other icon sources:</p>
+<ul>
+<li><a href="https://material.io/tools/icons/">Google Design</a></li>
+<li><a href="https://materialdesignicons.com/">materialdesignicons.com</a></li>
+<li><a href="https://icons8.com/icons">Icons8</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>The app is available from both Google Play and F-Droid. However, because of
+Google Play's policies regarding certain app permissions and battery
+optimization, some features may not be included in the Google Play version of
+the app.</p>
+<p><a href="https://play.google.com/store/apps/details?id=com.james.status"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+    alt="Get it on Google Play"
+    height="80"></a>
+<a href="https://f-droid.org/en/packages/com.james.status/"><img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="80"></a></p>
+<p>Alternatively, you can download the latest APK from
+<a href="https://github.com/fennifith/Status/blob/master/../../releases/">the GitHub releases</a>.</p>
+<h2 id="permissions">Permissions</h2>
+<ul>
+<li>Accessibility Service: used to attempt to get the status bar color of the current app if the 'status bar coloring' preference is enabled.</li>
+<li>Notification Access: used to get the icons of the current notifications.</li>
+<li>System Alert Window, System Overlay Window: used to draw the status bar above all other apps.</li>
+<li>Battery Stats: used to find if the battery is charging and what percent it is at.</li>
+<li>Network State, Phone State: gets the type and connection of the phone network, and if airplane mode is enabled.</li>
+<li>Wifi State: finds if wifi is enabled and how good the connection is.</li>
+<li>Bluetooth: find if bluetooth is enabled &amp; connected or not.</li>
+<li>Location Services: finds if GPS is enabled.</li>
+<li>Alarm: find if an alarm is set.</li>
+<li>External Storage: backup/restore all settings from a file.</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<h3 id="issues">Issues</h3>
+<p>Okay, there aren't really any guidelines over issue formatting provided that
+you don't create issues that already exist and test the app thoroughly before
+creating an issue (ex: try clearing the app data).</p>
+<h3 id="pull-requests">Pull Requests</h3>
+<p>Contributions are accepted. See <a href="https://github.com/fennifith/Status/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a>
+for more information.</p>
+<h3 id="icons">Icons</h3>
+<p>There used to be a list of all the possible icon formats here to use as a
+reference, but I stopped updating it and it's pretty useless now. If you want
+to make status bar icons to add to this app, either <a href="mailto:contact@jfenn.me">contact me</a>
+or look in the repository for the existing icon files.</p>
+<h2 id="license">License</h2>
+<p>Unless otherwise stated, all code in this repository is published under the
+Apache 2.0 License as stated below.</p>
+<p>Some notable exceptions are:</p>
+<ul>
+<li>Files in <a href="./app/src/main/res-google">app/src/main/res-google</a> are published under a different license; see the <code>LICENSE</code> file included in that directory.</li>
+<li>Files in <a href="./app/src/main/res-icons8">app/src/main/res-icons8</a> are published under a different license; see the <code>LICENSE</code> file included in that directory.</li>
+<li>Files in <a href="./app/src/main/res-materialdesignicons">app/src/main/res-materialdesignicons</a> are published under a different license; see the <code>LICENSE</code> file included in that directory.</li>
+<li>Files contained in the subdirectories of <a href="https://github.com/fennifith/Status/blob/master/./app/src/main/assets">app/src/main/assets</a> are published under their own licenses; see the <code>LICENSE</code> file included in their respective directories.</li>
+</ul>
+<pre><code>Copyright 2019 James Fenn
+
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>

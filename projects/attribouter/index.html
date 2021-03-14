@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="A lightweight "about screen" library to allow quick but customizable attribution in Android apps.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Attribouter | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link href="//fonts.googleapis.com/css?family=Crete+Round|Roboto|Montserrat&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Attribouter | James Fenn">
+<meta name="twitter:description" content="A lightweight "about screen" library to allow quick but customizable attribution in Android apps.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Attribouter | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/attribouter/">
+<meta name="og:description" content="A lightweight "about screen" library to allow quick but customizable attribution in Android apps.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+<link href="//unpkg.com/prism-themes@1.5.0/themes/prism-ghcolors.css" rel="stylesheet">
+
+</head>
+<body class="nav-container footer-container">
+	
+<nav class="nav">
+	<a class="nav-item" href="/">
+		<i class="nav-item-img material-icons">home</i>
+		<span class="nav-item-title">Home</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/blog/">
+		<i class="nav-item-img material-icons">notes</i>
+		<span class="nav-item-title">Blog</span>
+	</a>
+	
+	
+	<a class="nav-item active" href="/projects/">
+		<i class="nav-item-img material-icons">code</i>
+		<span class="nav-item-title">Projects</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/community/">
+		<i class="nav-item-img material-icons">people</i>
+		<span class="nav-item-title">Community</span>
+	</a>
+	
+	
+	<a class="nav-item" href="/now/">
+		<i class="nav-item-img material-icons">date_range</i>
+		<span class="nav-item-title">Now</span>
+	</a>
+	
+</nav>
+
+
+
+<div class="bg-secondary py-5">
+	<div class="container text-center">
+		<h1 class="text-light" style="text-shadow: 0 0 30px var(--accent);">Attribouter</h1>
+		<p class="mt-0 text-light-2">A lightweight "about screen" library to allow quick but customizable attribution in Android apps.</p>
+	</div>
+
+	<div class="mt-2 text-center">
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/Attribouter">
+			<img class="link-img" src="https://jfenn.me/images/ic/git.png"/>
+			<span class="link-title">Git Repo</span>
+		</a>
+		<a class="link link-chip mt-2" href="https://github.com/fennifith/Attribouter/issues">
+			<i class="link-img material-icons">bug_report</i>
+			<span class="link-title">Bug Tracker</span>
+		</a>
+		
+		<a class="link link-chip mt-2" href="https://jitpack.io/#me.jfenn/Attribouter">
+			
+			<i class="link-img material-icons">link</i>
+			<span class="link-title">Website</span>
+			
+		</a>
+		
+	</div>
+</div>
+<div class="bg-accent-5 py-3">
+	<div class="container">
+		<div class="row pt-3">
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/community/';">
+					<a class="card-title" href="/community/">
+						<i class="material-icons">people</i>
+						Contributing
+					</a>
+					<div class="card-body">
+						<span>Interested in working with this project or volunteering to help? Get started here!</span>
+					</div>
+				</div>
+			</div>
+			<div class="col col-12 col-md-6 mb-3">
+				<div class="card card-accent h-100" onclick="location.href = '/contact/';">
+					<a class="card-title" href="/contact/">
+						<i class="material-icons">email</i>
+						Contact Me
+					</a>
+					<div class="card-body">
+						<span>Have any questions or concerns? Don't hesitate to reach out!</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="bg-lighter py-4">
+	<div class="container pb-2">
+		<div class="row">
+			<div class="col-12 col-md-auto align-self-center text-center">
+				<i class="material-icons" style="font-size: 100px;">book</i>
+			</div>
+			<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+				<h5 class="mb-2">Looking for documentation?</h5>
+				<p class="mt-0 mb-4">Find helpful information about this project - tutorials, guides, and more!</p>
+				<a class="btn btn-primary" href="./wiki/">Read the Wiki <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-lg-6 order-lg-2 text text-center text-lg-right">
+		<img class="my-2 mr-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-contributors.png?raw=true">
+		<img class="my-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-contributor.png?raw=true">
+	</div>
+	<div class="col-12 col-lg-6 py-3 align-self-center text-center text-lg-left">
+		<h3>Contributor Profiles</h3>
+		<p>Automatically fetches profile information to provide the most recent content - powered by <a href="/projects/git-rest-wrapper/">git-rest-wrapper</a>.</p>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-6 text text-center text-lg-left">
+		<img class="my-2 mr-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-licenses.png?raw=true">
+		<img class="my-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-license.png?raw=true">
+	</div>
+	<div class="col-12 col-lg-6 py-3 align-self-center text-center text-lg-left">
+		<h3>License Information</h3>
+		<p>Uses the <a href="https://docs.github.com/en/free-pro-team@latest/rest/reference/licenses">GitHub Licenses API</a> to provide complete license information about the application's dependencies.</p>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-6 order-lg-2 text text-center text-lg-right">
+		<img class="my-2 mr-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-night.png?raw=true">
+		<img class="my-2" style="width: 200px;" src="https://github.com/fennifith/Attribouter/raw/main/.github/images/attribouter-contributors.png?raw=true">
+	</div>
+	<div class="col-12 col-lg-6 py-3 align-self-center text-center text-lg-left">
+		<h3>Night Theme</h3>
+		<p>Adapts to the user's <a href="https://developer.android.com/guide/topics/ui/look-and-feel/darktheme">Dark Mode settings</a> to present a consistent experience across the device.</p>
+	</div>
+</div>
+
+
+	</div>
+</div>
+
+<div class="bg-lighter py-4">
+	<div class="container">
+		
+
+<div class="row">
+	<div class="col-12 col-lg-3 text-center">
+		<img class="mt-3 my-lg-3" style="width: 150px;" src="https://raw.githubusercontent.com/fennifith/Attribouter/main/.github/images/icon.png">
+	</div>
+	<div class="col-12 col-lg-9 py-3 align-self-center text-center text-lg-left">
+		<p>Special thanks to <a href="https://twitter.com/kevttob">Kevin Aguilar</a> and <a href="https://221pxls.com/">221 Pixels</a> for helping improve the libary's design/interface and creating the awesome logo!</p>
+	</div>
+</div>
+
+
+
+	</div>
+</div>
+
+<div class="bg-neutral py-4">
+	<div class="container">
+		
+<div class="row">
+	<div class="col-12 col-md-auto align-self-center text-center">
+		<i class="material-icons" style="font-size: 100px;">source</i>
+	</div>
+	<div class="col-12 col-md-8 align-self-center text-center text-md-left">
+		<h3 class="mb-2">Open Source</h3>
+		<p class="mt-0 mb-4">Browse the source code, suggest changes, or <a href="/community/">develop it yourself</a>!</p>
+		<a class="btn btn-primary" href="https://github.com/fennifith/Attribouter">Git Repo <i class="material-icons" style="padding-bottom: 0.1rem;">chevron_right</i></a>
+	</div>
+</div>
+
+<div id="readme" class="card bg-light border-dark mt-5">
+	<div class="py-2 px-4 bg-dark">
+		<a class="link" href="https://github.com/fennifith/Attribouter">
+			<i class="link-img material-icons">book</i>
+			<span class="link-title">README.md</span>
+		</a>
+	</div>
+	<div class="py-2 px-4 text">
+		<h3 id="screenshots">Screenshots</h3>
+<table>
+<thead>
+<tr>
+<th>Contributors</th>
+<th>Contributor</th>
+<th>Licenses</th>
+<th>License</th>
+<th>Night Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://raw.githubusercontent.com/fennifith/Attribouter/main/./.github/images/attribouter-contributors.png?raw=true" alt="img"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/Attribouter/main/./.github/images/attribouter-contributor.png?raw=true" alt="img"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/Attribouter/main/./.github/images/attribouter-licenses.png?raw=true" alt="img"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/Attribouter/main/./.github/images/attribouter-license.png?raw=true" alt="img"></td>
+<td><img src="https://raw.githubusercontent.com/fennifith/Attribouter/main/./.github/images/attribouter-night.png?raw=true" alt="img"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="apk">APK</h3>
+<p>A demo apk of the sample project can be downloaded <a href="https://github.com/fennifith/Attribouter/blob/main/../../releases/">here</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>This library is published on <a href="https://jitpack.io">JitPack</a>, which you can add to your project by copying the following to your root build.gradle at the end of &quot;repositories&quot;.</p>
+<pre class="language-gradle"><code class="language-gradle">allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+</code></pre>
+<p>To add the dependency, copy this line into your app module's build.gradle file.</p>
+<pre class="language-gradle"><code class="language-gradle">implementation 'me.jfenn:Attribouter:0.1.8'
+</code></pre>
+<h3 id="starting-an-activity">Starting an Activity</h3>
+<p>This is pretty simple.</p>
+<pre class="language-kotlin"><code class="language-kotlin">attribouterActivity <span class="token punctuation">{</span>
+    <span class="token function">withFile</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>xml<span class="token punctuation">.</span>attribouter<span class="token punctuation">)</span>
+    <span class="token function">withTheme</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>style<span class="token punctuation">.</span>AttribouterTheme_DayNight<span class="token punctuation">)</span>
+    <span class="token function">withGitHubToken</span><span class="token punctuation">(</span><span class="token string">"abc123"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<details>
+<summary>Java</summary>
+<div class="language-java highlighter-rouge">
+<pre><code>
+Attribouter.from(context)
+    .withFile(R.xml.attribouter)
+    .withTheme(R.style.AttribouterTheme_DayNight)
+    .withGitHubToken("abc123")
+    .show();
+</code></pre>
+</div>
+</details>
+<h3 id="creating-a-fragment">Creating a Fragment</h3>
+<p>This is also pretty simple.</p>
+<pre class="language-kotlin"><code class="language-kotlin"><span class="token keyword">val</span> fragment <span class="token operator">=</span> attribouterFragment <span class="token punctuation">{</span>
+    <span class="token function">withFile</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>xml<span class="token punctuation">.</span>attribouter<span class="token punctuation">)</span>
+    <span class="token function">withTheme</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>style<span class="token punctuation">.</span>AttribouterTheme_DayNight<span class="token punctuation">)</span>
+    <span class="token function">withGitHubToken</span><span class="token punctuation">(</span><span class="token string">"abc123"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<details>
+<summary>Java</summary>
+<div class="language-java highlighter-rouge">
+<pre><code>
+Attribouter.from(context)
+    .withFile(R.xml.attribouter)
+    .withTheme(R.style.AttribouterTheme_DayNight)
+    .withGitHubToken("abc123")
+    .show();
+</code></pre>
+</div>
+</details>
+<hr>
+<p><strong>When using the fragment</strong> with <code>R.style.AttribouterTheme_DayNight</code> (the default theme value), be sure that your activity also <a href="https://developer.android.com/guide/topics/ui/look-and-feel/darktheme">uses a dark theme</a> in the <code>-night</code> configuration, or you will have problems with text contrast (the fragment does not have a background, so the parent activity's window background will be drawn behind it). You can also call <code>withTheme(R.style.AttribouterTheme)</code> (light) or <code>withTheme(R.style.AttribouterTheme_Dark)</code> to change this behavior.</p>
+<h2 id="things-to-note">Things to Note</h2>
+<h3 id="request-limits">Request Limits</h3>
+<p>This library does not use an auth key for any REST APIs by default. It does cache data to avoid crossing GitHub's <a href="https://developer.github.com/v3/rate_limit/">rate limits</a>, but if your project has more than a few contributors and libraries <em>or</em> you want it to have access to a private repository, you will need to provide an auth token by calling <code>withGitHubToken(token)</code> on your instance of <code>Attribouter</code>. For GitLab/Gitea instances, tokens can be provided per-hostname - for example, <code>withToken(&quot;code.horrific.dev&quot;, token)</code>.</p>
+<p><em>Be careful not to include these token with your source code.</em> There are other methods of providing your token at build-time, such as using a <a href="https://developer.android.com/studio/build/gradle-tips#share-custom-fields-and-resource-values-with-your-app-code">BuildConfig field</a> with an environment variable, that can prevent this from being an issue. These tokens aren't especially dangerous without any scopes/permissions, but GitHub will automatically deactivate them if they show up in any commits/files on their services, which could cause problems for Attribouter.</p>
+<h3 id="configuration">Configuration</h3>
+<p>By default, Attribouter will use the configuration file at <a href="https://github.com/fennifith/Attribouter/blob/main/./attribouter/src/main/res/xml/attribouter.xml">res/xml/attribouter.xml</a>. You can either name your configuration file &quot;attribouter.xml&quot; to override the resource, or name it differently and call <code>withFile(R.xml.[name])</code> on your instance of <code>Attribouter</code> instead.</p>
+<p>The configuration file consists of a single root element, <code>&lt;about&gt;</code>, with many child elements that can be placed any amount of times in any order, the same as views in a layout file. These elements, called &quot;wedges&quot; in this library for no apparent reason, are created by Attribouter and added to the page in the order and hierarchy that they are defined in. To create your configuration file, you can either use the <a href="https://github.com/fennifith/Attribouter/blob/main/./app/src/main/res/xml/about.xml">file from the sample project</a> as a template or use <a href="https://jfenn.me/projects/attribouter/wiki">the documentation</a> to write your own.</p>
+<h3 id="proguard-%2F-minification">Proguard / Minification</h3>
+<p>For those using the R8 compiler, Attribouter's <a href="https://github.com/fennifith/Attribouter/blob/main/./attribouter/consumer-rules.pro">proguard rules</a> should be conveniently bundled with the library already - otherwise, you will need to add them to your app's <code>proguard-rules.pro</code> file yourself to prevent running into any issues with <code>minifyEnabled</code> and the like.</p>
+<p>Unfortunately, Attribouter still doesn't behave well with <code>shrinkResources</code>, as the compiler cannot detect references from Attribouter's config file and will exclude them from compilation. There is a <a href="https://developer.android.com/studio/build/shrink-code#shrink-resources">workaround</a> to this, however - create a <code>&lt;resources&gt;</code> tag somewhere in your project, and specify <code>tools:keep=&quot;@{resource}&quot;</code> for all of the strings and drawables referenced by your config file. For all of Attribouter's own resources, this has already been done - and if you are not referencing any other resources in your configuration, then there shouldn't be an issue.</p>
+<h2 id="used-in">Used in</h2>
+<ul>
+<li><a href="https://github.com/LawnchairLauncher/Lawnchair">Lawnchair Launcher</a></li>
+<li><a href="https://github.com/EtchDroid/EtchDroid">EtchDroid</a></li>
+<li><a href="https://github.com/fennifith/Status">Status</a></li>
+<li><a href="https://github.com/fennifith/Alarmio">Alarmio</a></li>
+</ul>
+<p>If you're using Attribouter in your project, feel free to reach out / make a PR to add it to this list!</p>
+<h2 id="how-to-contribute">How to Contribute</h2>
+<p>I try to maintain my libraries to meet the needs of all their users - so, to that extent, most contributions will be accepted so long as they represent some kind of functional improvement. I'd much prefer to work together and resolve an issue than turn any genuine effort away. To that end, <strong>if you need help with this process, have any questions or confusion, or want to get feedback before a contribution, please don't hesitate to get in touch.</strong> (either <a href="https://discord.jfenn.me">discord</a> or <a href="mailto:dev@jfenn.me">email</a> work fine)</p>
+<p>This repository has two persistent branches: <code>main</code> and <code>develop</code> - of the two, most pull requests should be made to the latter. <code>main</code> will always contain the source code of the current stable release, so any new changes should be merged into <code>develop</code> first. The exception to this is any changes to metadata: the README, documentation, code of conduct, etc. - since these don't affect the compiled program, it makes sense to merge these into <code>main</code> immediately, unless they are tied to a change in functionality (changes in a new version of the library, for example).</p>
+<h3 id="example-contributions">Example contributions</h3>
+<ul>
+<li><strong>Development:</strong> Developers can help Alarmio by fixing bugs, implementing features, or helping to debug &amp; research new issues. I'm hoping to write a complete guide to this process in the future - for now, please refer to <a href="https://github.com/fennifith/Attribouter/blob/main/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a>.</li>
+<li><strong>Design:</strong> Attribouter should be intuitive and accessible to a wide variety of users - suggestions to improve certain interfaces are always welcome. This includes compatibility with screen readers, problems with contrast / color blindness, and the sizing/positioning of touch targets in the UI - many of which are shamefully untested in its present state.</li>
+<li><strong>Localization:</strong> If Attribouter doesn't have support for your fluent language(s), please consider translating it! Most in-app text is stored in <a href="https://github.com/fennifith/Attribouter/blob/main/./attribouter/src/main/res/values/strings.xml">strings.xml</a> - this file should be copied to ../values-{lang}/strings.xml when translated. (this is an absurdly concise explanation - if this isn't clear, simply sending us translations in a new issue or email is perfectly fine!)</li>
+<li><strong>Documentation:</strong> Writing guides and explanations of how Attribouter works, how to use it, and how to contribute to it can go a long way to ensuring its usefulness and stability in the future. Whether this involves an update to the README, a tutorial for users and contributors, or adding Javadocs &amp; comments to undocumented parts of the codebase - anything is valid!</li>
+</ul>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Huge thanks to <a href="https://github.com/fennifith/Attribouter/graphs/contributors">everyone that's helped with this library</a>, directly or otherwise!</p>
+<p>Also, mega props to <a href="https://twitter.com/kevttob">Kevin Aguilar</a> and <a href="https://221pxls.com/">221 Pixels</a> for helping improve the library's design &amp; interface.</p>
+<h3 id="development">Development</h3>
+<ul>
+<li><a href="https://github.com/fennifith">@fennifith</a> (me)</li>
+<li><a href="https://github.com/rroyGit">@rroyGit</a></li>
+<li><a href="https://github.com/gcantoni">@gcantoni</a></li>
+<li><a href="https://github.com/divadsn">@divadsn</a></li>
+<li><a href="https://github.com/jahirfiquitiva">@jahirfiquitiva</a></li>
+</ul>
+<h3 id="design">Design</h3>
+<ul>
+<li><a href="https://twitter.com/221pxls">@221pxls</a></li>
+</ul>
+
+	</div>
+</div>
+
+	</div>
+</div>
+
+
+<footer class="footer">
+	<div class="container">
+		<a class="footer-link" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+		<a class="footer-link" href="/contact/">Contact Me</a>
+		<a class="footer-link" href="/policies/?web">Privacy Policy</a>
+	</div>
+</footer>
+
+
+</body>
+</html>
