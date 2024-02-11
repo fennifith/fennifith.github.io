@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<meta name="description" content="Considering alternatives to modern music distribution with small platforms and self-hosted sites!">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Self-Hosting Music Distribution | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link
+  rel="apple-touch-icon"
+  sizes="70x70"
+  href="/images/favicon-70.png">
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/images/favicon-144.png">
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/images/favicon-152.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/images/favicon-192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/images/favicon-32.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/images/favicon-96.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link
+  rel="preconnect"
+  href="//fonts.gstatic.com"
+  crossorigin>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Self-Hosting Music Distribution | James Fenn">
+<meta name="twitter:description" content="Considering alternatives to modern music distribution with small platforms and self-hosted sites!">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Self-Hosting Music Distribution | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2024-02-10-Self-Hosting-Music-Distribution/">
+<meta name="og:description" content="Considering alternatives to modern music distribution with small platforms and self-hosted sites!">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+</head>
+<body class="nav-container footer-container">
+	<script>
+  // handle dark mode toggle behavior
+  {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkStored = localStorage.getItem("darkMode");
+
+    const checked = isDarkStored
+      ? isDarkStored === "true"
+      : isDark;
+
+    document.documentElement.className = "--theme-" + (checked ? 'dark' : 'light');
+  }
+</script>
+
+
+	
+
+  <nav class="nav nav-bar">
+    <a class="nav-item" href="/" aria-label="Home">
+      
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+</svg>
+
+      <span class="nav-item-title">Home</span>
+    </a>
+    
+      
+      <a class="nav-item active" href="/blog/" aria-label="Blog">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z" />
+</svg>
+
+        <span class="nav-item-title">Blog</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/projects/" aria-label="Projects">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+	<path fill="none" d="M0 0h24v24H0V0z"/>
+	<path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+        <span class="nav-item-title">Projects</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/community/" aria-label="Community">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+</svg>
+
+        <span class="nav-item-title">Community</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/now/" aria-label="Now">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+</svg>
+
+        <span class="nav-item-title">Now</span>
+      </a>
+    
+  </nav>
+
+
+<section class="border-bottom py-4">
+  <div class="container">
+    <h1 class="mb-0">Self-Hosting Music Distribution</h1>
+    <p class="text-meta text-tertiary-3 mb-3">
+      <a class="p-author h-card" href="">James Fenn</a>
+      |
+      <a class="u-url" href="">
+        <time class="dt-published" datetime="2024-02-10">February 10, 2024</time>
+      </a>
+    </p>
+
+    
+  </div>
+</section>
+
+<article class="container mt-3 mb-5">
+  <div class="row">
+    
+
+    
+      <div class="col-12 col-md-4 col-xl-3 order-md-last my-4">
+        <div class="card" style="position: sticky; top: 1rem; height: fit-content;">
+          <span class="card-title">Contents</span>
+          <div class="card-body">
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#ease-of-use">Ease of use</a>
+            
+                <ol>
+                    
+                    <li><a href="#rainfall.dev">Rainfall.dev</a>
+            		</li>
+
+                    <li><a href="#community-platforms">Community platforms</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#discoverability">Discoverability</a>
+            
+                <ol>
+                    
+                    <li><a href="#radio-free-fedi">Radio Free Fedi</a>
+            		</li>
+
+                    <li><a href="#faircamp-webring">Faircamp Webring</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#unlimited-streaming">Unlimited streaming</a>
+            		</li>
+
+                    <li><a href="#paywalls">Paywalls</a>
+            		</li>
+
+                    <li><a href="#conclusion">Conclusion</a>
+            		</li>
+                </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="col col-12 col-md-8 col-xl-9 text">
+      <p>Recently, I've become interested in a number of projects seeking to create an alternative to modern music distribution and streaming platforms. I'm using <a href="https://simonrepp.com/faircamp/">Faircamp</a> to generate <a href="https://music.jfenn.me">my own music site</a>, and there are plenty more about: <a href="https://mirlo.space">mirlo.space</a>, <a href="https://jam.coop">jam.coop</a>, <a href="https://patrontape.com">patrontape</a>, <a href="https://ampwall.com">Ampwall</a>, <a href="https://minm.co/about">minm</a>, <a href="https://resonate.coop">resonate.coop</a>, to name a few.</p>
+<p>While most options on this list are centralized platforms, Faircamp is notably unique - as a static site generator that musicians are meant to host for themselves.</p>
+<p>This approach presents a number of benefits! Being able to literally own and edit your entire platform as a musician is understandably considered a huge advantage by many of its users.</p>
+<p>Considering recent developments such as <a href="https://www.theguardian.com/music/2023/oct/17/bandcamp-lays-off-half-its-staff-after-buyout-by-songtradr">Bandcamp getting acquired by Songtradr and laying off half its staff</a> and <a href="https://www.theverge.com/2023/10/25/23932312/spotify-royalties-swift-deezer-universal-white-noise">Spotify enforcing a minimum threshold before artists can earn royalties</a>, it makes sense why this would be important to a lot of people - especially smaller creators.</p>
+<p>However, both self-hosted music distribution and these new smaller platforms have a number of challenges compared to large streaming services:</p>
+<ul>
+<li>
+<p><strong>Ease of use:</strong> Musicians who are not tech-savvy will have a harder time using faircamp or configuring their own hosting.</p>
+</li>
+<li>
+<p><strong>Discoverability:</strong> These sites need manual exposure for anyone to find them - there is no &quot;recommendation algorithm&quot; for independently hosted music.</p>
+</li>
+<li>
+<p><strong>Social interaction:</strong> As a listener - creating playlists, leaving reviews, and interacting with other social features are important parts of larger streaming platforms that are either not present or not portable between sites.</p>
+</li>
+<li>
+<p><strong>Unlimited streaming:</strong> Many listeners find the streaming subscription model invaluable for the convenience of not having to download their entire music library, and being able to seamlessly switch devices on the go.</p>
+</li>
+<li>
+<p><strong>Paywalls:</strong> Faircamp does not currently support hard paywalls, likely because of limitations from being a static site.</p>
+</li>
+</ul>
+<p>In the remainder of this post, I'm hoping to present or possible future solutions to these issues, and some ideas that I've assembled about them.</p>
+<h2 id="ease-of-use">Ease of use</h2>
+<blockquote>
+<p>Musicians who are not tech-savvy will have a harder time using faircamp or configuring their own hosting.</p>
+</blockquote>
+<p>At present, most of the faircamp users I can find are also some form of software developer or otherwise tech-savvy individal. This is encouraged by the fact that faircamp itself <a href="https://simonrepp.com/faircamp/manual/">is a command-line tool</a>.</p>
+<p>For the majority of musicians that <em>don't</em> work with complex software as their daily job, the process of setting up their site - writing &quot;.eno&quot; configuration files, finding a hosting provider, setting up their own domain / DNS records, and so on - could be quite overwhelming.</p>
+<p>While it might seem appealing for self-hosting to be the ideal solution, it still remains a luxury option for those with enough time and technical knowledge to configure all of the pieces involved.</p>
+<h3 id="rainfall.dev">Rainfall.dev</h3>
+<p>Travis Briggs (<a href="https://sfba.social/@audiodude">@audiodude@sfba.social</a>) has developed a pretty awesome solution to this: <a href="https://rainfall.dev">rainfall.dev</a> - a frontend UI for faircamp!</p>
+<p>Rainfall allows users to upload their music files and edit details through a website, which then sends their input to a server to generate a faircamp site. Travis also has plans to integrate with <a href="https://www.netlify.com">Netlify</a> to provide a one-click deployment with their hosting service.</p>
+<p>This is a huge advantage for artists that can't use the faircamp CLI! While it doesn't support every available config option in faircamp (yet), it still provides the same functionality and makes it very easy to use.</p>
+<h3 id="community-platforms">Community platforms</h3>
+<p>As these individual sites scale, though, they could face a variety of other challenges - including bandwidth limitations and certain legal requirements that the majority of artists are just not equipped to handle.</p>
+<p>At the same time, the centralized platforms present different issues - stability and longevity being a key concern - and the site itself needs some way to offset the costs of its maintenance, moderation, and labor.</p>
+<p>Aside from constructing one centralized platform or requiring many self-hosted sites, it occurs to me that facilitating medium-sized community sites might be a better solution. Your local artist group or music label could maintain their own platform, dedicating one person with the technical know-how to run the site, and allow less technical artists to upload their work without being concerned with the administrative details.</p>
+<p>In addition, supporting a smaller group of artists reduces the need that larger platforms would have for moderation - since you can establish more trust that members won't violate your rules or otherwise place the site at risk.</p>
+<h2 id="discoverability">Discoverability</h2>
+<blockquote>
+<p>These sites need manual exposure for anyone to find them - there is no &quot;recommendation algorithm&quot; for independently hosted music.</p>
+</blockquote>
+<p>From a listener's perspective, coming across new music on these self-hosted sites requires a lot of intentional exposure and interaction. You need to literally find music being written about in a blog post or shared on social media and then make a choice to listen to it. There is no &quot;autoplay&quot; or &quot;home feed&quot; equivalent to surface new music you might like.</p>
+<h3 id="radio-free-fedi">Radio Free Fedi</h3>
+<p>As much as this is a clear downside, it has also led to some benefits for artists that have embraced the idea of more &quot;organic&quot; discovery. <a href="https://radiofreefedi.net">Radio Free Fedi</a> (RFF) is one example of this - a community radio that plays tracks submitted from independent musicians with the aim of surfacing and promoting their work.</p>
+<p>According to the site's maintainer, despite the immense amount of work that goes into curation and maintenance, it has allowed for a healthier, less competitive, and more supportive social experience for artists.</p>
+<iframe src="https://musician.social/@radiofreefedi/111853482016407179/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" height="515" allowfullscreen="allowfullscreen"></iframe>
+<p>RFF currently has a <a href="https://blog.radiofreefedi.net/rff-2024-staff-and-focus-fund">fundraiser to maintain their services through 2024</a>.</p>
+<h3 id="faircamp-webring">Faircamp Webring</h3>
+<p>Likewise, a few artists using faircamp have set up various community-sharing tools to make everyone's sites easier to browse. <a href="https://mastodon.online/@keefmarshall">@keefmarshall@mastodon.online</a> created a <a href="https://faircamp.webr.ing">Faircamp Webring</a>, which can be browsed using the &quot;previous&quot; and &quot;next&quot; links on any participating site.</p>
+<p><a href="https://spacey.space/@yonder">@yonder@spacey.space</a> also has a <a href="https://reverb10000.com/aggregator.html">feed aggregator</a> that shows the latest releases from a bunch of musicians!</p>
+<p>While not directly related, there's also <a href="https://fedivision.party">Fedivision</a> - which is an annual contest for musicians on the fediverse.</p>
+<p>One of the reasons I highlight these projects is because they all represent intentional collaboration between artists - not just an automated &quot;upload&quot; button with no interaction. This both requires and facilitates networking between artists in a way that larger streaming sites and music distributors have not been able to fulfill.</p>
+<h2 id="unlimited-streaming">Unlimited streaming</h2>
+<blockquote>
+<p>As a listener - creating playlists, leaving reviews, and interacting with other social features are important parts of larger streaming platforms that are either not present or not portable between sites.</p>
+<p>Additionally, many listeners find the streaming subscription model invaluable for the convenience of not having to download their entire music library, and being able to seamlessly switch devices on the go.</p>
+</blockquote>
+<p>While it is enticing for users, providing unlimited streaming on a self-hosted site at the scale of Spotify or Soundcloud is not remotely profitable for artists - who now handle their own hosting and bandwidth costs on top of everything else.</p>
+<p>Some hosting providers have enticing low-cost plans for small/indie sites, but these have their limits: as of Feb. 2024, both <a href="https://vercel.com/pricing">Vercel</a> and <a href="https://www.netlify.com/pricing/">Netlify</a> have a 100GB bandwidth limit on their free plans. This (from a very rough estimate) limits you to around 2000 total streaming hours until your site stops working. For <em>one-time downloads</em> this could be more than enough, but on-demand streaming could easily exceed that!</p>
+<p>Considering the costs of hosting, cloud storage, and content delivery services needed for a larger site - without seeing reliable continued revenue, this would not be sustainable at scale.</p>
+<p>Another part of the issue is that - even if individual sites were able to implement a subscription model - it would not provide sufficient value to its users without encompassing a significant portion of the media they want to consume. It's a lot easier for users to think of a single subscription as their part in giving all artists a fair deal - without having to consider the specifics of who and what they're paying. Needing to break out of that for specific artists that aren't on their platform would be missing the point.</p>
+<p>Overall, I can see that some form of aggregated streaming service could make these sites a lot easier to use. However, I'm less convinced that &quot;ease of use&quot; is even the best measurement here - even if it's less streamlined, users might <em>prefer</em> the intentional decision to support an artist over the immediate mass consumption pushed by other platforms.</p>
+<p>This is a significant part of Bandcamp's design, which directs its users to <em>download</em> the tracks they purchase - while they do support streaming and playlists from their app, it clearly isn't an integral part of the platform.</p>
+<h2 id="paywalls">Paywalls</h2>
+<blockquote>
+<p>Faircamp does not currently support hard paywalls, likely because of limitations from being a static site.</p>
+<p>Doing so would require integration with a payment processor, and keeping track of each purchase would involve authentication - which is not ideal if every artist site is its own platform.</p>
+</blockquote>
+<p>This will be a short section - because the majority of opinions I've read from artists is that they <em>don't really mind</em> if someone doesn't pay for their music. In fact, many see the lack of a hard paywall as a feature!</p>
+<p>These creators do not want their work locked behind a paywall to be exclusively available to those who can afford it - rather, they share the belief that people in financial hardship <em>also</em> deserve the enjoyment of art.</p>
+<p>I have occasionally seen some strong opposition to these takes - and I think it should inevitably be up to the artist how to distribute their own work; that's the point of self-hosting in the first place! However, when it presents a significant technical hurdle to develop, and the desire for it from artists is unclear, I think it's okay that some projects are built without hard paywalls in mind. There are other options that can do this better - such as the massive amount of e-commerce site builders available!</p>
+<p>Of note, Bandcamp also doesn't provide a full solution to this - as seen in their help center: <a href="https://get.bandcamp.help/hc/en-us/articles/360007902173-I-heard-you-can-steal-music-on-Bandcamp-What-are-you-doing-about-this">&quot;I heard you can steal music on Bandcamp&quot;</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Throughout this post, I've touched on the idea that multiple interoperable community platforms could be a promising solution.</p>
+<p>I think that finding a method of interacting between sites and aggregating content is an important next step - which could allow for further development of unique platforms without inhibiting their growth. RSS feeds are a great start here, but don't have a good way to provide more specific information about a release.</p>
+<p>For one specific example - it might be worth considering the use of <a href="https://json-ld.org">JSON Linked Data</a> (JSON-LD), such as the schema.org <a href="https://schema.org/MusicRecording">MusicRecording</a> type, to provide metadata and possibly even audio URLs for an artist's content. Notably, Google Search encourages <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">providing structured data in HTML markup</a> - so this is an established approach.</p>
+<p>I also think it's important to consider <em>data portability</em> between these platforms as they develop. Mastodon is one of the only significant social platforms I can think of to feature both a full account export and import tool - which could make it a lot easier for artists to try out and switch between the different options. ID3 and Vorbis comment metadata is a great way to start, but have similar difficulties with more specific information such as release descriptions or collaborating artists.</p>
+<p>To provide some context for all this rambling: I'm at the very beginnings of starting my own addition to these self-hosting options - <a href="https://gitlab.com/audiopage">audiopage</a>! I'm expecting its first version to be very similar to rainfall.dev, although I'll be taking a different approach from faircamp when it comes to the listener-facing site.</p>
+<p>I've already been <a href="https://is.a.horrific.dev/@fennifith/111853230144348540">collecting a bit of feedback</a> on this topic - but I'd love to hear more thoughts on this, from both listeners and musicians, if you're interested in where this is going!</p>
+
+    </div>
+  </div>
+</article>
+
+
+
+<footer class="footer bg-primary mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 col-md-3 mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Links</h1>
+        <a class="footer-link text-on-primary" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+        <a class="footer-link text-on-primary" href="/contact/">Contact Me</a>
+        <a class="footer-link text-on-primary" href="/policies/?web">Privacy Policy</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Community</h1>
+        <a class="footer-link text-on-primary" href="https://unicorn-utterances.com">Unicorn Utterances</a>
+        <a class="footer-link text-on-primary" href="https://horrific.dev">Horrific.Dev</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Elsewhere</h1>
+
+        
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitter.com/fennifith">Twitter</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://is.a.horrific.dev/@fennifith">Fediverse</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://www.linkedin.com/in/james-fenn-3390b8167/">Linkedin</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitch.tv/fennifith">Twitch</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://fennifith.bandcamp.com">Bandcamp</a>
+        
+      </div>
+      <div class="col col-12 col-md-3 pt-5">
+        <div class="d-flex">
+          <a
+            class="link text-on-primary"
+            href="https://code.horrific.dev/james/jfenn.me"
+            aria-label="Source Code">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+</svg>
+
+          </a>
+          <a
+            class="link text-on-primary"
+            href="https://discord.jfenn.me"
+            aria-label="Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 15 180 210" height="24" width="24" class="">
+	<path fill="currentColor" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+	<path fill="currentColor" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+</svg>
+
+          </a>
+        </div>
+
+        <div class="d-flex mt-3" hidden>
+          <input
+            id="darkMode"
+            type="checkbox"
+            name="darkMode"
+            onchange="document.documentElement.className = `--theme-${this.checked ? 'dark' : 'light'}`; localStorage.setItem('darkMode', this.checked)">
+          <label for="darkMode" class="text-on-primary text-on-primary-all">Dark Mode</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+	<script async type="text/javascript" src="/js/init.js"></script>
+</body>
+</html>

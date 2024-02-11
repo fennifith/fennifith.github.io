@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<meta name="description" content="Explaining what the fediverse is, how to join it, and why.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Federated Social Networks | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link
+  rel="apple-touch-icon"
+  sizes="70x70"
+  href="/images/favicon-70.png">
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/images/favicon-144.png">
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/images/favicon-152.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/images/favicon-192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/images/favicon-32.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/images/favicon-96.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link
+  rel="preconnect"
+  href="//fonts.gstatic.com"
+  crossorigin>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Federated Social Networks | James Fenn">
+<meta name="twitter:description" content="Explaining what the fediverse is, how to join it, and why.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Federated Social Networks | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/">
+<meta name="og:description" content="Explaining what the fediverse is, how to join it, and why.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+</head>
+<body class="nav-container footer-container">
+	<script>
+  // handle dark mode toggle behavior
+  {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkStored = localStorage.getItem("darkMode");
+
+    const checked = isDarkStored
+      ? isDarkStored === "true"
+      : isDark;
+
+    document.documentElement.className = "--theme-" + (checked ? 'dark' : 'light');
+  }
+</script>
+
+
+	
+
+  <nav class="nav nav-bar">
+    <a class="nav-item" href="/" aria-label="Home">
+      
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+</svg>
+
+      <span class="nav-item-title">Home</span>
+    </a>
+    
+      
+      <a class="nav-item active" href="/blog/" aria-label="Blog">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z" />
+</svg>
+
+        <span class="nav-item-title">Blog</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/projects/" aria-label="Projects">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+	<path fill="none" d="M0 0h24v24H0V0z"/>
+	<path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+        <span class="nav-item-title">Projects</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/community/" aria-label="Community">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+</svg>
+
+        <span class="nav-item-title">Community</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/now/" aria-label="Now">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+</svg>
+
+        <span class="nav-item-title">Now</span>
+      </a>
+    
+  </nav>
+
+
+<section class="border-bottom py-4">
+  <div class="container">
+    <h1 class="mb-0">Federated Social Networks</h1>
+    <p class="text-meta text-tertiary-3 mb-3">
+      <a class="p-author h-card" href="">James Fenn</a>
+      |
+      <a class="u-url" href="">
+        <time class="dt-published" datetime="2019-12-15">December 15, 2019</time>
+      </a>
+    </p>
+
+    
+      <a class="link link-chip mb-2" href="https://runyourown.social/">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">runyourown.social</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://fediverse.party/en/fediverse/">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">fediverse.party</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://vimeo.com/354276253">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">"Trust is not Harmful" - Darius Kazemi</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://wilkie.how/posts/social-archival">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">"Social Archival" - wilkie</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://en.wikipedia.org/wiki/Fediverse">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">Wikipedia: Fediverse</span>
+      </a>
+    
+  </div>
+</section>
+
+<article class="container mt-3 mb-5">
+  <div class="row">
+    
+
+    
+      <div class="col-12 col-md-4 col-xl-3 order-md-last my-4">
+        <div class="card" style="position: sticky; top: 1rem; height: fit-content;">
+          <span class="card-title">Contents</span>
+          <div class="card-body">
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#technicalities">Technicalities</a>
+            
+                <ol>
+                    
+                    <li><a href="#servers%2C-networks%2C-protocols">Servers, Networks, Protocols</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#distributed-vs.-decentralized">Distributed vs. Decentralized</a>
+            		</li>
+
+                    <li><a href="#deplatforming-and-free-speech">Deplatforming and Free Speech</a>
+            
+                <ol>
+                    
+                    <li><a href="#broken-federation-is-okay">Broken Federation is Okay</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#in-conclusion">In Conclusion</a>
+            
+                <ol>
+                    
+                    <li><a href="#it-isn't-perfect%2C-but...">It isn't perfect, but...</a>
+            		</li>
+
+                    <li><a href="#join-the-fediverse!">Join the Fediverse!</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="col col-12 col-md-8 col-xl-9 text">
+      <p><span class="text-large">The Fediverse</span> is best explained as an
+interconnected web of services that communicate with each other with a shared
+protocol. Imagine that you had an account on one social website from which you
+could send, receive, and reply to posts from people that use different websites
+with a different interface and behavior. This is a vague explanation of how
+federation works that skips over a lot of the technical details, but think of
+replying to a blog post from your Instagram account, or seeing your friends'
+Facebook posts in your Twitter feed.</p>
+<p>This interoperability of common actions such as &quot;likes&quot;, &quot;replies&quot;, and
+&quot;follows&quot; is what unifies the majority of federated social networks; nobody
+loses access to friends or connections because they use a different website. The
+communication protocols used by these servers implement
+<a href="https://en.wikipedia.org/wiki/Open_standard">open standards</a>, which means that
+they can be freely adopted, implemented, and extended by everyone. In effect,
+anyone can create and own a fediverse server with the ability to interact with
+virtually any other server using this protocol.</p>
+<h2 id="technicalities">Technicalities</h2>
+<p>Because of the &quot;open&quot; nature of the fediverse, nearly all networks are developed
+by a community of people independent from any corporation or official
+institution. Most software related to the fediverse is open source, so anyone
+can participate in their growth and development. What is important to note,
+though, is that the fediverse isn't one singular thing. It consists of a huge
+amount of different projects, groups, discussions, and ideas.</p>
+<h3 id="servers%2C-networks%2C-protocols">Servers, Networks, Protocols</h3>
+<p>Fediverse servers, or &quot;instances&quot;, are the smallest part of the fediverse, and
+what you'll see the most of. Because the majority of the fediverse is open
+source, anyone can create their own server by just choosing a domain and paying
+for hosting. Some people make their servers publicly available for anyone to
+use, others only allow access for a small group, and some individuals have one
+just for themselves. A list of some of the public servers you can join can be
+found at <a href="https://the-federation.info/">the-federation.info</a>; some notable ones
+being <a href="https://mastodon.technology/">mastodon.technology</a>,
+<a href="https://digipres.club/">digipres.club</a>, <a href="https://cybre.space/">cybre.space</a>,
+<a href="https://witches.live/">witches.live</a>, and <a href="https://toot.cat/">toot.cat</a>.</p>
+<p>Most of these federated servers can be categorized by the software that they
+use. While they all accomplish the same goal of <em>being a social network</em>, there
+are many different interfaces or implementations of the federated protocols that
+various people have written. Some of the more popular examples include
+<a href="https://joinmastodon.org/">Mastodon</a>, <a href="https://pleroma.social/">Pleroma</a>,
+<a href="https://friendi.ca/">Friendica</a>, <a href="https://pixelfed.org/">Pixelfed</a>,
+<a href="https://write.as/">write.as</a>, and <a href="https://socialhome.network/">Socialhome</a>.</p>
+<p>Protocols are the communication standards that these federated servers can use
+to communicate with each other. The dominant protocol is currently
+<a href="https://activitypub.rocks/">ActivityPub</a>, but
+<a href="https://www.w3.org/community/ostatus/">OStatus</a> and
+<a href="https://github.com/friendica/friendica/wiki/Protocol">DFRN</a> do exist as well.
+To provide features that aren't a part of the protocol, certain networks can
+deviate from the protocol(s) they support to provide endpoints and functionality
+that other software won't know how to use. For example, one fictional project
+called &quot;Hands&quot; could provide a &quot;poke&quot; button to send useless notifications to
+people. As far as I know, the ActivityPub protocol doesn't specify a &quot;poke&quot;
+button, so users would only be able to poke people on the &quot;Hands&quot; network
+(someone on a Mastodon server would be out of reach). This is somewhat rare,
+though, as even in cases where some functionality might not translate to other
+software as effectively, most developers do their best to maintain compatibility
+with the rest of the fediverse.</p>
+<h2 id="distributed-vs.-decentralized">Distributed vs. Decentralized</h2>
+<p><img src="/images/blogs/Centralised-decentralised-distributed.png" alt="A diagram illustrating the differences between a decentralized and distributed network.">
+<em>Image: <a href="https://commons.wikimedia.org/wiki/File:Decentralization_diagram.svg">https://commons.wikimedia.org/wiki/File:Decentralization_diagram.svg</a></em></p>
+<p>One notable point about the fediverse's construction is that it does not create
+a <em>completely</em> decentralized social media - it's still subject to some of the
+same issues and caveats of some centralized services, but it caters to a lot of
+the concerns that someone looking for a decentralized service might have. To
+quote <a href="https://twitter.com/mccrmx/status/1188642269131264000">Chris McCormick</a>,
+&quot;decentralization is a means to an end, not an end in itself.&quot;</p>
+<blockquote>
+<p>distributed: when separate systems coordinate. placement of authority is a
+differentiating factor of their design.</p>
+<p>decentralized: distributed system that can elect to defer or migrate central
+authority. mutable actions may be negotiated.</p>
+<p>federated: distributed system that has nomadic and often competitive
+authorities. actors negotiate their own activity at any point.</p>
+<p>- <a href="https://mastodon.social/@wilkie">@wilkie@mastodon.social</a></p>
+</blockquote>
+<p>One of the heaviest criticisms of this model is that, instead of trusting a
+known mega-company like Facebook or Twitter to facilitate your online identity,
+you now rely on a random stranger to keep their server running and appropriately
+moderate their instance. This brings me to two points:</p>
+<h4 id="1.-the-owner-of-your-instance-is-not-supposed-to-be-a-stranger.">1. The owner of your instance is not <em>supposed</em> to be a stranger.</h4>
+<p>This obviously differs depending on which social groups you are a part of, and
+some of the larger public instances definitely stray from this condition, but
+(in my opinion) the advantages of federated networks are much more effective
+when those networks are kept relatively small. Imagine a private instance for a
+specific neighborhood or a hobby organization - or just a random group of
+friends.</p>
+<p><a href="https://tinysubversions.com/">Darius Kazemi</a> gave a talk back in August titled
+<a href="https://vimeo.com/354276253">&quot;Trust is Not Harmful&quot;</a>, in which they describe a
+lot of their experiences and motivations for creating
+<a href="https://friend.camp/">friend.camp</a>, a small Mastodon instance for a bunch of
+their friends to explore the advantages that decentralized social media can
+offer. This presents a few different ideas about how this technology can be
+used - notably, the software can be customized to fit the needs of its specific
+users (for example, <a href="https://dolphin.town/about/more">dolphin.town</a>), and the
+owners/users of the instance can more effectively exchange trust with each
+other.</p>
+<p>I'll come back to that first idea later on, but the latter brings up an
+important distinction: smaller groups are much easier to moderate. In a social
+network, it's far easier to split up the governance and rules of &quot;what you're
+allowed to say on the internet&quot; between various groups, because not all groups
+have the same social guidelines of what they deem to be acceptable in their
+community. A lot of what you <em>should</em> say depends on who you're talking to -
+it's not necessarily wrong to discuss your hobby of combining peanut butter and
+celery, but you might get a few strange looks if you bring it up obsessively in
+your local book readers' club. If you aim to disrupt reading time with your
+vegetable preachings, the threat of being removed from the club will probably
+keep you in line. Quoting Darius, &quot;decentralized networks map somewhat cleanly
+onto real human networks, and it's the social relations and the trust built into
+them that hold the key to building something valuable.&quot;</p>
+<p>Another point that is brought up is that it's far easier to moderate a smaller
+community when you actually know every person in the network and are able to sit
+down and talk to them - and this brings benefits for the users of that network
+as well. Rather than waiting for an overworked moderation team or trusting an
+obscure automated program to review a post, you actually know the specific
+person to get in contact with if something goes wrong - and unlike the CEO of
+Twitter, they actually have the time to respond to each of their users.</p>
+<h4 id="2.-even-a-stranger-might-be-more-trustworthy-than-the-social-media-companies-we-know.">2. <em>Even a stranger</em> might be more trustworthy than the social media companies we know.</h4>
+<p>I mentioned an exemption to the condition of a federated instance owner being a
+stranger in the case of many of the large public networks that exist, and a lot
+of people question what the difference between a huge instance like
+<a href="https://mastodon.social/">mastodon.social</a> and any centralized network like
+Twitter would be. For this, I have to point to some of the ideals of the
+Mastodon community and a lot of their users' reasons for moving away from these
+larger services in the first place.</p>
+<p>The first reason is that companies like Twitter have a fundamental need to
+profit from their users. A good portion of the fediverse is funded almost
+entirely from community donations and the generosity of their creators, so they
+don't <em>need</em> to resort to some of the larger platforms' methods of large-scale
+advertising and data hoarding in order to break even. So even if you have to
+trust a stranger on the fediverse, a lot of the users there think it's better to
+trust someone you don't really know than rely on a company that's exploiting
+your online presence to make a profit. Sam the sandwich man might have a strange
+moustache, but at least he isn't going to capitalize on my human need for social
+interaction.</p>
+<p>Another reason is its approach to an online presence - particularly, how it
+handles privacy and the
+<a href="https://en.wikipedia.org/wiki/Right_to_be_forgotten">&quot;Right to be Forgotten&quot;</a>.
+A lot of the fediverse has a fairly strong opposition to the archival or
+indexing of their posts/profiles, and many subscribe to the idea that their
+content should be something that eventually disappears. This is also reflected
+in their approach to implementing a search box: &quot;Lack of full-text search on
+general content is intentional, due to negative social dynamics of it in other
+networks&quot; - <a href="https://mastodon.social/@Gargron/4947733">@Gargron@mastodon.social</a>.
+Some of the potential reasons for supporting this viewpoint are made pretty
+clear in wilkie's post about
+<a href="https://wilkie.how/posts/social-archival">Social Archival</a>; that, even if some
+content might be public, it doesn't necessarily mean the authors have given
+consent for anyone to do whatever they want with it.</p>
+<p>Finally, perhaps the most practical reason that the fediverse can be useful is
+because of its software. Mastodon and Pixelfed are well known for maintaining
+accessibility standards; both have supported image captions for a long time, and
+their developers put a great deal of effort into designing an interface that can
+be used by everyone. It doesn't end there, though - tying this back to the first
+idea from Darius Kazemi's talk, I have to emphasize that
+<em>nearly all of this software is open source.</em> This means that, if you're hosting
+your own instance for a group or community, <em>you can change how it works.</em> This
+is a benefit of open source that I deeply appreciate: the ability to create
+functionality for a small group or even a single
+person that just wouldn't make sense for anyone else. Do you want to make the
+&quot;reply&quot; button lock you out of the interface for 15 minutes so that you can
+really think about what you want to say? Remove all of your notifications in
+place of a daily email digest to cut down on anxiety? Go ahead! Noone can stop
+you. Just remember to use your newfound powers for good.</p>
+<h2 id="deplatforming-and-free-speech">Deplatforming and Free Speech</h2>
+<p>Because fediverse instances are managed individually, moderation is largely left
+to the owner of the server you're using or interacting with. When you use
+someone's network, the owner is granting you access to share your thoughts
+through their server - it isn't an inherent right, and it can be taken away.
+However, this largely depends on the views of the owner, and most will try to
+contact users to come to an agreement before enforcing an outright ban.</p>
+<p><a href="https://xkcd.com/1357/">XKCD: #1357</a></p>
+<p>This is a very political topic but, in my experience, arguments for free speech
+on social networks are generally not really arguing for &quot;free speech&quot; as the term
+is defined. They're arguing to restrict
+the power of people who own social instances to control the content that their
+network shares and promotes. When you join a fediverse instance - or rather, any
+social network - you submit yourself to the governance of its owner to make
+the moderation decisions of whose content you can see and which instances you
+interact with. It's okay for
+people to share their opinions, but it's also well within the right of a social
+community to refuse to accept them. Disallowing this would mean creating a
+social network without a &quot;block&quot; button - it would mean creating a law to
+prevent people from covering their ears while you scream about conspiracy
+theories over corn subsidies.</p>
+<blockquote>
+<p>FLOSS levels the “free speech” playing field because the code - speech - can
+be modified and redistributed freely with no special benefits or harms for the
+originating developer nor for the forking developer. In this context, the
+cries of “violating free speech” are laughably lazy; an unhappy user can fork
+it and have their speech - code - compete fairly. It isn’t censorship of the
+user, because once more the user - who has developer-like capabilities in the
+FLOSS world - can fork and compete on a level playing field.</p>
+<p>- @cj@mastodon.technology, <a href="https://cjslep.com/c/blog/on-tusky-rickrolling">cjslep.com</a></p>
+</blockquote>
+<p>This point is relevant because of issues that much of the fediverse community
+had with <a href="https://en.wikipedia.org/wiki/Gab_(social_network)">Gab</a> creating
+their own Mastodon instance and beginning to federate with other servers. I
+won't go over all of the controversy, but the gist is that many Mastodon
+instances and other developers refused to federate with Gab because of their
+political association, sparking massive backlash from Gab's community
+complaining that Mastodon was
+<a href="https://en.wikipedia.org/wiki/Deplatforming">&quot;Deplatforming&quot;</a> them and
+&quot;infringing on their rights&quot;. Most of these arguments were based
+on the idea that the Mastodon project
+<a href="https://blog.joinmastodon.org/2019/07/statement-on-gabs-fork-of-mastodon/">shouldn't be able to assert their political standing</a>,
+and that social networks are some kind of public-domain service that everyone
+deserves an equal share in. To people that think this: your right to
+free speech is not a right to free audience. You can decide what comes out of your
+mouth, and I can choose whether or not to listen to it. Being banned from one
+social network doesn't tape your mouth shut, won't prevent you from using
+the internet, and certainly isn't a human rights violation. But I digress...</p>
+<h3 id="broken-federation-is-okay">Broken Federation is Okay</h3>
+<p>One of the reasons that some people argue against federated social networks is
+that this federation can be broken by instance-level blocks like those which
+have been implemented for Gab. An issue that John Henry
+<a href="https://hackernoon.com/mastodon-is-dead-in-the-water-888c10e8abb1">points out</a>
+is that the federated model implicitly couples moderation with a user's
+identity. If another network is deemed inappropriate by your federated instance,
+then no interactions with users on that network will be visible to you unless
+you specifically follow them. However, as Robert Sharp explains, this problem
+doesn't have to be as big as it seems.</p>
+<blockquote>
+<p>In the case of Mastodon, the limits of the federation model might be a
+strength. A semi-permeable social network, which restricts access to certain
+instances, might be perfect for children and schools, for example. And of
+course there will be iterations to the software that improve on the current
+solution and perhaps give more control to individual users.</p>
+<p>- Robert Sharp, <a href="https://www.robertsharp.co.uk/2017/04/06/free-speech-identity-and-mastodon/">robertsharp.co.uk</a></p>
+</blockquote>
+<p>Yes, if you join a social network, you're subject to the views and judgement of
+its owner - but that's nothing new. Twitter, YouTube, and almost all social
+websites in existence all have their own terms of use and moderation teams that
+review what you say. Nobody should be in charge of moderating their own posts,
+and treating all people differently in a federated model would create far too
+much work for the network's moderators. A fully distributed social network is
+unrealistic, and centralized networks give too much trust to a single party -
+I restate: federation is a compromise, not an ideal.</p>
+<h2 id="in-conclusion">In Conclusion</h2>
+<h3 id="it-isn't-perfect%2C-but...">It isn't perfect, but...</h3>
+<p>I believe I've hinted at this point a few times throughout this post:
+<em>decentralization is not a universal solution to all problems on the web.</em>
+There might be some nice aspects that it provides, but just as the freedom to do
+as you want can be a feature, a lack of governance and regulation can be a
+problem too. The fediverse is a nice halfway mark between a centralized and
+distributed service that gives you the freedom of federation with the
+practicality of a centralized site, but there are obvious problems with giving
+everyone free self-hosted software for them to do whatever they want with (Gab
+being a prime example of this, in its use to facilitate misinformation and hate
+speech).</p>
+<p>Of course, decentralization has its good sides - creating tools to
+overcome actual censorship by an oppressive government, for example - but it is
+important to acknowledge that it has negative aspects as well. Luckily, most
+developers in the fediverse seem to understand this, and put a lot of care into
+creating systems that can empower their users to regulate these behaviors as
+much as they facilitate them.</p>
+<h3 id="join-the-fediverse!">Join the Fediverse!</h3>
+<p>I didn't realize it when I started writing this, but a lot of the summarized information
+I wanted to provide in this post already exists over at
+<a href="https://runyourown.social/">runyourown.social</a> - so if this has gotten you
+interested in joining or creating a federated social network, I highly recommend
+checking that site out. <a href="https://fediverse.party/en/fediverse/">fediverse.party</a>
+also contains a bunch more useful resources and information about these projects.</p>
+
+    </div>
+  </div>
+</article>
+
+
+
+<footer class="footer bg-primary mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 col-md-3 mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Links</h1>
+        <a class="footer-link text-on-primary" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+        <a class="footer-link text-on-primary" href="/contact/">Contact Me</a>
+        <a class="footer-link text-on-primary" href="/policies/?web">Privacy Policy</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Community</h1>
+        <a class="footer-link text-on-primary" href="https://unicorn-utterances.com">Unicorn Utterances</a>
+        <a class="footer-link text-on-primary" href="https://horrific.dev">Horrific.Dev</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Elsewhere</h1>
+
+        
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitter.com/fennifith">Twitter</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://is.a.horrific.dev/@fennifith">Fediverse</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://www.linkedin.com/in/james-fenn-3390b8167/">Linkedin</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitch.tv/fennifith">Twitch</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://fennifith.bandcamp.com">Bandcamp</a>
+        
+      </div>
+      <div class="col col-12 col-md-3 pt-5">
+        <div class="d-flex">
+          <a
+            class="link text-on-primary"
+            href="https://code.horrific.dev/james/jfenn.me"
+            aria-label="Source Code">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+</svg>
+
+          </a>
+          <a
+            class="link text-on-primary"
+            href="https://discord.jfenn.me"
+            aria-label="Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 15 180 210" height="24" width="24" class="">
+	<path fill="currentColor" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+	<path fill="currentColor" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+</svg>
+
+          </a>
+        </div>
+
+        <div class="d-flex mt-3" hidden>
+          <input
+            id="darkMode"
+            type="checkbox"
+            name="darkMode"
+            onchange="document.documentElement.className = `--theme-${this.checked ? 'dark' : 'light'}`; localStorage.setItem('darkMode', this.checked)">
+          <label for="darkMode" class="text-on-primary text-on-primary-all">Dark Mode</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+	<script async type="text/javascript" src="/js/init.js"></script>
+</body>
+</html>

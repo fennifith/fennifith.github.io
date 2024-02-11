@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<meta name="description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Mdjavadoc | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link
+  rel="apple-touch-icon"
+  sizes="70x70"
+  href="/images/favicon-70.png">
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/images/favicon-144.png">
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/images/favicon-152.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/images/favicon-192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/images/favicon-32.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/images/favicon-96.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link
+  rel="preconnect"
+  href="//fonts.gstatic.com"
+  crossorigin>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mdjavadoc | James Fenn">
+<meta name="twitter:description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Mdjavadoc | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/projects/mdjavadoc/">
+<meta name="og:description" content="A script that generates markdown javadocs for use in Jekyll and GitHub Pages.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+  </head>
+  <body class="nav-container footer-container">
+    <script>
+  // handle dark mode toggle behavior
+  {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkStored = localStorage.getItem("darkMode");
+
+    const checked = isDarkStored
+      ? isDarkStored === "true"
+      : isDark;
+
+    document.documentElement.className = "--theme-" + (checked ? 'dark' : 'light');
+  }
+</script>
+
+    
+  <nav class="nav nav-bar">
+    <a class="nav-item" href="/" aria-label="Home">
+      
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+</svg>
+
+      <span class="nav-item-title">Home</span>
+    </a>
+    
+      
+      <a class="nav-item" href="/blog/" aria-label="Blog">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z" />
+</svg>
+
+        <span class="nav-item-title">Blog</span>
+      </a>
+    
+      
+      <a class="nav-item active" href="/projects/" aria-label="Projects">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+	<path fill="none" d="M0 0h24v24H0V0z"/>
+	<path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+        <span class="nav-item-title">Projects</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/community/" aria-label="Community">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+</svg>
+
+        <span class="nav-item-title">Community</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/now/" aria-label="Now">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+</svg>
+
+        <span class="nav-item-title">Now</span>
+      </a>
+    
+  </nav>
+
+
+    <div class="bg-secondary with-image-overlay" style="--icon: url();">
+      <div class="py-5">
+        <div class="container text-center">
+          
+          <h1 class="text-light justify-content-center" style="text-shadow: 0 0 30px var(--accent);">Mdjavadoc</h1>
+          <p class="mt-0 text-light-2">A script that generates markdown javadocs for use in Jekyll and GitHub Pages.</p>
+        </div>
+
+        <div class="mt-2 text-center">
+          <a class="link link-chip mt-2" href="https://github.com/fennifith/mdjavadoc">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+</svg>
+
+            <span class="link-title">Git Repo</span>
+          </a>
+          <a class="link link-chip mt-2" href="https://github.com/fennifith/mdjavadoc/issues">
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M14,12H10V10H14M14,16H10V14H14M20,8H17.19C16.74,7.22 16.12,6.55 15.37,6.04L17,4.41L15.59,3L13.42,5.17C12.96,5.06 12.5,5 12,5C11.5,5 11.04,5.06 10.59,5.17L8.41,3L7,4.41L8.62,6.04C7.88,6.55 7.26,7.22 6.81,8H4V10H6.09C6.04,10.33 6,10.66 6,11V12H4V14H6V15C6,15.34 6.04,15.67 6.09,16H4V18H6.81C7.85,19.79 9.78,21 12,21C14.22,21 16.15,19.79 17.19,18H20V16H17.91C17.96,15.67 18,15.34 18,15V14H20V12H18V11C18,10.66 17.96,10.33 17.91,10H20V8Z" />
+</svg>
+
+            <span class="link-title">Bug Tracker</span>
+          </a>
+          
+            <a class="link link-chip mt-2" href="https://www.npmjs.com/package/mdjavadoc">
+              
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M4,10V14H6V11H7V14H8V10H4M9,10V15H11V14H13V10H9M12,11V13H11V11H12M14,10V14H16V11H17V14H18V11H19V14H20V10H14M3,9H21V15H12V16H8V15H3V9Z" />
+</svg>
+
+                <span class="link-title">NPM Package</span>
+              
+            </a>
+          
+        </div>
+      </div>
+    </div>
+    <div class="bg-accent-5 py-3">
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col col-12 col-md-6 mb-3">
+            <div class="card card-accent h-100" onclick="location.href = '/community/';">
+              <a class="card-title d-flex" href="/community/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="me-2">
+    <path fill="currentColor" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+</svg>
+
+                Contributing
+              </a>
+              <div class="card-body">
+                <span>Interested in working with this project or volunteering to help? Get started here!</span>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 mb-3">
+            <div class="card card-accent h-100" onclick="location.href = '/contact/';">
+              <a class="card-title d-flex" href="/contact/">
+                
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="me-2">
+    <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+</svg>
+
+                Contact Me
+              </a>
+              <div class="card-body">
+                <span>Have any questions or concerns? Don't hesitate to reach out!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+    
+      
+    
+
+    
+      <div class="bg-neutral py-4">
+        <div class="container">
+          
+      <div class="row">
+        <div class="col-12 col-md-auto align-self-center text-center">
+          
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M20,6H12L10,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8A2,2 0 0,0 20,6M15,16H6V14H15V16M18,12H6V10H18V12Z" />
+</svg>
+
+        </div>
+        <div class="col-12 col-md-8 align-self-center text-center text-md-start">
+          <h3 class="mb-2">Open Source</h3>
+          <p class="mt-0 mb-4">
+            Browse the source code, suggest changes, or
+            <a href="/community/">develop it yourself</a>!
+          </p>
+          <a class="btn btn-primary d-inline-flex align-items-center" href="https://github.com/fennifith/mdjavadoc">
+            Git Repo
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+</svg>
+
+          </a>
+        </div>
+      </div>
+
+      <div id="readme" class="card bg-light border-dark mt-5">
+        <div class="py-2 px-4 bg-dark">
+          <a class="link" href="https://github.com/fennifith/mdjavadoc">
+            
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z" />
+</svg>
+
+            <span class="link-title">README.md</span>
+          </a>
+        </div>
+        <div class="py-2 px-4 text">
+          <p>Markdown Javadoc is a script that generates markdown javadocs primarily for use in Jekyll and GitHub Pages. It consists of two modules, an <a href="https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md">API</a> and <a href="https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md">CLI</a>. If you simply want to generate a set of javadocs in markdown without any scripting, the CLI provides a simple interface with a decent amount of options. If you have a more complex use case, however, it might be more beneficial to look into the API first.</p>
+<h2 id="installation">Installation</h2>
+<p>These are generic installation instructions that are fairly similar for both the API and CLI.</p>
+<h3 id="npm">NPM</h3>
+<pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> -g mdjavadoc
+</code></pre>
+<h3 id="from-source">From Source</h3>
+<pre class="language-shell"><code class="language-shell"><span class="token function">git</span> clone https://github.com/TheAndroidMaster/mdjavadoc
+<span class="token builtin class-name">cd</span> mdjavadoc/cli
+<span class="token function">npm</span> <span class="token function">install</span>
+<span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">link</span>
+</code></pre>
+<p>For specific usage instructions, see the README for the <a href="https://github.com/fennifith/mdjavadoc/blob/master/./api/README.md">API</a> or <a href="https://github.com/fennifith/mdjavadoc/blob/master/./cli/README.md">CLI</a> components.</p>
+<h2 id="functionality">Functionality</h2>
+<p>The program works by searching a set of files for <a href="https://www.oracle.com/technetwork/java/javase/documentation/index-137868.html">javadoc comments</a>, parsing them into a data structure containing the description, tags, and metadata, and then outputting that data into a set of markdown files. For example, a file containing a javadoc comment like the one below would yield the following structure and output...</p>
+<h5 id="javadoc">Javadoc</h5>
+<pre class="language-java"><code class="language-java"><span class="token comment">/**
+ * This is a method which does a thing with something and stuff.
+ * 
+ * @param something		This is something.
+ * @param stuff			This is a bunch of stuff.
+ * @return			A thing.
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Object</span> <span class="token function">doTheThing</span><span class="token punctuation">(</span><span class="token keyword">int</span> something<span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> stuff<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h5 id="data">Data</h5>
+<pre class="language-javascript"><code class="language-javascript"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"doTheThing"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">description</span><span class="token operator">:</span> <span class="token string">"This is a method which does a thing with something and stuff."</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"public"</span><span class="token punctuation">,</span> <span class="token string">"static"</span><span class="token punctuation">,</span> <span class="token string">"void"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">source</span><span class="token operator">:</span> <span class="token string">"/package/structure/ClassName.java#L2"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">param</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">"@param something\tThis is something."</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Parameter Name"</span><span class="token punctuation">,</span> <span class="token string">"Description"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">values</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"something"</span><span class="token punctuation">,</span> <span class="token string">"This is something."</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">"@param stuff\t\tThis is a bunch of stuff."</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Parameter Name"</span><span class="token punctuation">,</span> <span class="token string">"Description"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">values</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"stuff"</span><span class="token punctuation">,</span> <span class="token string">"This is a bunch of stuff."</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token keyword">return</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">"@return\t\tA thing."</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Returned Value"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">values</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"A thing."</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h5 id="markdown">Markdown</h5>
+<pre class="language-md"><code class="language-md"><span class="token title important"><span class="token punctuation">##</span> [doTheThing](../blob/master/package/structure/ClassName.java#L2)</span>
+
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">Type:</span><span class="token punctuation">**</span></span> <span class="token code-snippet code keyword">`public`</span> <span class="token code-snippet code keyword">`static`</span> <span class="token code-snippet code keyword">`void`</span>
+
+This is a method which does a thing with something and stuff.
+
+<span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important">Parameter Name</span><span class="token punctuation">|</span><span class="token table-header important">Description</span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span><span class="token punctuation">-----</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data">something</span><span class="token punctuation">|</span><span class="token table-data">This is something.</span><span class="token punctuation">|</span>
+<span class="token punctuation">|</span><span class="token table-data">stuff</span><span class="token punctuation">|</span><span class="token table-data">This is a bunch of stuff.</span><span class="token punctuation">|</span>
+</span></span>
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">Returned Value:</span><span class="token punctuation">**</span></span> A thing.
+</code></pre>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are accepted. See this project's <a href="https://github.com/fennifith/mdjavadoc/blob/master/./.github/CONTRIBUTING.md">CONTRIBUTING.md</a> for instructions on how to contribute to this project.</p>
+
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+    <footer class="footer bg-primary mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 col-md-3 mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Links</h1>
+        <a class="footer-link text-on-primary" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+        <a class="footer-link text-on-primary" href="/contact/">Contact Me</a>
+        <a class="footer-link text-on-primary" href="/policies/?web">Privacy Policy</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Community</h1>
+        <a class="footer-link text-on-primary" href="https://unicorn-utterances.com">Unicorn Utterances</a>
+        <a class="footer-link text-on-primary" href="https://horrific.dev">Horrific.Dev</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Elsewhere</h1>
+
+        
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitter.com/fennifith">Twitter</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://is.a.horrific.dev/@fennifith">Fediverse</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://www.linkedin.com/in/james-fenn-3390b8167/">Linkedin</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitch.tv/fennifith">Twitch</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://fennifith.bandcamp.com">Bandcamp</a>
+        
+      </div>
+      <div class="col col-12 col-md-3 pt-5">
+        <div class="d-flex">
+          <a
+            class="link text-on-primary"
+            href="https://code.horrific.dev/james/jfenn.me"
+            aria-label="Source Code">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+</svg>
+
+          </a>
+          <a
+            class="link text-on-primary"
+            href="https://discord.jfenn.me"
+            aria-label="Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 15 180 210" height="24" width="24" class="">
+	<path fill="currentColor" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+	<path fill="currentColor" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+</svg>
+
+          </a>
+        </div>
+
+        <div class="d-flex mt-3" hidden>
+          <input
+            id="darkMode"
+            type="checkbox"
+            name="darkMode"
+            onchange="document.documentElement.className = `--theme-${this.checked ? 'dark' : 'light'}`; localStorage.setItem('darkMode', this.checked)">
+          <label for="darkMode" class="text-on-primary text-on-primary-all">Dark Mode</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+    <script async type="text/javascript" src="/js/init.js"></script>
+
+  </body>
+</html>

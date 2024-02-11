@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<meta name="description" content="A breakdown of the concepts used in Declarativ, a lightweight JavaScript HTML templating library.">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Declarativ: an experimental React-like HTML framework | James Fenn</title>
+
+<meta name="theme-color" content="#FFFFFF">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="manifest" href="/manifest.json">
+
+<meta name="application-name" content="James Fenn">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/images/favicon-144.png">
+<meta name="msapplication-tooltip" content="Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.">
+<meta name="msapplication-config" content="/ieconfig.xml">
+
+<link
+  rel="apple-touch-icon"
+  sizes="70x70"
+  href="/images/favicon-70.png">
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/images/favicon-144.png">
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/images/favicon-152.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="/images/favicon-192.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/images/favicon-32.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/images/favicon-96.png">
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/images/favicon-16.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="white">
+<meta name="apple-mobile-web-app-title" content="James Fenn">
+
+<link
+  rel="preconnect"
+  href="//fonts.gstatic.com"
+  crossorigin>
+
+<link rel="stylesheet" href="/css/styles.css">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Declarativ: an experimental React-like HTML framework | James Fenn">
+<meta name="twitter:description" content="A breakdown of the concepts used in Declarativ, a lightweight JavaScript HTML templating library.">
+<meta name="twitter:image" content="https://jfenn.me/images/me.jpg">
+<meta name="twitter:creator" content="@fennifith">
+<meta name="twitter:site" content="@fennifith">
+
+<meta name="og:title" content="Declarativ: an experimental React-like HTML framework | James Fenn">
+<meta name="og:type" content="website">
+<meta name="profile:first_name" content="James">
+<meta name="profile:last_name" content="Fenn">
+<meta name="profile:username" content="fennifith">
+<meta name="og:image" content="https://jfenn.me/images/headers/snowytrees.jpg">
+<meta name="og:url" content="https://jfenn.me/blog/2021-08-17-Declarativ-Templating/">
+<meta name="og:description" content="A breakdown of the concepts used in Declarativ, a lightweight JavaScript HTML templating library.">
+<meta name="og:locale" content="en_US">
+<meta name="og:site_name" content="James Fenn">
+
+</head>
+<body class="nav-container footer-container">
+	<script>
+  // handle dark mode toggle behavior
+  {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkStored = localStorage.getItem("darkMode");
+
+    const checked = isDarkStored
+      ? isDarkStored === "true"
+      : isDark;
+
+    document.documentElement.className = "--theme-" + (checked ? 'dark' : 'light');
+  }
+</script>
+
+
+	
+
+  <nav class="nav nav-bar">
+    <a class="nav-item" href="/" aria-label="Home">
+      
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+</svg>
+
+      <span class="nav-item-title">Home</span>
+    </a>
+    
+      
+      <a class="nav-item active" href="/blog/" aria-label="Blog">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M21,6V8H3V6H21M3,18H12V16H3V18M3,13H21V11H3V13Z" />
+</svg>
+
+        <span class="nav-item-title">Blog</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/projects/" aria-label="Projects">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+	<path fill="none" d="M0 0h24v24H0V0z"/>
+	<path fill="currentColor" d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+        <span class="nav-item-title">Projects</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/community/" aria-label="Community">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+</svg>
+
+        <span class="nav-item-title">Community</span>
+      </a>
+    
+      
+      <a class="nav-item" href="/now/" aria-label="Now">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="nav-item-img">
+    <path fill="currentColor" d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+</svg>
+
+        <span class="nav-item-title">Now</span>
+      </a>
+    
+  </nav>
+
+
+<section class="border-bottom py-4">
+  <div class="container">
+    <h1 class="mb-0">Declarativ: an experimental React-like HTML framework</h1>
+    <p class="text-meta text-tertiary-3 mb-3">
+      <a class="p-author h-card" href="">James Fenn</a>
+      |
+      <a class="u-url" href="">
+        <time class="dt-published" datetime="2021-08-17">August 17, 2021</time>
+      </a>
+    </p>
+
+    
+      <a class="link link-chip mb-2" href="https://jfenn.me/projects/declarativ/">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">Declarativ</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://reactjs.org/docs/introducing-jsx.html">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">React JSX</span>
+      </a>
+    
+      <a class="link link-chip mb-2" href="https://en.wikipedia.org/wiki/Reactive_programming">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="link-img">
+    <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z" />
+</svg>
+
+        <span class="link-title">Reactive programming</span>
+      </a>
+    
+  </div>
+</section>
+
+<article class="container mt-3 mb-5">
+  <div class="row">
+    
+
+    
+      <div class="col-12 col-md-4 col-xl-3 order-md-last my-4">
+        <div class="card" style="position: sticky; top: 1rem; height: fit-content;">
+          <span class="card-title">Contents</span>
+          <div class="card-body">
+            <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#design">Design</a>
+            
+                <ol>
+                    
+                    <li><a href="#variadic-functions">Variadic Functions</a>
+            		</li>
+
+                    <li><a href="#polymorphism">Polymorphism</a>
+            		</li>
+
+                    <li><a href="#asynchronous-templating">Asynchronous Templating</a>
+            		</li>
+
+                    <li><a href="#reactivity">Reactivity</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#takeaways">Takeaways</a>
+            
+                <ol>
+                    
+                    <li><a href="#actual-implementations">Actual Implementations</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="col col-12 col-md-8 col-xl-9 text">
+      <p>A while ago, I started writing a JavaScript library to facilitate HTML templating in web apps without introducing a compilation step. React's <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> syntax is one of the most well-known methods of constructing elements in JavaScript, but needs to be translated into <code>React.createElement</code> calls before it can be used in the browser. My goal - somewhat as a joke - was to eliminate this, and create an intuitive equivalent in plain JavaScript.</p>
+<p>This turned into a genuine attempt at creating a counterpart to modern UI frameworks which implements many of the same features. It includes full support for any HTML attributes, the Event API, and even allows other functions and Promises to be nested arbitrarily.</p>
+<p>Of course, this was still an experiment, will not be maintained, and isn't something I would recommend for any critical applications (the missing 'e' in Declarativ stands for &quot;efficient&quot; - which this library is not). However, I still learned a lot from it, and I thought I would put together a post to share some of the ideas that went into its development.</p>
+<h2 id="design">Design</h2>
+<p>There are many advantages to &quot;declarative&quot; templating in any programming language, as it can offer huge benefits to the stability and simplicity of an application. Rather than creating a layout and locating nodes with <code>getElementById()</code> to update their attributes manually, declarative programming enables automatic state updates simply by specifying where the data should come from in the layout.</p>
+<pre class="language-js"><code class="language-js"><span class="token function">container</span><span class="token punctuation">(</span>
+	<span class="token function">jumbotron</span><span class="token punctuation">(</span>
+		<span class="token function">h1</span><span class="token punctuation">(</span><span class="token string">"This is a big header."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">button</span><span class="token punctuation">(</span><span class="token string">"Do something"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+		<span class="token function">p</span><span class="token punctuation">(</span>$<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"https://loripsum.net/api/plaintext"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>The process of manipulating these updates manually can be a significant source of error - if a piece of data is used in multiple places, it can be easy to forget about an element that uses it, or create an illegal state when an update shouldn't occur.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>jumbotron<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>This is a big header.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>doSomething<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Do something<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>greyParagraph<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+$<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"https://loripsum.net/api/plaintext"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> element <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'grayParagraph'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// does this element even exist?</span>
+	element<span class="token punctuation">.</span>innerText <span class="token operator">=</span> string<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Declarative programming lends itself more to an &quot;observer&quot; pattern, where you specify the data source, and the elements decide to 'observe' it. This is also known as <a href="https://en.wikipedia.org/wiki/Reactive_programming">Reactive Programming</a> - where variables and data are described as a process of change that implicitly update any components that use them.</p>
+<p>The Declarativ library functions similarly to this; while I focused more on the initial collection of asynchronous data, it is entirely possible to observe and update the created elements with little effort.</p>
+<h3 id="variadic-functions">Variadic Functions</h3>
+<p>Commonly known as &quot;varargs,&quot; this is the backbone of Declarativ's API: the ability for any function to receive an indefinite amount of arguments. This means that, rather than using a function like <code>createElement()</code> with defined parameters, I can <em>write a separate function for each HTML element and pass child elements to it as arguments.</em></p>
+<pre class="language-js"><code class="language-js"><span class="token function">div</span><span class="token punctuation">(</span>
+	<span class="token function">h1</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	<span class="token function">p</span><span class="token punctuation">(</span><span class="token string">"Constructed with Declarativ."</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre>
+<p>While it seems like a lot of work to write a separate function for every possible HTML element, this is made a lot simpler by the dynamic nature of JavaScript: all these functions really only have one underlying implementation. Each of these &quot;element functions&quot; are constructed by passing their HTML syntax to a &quot;compose&quot; function that then returns the actual implementation (in other words, I have a function returning another function). Essentially:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">compose</span><span class="token punctuation">(</span><span class="token parameter">elementName</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>children</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Component</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>elementName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>children<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>elementName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> h1 <span class="token operator">=</span> <span class="token function">compose</span><span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><a href="https://github.com/fennifith/declarativ/blob/68cd92e61d39b1dcdee555c68256fc71ca1bda85/src/compose.ts">The actual code</a> in Declarativ is a bit different, to handle attributes and events and other complexities, but this is an effective representation of how it works.</p>
+<h3 id="polymorphism">Polymorphism</h3>
+<p>In the previous example, a set of <code>children</code> arguments are passed to each element function - but the type of each argument is not consistent. The <code>div()</code> function receives two <code>Component</code> objects (h1 and p), while <code>h1()</code> receives a <code>string</code>. These arguments, along with nested functions and Promises (which will evaluate to any of the compatible types) needed to be handled uniformly within Declarativ, without duplicating too much functionality. To make this a little easier, I used <a href="https://www.typescriptlang.org">TypeScript</a> to define the expected types for these arguments:</p>
+<pre class="language-typescript"><code class="language-typescript"><span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">ResolvableValue<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span></span> <span class="token operator">=</span> <span class="token constant">T</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>data<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token operator">=></span> ResolvableValue<span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">></span>
+
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">ComponentNode</span> <span class="token operator">=</span> Component <span class="token operator">|</span> <span class="token builtin">string</span>
+<span class="token keyword">export</span> <span class="token keyword">type</span> <span class="token class-name">ResolvableNode</span> <span class="token operator">=</span> ResolvableValue<span class="token operator">&lt;</span>ComponentNode <span class="token operator">|</span> ResolvableNode<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span>
+</code></pre>
+<p>To abstract the asynchronous functionality, I created a <code>resolve()</code> function to accept a <code>ResolvableValue&lt;T&gt;</code> and return a <code>T</code>. This gives me an easy way to convert any <code>Promise&lt;Component&gt;</code> or <code>() =&gt; Component</code> to a type that I can work with. However, you might notice that <code>ResolvableNode</code> can also evaluate to a <code>ResolvableNode[]</code> - so I needed to write some code to handle this as well.</p>
+<p>I ended up with a <code>resolveChildren()</code> function to specifically handle all of these cases and return a flattened array of <code>ComponentNode</code> values for the rest of my program to deal with.</p>
+<pre class="language-typescript"><code class="language-typescript"><span class="token keyword">async</span> <span class="token function">resolveChildren</span><span class="token punctuation">(</span>data<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>ComponentNode<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> children<span class="token operator">:</span> ComponentNode<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> <span class="token function-variable function">pushItem</span> <span class="token operator">=</span> <span class="token punctuation">(</span>item<span class="token operator">:</span> ComponentNode<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> item <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span>
+			children<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">else</span> children<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Component</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">flat</span><span class="token punctuation">(</span><span class="token number">Infinity</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">let</span> value <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">resolve</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token keyword">instanceof</span> <span class="token class-name"><span class="token builtin">Array</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// flatten inner arrays (avoid creating unnecessary nodes)</span>
+			value<span class="token punctuation">.</span><span class="token function">flat</span><span class="token punctuation">(</span><span class="token number">Infinity</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+				<span class="token function">pushItem</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token function">pushItem</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span> children<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="asynchronous-templating">Asynchronous Templating</h3>
+<p>With the complex polymorphism issues out of the way, I still needed to consider how elements with asynchronous components should be handled. Obviously, in the case of an <code>h1(&quot;Hello, world!&quot;)</code>, all of the information I need to create a template is immediately provided. However, what about a more complex scenario, such as <code>h1(&quot;Hello, &quot;, db.fetchUserName())</code>? In this case, <code>db.fetchUserName()</code> might return a Promise, which the <code>h1</code> element will have to wait for before it can be templated. However, I might not want to hold up the entire element tree to await a single data source when the rest of the page can be rendered without it.</p>
+<p>I solved this by inserting an empty placeholder element into the DOM with a unique id for each asynchronous child, and using <code>Promise.all</code> to await all child elements in parallel (or, at least, the single-threaded JavaScript equivalent of that). This means that, if the <code>h1()</code> is next to a <code>p()</code> that can be templated instantly, it will appear on the page first, while the <code>h1()</code> can wait to replace its placeholder element after it has finished loading.</p>
+<pre class="language-typescript"><code class="language-typescript"><span class="token keyword">let</span> innerHtml <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> components<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token operator">:</span> Component<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">await</span> <span class="token function">forEachAsync</span><span class="token punctuation">(</span><span class="token keyword">await</span> component<span class="token punctuation">.</span><span class="token function">resolveChildren</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">async</span> <span class="token punctuation">(</span>child<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> child <span class="token operator">===</span> <span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token comment">// if the child is a resolved string, template it immediately</span>
+		innerHtml <span class="token operator">+=</span> child<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		<span class="token comment">// insert a placeholder element for each asynchronous component</span>
+		<span class="token keyword">let</span> id <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">decl-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>nodeCount<span class="token operator">++</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>index<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+		innerHtml <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;template id="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">">&lt;/template></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+		components<span class="token punctuation">[</span>id<span class="token punctuation">]</span> <span class="token operator">=</span> child<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// iterate over components &amp; template them asynchronously</span>
+<span class="token keyword">await</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>components<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> temp <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">#</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">await</span> <span class="token function">render</span><span class="token punctuation">(</span>temp<span class="token punctuation">,</span> components<span class="token punctuation">[</span>id<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Again - like all the previous examples - this code is still a simplified version of <a href="https://github.com/fennifith/declarativ/blob/68cd92e61d39b1dcdee555c68256fc71ca1bda85/src/render/dom-render.ts#L22">what Declarativ actually does</a>, as there are even more edge cases and extra conditions that it needs to handle.</p>
+<p>A lot of these cases were only discovered during actual use, such as the possibility for a single component to result in more than one root element - for example, if an asynchronous function returns an array of other nodes. This was also when I discovered how clunky my state-updating mechanism was when compared to other frameworks.</p>
+<h3 id="reactivity">Reactivity</h3>
+<p><a href="https://svelte.dev/tutorial/reactive-declarations">Svelte</a> is one example that I think approaches this really well. The framework keeps track of where any variable is used in the document, and the Svelte compiler inserts an update function after every place that its value is modified - providing automatic state updates for any variable.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	count<span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{handleClick}</span><span class="token punctuation">></span></span>
+	Clicked {count} times!
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Needless to say, this isn't possible in Declarativ as I specifically wanted to avoid a compilation process. However, it would be interesting to explore different ways to accomplish this in plain JavaScript.</p>
+<p>Other frameworks have different mechanisms for creating state updates: with the <a href="https://reactjs.org/docs/hooks-state.html"><code>useState</code></a> hook, React allows for state &quot;objects&quot; to be associated with each defined component. When the state is updated, React simply re-renders the component it resides in.</p>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">CountButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> <span class="token punctuation">[</span>count<span class="token punctuation">,</span> setCount<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token punctuation">(</span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setCount</span><span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+			Clicked </span><span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token plain-text"> times!
+		</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The approach I used in declarativ is closer to how refs are used in React/Vue, though a little more verbose (making use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy objects</a>):</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">CountButton</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">const</span> state <span class="token operator">=</span> declarativ<span class="token punctuation">.</span><span class="token function">observe</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">return</span> <span class="token function">button</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Clicked </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>state<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>count<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> times!</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+			state<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span>
+		<span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>While this is very flexible, it is much harder to work with than other frameworks which create these state associations automatically. Needing to invoke a specific <code>bind()</code> function, while more verbose, effectively creates the same problems as manual DOM manipulation with connecting a data source to its consumer.</p>
+<h2 id="takeaways">Takeaways</h2>
+<p>One of the major things I've learnt while using this library is that, while it certainly makes it fast to iterate over different designs, <em>mixing your application logic directly with the UI structure is a horrible idea!</em> Providing easy access to DOM events with the <code>.on('event', () =&gt; {}))</code> function was very intuitive, but I found that it often allowed me to write very confusing and cluttered logic directly inside the event handlers, when I should've been separating it into external functions.</p>
+<p>This might be why many developers like to categorize their work into architectural patterns such as MVC or MVVM - to ensure an appropriate separation of concerns and prevent applications from accumulating this &quot;UI clutter&quot; that can be very difficult to maintain.</p>
+<h3 id="actual-implementations">Actual Implementations</h3>
+<p>While Declarativ is obviously inapplicable to most actual usage, there are plenty of examples of so-called &quot;declarative UI&quot; in other (better) frameworks:</p>
+<ul>
+<li><a href="https://github.com/Kotlin/kotlinx.html">kotlinx.html</a> provides a DSL for Kotlin applications to construct HTML/DOM trees (in a very similar method to how Declarativ works)</li>
+<li><a href="https://developer.android.com/jetpack/compose">Jetpack Compose</a> uses a declarative API to define &quot;composable functions&quot; which the library can manage and invoke to reflect state updates</li>
+<li><a href="https://developer.apple.com/xcode/swiftui/">SwiftUI</a> similarly uses a declarative syntax to indicate the data sources of each view and automate most of the work that would otherwise be done by a view controller</li>
+<li><a href="https://flutter.dev/docs/get-started/flutter-for/declarative#how-to-change-ui-in-a-declarative-framework">Flutter</a> creates immutable &quot;widgets&quot; to represent UI states</li>
+</ul>
+
+    </div>
+  </div>
+</article>
+
+
+
+<footer class="footer bg-primary mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12 col-md-3 mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Links</h1>
+        <a class="footer-link text-on-primary" href="https://code.horrific.dev/james/jfenn.me">Website Source Code</a>
+        <a class="footer-link text-on-primary" href="/contact/">Contact Me</a>
+        <a class="footer-link text-on-primary" href="/policies/?web">Privacy Policy</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Community</h1>
+        <a class="footer-link text-on-primary" href="https://unicorn-utterances.com">Unicorn Utterances</a>
+        <a class="footer-link text-on-primary" href="https://horrific.dev">Horrific.Dev</a>
+      </div>
+      <div class="col col-12 col-md-3 d-none d-md-block mb-3">
+        <h1 class="text-on-primary" style="font-size: 1rem;">Elsewhere</h1>
+
+        
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitter.com/fennifith">Twitter</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://is.a.horrific.dev/@fennifith">Fediverse</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://www.linkedin.com/in/james-fenn-3390b8167/">Linkedin</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://twitch.tv/fennifith">Twitch</a>
+        
+          <a
+            rel="me"
+            class="footer-link text-on-primary"
+            href="https://fennifith.bandcamp.com">Bandcamp</a>
+        
+      </div>
+      <div class="col col-12 col-md-3 pt-5">
+        <div class="d-flex">
+          <a
+            class="link text-on-primary"
+            href="https://code.horrific.dev/james/jfenn.me"
+            aria-label="Source Code">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" class="">
+    <path fill="currentColor" d="M2.6,10.59L8.38,4.8L10.07,6.5C9.83,7.35 10.22,8.28 11,8.73V14.27C10.4,14.61 10,15.26 10,16A2,2 0 0,0 12,18A2,2 0 0,0 14,16C14,15.26 13.6,14.61 13,14.27V9.41L15.07,11.5C15,11.65 15,11.82 15,12A2,2 0 0,0 17,14A2,2 0 0,0 19,12A2,2 0 0,0 17,10C16.82,10 16.65,10 16.5,10.07L13.93,7.5C14.19,6.57 13.71,5.55 12.78,5.16C12.35,5 11.9,4.96 11.5,5.07L9.8,3.38L10.59,2.6C11.37,1.81 12.63,1.81 13.41,2.6L21.4,10.59C22.19,11.37 22.19,12.63 21.4,13.41L13.41,21.4C12.63,22.19 11.37,22.19 10.59,21.4L2.6,13.41C1.81,12.63 1.81,11.37 2.6,10.59Z" />
+</svg>
+
+          </a>
+          <a
+            class="link text-on-primary"
+            href="https://discord.jfenn.me"
+            aria-label="Discord">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 15 180 210" height="24" width="24" class="">
+	<path fill="currentColor" d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+	<path fill="currentColor" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+</svg>
+
+          </a>
+        </div>
+
+        <div class="d-flex mt-3" hidden>
+          <input
+            id="darkMode"
+            type="checkbox"
+            name="darkMode"
+            onchange="document.documentElement.className = `--theme-${this.checked ? 'dark' : 'light'}`; localStorage.setItem('darkMode', this.checked)">
+          <label for="darkMode" class="text-on-primary text-on-primary-all">Dark Mode</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+	<script async type="text/javascript" src="/js/init.js"></script>
+</body>
+</html>

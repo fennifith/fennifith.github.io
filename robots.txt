@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: 
+Disallow: /links/*
+Disallow: /redirects/*
+Disallow: /about/*
+Disallow: /resume-generator/*
+Sitemap: https://jfenn.me/sitemap.xml

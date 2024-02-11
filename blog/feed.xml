@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>James Fenn</title>
+  <subtitle>Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.</subtitle>
+  <link href="https://jfenn.me/blog/feed.xml" rel="self"/>
+  <link href="https://jfenn.me/"/>
+  <updated>2024-02-10T00:00:00Z</updated>
+  <id>https://jfenn.me/</id>
+  <author>
+    <name>James Fenn</name>
+    <email>me@jfenn.me</email>
+  </author>
+  <entry>
+    <title>Self-Hosting Music Distribution</title>
+	<description>Considering alternatives to modern music distribution with small platforms and self-hosted sites!</description>
+	<pubDate>2024-02-10T00:00:00Z</pubDate>
+    <updated>2024-02-10T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2024-02-10-Self-Hosting-Music-Distribution/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2024-02-10-Self-Hosting-Music-Distribution/</guid>
+    <id>https://jfenn.me/blog/2024-02-10-Self-Hosting-Music-Distribution/</id>
+  </entry>
+  <entry>
+    <title>What have I been up to?</title>
+	<description>A summary of some of the various projects I&#39;ve been working on this year.</description>
+	<pubDate>2023-10-23T00:00:00Z</pubDate>
+    <updated>2023-10-23T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2023-10-23-WHIBUT/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2023-10-23-WHIBUT/</guid>
+    <id>https://jfenn.me/blog/2023-10-23-WHIBUT/</id>
+  </entry>
+  <entry>
+    <title>Minecraft Data Pack Programming: Scoreboard Usage</title>
+	<description>A beginner-friendly series for teaching programming concepts with Minecraft data packs.</description>
+	<pubDate>2022-08-20T00:00:00Z</pubDate>
+    <updated>2022-08-20T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2022-08-20-Minecraft-Data-Packs/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2022-08-20-Minecraft-Data-Packs/</guid>
+    <id>https://jfenn.me/blog/2022-08-20-Minecraft-Data-Packs/</id>
+  </entry>
+  <entry>
+    <title>Minecraft Data Pack Programming: Command Syntax</title>
+	<description>A beginner-friendly series for teaching programming concepts with Minecraft data packs.</description>
+	<pubDate>2022-06-15T00:00:00Z</pubDate>
+    <updated>2022-06-15T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2022-06-15-Minecraft-Data-Packs/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2022-06-15-Minecraft-Data-Packs/</guid>
+    <id>https://jfenn.me/blog/2022-06-15-Minecraft-Data-Packs/</id>
+  </entry>
+  <entry>
+    <title>Minecraft Data Pack Programming: Introduction</title>
+	<description>A beginner-friendly series for teaching programming concepts with Minecraft data packs.</description>
+	<pubDate>2022-06-14T00:00:00Z</pubDate>
+    <updated>2022-06-14T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2022-06-14-Minecraft-Data-Packs/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2022-06-14-Minecraft-Data-Packs/</guid>
+    <id>https://jfenn.me/blog/2022-06-14-Minecraft-Data-Packs/</id>
+  </entry>
+  <entry>
+    <title>Dynamic Backgrounds in Unicorn Utterances&#39; Preview Images</title>
+	<description>An explanation of some CSS tricks and techniques I used to make a neat contribution to the Unicorn Utterances blog site.</description>
+	<pubDate>2022-05-31T00:00:00Z</pubDate>
+    <updated>2022-05-31T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2022-05-31-Unicorn-Utterances-Preview-Images/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2022-05-31-Unicorn-Utterances-Preview-Images/</guid>
+    <id>https://jfenn.me/blog/2022-05-31-Unicorn-Utterances-Preview-Images/</id>
+  </entry>
+  <entry>
+    <title>Declarativ: an experimental React-like HTML framework</title>
+	<description>A breakdown of the concepts used in Declarativ, a lightweight JavaScript HTML templating library.</description>
+	<pubDate>2021-08-17T00:00:00Z</pubDate>
+    <updated>2021-08-17T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2021-08-17-Declarativ-Templating/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2021-08-17-Declarativ-Templating/</guid>
+    <id>https://jfenn.me/blog/2021-08-17-Declarativ-Templating/</id>
+  </entry>
+  <entry>
+    <title>Audio Automation: using Java&#39;s MIDI APIs with Kotlin Flow</title>
+	<description>An explanation of the development process behind a MIDI library using the Kotlin Flow API.</description>
+	<pubDate>2021-01-31T00:00:00Z</pubDate>
+    <updated>2021-01-31T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2021-01-31-Audio-Automation/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2021-01-31-Audio-Automation/</guid>
+    <id>https://jfenn.me/blog/2021-01-31-Audio-Automation/</id>
+  </entry>
+  <entry>
+    <title>Animating SVG Icons on the Web</title>
+	<description>A small breakdown of the process I used to create a couple interactive icons for a web project.</description>
+	<pubDate>2020-05-09T00:00:00Z</pubDate>
+    <updated>2020-05-09T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</guid>
+    <id>https://jfenn.me/blog/2020-05-09-Animating-SVG-Icons/</id>
+  </entry>
+  <entry>
+    <title>Ethics of Artificial Intelligence</title>
+	<description>An overview of the discourse surrounding &quot;ethical AI&quot; and its use in the Big Tech industry.</description>
+	<pubDate>2020-01-24T00:00:00Z</pubDate>
+    <updated>2020-01-24T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2020-01-24-Ethics-of-AI/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2020-01-24-Ethics-of-AI/</guid>
+    <id>https://jfenn.me/blog/2020-01-24-Ethics-of-AI/</id>
+  </entry>
+  <entry>
+    <title>Federated Social Networks</title>
+	<description>Explaining what the fediverse is, how to join it, and why.</description>
+	<pubDate>2019-12-15T00:00:00Z</pubDate>
+    <updated>2019-12-15T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</guid>
+    <id>https://jfenn.me/blog/2019-12-15-Federated-Social-Networks/</id>
+  </entry>
+  <entry>
+    <title>Ethical Source and Subjectivity</title>
+	<description>A mini-summary / explanation of some criticisms of the Ethical Source Movement.</description>
+	<pubDate>2019-10-30T00:00:00Z</pubDate>
+    <updated>2019-10-30T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-10-30-Ethical-Source/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-10-30-Ethical-Source/</guid>
+    <id>https://jfenn.me/blog/2019-10-30-Ethical-Source/</id>
+  </entry>
+  <entry>
+    <title>Free Software and RMS</title>
+	<description>A summary of my thoughts on the relationship between Richard Stallman and the Free Software Movement.</description>
+	<pubDate>2019-10-28T00:00:00Z</pubDate>
+    <updated>2019-10-28T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-10-28-Free-Software-RMS/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</guid>
+    <id>https://jfenn.me/blog/2019-10-28-Free-Software-RMS/</id>
+  </entry>
+  <entry>
+    <title>Open Source in Education</title>
+	<description>A discussion of the open source model as a solution to many issues in higher education.</description>
+	<pubDate>2019-10-15T00:00:00Z</pubDate>
+    <updated>2019-10-15T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-10-15-Open-Source-in-Education/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-10-15-Open-Source-in-Education/</guid>
+    <id>https://jfenn.me/blog/2019-10-15-Open-Source-in-Education/</id>
+  </entry>
+  <entry>
+    <title>JavaScript: Productivity over Proof</title>
+	<description>In the vast majority everyday software, nobody writes a mathematical proof of every piece of functionality. Dynamically typed languages exist for a reason, and this is not it.</description>
+	<pubDate>2019-08-02T00:00:00Z</pubDate>
+    <updated>2019-08-02T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</guid>
+    <id>https://jfenn.me/blog/2019-08-02-JavaScript-Proofs/</id>
+  </entry>
+  <entry>
+    <title>Introduction to Android: Contexts, Intents, and the Activity lifecycle</title>
+	<description>A basic overview of the main components of an Android app and how they interact with each other and the Android system.</description>
+	<pubDate>2019-03-18T00:00:00Z</pubDate>
+    <updated>2019-03-18T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2019-03-18-Introduction-to-Android/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2019-03-18-Introduction-to-Android/</guid>
+    <id>https://jfenn.me/blog/2019-03-18-Introduction-to-Android/</id>
+  </entry>
+  <entry>
+    <title>Continuous Integration with Travis CI for Android</title>
+	<description>An in-depth tutorial explaining how to set up Travis CI to deploy signed builds to Google Play. Among other things.</description>
+	<pubDate>2018-11-14T00:00:00Z</pubDate>
+    <updated>2018-11-14T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-11-14-Continuous-Integration/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-11-14-Continuous-Integration/</guid>
+    <id>https://jfenn.me/blog/2018-11-14-Continuous-Integration/</id>
+  </entry>
+  <entry>
+    <title>CSS Submodules</title>
+	<description>How I organize my site&#39;s CSS and why.</description>
+	<pubDate>2018-10-26T00:00:00Z</pubDate>
+    <updated>2018-10-26T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-10-26-CSS-Submodules/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-10-26-CSS-Submodules/</guid>
+    <id>https://jfenn.me/blog/2018-10-26-CSS-Submodules/</id>
+  </entry>
+  <entry>
+    <title>Exceptional Traveler</title>
+	<description>I explain how and why (sort of) I wrote an implementation of the Traveling Salesperson Problem using Exceptional Programming standards.</description>
+	<pubDate>2018-09-25T00:00:00Z</pubDate>
+    <updated>2018-09-25T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</guid>
+    <id>https://jfenn.me/blog/2018-09-25-Exceptional-Traveler/</id>
+  </entry>
+  <entry>
+    <title>AAAAAAAAAAAAAAAAAAAAAAAHHH</title>
+	<description>A small command-line utility I wrote with Go that I had a lot of fun with.</description>
+	<pubDate>2018-09-01T00:00:00Z</pubDate>
+    <updated>2018-09-01T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</guid>
+    <id>https://jfenn.me/blog/2018-09-01-AAAAAAAAAH/</id>
+  </entry>
+  <entry>
+    <title>Client-Side JavaScript</title>
+	<description>Why I rewrote my site with Jekyll, rather than running a ton of client-side JavaScript that doesn&#39;t really work all of the time.</description>
+	<pubDate>2018-08-19T00:00:00Z</pubDate>
+    <updated>2018-08-19T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</guid>
+    <id>https://jfenn.me/blog/2018-08-19-Client-Side-JavaScript/</id>
+  </entry>
+  <entry>
+    <title>Attribouter</title>
+	<description>A short breakdown of a really really big library I wrote to credit contributors and libraries used in my Android projects.</description>
+	<pubDate>2018-08-17T00:00:00Z</pubDate>
+    <updated>2018-08-17T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-08-17-Attribouter/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-08-17-Attribouter/</guid>
+    <id>https://jfenn.me/blog/2018-08-17-Attribouter/</id>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+	<description>I made a blog.</description>
+	<pubDate>2018-07-28T00:00:00Z</pubDate>
+    <updated>2018-07-28T00:00:00Z</updated>
+	<link href="https://jfenn.me/blog/2018-07-28-Hello-World/"/>
+	<guid isPermaLink="true">https://jfenn.me/blog/2018-07-28-Hello-World/</guid>
+    <id>https://jfenn.me/blog/2018-07-28-Hello-World/</id>
+  </entry>
+</feed>
