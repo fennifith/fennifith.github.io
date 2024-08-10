@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from 'src/layouts/BaseLayout.astro';
+import { ProjectList } from 'src/components/project/ProjectList';
+
+const projects = await getCollection("projects");
+const websites = projects.filter(e => e.data.category === "websites");
+const libraries = projects.filter(e => e.data.category === "libraries");
+const apps = projects.filter(e => e.data.category === "apps");
+const minecraft = projects.filter(e => e.data.category === "minecraft");
+---
+
+<BaseLayout frontmatter={{ title: "Projects" }}>
+	<div class="text-content">
+		<h1>Projects</h1>
+		<p>
+			This is a list of various things I've worked on over the past few years.
+		</p>
+	</div>
+
+	<div class="text-content">
+		<h2>Websites</h2>
+	</div>
+
+	<ProjectList projects={websites} />
+
+	<div class="text-content">
+		<h2>Minecraft Modding</h2>
+		<p>I've had a fun time learning to write mods & minigames in the block game, some of which have become quite complex!</p>
+	</div>
+
+	<ProjectList projects={minecraft} />
+
+	<div class="text-content">
+		<h2>Android Apps</h2>
+		<p>I used to publish quite a few apps on the Play Store. Many of these are now unmaintained, but remain as examples of my past work.</p>
+	</div>
+
+	<ProjectList projects={apps} />
+
+	<div class="text-content">
+		<h2>Libraries</h2>
+		<p>I'll often take parts of my code and turn them into separate projects so that I can use them in multiple places, and sometimes they help other developers too!</p>
+		<p>These are a few of my favorites...</p>
+	</div>
+
+	<ProjectList projects={libraries} />
+</BaseLayout>
+
+<style>
+	h2 {
+		margin-top: 3rem;
+	}
+</style>

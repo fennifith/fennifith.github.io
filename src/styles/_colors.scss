@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+$colorPrimary: #6657EB;
+$colorSecondary: #80DB53;
+$colorTertiary: #51525C;
+
+$colorBg: #eae8fc;
+$colorFg: #26262B;
+
+$colorDarkBg: #18181b;
+$colorDarkFg: #eae8fc;
+
+@mixin darkTheme() {
+	// these need to be defined separately because :global does not work outside of CSS modules
+	&[data-is-dark="true"] {
+		@content;
+	}
+	html[data-is-dark="true"] & {
+		@content;
+	}
+	:global(html[data-is-dark="true"]) & {
+		@content;
+	}
+}

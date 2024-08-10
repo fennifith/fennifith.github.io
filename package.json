@@ -1,0 +1,29 @@
+{
+  "name": "jfenn-me-2",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.2",
+    "@astrojs/preact": "^3.5.1",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.12.2",
+    "astro-icon": "^1.1.0",
+    "dayjs": "^1.11.12",
+    "feed": "^4.2.2",
+    "marked": "^14.0.0",
+    "mdi-preact": "^9.4.0",
+    "preact": "^10.23.1",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}

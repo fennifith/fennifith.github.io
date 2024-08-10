@@ -1,0 +1,41 @@
+.header {
+	position: sticky;
+	top: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.nav {
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+
+		@media screen and (min-width: 920px) {
+			flex-direction: column;
+		}
+
+		li {
+			display: grid;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.nav + label {
+	order: -1;
+
+	@media screen and (min-width: 920px) {
+		order: unset;
+	}
+}

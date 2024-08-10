@@ -1,0 +1,93 @@
+@use "sass:color";
+@import "./_colors.scss";
+
+:root {
+	--embed-bg: var(--color-highlight-bg);
+	--embed-border: #{$colorPrimary};
+
+	--code-bg: var(--color-bg-darker);
+	--code-border: var(--color-bg-darkest);
+
+	@include darkTheme {
+		--code-bg: var(--color-bg-lighter);
+		--code-border: var(--color-bg-lightest);
+	}
+}
+
+.text-content {
+	line-height: 1.5rem;
+
+	h2 {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		&::before {
+			content: ' ';
+			display: block;
+			width: .75rem;
+			height: .75rem;
+			background-color: $colorPrimary;
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 1rem 0;
+		margin-top: 1em;
+	}
+
+	p {
+		margin: 1em 0;
+	}
+
+	p > code, p > a > code {
+		background-color: var(--code-bg);
+		padding: 0rem 0.4rem;
+		border-radius: 0.2rem;
+		border: 1px solid var(--code-border);
+	}
+
+	pre.astro-code {
+		background: var(--embed-bg) !important;
+		padding: .5rem 0;
+		border-top: 3px solid var(--embed-border);
+		border-bottom: 3px solid var(--embed-border);
+
+		& code {
+			display: block;
+			overflow-x: auto;
+			background-color: $colorFg;
+			padding: 1rem 1.5rem;
+
+			counter-reset: step;
+			counter-increment: step 0;
+
+			& .line:before {
+				content: counter(step);
+				counter-increment: step;
+
+				display: inline-block;
+				width: 2rem;
+				opacity: 0.5;
+			}
+		}
+	}
+
+	blockquote {
+		background: var(--embed-bg) !important;
+		padding: .5rem 1rem;
+		border-top: 3px solid var(--embed-border);
+		border-bottom: 3px solid var(--embed-border);
+		margin: 1rem 0;
+	}
+
+	iframe {
+		max-width: 100%;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		padding: 5px;
+		border: 3px dotted var(--color-primary);
+	}
+}

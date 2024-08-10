@@ -1,0 +1,33 @@
+---
+import { Button, ButtonLink } from "src/components/base/Button";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout frontmatter={{ title: "404" }}>
+	<div class="text-content" style="text-align: center;">
+		<h1>404</h1>
+		<p>Oh no! This page doesn't exist anymore.</p>
+		<p>I've updated my site a few times, so there's a chance it was moved or deleted.</p>
+	</div>
+	<div class="notfound__links">
+		<Button variant="secondary" onclick="history.back()">
+			Go Back
+		</Button>
+		<ButtonLink href="/">
+			Homepage
+		</ButtonLink>
+	</div>
+</BaseLayout>
+
+<style>
+	.notfound__links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: .5rem;
+
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+</style>

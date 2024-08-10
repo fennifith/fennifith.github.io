@@ -1,0 +1,35 @@
+:root {
+	--theme-button-fg: var(--color-fg-light);
+	--theme-button-border: var(--color-fg-lighter);
+
+	--theme-button-hover-bg: var(--color-highlight-bg);
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	padding: .5rem;
+
+	font-weight: bold;
+	border-radius: .25rem;
+	transition: background-color .1s;
+	cursor: pointer;
+
+	color: var(--theme-button-fg);
+	border: 1px solid var(--theme-button-border);
+	-webkit-tap-highlight-color: transparent;
+
+	&:hover {
+		background-color: var(--theme-button-hover-bg);
+	}
+
+	input:focus-visible ~ * > & {
+		outline: 3px solid var(--button-border);
+		outline-offset: 3px;
+	}
+
+	@media print {
+		display: none;
+	}
+}

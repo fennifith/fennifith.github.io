@@ -1,0 +1,166 @@
+@use "sass:color";
+@import "./_colors.scss";
+@import "./text-content.scss";
+
+:root {
+	--color-primary: #{$colorPrimary};
+	--color-primary-fg: #{darken($colorPrimary, 10%)};
+
+	--color-secondary: #{$colorSecondary};
+	--color-tertiary: #{$colorTertiary};
+
+	--color-bg: #{$colorBg};
+	--color-bg-light: #{lighten($colorBg, 1%)};
+	--color-bg-lighter: #{lighten($colorBg, 5%)};
+	--color-bg-lightest: #{lighten($colorBg, 10%)};
+	--color-bg-dark: #{darken($colorBg, 1%)};
+	--color-bg-darker: #{darken($colorBg, 5%)};
+	--color-bg-darkest: #{darken($colorBg, 10%)};
+
+	--color-fg: #{$colorFg};
+	--color-fg-light: #{color.adjust($colorFg, $alpha: -0.2)};
+	--color-fg-lighter: #{color.adjust($colorFg, $alpha: -0.8)};
+
+	--color-highlight-fg: #252863;
+	--color-highlight-bg: #{color.adjust($colorPrimary, $alpha: -0.9)};
+
+	@include darkTheme {
+		--color-primary-fg: #{lighten($colorPrimary, 10%)};
+
+		--color-bg: #{$colorDarkBg};
+		--color-bg-light: #{lighten($colorDarkBg, 1%)};
+		--color-bg-lighter: #{lighten($colorDarkBg, 5%)};
+		--color-bg-lightest: #{lighten($colorDarkBg, 10%)};
+		--color-bg-dark: #{darken($colorDarkBg, 1%)};
+		--color-bg-darker: #{darken($colorDarkBg, 5%)};
+		--color-bg-darkest: #{darken($colorDarkBg, 10%)};
+
+		--color-fg: #{$colorDarkFg};
+		--color-fg-light: #{color.adjust($colorBg, $alpha: -0.2)};
+		--color-fg-lighter: #{color.adjust($colorBg, $alpha: -0.8)};
+
+		--color-highlight-fg: #b5b7e3;
+	}
+}
+/* latin-ext */
+@font-face {
+	font-family: "Rubik";
+	font-style: italic;
+	font-weight: 300 900;
+	font-display: fallback;
+	src: url(/fonts/rubik/Rubik_latin-ext_300-900_italic.woff2) format("woff2");
+	unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+		U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+	font-family: "Rubik";
+	font-style: italic;
+	font-weight: 300 900;
+	font-display: fallback;
+	src: url(/fonts/rubik/Rubik_latin_300-900_italic.woff2) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+	font-family: "Rubik";
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: fallback;
+	src: url(/fonts/rubik/Rubik_latin-ext_300-900_normal.woff2) format("woff2");
+	unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+		U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+	font-family: "Rubik";
+	font-style: normal;
+	font-weight: 300 900;
+	font-display: fallback;
+	src: url(/fonts/rubik/Rubik_latin_300-900_normal.woff2) format("woff2");
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+		U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+		U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+	scrollbar-gutter: stable;
+	box-sizing: border-box;
+	font-family: "Rubik", "Arial", "Roboto", sans-serif;
+
+	background-color: var(--color-bg);
+	color: var(--color-fg);
+
+	transition: background-color .1s;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+a {
+	color: var(--color-highlight-fg);
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol) {
+	margin: 0;
+}
+
+@supports selector(::-webkit-scrollbar) {
+	body {
+		overflow: overlay;
+	}
+
+	body::-webkit-scrollbar {
+		width: 8px;
+		background: none;
+	}
+
+	body::-webkit-scrollbar-track {
+		background: none;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: none;
+		border-left: 6px solid var(--color-fg);
+	}
+}
+
+::selection {
+	color: #fff;
+	background-color: var(--color-primary);
+}
+
+.visually-hidden {
+	border: 0;
+	padding: 0;
+	clip: rect(0px, 0px, 0px, 0px);
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+}
+
+[data-anim-typewriter]  {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: .15em solid transparent;
+	@media not (prefers-reduced-motion) {
+		animation: typewriter 1.5s steps(16, end);
+	}
+}
+
+@keyframes typewriter {
+	from { width: 0; border-color: var(--color-primary); }
+	99% { border-color: var(--color-primary); }
+	to { width: 100%; border-color: transparent; }
+}

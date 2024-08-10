@@ -1,0 +1,23 @@
+---
+interface Props {
+	frontmatter: { redirect: string };
+}
+
+const { frontmatter: { redirect } } = Astro.props;
+---
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Redirecting&hellip;</title>
+<link rel="canonical" href={redirect} />
+<script is:inline define:vars={{ redirect }}>
+	window.history.replaceState({}, "", redirect);
+</script>
+<meta http-equiv="refresh" content={`0; URL='${redirect}'`} />
+<meta name="robots" content="noindex" />
+</head>
+<body>
+Redirecting to <a href={redirect}>{redirect}</a>.
+</body>
+</html>

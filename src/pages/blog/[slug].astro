@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from 'src/layouts/BaseLayout.astro';
+import dayjs from "dayjs";
+import CalendarRangeIcon from "mdi-preact/CalendarRangeIcon";
+import { TitleSection } from 'src/components/base/TitleSection';
+import { ButtonLink } from 'src/components/base/Button';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout frontmatter={{
+  title: entry.data.title,
+  description: entry.data.description,
+}}>
+  <article>
+    <TitleSection>
+      <h1>{entry.data.title}</h1>
+      <p>
+        <CalendarRangeIcon size={18} />
+        <span data-anim-typewriter>{dayjs(entry.slug.substring(0, 10)).format("MMMM D, YYYY")}</span>
+      </p>
+    </TitleSection>
+
+    <section style="display: flex; flex-wrap: wrap; gap: .5rem;">
+      {entry.data.links?.map((link) => (
+        <ButtonLink href={link.url}>{link.name}</ButtonLink>
+      ))}
+    </section>
+
+    <section class="text-content">
+      <Content />
+    </section>
+  </article>
+</BaseLayout>

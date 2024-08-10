@@ -1,0 +1,180 @@
+---
+import { ViewTransitions } from "astro:transitions";
+import "src/styles/global.scss";
+import style from "./BaseLayout.module.scss";
+import { Header } from "src/components/layout/Header";
+
+interface Props {
+	frontmatter: {
+		title?: string;
+		description?: string;
+	};
+}
+const { frontmatter } = Astro.props;
+
+const author = "James Fenn";
+
+const title = frontmatter.title ? `${frontmatter.title} | ${author}` : author;
+const description =
+	frontmatter.description ??
+	"Writer of bad puns and slightly better software. This website contains information about my adventures in programming, current projects, and me.";
+
+const headIcon = "/images/me3.png";
+---
+
+<html lang="en" transition:animate="none">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+		/>
+		<meta name="description" content={description} />
+		<meta name="author" content={author} />
+		<title>{title}</title>
+
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link
+			rel="alternate"
+			href="/blog/feed.xml"
+			type="application/rss+xml"
+			title={`${author} | RSS Feed`}
+		/>
+
+		<meta name="theme-color" content="#FFFFFF" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="manifest" href="/manifest.json" />
+
+		<meta name="application-name" content={author} />
+		<meta name="msapplication-TileColor" content="#FFFFFF" />
+		<meta name="msapplication-TileImage" content="/images/favicon-144.png" />
+		<meta name="msapplication-tooltip" content={description} />
+		<meta name="msapplication-config" content="/ieconfig.xml" />
+
+		<link rel="apple-touch-icon" sizes="70x70" href="/images/favicon-70.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="/images/favicon-144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="/images/favicon-152.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="/images/favicon-192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon-32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="/images/favicon-96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/images/favicon-16.png"
+		/>
+		<link rel="shortcut icon" href="/favicon.ico" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+		<meta name="apple-mobile-web-app-title" content={author} />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={headIcon} />
+		<meta name="twitter:creator" content="@fennifith" />
+		<meta name="twitter:site" content="@fennifith" />
+
+		<meta name="og:title" content={title} />
+		<meta name="og:type" content="website" />
+		<meta name="profile:first_name" content="James" />
+		<meta name="profile:last_name" content="Fenn" />
+		<meta name="profile:username" content="fennifith" />
+		<meta name="og:image" content={headIcon} />
+		<meta name="og:url" content={Astro.url.toString()} />
+		<meta name="og:description" content={description} />
+		<meta name="og:locale" content="en_US" />
+		<meta name="og:site_name" content={author} />
+
+		<ViewTransitions />
+	</head>
+	<body>
+		<script is:inline>
+			{
+				const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+				function setThemeClass(el) {
+					const isDarkMedia = mql.matches;
+					const isDarkLocalStorage = localStorage.getItem("isDarkMode");
+
+					const isDark =
+						typeof isDarkLocalStorage === "string"
+							? isDarkLocalStorage === "true"
+							: isDarkMedia;
+					el.dataset.isDark = isDark;
+				}
+
+				mql.addEventListener("change", () => {
+					setThemeClass(document.documentElement);
+				});
+
+				document.addEventListener("astro:before-swap", (e) => {
+					setThemeClass(e.newDocument.documentElement);
+				});
+
+				setThemeClass(document.documentElement);
+			}
+		</script>
+		<Header client:load transition:persist transition:animate="fade" />
+		<main transition:animate="slide">
+			<slot />
+		</main>
+		<footer>
+			<div class={style.footer__links}>
+				<a href="https://github.com/fennifith/fennifith.github.io"
+					>Website Source Code</a
+				>
+				<a href="/contact/">Contact Me</a>
+			</div>
+		</footer>
+		<script>
+			import "src/utils/href-container-script";
+		</script>
+		<script>
+			document.addEventListener("astro:before-swap", (e) => {
+				delete e.newDocument.documentElement.dataset.isLoaded;
+			});
+			document.addEventListener("astro:page-load", () => {
+				setTimeout(() => {
+					document.documentElement.dataset.isLoaded = "true";
+				}, 100);
+			});
+		</script>
+		<script>
+			// prevent install prompt display
+			window.addEventListener("beforeinstallprompt", (e) => {
+				return e.preventDefault();
+			});
+
+			if ("serviceWorker" in navigator) {
+				navigator.serviceWorker.register("/sw.js", { scope: "/" }).then(() => {
+					console.log("Service Worker Registered");
+				});
+			}
+		</script>
+	</body>
+</html>

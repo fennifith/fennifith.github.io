@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import { BlogList } from 'src/components/blog/BlogList';
+import BaseLayout from 'src/layouts/BaseLayout.astro';
+
+const allBlogPosts = await getCollection('blog');
+---
+
+<BaseLayout frontmatter={{ title: "Blog" }}>
+	<h1>Blog</h1>
+	<BlogList blogs={allBlogPosts} withYears />
+</BaseLayout>

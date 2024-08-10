@@ -1,0 +1,35 @@
+.toggle {
+	display: grid;
+	user-select: none;
+
+	.toggle__checked, .toggle__unchecked {
+		backface-visibility: hidden;
+		grid-row: 1;
+		grid-column: 1;
+
+		transition: transform .2s;
+
+		animation-duration: .2s;
+		animation-fill-mode: forwards;
+	}
+
+	input:not(:checked) {
+		&~ .toggle__checked {
+			transform: rotateX(180deg);
+		}
+
+		&~ .toggle__unchecked {
+			transform: rotateX(0deg);
+		}
+	}
+
+	input:checked {
+		&~ .toggle__checked {
+			transform: rotateX(0deg);
+		}
+
+		&~ .toggle__unchecked {
+			transform: rotateX(180deg);
+		}
+	}
+}

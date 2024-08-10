@@ -1,0 +1,147 @@
+:root {
+	--project-border: var(--color-primary);
+	--project-background: var(--color-bg-dark);
+	--project-padding-top: 3rem;
+	--project-padding-bottom: 3rem;
+}
+
+.list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	gap: 1rem;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	position: relative;
+
+	border-radius: .5rem;
+	border: 1px solid var(--project-border);
+	box-shadow: 0 0 2px var(--project-border);
+	overflow: hidden;
+
+	.project__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		height: 150px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		mask-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 0.3) 50%,
+			rgba(0, 0, 0, 0.15) 65%,
+			rgba(0, 0, 0, 0.075) 75.5%,
+			rgba(0, 0, 0, 0.037) 82.85%,
+			rgba(0, 0, 0, 0.019) 88%,
+			rgba(0, 0, 0, 0) 100%
+		);
+
+		background: var(--project-background);
+		background-size: cover;
+		background-position: center;
+	}
+
+	.project__image ~ * {
+		z-index: 2;
+	}
+
+	.project__icon {
+		margin-top: var(--project-padding-top);
+		align-self: center;
+		filter: drop-shadow(3px 3px 0 var(--color-bg-darkest));
+	}
+
+	.project__icon + .project__title {
+		margin-top: 0;
+	}
+
+	.project__title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0 2rem;
+		margin-top: var(--project-padding-top);
+		text-align: center;
+
+		color: var(--color-highlight-fg);
+		text-shadow: -2px -2px 0 #FFFFFF33, 2px 2px 0 #00000019;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.project__desc {
+		font-size: 1rem;
+		margin: 0 2rem;
+		text-align: center;
+		text-wrap: balance;
+	}
+
+	.project__links {
+		margin: 0 2rem;
+		margin-bottom: var(--project-padding-bottom);
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		gap: .5rem;
+
+		&> a > span {
+			gap: 0;
+		}
+	}
+
+	.project__info {
+		margin-top: -1rem;
+		padding: 0 2rem;
+		background-color: var(--color-bg-lighter);
+		color: var(--color-fg-light);
+		border-top: 1px dashed var(--project-border);
+		font-size: 0.9rem;
+
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+
+		&> svg {
+			margin-top: 1rem;
+			flex-shrink: 0;
+		}
+	}
+
+	&--small {
+		gap: 0.5rem;
+
+		.project__title {
+			margin: 0 1rem;
+			margin-top: 1rem;
+			text-align: start;
+
+			font-size: 1rem;
+		}
+
+		.project__desc {
+			margin: 0 1rem;
+			text-align: start;
+		}
+
+		.project__links {
+			margin: 0 1rem;
+			margin-bottom: 1rem;
+			justify-content: end;
+		}
+	}
+}

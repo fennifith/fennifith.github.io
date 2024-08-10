@@ -1,0 +1,79 @@
+@use 'sass:color';
+@import "src/styles/_colors.scss";
+
+:root {
+	--button-bg: var(--color-bg-lighter);
+	--button-fg: var(--color-primary-fg);
+	--button-border: var(--color-primary);
+	--button-outline: var(--color-primary);
+
+	--button-hover-bg: var(--color-highlight-bg);
+	--button-hover-fg: var(--color-primary-fg);
+
+	--button-active-bg: var(--color-primary);
+	--button-active-fg: #{lighten($colorPrimary, 30%)};
+
+	@include darkTheme {
+		--button-bg: var(--color-bg-dark);
+	}
+}
+
+.button {
+	all: unset;
+	display: inline-block;
+
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 0.25rem;
+	outline-offset: 3px;
+	-webkit-tap-highlight-color: transparent;
+
+	height: calc(1.6rem + 7px);
+
+	&> .button__inner {
+		display: flex;
+		flex-direction: row;
+		gap: 0.5rem;
+		align-items: center;
+
+		padding: 0.3rem 0.5rem;
+		border-radius: 0.25rem;
+
+		color: var(--button-fg);
+		background-color: var(--button-bg);
+		border: 1px solid var(--button-border);
+		border-bottom: 3px solid var(--button-border);
+
+		box-shadow: 0 0 1px var(--button-border);
+
+		transition: background-color .1s;
+	}
+
+	&.button--secondary {
+		outline-offset: 0;
+
+		&> .button__inner {
+			background-color: transparent;
+			--button-border: transparent;
+		}
+	}
+
+	&:hover > .button__inner {
+		background-color: var(--button-hover-bg);
+		color: var(--button-hover-fg);
+
+		margin-top: 2px;
+		border-bottom: 1px solid var(--button-border);
+	}
+
+	&:active > .button__inner {
+		background-color: var(--button-active-bg);
+		color: var(--button-active-fg);
+	}
+
+	&:focus-visible {
+		outline: 3px solid var(--button-outline);
+	}
+}

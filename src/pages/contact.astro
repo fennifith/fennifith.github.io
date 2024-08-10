@@ -1,0 +1,54 @@
+---
+import { ButtonLink } from "src/components/base/Button";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { links } from "src/data/links";
+---
+
+<BaseLayout frontmatter={{ title: "Contact Me" }}>
+	<div class="text-content" style="text-align: center;">
+		<h1>Contact Me</h1>
+		<p>Here are a few ways to reach out:</p>
+	</div>
+	<ul class="contact__links">
+		<li>
+			<ButtonLink href={links.mastodon}>
+				Mastodon
+			</ButtonLink>
+		</li>
+		<li>
+			<ButtonLink href={links.linkedin}>
+				LinkedIn
+			</ButtonLink>
+		</li>
+		<li>
+			<ButtonLink href={links.twitch}>
+				Discord
+			</ButtonLink>
+		</li>
+		<li>
+			<ButtonLink href={links.email}>
+				{links.email.replace(/^mailto\:/, "")}
+			</ButtonLink>
+		</li>
+	</ul>
+	<div class="text-content">
+		<blockquote>
+			<p>For suggesting improvements in a particular project, it's helpful to find the project's repository and create an issue there.</p>
+		    <p>This allows others to enter the discussion and ensures it doesn't get lost in the noise.</p>
+			<p>That said, feel free to contact me for any reason.</p>
+		</blockquote>
+	</div>
+</BaseLayout>
+
+<style>
+	.contact__links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: .5rem;
+
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+</style>
