@@ -6,6 +6,7 @@ interface Props extends PropsWithChildren {
 	variant?: "primary" | "secondary";
 	class?: string;
 	onclick?: string;
+	rel?: string;
 }
 
 export function Button({ as = "button", variant, children, ...props }: Props) {

@@ -41,7 +41,7 @@ const allBlogPosts = (await getCollection('blog')).slice(-3);
 
 	<ul class="links">
 		<li>
-			<ButtonLink href={links.mastodon}>
+			<ButtonLink href={links.mastodon} rel="me">
 				Mastodon
 			</ButtonLink>
 		</li>
