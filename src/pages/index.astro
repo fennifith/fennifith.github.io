@@ -6,28 +6,8 @@ import { getCollection } from "astro:content";
 import { ButtonLink } from "src/components/base/Button";
 import { links } from "src/data/links";
 
-const headers = [
-	"bridge.jpg",
-	"coast.jpg",
-	"ducks.jpg",
-	"field.jpg",
-	"glacier.jpg",
-	"lake.jpg",
-	"lake2.jpg",
-	"lake3.jpg",
-	"snow.jpg",
-	"snowytrees.jpg",
-	"snowytrees2.jpg",
-	"woods.jpg",
-	"woods2.jpg",
-	"woods3.jpg",
-	"woods4.jpg",
-];
-const headersImport = await Promise.all(
-	headers.map(
-		(header) => /* @vite-ignore */ import(`../assets/carousel/${header}`),
-	),
-);
+const headers = import.meta.glob<{ default: ImageMetadata }>('/src/assets/carousel/*.{jpeg,jpg,png,gif}');
+const headersImport = await Promise.all(Object.values(headers).map(fn => fn()));
 const allBlogPosts = (await getCollection("blog")).slice(-3);
 ---
 
