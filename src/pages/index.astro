@@ -1,14 +1,41 @@
 ---
+import { Picture } from "astro:assets";
 import { BlogList } from "src/components/blog/BlogList";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 import { ButtonLink } from "src/components/base/Button";
 import { links } from "src/data/links";
 
-const allBlogPosts = (await getCollection('blog')).slice(-3);
+const headers = [
+	"bridge.jpg",
+	"coast.jpg",
+	"ducks.jpg",
+	"field.jpg",
+	"glacier.jpg",
+	"lake.jpg",
+	"lake2.jpg",
+	"lake3.jpg",
+	"snow.jpg",
+	"snowytrees.jpg",
+	"snowytrees2.jpg",
+	"woods.jpg",
+	"woods2.jpg",
+	"woods3.jpg",
+	"woods4.jpg",
+];
+const headersImport = await Promise.all(
+	headers.map(
+		(header) => /* @vite-ignore */ import(`../assets/carousel/${header}`),
+	),
+);
+const allBlogPosts = (await getCollection("blog")).slice(-3);
 ---
 
 <style>
+	.index-header-image img {
+		transition: opacity 0.1s;
+	}
+
 	.links {
 		margin: 0;
 		padding: 0;
@@ -16,7 +43,7 @@ const allBlogPosts = (await getCollection('blog')).slice(-3);
 
 		display: flex;
 		flex-wrap: wrap;
-		gap: .5rem;
+		gap: 0.5rem;
 	}
 
 	h2 {
@@ -27,56 +54,69 @@ const allBlogPosts = (await getCollection('blog')).slice(-3);
 
 <BaseLayout frontmatter={{}}>
 	<div class="text-content">
-		<div style="height: calc(min(300px + 1rem, 80vw));">
-			<img id="index-header-image" width="400" height="300" style="opacity: 0; transition: opacity .1s;">
+		<div
+			class="index-header-image"
+			style="height: calc(min(300px + 1rem, 80vw));"
+		>
+			{
+				headersImport.map((header) => (
+					<Picture
+						src={header.default}
+						formats={["avif", "webp"]}
+						alt=""
+						width={400}
+						loading="eager"
+						style="opacity: 0; display: none;"
+						hidden
+					/>
+				))
+			}
 		</div>
+		<script is:inline>
+			/* This is inline so that the image can still be loaded eagerly once un-hidden */
+			function setupImage() {
+				const images = document.querySelectorAll(".index-header-image img");
+				if ([...images].some(e => !e.hasAttribute("hidden")))
+					return;
+
+				const image = images[(images.length * Math.random()) | 0];
+				if (!image) return;
+				image.style.display = "unset";
+				image.removeAttribute("hidden");
+				image.addEventListener("load", () => (image.style.opacity = "1"), {
+					once: true,
+				});
+			}
+
+			setupImage();
+			document.addEventListener("astro:page-load", setupImage);
+		</script>
 		<h1>About me.</h1>
 		<p>Hi, I'm James! I do a lot of things on the internet.</p>
 		<p>
-			You might know me from my involvement in <a href="https://playfulprogramming.com">Playful Programming</a>,
-			some of my <a href="/projects/">open source projects</a>, or maybe even my <a href="https://music.jfenn.me/">electronic music</a> work.
-			Nearly everything that I make is open source in some form.
+			You might know me from my involvement in <a
+				href="https://playfulprogramming.com">Playful Programming</a
+			>, some of my <a href="/projects/">open source projects</a>, or maybe even
+			my <a href="https://music.jfenn.me/">electronic music</a> work. Nearly everything
+			that I make is open source in some form.
 		</p>
 	</div>
 
 	<ul class="links">
 		<li>
-			<ButtonLink href={links.mastodon} rel="me">
-				Mastodon
-			</ButtonLink>
+			<ButtonLink href={links.mastodon} rel="me"> Mastodon </ButtonLink>
 		</li>
 		<li>
-			<ButtonLink href={links.linkedin}>
-				LinkedIn
-			</ButtonLink>
+			<ButtonLink href={links.linkedin}> LinkedIn </ButtonLink>
 		</li>
 		<li>
-			<ButtonLink href={links.twitch}>
-				Twitch
-			</ButtonLink>
+			<ButtonLink href={links.twitch}> Twitch </ButtonLink>
 		</li>
 		<li>
-			<ButtonLink href={links.discord}>
-				Discord
-			</ButtonLink>
+			<ButtonLink href={links.discord}> Discord </ButtonLink>
 		</li>
 	</ul>
 
 	<h2>Recent Blogs</h2>
 	<BlogList blogs={allBlogPosts} />
 </BaseLayout>
-
-<script>
-	const headers = ["bridge.jpg", "coast.jpg", "ducks.jpg", "field.jpg", "glacier.jpg", "lake.jpg", "lake2.jpg", "lake3.jpg", "onamountain.jpeg", "snow.jpg", "snowytrees.jpg", "snowytrees2.jpg", "woods.jpg", "woods2.jpg", "woods3.jpg", "woods4.jpg"];
-
-	function setupImage() {
-		const headerImg = document.querySelector<HTMLImageElement>("#index-header-image");
-		if (!headerImg) return;
-
-		const image = "/images/headers/" + headers[headers.length * Math.random() | 0];
-		headerImg.src = image;
-		headerImg.addEventListener("load", () => headerImg.style.opacity = "1", { once: true });
-	}
-
-	document.addEventListener("astro:page-load", setupImage);
-</script>
