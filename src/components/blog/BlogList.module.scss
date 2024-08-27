@@ -34,7 +34,8 @@
 
 	-webkit-tap-highlight-color: transparent;
 
-	transition: background-color .1s;
+	transition: transform .25s, background-color .25s;
+	transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 	.blog__title {
 		font-size: 1rem;
@@ -58,6 +59,7 @@
 
 	&:hover {
 		background-color: var(--blog-hover-bg);
+		transform: translateX(12px);
 
 		a {
 			text-decoration: underline;
