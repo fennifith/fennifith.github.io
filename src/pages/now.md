@@ -7,7 +7,7 @@ title: Now
 
 # Now
 
-This is a [now page](https://nownownow.com/about). It's a way to share everything currently happening in my life. I last updated it on 2024-08-10.
+This is a [now page](https://nownownow.com/about). It's a way to share everything currently happening in my life. I last updated it on 2024-09-01.
 
 ## What am I doing now?
 
@@ -18,7 +18,7 @@ This is a [now page](https://nownownow.com/about). It's a way to share everythin
 
 ## Groups I'm involved with
 
-[Unicorn Utterances](https://unicorn-utterances.com/) is a collaborative blog site that provides helpful resources for a variety of computer science-related topics.
+[Playful Programming](https://playfulprogramming.com/) is a collaborative blog site that provides helpful resources for a variety of computer science-related topics.
 
 [The Frame Drops](https://theframedrops.com) occasionally organizes small fundraisers to support a charity through various programming & gaming events.
 

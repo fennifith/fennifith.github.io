@@ -3,13 +3,13 @@ title: "Dynamic Backgrounds in Unicorn Utterances' Preview Images"
 description: "An explanation of some CSS tricks and techniques I used to make a neat contribution to the Unicorn Utterances blog site."
 links:
   - name: "Unicorn Utterances"
-    url: "https://unicorn-utterances.com/"
+    url: "https://playfulprogramming.com/"
   - name: "Grainy Gradients - Jimmy Chion"
     url: "https://css-tricks.com/grainy-gradients/"
 tags: blog
 ---
 
-Earlier this week, [Corbin Crutchley](https://crutchcorn.dev/) built a social image generator for the [Unicorn Utterances](https://unicorn-utterances.com/) blog using React and puppeteer. This was built from a mockup that was expertly designed by [Kevin Aguilar](https://twitter.com/kevttob) - featuring an intuitive layout, clear accented title text, and a background image displaying arbitrary PHP code on a laptop screen.
+Earlier this week, [Corbin Crutchley](https://crutchcorn.dev/) built a social image generator for the [Unicorn Utterances](https://playfulprogramming.com/) blog using React and puppeteer. This was built from a mockup that was expertly designed by [Kevin Aguilar](https://twitter.com/kevttob) - featuring an intuitive layout, clear accented title text, and a background image displaying arbitrary PHP code on a laptop screen.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As of today, every single blog post on <a href="https://twitter.com/UnicornUttrncs?ref_src=twsrc%5Etfw">@UnicornUttrncs</a> has a unique social media preview with the title of the blog post<br><br>Huge thanks to <a href="https://twitter.com/kevttob?ref_src=twsrc%5Etfw">@kevttob</a> for designing the preview image!<a href="https://t.co/uh0Her4Y1X">https://t.co/uh0Her4Y1X</a></p>&mdash; Corbin Crutchley 🥑 (@crutchcorn) <a href="https://twitter.com/crutchcorn/status/1527537422833135616?ref_src=twsrc%5Etfw">May 20, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -17,7 +17,7 @@ This gave me an interesting idea: what if, instead of displaying arbitrary code,
 
 ## Background
 
-* [Unicorn Utterances](https://unicorn-utterances.com) is a community blog site featuring awesome technical and educational content from a variety of incredibly skilled developers and engineers.
+* [Unicorn Utterances](https://playfulprogramming.com) is a community blog site featuring awesome technical and educational content from a variety of incredibly skilled developers and engineers.
 
 * The "social/preview image" being described here is what shows up when the link to a blog post is displayed in a post or message on social media. While some social platforms use varying implementations, most of this information is provided through the [Open Graph protocol](https://ogp.me).
 
