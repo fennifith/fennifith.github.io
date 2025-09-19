@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/redirect.astro
 title: Continuous Integration with Travis CI for Android
 description: "An in-depth tutorial explaining how to set up Travis CI to deploy signed builds to Google Play. Among other things."
 project: "ValCanBuild/TravisAndroidExample"
