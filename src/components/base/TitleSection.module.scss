@@ -1,4 +1,4 @@
-@import "src/styles/_colors.scss";
+@use "src/styles/_colors.scss" as *;
 
 :root {
 	--header-bg: var(--color-bg-lighter);

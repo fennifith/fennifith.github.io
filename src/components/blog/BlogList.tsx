@@ -9,7 +9,7 @@ interface Props {
 
 export function BlogListItem({ blog }: Props) {
 	const date = dayjs(blog.slug.substring(0, 10)).format("MMMM D");
-	const words = blog.body.split(" ").length;
+	const words = blog.body?.split(" ")?.length ?? 0;
 	const href = blog.data.redirect || `/blog/${blog.slug}/`;
 
 	const props = getHrefContainerProps(href);
@@ -22,9 +22,9 @@ export function BlogListItem({ blog }: Props) {
 			<p class={style.blog__desc}>{blog.data.description}</p>
 			<p class={style.blog__meta}>
 				{date}
-				{blog.data.redirect ? undefined : (
+				{words ? (
 					<> &middot; {words.toLocaleString()} words</>
-				)}
+				) : undefined}
 			</p>
 		</div>
 	);

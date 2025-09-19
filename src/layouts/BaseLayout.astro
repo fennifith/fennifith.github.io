@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import "src/styles/global.scss";
 import style from "./BaseLayout.module.scss";
 import { Header } from "src/components/layout/Header";
@@ -110,7 +110,7 @@ const headIcon = "/images/me3.png";
 		<meta name="og:locale" content="en_US" />
 		<meta name="og:site_name" content={author} />
 
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body>
 		<script is:inline>
@@ -139,8 +139,8 @@ const headIcon = "/images/me3.png";
 				setThemeClass(document.documentElement);
 			}
 		</script>
-		<Header client:load transition:persist transition:animate="fade" />
-		<main transition:animate="slide">
+		<Header client:load transition:persist transition:animate="none" />
+		<main transition:animate="none">
 			<slot />
 		</main>
 		<footer>

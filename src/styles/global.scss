@@ -1,21 +1,21 @@
 @use "sass:color";
-@import "./_colors.scss";
-@import "./text-content.scss";
+@use "./_colors.scss" as *;
+@use "./text-content.scss";
 
 :root {
 	--color-primary: #{$colorPrimary};
-	--color-primary-fg: #{darken($colorPrimary, 10%)};
+	--color-primary-fg: #{color.adjust($colorPrimary, $lightness: -10%)};
 
 	--color-secondary: #{$colorSecondary};
 	--color-tertiary: #{$colorTertiary};
 
 	--color-bg: #{$colorBg};
-	--color-bg-light: #{lighten($colorBg, 1%)};
-	--color-bg-lighter: #{lighten($colorBg, 5%)};
-	--color-bg-lightest: #{lighten($colorBg, 10%)};
-	--color-bg-dark: #{darken($colorBg, 1%)};
-	--color-bg-darker: #{darken($colorBg, 5%)};
-	--color-bg-darkest: #{darken($colorBg, 10%)};
+	--color-bg-light: #{color.adjust($colorBg, $lightness: 1%)};
+	--color-bg-lighter: #{color.adjust($colorBg, $lightness: 5%)};
+	--color-bg-lightest: #{color.adjust($colorBg, $lightness: 10%)};
+	--color-bg-dark: #{color.adjust($colorBg, $lightness: -1%)};
+	--color-bg-darker: #{color.adjust($colorBg, $lightness: -5%)};
+	--color-bg-darkest: #{color.adjust($colorBg, $lightness: -10%)};
 
 	--color-fg: #{$colorFg};
 	--color-fg-light: #{color.adjust($colorFg, $alpha: -0.2)};
@@ -25,15 +25,15 @@
 	--color-highlight-bg: #{color.adjust($colorPrimary, $alpha: -0.9)};
 
 	@include darkTheme {
-		--color-primary-fg: #{lighten($colorPrimary, 10%)};
+		--color-primary-fg: #{color.adjust($colorPrimary, $lightness: 10%)};
 
 		--color-bg: #{$colorDarkBg};
-		--color-bg-light: #{lighten($colorDarkBg, 1%)};
-		--color-bg-lighter: #{lighten($colorDarkBg, 5%)};
-		--color-bg-lightest: #{lighten($colorDarkBg, 10%)};
-		--color-bg-dark: #{darken($colorDarkBg, 1%)};
-		--color-bg-darker: #{darken($colorDarkBg, 5%)};
-		--color-bg-darkest: #{darken($colorDarkBg, 10%)};
+		--color-bg-light: #{color.adjust($colorDarkBg, $lightness: 1%)};
+		--color-bg-lighter: #{color.adjust($colorDarkBg, $lightness: 5%)};
+		--color-bg-lightest: #{color.adjust($colorDarkBg, $lightness: 10%)};
+		--color-bg-dark: #{color.adjust($colorDarkBg, $lightness: -1%)};
+		--color-bg-darker: #{color.adjust($colorDarkBg, $lightness: -5%)};
+		--color-bg-darkest: #{color.adjust($colorDarkBg, $lightness: -10%)};
 
 		--color-fg: #{$colorDarkFg};
 		--color-fg-light: #{color.adjust($colorBg, $alpha: -0.2)};

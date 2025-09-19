@@ -1,5 +1,5 @@
 @use 'sass:color';
-@import "src/styles/_colors.scss";
+@use "src/styles/_colors.scss" as *;
 
 :root {
 	--button-bg: var(--color-bg-lighter);
@@ -11,7 +11,7 @@
 	--button-hover-fg: var(--color-primary-fg);
 
 	--button-active-bg: var(--color-primary);
-	--button-active-fg: #{lighten($colorPrimary, 30%)};
+	--button-active-fg: #{color.adjust($colorPrimary, $lightness: 30%)};
 
 	@include darkTheme {
 		--button-bg: var(--color-bg-dark);

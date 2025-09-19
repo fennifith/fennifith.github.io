@@ -1,5 +1,5 @@
 @use "sass:color";
-@import "./_colors.scss";
+@use "./_colors.scss" as *;
 
 :root {
 	--embed-bg: var(--color-highlight-bg);

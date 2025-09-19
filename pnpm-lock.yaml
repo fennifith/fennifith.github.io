@@ -41,6 +41,9 @@ importers:
       sass:
         specifier: ^1.77.8
         version: 1.92.1
+      sharp:
+        specifier: ^0.34.4
+        version: 0.34.4
       typescript:
         specifier: ^5.5.4
         version: 5.9.2
@@ -2946,8 +2949,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@img/colour@1.0.0':
-    optional: true
+  '@img/colour@1.0.0': {}
 
   '@img/sharp-darwin-arm64@0.34.4':
     optionalDependencies:
@@ -3739,8 +3741,7 @@ snapshots:
   detect-libc@1.0.3:
     optional: true
 
-  detect-libc@2.1.0:
-    optional: true
+  detect-libc@2.1.0: {}
 
   deterministic-object-hash@2.0.2:
     dependencies:
@@ -4923,7 +4924,6 @@ snapshots:
       '@img/sharp-win32-arm64': 0.34.4
       '@img/sharp-win32-ia32': 0.34.4
       '@img/sharp-win32-x64': 0.34.4
-    optional: true
 
   shiki@3.12.2:
     dependencies:
