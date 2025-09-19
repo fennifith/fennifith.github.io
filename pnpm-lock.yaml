@@ -44,6 +44,9 @@ importers:
       sharp:
         specifier: ^0.34.4
         version: 0.34.4
+      sitemap:
+        specifier: ^8.0.0
+        version: 8.0.0
       typescript:
         specifier: ^5.5.4
         version: 5.9.2
@@ -3321,7 +3324,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 24.5.2
 
   '@types/tar@6.1.13':
     dependencies:
