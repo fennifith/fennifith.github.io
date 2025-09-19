@@ -8,7 +8,9 @@ import { links } from "src/data/links";
 
 const headers = import.meta.glob<{ default: ImageMetadata }>('/src/assets/carousel/*.{jpeg,jpg,png,gif}');
 const headersImport = await Promise.all(Object.values(headers).map(fn => fn()));
-const allBlogPosts = (await getCollection("blog")).slice(-3);
+const allBlogPosts = (await getCollection("blog"))
+	.sort((a, b) => b.slug.localeCompare(a.slug))
+	.slice(0, 3);
 ---
 
 <style>
